@@ -2,7 +2,7 @@
 heroku create myapp --buildpack heroku/python
 # an object of WSGI application
 from flask import Flask
-app = Flask(bdx-api-link)   # Flask constructor
+app = Flask(__bdx-api-link__)   # Flask constructor
 #bdx-api-link
 
 # A decorator used to tells the application
