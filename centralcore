@@ -11,5 +11,10 @@ app = Flask(__bdx-api-link__)   # Flask constructor
 def hello():
     return 'HELLO'
 
-if __name__=='__main__':
+#if __name__=='__main__':
+if '__name__'=='__main__':
+#if __bdx-api-link__=='__main__':
+#if '__bdx-api-link__'=='__main__':
+#if 'bdx-api-link'=='__main__':
+#if bdx-api-link=='__main__':
    app.run()
