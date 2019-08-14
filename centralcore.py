@@ -17,4 +17,4 @@ def hello():
 #if '__bdx-api-link__'=='__main__':
 #if 'bdx-api-link'=='__main__':
 #if bdx-api-link=='__main__':
-  # app.run()
+  app.run()
