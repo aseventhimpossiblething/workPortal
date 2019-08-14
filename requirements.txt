@@ -3,3 +3,6 @@ Flask
 Werkzeug
 itsdangerous
 click
+Jinja2
+MarkUpSafe
+Wheel
