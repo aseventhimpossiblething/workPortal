@@ -1,3 +1,3 @@
-web: flask centralcore.py:app
+web: flask 
 
 
