@@ -1,2 +1,2 @@
-web: python manage.py runserver  bdx-api-link:app
+web: python Flask  bdx-api-link:app
 
