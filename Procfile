@@ -1,1 +1,1 @@
-web: flask
+web: flask bdx-api-link:app
