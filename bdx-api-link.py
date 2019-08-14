@@ -1,4 +1,4 @@
-heroku create myapp --buildpack heroku/python
+#heroku create myapp --buildpack heroku/python
 # an object of WSGI application
 from flask import Flask
 app = Flask(__name__)   # Flask constructor
