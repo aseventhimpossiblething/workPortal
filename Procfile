@@ -1,1 +1,1 @@
-web: flask bdx-api-link:app
+web: gunicorn  bdx-api-link:app
