@@ -1,3 +1,3 @@
-web: python Flask  bdx-api-link:app
-worker: celeryd --loglevel=INFO
+web: gunicorn bdx-api-link:app --log-file=-
+
 
