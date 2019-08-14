@@ -1,1 +1,1 @@
-web: gunicorn bdx-api-link:app
+web: gunicorn gettingstarted.wsgi --log-file -
