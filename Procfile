@@ -1,1 +1,2 @@
-web: gunicorn  bdx-api-link:app
+web: python manage.py runserver  bdx-api-link:app
+
