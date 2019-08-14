@@ -1,2 +1,6 @@
 gunicorn
 Flask
+Werkzeug
+inja2
+itsdangerous
+click
