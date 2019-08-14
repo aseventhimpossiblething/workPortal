@@ -1,3 +1,3 @@
-web: gunicorn centralcore.py:app --log-file=-
+web: flask centralcore.py:app --log-file=-
 
 
