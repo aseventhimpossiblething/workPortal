@@ -9,7 +9,7 @@ app = Flask(__name__)   # Flask constructor
 def hello():
     return "Hello Mundo"
 
-#if __name__=='__main__':
+if __name__=='__main__':
 #if '__name__'=='__main__':
 #if __bdx-api-link__=='__main__':
 #if '__bdx-api-link__'=='__main__':
