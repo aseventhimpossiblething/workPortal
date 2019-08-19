@@ -1,3 +1,3 @@
-web: gunicorn bdx-api-link.py:app
+web: gunicorn bdx-api-link:app
 
 
