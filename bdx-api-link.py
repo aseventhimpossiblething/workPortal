@@ -10,6 +10,13 @@ app = Flask(__name__)   # Flask constructor
 def hello():
     return "Hello Mundo"
 
+@app.route('/0')
+def hollo():
+
+    return render_template('initial.html')
+
+
+
 if __name__=='__main__':
 #if '__name__'=='__main__':
 #if __bdx-api-link__=='__main__':
