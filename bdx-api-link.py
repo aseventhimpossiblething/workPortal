@@ -1,6 +1,7 @@
 #heroku create myapp --buildpack heroku/python
 # an object of WSGI application
 from flask import Flask
+from flask import render_template
 app = Flask(__name__)   # Flask constructor
 
 # A decorator used to tells the application
