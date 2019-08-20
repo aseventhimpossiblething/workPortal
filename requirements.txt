@@ -6,3 +6,4 @@ click
 Jinja2
 MarkUpSafe
 Wheel
+google-ads
