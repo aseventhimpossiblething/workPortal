@@ -12,7 +12,6 @@ def hello():
 
 @app.route('/0')
 def hollo():
-
     return render_template('initial.html')
 
 
