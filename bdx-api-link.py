@@ -15,7 +15,7 @@ def hollo():
     return render_template('initial.html')
 
 @app.route('/1')
-def hollo():
+def holla():
     return render_template('cssPulling.html')
 
 
