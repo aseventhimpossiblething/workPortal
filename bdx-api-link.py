@@ -18,9 +18,9 @@ def hollo():
 def holla():
     return render_template('cssPulling.html')
 
-@app.route('/csstemplates')
+@app.route('/2')
 def hollb():
-    return render_template('cssTemplate.css')
+    return render_template('csstemplate.css')
 
 
 
