@@ -20,7 +20,7 @@ def holla():
 
 @app.route('/2')
 def hollb():
-    return render_template('csstemplate.css')
+    return render_template('csstemplate.html')
 
 
 
