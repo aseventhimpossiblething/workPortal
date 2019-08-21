@@ -14,6 +14,12 @@ def hello():
 def hollo():
     return render_template('initial.html')
 
+@app.route('/1')
+def hollo():
+    return render_template('cssPulling.html')
+
+
+
 
 
 if __name__=='__main__':
