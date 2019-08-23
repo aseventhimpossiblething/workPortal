@@ -1,4 +1,5 @@
-
+import os
+import psycopg2
 from flask import Flask
 from flask import render_template
 app = Flask(__name__)   # Flask constructor
