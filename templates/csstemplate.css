@@ -10,7 +10,7 @@ h1 {
 
 .containerMain
 {
-    background-color:Aqua;
+    background-color:#ff77ff;
     float:center;
     width:500px;
     height:500px;
@@ -22,4 +22,4 @@ h1 {
    margin-left: 200px;
    */
 }
-body {background-color:grey;}
+body {background-color:#ffffff;}
