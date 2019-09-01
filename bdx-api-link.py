@@ -42,6 +42,10 @@ def holla():
 def hollb():
     return render_template('csstemplate.css')
 
+@app.route('/3')
+def hollc():
+    return render_template('inputFile.html')
+
 
 
 
