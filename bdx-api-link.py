@@ -33,7 +33,7 @@ def hello():
 def upload():
     #request.files['sheet']
     print(request.method)
-    return request.files['sheet']
+    return request.name
    
 
 @app.route('/css')
