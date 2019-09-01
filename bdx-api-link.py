@@ -31,9 +31,9 @@ def hello():
 
 @app.route('/upload', methods=['POST','GET'])
 def upload():
-    request.files['sheet']
+    #request.files['sheet']
     print(request.method)
-    return request.method
+    return request.files['sheet']
    
 
 @app.route('/css')
