@@ -35,7 +35,7 @@ def upload():
     print(request.form)
     form=request.form
     TheMethod=request.method
-    info=form+" "+TheMethod
+    #info=form+" "+TheMethod
     
     return "info"
    
