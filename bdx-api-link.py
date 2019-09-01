@@ -17,7 +17,7 @@ print("test os.chdir(r'/app/Sheets')")
 os.chdir(r'/app/Sheets')
 print("ran os.chdir()")
 print("Check os.cwd()")
-print(os.cwd())
+print(os.getcwd())
 
 
 
