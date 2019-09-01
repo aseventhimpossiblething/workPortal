@@ -30,6 +30,10 @@ print("BidOpAssist ran")
 def hello():
     return "Hello le monde"
 
+@app.route('/css', methods=['GET'])
+def hollb():
+    return render_template('csstemplate.css')
+
 @app.route('/0')
 def hollo():
     return render_template('initial.html')
@@ -38,11 +42,7 @@ def hollo():
 def holla():
     return render_template('cssPulling.html')
 
-@app.route('/2', methods=['GET'])
-def hollb():
-    return render_template('csstemplate.css')
-
-@app.route('/3')
+@app.route('/2')
 def hollc():
     return render_template('fileInput.html')
 
