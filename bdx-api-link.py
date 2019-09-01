@@ -13,6 +13,9 @@ print("attempted os.getcwd point passed")
 print("will run os.listdir()")
 print(os.listdir())
 print("attempted os.listdir() point passed")
+print("test os.chdir(/Sheets)")
+os.chdir()
+print("passed os.chdir()")
 
 
 
