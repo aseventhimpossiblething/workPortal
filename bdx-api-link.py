@@ -13,9 +13,9 @@ print("attempted os.getcwd point passed")
 print("will run os.listdir()")
 print(os.listdir())
 print("attempted os.listdir() point passed")
-print("test os.chdir(r'/app')")
-os.chdir(r'/app')
-print("failed os.chdir() move on ")
+print("test os.chdir(r'/app/Sheets')")
+os.chdir(r'/app/Sheets')
+print("ran os.chdir() move on ")
 
 
 
