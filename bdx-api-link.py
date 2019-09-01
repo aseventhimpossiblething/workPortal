@@ -37,7 +37,7 @@ def upload():
     TheMethod=request.method
     info=form+" "+TheMethod
     
-    return info
+    return "info"
    
 
 @app.route('/css')
