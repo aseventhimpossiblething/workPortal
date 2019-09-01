@@ -34,7 +34,7 @@ def upload():
     return "Hello le monde"
    
 
-@app.route('/css', methods=['GET'])
+@app.route('/css')
 def hollb():
     return render_template('csstemplate.css')
 
