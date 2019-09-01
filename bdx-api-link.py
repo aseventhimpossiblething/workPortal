@@ -31,7 +31,6 @@ def hello():
 
 @app.route('/upload', methods=['GET','POST'])
 def upload():
-    
     return "Hello le monde"
    
 
