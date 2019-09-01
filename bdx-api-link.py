@@ -29,7 +29,7 @@ print("BidOpAssist ran")
 def hello():
     return "Hello le monde"
 
-@app.route('/upload', methods=['POST'])
+@app.route('/upload', methods=['POST','GET'])
 def upload():
     print(request.method)
     return request.method
