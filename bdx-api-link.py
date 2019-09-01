@@ -16,6 +16,8 @@ print("attempted os.listdir() point passed")
 print("test os.chdir(r'/app/Sheets')")
 os.chdir(r'/app/Sheets')
 print("ran os.chdir() move on ")
+print("Check os.cwd()")
+print(os.cwd)
 
 
 
