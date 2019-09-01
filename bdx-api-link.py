@@ -21,7 +21,7 @@ print("Check os.cwd()")
 print(os.getcwd())
 print("passed os.getcwd")
 print("running BidOpAssist")
-BidOpAssist.BidOpAssist()
+BidOpAssist.BidOpAssist("Variable Passed")
 print("BidOpAssist ran")
 
 
