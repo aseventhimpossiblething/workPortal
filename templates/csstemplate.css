@@ -7,6 +7,14 @@ h1 {
  margin-right: 20px
  font-family: Arial, Helvetica, Sans Serif;
        }
+.littletop
+{
+    background-color:#0077bb;
+    float:center;
+    width:500px;
+    height:50px;
+    margin:auto;
+}
 
 .containerMain
 {
