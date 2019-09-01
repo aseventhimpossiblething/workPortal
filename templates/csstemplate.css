@@ -12,10 +12,9 @@ float:center;
 .littletop {
 
     background-color:#00aaff;
-    float:center;
-    width:500px;
+    width:auto;
     margin-bottom:30px;
-    margin-left:300px;
+   /* margin-left:300px;*/
  }
 
 
