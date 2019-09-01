@@ -28,10 +28,11 @@ print("BidOpAssist ran")
 @app.route('/')
 def hello():
     return "Hello le monde"
-
+"""
 @app.route('/upload' methods=['GET','POST'])
 def upload():
     return "Hello le monde"
+    """
 
 @app.route('/css', methods=['GET'])
 def hollb():
