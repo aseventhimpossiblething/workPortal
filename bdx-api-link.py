@@ -32,7 +32,7 @@ def hello():
 @app.route('/upload', methods=['GET','POST'])
 def upload():
     print(request.method)
-    return request.method, "actually its a post"
+    return request.method
    
 
 @app.route('/css')
