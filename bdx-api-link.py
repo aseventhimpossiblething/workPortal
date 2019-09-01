@@ -19,6 +19,10 @@ os.chdir(r'/app/Sheets')
 print("ran os.chdir()")
 print("Check os.cwd()")
 print(os.getcwd())
+print("passed os.getcwd")
+print("running BidOpAssist")
+BidOpAssist()
+print("BidOpAssist ran")
 
 
 
