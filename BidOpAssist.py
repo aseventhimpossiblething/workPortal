@@ -1,3 +1,4 @@
-def BidOpAssist():
+def BidOpAssist(x):
     print("***BidOpAssist Running********")
+    print(x)
    
