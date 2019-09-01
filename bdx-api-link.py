@@ -44,7 +44,7 @@ def hollb():
 
 @app.route('/3')
 def hollc():
-    return render_template('inputFile.html')
+    return render_template('fileInput.html')
 
 
 
