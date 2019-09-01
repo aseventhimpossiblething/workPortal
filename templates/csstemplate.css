@@ -4,7 +4,7 @@
 
 form {
 float:center;    
-margin:auto;
+margin-left:100;
 padding:auto; 
 }
 
@@ -12,10 +12,10 @@ padding:auto;
 
 .littletop {
 
-    background-color:#aaaaff;
+    background-color:#77aaff;
     float:center;
     width:500px;
-    margin:auto;
+    margin-bottom:30px;
  }
 
 
