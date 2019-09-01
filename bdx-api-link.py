@@ -1,4 +1,5 @@
 print("Checkpoint 1-before imports")
+import BidOpAssist
 import os
 import psycopg2
 from flask import Flask
