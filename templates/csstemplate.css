@@ -2,26 +2,23 @@
 
 
 
-form
-{
+form {
 float:center;    
 margin:auto;
 padding:auto; 
 }
 
 
-.littletop
-{
+
+.littletop {
 
     background-color:#aaaaff;
     float:center;
     width:500px;
     margin:auto;
-    
-  
-  
-   
-}
+ }
+
+
 
 .containerMain
 {
