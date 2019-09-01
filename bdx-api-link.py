@@ -14,8 +14,8 @@ print("will run os.listdir()")
 print(os.listdir())
 print("attempted os.listdir() point passed")
 print("test os.chdir("app/Sheets")")
-os.chdir("app/Sheets")
-print("passed os.chdir()")
+os.chdir(app/Sheets)
+print("failed os.chdir() move on ")
 
 
 
