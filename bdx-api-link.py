@@ -31,8 +31,7 @@ def hello():
 
 @app.route('/upload', methods=['POST','GET'])
 def upload():
-    if file in request.files
-        print("Files present")
+    print(request.files)
     request.files['sheet'].save('/app/Sheets/sheet')
     #os.chdir(r'/app/Sheets')
     print(request.form)
