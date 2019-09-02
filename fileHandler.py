@@ -77,7 +77,7 @@ def fileHandler():
 
     print("**************************flag 16******************************************************")
     
-    tosrn="File Uploaded Format Data and Model"
+    tosrn='File Uploaded: Format Data and Model'
     
     print("**************************flag 17******************************************************")
     return tosrn
