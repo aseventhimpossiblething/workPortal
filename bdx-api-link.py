@@ -16,10 +16,10 @@ def hello():
 
 @app.route('/upload', methods=['POST','GET'])
 def upload():
-    print("********************************flag 1**f************************************** ")
+    print("********************************flag 1****************************************")
     Print("request.files")
     print(request.files)
-    print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
+    #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
     #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
     #os.chdir(r'/app/Sheets')
     print("**************************flag 2******************************")
