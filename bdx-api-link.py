@@ -19,7 +19,7 @@ def hello():
 @app.route('/upload', methods=['POST','GET'])
 def upload():
     fileHandler.fileHandler()
-    return <html>uploaded</html>
+    return render_template('csstemplate.css')
       
 @app.route('/css')
 def hollb():
