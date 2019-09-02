@@ -16,21 +16,27 @@ def hello():
 
 @app.route('/upload', methods=['POST','GET'])
 def upload():
-    print("********************************flag 1****************************************")
-    print("request.files")
+    print("********************************flag 1************************************************")
+    print("request.files command in next slot")
+    print("********************************flag 2************************************************")
     print(request.files)
-    print("*******************************End request.files *******************************************")
+    print("*******************************flag 2 ************************************************")
     #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
     #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
     #os.chdir(r'/app/Sheets')
-    print("**************************flag 2******************************")
+    print("*********************************flag 2***********************************************")
     #print(request.files['sheet'].save(os.path.join('/app/Sheets/sheet',request.files['sheet'].filename)))
+    print("********************************flag 1************************************************")
     #print(os.getcwd())
-    print(os.path.join('/app/Sheets',request.files['sheet'].filename))
+    print("********************************flag 1************************************************")
+    print("",os.path.join('/app/Sheets',request.files['sheet'].filename))
+    print("********************************flag 1************************************************")
     print(request.files['sheet'].filename)
+    print("********************************flag 1************************************************")
     print(request.files['sheet'])
+    print("********************************flag 1************************************************")
     print(request.files)
-    print("**************************flag 3******************************")
+    print("**************************flag 3******************************************************")
     return request.method
    
 
