@@ -17,7 +17,7 @@ def hello():
 @app.route('/upload', methods=['POST','GET'])
 def upload():
     print("********************************flag 1****************************************")
-    Print("request.files")
+    print("request.files")
     print(request.files)
     #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
     #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
