@@ -80,4 +80,4 @@ def fileHandler():
     
     
     print("**************************flag 17******************************************************")
-    return request.method
+    return f'end'
