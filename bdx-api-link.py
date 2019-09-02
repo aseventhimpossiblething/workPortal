@@ -31,17 +31,18 @@ def upload():
     print("********************************flag 5************************************************")
     print("os.listdir()____:",os.listdir())
     print("********************************flag 6************************************************")
-    ##os.chdir(/Sheets)
+    os.chdir('/Sheets')
     print("os.chdir(/Sheets)____:")
     print("********************************flag 7************************************************")
-    print("print: os.path.join('/app/Sheets',request.files['sheet'].filename))_____:",os.path.join('/app/Sheets',request.files['sheet'].filename))
     print("********************************flag 8************************************************")
-    print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
+    print("print: os.path.join('/app/Sheets',request.files['sheet'].filename))_____:",os.path.join('/app/Sheets',request.files['sheet'].filename))
     print("********************************flag 9************************************************")
-    print("request.files['sheet']______:    ",request.files['sheet'])
+    print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
     print("********************************flag 10************************************************")
+    print("request.files['sheet']______:    ",request.files['sheet'])
+    print("********************************flag 11************************************************")
     print("request.files______:    ",request.files)
-    print("**************************flag 11******************************************************")
+    print("**************************flag 12******************************************************")
     return request.method
    
 
