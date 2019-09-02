@@ -81,4 +81,4 @@ def fileHandler():
     print(topage)
     lmth=<html>stuff</html>
     print("**************************flag 17******************************************************")
-    return lmth
+    return request.method
