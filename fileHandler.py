@@ -76,5 +76,7 @@ def fileHandler():
     print("request.files______:    ",request.files)
 
     print("**************************flag 16******************************************************")
+    
     topage=str(request.method),"Done!"
+    print("**************************flag 17******************************************************")
     return request.method
