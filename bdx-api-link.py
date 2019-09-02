@@ -22,6 +22,7 @@ def upload():
     print(request.form)
     print("**************************flag******************************")
     #print(request.files['sheet'].save(os.path.join('/app/Sheets/sheet',request.files['sheet'].filename)))
+    print(os.path.join('/app/Sheets/sheet',request.files['sheet'].filename))
     print(request.files['sheet'].filename)
     print(request.files['sheet'])
     print(request.files)
