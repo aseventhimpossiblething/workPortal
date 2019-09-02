@@ -19,7 +19,7 @@ def hello():
 @app.route('/upload', methods=['POST','GET'])
 def upload():
     fileHandler.fileHandler()
-    return f'finish'
+    return fileHandler.fileHandler()
       
 @app.route('/css')
 def hollb():
