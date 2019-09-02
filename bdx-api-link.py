@@ -6,7 +6,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)   # Flask constructor
 print("Checkpoint 2-before Database connection")
 conn = psycopg2.connect("dbname='dcect276ul8asc' user='ffsezxsqjvacnw' host='ec2-54-83-9-36.compute-1.amazonaws.com' password='657c149f7aac22520e75d72bddb9a16c76e60ac324fb4358f9f579ac1c2619d4'")
-
+print("Checkpoint 3-after Database connection")
 
 
 
