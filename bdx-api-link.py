@@ -21,7 +21,7 @@ def upload():
     #os.chdir(r'/app/Sheets')
     print(request.form)
     print("**************************flag******************************")
-    print(request.files.filename)
+    print(request.files['sheet'].filename)
     print(request.files['sheet'])
     print(request.files)
     print("**************************flag******************************")
