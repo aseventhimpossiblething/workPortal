@@ -80,4 +80,4 @@ def fileHandler():
     topage=str(request.method),"Done!"
     print(topage)
     print("**************************flag 17******************************************************")
-    return request.method
+    return topage
