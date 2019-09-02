@@ -77,7 +77,7 @@ def fileHandler():
 
     print("**************************flag 16******************************************************")
     
-    tosrn='File Uploaded: Format Data and Model'
+    tosrn='File Uploaded Successfully: Format Data, Format Algorithm, Fromat Scripts::         Good Job Mike! You have earned a Solid C-'
     
     print("**************************flag 17******************************************************")
     return tosrn
