@@ -29,6 +29,7 @@ def upload():
     print("os.getcwd()_____: ",os.getcwd())
     #print(request.files['sheet'].save(os.path.join('/app/Sheets/sheet',request.files['sheet'].filename)))
     print("********************************flag 5************************************************")
+    print("os.listdir()____:",os.listdir())
     print("********************************flag 6************************************************")
     #print("os.listdir()____:",os.listdir())
     print("********************************flag 7************************************************")
