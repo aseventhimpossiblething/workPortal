@@ -31,7 +31,7 @@ def hello():
 
 @app.route('/upload', methods=['POST','GET'])
 def upload():
-    request.files['sheet']
+   #request.files['sheet']
     print(request.form)
     return "info"
    
