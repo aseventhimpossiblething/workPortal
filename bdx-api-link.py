@@ -33,9 +33,6 @@ def hello():
 def upload():
     request.files['sheet']
     print(request.form)
-    form=request.form
-    TheMethod=request.method
-    #info=form+" "+TheMethod
     return "info"
    
 
