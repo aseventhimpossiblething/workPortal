@@ -31,12 +31,11 @@ def hello():
 
 @app.route('/upload', methods=['POST','GET'])
 def upload():
-    #request.files['sheet']
+    request.files['sheet']
     print(request.form)
     form=request.form
     TheMethod=request.method
     #info=form+" "+TheMethod
-    
     return "info"
    
 
