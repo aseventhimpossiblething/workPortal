@@ -77,7 +77,7 @@ def fileHandler():
 
     print("**************************flag 16******************************************************")
     
-    topage=str(request.method),"Done!"
+    topage=str(request.method),"Remember to write some nonsense here to let the team know that tha file uploaded correctly, also put security in place, also activate learning model.. "
     print(topage)
     print("**************************flag 17******************************************************")
     return topage
