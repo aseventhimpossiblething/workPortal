@@ -25,7 +25,7 @@ print(neVar)
 #except 
 #readSample=open('sample.txt').read()
 #print(readSample)
-#incomingSheet=open('Bid_OpExperiment.xlsx')
+incomingSheet=open('Bid_OpExperiment.xlsx')
 #pandas.read_csv('Bid_OpExperiment.csv')
 
 #incomingSheet=open('Bid_OpExperiment.xlsx')
