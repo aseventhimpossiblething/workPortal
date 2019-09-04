@@ -13,6 +13,8 @@ print("Checkpoint 3-after Database connection")
 print("\d")
 print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 print("ran conn")
+print("attempting to create tables")
+conn.cursor().execute(CREATE TABLE DocumentSubmissions(Documents))
 
 
 
