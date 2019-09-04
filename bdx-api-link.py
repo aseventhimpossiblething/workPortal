@@ -18,6 +18,8 @@ print("attempting to create tables")
 #conn.cursor().execute("CREATE TABLE DocumentSubmissions("Documents")")
 conn.cursor().execute("CREATE TABLE storage (user_id serial PRIMARY KEY, username VARCHAR (50) UNIQUE NOT NULL, password VARCHAR (50) NOT NULL, email VARCHAR (355) UNIQUE NOT NULL, created_on TIMESTAMP NOT NULL, last_login TIMESTAMP)")
 conn.cursor().close()
+conn.commit()
+conn.close
 print("check for tables")
 print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 
