@@ -8,6 +8,7 @@ print(os.getcwd())
 print(os.listdir())
 print(os.chdir('Sheets'))
 print(os.getcwd())
+print(os.listdir())
 
 
 
