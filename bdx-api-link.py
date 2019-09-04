@@ -8,7 +8,6 @@ import psycopg2
 app = Flask(__name__)   # Flask constructor
 print("Checkpoint 2-before Database connection")
 
-"""
 conn = psycopg2.connect("dbname='dcect276ul8asc' user='ffsezxsqjvacnw' host='ec2-54-83-9-36.compute-1.amazonaws.com' password='657c149f7aac22520e75d72bddb9a16c76e60ac324fb4358f9f579ac1c2619d4'")
 print("Checkpoint 3-after Database connection")
 #conn.cursor().execute("SELECT * FROM information_schema.tables ")
@@ -18,14 +17,14 @@ print("run __: ",conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 print("ran conn")
 print("attempting to create tables")
 #conn.cursor().execute("CREATE TABLE DocumentSubmissions("Documents")")
-conn.cursor().execute("CREATE TABLE storage (user_id serial PRIMARY KEY, username VARCHAR (50) UNIQUE NOT NULL, password VARCHAR (50) NOT NULL, email VARCHAR (355) UNIQUE NOT NULL, created_on TIMESTAMP NOT NULL, last_login TIMESTAMP)")
-conn.cursor().close()
-conn.commit()
+#conn.cursor().execute("CREATE TABLE storage (user_id serial PRIMARY KEY, username VARCHAR (50) UNIQUE NOT NULL, password VARCHAR (50) NOT NULL, email VARCHAR (355) UNIQUE NOT NULL, created_on TIMESTAMP NOT NULL, last_login TIMESTAMP)")
+#conn.cursor().close()
+#conn.commit()
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 conn.close
 print("check for tables")
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
-"""
+
 
 
 
