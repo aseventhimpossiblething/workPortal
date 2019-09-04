@@ -27,6 +27,7 @@ print(neVar)
 #print(readSample)
 incomingSheet=open('Bid_OpExperiment.xlsx')
 tinycsv=open('tiny.csv')
+print(tinycsv)
 #pandas.read_csv('Bid_OpExperiment.csv')
 
 #incomingSheet=open('Bid_OpExperiment.xlsx')
