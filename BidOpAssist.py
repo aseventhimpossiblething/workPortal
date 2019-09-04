@@ -8,10 +8,11 @@ BidOpAssist("BidOpAssist is Running as expected","Second Slot","Third Slot")
 os.chdir('Sheets')
 print(os.getcwd())
 
-print(open('sample.txt'))
-readSample=open('sample.txt').read()
-print(readSample)
-incomingSheet=open('Bid_OpExperiment.xlsx')
+#try print(open('sample.txt'))
+#except 
+#readSample=open('sample.txt').read()
+#print(readSample)
+#incomingSheet=open('Bid_OpExperiment.xlsx')
 #pandas.read_excel(incomingSheet)
 
 #incomingSheet=open('Bid_OpExperiment.xlsx')
