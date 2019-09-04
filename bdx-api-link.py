@@ -15,7 +15,7 @@ print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 print("ran conn")
 print("attempting to create tables")
 #conn.cursor().execute("CREATE TABLE DocumentSubmissions("Documents")")
-conn.cursor().execute("CREATE TABLE storage (username VARCHAR(50) UNIQUE NOT NULL)")
+conn.cursor().execute("CREATE TABLE storage (user_id serial PRIMARY KEY)")
 
 print("check for tables")
 print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
