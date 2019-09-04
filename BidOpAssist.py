@@ -17,6 +17,7 @@ Sata=numpy.array(Sata)
 print(Sata)
 print(Sata.shape)
 neVar=[4,5,6,1]
+pandas.DataFrame(neVar)
 #numpy.reshape(Sata)
 #pandas.DataFrame(Sata)
 #print(data)
