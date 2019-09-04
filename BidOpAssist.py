@@ -7,7 +7,7 @@ BidOpAssist("BidOpAssist is Running as expected","Second Slot","Third Slot")
 print(os.chdir('Sheets'))
 print(os.getcwd())
 print(os.listdir())
-print(open('Bid_OpExperiment.xlsx'))
+incomingSheet=open('Bid_OpExperiment.xlsx')
 
 
 
