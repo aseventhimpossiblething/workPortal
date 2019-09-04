@@ -1,4 +1,5 @@
 
+import pandas
 #import BidOpAssist
 import fileHandler
 from flask import Flask, render_template, request
