@@ -14,7 +14,7 @@ print(open('sample.txt').read())
 #readSample=open('sample.txt').read()
 #print(readSample)
 incomingSheet=open('Bid_OpExperiment.xlsx')
-pandas.read_excel(incomingSheet)
+#pandas.read_excel(incomingSheet)
 
 #incomingSheet=open('Bid_OpExperiment.xlsx')
 #SHeetRead=incomingSheet.read()
