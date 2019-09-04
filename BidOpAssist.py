@@ -15,7 +15,7 @@ Sata=open('sample.txt').read()
 #print(Sata)
 Sata=numpy.array(Sata)
 print(Sata)
-print(Sata.shape())
+print(Sata.shape)
 #pandas.DataFrame(Sata)
 #print(data)
 #except 
