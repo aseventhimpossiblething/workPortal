@@ -9,7 +9,7 @@ print(os.chdir('Sheets'))
 #pandas.read_excel()
 #incomingSheet=open('Bid_OpExperiment.xlsx')
 #SHeetRead=incomingSheet.read()
-print(incomingSheet)
+#print(incomingSheet)
 
 
 
