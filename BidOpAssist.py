@@ -11,7 +11,7 @@ print(os.getcwd())
 
 print(open('sample.txt').read())
 data=open('sample.txt').read()
-pandas.dataframe(data)
+pandas.DataFrame(data)
 print(data)
 #except 
 #readSample=open('sample.txt').read()
