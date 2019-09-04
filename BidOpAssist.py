@@ -1,4 +1,6 @@
 import os
+import numpy
+import scipy
 import pandas
 
 def BidOpAssist(x,y,z):
