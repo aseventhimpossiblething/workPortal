@@ -13,7 +13,8 @@ print(os.getcwd())
 
 Sata=open('sample.txt').read()
 print(Sata)
-numpy.array(Sata)
+Sata=numpy.array(Sata)
+print(Sata)
 #pandas.DataFrame(data=Sata)
 #print(data)
 #except 
