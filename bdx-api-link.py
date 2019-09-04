@@ -17,6 +17,9 @@ print("attempting to create tables")
 #conn.cursor().execute("CREATE TABLE DocumentSubmissions("Documents")")
 #conn.cursor().execute("CREATE TABLE storage (number VARCHAR )")
 
+print("check for tables")
+print(conn.cursor().execute(\d))
+
 
 
 @app.route('/')
