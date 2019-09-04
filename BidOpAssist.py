@@ -1,7 +1,7 @@
 def BidOpAssist(x):
     print("***BidOpAssist Running********")
-    print(x)
-    
-    
-BidOpAssist("BidOpAssist is Running as expected")    
+    print(x)    
+BidOpAssist("BidOpAssist is Running as expected","Second Slot","Third Slot")
+
+
    
