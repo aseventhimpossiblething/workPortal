@@ -12,10 +12,10 @@ print(os.getcwd())
 
 
 Sata=open('sample.txt').read()
-print(Sata)
+#print(Sata)
 Sata=numpy.array(Sata)
 print(Sata)
-#pandas.DataFrame(data=Sata)
+pandas.DataFrame(Sata)
 #print(data)
 #except 
 #readSample=open('sample.txt').read()
