@@ -8,4 +8,5 @@ MarkUpSafe
 Wheel
 google-ads
 psycopg2-binary
+xlrd
 pandas
