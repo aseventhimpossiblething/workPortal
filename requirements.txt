@@ -8,3 +8,4 @@ MarkUpSafe
 Wheel
 google-ads
 psycopg2-binary
+pandas
