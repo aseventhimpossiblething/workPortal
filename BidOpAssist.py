@@ -9,10 +9,10 @@ os.chdir('Sheets')
 print(os.getcwd())
 
 
-print(open('sample.txt').read())
 Sata=open('sample.txt').read()
-pandas.DataFrame(data=Sata)
-print(data)
+print(Sata)
+#pandas.DataFrame(data=Sata)
+#print(data)
 #except 
 #readSample=open('sample.txt').read()
 #print(readSample)
