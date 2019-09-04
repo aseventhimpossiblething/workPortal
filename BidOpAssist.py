@@ -8,7 +8,8 @@ BidOpAssist("BidOpAssist is Running as expected","Second Slot","Third Slot")
 os.chdir('Sheets')
 print(os.getcwd())
 
-print(open('sample.txt'))
+
+print(open('sample.txt').read())
 #except 
 #readSample=open('sample.txt').read()
 #print(readSample)
