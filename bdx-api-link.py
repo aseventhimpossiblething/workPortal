@@ -14,14 +14,15 @@ print("Checkpoint 3-after Database connection")
 
 
 #print("run __: ",conn.cursor().execute("SELECT * FROM dcect276ul8asc"))
-print('run conn.cursor().execute("SELECT * FROM information_schema.tables")___:', conn.cursor().execute("SELECT * FROM information_schema.tables"))
+#print('run conn.cursor().execute("SELECT * FROM information_schema.tables")___:', conn.cursor().execute("SELECT * FROM information_schema.tables"))
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 print("ran conn")
 #print("attempting to create tables")
 #conn.cursor().execute("CREATE TABLE DocumentSubmissions("Documents")")
 #conn.cursor().execute("CREATE TABLE storage (user_id serial PRIMARY KEY, username VARCHAR (50) UNIQUE NOT NULL, password VARCHAR (50) NOT NULL, email VARCHAR (355) UNIQUE NOT NULL, created_on TIMESTAMP NOT NULL, last_login TIMESTAMP)")
-#conn.cursor().close()
-#conn.commit()
+conn.cursor().execute("SELECT * FROM tables")
+conn.cursor().close()
+conn.commit()
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 conn.close
 print("check for tables")
