@@ -1,5 +1,5 @@
 
-import BidOpAssist
+#import BidOpAssist
 import fileHandler
 from flask import Flask, render_template, request
 import os
