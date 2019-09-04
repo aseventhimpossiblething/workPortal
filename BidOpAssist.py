@@ -13,7 +13,7 @@ print(open('sample.txt').read())
 #except 
 #readSample=open('sample.txt').read()
 #print(readSample)
-#incomingSheet=open('Bid_OpExperiment.xlsx')
+incomingSheet=open('Bid_OpExperiment.xlsx')
 #pandas.read_excel(incomingSheet)
 
 #incomingSheet=open('Bid_OpExperiment.xlsx')
