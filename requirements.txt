@@ -9,4 +9,7 @@ Wheel
 google-ads
 psycopg2-binary
 xlrd
+numpy
+scipy
 pandas
+
