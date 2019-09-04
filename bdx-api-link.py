@@ -14,7 +14,7 @@ print("Checkpoint 3-after Database connection")
 
 
 print("run __: ",conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
-print("run conn.cursor().execute("\d")___:", conn.cursor().execute("\d"))
+print('run conn.cursor().execute("\d")___:', conn.cursor().execute("\d"))
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 print("ran conn")
 #print("attempting to create tables")
