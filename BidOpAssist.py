@@ -15,11 +15,12 @@ print(os.getcwd())
 PatternSheet=open('Bid_OpExperiment.xlsx', 'rb')
 Pattern_no_Frame=pandas.read_excel(PatternSheet)
 pandas.DataFrame(Pattern_no_Frame)
-PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame)
+PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=['Campaign','Ad group','Keyword','New CPC','Max.CPC','Avg. CPC','Cost','Clicks','Conversions','Impr.','CTR','Cost/conv'])       
 print("This is the working file !!!!",PatternSheetFramed)
 print("***********Working Sheet Frame Flag 1*****************")
 Pattern_New_CPC=PatternSheetFramed['New CPC']
 Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Keyword'], axis=1)
+#Pattern_inputModel=Pattern_inputModel[[]]
 
 #print("isolate New CPC_____:")
 print("This is the New CPC Pattern",Pattern_New_CPC)
