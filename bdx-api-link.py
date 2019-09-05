@@ -6,6 +6,7 @@ import fileHandler
 from flask import Flask, render_template, request
 import os
 import psycopg2
+from sklearn.ensemble import RandomForestRegressor
 
 app = Flask(__name__)   # Flask constructor
 print("Checkpoint 2-before Database connection")
