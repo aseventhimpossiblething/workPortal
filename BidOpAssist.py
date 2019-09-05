@@ -45,7 +45,7 @@ def arrINarr():
     while (count<13):
         VarCatch.append([],)
         count=count+1
-   
+arrINarr()   
 print(VarCatch)       
         
     
