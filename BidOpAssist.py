@@ -30,7 +30,7 @@ print("This is the New CPC Pattern************************************")
 print(Pattern_New_CPC)
 print("This is the Input Pattern**************************************")
 print(Pattern_inputModel.head())
-no_Col_Head_Pattern_inputModel=Pattern_inputModel.drop(index=0)
+no_Col_Head_Pattern_inputModel=Pattern_inputModel.drop([0])
 no_Col_Pattern_New_CPC=Pattern_New_CPC.drop(index=0)
 print("These should be headless")
 print("no_Col_Head_Pattern_inputModel")
@@ -38,7 +38,7 @@ print(no_Col_Head_Pattern_inputModel)
 print("no_Col_Pattern_New_CPC")
 print(no_Col_Pattern_New_CPC)
 
-taughtModel=RandomForestRegressor(n_estimators=25)#.fit(no_Col_Head_Pattern_inputModel,no_Col_Pattern_New_CPC)
+taughtModel=RandomForestRegressor(n_estimators=25).fit(no_Col_Head_Pattern_inputModel,no_Col_Pattern_New_CPC)
 print("fin")
 
 
