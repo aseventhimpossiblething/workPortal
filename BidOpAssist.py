@@ -5,6 +5,10 @@ import scipy
 import pandas
 from sklearn.ensemble import RandomForestRegressor
 
+ModelCols1=['Campaign','Ad group','Keyword','New CPC','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','Impr.','CTR']
+ModelCols2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score']
+ModelColumns=ModelCols1+ModelCols2
+
 def BidOpAssist(x,y,z):
     print("***BidOpAssist Running********")
     print(x,y,z)    
@@ -17,8 +21,7 @@ PatternSheet=open('Machine.xlsx', 'rb')
 Pattern_no_Frame=pandas.read_excel(PatternSheet)
 pandas.DataFrame(Pattern_no_Frame)
 #PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame columns )
-PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=['Campaign','Ad group','Keyword','New CPC','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','Impr.','CTR','Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share
-','Search lost IS (rank)','Quality Score'])
+PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns)
                                                                
 print("This is the working file !!!!")
 print(PatternSheetFramed)
