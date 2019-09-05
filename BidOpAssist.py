@@ -13,13 +13,11 @@ print(os.getcwd())
 
 incomingSheet=open('Bid_OpExperiment.xlsx', 'rb')
 workingSheet_no_Frame=pandas.read_excel(incomingSheet)
-#print(incomingSheet)
-print("This is workingSheet_no_Frame",workingSheet_no_Frame)
 pandas.DataFrame(workingSheet_no_Frame)
-workingSheet=pandas.DataFrame(workingSheet_no_Frame)['New CPC']
-print("This is the working file !!!!",workingSheet)
-#tinycsv=open('tiny.csv')
-#print(tinycsv.read())
+workingSheetFramed=pandas.DataFrame(workingSheet_no_Frame)
+print("This is the working file !!!!",workingSheetFramed)
+print("***********Working Sheet Frame Flag 1*****************")
+
 print("********************************bid exp 1************")
 
 print("********************************bid exp 2************")
