@@ -17,6 +17,8 @@ pandas.DataFrame(workingSheet_no_Frame)
 workingSheetFramed=pandas.DataFrame(workingSheet_no_Frame)
 print("This is the working file !!!!",workingSheetFramed)
 print("***********Working Sheet Frame Flag 1*****************")
+print("isolate New CPC_____:")
+print(workingSheetFramed['New CPC'])
 
 print("********************************bid exp 1************")
 
