@@ -29,7 +29,7 @@ no_Col_Pattern_New_CPC=Pattern_New_CPC.drop(index=0)
 
 # these are attempts to rectify the sheets
 Pattern_inputModel.to_csv('Pattern_inputModel.csv', header=None)
-no_Col_Head_Pattern_inputModel=pandas.DataFrame(pandas.read_csv('Pattern_inputModel.csv', dtype=float64))
+no_Col_Head_Pattern_inputModel=pandas.DataFrame(pandas.read_csv('Pattern_inputModel.csv', dtype='float64'))
 #print("*******Headless*******")
 #print(no_Col_Head_Pattern_inputModel)
 
