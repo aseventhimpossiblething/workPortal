@@ -38,6 +38,7 @@ print("no_Col_Head_Pattern_inputModel")
 print("no_Col_Pattern_New_CPC")
 print(no_Col_Pattern_New_CPC)
 print("****************************************************************")
+"""
 #print(len(no_Col_Head_Pattern_inputModel))
 VarCatch=[]
 def arrINarr(df):
@@ -57,7 +58,13 @@ def no_Col_Head_Pattern_inputModel():
         counter=counter+1
     return IRA 
 #no_Col_Head_Pattern_inputModel()
-        
+"""
+Pattern_inputModel.to_csv('Pattern_inputModel.csv', header=None)
+no_Col_Head_Pattern_inputModel=pandas.DataFrame('Pattern_inputModel.csv')
+print("*******Headless*******")
+print(no_Col_Head_Pattern_inputModel)
+
+
 
 
 
