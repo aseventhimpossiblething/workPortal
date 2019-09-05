@@ -26,7 +26,8 @@ neVar=[4,5,6,1]
 #except 
 #readSample=open('sample.txt').read()
 #print(readSample)
-print(incomingSheet=open('Bid_OpExperiment.xlsx', 'rb'))
+incomingSheet=open('Bid_OpExperiment.xlsx', 'rb')
+print(incomingSheet)
 #tinycsv=open('tiny.csv')
 #print(tinycsv.read())
 print("********************************bid exp 1************")
