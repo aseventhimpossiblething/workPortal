@@ -60,7 +60,8 @@ def no_Col_Head_Pattern_inputModel():
 #no_Col_Head_Pattern_inputModel()
 """
 Pattern_inputModel.to_csv('Pattern_inputModel.csv', header=None)
-no_Col_Head_Pattern_inputModel=pandas.DataFrame('Pattern_inputModel.csv')
+
+no_Col_Head_Pattern_inputModel=pandas.DataFrame(pandas.read_csv('Pattern_inputModel.csv'))
 print("*******Headless*******")
 print(no_Col_Head_Pattern_inputModel)
 
