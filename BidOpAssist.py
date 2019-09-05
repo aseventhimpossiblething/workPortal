@@ -39,6 +39,16 @@ print("no_Col_Pattern_New_CPC")
 print(no_Col_Pattern_New_CPC)
 print("****************************************************************")
 #print(len(no_Col_Head_Pattern_inputModel))
+VarCatch=[]
+def arrINarr():
+    count=0
+    while (count<13):
+        VarCatch.append([],)
+        count=count+1
+   
+print(arrINarr())       
+        
+    
 def no_Col_Head_Pattern_inputModel():
     IRA=[]
     counter=0
