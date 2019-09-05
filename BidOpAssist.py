@@ -13,10 +13,10 @@ print(os.getcwd())
 
 incomingSheet=open('Bid_OpExperiment.xlsx', 'rb')
 #print(incomingSheet)
-print(pandas.read_excel(incomingSheet))
+#print(pandas.read_excel(incomingSheet))
 pandas.DataFrame(incomingSheet)
-#workingSheet=pandas.DataFrame(incomingSheet)['']
-#print(workingSheet)
+workingSheet=pandas.DataFrame(incomingSheet)
+print(workingSheet)
 #tinycsv=open('tiny.csv')
 #print(tinycsv.read())
 print("********************************bid exp 1************")
