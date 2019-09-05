@@ -17,16 +17,18 @@ Pattern_no_Frame=pandas.read_excel(PatternSheet)
 pandas.DataFrame(Pattern_no_Frame)
 #PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame columns )
 PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=['Campaign','Ad group','Keyword','New CPC','Max.CPC','Avg. CPC','Cost','Clicks','Conversions','Impr.','CTR','Cost/conv'])       
-print("This is the working file !!!!",PatternSheetFramed)
+print("This is the working file !!!!")
+print(PatternSheetFramed)
 print("***********Working Sheet Frame Flag 1*****************")
 Pattern_New_CPC=PatternSheetFramed['New CPC']
 Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Keyword'], axis=1)
 #Pattern_inputModel=Pattern_inputModel[[]]
 
 #print("isolate New CPC_____:")
-print("This is the New CPC Pattern")
+print("This is the New CPC Pattern************************************")
 print(Pattern_New_CPC)
-print("This is the Input Pattern",Pattern_inputModel)
+print("This is the Input Pattern**************************************")
+print(Pattern_inputModel)
 
 print("********************************bid exp 1************")
 
