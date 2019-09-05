@@ -19,7 +19,7 @@ PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame)
 print("This is the working file !!!!",PatternSheetFramed)
 print("***********Working Sheet Frame Flag 1*****************")
 Pattern_New_CPC=PatternSheetFramed['New CPC']
-Pattern_inputModel=PatternSheetFramed.drop(['New CPC'], axis=1)
+Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Keyword'], axis=1)
 
 #print("isolate New CPC_____:")
 print("This is the New CPC Pattern",Pattern_New_CPC)
