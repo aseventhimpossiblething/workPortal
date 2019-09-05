@@ -16,7 +16,7 @@ workingSheet_no_Frame=pandas.read_excel(incomingSheet)
 #print(incomingSheet)
 print("This is workingSheet_no_Frame",workingSheet_no_Frame)
 pandas.DataFrame(workingSheet_no_Frame)
-workingSheet=pandas.DataFrame(workingSheet_no_Frame)
+workingSheet=pandas.DataFrame(workingSheet_no_Frame)['New CPC']
 print("This is the working file !!!!",workingSheet)
 #tinycsv=open('tiny.csv')
 #print(tinycsv.read())
