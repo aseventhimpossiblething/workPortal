@@ -34,11 +34,11 @@ print(Pattern_inputModel.head())
 no_Col_Pattern_New_CPC=Pattern_New_CPC.drop(index=0)
 print("These should be headless")
 print("no_Col_Head_Pattern_inputModel")
-print(no_Col_Head_Pattern_inputModel)
+#print(no_Col_Head_Pattern_inputModel)
 print("no_Col_Pattern_New_CPC")
 print(no_Col_Pattern_New_CPC)
 print("****************************************************************")
-print(len(no_Col_Head_Pattern_inputModel))
+#print(len(no_Col_Head_Pattern_inputModel))
 def no_Col_Head_Pattern_inputModel():
     IRA=[]
     counter=0
