@@ -21,8 +21,9 @@ print("***********Working Sheet Frame Flag 1*****************")
 Pattern_New_CPC=PatternSheetFramed['New CPC']
 Pattern_inputModel=PatternSheetFramed.drop(['New CPC'], axis=1)
 
-print("isolate New CPC_____:")
-print(Pattern_New_CPC)
+#print("isolate New CPC_____:")
+print("This is the New CPC Pattern",Pattern_New_CPC)
+print("This is the New CPC Pattern",Pattern_inputModel)
 
 print("********************************bid exp 1************")
 
