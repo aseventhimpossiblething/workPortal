@@ -15,6 +15,7 @@ incomingSheet=open('Bid_OpExperiment.xlsx', 'rb')
 #print(incomingSheet)
 #print(pandas.read_excel(incomingSheet))
 pandas.DataFrame(incomingSheet)
+workingsheet=pandas.DataFrame(incomingSheet)[['New CPC']]
 print("pandas.DataFrame(incomingSheet)")
 #tinycsv=open('tiny.csv')
 #print(tinycsv.read())
