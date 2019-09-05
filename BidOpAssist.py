@@ -15,8 +15,8 @@ print(os.getcwd())
 PatternSheet=open('Bid_OpExperiment.xlsx', 'rb')
 Pattern_no_Frame=pandas.read_excel(PatternSheet)
 pandas.DataFrame(Pattern_no_Frame)
-PatternFramed=pandas.DataFrame(Pattern_no_Frame)
-print("This is the working file !!!!",workingSheetFramed)
+PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame)
+print("This is the working file !!!!",PatternSheetFramed)
 print("***********Working Sheet Frame Flag 1*****************")
 Pattern_New_CPC=PatternSheetFramed['New CPC']
 
