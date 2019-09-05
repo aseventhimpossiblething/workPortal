@@ -28,7 +28,7 @@ neVar=[4,5,6,1]
 #print(readSample)
 incomingSheet=open('Bid_OpExperiment.xlsx', 'rb')
 print(incomingSheet)
-pandas.read_excel('Bid_OpExperiment.xlsx', 'rb')
+pandas.read_excel((incomingSheet)
 #tinycsv=open('tiny.csv')
 #print(tinycsv.read())
 print("********************************bid exp 1************")
