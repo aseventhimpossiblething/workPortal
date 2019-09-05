@@ -60,7 +60,6 @@ def no_Col_Head_Pattern_inputModel():
 #no_Col_Head_Pattern_inputModel()
 """
 Pattern_inputModel.to_csv('Pattern_inputModel.csv', header=None)
-
 no_Col_Head_Pattern_inputModel=pandas.DataFrame(pandas.read_csv('Pattern_inputModel.csv'))
 print("*******Headless*******")
 print(no_Col_Head_Pattern_inputModel)
@@ -70,7 +69,7 @@ print(no_Col_Head_Pattern_inputModel)
 
 
 
-#taughtModel=RandomForestRegressor(n_estimators=25).fit(no_Col_Head_Pattern_inputModel,no_Col_Pattern_New_CPC)
+taughtModel=RandomForestRegressor(n_estimators=25).fit(no_Col_Head_Pattern_inputModel,no_Col_Pattern_New_CPC)
 print("fin")
 
 
