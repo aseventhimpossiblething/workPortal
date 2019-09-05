@@ -11,13 +11,14 @@ BidOpAssist("BidOpAssist is Running as expected","Second Slot","Third Slot")
 os.chdir('Sheets')
 print(os.getcwd())
 
-incomingSheet=open('Bid_OpExperiment.xlsx', 'rb')
-workingSheet_no_Frame=pandas.read_excel(incomingSheet)
-pandas.DataFrame(workingSheet_no_Frame)
-workingSheetFramed=pandas.DataFrame(workingSheet_no_Frame)
+
+PatternSheet=open('Bid_OpExperiment.xlsx', 'rb')
+Pattern_no_Frame=pandas.read_excel(PatternSheet)
+pandas.DataFrame(Pattern_no_Frame)
+PatternFramed=pandas.DataFrame(Pattern_no_Frame)
 print("This is the working file !!!!",workingSheetFramed)
 print("***********Working Sheet Frame Flag 1*****************")
-New_CPC=workingSheetFramed['New CPC']
+New_CPC=PatternSheetFramed['New CPC']
 
 print("isolate New CPC_____:")
 print(New_CPC)
