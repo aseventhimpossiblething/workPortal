@@ -46,7 +46,7 @@ def no_Col_Head_Pattern_inputModel():
         IRA.append(Pattern_inputModel[counter])
         counter=counter+1
     return IRA 
-no_Col_Head_Pattern_inputModel()
+#no_Col_Head_Pattern_inputModel()
         
 
 
