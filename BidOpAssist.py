@@ -23,7 +23,7 @@ Pattern_inputModel=PatternSheetFramed.drop(['New CPC'], axis=1)
 
 #print("isolate New CPC_____:")
 print("This is the New CPC Pattern",Pattern_New_CPC)
-print("This is the New CPC Pattern",Pattern_inputModel)
+print("This is the Input Pattern",Pattern_inputModel)
 
 print("********************************bid exp 1************")
 
