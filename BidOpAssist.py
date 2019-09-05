@@ -11,6 +11,18 @@ BidOpAssist("BidOpAssist is Running as expected","Second Slot","Third Slot")
 os.chdir('Sheets')
 print(os.getcwd())
 
+incomingSheet=open('Bid_OpExperiment.xlsx', 'rb')
+print(incomingSheet)
+print(pandas.read_excel(incomingSheet))
+pandas.DataFrame(incomingSheet)
+print("pandas.DataFrame(incomingSheet)")
+#tinycsv=open('tiny.csv')
+#print(tinycsv.read())
+print("********************************bid exp 1************")
+
+print("********************************bid exp 2************")
+
+
 
 Sata=open('sample.txt').read()
 #print(Sata)
