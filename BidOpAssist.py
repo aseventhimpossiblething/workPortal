@@ -46,7 +46,7 @@ def arrINarr():
         VarCatch.append([],)
         count=count+1
    
-print(arrINarr())       
+print(VarCatch)       
         
     
 def no_Col_Head_Pattern_inputModel():
