@@ -29,7 +29,7 @@ no_Col_Pattern_New_CPC=Pattern_New_CPC.drop(index=0)
 
 # these are attempts to rectify the sheets
 Pattern_inputModel.to_csv('Pattern_inputModel.csv', header=None)
-no_Col_Head_Pattern_inputModel=pandas.DataFrame(pandas.read_csv('Pattern_inputModel.csv', dtype=float))
+no_Col_Head_Pattern_inputModel=pandas.DataFrame(pandas.read_csv('Pattern_inputModel.csv', dtype=double))
 #print("*******Headless*******")
 #print(no_Col_Head_Pattern_inputModel)
 
@@ -38,7 +38,7 @@ no_Col_Head_Pattern_inputModel=pandas.DataFrame(pandas.read_csv('Pattern_inputMo
 
 
 
-taughtModel=RandomForestRegressor(n_estimators=25).fit(no_Col_Head_Pattern_inputModel,no_Col_Pattern_New_CPC)
+#taughtModel=RandomForestRegressor(n_estimators=25).fit(no_Col_Head_Pattern_inputModel,no_Col_Pattern_New_CPC)
 print("fin")
 
 
