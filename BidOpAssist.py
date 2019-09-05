@@ -19,6 +19,7 @@ PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame)
 print("This is the working file !!!!",PatternSheetFramed)
 print("***********Working Sheet Frame Flag 1*****************")
 Pattern_New_CPC=PatternSheetFramed['New CPC']
+Pattern_inputModel=PatternSheetFramed.drop('New CPC')
 
 print("isolate New CPC_____:")
 print(Pattern_New_CPC)
