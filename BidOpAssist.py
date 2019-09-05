@@ -40,12 +40,12 @@ print(no_Col_Pattern_New_CPC)
 print("****************************************************************")
 #print(len(no_Col_Head_Pattern_inputModel))
 VarCatch=[]
-def arrINarr():
+def arrINarr(df):
     count=0
-    while (count<13):
+    while (count<len(df.columns)):
         VarCatch.append([],)
         count=count+1
-arrINarr()   
+arrINarr(Pattern_inputModel)   
 print(VarCatch)       
         
     
