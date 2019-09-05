@@ -28,7 +28,8 @@ Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Key
 print("This is the New CPC Pattern************************************")
 print(Pattern_New_CPC)
 print("This is the Input Pattern**************************************")
-print(Pattern_inputModel)
+print(Pattern_inputModel.head())
+
 
 print("********************************bid exp 1************")
 
