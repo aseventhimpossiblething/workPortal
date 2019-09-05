@@ -13,4 +13,5 @@ xlrd
 numpy
 scipy
 pandas
+sklearn
 
