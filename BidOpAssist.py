@@ -13,7 +13,7 @@ print(os.getcwd())
 
 incomingSheet=open('Bid_OpExperiment.xlsx', 'rb')
 #print(incomingSheet)
-#print(pandas.read_excel(incomingSheet))
+print("This is pandas.read_excel(incomingSheet)",andas.read_excel(incomingSheet))
 pandas.DataFrame(incomingSheet)
 workingSheet=pandas.DataFrame(incomingSheet)
 print("This is the working file !!!!",workingSheet)
