@@ -38,7 +38,7 @@ no_Col_Head_Pattern_inputModel=pandas.DataFrame(pandas.read_csv('Pattern_inputMo
 
 
 
-#taughtModel=RandomForestRegressor(n_estimators=25).fit(no_Col_Head_Pattern_inputModel,no_Col_Pattern_New_CPC)
+taughtModel=RandomForestRegressor(n_estimators=25).fit(no_Col_Head_Pattern_inputModel,no_Col_Pattern_New_CPC)
 print("fin")
 
 
