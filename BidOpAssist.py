@@ -30,6 +30,8 @@ print("This is the New CPC Pattern************************************")
 print(Pattern_New_CPC)
 print("This is the Input Pattern**************************************")
 print(Pattern_inputModel.head())
+
+taughtModel=RandomForestRegressor(n_estimators=25).fit(Pattern_inputModel,Pattern_New_CPC)
 print("fin")
 
 
