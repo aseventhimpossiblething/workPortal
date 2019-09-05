@@ -3,6 +3,7 @@ import os
 import numpy
 import scipy
 import pandas
+from sklearn.ensemble import RandomForestRegressor
 
 def BidOpAssist(x,y,z):
     print("***BidOpAssist Running********")
