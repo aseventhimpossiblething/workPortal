@@ -12,7 +12,7 @@ os.chdir('Sheets')
 print(os.getcwd())
 
 
-PatternSheet=open('Bid_OpExperiment.xlsx', 'rb')
+PatternSheet=open('Machine.xlsx', 'rb')
 Pattern_no_Frame=pandas.read_excel(PatternSheet)
 pandas.DataFrame(Pattern_no_Frame)
 #PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame columns )
