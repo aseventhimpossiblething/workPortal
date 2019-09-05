@@ -18,10 +18,10 @@ pandas.DataFrame(Pattern_no_Frame)
 PatternFramed=pandas.DataFrame(Pattern_no_Frame)
 print("This is the working file !!!!",workingSheetFramed)
 print("***********Working Sheet Frame Flag 1*****************")
-New_CPC=PatternSheetFramed['New CPC']
+Pattern_New_CPC=PatternSheetFramed['New CPC']
 
 print("isolate New CPC_____:")
-print(New_CPC)
+print(Pattern_New_CPC)
 
 print("********************************bid exp 1************")
 
