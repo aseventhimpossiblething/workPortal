@@ -51,32 +51,4 @@ def BidOpAssist():
 
 
 
-BidOpAssist()
-print(Predict())
-
-print("************************patterns 1**********************************************")
-print("Pattern_inputModel",Pattern_inputModel)
-print("Pattern_New_CPC",Pattern_New_CPC)
-print("X_Sheet_Analysis",X_Sheet_Analysis)
-#print("",)
-
-print("************************patterns 2**********************************************")
-
-
-
-print("******************Pattern Model ****************************")
-print("Pattern_inputModel",Pattern_inputModel)
-print("******************Pattern New CPC ****************************")
-print("Pattern_New_CPC",Pattern_New_CPC)    
-
-
-
-print("******************X Sheet ****************************")
-print("X_Sheet_Analysis",X_Sheet_Analysis)
-
- 
-print("******************************** the Prediction **************************************")
-
-print("fini")
-
 
