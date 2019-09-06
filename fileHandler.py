@@ -77,7 +77,7 @@ def fileHandler():
 
     print("**************************flag 16******************************************************")
     
-    tosrn=tosrn=<a href=https://bdx-api-link.herokuapp.com/3>File Submitted proceed to bit output</a>
+    tosrn=<a href=https://bdx-api-link.herokuapp.com/3>File Submitted proceed to bit output</a>
     
     print("**************************flag 17******************************************************")
     return tosrn
