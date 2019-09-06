@@ -65,6 +65,10 @@ def holla():
 def hollc():
     return render_template('fileInput.html',PoutPut=BidOpAssist.BidOpAssist())
 
+@app.route('/3')
+def hollc():
+    return BidOpAssist()
+
 
 
 
