@@ -64,7 +64,7 @@ def holla():
     return render_template('cssPulling.html')
 
 @app.route('/2')
-def hollb():
+def holld():
     return render_template('fileInput.html') 
 """
 @app.route('/3')
