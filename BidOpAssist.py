@@ -34,8 +34,10 @@ def PrepModel():
     Pattern_New_CPC=PatternSheetFramed[Dimension_Predicted]
     global Pattern_inputModel
     Pattern_inputModel=PatternSheetFramed.drop(ColumnsToClear_for_Analysis, axis=1)
-PrepModel()    
+PrepModel()
+print("******************Pattern Model ****************************")
 print("Pattern_inputModel",Pattern_inputModel)
+print("******************Pattern New CPC ****************************")
 print("Pattern_New_CPC",Pattern_New_CPC)    
 
 
@@ -47,6 +49,10 @@ def Analysis():
     global X_Sheet_Analysis
     X_Sheet_Analysis=FramedSheet_To_Be_Analysed.drop(ColumnsToClear_for_Analysis, axis=1)
     #Y_Sheet_Analysis=FramedSheet_To_Be_Analysed[Dimension_Predicted]
+Analysis()
+print("******************X Sheet ****************************")
+print("X_Sheet_Analysis",X_Sheet_Analysis)
+
     
 
 
