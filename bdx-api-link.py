@@ -64,15 +64,14 @@ def holla():
     return render_template('cssPulling.html')
 
 @app.route('/2')
-def hollc():
+def hollb():
     return render_template('fileInput.html',PoutPut=BidOpAssist.BidOpAssist())
-
-
 """
 @app.route('/3')
 def hollc():
-    return BidOpAssist()
-"""    
+     return render_template()
+"""     
+    
 
 
 
