@@ -4,23 +4,26 @@ import numpy
 import scipy
 import pandas
 from sklearn.ensemble import RandomForestRegressor
+os.chdir('Sheets')
 
 ModelCol1=['Campaign','Ad group','Keyword','New CPC','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','Impr.','CTR']
 ModelCol2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score','Match type']
 ModelColumns=ModelCol1+ModelCol2
+PatternSheet=open('Machine.xlsx', 'rb')
+Sheet_To_Be_analysed=open('To_Test_Machine_Google.xlsx','rb')
 
 def BidOpAssist(x,y,z):
     print("***BidOpAssist Running********")
     print(x,y,z)    
 BidOpAssist("BidOpAssist tester","Second Slot","Third Slot")
-os.chdir('Sheets')
+
 #To_Test_Machine_Google.xlsx
 
-Sheet_To_Be_analysed=open('To_Test_Machine_Google.xlsx','rb')
+
 print(Sheet_To_Be_analysed)
 
 
-PatternSheet=open('Machine.xlsx', 'rb')
+#PatternSheet=open('Machine.xlsx', 'rb')
 Pattern_no_Frame=pandas.read_excel(PatternSheet)
 PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
 #print("**************Pattern sheet initial*******************************")
