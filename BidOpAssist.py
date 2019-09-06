@@ -9,6 +9,8 @@ os.chdir('Sheets')
 ModelCol1=['Campaign','Ad group','Keyword','New CPC','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','Impr.','CTR']
 ModelCol2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score','Match type']
 ModelColumns=ModelCol1+ModelCol2
+ColumnsToClear_for_Analysis=['New CPC','Campaign','Ad group','Keyword','Match type']
+Dimension_Predicted='New CPC'
 
 #PatternSheet=open('Machine.xlsx', 'rb')
 #Sheet_To_Be_analysed=open('To_Test_Machine_Goog.xlsx','rb')
@@ -24,8 +26,8 @@ print('pattern prep running**************************')
 PatternSheet=open('Machine.xlsx', 'rb')
 Pattern_no_Frame=pandas.read_excel(PatternSheet)
 PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
-Pattern_New_CPC=PatternSheetFramed['New CPC']
-Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Keyword','Match type'], axis=1)
+Pattern_New_CPC=PatternSheetFramed[Dimension_Predicted]
+Pattern_inputModel=PatternSheetFramed.drop(ColumnsToClear_for_Analysis, axis=1)
 print('******************* Pattern_New_CPC ***************************')
 print(Pattern_New_CPC)
 print('******************* Pattern_inputModel ***************************')
@@ -35,6 +37,9 @@ print(Pattern_inputModel)
 
 Sheet_To_Be_analysed=open('To_Test_Machine_Goog.xlsx','rb')
 FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns).fillna(0)
+X_Sheet_Analysis=FramedSheet_To_Be_Analysed.drop(ColumnsToClear_for_Analysis, axis=1)
+Y_Sheet_Analysis=FramedSheet_To_Be_Analysed[Dimension_Predicted]
+
 
 
 
