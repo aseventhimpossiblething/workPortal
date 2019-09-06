@@ -75,7 +75,7 @@ print("X_Sheet_Analysis",X_Sheet_Analysis)
 
  
 print("******************************** the Prediction **************************************")
-BidOptAssist()
+BidOpAssist()
 print(Predict())
 print("fini")
 
