@@ -1,4 +1,4 @@
-import glob
+
 import chardet
 import os
 import numpy
