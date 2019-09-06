@@ -47,9 +47,10 @@ Y_Sheet_Analysis=FramedSheet_To_Be_Analysed[Dimension_Predicted]
 
 
 taughtModel=RandomForestRegressor(n_estimators=25).fit(Pattern_inputModel,Pattern_New_CPC)
-taughtModel.predict(X_Sheet_Analysis)
+outputArr=taughtModel.predict(X_Sheet_Analysis)
+print(outputArr)
 #taughtModel=RandomForestRegressor(n_estimators=25).fit(no_Col_Head_Pattern_inputModel,no_Col_Pattern_New_CPC)
-print("fin")
+print("fini")
 
 
 
