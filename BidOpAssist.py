@@ -50,6 +50,8 @@ def BidOpAssist():
     Analysis()
     return Predict()
 
+print(glob.glob('*.xlsx'))
+
 
 
 
