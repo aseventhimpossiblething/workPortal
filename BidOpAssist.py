@@ -10,7 +10,7 @@ ModelCol1=['Campaign','Ad group','Keyword','New CPC','Max. CPC','Avg. CPC','Cost
 ModelCol2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score','Match type']
 ModelColumns=ModelCol1+ModelCol2
 #**** clear?
-#PatternSheet=open('Machine.xlsx', 'rb')
+PatternSheet=open('Machine.xlsx', 'rb')
 Sheet_To_Be_analysed=open('To_Test_Machine_Goog.xlsx','rb')
 
 def BidOpAssist(x,y,z):
