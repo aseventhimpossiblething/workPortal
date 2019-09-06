@@ -18,13 +18,6 @@ ColumnsToClear_for_Analysis=[Dimension_Predicted,'Campaign','Ad group','Keyword'
 Pattern_inputModel="Empty"
 Pattern_New_CPC="Empty"
 X_Sheet_Analysis="Empty"
-print("************************patterns 1**********************************************")
-print("Pattern_inputModel",Pattern_inputModel)
-print("Pattern_New_CPC",Pattern_New_CPC)
-print("X_Sheet_Analysis",X_Sheet_Analysis)
-#print("",)
-
-print("************************patterns 2**********************************************")
 
 def PrepModel():      
     PatternSheet=open(ExampleSheetName, 'rb')
@@ -34,14 +27,8 @@ def PrepModel():
     Pattern_New_CPC=PatternSheetFramed[Dimension_Predicted]
     global Pattern_inputModel
     Pattern_inputModel=PatternSheetFramed.drop(ColumnsToClear_for_Analysis, axis=1)
-PrepModel()
-print("******************Pattern Model ****************************")
-print("Pattern_inputModel",Pattern_inputModel)
-print("******************Pattern New CPC ****************************")
-print("Pattern_New_CPC",Pattern_New_CPC)    
-
-
-
+    
+    
 def Analysis():
     Sheet_To_Be_analysed=open('To_Test_Machine_Goog.xlsx','rb')
     FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns).fillna(0)
@@ -49,15 +36,41 @@ def Analysis():
     global X_Sheet_Analysis
     X_Sheet_Analysis=FramedSheet_To_Be_Analysed.drop(ColumnsToClear_for_Analysis, axis=1)
     #Y_Sheet_Analysis=FramedSheet_To_Be_Analysed[Dimension_Predicted]
-Analysis()
-print("******************X Sheet ****************************")
-print("X_Sheet_Analysis",X_Sheet_Analysis)
-
+    
+ 
 def Predict():
     taughtModel=RandomForestRegressor(n_estimators=25).fit(Pattern_inputModel,Pattern_New_CPC)
     outputArr=taughtModel.predict(X_Sheet_Analysis)
     #print(list(outputArr))
-    return list(outputArr)    
+    return list(outputArr)
+
+
+PrepModel()
+Analysis()
+
+
+
+print("************************patterns 1**********************************************")
+print("Pattern_inputModel",Pattern_inputModel)
+print("Pattern_New_CPC",Pattern_New_CPC)
+print("X_Sheet_Analysis",X_Sheet_Analysis)
+#print("",)
+
+print("************************patterns 2**********************************************")
+
+
+
+print("******************Pattern Model ****************************")
+print("Pattern_inputModel",Pattern_inputModel)
+print("******************Pattern New CPC ****************************")
+print("Pattern_New_CPC",Pattern_New_CPC)    
+
+
+
+print("******************X Sheet ****************************")
+print("X_Sheet_Analysis",X_Sheet_Analysis)
+
+ 
 print("******************************** the Prediction **************************************")
 print(Predict())
 print("fini")
