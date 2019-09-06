@@ -52,6 +52,7 @@ def BidOpAssist():
 
 
 
+
 print("************************patterns 1**********************************************")
 print("Pattern_inputModel",Pattern_inputModel)
 print("Pattern_New_CPC",Pattern_New_CPC)
@@ -74,6 +75,7 @@ print("X_Sheet_Analysis",X_Sheet_Analysis)
 
  
 print("******************************** the Prediction **************************************")
+BidOptAssist()
 print(Predict())
 print("fini")
 
