@@ -19,12 +19,20 @@ os.chdir('Sheets')
 PatternSheet=open('Machine.xlsx', 'rb')
 Pattern_no_Frame=pandas.read_excel(PatternSheet)
 PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
+print("**************Pattern sheet initial*******************************")
+print(PatternSheetFramed)
                                                                
-#print("This is the Input files split into the x and y*****************************************")
+print("This is the Input files split into the x and y*****************************************")
 Pattern_New_CPC=PatternSheetFramed['New CPC']
 Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Keyword'], axis=1)
-
+print('******************* Pattern_New_CPC ***************************')
+print(Pattern_New_CPC)
+print('******************* Pattern_inputModel ***************************')
+print(Pattern_inputModel)
 #print("This is the New CPC Pattern************************************")
+
+
+
 no_Col_Pattern_New_CPC=Pattern_New_CPC.drop(index=0)
 
 # these are attempts to rectify the sheets
