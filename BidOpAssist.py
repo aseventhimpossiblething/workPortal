@@ -17,6 +17,7 @@ def BidOpAssist(x,y,z):
     print("***BidOpAssist Running********")
     print(x,y,z)    
 BidOpAssist("BidOpAssist tester","Second Slot","Third Slot")
+
 #this is the function that prepares the Pattern Sheet
 def Pattern_Prep():
     print('pattern prep running**************************')
@@ -25,7 +26,13 @@ def Pattern_Prep():
     PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
     Pattern_New_CPC=PatternSheetFramed['New CPC']
     Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Keyword','Match type'], axis=1)
-Pattern_Prep()   
+    print('******************* Pattern_New_CPC ***************************')
+    print(Pattern_New_CPC)
+    print('******************* Pattern_inputModel ***************************')
+    print(Pattern_inputModel)
+
+
+
 
 #This is the Function That will prep the Sheet to be Assessed
     
@@ -37,7 +44,7 @@ pandas.read_excel(Sheet_To_Be_analysed)
 Framed_Sheet_to_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns)
 #print(Framed_Sheet_to_Be_Analysed)
 
-"""
+
 #PatternSheet=open('Machine.xlsx', 'rb')
 Pattern_no_Frame=pandas.read_excel(PatternSheet)
 PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
@@ -47,9 +54,9 @@ PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fill
 #print("This is the Input files split into the x and y*****************************************")
 Pattern_New_CPC=PatternSheetFramed['New CPC']
 Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Keyword','Match type'], axis=1)
-#print('******************* Pattern_New_CPC ***************************')
-#print(Pattern_New_CPC)
-#print('******************* Pattern_inputModel ***************************')
+print('******************* Pattern_New_CPC ***************************')
+print(Pattern_New_CPC)
+print('******************* Pattern_inputModel ***************************')
 #print(Pattern_inputModel)
 #print("This is the New CPC Pattern************************************")
 
@@ -62,12 +69,6 @@ Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Key
 #no_Col_Head_Pattern_inputModel=pandas.DataFrame(pandas.read_csv('Pattern_inputModel.csv', dtype=numpy.longdouble))
 #print("*******Headless*******")
 #print(no_Col_Head_Pattern_inputModel)
-"""
-print('******************* Pattern_New_CPC ***************************')
-print(Pattern_New_CPC)
-print('******************* Pattern_inputModel ***************************')
-print(Pattern_inputModel)
-
 
 
 
