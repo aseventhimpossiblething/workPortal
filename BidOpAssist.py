@@ -10,7 +10,7 @@ ModelCol1=['Campaign','Ad group','Keyword','New CPC','Max. CPC','Avg. CPC','Cost
 ModelCol2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score','Match type']
 ModelColumns=ModelCol1+ModelCol2
 #**** clear?
-PatternSheet=open('Machine.xlsx', 'rb')
+#PatternSheet=open('Machine.xlsx', 'rb')
 Sheet_To_Be_analysed=open('To_Test_Machine_Goog.xlsx','rb')
 
 def BidOpAssist(x,y,z):
@@ -19,6 +19,7 @@ def BidOpAssist(x,y,z):
 BidOpAssist("BidOpAssist tester","Second Slot","Third Slot")
 #this is the function that prepares the Pattern Sheet
 def Pattern_Prep():
+    print('pattern prep running**************************')
     PatternSheet=open('Machine.xlsx', 'rb')
     Pattern_no_Frame=pandas.read_excel(PatternSheet)
     PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
