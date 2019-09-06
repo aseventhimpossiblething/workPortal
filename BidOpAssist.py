@@ -23,14 +23,13 @@ print("Pattern_New_CPC",Pattern_New_CPC)
 
 print("************************patterns 2**********************************************")
 
-def PrepModel():
-    global Pattern_inputModel
-    global Pattern_New_CPC
-    
+def PrepModel():      
     PatternSheet=open('Machine.xlsx', 'rb')
     Pattern_no_Frame=pandas.read_excel(PatternSheet)
     PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
+    global Pattern_New_CPC
     Pattern_New_CPC=PatternSheetFramed[Dimension_Predicted]
+    global Pattern_inputModel
     Pattern_inputModel=PatternSheetFramed.drop(ColumnsToClear_for_Analysis, axis=1)
 PrepModel()    
 print("Pattern_inputModel",Pattern_inputModel)
