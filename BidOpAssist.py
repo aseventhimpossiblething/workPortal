@@ -23,16 +23,16 @@ BidOpAssist("BidOpAssist tester","Second Slot","Third Slot")
 
 #this is the function that prepares the Pattern Sheet
 
-print('pattern prep running**************************')
+#print('pattern prep running**************************')
 PatternSheet=open('Machine.xlsx', 'rb')
 Pattern_no_Frame=pandas.read_excel(PatternSheet)
 PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
 Pattern_New_CPC=PatternSheetFramed[Dimension_Predicted]
 Pattern_inputModel=PatternSheetFramed.drop(ColumnsToClear_for_Analysis, axis=1)
-print('******************* Pattern_New_CPC ***************************')
-print(Pattern_New_CPC)
-print('******************* Pattern_inputModel ***************************')
-print(Pattern_inputModel)
+#print('******************* Pattern_New_CPC ***************************')
+#print(Pattern_New_CPC)
+#print('******************* Pattern_inputModel ***************************')
+#print(Pattern_inputModel)
 
 
 
