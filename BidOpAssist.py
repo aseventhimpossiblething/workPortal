@@ -58,8 +58,8 @@ def Predict():
     outputArr=taughtModel.predict(X_Sheet_Analysis)
     #print(list(outputArr))
     return list(outputArr)    
-print(******************************** the Prediction **************************************)
-print(Predict)
+print("******************************** the Prediction **************************************")
+print(Predict())
 print("fini")
 
 
