@@ -17,7 +17,6 @@ def BidOpAssist(x,y,z):
     print("***BidOpAssist Running********")
     print(x,y,z)    
 BidOpAssist("BidOpAssist tester","Second Slot","Third Slot")
-"""
 #this is the function that prepares the Pattern Sheet
 def Pattern_Prep():
     PatternSheet=open('Machine.xlsx', 'rb')
@@ -25,9 +24,8 @@ def Pattern_Prep():
     PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
     Pattern_New_CPC=PatternSheetFramed['New CPC']
     Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Keyword','Match type'], axis=1)
-   
+Pattern_Prep()   
     
-"""
     
 
 
@@ -35,7 +33,7 @@ def Pattern_Prep():
 
 pandas.read_excel(Sheet_To_Be_analysed)
 Framed_Sheet_to_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns)
-print(Framed_Sheet_to_Be_Analysed)
+#print(Framed_Sheet_to_Be_Analysed)
 
 """
 #PatternSheet=open('Machine.xlsx', 'rb')
@@ -63,6 +61,10 @@ Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Key
 #print("*******Headless*******")
 #print(no_Col_Head_Pattern_inputModel)
 """
+print('******************* Pattern_New_CPC ***************************')
+print(Pattern_New_CPC)
+print('******************* Pattern_inputModel ***************************')
+print(Pattern_inputModel)
 
 
 
