@@ -25,7 +25,8 @@ def Pattern_Prep():
     Pattern_New_CPC=PatternSheetFramed['New CPC']
     Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Keyword','Match type'], axis=1)
 Pattern_Prep()   
-    
+
+#This is the Function That will prep the Sheet to be Assessed
     
 
 
