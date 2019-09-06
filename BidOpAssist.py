@@ -6,11 +6,13 @@ import pandas
 from sklearn.ensemble import RandomForestRegressor
 os.chdir('Sheets')
 
+#important Variables
 Dimension_Predicted='New CPC'
 ModelCol1=['Campaign','Ad group','Keyword','New CPC','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','Impr.','CTR']
 ModelCol2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score','Match type']
 ModelColumns=ModelCol1+ModelCol2
 ColumnsToClear_for_Analysis=[Dimension_Predicted,'Campaign','Ad group','Keyword','Match type']
+
 
 
 #PatternSheet=open('Machine.xlsx', 'rb')
