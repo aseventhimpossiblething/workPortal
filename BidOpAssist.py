@@ -19,21 +19,21 @@ def BidOpAssist(x,y,z):
 BidOpAssist("BidOpAssist tester","Second Slot","Third Slot")
 
 #this is the function that prepares the Pattern Sheet
-def Pattern_Prep():
-    print('pattern prep running**************************')
-    PatternSheet=open('Machine.xlsx', 'rb')
-    Pattern_no_Frame=pandas.read_excel(PatternSheet)
-    PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
-    Pattern_New_CPC=PatternSheetFramed['New CPC']
-    Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Keyword','Match type'], axis=1)
-    print('******************* Pattern_New_CPC ***************************')
-    print(Pattern_New_CPC)
-    print('******************* Pattern_inputModel ***************************')
-    print(Pattern_inputModel)
+
+print('pattern prep running**************************')
+PatternSheet=open('Machine.xlsx', 'rb')
+Pattern_no_Frame=pandas.read_excel(PatternSheet)
+PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
+Pattern_New_CPC=PatternSheetFramed['New CPC']
+Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Keyword','Match type'], axis=1)
+print('******************* Pattern_New_CPC ***************************')
+print(Pattern_New_CPC)
+print('******************* Pattern_inputModel ***************************')
+print(Pattern_inputModel)
 
 
 
-
+"""
 #This is the Function That will prep the Sheet to be Assessed
     
 
@@ -69,7 +69,7 @@ print('******************* Pattern_inputModel ***************************')
 #no_Col_Head_Pattern_inputModel=pandas.DataFrame(pandas.read_csv('Pattern_inputModel.csv', dtype=numpy.longdouble))
 #print("*******Headless*******")
 #print(no_Col_Head_Pattern_inputModel)
-
+"""
 
 
 taughtModel=RandomForestRegressor(n_estimators=25).fit(Pattern_inputModel,Pattern_New_CPC)
