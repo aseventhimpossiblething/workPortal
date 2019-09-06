@@ -51,9 +51,9 @@ def BidOpAssist():
     return Predict()
 
 #print(glob.glob('*.xlsx'), key=os.path.getctime)
-print(max(glob.glob('*.xlsx'), key=os.path.getctime))
+#max(glob.glob('*.xlsx'), key=os.path.getctime)
 
-
+min(glob.glob('*.xlsx'), key=os.path.getctime)
 
 
 
