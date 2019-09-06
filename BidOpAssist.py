@@ -15,11 +15,13 @@ ColumnsToClear_for_Analysis=[Dimension_Predicted,'Campaign','Ad group','Keyword'
 Pattern_inputModel="Empty"
 Pattern_New_CPC="Empty"
 X_Sheet_Analysis="Empty"
-
+print("************************patterns 1**********************************************")
 print("Pattern_inputModel",Pattern_inputModel)
 print("Pattern_New_CPC",Pattern_New_CPC)
 #print("X_Sheet_Analysis",X_Sheet_Analysis)
 #print("",)
+
+print("************************patterns 2**********************************************")
 
 def PrepModel():
     global Pattern_inputModel
