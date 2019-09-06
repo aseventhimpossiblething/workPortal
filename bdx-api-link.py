@@ -65,7 +65,7 @@ def holla():
 
 @app.route('/2')
 def hollb():
-    return render_template('fileInput.html',)
+    return render_template('fileInput.html')
 """
 @app.route('/3')
 def hollc():
