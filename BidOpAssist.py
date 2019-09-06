@@ -24,7 +24,7 @@ print(PatternSheetFramed)
                                                                
 print("This is the Input files split into the x and y*****************************************")
 Pattern_New_CPC=PatternSheetFramed['New CPC']
-Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Keyword'], axis=1)
+Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Keyword','Match type'], axis=1)
 print('******************* Pattern_New_CPC ***************************')
 print(Pattern_New_CPC)
 print('******************* Pattern_inputModel ***************************')
