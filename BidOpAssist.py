@@ -36,7 +36,7 @@ PrepModel()
 print("Pattern_inputModel",Pattern_inputModel)
 print("Pattern_New_CPC",Pattern_New_CPC)    
     
-  """
+"""
 
 #Sheet_To_Be_analysed=open('To_Test_Machine_Goog.xlsx','rb')
 
