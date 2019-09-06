@@ -14,21 +14,25 @@ def BidOpAssist(x,y,z):
     print(x,y,z)    
 BidOpAssist("BidOpAssist tester","Second Slot","Third Slot")
 os.chdir('Sheets')
+#To_Test_Machine_Google.xlsx
+
+Sheet_To_Be_analysed=open('To_Test_Machine_Google.xlsx','rb')
+print(Sheet_To_Be_analysed)
 
 
 PatternSheet=open('Machine.xlsx', 'rb')
 Pattern_no_Frame=pandas.read_excel(PatternSheet)
 PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
-print("**************Pattern sheet initial*******************************")
-print(PatternSheetFramed)
+#print("**************Pattern sheet initial*******************************")
+#print(PatternSheetFramed)
                                                                
-print("This is the Input files split into the x and y*****************************************")
+#print("This is the Input files split into the x and y*****************************************")
 Pattern_New_CPC=PatternSheetFramed['New CPC']
 Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Keyword','Match type'], axis=1)
-print('******************* Pattern_New_CPC ***************************')
-print(Pattern_New_CPC)
-print('******************* Pattern_inputModel ***************************')
-print(Pattern_inputModel)
+#print('******************* Pattern_New_CPC ***************************')
+#print(Pattern_New_CPC)
+#print('******************* Pattern_inputModel ***************************')
+#print(Pattern_inputModel)
 #print("This is the New CPC Pattern************************************")
 
 
