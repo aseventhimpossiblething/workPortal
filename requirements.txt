@@ -14,5 +14,5 @@ numpy
 scipy
 pandas
 sklearn
-glob
+glob2
 
