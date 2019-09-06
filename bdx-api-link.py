@@ -66,12 +66,12 @@ def holla():
 @app.route('/2')
 def hollb():
     return render_template('fileInput.html',)
-
+"""
 @app.route('/3')
 def hollc():
      return render_template('BidOutput.html',PoutPut=BidOpAssist.BidOpAssist())
     
-    
+ """   
 
 
 
