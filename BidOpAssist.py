@@ -50,7 +50,7 @@ def BidOpAssist():
     Analysis()
     return Predict()
 
-print(glob.glob('*.xlsx'))
+print(glob.glob('*.xlsx'), key=os.path.getctime)
 
 
 
