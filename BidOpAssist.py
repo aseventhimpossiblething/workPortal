@@ -45,7 +45,6 @@ def Predict():
     return list(outputArr)
 
 def BidOpAssist():
-    os.chdir('Sheets')
     PrepModel()
     Analysis()
     return Predict()
