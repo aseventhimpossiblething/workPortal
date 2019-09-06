@@ -9,7 +9,7 @@ os.chdir('Sheets')
 ModelCol1=['Campaign','Ad group','Keyword','New CPC','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','Impr.','CTR']
 ModelCol2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score','Match type']
 ModelColumns=ModelCol1+ModelCol2
-
+#**** clear?
 PatternSheet=open('Machine.xlsx', 'rb')
 Sheet_To_Be_analysed=open('To_Test_Machine_Goog.xlsx','rb')
 
@@ -17,16 +17,27 @@ def BidOpAssist(x,y,z):
     print("***BidOpAssist Running********")
     print(x,y,z)    
 BidOpAssist("BidOpAssist tester","Second Slot","Third Slot")
+"""
+#this is the function that prepares the Pattern Sheet
+def Pattern_Prep():
+    PatternSheet=open('Machine.xlsx', 'rb')
+    Pattern_no_Frame=pandas.read_excel(PatternSheet)
+    PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
+    Pattern_New_CPC=PatternSheetFramed['New CPC']
+    Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Keyword','Match type'], axis=1)
+   
+    
+"""
+    
 
-#To_Test_Machine_Google.xlsx
 
 
-#print(Sheet_To_Be_analysed)
+
 pandas.read_excel(Sheet_To_Be_analysed)
 Framed_Sheet_to_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns)
 print(Framed_Sheet_to_Be_Analysed)
 
-
+"""
 #PatternSheet=open('Machine.xlsx', 'rb')
 Pattern_no_Frame=pandas.read_excel(PatternSheet)
 PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
@@ -51,7 +62,7 @@ Pattern_inputModel=PatternSheetFramed.drop(['New CPC','Campaign','Ad group','Key
 #no_Col_Head_Pattern_inputModel=pandas.DataFrame(pandas.read_csv('Pattern_inputModel.csv', dtype=numpy.longdouble))
 #print("*******Headless*******")
 #print(no_Col_Head_Pattern_inputModel)
-
+"""
 
 
 
