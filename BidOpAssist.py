@@ -50,7 +50,9 @@ def BidOpAssist():
     Analysis()
     return Predict()
 
-print(glob.glob('*.xlsx'), key=os.path.getctime)
+#print(glob.glob('*.xlsx'), key=os.path.getctime)
+print(max(glob.glob('*.xlsx'), key=os.path.getctime))
+
 
 
 
