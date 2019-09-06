@@ -53,43 +53,13 @@ Analysis()
 print("******************X Sheet ****************************")
 print("X_Sheet_Analysis",X_Sheet_Analysis)
 
-    
-
-
-
-"""
-
-#Sheet_To_Be_analysed=open('To_Test_Machine_Goog.xlsx','rb')
-
-def BidOpAssist(x,y,z):
-    print("***BidOpAssist Running********")
-    print(x,y,z)    
-BidOpAssist("BidOpAssist tester","Second Slot","Third Slot")
-
-
-
-
-
-
-
-
-Sheet_To_Be_analysed=open('To_Test_Machine_Goog.xlsx','rb')
-FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns).fillna(0)
-#the below are for testing only
-X_Sheet_Analysis=FramedSheet_To_Be_Analysed.drop(ColumnsToClear_for_Analysis, axis=1)
-Y_Sheet_Analysis=FramedSheet_To_Be_Analysed[Dimension_Predicted]
-"""
-
-
-
-
-taughtModel=RandomForestRegressor(n_estimators=25).fit(Pattern_inputModel,Pattern_New_CPC)
-outputArr=taughtModel.predict(X_Sheet_Analysis)
-print(outputArr)
-#taughtModel=RandomForestRegressor(n_estimators=25).fit(no_Col_Head_Pattern_inputModel,no_Col_Pattern_New_CPC)
+def Predict():
+    taughtModel=RandomForestRegressor(n_estimators=25).fit(Pattern_inputModel,Pattern_New_CPC)
+    outputArr=taughtModel.predict(X_Sheet_Analysis)
+    #print(list(outputArr))
+    return list(outputArr)    
+print(******************************** the Prediction **************************************)
+print(Predict)
 print("fini")
-
-
-
 
 
