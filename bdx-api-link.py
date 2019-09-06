@@ -62,10 +62,11 @@ def hollo():
 @app.route('/1')
 def holla():
     return render_template('cssPulling.html')
-
+"""
 @app.route('/2')
 def hollb():
     return render_template('fileInput.html')
+"""    
 """
 @app.route('/3')
 def hollc():
