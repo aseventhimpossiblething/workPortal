@@ -5,9 +5,9 @@ import scipy
 import pandas
 from sklearn.ensemble import RandomForestRegressor
 
-ModelCols1=['Campaign','Ad group','Keyword','New CPC','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','Impr.','CTR']
-ModelCols2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score']
-ModelColumns=ModelCols1+ModelCols2
+ModelCol1=['Campaign','Ad group','Keyword','New CPC','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','Impr.','CTR']
+ModelCol2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score','Match type']
+ModelColumns=ModelCol1+ModelCol2
 
 def BidOpAssist(x,y,z):
     print("***BidOpAssist Running********")
