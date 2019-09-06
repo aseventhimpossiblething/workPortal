@@ -21,9 +21,10 @@ BidOpAssist("BidOpAssist tester","Second Slot","Third Slot")
 #To_Test_Machine_Google.xlsx
 
 
-print(Sheet_To_Be_analysed)
+#print(Sheet_To_Be_analysed)
 pandas.read_excel(Sheet_To_Be_analysed)
 Framed_Sheet_to_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns)
+print(Framed_Sheet_to_Be_Analysed)
 
 
 #PatternSheet=open('Machine.xlsx', 'rb')
