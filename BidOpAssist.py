@@ -11,6 +11,7 @@ os.chdir('Sheets')
 #Sheet_to_Analyse=
 Dimension_Predicted='New CPC'
 ExampleSheetName='Machine.xlsx'
+MostRecentFile=min(glob.glob('*.xlsx'), key=os.path.getctime)
 
 ModelCol1=['Campaign','Ad group','Keyword','New CPC','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','Impr.','CTR']
 ModelCol2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score','Match type']
@@ -31,7 +32,7 @@ def PrepModel():
     
     
 def Analysis():
-    Sheet_To_Be_analysed=open('To_Test_Machine_Goog.xlsx','rb')
+    Sheet_To_Be_analysed=open(MostRecentFile,'rb')
     FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns).fillna(0)
     #the below are for testing only
     global X_Sheet_Analysis
@@ -54,6 +55,7 @@ def BidOpAssist():
 #max(glob.glob('*.xlsx'), key=os.path.getctime)
 
 print(min(glob.glob('*.xlsx'), key=os.path.getctime))
+min(glob.glob('*.xlsx'), key=os.path.getctime)
 
 
 
