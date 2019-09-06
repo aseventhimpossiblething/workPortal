@@ -9,6 +9,7 @@ os.chdir('Sheets')
 ModelCol1=['Campaign','Ad group','Keyword','New CPC','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','Impr.','CTR']
 ModelCol2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score','Match type']
 ModelColumns=ModelCol1+ModelCol2
+
 PatternSheet=open('Machine.xlsx', 'rb')
 Sheet_To_Be_analysed=open('To_Test_Machine_Goog.xlsx','rb')
 
@@ -21,6 +22,8 @@ BidOpAssist("BidOpAssist tester","Second Slot","Third Slot")
 
 
 print(Sheet_To_Be_analysed)
+pandas.read_excel(Sheet_To_Be_analysed)
+Framed_Sheet_to_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns)
 
 
 #PatternSheet=open('Machine.xlsx', 'rb')
