@@ -50,7 +50,8 @@ def BidOpAssist():
     Analysis()
     return Predict()
 
-
-
+print("******shape*************")
+print(BidOpAssist().shape)
+print(numpy.reshape(BidOpAssist(),(-1,1)))
 
 
