@@ -57,11 +57,13 @@ def BidOpAssist():
 #print(min(glob.glob('*.xlsx'), key=os.path.getctime))
 #min(glob.glob('*.xlsx'), key=os.path.getctime)
 
+
+
 print("******shape*************")
+newArr=numpy.array(BidOpAssist())
+print(newArr.shape)
 
-print(BidOpAssist().shape)
-
-print(numpy.reshape(BidOpAssist(),(-1,1)))
+print(numpy.reshape(newArr,(-1,1)))
 
 
 
