@@ -49,7 +49,7 @@ def Predict():
 def BidOpAssist():
     PrepModel()
     Analysis()
-    return Predict()
+    return list(numpy.array(Predict()))
 
 #print(glob.glob('*.xlsx'), key=os.path.getctime)
 #max(glob.glob('*.xlsx'), key=os.path.getctime)
@@ -63,7 +63,8 @@ print("******shape*************")
 newArr=numpy.array(BidOpAssist())
 print(newArr.shape)
 
-print(numpy.reshape(newArr,(-1,1)))
+print(list(numpy.reshape(newArr,(-1,1))))
+
 
 
 
