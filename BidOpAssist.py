@@ -40,7 +40,7 @@ def PrepModel():
     Pattern_inputModel=PatternSheetFramed.drop(ColumnsToClear_for_Analysis, axis=1)
     
     
-def Analysis(clicked):
+def Analysis():
     newFileSyntax1=max(glob.glob('*xlsx'),key=os.path.getctime)
     newFileSyntax2="'"+newFileSyntax1+"'"
     newFileSyntax3=os.path.join('app/Sheets',newFileSyntax2)
@@ -52,18 +52,52 @@ def Analysis(clicked):
     newFileSyntax9="'"+newFileSyntax5+"'"
     newFileSyntax10="'"+newFileSyntax6+"'"
     newFileSyntax11="'"+newFileSyntax7+"'"
+    print("_____________")
+    print("newFileSyntax1")
+    print("type newFileSyntax1",type newFileSyntax1)
     print(newFileSyntax1)
+    print("_____________")
+    print("newFileSyntax2")
+    print("type newFileSyntax2",type newFileSyntax2)
     print(newFileSyntax2)
+    print("_____________")
+    print("newFileSyntax3")
+    print("type newFileSyntax3",type newFileSyntax3)
     print(newFileSyntax3)
+    print("_____________")
+    print("newFileSyntax4")
+    print("type newFileSyntax4",type newFileSyntax4)
     print(newFileSyntax4)
+    print("_____________")
+    print("newFileSyntax5")
+    print("type newFileSyntax5",type newFileSyntax5)
     print(newFileSyntax5)
+    print("_____________")
+    print("newFileSyntax6")
+    print("type newFileSyntax6",type newFileSyntax6)
     print(newFileSyntax6)
+    print("_____________")
+    print("newFileSyntax7")
+    print("type newFileSyntax7",type newFileSyntax7)
     print(newFileSyntax7)
+    print("_____________")
+    print("newFileSyntax8")
+    print("type newFileSyntax8",type newFileSyntax8)
     print(newFileSyntax8)
+    print("_____________")
+    print("newFileSyntax9")
+    print("type newFileSyntax9",type newFileSyntax9)
     print(newFileSyntax9)
+    print("_____________")
+    print("newFileSyntax10")
+    print("type newFileSyntax10",type newFileSyntax10)
     print(newFileSyntax10)
+    print("_____________")
+    print("newFileSyntax11")
+    print("type newFileSyntax11",type newFileSyntax11)
     print(newFileSyntax11)
-    
+    print("_____________")
+      
     
     print("*******from inside analysis max ctime file***",max(glob.glob('*xlsx'),key=os.path.getctime))
     global MostRecentFile
@@ -87,9 +121,9 @@ def Predict():
     #print(list(outputArr))
     return list(outputArr)
 
-def BidOpAssist(clicked):
+def BidOpAssist():
     PrepModel()
-    Analysis(clicked)
+    Analysis()
     print("sheet to be analysed",Sheet_To_Be_analysed)
     return list(numpy.array(Predict()))
 #print("sheet to be analysed",Sheet_To_Be_analysed)
