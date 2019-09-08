@@ -14,7 +14,7 @@ print(glob.glob('*'))
 Sheet_To_Be_analysed="None"
 Dimension_Predicted='Changes'
 ExampleSheetName='Machine.xlsx'
-MostRecentFile=max(glob.glob('*.xlsx'), key=os.path.getctime)
+MostRecentFile=max(glob.glob('*.xlsx'), key=os.path.getctime())
 
 ModelCol1=['Campaign','Ad group','Keyword','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','CTR','Changes']
 ModelCol2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score','Match type']
