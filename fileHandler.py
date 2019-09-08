@@ -77,13 +77,13 @@ def fileHandler():
     print("request.files______:    ",request.files)
 
     print("**************************flag 16******************************************************")
-    bids=str(BidOpAssist.BidOpAssist())
-    print("BidOpAssist.MostRecentFile",BidOpAssist.MostRecentFile)
+    #bids=str(BidOpAssist.BidOpAssist())
+    #print("BidOpAssist.MostRecentFile",BidOpAssist.MostRecentFile)
     #print(glob.glob('*'))
-    file=BidOpAssist.MostRecentFile
+    #file=BidOpAssist.MostRecentFile
     
     space="___"
     #tosrn=file+space+bids
-    tosrn = request.files['sheet'].filename
+    tosrn = "done"
     print("**************************flag 17******************************************************")
     return tosrn
