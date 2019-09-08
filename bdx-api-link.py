@@ -69,7 +69,7 @@ def holld():
 
 @app.route('/3')
 def holle():
-     return render_template('BidOutput.html',PoutPut=BidOpAssist.BidOpAssist())
+     return render_template('BidOutput.html',MostRecent=BidOpassist.MostRecentFile,PoutPut=BidOpAssist.BidOpAssist())
    
 
 
