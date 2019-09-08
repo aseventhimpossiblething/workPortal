@@ -112,8 +112,8 @@ def Analysis():
     print("type Sheet_To_Be_analysed",type(Sheet_To_Be_analysed))
     print("Sheet_To_Be_analysed",Sheet_To_Be_analysed)
     #print("pandas.read_excel(Sheet_To_Be_analysed)",pandas.read_excel(Sheet_To_Be_analysed))
-    print("pandas.read_excel(newFileSyntax1)",pandas.read_excel(newFileSyntax1))
-    FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(newFileSyntax1), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
+    print("pandas.read_excel(newFileSyntax2)",pandas.read_excel(newFileSyntax2))
+    FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(newFileSyntax2), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
     #the below are for testing only
     #FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
     #the below are for testing only
