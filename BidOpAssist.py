@@ -9,6 +9,7 @@ os.chdir('Sheets')
 
 #important Variables
 #Sheet_to_Analyse=
+Sheet_To_Be_analysed="None"
 Dimension_Predicted='Changes'
 ExampleSheetName='Machine.xlsx'
 MostRecentFile=min(glob.glob('*.xlsx'), key=os.path.getctime)
@@ -36,6 +37,7 @@ def PrepModel():
     
     
 def Analysis():
+    global Sheet_To_Be_analysed
     Sheet_To_Be_analysed=open(MostRecentFile,'rb')
     FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
     #the below are for testing only
@@ -54,6 +56,8 @@ def BidOpAssist():
     PrepModel()
     Analysis()
     return list(numpy.array(Predict()))
+print(Sheet_To_Be_analysed)
+
 
 #print(glob.glob('*.xlsx'), key=os.path.getctime)
 #max(glob.glob('*.xlsx'), key=os.path.getctime)
