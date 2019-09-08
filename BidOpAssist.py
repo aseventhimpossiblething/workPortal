@@ -106,14 +106,15 @@ def Analysis():
     MostRecentFile=newFileSyntax2
     
     #print("os.join.path__",os.join.path('To_Test_Machine_Goog.xlsx'))
-    
+    """
     global Sheet_To_Be_analysed
     Sheet_To_Be_analysed=open(newFileSyntax1,'rb')
     print("type Sheet_To_Be_analysed",type(Sheet_To_Be_analysed))
     print("Sheet_To_Be_analysed",Sheet_To_Be_analysed)
     #print("pandas.read_excel(Sheet_To_Be_analysed)",pandas.read_excel(Sheet_To_Be_analysed))
     print("pandas.read_excel(newFileSyntax2)",pandas.read_excel(newFileSyntax2))
-    FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(newFileSyntax2), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
+    """
+    FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel('Test_Machine_Goog.xlsx'), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
     #the below are for testing only
     #FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
     #the below are for testing only
