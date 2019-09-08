@@ -43,8 +43,12 @@ def PrepModel():
 def Analysis():
     newFileSyntax1=max(glob.glob('*xlsx'),key=os.path.getctime)
     newFileSyntax2="'"+newFileSyntax1+"'"
-    #newFileSyntax3=
+    newFileSyntax3=os.path.join(/Sheets/,newFileSyntax2)
+    newFileSyntax4=os.path.join(/Sheets/,newFileSyntax1)
+    print(newFileSyntax1)
     print(newFileSyntax2)
+    print(newFileSyntax3)
+    print(newFileSyntax4)
     print("*******from inside analysis max ctime file***",max(glob.glob('*xlsx'),key=os.path.getctime))
     global MostRecentFile
     #2MostRecentFile=str(max(glob.glob('*xlsx'),key=os.path.getctime))
