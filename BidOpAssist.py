@@ -7,14 +7,14 @@ import pandas
 from sklearn.ensemble import RandomForestRegressor
 os.chdir('Sheets')
 print(os.listdir())
-print(glob.glob('To*'))
+print(glob.glob('*.xlsx'),key=os.path.getctime)
 
 #important Variables
 #Sheet_to_Analyse=
 Sheet_To_Be_analysed="None"
 Dimension_Predicted='Changes'
 ExampleSheetName='Machine.xlsx'
-MostRecentFile=max(glob.glob('To*'))
+MostRecentFile=max(glob.glob('*xlsx'),key=os.path.getctime)
 
 
 ModelCol1=['Campaign','Ad group','Keyword','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','CTR','Changes']
@@ -41,7 +41,7 @@ def PrepModel():
     
 def Analysis():
     global Sheet_To_Be_analysed
-    Sheet_To_Be_analysed=open(MostRecentFile,'rb')
+    Sheet_To_Be_analysed=open(max(glob.glob('*xlsx'),key=os.path.getctime),'rb')
     FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
     #the below are for testing only
     global X_Sheet_Analysis
