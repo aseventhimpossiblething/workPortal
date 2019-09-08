@@ -57,7 +57,7 @@ def BidOpAssist():
     Analysis()
     print("sheet to be analysed",Sheet_To_Be_analysed)
     return list(numpy.array(Predict()))
-print("sheet to be analysed",Sheet_To_Be_analysed)
+#print("sheet to be analysed",Sheet_To_Be_analysed)
 
 
 #print(glob.glob('*.xlsx'), key=os.path.getctime)
