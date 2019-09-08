@@ -51,9 +51,13 @@ def Analysis():
     print(newFileSyntax2)
     print(newFileSyntax3)
     print(newFileSyntax4)
+    print(newFileSyntax5)
+    print(newFileSyntax6)
+    
     print("*******from inside analysis max ctime file***",max(glob.glob('*xlsx'),key=os.path.getctime))
     global MostRecentFile
-    #2MostRecentFile=str(max(glob.glob('*xlsx'),key=os.path.getctime))
+    #MostRecentFile=str(max(glob.glob('*xlsx'),key=os.path.getctime))
+    MostRecentFile=newFileSyntax6
     
     #print("os.join.path__",os.join.path('To_Test_Machine_Goog.xlsx'))
     
