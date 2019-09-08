@@ -9,6 +9,7 @@ os.chdir('Sheets')
 print(os.listdir())
 print(max(glob.glob('*.xlsx'),key=os.path.getctime))
 
+
 #important Variables
 #Sheet_to_Analyse=
 Sheet_To_Be_analysed="None"
@@ -42,10 +43,11 @@ def PrepModel():
 def Analysis():
     print("*******from inside analysis max ctime file***",max(glob.glob('*xlsx'),key=os.path.getctime))
     global MostRecentFile
-    MostRecentFile=str(max(glob.glob('*xlsx'),key=os.path.getctime))
+    #2MostRecentFile=str(max(glob.glob('*xlsx'),key=os.path.getctime))
+    print(os.join.path",'To_Test_Machine_Goog.xlsx')
     
     global Sheet_To_Be_analysed
-    Sheet_To_Be_analysed=open('To_Test_Machine_Goog.xlsx','rb')
+    Sheet_To_Be_analysed=open(MostRecentFile,'rb')
     FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
     #the below are for testing only
     global X_Sheet_Analysis
