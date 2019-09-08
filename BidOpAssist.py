@@ -47,6 +47,11 @@ def Analysis():
     newFileSyntax4=os.path.join('/app/Sheets',newFileSyntax2)
     newFileSyntax5=os.path.join('app/Sheets',newFileSyntax1)
     newFileSyntax6=os.path.join('/app/Sheets',newFileSyntax1)
+    newFileSyntax7="'"+newFileSyntax3+"'"
+    newFileSyntax8="'"+newFileSyntax4+"'"
+    newFileSyntax9="'"+newFileSyntax5+"'"
+    newFileSyntax10="'"+newFileSyntax6+"'"
+    newFileSyntax11="'"+newFileSyntax7+"'"
     print(newFileSyntax1)
     print(newFileSyntax2)
     print(newFileSyntax3)
