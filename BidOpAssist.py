@@ -40,7 +40,7 @@ def PrepModel():
     Pattern_inputModel=PatternSheetFramed.drop(ColumnsToClear_for_Analysis, axis=1)
     
     
-def Analysis():
+def Analysis(clicked):
     newFileSyntax1=max(glob.glob('*xlsx'),key=os.path.getctime)
     newFileSyntax2="'"+newFileSyntax1+"'"
     newFileSyntax3=os.path.join('app/Sheets',newFileSyntax2)
@@ -73,7 +73,7 @@ def Analysis():
     #print("os.join.path__",os.join.path('To_Test_Machine_Goog.xlsx'))
     
     global Sheet_To_Be_analysed
-    Sheet_To_Be_analysed=open(MostRecentFile,'rb')
+    Sheet_To_Be_analysed=open(clicked,'rb')
     FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
     #the below are for testing only
     global X_Sheet_Analysis
@@ -87,9 +87,9 @@ def Predict():
     #print(list(outputArr))
     return list(outputArr)
 
-def BidOpAssist():
+def BidOpAssist(clicked):
     PrepModel()
-    Analysis()
+    Analysis(clicked)
     print("sheet to be analysed",Sheet_To_Be_analysed)
     return list(numpy.array(Predict()))
 #print("sheet to be analysed",Sheet_To_Be_analysed)
