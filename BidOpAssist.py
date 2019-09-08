@@ -7,6 +7,7 @@ import pandas
 from sklearn.ensemble import RandomForestRegressor
 os.chdir('Sheets')
 print(os.listdir())
+print(glob.glob('*'))
 
 #important Variables
 #Sheet_to_Analyse=
