@@ -14,7 +14,7 @@ print(glob.glob('*'))
 Sheet_To_Be_analysed="None"
 Dimension_Predicted='Changes'
 ExampleSheetName='Machine.xlsx'
-MostRecentFile=max(glob.glob('*.xlsx'))
+MostRecentFile=max(glob.glob('*'), key=os.path.getctime)
 
 os.path.getctime('Machine.xlsx')
 
