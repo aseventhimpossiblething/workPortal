@@ -41,8 +41,9 @@ def PrepModel():
     
 def Analysis():
     print("*******from inside analysis max ctime file***",max(glob.glob('*xlsx'),key=os.path.getctime))
+    
     global Sheet_To_Be_analysed
-    Sheet_To_Be_analysed=open(max(glob.glob('*xlsx'),key=os.path.getctime),'rb')
+    Sheet_To_Be_analysed=open(MostRecentFile,'rb')
     FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
     #the below are for testing only
     global X_Sheet_Analysis
