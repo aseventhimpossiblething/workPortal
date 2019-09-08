@@ -109,7 +109,10 @@ def Analysis():
     
     global Sheet_To_Be_analysed
     Sheet_To_Be_analysed=open(newFileSyntax1,'rb')
+    print("type Sheet_To_Be_analysed",type(Sheet_To_Be_analysed))
     FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
+    #the below are for testing only
+    #FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
     #the below are for testing only
     global X_Sheet_Analysis
     X_Sheet_Analysis=FramedSheet_To_Be_Analysed.drop(ColumnsToClear_for_Analysis2, axis=1)
