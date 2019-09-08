@@ -77,7 +77,7 @@ def fileHandler():
 
     print("**************************flag 16******************************************************")
     
-    tosrn="file accepted I need to automate the forward but..its tricky"
+    #tosrn="file accepted I need to automate the forward but..its tricky"
     
     print("**************************flag 17******************************************************")
-    return tosrn
+    return "tosrn"
