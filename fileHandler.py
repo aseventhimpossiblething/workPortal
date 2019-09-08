@@ -77,6 +77,7 @@ def fileHandler():
 
     print("**************************flag 16******************************************************")
     print("BidOpAssist.MostRecentFile",BidOpAssist.MostRecentFile)
+    print(glob.glob('*'))
     file=BidOpAssist.MostRecentFile
     bids=str(BidOpAssist.BidOpAssist())
     space="___"
