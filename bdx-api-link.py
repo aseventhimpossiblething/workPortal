@@ -41,7 +41,7 @@ conn.close
 print("check for tables")
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 
-print(os.chdir('Sheets'))
+
 
 
 @app.route('/')
