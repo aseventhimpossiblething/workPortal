@@ -76,8 +76,10 @@ def fileHandler():
     print("request.files______:    ",request.files)
 
     print("**************************flag 16******************************************************")
-    
-    tosrn=str(BidOpAssist.BidOpAssist())
-    
+    print("BidOpAssist.MostRecentFile",BidOpAssist.MostRecentFile)
+    file=BidOpAssist.MostRecentFile
+    bids=str(BidOpAssist.BidOpAssist())
+    space="___"
+    tosrn=file+space+bids
     print("**************************flag 17******************************************************")
     return tosrn
