@@ -77,7 +77,7 @@ def fileHandler():
 
     print("**************************flag 16******************************************************")
     
-    tosrn=BidOpAssist.BidOpAssist()
+    tosrn=str(BidOpAssist.BidOpAssist())
     
     print("**************************flag 17******************************************************")
     return tosrn
