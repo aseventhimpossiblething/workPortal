@@ -41,6 +41,8 @@ def PrepModel():
     
 def Analysis():
     print("*******from inside analysis max ctime file***",max(glob.glob('*xlsx'),key=os.path.getctime))
+    global MostRecentFile
+    MostRecentFile=max(glob.glob('*xlsx'),key=os.path.getctime)
     
     global Sheet_To_Be_analysed
     Sheet_To_Be_analysed=open(MostRecentFile,'rb')
