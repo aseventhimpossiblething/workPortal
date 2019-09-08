@@ -33,9 +33,9 @@ X_Sheet_Analysis="Empty"
 
 def PrepModel():      
     PatternSheet=open(ExampleSheetName, 'rb')
-    print("PatternSheet_____",PatternSheet)
+    #print("PatternSheet_____",PatternSheet)
     Pattern_no_Frame=pandas.read_excel(PatternSheet)
-    print("Pattern_no_Frame_____",Pattern_no_Frame)
+    #print("Pattern_no_Frame_____",Pattern_no_Frame)
     PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
     global Pattern_New_CPC
     Pattern_New_CPC=PatternSheetFramed[Dimension_Predicted]
@@ -117,7 +117,7 @@ def Analysis():
     #print("pandas.read_excel(Sheet_To_Be_analysed)",pandas.read_excel(Sheet_To_Be_analysed))
     print("pandas.read_excel(newFileSyntax2)",pandas.read_excel(newFileSyntax2))
     """
-    FramedSheetToBeAnalysed=pandas.DataFrame(pandas.read_excel('Test_Machine_Goog.xlsx'), columns=ModelColumns_for_Analysed_Sheet)
+    FramedSheetToBeAnalysed=pandas.DataFrame(pandas.read_excel('Test_Machine_Goog.xlsx'), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
     #the below are for testing only
     #FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
     #the below are for testing only
@@ -135,7 +135,7 @@ def Predict():
 def BidOpAssist():
     PrepModel()
     Analysis()
-    print("sheet to be analysed",Sheet_To_Be_analysed)
+    #print("sheet to be analysed",Sheet_To_Be_analysed)
     return list(numpy.array(Predict()))
 #print("sheet to be analysed",Sheet_To_Be_analysed)
 
@@ -154,7 +154,7 @@ print(newArr.shape)
 
 print(list(numpy.reshape(newArr,(-1,1))))
 """
-
-
+print("__ Bid OP______")
+print(BidOpAssist())
 
 
