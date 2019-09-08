@@ -33,7 +33,9 @@ X_Sheet_Analysis="Empty"
 
 def PrepModel():      
     PatternSheet=open(ExampleSheetName, 'rb')
+    print("PatternSheet_____",PatternSheet)
     Pattern_no_Frame=pandas.read_excel(PatternSheet)
+    print("Pattern_no_Frame_____",Pattern_no_Frame)
     PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
     global Pattern_New_CPC
     Pattern_New_CPC=PatternSheetFramed[Dimension_Predicted]
