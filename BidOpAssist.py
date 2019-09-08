@@ -44,6 +44,7 @@ def PrepModel():
     
     
 def Analysis():
+    """
     newFileSyntax1=max(glob.glob('*xlsx'),key=os.path.getctime)
     newFileSyntax2="'"+newFileSyntax1+"'"
     newFileSyntax3=os.path.join('app/Sheets',newFileSyntax2)
@@ -108,7 +109,7 @@ def Analysis():
     MostRecentFile=newFileSyntax2
     
     #print("os.join.path__",os.join.path('To_Test_Machine_Goog.xlsx'))
-    """
+    
     global Sheet_To_Be_analysed
     Sheet_To_Be_analysed=open(newFileSyntax1,'rb')
     print("type Sheet_To_Be_analysed",type(Sheet_To_Be_analysed))
