@@ -117,12 +117,12 @@ def Analysis():
     #print("pandas.read_excel(Sheet_To_Be_analysed)",pandas.read_excel(Sheet_To_Be_analysed))
     print("pandas.read_excel(newFileSyntax2)",pandas.read_excel(newFileSyntax2))
     """
-    FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel('Test_Machine_Goog.xlsx'), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
+    FramedSheetToBeAnalysed=pandas.DataFrame(pandas.read_excel('Test_Machine_Goog.xlsx'), columns=ModelColumns_for_Analysed_Sheet)
     #the below are for testing only
     #FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
     #the below are for testing only
     global X_Sheet_Analysis
-    X_Sheet_Analysis=FramedSheet_To_Be_Analysed.drop(ColumnsToClear_for_Analysis2, axis=1)
+    X_Sheet_Analysis=FramedSheetToBeAnalysed.drop(ColumnsToClear_for_Analysis2, axis=1)
     #Y_Sheet_Analysis=FramedSheet_To_Be_Analysed[Dimension_Predicted]
     
  
