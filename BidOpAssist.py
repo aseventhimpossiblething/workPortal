@@ -43,8 +43,8 @@ def PrepModel():
 def Analysis():
     newFileSyntax1=max(glob.glob('*xlsx'),key=os.path.getctime)
     newFileSyntax2="'"+newFileSyntax1+"'"
-    newFileSyntax3=os.path.join(/Sheets/,newFileSyntax2)
-    newFileSyntax4=os.path.join(/Sheets/,newFileSyntax1)
+    newFileSyntax3=os.path.join('app/Sheets',newFileSyntax2)
+    newFileSyntax4=os.path.join('/app/Sheets',newFileSyntax2)
     print(newFileSyntax1)
     print(newFileSyntax2)
     print(newFileSyntax3)
