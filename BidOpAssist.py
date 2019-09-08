@@ -7,7 +7,7 @@ import pandas
 from sklearn.ensemble import RandomForestRegressor
 os.chdir('Sheets')
 print(os.listdir())
-print(glob.glob('*.xlsx'),key=os.path.getctime)
+print(max(glob.glob('*.xlsx'),key=os.path.getctime))
 
 #important Variables
 #Sheet_to_Analyse=
