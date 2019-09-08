@@ -84,6 +84,6 @@ def fileHandler():
     
     space="___"
     #tosrn=file+space+bids
-    tosrn = request.files['sheet'].filename)
+    tosrn = request.files['sheet'].filename
     print("**************************flag 17******************************************************")
     return tosrn
