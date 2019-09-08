@@ -15,7 +15,9 @@ MostRecentFile=min(glob.glob('*.xlsx'), key=os.path.getctime)
 
 ModelCol1=['Campaign','Ad group','Keyword','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','CTR','Changes']
 ModelCol2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score','Match type']
+ModelCol3=['Campaign','Ad group','Keyword','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','CTR']
 ModelColumns=ModelCol1+ModelCol2
+ModelColumns_for_Analysed_Sheet=ModelCol2+ModelCol3
 ColumnsToClear_for_Analysis=[Dimension_Predicted,'Campaign','Ad group','Keyword','Match type']
 Pattern_inputModel="Empty"
 Pattern_New_CPC="Empty"
@@ -33,7 +35,7 @@ def PrepModel():
     
 def Analysis():
     Sheet_To_Be_analysed=open(MostRecentFile,'rb')
-    FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns).fillna(0)
+    FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
     #the below are for testing only
     global X_Sheet_Analysis
     X_Sheet_Analysis=FramedSheet_To_Be_Analysed.drop(ColumnsToClear_for_Analysis, axis=1)
