@@ -53,8 +53,8 @@ def fileHandler():
 
     #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
 
-    request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
-    #request.files['sheet'].save(request.files['sheet'].filename)
+    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
+    request.files['sheet'].save('Timetracker.xlsx')
 
     print("********************************flag 10************************************************")
 
