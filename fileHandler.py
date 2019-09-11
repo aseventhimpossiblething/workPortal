@@ -87,7 +87,7 @@ def fileHandler():
     
     space="___"
     #tosrn=file+space+bids
-    print(open('Timetracker.xlsx'))
+    print(open('Timetracker.xlsx','rb'))
     pandas.read_csv('Timetracker.xlsx')
     
     tosrn = "done"
