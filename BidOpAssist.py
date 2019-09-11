@@ -155,6 +155,6 @@ print(newArr.shape)
 print(list(numpy.reshape(newArr,(-1,1))))
 """
 print("__ Bid OP______")
-print(BidOpAssist())
+#print(BidOpAssist())
 
 
