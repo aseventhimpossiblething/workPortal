@@ -84,6 +84,8 @@ def fileHandler():
     print("request.files______:    ",request.files)
 
     print("**************************flag 16******************************************************")
+    print("request.files[sheet].stream")
+    request.files[sheet].stream
     #bids=str(BidOpAssist.BidOpAssist())
     #print("BidOpAssist.MostRecentFile",BidOpAssist.MostRecentFile)
     #print(glob.glob('*'))
