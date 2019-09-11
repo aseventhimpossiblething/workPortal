@@ -89,7 +89,7 @@ def fileHandler():
     space="___"
     #tosrn=file+space+bids
     print(open('Timetracker.xlsx','rb'))
-    print('Timetracker.xlsx')
+    print(Timetracker.xlsx)
     #pandas.read_excel(open('Timetracker.xlsx','rb'))
     #xlrd.open_workbook('Timetracker.xlsx')
     
