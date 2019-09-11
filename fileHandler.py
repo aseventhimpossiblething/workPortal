@@ -82,8 +82,12 @@ def fileHandler():
     #print(glob.glob('*'))
     #file=BidOpAssist.MostRecentFile
     
+    
+    
     space="___"
     #tosrn=file+space+bids
+    open('Timetracker.xlsx')
+    
     tosrn = "done"
     print("**************************flag 17******************************************************")
     return tosrn
