@@ -88,7 +88,7 @@ def fileHandler():
     #print(request.files['sheet'].stream)
     #print("open(request.files['sheet'])")
     #print(open(request.files['sheet']))
-    pandas.read_excel(request.files['sheet'])
+    #pandas.read_excel(request.files['sheet'])
     #bids=str(BidOpAssist.BidOpAssist())
     #print("BidOpAssist.MostRecentFile",BidOpAssist.MostRecentFile)
     #print(glob.glob('*'))
@@ -105,7 +105,7 @@ def fileHandler():
     #print(io.BufferedReader(open('Timetracker.xlsx','rb')))
     #input_sheet = io.BufferedReader(request.files['sheet'])
 
-    
+    xlrd.open_workbook('Timetracker')
     tosrn = "done"
     print("**************************flag 17******************************************************")
     return tosrn
