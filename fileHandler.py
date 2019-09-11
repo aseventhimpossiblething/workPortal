@@ -91,14 +91,14 @@ def fileHandler():
     
     
     
-    space="___"
+    #space="___"
     #tosrn=file+space+bids
-    print(open('Timetracker','rb'))
+    #print(open('Timetracker','rb'))
     #print(Timetracker.xlsx)
     #pandas.read_excel(open('Timetracker.xlsx','rb'))
     #xlrd.open_workbook('Timetracker.xlsx')
     #print(io.BufferedReader(open('Timetracker.xlsx','rb')))
-    input_sheet = io.BufferedReader(request.files['sheet'])
+    #input_sheet = io.BufferedReader(request.files['sheet'])
 
     
     tosrn = "done"
