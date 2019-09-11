@@ -86,7 +86,7 @@ def fileHandler():
     
     space="___"
     #tosrn=file+space+bids
-    open('Timetracker.xlsx')
+    print(open('Timetracker.xlsx'))
     
     tosrn = "done"
     print("**************************flag 17******************************************************")
