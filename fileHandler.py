@@ -93,7 +93,9 @@ def fileHandler():
     #print(Timetracker.xlsx)
     #pandas.read_excel(open('Timetracker.xlsx','rb'))
     #xlrd.open_workbook('Timetracker.xlsx')
-    print(io.BufferedReader(open('Timetracker.xlsx','rb')))
+    #print(io.BufferedReader(open('Timetracker.xlsx','rb')))
+    input_sheet = io.BufferedReader(request.files['sheet'].stream)
+
     
     tosrn = "done"
     print("**************************flag 17******************************************************")
