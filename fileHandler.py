@@ -5,6 +5,7 @@ import os
 import psycopg2
 import pandas
 import xlrd
+import io
 def fileHandler():
     print("********************************flag 1************************************************")
 
@@ -90,8 +91,9 @@ def fileHandler():
     #tosrn=file+space+bids
     print(open('Timetracker.xlsx','rb'))
     #print(Timetracker.xlsx)
-    pandas.read_excel(open('Timetracker.xlsx','rb'))
+    #pandas.read_excel(open('Timetracker.xlsx','rb'))
     #xlrd.open_workbook('Timetracker.xlsx')
+    io.BufferedReader(open('Timetracker.xlsx','rb'))
     
     tosrn = "done"
     print("**************************flag 17******************************************************")
