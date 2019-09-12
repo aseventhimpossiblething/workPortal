@@ -84,8 +84,8 @@ def fileHandler():
     print("request.files______:    ",request.files)
 
     print("**************************flag 16******************************************************")
-    print("request.files['sheet']")
-    print(request.files['sheet'])
+    print("request.files")
+    print(request.files)
     #pandas.read_excel(request.files['sheet'].read())
     #print("request.files['sheet'].stream")
     #print(request.files['sheet'].stream)
