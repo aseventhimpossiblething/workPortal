@@ -86,6 +86,7 @@ def fileHandler():
     print("**************************flag 16******************************************************")
     print("request.files['sheet'].read()")
     print(request.files['sheet'].read())
+    pandas.read_excel(request.files['sheet'].read())
     #print("request.files['sheet'].stream")
     #print(request.files['sheet'].stream)
     #print("open(request.files['sheet'])")
