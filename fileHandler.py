@@ -94,7 +94,7 @@ def fileHandler():
     
     #pandas.read_excel(request.files['sheet'].read())
     #print("request.files['sheet'].stream.read()")
-    "print(request.files['sheet'].stream.read())
+    #print(request.files['sheet'].stream.read())
     #print("open(request.files['sheet'])")
     #print(open(request.files['sheet']))
     #pandas.read_excel(request.files['sheet'])
