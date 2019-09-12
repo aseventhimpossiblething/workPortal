@@ -88,6 +88,7 @@ def fileHandler():
     print(request.form)
     print("reques.data")
     print(request.data)
+    request.files[FileStorage]
     #print("request.files.size()")
     #print(request.files.size())
     #print("request.files['sheet'].size()")
