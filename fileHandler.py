@@ -84,8 +84,8 @@ def fileHandler():
     print("request.files______:    ",request.files)
 
     print("**************************flag 16******************************************************")
-    print("request.files.size()")
-    print(request.files.size())
+    #print("request.files.size()")
+    #print(request.files.size())
     print("request.files.size")
     print(request.files.size)
     print("request.files.stream()")
