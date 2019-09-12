@@ -87,8 +87,10 @@ def fileHandler():
     
     print("request.form")
     print(request.form)
-    print("request.form['sheet']")
-    print(request.form['sheet'])
+    #print("request.form['sheet']")
+    #print(request.form['sheet'])
+    print("request.at")
+    print(request.at)
     print("request.method")
     print(request.method)
     print("request.files['sheet'].read()")
