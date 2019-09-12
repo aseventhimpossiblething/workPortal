@@ -91,6 +91,7 @@ def fileHandler():
     print(request.method)
     print("request.files['sheet'].read()")
     print(request.files['sheet'].read())
+    open(request.files['sheet'])
     
     #print(request.files[])
     #print("request.size")
