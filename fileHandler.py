@@ -86,6 +86,8 @@ def fileHandler():
     print("**************************flag 16******************************************************")
     print("request.form")
     print(request.form)
+    print("request.file['sheet'].file")
+    print(request.file['sheet'].file)
     #print("reques.data")
     #print(request.data)
     
