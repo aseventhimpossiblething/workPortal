@@ -88,8 +88,8 @@ def fileHandler():
     print(request.form)
     print("request.method")
     print(request.method)
-    print("request.files[0]")
-    print(request.files[0])
+    print("request.files[file]")
+    print(request.files[file])
     #print("request.size")
     #print(request.size)
    
