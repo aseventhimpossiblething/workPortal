@@ -48,7 +48,7 @@ print("check for tables")
 def hello():
     return "Hello le monde"
 
-@app.route('/upload', methods=['POST','GET'])
+@app.route('/upload', methods=['POST'])
 def upload():
     fileHandler.fileHandler()
     return fileHandler.fileHandler()
