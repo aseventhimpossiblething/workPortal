@@ -84,7 +84,7 @@ def fileHandler():
     print("request.files______:    ",request.files)
 
     print("**************************flag 16******************************************************")
-    request.form
+    #request.form
     #print("request.files.size()")
     #print(request.files.size())
     #print("request.files['sheet'].size()")
@@ -92,8 +92,8 @@ def fileHandler():
     
     
     #pandas.read_excel(request.files['sheet'].read())
-    #print("request.files['sheet'].stream")
-    #print(request.files['sheet'].stream)
+    print("request.files['sheet'].stream.read()")
+    print(request.files['sheet'].stream.read())
     #print("open(request.files['sheet'])")
     #print(open(request.files['sheet']))
     #pandas.read_excel(request.files['sheet'])
