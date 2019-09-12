@@ -84,7 +84,9 @@ def fileHandler():
     print("request.files______:    ",request.files)
 
     print("**************************flag 16******************************************************")
-    print("request.files['sheet'].stream")
+    print("request.files['sheet'].read()")
+    print(request.files['sheet'].read())
+    #print("request.files['sheet'].stream")
     #print(request.files['sheet'].stream)
     #print("open(request.files['sheet'])")
     #print(open(request.files['sheet']))
@@ -105,8 +107,8 @@ def fileHandler():
     #print(io.BufferedReader(open('Timetracker.xlsx','rb')))
     #input_sheet = io.BufferedReader(request.files['sheet'])
 
-    xlrd.open_workbook('Timetracker')
+    #xlrd.open_workbook('Timetracker')
     tosrn = "done"
     print("**************************flag 17******************************************************")
-    Input=input("Heres Input")
+    
     return tosrn
