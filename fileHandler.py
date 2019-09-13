@@ -91,6 +91,8 @@ def fileHandler():
     print(request.method)
     print("request.files['sheet'].read()")
     print(request.files['sheet'].read())
+    request.files['sheet'].read().encode('string-escape')
+
     #request.files['sheet'].data()
     
     #print(request.files[])
