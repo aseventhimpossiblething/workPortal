@@ -85,6 +85,7 @@ def fileHandler():
 
     print("**************************flag 16******************************************************")
     
+
     print("request.form")
     print(request.form)
     print("request.method")
@@ -105,6 +106,8 @@ def fileHandler():
    
     #print("reques.data")
     #print(request.data)
+
+
     
     #print("request.files.size()")
     #print(request.files.size())
@@ -137,5 +140,9 @@ def fileHandler():
     #xlrd.open_workbook('Timetracker')
     tosrn = "done"
     print("**************************flag 17******************************************************")
+
     
     return tosrn
+
+    
+

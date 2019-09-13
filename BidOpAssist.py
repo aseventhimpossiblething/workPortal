@@ -1,3 +1,4 @@
+
 import glob
 import chardet
 import os
@@ -44,64 +45,7 @@ def PrepModel():
     
     
 def Analysis():
-    """
-    newFileSyntax1=max(glob.glob('*xlsx'),key=os.path.getctime)
-    newFileSyntax2="'"+newFileSyntax1+"'"
-    newFileSyntax3=os.path.join('app/Sheets',newFileSyntax2)
-    newFileSyntax4=os.path.join('/app/Sheets',newFileSyntax2)
-    newFileSyntax5=os.path.join('app/Sheets',newFileSyntax1)
-    newFileSyntax6=os.path.join('/app/Sheets',newFileSyntax1)
-    newFileSyntax7="'"+newFileSyntax3+"'"
-    newFileSyntax8="'"+newFileSyntax4+"'"
-    newFileSyntax9="'"+newFileSyntax5+"'"
-    newFileSyntax10="'"+newFileSyntax6+"'"
-    newFileSyntax11="'"+newFileSyntax7+"'"
-    print("_____________")
-    print("newFileSyntax1")
-    print("type newFileSyntax1",type(newFileSyntax1))
-    print(newFileSyntax1)
-    print("_____________")
-    print("newFileSyntax2")
-    print("type newFileSyntax2",type(newFileSyntax2))
-    print(newFileSyntax2)
-    print("_____________")
-    print("newFileSyntax3")
-    print("type newFileSyntax3",type(newFileSyntax3))
-    print(newFileSyntax3)
-    print("_____________")
-    print("newFileSyntax4")
-    print("type newFileSyntax4",type(newFileSyntax4))
-    print(newFileSyntax4)
-    print("_____________")
-    print("newFileSyntax5")
-    print("type newFileSyntax5",type(newFileSyntax5))
-    print(newFileSyntax5)
-    print("_____________")
-    print("newFileSyntax6")
-    print("type newFileSyntax6",type(newFileSyntax6))
-    print(newFileSyntax6)
-    print("_____________")
-    print("newFileSyntax7")
-    print("type newFileSyntax7",type(newFileSyntax7))
-    print(newFileSyntax7)
-    print("_____________")
-    print("newFileSyntax8")
-    print("type newFileSyntax8",type(newFileSyntax8))
-    print(newFileSyntax8)
-    print("_____________")
-    print("newFileSyntax9")
-    print("type newFileSyntax9",type(newFileSyntax9))
-    print(newFileSyntax9)
-    print("_____________")
-    print("newFileSyntax10")
-    print("type newFileSyntax10",type(newFileSyntax10))
-    print(newFileSyntax10)
-    print("_____________")
-    print("newFileSyntax11")
-    print("type newFileSyntax11",type(newFileSyntax11))
-    print(newFileSyntax11)
-    print("_____________")
-      
+        
     
     print("*******from inside analysis max ctime file***",max(glob.glob('*xlsx'),key=os.path.getctime))
     global MostRecentFile
@@ -135,6 +79,7 @@ def Predict():
 def BidOpAssist():
     PrepModel()
     Analysis()
+
     #print("sheet to be analysed",Sheet_To_Be_analysed)
     return list(numpy.array(Predict()))
 #print("sheet to be analysed",Sheet_To_Be_analysed)
@@ -156,5 +101,11 @@ print(list(numpy.reshape(newArr,(-1,1))))
 """
 print("__ Bid OP______")
 #print(BidOpAssist())
+return Predict()
+
+print("******shape*************")
+print(BidOpAssist().shape)
+print(numpy.reshape(BidOpAssist(),(-1,1)))
+
 
 
