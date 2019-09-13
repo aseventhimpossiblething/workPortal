@@ -1,4 +1,5 @@
 
+import glob
 import chardet
 import os
 import numpy
@@ -6,23 +7,36 @@ import scipy
 import pandas
 from sklearn.ensemble import RandomForestRegressor
 os.chdir('Sheets')
+print(os.listdir())
+print(max(glob.glob('*.xlsx'),key=os.path.getctime))
+
 
 #important Variables
 #Sheet_to_Analyse=
-Dimension_Predicted='New CPC'
+Sheet_To_Be_analysed="None"
+Dimension_Predicted='Changes'
 ExampleSheetName='Machine.xlsx'
+MostRecentFile=max(glob.glob('*xlsx'),key=os.path.getctime)
+print("type MostRecentFile ",type(MostRecentFile))
 
-ModelCol1=['Campaign','Ad group','Keyword','New CPC','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','Impr.','CTR']
+
+ModelCol1=['Campaign','Ad group','Keyword','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','CTR','Changes']
 ModelCol2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score','Match type']
+ModelCol3=['Campaign','Ad group','Keyword','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','CTR']
 ModelColumns=ModelCol1+ModelCol2
+ModelColumns_for_Analysed_Sheet=ModelCol2+ModelCol3
 ColumnsToClear_for_Analysis=[Dimension_Predicted,'Campaign','Ad group','Keyword','Match type']
+ColumnsToClear_for_Analysis2=['Campaign','Ad group','Keyword','Match type']
+
 Pattern_inputModel="Empty"
 Pattern_New_CPC="Empty"
 X_Sheet_Analysis="Empty"
 
 def PrepModel():      
     PatternSheet=open(ExampleSheetName, 'rb')
+    #print("PatternSheet_____",PatternSheet)
     Pattern_no_Frame=pandas.read_excel(PatternSheet)
+    #print("Pattern_no_Frame_____",Pattern_no_Frame)
     PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
     global Pattern_New_CPC
     Pattern_New_CPC=PatternSheetFramed[Dimension_Predicted]
@@ -31,11 +45,28 @@ def PrepModel():
     
     
 def Analysis():
-    Sheet_To_Be_analysed=open('To_Test_Machine_Goog.xlsx','rb')
-    FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns).fillna(0)
+        
+    
+    print("*******from inside analysis max ctime file***",max(glob.glob('*xlsx'),key=os.path.getctime))
+    global MostRecentFile
+    #MostRecentFile=str(max(glob.glob('*xlsx'),key=os.path.getctime))
+    MostRecentFile=newFileSyntax2
+    
+    #print("os.join.path__",os.join.path('To_Test_Machine_Goog.xlsx'))
+    
+    global Sheet_To_Be_analysed
+    Sheet_To_Be_analysed=open(newFileSyntax1,'rb')
+    print("type Sheet_To_Be_analysed",type(Sheet_To_Be_analysed))
+    print("Sheet_To_Be_analysed",Sheet_To_Be_analysed)
+    #print("pandas.read_excel(Sheet_To_Be_analysed)",pandas.read_excel(Sheet_To_Be_analysed))
+    print("pandas.read_excel(newFileSyntax2)",pandas.read_excel(newFileSyntax2))
+    """
+    FramedSheetToBeAnalysed=pandas.DataFrame(pandas.read_excel('Test_Machine_Goog.xlsx'), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
+    #the below are for testing only
+    #FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
     #the below are for testing only
     global X_Sheet_Analysis
-    X_Sheet_Analysis=FramedSheet_To_Be_Analysed.drop(ColumnsToClear_for_Analysis, axis=1)
+    X_Sheet_Analysis=FramedSheetToBeAnalysed.drop(ColumnsToClear_for_Analysis2, axis=1)
     #Y_Sheet_Analysis=FramedSheet_To_Be_Analysed[Dimension_Predicted]
     
  
@@ -48,10 +79,33 @@ def Predict():
 def BidOpAssist():
     PrepModel()
     Analysis()
-    return Predict()
+
+    #print("sheet to be analysed",Sheet_To_Be_analysed)
+    return list(numpy.array(Predict()))
+#print("sheet to be analysed",Sheet_To_Be_analysed)
+
+
+#print(glob.glob('*.xlsx'), key=os.path.getctime)
+#max(glob.glob('*.xlsx'), key=os.path.getctime)
+
+#print(min(glob.glob('*.xlsx'), key=os.path.getctime))
+#min(glob.glob('*.xlsx'), key=os.path.getctime)
+
+
+"""
+print("******shape*************")
+newArr=numpy.array(BidOpAssist())
+print(newArr.shape)
+
+print(list(numpy.reshape(newArr,(-1,1))))
+"""
+print("__ Bid OP______")
+#print(BidOpAssist())
+return Predict()
 
 print("******shape*************")
 print(BidOpAssist().shape)
 print(numpy.reshape(BidOpAssist(),(-1,1)))
+
 
 

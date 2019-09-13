@@ -1,7 +1,11 @@
 import BidOpAssist
 from flask import Flask, render_template, request
+import glob
 import os
 import psycopg2
+import pandas
+import xlrd
+import io
 def fileHandler():
     print("********************************flag 1************************************************")
 
@@ -47,9 +51,13 @@ def fileHandler():
 
     print("********************************flag 9************************************************")
 
-    print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
+    #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
 
-    request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
+    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
+    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
+
+
+    request.files['sheet'].save('Timetracker')
 
     print("********************************flag 10************************************************")
 
@@ -77,7 +85,64 @@ def fileHandler():
 
     print("**************************flag 16******************************************************")
     
-    #tosrn="file accepted I need to automate the forward but..its tricky"
+
+    print("request.form")
+    print(request.form)
+    print("request.method")
+    print(request.method)
+    print("request.files['sheet'].read()")
+    print(request.files['sheet'].read())
+    print("request.files['sheet'].seek(0)")
+    print(request.files['sheet'].seek(0))
+    print(open('Timetracker','rb').read())
+    pandas.read_excel(open('Timetracker','rb'))
+    print(pandas.read_excel(open('Timetracker','rb')))
+
+    #request.files['sheet'].data()
     
+    #print(request.files[])
+    #print("request.size")
+    #print(request.size)
+   
+    #print("reques.data")
+    #print(request.data)
+
+
+    
+    #print("request.files.size()")
+    #print(request.files.size())
+    #print("request.files['sheet'].size()")
+    #print(request.files.['sheet'].size())
+    
+    
+    #pandas.read_excel(request.files['sheet'].read())
+    #print("request.files['sheet'].stream.read()")
+    #print(request.files['sheet'].stream.read())
+    #print("open(request.files['sheet'])")
+    #print(open(request.files['sheet']))
+    #pandas.read_excel(request.files['sheet'])
+    #bids=str(BidOpAssist.BidOpAssist())
+    #print("BidOpAssist.MostRecentFile",BidOpAssist.MostRecentFile)
+    #print(glob.glob('*'))
+    #file=BidOpAssist.MostRecentFile
+    
+    
+    
+    #space="___"
+    #tosrn=file+space+bids
+    #print(open('Timetracker','rb'))
+    #print(Timetracker.xlsx)
+    #pandas.read_excel(open('Timetracker.xlsx','rb'))
+    #xlrd.open_workbook('Timetracker.xlsx')
+    #print(io.BufferedReader(open('Timetracker.xlsx','rb')))
+    #input_sheet = io.BufferedReader(request.files['sheet'])
+
+    #xlrd.open_workbook('Timetracker')
+    tosrn = "done"
     print("**************************flag 17******************************************************")
-    return "tosrn"
+
+    
+    return tosrn
+
+    
+

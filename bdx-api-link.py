@@ -1,3 +1,5 @@
+
+import glob
 import numpy
 import scipy
 import pandas
@@ -14,6 +16,8 @@ DATABASE_URL = os.environ['DATABASE_URL']
 
 app = Flask(__name__)   # Flask constructor
 print("Checkpoint 2-before Database connection")
+
+
 
 conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 #conn = psycopg2.connect("dbname='dcect276ul8asc' user='ffsezxsqjvacnw' host='ec2-54-83-9-36.compute-1.amazonaws.com' password='657c149f7aac22520e75d72bddb9a16c76e60ac324fb4358f9f579ac1c2619d4'")
@@ -62,8 +66,13 @@ def holla():
     return render_template('cssPulling.html')
 
 @app.route('/2')
-def hollc():
-    return render_template('fileInput.html',PoutPut='Some Name or function')
+def holld():
+    return render_template('fileInput.html') 
+
+@app.route('/3')
+def holle():
+     return render_template('BidOutput.html',MostRecent="Current Bid op static file",PoutPut=BidOpAssist.BidOpAssist())
+   
 
 
 
