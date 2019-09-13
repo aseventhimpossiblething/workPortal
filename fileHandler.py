@@ -94,6 +94,7 @@ def fileHandler():
     print("request.files['sheet'].seek(0)")
     print(request.files['sheet'].seek(0))
     print(open('Timetracker','rb').read())
+    pandas.read_excel(open('Timetracker','rb'))
 
     #request.files['sheet'].data()
     
