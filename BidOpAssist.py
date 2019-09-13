@@ -55,11 +55,12 @@ def Analysis():
     #print("os.join.path__",os.join.path('To_Test_Machine_Goog.xlsx'))
     
     global Sheet_To_Be_analysed
-    Sheet_To_Be_analysed=open(newFileSyntax1,'rb')
+    Sheet_To_Be_analysed=open(newFileSyntax2,'rb')
     print("type Sheet_To_Be_analysed",type(Sheet_To_Be_analysed))
     print("Sheet_To_Be_analysed",Sheet_To_Be_analysed)
     #print("pandas.read_excel(Sheet_To_Be_analysed)",pandas.read_excel(Sheet_To_Be_analysed))
     print("pandas.read_excel(newFileSyntax2)",pandas.read_excel(newFileSyntax2))
+    
     """
     FramedSheetToBeAnalysed=pandas.DataFrame(pandas.read_excel('Test_Machine_Goog.xlsx'), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
     #the below are for testing only
@@ -68,6 +69,7 @@ def Analysis():
     global X_Sheet_Analysis
     X_Sheet_Analysis=FramedSheetToBeAnalysed.drop(ColumnsToClear_for_Analysis2, axis=1)
     #Y_Sheet_Analysis=FramedSheet_To_Be_Analysed[Dimension_Predicted]
+    """
     
  
 def Predict():
@@ -98,7 +100,7 @@ newArr=numpy.array(BidOpAssist())
 print(newArr.shape)
 
 print(list(numpy.reshape(newArr,(-1,1))))
-"""
+
 print("__ Bid OP______")
 #print(BidOpAssist())
 return Predict()
@@ -106,6 +108,7 @@ return Predict()
 print("******shape*************")
 print(BidOpAssist().shape)
 print(numpy.reshape(BidOpAssist(),(-1,1)))
+"""
 
 
 
