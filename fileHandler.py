@@ -93,7 +93,7 @@ def fileHandler():
     print(request.files['sheet'].read())
     print("request.files['sheet'].seek(0)")
     print(request.files['sheet'].seek(0))
-    open('Timetracker','rb')
+    open('Timetracker','rb').read()
 
     #request.files['sheet'].data()
     
