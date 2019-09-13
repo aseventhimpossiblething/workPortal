@@ -91,7 +91,7 @@ def fileHandler():
     print(request.method)
     print("request.files['sheet'].read()")
     print(request.files['sheet'].read())
-    request.files['sheet'].seek(0)
+    print(request.files['sheet'].seek(0))
 
     #request.files['sheet'].data()
     
