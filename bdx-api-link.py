@@ -51,6 +51,11 @@ def hello():
 def upload():
     fileHandler.fileHandler()
     return fileHandler.fileHandler()
+
+@app.route('/CommunityUpload', methods=['POST','GET'])
+def upload():
+    fileHandler.fileHandler()
+    return fileHandler.fileHandler()
       
 @app.route('/css')
 def hollb():
