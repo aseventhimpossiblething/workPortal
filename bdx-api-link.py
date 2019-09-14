@@ -52,7 +52,7 @@ def upload():
     fileHandler.fileHandler()
     return fileHandler.fileHandler()
 
-@app.route('/CommunityUpload', methods=['POST','GET'])
+@app.route('/CommunityListFormHandler', methods=['POST','GET'])
 def upload():
     fileHandler.fileHandler()
     return fileHandler.fileHandler()
