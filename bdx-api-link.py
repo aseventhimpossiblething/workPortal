@@ -75,7 +75,7 @@ def holle():
 
 @app.route('/4')
 def hollf():
-    return render_template('CommunityListUpdate.html')
+    return render_template('CommunityUpdate.html')
    
 
 
