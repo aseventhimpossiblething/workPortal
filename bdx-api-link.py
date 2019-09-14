@@ -5,6 +5,7 @@ import scipy
 import pandas
 import BidOpAssist
 import fileHandler
+import CommunityListFormHandler
 from flask import Flask, render_template, request
 import os
 import psycopg2
@@ -54,8 +55,8 @@ def upload():
 
 @app.route('/CommunityListFormHandler', methods=['POST','GET'])
 def upload():
-    fileHandler.fileHandler()
-    return fileHandler.fileHandler()
+   
+    return "CommunityListFormHandler"
       
 @app.route('/css')
 def hollb():
