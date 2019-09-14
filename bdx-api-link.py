@@ -75,7 +75,7 @@ def holle():
 
 @app.route('/4')
 def hollf():
-    return "Location of community upload"
+    return render_template('CommunityListUpdate.html')
    
 
 
