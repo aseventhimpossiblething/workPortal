@@ -54,7 +54,7 @@ def upload():
     return fileHandler.fileHandler()
 
 @app.route('/CommunityListFormHandler', methods=['POST','GET'])
-def upload():
+def CommunityUpload():
    
     return "CommunityListFormHandler"
       
