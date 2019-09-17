@@ -52,12 +52,12 @@ def index():
 @app.route('/BidOPUpload', methods=['POST','GET'])
 def BidOPUpload():
     return fileHandler.BidOpFileHandler()
+@app.route('/BidOps')
+def BidOpInput():
+    return render_template('BidOpForm.html')
 @app.route('/css')
 def styleSheet1():
     return render_template('csstemplate.css')
-@app.route('/BidOps')
-def BidOpInput():
-    return render_template('BidOpInput.html')
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
     return render_template('CommunitiesForm.html')
