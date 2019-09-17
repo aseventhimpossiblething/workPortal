@@ -1,12 +1,11 @@
 
 import glob
-import Markup
 import numpy
 import scipy
 import pandas
 import BidOpAssist
 import fileHandler
-from flask import Flask, render_template, request
+from flask import Flask, Markup, render_template, request
 import os
 import psycopg2
 from sklearn.ensemble import RandomForestRegressor
