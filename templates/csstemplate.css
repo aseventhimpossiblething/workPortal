@@ -10,18 +10,19 @@ float:center;
 
 
 .littletop {
-    
+    float:center
+    height:100px
     color:white;
     background-color:#00aaff;
     width:auto;
     margin-bottom:30px;
-   /* margin-left:300px;*/
+  
  }
 
 
 
 .containerMain
-{
+{   color:white;
     background-color:#0077bb;
     float:center;
     width:500px;
