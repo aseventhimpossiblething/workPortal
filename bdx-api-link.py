@@ -59,7 +59,7 @@ def BidOpInput():
     return render_template('BidOpInput.html')
 @app.route('/CommunityUpdates')
 def Initial():
-    return render_template('DefaultTemplate.html')
+    return render_template('CommunitiesForm.html')
 
 
 """
