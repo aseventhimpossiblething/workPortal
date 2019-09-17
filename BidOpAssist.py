@@ -6,9 +6,9 @@ import numpy
 import scipy
 import pandas
 from sklearn.ensemble import RandomForestRegressor
-os.chdir('Sheets')
-print(os.listdir())
-print(max(glob.glob('*.xlsx'),key=os.path.getctime))
+#os.chdir('Sheets')
+#print(os.listdir())
+#print(max(glob.glob('*.xlsx'),key=os.path.getctime))
 
 
 #important Variables
@@ -17,7 +17,7 @@ Sheet_To_Be_analysed="None"
 Dimension_Predicted='Changes'
 ExampleSheetName='Machine.xlsx'
 MostRecentFile=max(glob.glob('*xlsx'),key=os.path.getctime)
-print("type MostRecentFile ",type(MostRecentFile))
+#print("type MostRecentFile ",type(MostRecentFile))
 
 
 ModelCol1=['Campaign','Ad group','Keyword','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','CTR','Changes']
@@ -111,6 +111,6 @@ print(numpy.reshape(BidOpAssist(),(-1,1)))
 """
 
 #eol
-print("Comment")
+#print("Comment")
 
 
