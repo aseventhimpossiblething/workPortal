@@ -47,7 +47,7 @@ app = Flask(__name__)   # Flask constructor
 @app.route('/')
 def index():
     
-    return render_template('DefaultTemplate.html'content="Sample Content")
+    return render_template('DefaultTemplate.html',content="Sample Content")
 
 
 @app.route('/BidOPUpload', methods=['POST','GET'])
