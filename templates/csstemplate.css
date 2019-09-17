@@ -7,11 +7,11 @@ float:center;
 
 }
 
-
+a:link{color:white;}
 
 .littletop {
     color:white;
-    float:center;
+    Absolute:center;
     height:100px;
     background-color:#00aaff;
     width:auto;
