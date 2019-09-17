@@ -40,7 +40,9 @@ app = Flask(__name__)   # Flask constructor
 
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 
-
+@app.route('/css')
+def styleSheet1():
+    return render_template('csstemplate.css')
 
 
 @app.route('/')
@@ -49,15 +51,16 @@ def index():
                  <a href="BidOps">"Bid Ops"</a><br>\
                  <a href="CommunityUpdates">Community Updates</a>')
     return render_template('DefaultTemplate.html',content=indexContent)
-@app.route('/BidOPUpload', methods=['POST','GET'])
-def BidOPUpload():
-    return fileHandler.BidOpFileHandler()
+
 @app.route('/BidOps')
 def BidOpInput():
     return render_template('BidOpForm.html')
-@app.route('/css')
-def styleSheet1():
-    return render_template('csstemplate.css')
+
+@app.route('/BidOPUpload', methods=['POST','GET'])
+def BidOPUpload():
+    return fileHandler.BidOpFileHandler()
+
+
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
     return render_template('CommunitiesForm.html')
