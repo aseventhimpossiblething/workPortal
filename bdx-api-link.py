@@ -46,7 +46,7 @@ app = Flask(__name__)   # Flask constructor
 
 @app.route('/')
 def index():
-    return render_template('initial.html')
+    return render_template('DefaultTemplate.html')
 
 
 @app.route('/BidOPUpload', methods=['POST','GET'])
@@ -68,7 +68,7 @@ def Initial():
 
 @app.route('/1')
 def cssPulling():
-    return render_template('cssPulling.html')
+    return render_template('DefaultTemplate.html')
 
 @app.route('/2')
 def BidOpInput():
