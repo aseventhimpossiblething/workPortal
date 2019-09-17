@@ -40,7 +40,7 @@ app = Flask(__name__)   # Flask constructor
 
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 #{{CommonTag}}-{{pagetitle}} 
-CommonTagAll="This is the CommonTag"
+CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
 
 @app.route('/css')
 def styleSheet1():
