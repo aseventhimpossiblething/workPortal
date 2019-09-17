@@ -56,7 +56,6 @@ def BidOPUpload():
 """    
 @app.route('/CommunityListFormHandler', methods=['POST','GET'])
 def CommunityUpload():
-   
     return "CommunityListFormHandler"
       
 @app.route('/css')
