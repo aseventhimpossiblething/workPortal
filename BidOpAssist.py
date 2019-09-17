@@ -16,7 +16,8 @@ from sklearn.ensemble import RandomForestRegressor
 Sheet_To_Be_analysed="None"
 Dimension_Predicted='Changes'
 ExampleSheetName='Machine.xlsx'
-MostRecentFile=max(glob.glob('*xlsx'),key=os.path.getctime)
+if max(glob.glob('*xlsx'),key=os.path.getctime):
+   MostRecentFile=max(glob.glob('*xlsx'),key=os.path.getctime)
 #print("type MostRecentFile ",type(MostRecentFile))
 
 
