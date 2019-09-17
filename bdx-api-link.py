@@ -49,14 +49,13 @@ def styleSheet1():
 
 @app.route('/')
 def index():
-    #CommonTagAll="This is the CommonTag"
     indexContent=Markup('<a href="https://www.google.com">"Google"</a><br>\
                  <a href="BidOps">"Bid Ops"</a><br>\
                  <a href="CommunityUpdates">Community Updates</a>')
     return render_template('DefaultTemplate.html',content=indexContent,pagetitle="Paid Search Portal",CommonTag=CommonTagAll)
 
 @app.route('/BidOps')
-def BidOpInput(CommonTagAll):
+def BidOpInput():
     return render_template('BidOpForm.html',pagetitle="Bid Optimisation",CommonTag=CommonTagAll)
 
 @app.route('/BidOPUpload', methods=['POST','GET'])
@@ -65,7 +64,7 @@ def BidOPUpload():
 
 
 @app.route('/CommunityUpdates')
-def CommunitiesUploads(CommonTagAll):
+def CommunitiesUploads():
     return render_template('CommunitiesForm.html',pagetitle="Community Updates",CommonTag=CommonTagAll)
 
 
