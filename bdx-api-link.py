@@ -45,7 +45,7 @@ app = Flask(__name__)   # Flask constructor
 
 @app.route('/')
 def index():
-    indexContent=<h1>"Potentially links"</h1>
+    indexContent=Markup('<h1>"Potentially links"</h1>')
     return render_template('DefaultTemplate.html',content=indexContent)
 
 
