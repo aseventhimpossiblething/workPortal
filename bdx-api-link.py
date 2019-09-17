@@ -66,6 +66,16 @@ def BidOPUpload():
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
     return render_template('CommunitiesForm.html',pagetitle="Community Updates",CommonTag=CommonTagAll)
+"""
+@app.route('/CommunityUpdatesOutPut',methods=['POST','GET'])
+def CommunitiesFormHandler():
+    return fileHandler
+"""
+    
+    
+
+
+
 
 
 """
