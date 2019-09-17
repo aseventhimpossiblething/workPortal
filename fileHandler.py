@@ -91,16 +91,18 @@ def BidOpFileHandler():
 
     
     return toscrn
+
+
 def CommUpdateFileHandler():
-    print("********************************flag 1************************************************")
+    print("********************************CommUpdateFileHandler() flag 1************************************************")
 
     print("request.files______:   ",request.files)
 
-    print("********************************flag 2************************************************")
+    print("********************************CommUpdateFileHandler() flag 2************************************************")
 
     print("request.files['sheet']______:    ",request.files['sheet'])
 
-    print("********************************flag 3*************************************************")
+    print("********************************CommUpdateFileHandler() flag 3*************************************************")
 
     print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
 
@@ -110,31 +112,31 @@ def CommUpdateFileHandler():
 
     #os.chdir(r'/app/Sheets')
 
-    print("*********************************flag 4***********************************************")
+    print("*********************************CommUpdateFileHandler() flag 4***********************************************")
 
     print("os.getcwd()_____: ",os.getcwd())
 
     #print(request.files['sheet'].save(os.path.join('/app/Sheets/sheet',request.files['sheet'].filename)))
 
-    print("********************************flag 5************************************************")
+    print("********************************CommUpdateFileHandler() flag 5************************************************")
 
     print("os.listdir()____:",os.listdir())
 
-    print("********************************flag 6************************************************")
+    print("********************************CommUpdateFileHandler() flag 6************************************************")
 
     os.chdir('/app/Sheets')
 
     print("os.chdir(/Sheets)____:")
 
-    print("********************************flag 7************************************************")
+    print("********************************CommUpdateFileHandler() flag 7************************************************")
 
     print("os.getcwd()_____: ",os.getcwd())
 
-    print("********************************flag 8************************************************")
+    print("********************************CommUpdateFileHandler() flag 8************************************************")
 
     print("os.listdir()____:",os.listdir())
 
-    print("********************************flag 9************************************************")
+    print("********************************CommUpdateFileHandler() flag 9************************************************")
 
     #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
 
@@ -144,37 +146,134 @@ def CommUpdateFileHandler():
 
     request.files['sheet'].save(request.files['sheet'].filename)
 
-    print("********************************flag 10************************************************")
+    print("********************************CommUpdateFileHandler() flag 10************************************************")
 
     print("os.getcwd()____:",os.getcwd)
 
-    print("********************************flag 11************************************************")
+    print("********************************CommUpdateFileHandler() flag 11************************************************")
 
     print("os.listdir()____:",os.listdir())
 
-    print("********************************flag 12************************************************")
+    print("********************************CommUpdateFileHandler() flag 12************************************************")
 
     print("os.path.join('/app/Sheets',request.files['sheet'].filename))_____:",os.path.join('/app/Sheets',request.files['sheet'].filename))
 
-    print("********************************flag 13************************************************")
+    print("********************************CommUpdateFileHandler() flag 13************************************************")
 
     print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
 
-    print("********************************flag 14************************************************")
+    print("********************************CommUpdateFileHandler() flag 14************************************************")
 
     print("request.files['sheet']______:    ",request.files['sheet'])
 
-    print("********************************flag 15************************************************")
+    print("********************************CommUpdateFileHandler() flag 15************************************************")
 
     print("request.files______:    ",request.files)
 
-    print("**************************flag 16******************************************************")
+    print("**************************CommUpdateFileHandler() flag 16******************************************************")
     
     toscrn = "done"
-    print("**************************flag 17******************************************************")
+    print("**************************CommUpdateFileHandler() flag 17******************************************************")
 
     
     return toscrn
+
+
+
+def CurrentGoogleFileHandler():
+    print("********************************CurrentGoogleFileHandler() flag 1************************************************")
+
+    print("request.files______:   ",request.files)
+
+    print("********************************CurrentGoogleFileHandler() flag 2************************************************")
+
+    print("request.files['sheet']______:    ",request.files['sheet'])
+
+    print("********************************CurrentGoogleFileHandler() flag 3*************************************************")
+
+    print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
+
+    #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
+
+    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
+
+    #os.chdir(r'/app/Sheets')
+
+    print("*********************************CurrentGoogleFileHandler() flag 4***********************************************")
+
+    print("os.getcwd()_____: ",os.getcwd())
+
+    #print(request.files['sheet'].save(os.path.join('/app/Sheets/sheet',request.files['sheet'].filename)))
+
+    print("********************************CurrentGoogleFileHandler() flag 5************************************************")
+
+    print("os.listdir()____:",os.listdir())
+
+    print("********************************CurrentGoogleFileHandler() flag 6************************************************")
+
+    os.chdir('/app/Sheets')
+
+    print("os.chdir(/Sheets)____:")
+
+    print("********************************CurrentGoogleFileHandler() flag 7************************************************")
+
+    print("os.getcwd()_____: ",os.getcwd())
+
+    print("********************************CurrentGoogleFileHandler() flag 8************************************************")
+
+    print("os.listdir()____:",os.listdir())
+
+    print("********************************CurrentGoogleFileHandler() flag 9************************************************")
+
+    #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
+
+    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
+    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
+
+
+    request.files['sheet'].save(request.files['sheet'].filename)
+
+    print("********************************CurrentGoogleFileHandler() flag 10************************************************")
+
+    print("os.getcwd()____:",os.getcwd)
+
+    print("********************************CurrentGoogleFileHandler() flag 11************************************************")
+
+    print("os.listdir()____:",os.listdir())
+
+    print("********************************CurrentGoogleFileHandler() flag 12************************************************")
+
+    print("os.path.join('/app/Sheets',request.files['sheet'].filename))_____:",os.path.join('/app/Sheets',request.files['sheet'].filename))
+
+    print("********************************CurrentGoogleFileHandler() flag 13************************************************")
+
+    print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
+
+    print("********************************CurrentGoogleFileHandler()) flag 14************************************************")
+
+    print("request.files['sheet']______:    ",request.files['sheet'])
+
+    print("********************************CurrentGoogleFileHandler() flag 15************************************************")
+
+    print("request.files______:    ",request.files)
+
+    print("**************************CurrentGoogleFileHandler() flag 16******************************************************")
+    
+    toscrn = "done"
+    print("**************************CurrentGoogleFileHandler() flag 17******************************************************")
+
+    
+    return toscrn
+
+
+    
+
+
+    
+
+    
+
+
 
 
     
