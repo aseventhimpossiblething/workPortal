@@ -5,7 +5,6 @@ import scipy
 import pandas
 import BidOpAssist
 import fileHandler
-import CommunityListFormHandler
 from flask import Flask, render_template, request
 import os
 import psycopg2
