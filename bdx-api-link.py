@@ -56,6 +56,10 @@ def BidOPUpload():
 def styleSheet1():
     return render_template('csstemplate.css')
 
+@app.route('/2')
+def BidOpInput():
+    return render_template('BidOpInput.html') 
+
 """
 @app.route('/0')
 def Initial():
