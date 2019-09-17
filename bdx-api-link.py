@@ -45,7 +45,8 @@ app = Flask(__name__)   # Flask constructor
 
 @app.route('/')
 def index():
-    indexContent=Markup('<a href="https://www.google.com">"Potentially links"</a><br><a href="https://www.google.com">"Potentially links"</a>')
+    indexContent=(Markup('<a href="https://www.google.com">"Potentially links"</a><br>
+                         <a href="https://www.google.com">"Potentially links"</a>'))
     return render_template('DefaultTemplate.html',content=indexContent)
 @app.route('/BidOPUpload', methods=['POST','GET'])
 def BidOPUpload():
