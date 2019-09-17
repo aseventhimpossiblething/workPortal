@@ -47,7 +47,7 @@ app = Flask(__name__)   # Flask constructor
 @app.route('/')
 def index():
     return "Hello le monde"
-
+"""
 @app.route('/BidOPUpload', methods=['POST','GET'])
 def BidOPUpload():
     fileHandler.fileHandler()
@@ -82,7 +82,7 @@ def BidOpOutPut():
 @app.route('/4')
 def CommunityUpdate():
     return render_template('CommunityUpdate.html')
-   
+"""   
 
 
 
