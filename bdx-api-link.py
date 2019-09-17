@@ -51,8 +51,7 @@ def index():
 
 @app.route('/BidOPUpload', methods=['POST','GET'])
 def BidOPUpload():
-    fileHandler.fileHandler()
-    return fileHandler.fileHandler()
+    return fileHandler.BidOpFileHandler()
 
 """    
 @app.route('/CommunityListFormHandler', methods=['POST','GET'])
