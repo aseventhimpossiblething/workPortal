@@ -48,7 +48,7 @@ def styleSheet1():
 
 
 @app.route('/')
-def index(CommonTagAll):
+def index():
     CommonTagAll="This is the CommonTag"
     indexContent=Markup('<a href="https://www.google.com">"Google"</a><br>\
                  <a href="BidOps">"Bid Ops"</a><br>\
