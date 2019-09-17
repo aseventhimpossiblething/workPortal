@@ -45,25 +45,24 @@ app = Flask(__name__)   # Flask constructor
 
 @app.route('/')
 def index():
-    indexContent=Markup('<a href="https://www.google.com">"Potentially links"</a>')
+    indexContent=Markup('<a href="https://www.google.com">"Potentially links"</a><br><a href="https://www.google.com">"Potentially links"</a>')
     return render_template('DefaultTemplate.html',content=indexContent)
-
 @app.route('/BidOPUpload', methods=['POST','GET'])
 def BidOPUpload():
     return fileHandler.BidOpFileHandler()
- 
 @app.route('/css')
 def styleSheet1():
     return render_template('csstemplate.css')
-
-@app.route('/2')
+@app.route('/BidOps')
 def BidOpInput():
-    return render_template('BidOpInput.html') 
+    return render_template('BidOpInput.html')
+@app.route('/CommunityUpdates')
+def Initial():
+    return render_template('DefaultTemplate.html')
+
 
 """
-@app.route('/0')
-def Initial():
-    return render_template('initial.html')
+
 
 @app.route('/1')
 def cssPulling():
