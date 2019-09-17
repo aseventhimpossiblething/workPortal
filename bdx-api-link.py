@@ -45,11 +45,11 @@ app = Flask(__name__)   # Flask constructor
 
 
 @app.route('/')
-def hello():
+def index():
     return "Hello le monde"
 
-@app.route('/upload', methods=['POST','GET'])
-def upload():
+@app.route('/BidOPUpload', methods=['POST','GET'])
+def BidOPUpload():
     fileHandler.fileHandler()
     return fileHandler.fileHandler()
 
@@ -59,28 +59,28 @@ def CommunityUpload():
     return "CommunityListFormHandler"
       
 @app.route('/css')
-def hollb():
+def styleSheet1():
     return render_template('csstemplate.css')
 
 @app.route('/0')
-def hollo():
+def Initial():
     return render_template('initial.html')
 
 @app.route('/1')
-def holla():
+def cssPulling():
     return render_template('cssPulling.html')
 
 @app.route('/2')
-def holld():
-    return render_template('fileInput.html') 
+def BidOpInput():
+    return render_template('BidOpInput.html') 
 
 @app.route('/3')
-def holle():
+def BidOpOutPut():
     return render_template('BidOutput.html',MostRecent="Current Bid op static file",PoutPut=BidOpAssist.BidOpAssist())
  
 
 @app.route('/4')
-def hollf():
+def CommunityUpdate():
     return render_template('CommunityUpdate.html')
    
 
