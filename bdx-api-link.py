@@ -46,29 +46,26 @@ app = Flask(__name__)   # Flask constructor
 
 @app.route('/')
 def index():
-    return "Hello le monde"
-"""
+    
+    return render_template('DefaultTemplate.html',content="Sample Content")
+
 
 @app.route('/BidOPUpload', methods=['POST','GET'])
 def BidOPUpload():
-    fileHandler.fileHandler()
-    return fileHandler.fileHandler()
-@app.route('/CommunityListFormHandler', methods=['POST','GET'])
-def CommunityUpload():
-   
-    return "CommunityListFormHandler"
-      
+    return fileHandler.BidOpFileHandler()
+ 
 @app.route('/css')
 def styleSheet1():
     return render_template('csstemplate.css')
 
+"""
 @app.route('/0')
 def Initial():
     return render_template('initial.html')
 
 @app.route('/1')
 def cssPulling():
-    return render_template('cssPulling.html')
+    return render_template('DefaultTemplate.html')
 
 @app.route('/2')
 def BidOpInput():
