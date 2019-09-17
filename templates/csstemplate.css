@@ -10,9 +10,9 @@ float:center;
 
 
 .littletop {
-    float:center
-    height:100px
     color:white;
+    float:center;
+    height:300px;
     background-color:#00aaff;
     width:auto;
     margin-bottom:30px;
