@@ -48,7 +48,6 @@ def index():
     indexContent=Markup('<h1>"Potentially links"</h1>')
     return render_template('DefaultTemplate.html',content=indexContent)
 
-
 @app.route('/BidOPUpload', methods=['POST','GET'])
 def BidOPUpload():
     return fileHandler.BidOpFileHandler()
