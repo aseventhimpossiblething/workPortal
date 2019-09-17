@@ -266,6 +266,94 @@ def CurrentGoogleFileHandler():
     return toscrn
 
 
+
+def CurrentBingFileHandler():
+    print("********************************CurrentBingFileHandler() flag 1************************************************")
+
+    print("request.files______:   ",request.files)
+
+    print("********************************CurrentBingFileHandler() flag 2************************************************")
+
+    print("request.files['sheet']______:    ",request.files['sheet'])
+
+    print("********************************CurrentBingFileHandler() flag 3*************************************************")
+
+    print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
+
+    #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
+
+    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
+
+    #os.chdir(r'/app/Sheets')
+
+    print("*********************************CurrentBingFileHandler() flag 4***********************************************")
+
+    print("os.getcwd()_____: ",os.getcwd())
+
+    #print(request.files['sheet'].save(os.path.join('/app/Sheets/sheet',request.files['sheet'].filename)))
+
+    print("********************************CurrentBingFileHandler() flag 5************************************************")
+
+    print("os.listdir()____:",os.listdir())
+
+    print("********************************CurrentBingFileHandler() flag 6************************************************")
+
+    os.chdir('/app/Sheets')
+
+    print("os.chdir(/Sheets)____:")
+
+    print("********************************CurrentBingFileHandler() flag 7************************************************")
+
+    print("os.getcwd()_____: ",os.getcwd())
+
+    print("********************************CurrentBingFileHandler() flag 8************************************************")
+
+    print("os.listdir()____:",os.listdir())
+
+    print("********************************CurrentBingFileHandler() flag 9************************************************")
+
+    #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
+
+    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
+    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
+
+
+    request.files['sheet'].save(request.files['sheet'].filename)
+
+    print("********************************CurrentBingFileHandler() flag 10************************************************")
+
+    print("os.getcwd()____:",os.getcwd)
+
+    print("********************************CurrentBingFileHandler() flag 11************************************************")
+
+    print("os.listdir()____:",os.listdir())
+
+    print("********************************CurrentBingFileHandler() flag 12************************************************")
+
+    print("os.path.join('/app/Sheets',request.files['sheet'].filename))_____:",os.path.join('/app/Sheets',request.files['sheet'].filename))
+
+    print("********************************CurrentBingFileHandler() flag 13************************************************")
+
+    print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
+
+    print("********************************CurrentBingFileHandler() flag 14************************************************")
+
+    print("request.files['sheet']______:    ",request.files['sheet'])
+
+    print("********************************CurrentBingFileHandler() flag 15************************************************")
+
+    print("request.files______:    ",request.files)
+
+    print("**************************CurrentBingFileHandler() flag 16******************************************************")
+    
+    toscrn = "done"
+    print("**************************CurrentBingFileHandler() flag 17******************************************************")
+    
+
+    
+    return toscrn
+
+
     
 
 
