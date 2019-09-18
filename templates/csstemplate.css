@@ -9,6 +9,11 @@ margin-left:20px;
 }
 
 input[type='file']
+{
+    Border-radius:15px
+}
+
+
 
 a {color:white;}
 
