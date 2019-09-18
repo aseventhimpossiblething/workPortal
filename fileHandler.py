@@ -94,8 +94,9 @@ def CommListFileHandler():
     #print("request.files['Communities'].filename_______:     ",request.files['Communities'].filename)
     #request.files['Communities'].filename.index('xlsx')
     #print("request.files['Communities'].filename.index('xlsx')",request.files['Communities'].filename.index('xlsx'))
-    if request.files['Communities'].filename.index('xlsx')!=0:
-       print("if statment")
+    """
+    if type(request.files['Communities'].filename.index('xlsx'))!=0:
+       print("normal")
     if request.files['Communities'].filename.index('xlsx')==0:
        print("The File Entered as Community is not in the xlsx Filetype")
        return "The File Entered as Community List is not in the xlsx Filetype"
@@ -105,6 +106,10 @@ def CommListFileHandler():
     if request.files['currentBing'].filename.index('xlsx')==0:
        print("The File Entered as Active Bing List is not in the xlsx Filetype")
        return "The File Entered as Active Bing List is not in the xlsx Filetype"
+    """
+    print("request.files['Communities'].filename.index('xlsx')",type(request.files['Communities'].filename.index('xlsx')))
+    print("6",type(6))
+    
     
     #print("request.files['currentGoogle'].filename_______:     ",request.files['currentGoogle'].filename)
     #print("request.files['currentBing'].filename_______:     ",request.files['currentBing'].filename)
