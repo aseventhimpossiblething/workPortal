@@ -98,8 +98,9 @@ def CommListFileHandler():
             print("XLSX filetype valid")
             return "valid"
         else:
-            print("iletype not valid expecting XLSX")
-            return "Invalid file type entered; expecting XLSX"
+            print("Filetype not valid expecting XLSX")
+            rval=arr+" "+""Invalid file type entered; expecting XLSX" 
+            return rval
         
     
     if validateXLSX('Communities')!="valid":
