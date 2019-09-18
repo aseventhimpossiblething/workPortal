@@ -82,19 +82,20 @@ def BidOpFileHandler():
 
 
 def CommListFileHandler():
-    print("********************************CommListFileHandler() flag 1************************************************")
-
-    print("request.files______:   ",request.files)
-
+    
     print("********************************CommListFileHandler() flag 2************************************************")
 
     print("request.files['Communities']______:    ",request.files['Communities'])
     print("request.files['currentGoogle']______:    ",request.files['currentGoogle'])
     print("request.files['currentBing']______:    ",request.files['currentBing'])
 
-    print("********************************CommListFileHandler()) flag 3*************************************************")
+    print("********************************CommListFileHandler() flag 3*************************************************")
 
     print("request.files['Communities'].filename_______:     ",request.files['Communities'].filename)
+    request.files['Communities'].filename.index('xlsx')
+    print("request.files['Communities'].filename.index('xlsx')",request.files['Communities'].filename.index('xlsx'))
+    
+    
     print("request.files['currentGoogle'].filename_______:     ",request.files['currentGoogle'].filename)
     print("request.files['currentBing'].filename_______:     ",request.files['currentBing'].filename)
 
