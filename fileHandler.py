@@ -95,15 +95,15 @@ def CommListFileHandler():
     #request.files['Communities'].filename.index('xlsx')
     #print("request.files['Communities'].filename.index('xlsx')",request.files['Communities'].filename.index('xlsx'))
     
-    if type(request.files['Communities'].filename.index('xlsx'))==<class 'int'>:
+    if type(request.files['Communities'].filename.index('xlsx'))=="<class 'int'>":
        print("normal")
-    if type(request.files['Communities'].filename.index('xlsx'))!=<class 'int'>:
+    if type(request.files['Communities'].filename.index('xlsx'))!="<class 'int'>":
        print("The File Entered as Community is not in the xlsx Filetype")
        return "The File Entered as Community List is not in the xlsx Filetype"
-    if type(request.files['currentGoogle'].filename.index('xlsx'))!=<class 'int'>:
+    if type(request.files['currentGoogle'].filename.index('xlsx'))!="<class 'int'>":
        print("The File Entered as Active Google List is not in the xlsx Filetype")
        return "The File Entered as Active Google List is not in the xlsx Filetype"
-    if type(request.files['currentBing'].filename.index('xlsx'))!=<class 'int'>:
+    if type(request.files['currentBing'].filename.index('xlsx'))!="<class 'int'>":
        print("The File Entered as Active Bing List is not in the xlsx Filetype")
        return "The File Entered as Active Bing List is not in the xlsx Filetype"
     
