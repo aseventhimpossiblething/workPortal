@@ -112,8 +112,9 @@ def CommListFileHandler():
    """    
     
     print(request.files['Communities'].filename.index('xlsx'))
+    workingRequest="+request.files['Communities'].filename.index('xlsx')+"
     print("6",type(6))
-    if "<class 'int'>"=="type(3)":
+    if workingRequest=="type(3)":
         print("<class 'int'>==type(3)")
     else:
         print("<class 'int'>==type(3)")
