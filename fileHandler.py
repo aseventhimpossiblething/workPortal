@@ -94,15 +94,15 @@ def BidOpFileHandler():
 
 
 def CommListFileHandler():
-    print("********************************CommUpdateFileHandler() flag 1************************************************")
+    print("********************************CommListFileHandler() flag 1************************************************")
 
     print("request.files______:   ",request.files)
 
-    print("********************************CommUpdateFileHandler() flag 2************************************************")
+    print("********************************CommListFileHandler() flag 2************************************************")
 
     print("request.files['sheet']______:    ",request.files['sheet'])
 
-    print("********************************CommUpdateFileHandler() flag 3*************************************************")
+    print("********************************CommListFileHandler()) flag 3*************************************************")
 
     print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
 
@@ -112,31 +112,31 @@ def CommListFileHandler():
 
     #os.chdir(r'/app/Sheets')
 
-    print("*********************************CommUpdateFileHandler() flag 4***********************************************")
+    print("*********************************CommListFileHandler() flag 4***********************************************")
 
     print("os.getcwd()_____: ",os.getcwd())
 
     #print(request.files['sheet'].save(os.path.join('/app/Sheets/sheet',request.files['sheet'].filename)))
 
-    print("********************************CommUpdateFileHandler() flag 5************************************************")
+    print("********************************CommListFileHandler() flag 5************************************************")
 
     print("os.listdir()____:",os.listdir())
 
-    print("********************************CommUpdateFileHandler() flag 6************************************************")
+    print("********************************CommListFileHandler() flag 6************************************************")
 
     os.chdir('/app/Sheets')
 
     print("os.chdir(/Sheets)____:")
 
-    print("********************************CommUpdateFileHandler() flag 7************************************************")
+    print("********************************CommListFileHandler() flag 7************************************************")
 
     print("os.getcwd()_____: ",os.getcwd())
 
-    print("********************************CommUpdateFileHandler() flag 8************************************************")
+    print("********************************CommListFileHandler() flag 8************************************************")
 
     print("os.listdir()____:",os.listdir())
 
-    print("********************************CommUpdateFileHandler() flag 9************************************************")
+    print("********************************CommListFileHandler() flag 9************************************************")
 
     #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
 
@@ -146,34 +146,34 @@ def CommListFileHandler():
 
     request.files['sheet'].save(request.files['sheet'].filename)
 
-    print("********************************CommUpdateFileHandler() flag 10************************************************")
+    print("********************************CommListFileHandler() flag 10************************************************")
 
     print("os.getcwd()____:",os.getcwd)
 
-    print("********************************CommUpdateFileHandler() flag 11************************************************")
+    print("********************************CommListFileHandler() flag 11************************************************")
 
     print("os.listdir()____:",os.listdir())
 
-    print("********************************CommUpdateFileHandler() flag 12************************************************")
+    print("********************************CommListFileHandler() flag 12************************************************")
 
     print("os.path.join('/app/Sheets',request.files['sheet'].filename))_____:",os.path.join('/app/Sheets',request.files['sheet'].filename))
 
-    print("********************************CommUpdateFileHandler() flag 13************************************************")
+    print("********************************CommListFileHandler() flag 13************************************************")
 
     print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
 
-    print("********************************CommUpdateFileHandler() flag 14************************************************")
+    print("********************************CommListFileHandler() flag 14************************************************")
 
     print("request.files['sheet']______:    ",request.files['sheet'])
 
-    print("********************************CommUpdateFileHandler() flag 15************************************************")
+    print("********************************CommListFileHandler() flag 15************************************************")
 
     print("request.files______:    ",request.files)
 
-    print("**************************CommUpdateFileHandler() flag 16******************************************************")
+    print("**************************CommListFileHandler() flag 16******************************************************")
     
     toscrn = "done"
-    print("**************************CommUpdateFileHandler() flag 17******************************************************")
+    print("**************************CommListFileHandler() flag 17******************************************************")
 
     
     return toscrn
