@@ -87,11 +87,11 @@ def CommListFileHandler():
 
     print("********************************CommListFileHandler() flag 2************************************************")
 
-    print("request.files['sheet']______:    ",request.files['Communities'])
+    print("request.files['Communities']______:    ",request.files['Communities'])
 
     print("********************************CommListFileHandler()) flag 3*************************************************")
 
-    print("request.files['sheet'].filename_______:     ",request.files['Communities'].filename)
+    print("request.files['Communities'].filename_______:     ",request.files['Communities'].filename)
 
     print("*********************************CommListFileHandler() flag 4***********************************************")
 
@@ -119,7 +119,7 @@ def CommListFileHandler():
 
     print("********************************CommListFileHandler() flag 9************************************************")
 
-    request.files['sheet'].save(request.files['Communities'].filename)
+    request.files['Communities'].save(request.files['Communities'].filename)
 
     print("********************************CommListFileHandler() flag 10************************************************")
 
