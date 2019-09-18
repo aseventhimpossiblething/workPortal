@@ -98,7 +98,7 @@ def CommListFileHandler():
         print("past setting working request")
         print("before Print of workingRequest")
         #print("str(workingRequest)")
-        #print(workingRequest)
+        print(workingRequest)
         print("Just befor If statement")
         if workingRequest=="<class 'int'>":
             print("XLSX filetype valid")
