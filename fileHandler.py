@@ -93,13 +93,13 @@ def CommListFileHandler():
 
     
     def validateXLSX(arr): 
-        print("Startting to Run Validate()")
+        print("Starting to Run Validate()")
         workingRequest='"'+str(type(request.files[arr].filename.index('xlsx')))+'"'
         print("past setting working request")
         print("before Print of workingRequest")
         print("str(workingRequest)")
         print(workingRequest)
-        print("Just befor If statement")
+        print("Just before If statement")
         if workingRequest=="<class 'int'>":
             print("XLSX filetype valid")
             return "valid"
