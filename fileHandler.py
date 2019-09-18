@@ -173,13 +173,14 @@ def CommListFileHandler():
     print("********************************CommListFileHandler() flag 5************************************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     print("os.listdir()____:",os.listdir())
-    
+    print(" ")
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     print("os.listdir()____:",os.listdir())
-    
+    print(os.path.getctime(recent))
+    print(" ")
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     print("os.listdir()____:",os.listdir())
-    
+    print(os.path.getctime(recent))
     
 
     print("********************************CommListFileHandler() flag 6************************************************")
@@ -188,6 +189,7 @@ def CommListFileHandler():
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
     print("recent____",recent)
     print("os.listdir()____:",os.listdir())
+    print(os.path.getctime(recent))
     
     
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
