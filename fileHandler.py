@@ -6,6 +6,7 @@ import psycopg2
 import pandas
 import xlrd
 import io
+
 def BidOpFileHandler():
     print("********************************BidOpFileHandler() flag 1************************************************")
 
@@ -150,12 +151,14 @@ def CommListFileHandler():
     #print("os.getcwd()____:",os.getcwd)
 
     print("********************************CommListFileHandler() flag 11************************************************")
-
+    
+    
     print("os.listdir()____:",os.listdir())
     HTMLoutput=Markup('<p></p>')
     
     toscrn = HTMLoutput
     print("**************************CommListFileHandler() flag 17******************************************************")
+    
 
     
     return toscrn
