@@ -44,7 +44,7 @@ def BidOpFileHandler():
 
     print("********************************BidOpFileHandler() flag 9************************************************")
 
-      request.files['sheet'].save(request.files['sheet'].filename)
+    request.files['sheet'].save(request.files['sheet'].filename)
 
     print("********************************BidOpFileHandler() flag 10************************************************")
 
