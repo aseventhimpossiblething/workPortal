@@ -151,11 +151,7 @@ def CommListFileHandler():
         print("<class 'int'>==type(3)")
     """
     
-    #print("request.files['currentGoogle'].filename_______:     ",request.files['currentGoogle'].filename)
-    #print("request.files['currentBing'].filename_______:     ",request.files['currentBing'].filename)
-
-
-
+   
     print("*********************************CommListFileHandler() flag 4***********************************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     print("os.getcwd()_____: ",os.getcwd())
@@ -207,13 +203,14 @@ def CommListFileHandler():
     print(os.path.getctime(recent))
     print(" ")
     #print(datetime.now()-os.path.getctime(recent))
-    print("time.ctime(datetime.now())",time.ctime(datetime.now()))
+    #print("time.ctime(datetime.now())",os.path.getctime(recent))
+    print(datetime.datetime.fromtimestamp(os.path.getctime(recent)).strftime('%c'))
+
 
    
     print("********************************CommListFileHandler() flag 11************************************************")
-    
-    
-    #print("os.listdir()____:",os.listdir())
+       
+  
     HTMLoutput=Markup('<p>Structured HTML</p>')
     
     toscrn = HTMLoutput
