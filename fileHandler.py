@@ -1,4 +1,5 @@
 import BidOpAssist
+from datetime import datetime
 from flask import Flask, Markup, render_template, request
 import glob
 import os
@@ -182,6 +183,7 @@ def CommListFileHandler():
     
 
     print("********************************CommListFileHandler() flag 6************************************************")
+    print(datetime.now())
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     recent=max(glob.glob('*.PNG'), key=os.path.getctime)
     print("recent____",recent)
