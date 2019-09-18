@@ -139,7 +139,7 @@ def CommListFileHandler():
 
     print("********************************CommListFileHandler() flag 14************************************************")
 
-    print("request.files['Communities']______:    ",request.files['sheet'])
+    print("request.files['Communities']______:    ",request.files['Communities'])
 
     print("********************************CommListFileHandler() flag 15************************************************")
 
