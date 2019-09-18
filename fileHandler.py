@@ -93,7 +93,7 @@ def CommListFileHandler():
 
     print("request.files['sheet'].filename_______:     ",request.files['Communities'].filename)
 
-        print("*********************************CommListFileHandler() flag 4***********************************************")
+    print("*********************************CommListFileHandler() flag 4***********************************************")
 
     print("os.getcwd()_____: ",os.getcwd())
 
