@@ -1,7 +1,6 @@
 import BidOpAssist
-from flask import Flask, render_template, request
+from flask import Flask, Markup, render_template, request
 import glob
-import Markup
 import os
 import psycopg2
 import pandas
