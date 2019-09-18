@@ -153,7 +153,7 @@ def CommListFileHandler():
     print("********************************CommListFileHandler() flag 11************************************************")
 
     print("os.listdir()____:",os.listdir())
-    HTMLoutput=Markup(<p></p>)
+    HTMLoutput=Markup('<p></p>')
     
     toscrn = HTMLoutput
     print("**************************CommListFileHandler() flag 17******************************************************")
