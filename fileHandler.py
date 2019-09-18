@@ -176,11 +176,11 @@ def CommListFileHandler():
     print(" ")
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     print("os.listdir()____:",os.listdir())
-    print(os.path.getctime(recent))
+    
     print(" ")
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     print("os.listdir()____:",os.listdir())
-    print(os.path.getctime(recent))
+    
     
 
     print("********************************CommListFileHandler() flag 6************************************************")
