@@ -45,8 +45,6 @@ CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Sear
 @app.route('/css')
 def styleSheet1():
     return render_template('csstemplate.css')
-
-
 @app.route('/')
 def index():
     indexContent=Markup('<a href="https://www.google.com">"Google"</a><br>\
@@ -57,7 +55,6 @@ def index():
 @app.route('/BidOps')
 def BidOpInput():
     return render_template('BidOpForm.html',pagetitle="Bid Optimisation",CommonTag=CommonTagAll)
-
 @app.route('/BidOPUpload', methods=['POST','GET'])
 def BidOPUpload():
     return fileHandler.BidOpFileHandler()
@@ -66,10 +63,14 @@ def BidOPUpload():
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
     return render_template('CommunitiesForm.html',pagetitle="Community Updates",CommonTag=CommonTagAll)
+@app.route('/CommunityFileHander', methods=['POST','GET'])
+def CommunityFileHandling():
+    return fileHandler.
+    
 """
 @app.route('/CommunityUpdatesOutPut',methods=['POST','GET'])
 def CommunitiesFormHandler():
-    return fileHandler
+    return fileHandler.CommListFileHandler()
 """
     
     
