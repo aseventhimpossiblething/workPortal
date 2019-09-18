@@ -1,14 +1,14 @@
 
 
-.topOfForm{}
+.topOfForm{static:center;}
 
-.form {
+#form {
 static:center;
 margin-left:20px;    
 
 }
 
-input[type='file']
+#input[type='file']
 {
     Border-radius:15px
 }
