@@ -129,7 +129,9 @@ def CommListFileHandler():
 
     print("********************************CommListFileHandler() flag 6************************************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-    print(glob.glob('*'))
+    recent=max(glob.glob('*'), key=os.path.getctime)
+    
+    print("recent____",recent)
     print("os.listdir()____:",os.listdir())
     
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
@@ -162,7 +164,7 @@ def CommListFileHandler():
     print("********************************CommListFileHandler() flag 11************************************************")
     
     
-    print("os.listdir()____:",os.listdir())
+    #print("os.listdir()____:",os.listdir())
     HTMLoutput=Markup('<p>Structured HTML</p>')
     
     toscrn = HTMLoutput
