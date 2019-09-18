@@ -3,7 +3,8 @@
 
 
 form {
-float:center;    
+static:center;
+margin-right:20px;    
 
 }
 
