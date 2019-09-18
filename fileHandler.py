@@ -103,9 +103,16 @@ def CommListFileHandler():
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     print("os.getcwd()_____: ",os.getcwd())
     request.files['Communities'].save(request.files['Communities'].filename)
+    
+    os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
+    print("os.getcwd()_____: ",os.getcwd())
+    request.files['currentGoogle'].save(request.files['currentGoogle'].filename)
+    
+    os.chdir('/app/Sheets/CommunityUpdates/Bing/currenBing')
+    print("os.getcwd()_____: ",os.getcwd())
+    request.files['currentBing'].save(request.files['currentBing'].filename)
 
-    #request.files['Communities'].save(os.path.join('/app/Sheets/CommunityUpdates/currentCommunities',request.files['currentCommunities'].filename))
-
+  
                                                    
     print("********************************CommListFileHandler() flag 5************************************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
@@ -123,7 +130,7 @@ def CommListFileHandler():
 
     #os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     
-    print("os.chdir(/Sheets/CommunityUpdates/currentCommunities)____:",os.chdir('/app/Sheets/CommunityUpdates/currentCommunities'))
+    #print("os.chdir(/Sheets/CommunityUpdates/currentCommunities)____:",os.chdir('/app/Sheets/CommunityUpdates/currentCommunities'))
     #print("os.chdir(/Sheets/CommunityUpdates/Google/currentGoogle)____:",os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle'))
 
     print("********************************CommListFileHandler() flag 7************************************************")
@@ -140,7 +147,7 @@ def CommListFileHandler():
 
     print("********************************CommListFileHandler() flag 10************************************************")
 
-    print("os.getcwd()____:",os.getcwd)
+    #print("os.getcwd()____:",os.getcwd)
 
     print("********************************CommListFileHandler() flag 11************************************************")
 
