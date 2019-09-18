@@ -87,11 +87,11 @@ def CommListFileHandler():
 
     print("********************************CommListFileHandler() flag 2************************************************")
 
-    print("request.files['sheet']______:    ",request.files['sheet'])
+    print("request.files['sheet']______:    ",request.files['Communities'])
 
     print("********************************CommListFileHandler()) flag 3*************************************************")
 
-    print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
+    print("request.files['sheet'].filename_______:     ",request.files['Communities'].filename)
 
         print("*********************************CommListFileHandler() flag 4***********************************************")
 
@@ -119,7 +119,7 @@ def CommListFileHandler():
 
     print("********************************CommListFileHandler() flag 9************************************************")
 
-    request.files['sheet'].save(request.files['sheet'].filename)
+    request.files['sheet'].save(request.files['Communities'].filename)
 
     print("********************************CommListFileHandler() flag 10************************************************")
 
@@ -131,15 +131,15 @@ def CommListFileHandler():
 
     print("********************************CommListFileHandler() flag 12************************************************")
 
-    print("os.path.join('/app/Sheets/CommunityUpdates/currentCommunities',request.files['sheet'].filename))_____:",os.path.join('/app/Sheets/CommunityUpdates/currentCommunities',request.files['sheet'].filename))
+    print("os.path.join('/app/Sheets/CommunityUpdates/currentCommunities',request.files['Communities'].filename))_____:",os.path.join('/app/Sheets/CommunityUpdates/currentCommunities',request.files['sheet'].filename))
 
     print("********************************CommListFileHandler() flag 13************************************************")
 
-    print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
+    print("request.files['Communities'].filename_______:     ",request.files['Communities'].filename)
 
     print("********************************CommListFileHandler() flag 14************************************************")
 
-    print("request.files['sheet']______:    ",request.files['sheet'])
+    print("request.files['Communities']______:    ",request.files['sheet'])
 
     print("********************************CommListFileHandler() flag 15************************************************")
 
