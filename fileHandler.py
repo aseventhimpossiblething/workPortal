@@ -129,7 +129,7 @@ def CommListFileHandler():
 
     print("********************************CommListFileHandler() flag 6************************************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-    glob.glob()
+    print(glob.glob('*'))
     print("os.listdir()____:",os.listdir())
     
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
