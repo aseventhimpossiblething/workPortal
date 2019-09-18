@@ -124,9 +124,9 @@ def CommListFileHandler():
 
     print("********************************CommListFileHandler() flag 6************************************************")
 
-    os.chdir('/app/Sheets')
+    os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
 
-    print("os.chdir(/Sheets)____:")
+    print("os.chdir(/Sheets/CommunityUpdates/currentCommunities)____:")
 
     print("********************************CommListFileHandler() flag 7************************************************")
 
@@ -156,7 +156,7 @@ def CommListFileHandler():
 
     print("********************************CommListFileHandler() flag 12************************************************")
 
-    print("os.path.join('/app/Sheets',request.files['sheet'].filename))_____:",os.path.join('/app/Sheets',request.files['sheet'].filename))
+    print("os.path.join('/app/Sheets/CommunityUpdates/currentCommunities',request.files['sheet'].filename))_____:",os.path.join('/app/Sheets/CommunityUpdates/currentCommunities',request.files['sheet'].filename))
 
     print("********************************CommListFileHandler() flag 13************************************************")
 
