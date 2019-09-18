@@ -88,10 +88,14 @@ def CommListFileHandler():
     print("********************************CommListFileHandler() flag 2************************************************")
 
     print("request.files['Communities']______:    ",request.files['Communities'])
+    print("request.files['currentGoogle']______:    ",request.files['currentGoogle'])
+    #print("request.files['Communities']______:    ",request.files['Communities'])
 
     print("********************************CommListFileHandler()) flag 3*************************************************")
 
     print("request.files['Communities'].filename_______:     ",request.files['Communities'].filename)
+    print("request.files['currentGoogle'].filename_______:     ",request.files['currentGoogle'].filename)
+
 
     print("*********************************CommListFileHandler() flag 4***********************************************")
 
@@ -105,9 +109,10 @@ def CommListFileHandler():
 
     print("********************************CommListFileHandler() flag 6************************************************")
 
-    os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-
-    print("os.chdir(/Sheets/CommunityUpdates/currentCommunities)____:")
+    #os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
+    
+    print("os.chdir(/Sheets/CommunityUpdates/currentCommunities)____:",os.chdir('/app/Sheets/CommunityUpdates/currentCommunities'))
+    #print("os.chdir(/Sheets/CommunityUpdates/Google/currentGoogle)____:",os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle'))
 
     print("********************************CommListFileHandler() flag 7************************************************")
 
@@ -131,7 +136,8 @@ def CommListFileHandler():
 
     print("********************************CommListFileHandler() flag 12************************************************")
 
-    print("os.path.join('/app/Sheets/CommunityUpdates/currentCommunities',request.files['Communities'].filename))_____:",os.path.join('/app/Sheets/CommunityUpdates/currentCommunities',request.files['Communities'].filename))
+    print("os.path.join('/app/Sheets/CommunityUpdates/currentCommunities',request.files['Communities'].filename))_____:\
+    ",os.path.join('/app/Sheets/CommunityUpdates/currentCommunities',request.files['Communities'].filename))
 
     print("********************************CommListFileHandler() flag 13************************************************")
 
