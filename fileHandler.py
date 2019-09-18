@@ -160,27 +160,7 @@ def CommListFileHandler():
     print("recent____",recent)
     print("os.listdir()____:",os.listdir())
 
-    #os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-    
-    #print("os.chdir(/Sheets/CommunityUpdates/currentCommunities)____:",os.chdir('/app/Sheets/CommunityUpdates/currentCommunities'))
-    #print("os.chdir(/Sheets/CommunityUpdates/Google/currentGoogle)____:",os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle'))
-
-    print("********************************CommListFileHandler() flag 7************************************************")
-
-    #print("os.getcwd()_____: ",os.getcwd())
-
-    print("********************************CommListFileHandler() flag 8************************************************")
-
-    #print("os.listdir()____:",os.listdir())
-
-    print("********************************CommListFileHandler() flag 9************************************************")
-
-    #request.files['Communities'].save(request.files['Communities'].filename)
-
-    print("********************************CommListFileHandler() flag 10************************************************")
-
-    #print("os.getcwd()____:",os.getcwd)
-
+   
     print("********************************CommListFileHandler() flag 11************************************************")
     
     
