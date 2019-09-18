@@ -108,14 +108,14 @@ def CommListFileHandler():
             rval=arr+" "+"Invalid file type entered; expecting XLSX" 
             return rval
         
-    
+    """
     if validateXLSX('Communities')!="valid":
         return validateXLSX('Communities')
     if validateXLSX('currentGoogle')!="valid":
         return validateXLSX('currentGoogle')
     if validateXLSX('currentBing')!="valid":
         return validateXLSX('currentBing')
-    
+    """
     """
     workingRequest="+request.files['Communities'].filename.index('xlsx')+"
     if  workingRequest!="<class 'int'>":
