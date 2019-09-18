@@ -94,6 +94,8 @@ def CommListFileHandler():
     #print("request.files['Communities'].filename_______:     ",request.files['Communities'].filename)
     #request.files['Communities'].filename.index('xlsx')
     #print("request.files['Communities'].filename.index('xlsx')",request.files['Communities'].filename.index('xlsx'))
+    if request.files['Communities'].filename.index('xlsx')!=0:
+        print("if statment")
     if request.files['Communities'].filename.index('xlsx')==0:
         print("The File Entered as Community is not in the xlsx Filetype")
         return "The File Entered as Community List is not in the xlsx Filetype"
