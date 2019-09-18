@@ -4,9 +4,11 @@
 
 .form {
 static:center;
-margin-right:20px;    
+margin-left:20px;    
 
 }
+
+input[type='file']
 
 a {color:white;}
 
