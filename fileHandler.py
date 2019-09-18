@@ -104,9 +104,9 @@ def CommListFileHandler():
     
     if validateXLSX('Communities')!="valid":
         return validateXLSX('Communities')
-     if validateXLSX('currentGoogle')!="valid":
+    if validateXLSX('currentGoogle')!="valid":
         return validateXLSX('currentGoogle')
-     if validateXLSX('currentBing')!="valid":
+    if validateXLSX('currentBing')!="valid":
         return validateXLSX('currentBing')
     
     """
