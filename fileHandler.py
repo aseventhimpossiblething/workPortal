@@ -55,7 +55,7 @@ def BidOpFileHandler():
     print("os.listdir()____:",os.listdir())
 
     print("********************************BidOpFileHandler() flag 12************************************************")
-
+    
     print("os.path.join('/app/Sheets',request.files['sheet'].filename))_____:",os.path.join('/app/Sheets',request.files['sheet'].filename))
 
     print("********************************BidOpFileHandler() flag 13************************************************")
@@ -102,8 +102,9 @@ def CommListFileHandler():
     print("*********************************CommListFileHandler() flag 4***********************************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     print("os.getcwd()_____: ",os.getcwd())
+    request.files['Communities'].save('request.files['Communities'].filename')
 
-    request.files['Communities'].save(os.path.join('/app/Sheets/CommunityUpdates/currentCommunities',request.files['currentCommunities'].filename))
+    #request.files['Communities'].save(os.path.join('/app/Sheets/CommunityUpdates/currentCommunities',request.files['currentCommunities'].filename))
 
                                                    
     print("********************************CommListFileHandler() flag 5************************************************")
