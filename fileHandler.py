@@ -94,7 +94,7 @@ def CommListFileHandler():
     #print("request.files['Communities'].filename_______:     ",request.files['Communities'].filename)
     #request.files['Communities'].filename.index('xlsx')
     #print("request.files['Communities'].filename.index('xlsx')",request.files['Communities'].filename.index('xlsx'))
-    print("type and index",type(request.files['Communities'].filename.index('xlsx')).index()))
+    print("type and index('int')",type(request.files['Communities'].filename.index('xlsx')).index('int'))
     
     
     if type(request.files['Communities'].filename.index('xlsx'))=="<class 'int'>":
