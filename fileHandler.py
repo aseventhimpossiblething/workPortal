@@ -93,7 +93,7 @@ def BidOpFileHandler():
     return toscrn
 
 
-def CommUpdateFileHandler():
+def CommListFileHandler():
     print("********************************CommUpdateFileHandler() flag 1************************************************")
 
     print("request.files______:   ",request.files)
