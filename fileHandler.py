@@ -181,6 +181,18 @@ def CommListFileHandler():
     
 
     print("********************************CommListFileHandler() flag 6************************************************")
+    1day=86400000
+    def ValidatXLSXtime(arr):
+        if time.time()-os.path.getctime(recent)>86400000:
+            error=arr+" Generated an error check that filetype is xlsx"
+            valid=arr" " is valid"
+            print()
+            
+        
+        
+    
+    
+    
     print(datetime.now())
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
