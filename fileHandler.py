@@ -97,7 +97,7 @@ def CommListFileHandler():
         workingRequest='"'+str(type(request.files[arr].filename.index('xlsx')))+'"'
         print("past setting working request")
         print("before Print of workingRequest")
-        print("str(workingRequest)")
+        print(str(workingRequest))
         print(workingRequest)
         print("Just before If statement")
         if workingRequest=="<class 'int'>":
