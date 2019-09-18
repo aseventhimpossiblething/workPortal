@@ -94,7 +94,7 @@ def CommListFileHandler():
     
     def validateXLSX(arr): 
         print("Startting to Run Validate()")
-        workingRequest='"'+type(request.files[arr].filename.index('xlsx'))+'"'
+        workingRequest='"'+str(type(request.files[arr].filename.index('xlsx')))+'"'
         print("past setting working request")
         print("before Print of workingRequest")
         #print("str(workingRequest)")
