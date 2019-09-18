@@ -5,6 +5,7 @@ import glob
 import os
 import psycopg2
 import pandas
+import time
 import xlrd
 import io
 
@@ -205,7 +206,8 @@ def CommListFileHandler():
     print("os.listdir()____:",os.listdir())
     print(os.path.getctime(recent))
     print(" ")
-    print(datetime.now()-os.path.getctime(recent))
+    #print(datetime.now()-os.path.getctime(recent))
+    time.ctime("ctime recent",recent)
 
    
     print("********************************CommListFileHandler() flag 11************************************************")
