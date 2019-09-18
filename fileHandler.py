@@ -24,7 +24,7 @@ def BidOpFileHandler():
 
     print("os.getcwd()_____: ",os.getcwd())
 
-       print("********************************BidOpFileHandler() flag 5************************************************")
+    print("********************************BidOpFileHandler() flag 5************************************************")
 
     print("os.listdir()____:",os.listdir())
 
