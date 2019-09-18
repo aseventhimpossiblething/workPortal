@@ -207,7 +207,7 @@ def CommListFileHandler():
     print(os.path.getctime(recent))
     print(" ")
     #print(datetime.now()-os.path.getctime(recent))
-    print("ctime recent",datetime.now())
+    print("time.ctime(datetime.now())",time.ctime(datetime.now()))
 
    
     print("********************************CommListFileHandler() flag 11************************************************")
