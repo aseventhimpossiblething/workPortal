@@ -206,6 +206,7 @@ def CommListFileHandler():
     #print("time.ctime(datetime.now())",os.path.getctime(recent))
     #print(datetime.fromtimestamp(os.path.getctime(recent)).strftime('%c'))
     print(time.time())
+    print(time.time()-os.path.getctime(recent))
 
 
    
