@@ -183,7 +183,7 @@ def CommListFileHandler():
 
     print("********************************CommListFileHandler() flag 6************************************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-    recent=max(glob.glob('*'), key=os.path.getctime)
+    recent=max(glob.glob('*.PNG'), key=os.path.getctime)
     print("recent____",recent)
     print("os.listdir()____:",os.listdir())
     
