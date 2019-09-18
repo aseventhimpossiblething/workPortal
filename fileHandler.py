@@ -108,7 +108,7 @@ def CommListFileHandler():
     print("os.getcwd()_____: ",os.getcwd())
     request.files['currentGoogle'].save(request.files['currentGoogle'].filename)
     
-    os.chdir('/app/Sheets/CommunityUpdates/Bing/currenBing')
+    os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     print("os.getcwd()_____: ",os.getcwd())
     request.files['currentBing'].save(request.files['currentBing'].filename)
 
