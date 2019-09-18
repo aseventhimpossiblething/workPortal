@@ -19,19 +19,12 @@ def BidOpFileHandler():
 
     print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
 
-    #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
-
-    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
-
-    #os.chdir(r'/app/Sheets')
-
+   
     print("*********************************BidOpFileHandler() flag 4***********************************************")
 
     print("os.getcwd()_____: ",os.getcwd())
 
-    #print(request.files['sheet'].save(os.path.join('/app/Sheets/sheet',request.files['sheet'].filename)))
-
-    print("********************************BidOpFileHandler() flag 5************************************************")
+       print("********************************BidOpFileHandler() flag 5************************************************")
 
     print("os.listdir()____:",os.listdir())
 
@@ -51,13 +44,7 @@ def BidOpFileHandler():
 
     print("********************************BidOpFileHandler() flag 9************************************************")
 
-    #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
-
-    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
-    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
-
-
-    request.files['sheet'].save(request.files['sheet'].filename)
+      request.files['sheet'].save(request.files['sheet'].filename)
 
     print("********************************BidOpFileHandler() flag 10************************************************")
 
@@ -106,13 +93,7 @@ def CommListFileHandler():
 
     print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
 
-    #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
-
-    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
-
-    #os.chdir(r'/app/Sheets')
-
-    print("*********************************CommListFileHandler() flag 4***********************************************")
+        print("*********************************CommListFileHandler() flag 4***********************************************")
 
     print("os.getcwd()_____: ",os.getcwd())
 
@@ -137,12 +118,6 @@ def CommListFileHandler():
     print("os.listdir()____:",os.listdir())
 
     print("********************************CommListFileHandler() flag 9************************************************")
-
-    #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
-
-    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
-    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
-
 
     request.files['sheet'].save(request.files['sheet'].filename)
 
@@ -193,17 +168,9 @@ def CurrentGoogleFileHandler():
 
     print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
 
-    #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
-
-    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
-
-    #os.chdir(r'/app/Sheets')
-
     print("*********************************CurrentGoogleFileHandler() flag 4***********************************************")
 
     print("os.getcwd()_____: ",os.getcwd())
-
-    #print(request.files['sheet'].save(os.path.join('/app/Sheets/sheet',request.files['sheet'].filename)))
 
     print("********************************CurrentGoogleFileHandler() flag 5************************************************")
 
@@ -224,12 +191,6 @@ def CurrentGoogleFileHandler():
     print("os.listdir()____:",os.listdir())
 
     print("********************************CurrentGoogleFileHandler() flag 9************************************************")
-
-    #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
-
-    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
-    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
-
 
     request.files['sheet'].save(request.files['sheet'].filename)
 
@@ -280,17 +241,9 @@ def CurrentBingFileHandler():
 
     print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
 
-    #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
-
-    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
-
-    #os.chdir(r'/app/Sheets')
-
     print("*********************************CurrentBingFileHandler() flag 4***********************************************")
 
     print("os.getcwd()_____: ",os.getcwd())
-
-    #print(request.files['sheet'].save(os.path.join('/app/Sheets/sheet',request.files['sheet'].filename)))
 
     print("********************************CurrentBingFileHandler() flag 5************************************************")
 
@@ -311,12 +264,6 @@ def CurrentBingFileHandler():
     print("os.listdir()____:",os.listdir())
 
     print("********************************CurrentBingFileHandler() flag 9************************************************")
-
-    #print("request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))")
-
-    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
-    #request.files['sheet'].save(os.path.join('/app/Sheets',request.files['sheet'].filename))
-
 
     request.files['sheet'].save(request.files['sheet'].filename)
 
