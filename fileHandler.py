@@ -100,8 +100,8 @@ def CommListFileHandler():
 
 
     print("*********************************CommListFileHandler() flag 4***********************************************")
-
-    #print("os.getcwd()_____: ",os.getcwd())
+    os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
+    print("os.getcwd()_____: ",os.getcwd())
 
     request.files['Communities'].save(os.path.join('/app/Sheets/CommunityUpdates/currentCommunities',request.files['currentCommunities'].filename))
 
