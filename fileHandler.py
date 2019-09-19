@@ -94,7 +94,7 @@ def BidOpFileHandler():
 
 def CommListFileHandler():
     print("********************************CommListFileHandler() flag 1************************************************")
-    print(request.files['Communities'].filename.index("potato")) 
+    #print(request.files['Communities'].filename.index("potato")) 
     print(str(request.files['Communities'].filename).index("potato"))    
     print(request.files)
     print(type(request.files))
