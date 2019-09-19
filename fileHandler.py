@@ -214,8 +214,12 @@ def CommListFileHandler():
     if emptyObj==str(request.files['currentGoogle']):
         return "Google slot is empty"
     if emptyObj==str(request.files['Communities']):
-        return "Active Community slot is empty"    
-           
+        return "Active Community slot is empty"
+     
+    request.files['Communities'].filename
+    request.files['currentGoogle'].filename   
+    request.files['currentBing'].filename   
+      
        
     print("*********************************CommListFileHandler() flag 4***********************************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
@@ -246,18 +250,7 @@ def CommListFileHandler():
     
 
     print("********************************CommListFileHandler() flag 6************************************************")
-    #1day=86400000
-    """ 
-    def ValidatXLSXtime(arr):
-        print("Crtitical Value ",time.time()-os.path.getctime(recent))
-        Error=arr+" Generated an error check that filetype is xlsx"
-        Valid=arr+" is valid"
-        if time.time()-os.path.getctime(recent)>600000:
-            print(Error)
-        else:
-            print(Valid)
-    """         
-            
+           
         
         
     
