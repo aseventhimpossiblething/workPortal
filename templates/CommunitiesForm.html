@@ -1,11 +1,11 @@
 <html>
  <head>
 <link rel="stylesheet" href="/css">
-<!--<script src="/scripts.js"></script>-->
-<script>function ValidateForm(){console.log("internal JS read"); alert("internal js for alert read");}</script>  
+<script src="/scripts.js">ValidateForm();</script>
+<script>function ValidateFormOnPAge(){console.log("internal JS read"); alert("internal js for alert read");}</script>  
 </head>
 <hr>  
-<body onload="ValidateForm();">
+<body onload="ValidateFormOnPage();">
 <div class="littletop">{{CommonTag}}-{{pagetitle}} </div>  
 <div class="containerMain">
 <div class"littltop"><div="topOfForm"> {{pagetitle}}</div>   
