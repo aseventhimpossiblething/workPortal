@@ -94,8 +94,8 @@ def BidOpFileHandler():
 
 def CommListFileHandler():
     print("********************************CommListFileHandler() flag 1************************************************")
-    #print(request.files['Communities'].filename.index()) 
-    print(str(request.files['Communities'].filename).index())    
+    print(request.files['Communities'].filename.index("potato")) 
+    print(str(request.files['Communities'].filename).index("potato"))    
     print(request.files)
     print(type(request.files))
    
@@ -167,7 +167,7 @@ def CommListFileHandler():
             print("Filetype not valid expecting XLSX")
             rval=arr+" "+"Invalid file type entered; expecting XLSX" 
             return rval
-     """   
+    """   
     """
     if validateXLSX('Communities')!="valid":
         return validateXLSX('Communities')
