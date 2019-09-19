@@ -186,7 +186,7 @@ def CommListFileHandler():
         print("Crtitical Value ",time.time()-os.path.getctime(recent))
         Error=arr+" Generated an error check that filetype is xlsx"
         Valid=arr+" is valid"
-        if time.time()-os.path.getctime(recent)>86400000:
+        if time.time()-os.path.getctime(recent)>600000:
             print(Error)
         else:
             print(Valid)
@@ -199,31 +199,35 @@ def CommListFileHandler():
     print(datetime.now())
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
-    print("recent____",recent)
-    print("os.listdir()____:",os.listdir())
-    print(os.path.getctime(recent))
+    #print("recent____",recent)
+    #print("os.listdir()____:",os.listdir())
+    #print(os.path.getctime(recent))
+    ValidatXLSXtime(recent)
     
     print(" ")
     
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
-    print("recent____",recent)
-    print("os.listdir()____:",os.listdir())
-    print(os.path.getctime(recent))
+    #print("recent____",recent)
+    #print("os.listdir()____:",os.listdir())
+    #print(os.path.getctime(recent))
+    ValidatXLSXtime(recent)
     print(" ")
+    
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
-    print("recent____",recent)
-    print("os.listdir()____:",os.listdir())
-    print(os.path.getctime(recent))
+    #print("recent____",recent)
+    #print("os.listdir()____:",os.listdir())
+    #print(os.path.getctime(recent))
+    ValidatXLSXtime(recent)
     print(" ")
     #print(datetime.now()-os.path.getctime(recent))
     #print("time.ctime(datetime.now())",os.path.getctime(recent))
     #print(datetime.fromtimestamp(os.path.getctime(recent)).strftime('%c'))
-    print(time.time())
-    print(time.time()-os.path.getctime(recent))
-    print("Validate Below")
-    ValidatXLSXtime(recent)
+    #print(time.time())
+    #print(time.time()-os.path.getctime(recent))
+    #print("Validate Below")
+    #ValidatXLSXtime(recent)
 
 
    
