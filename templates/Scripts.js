@@ -5,7 +5,7 @@ function ValidateForm(){
 alert(" ExternalJS is being read")  
 //alert(document.forms["CommForm"]["Communitites"].value)
 //console.log(document.forms["CommForm"]["Communitites"].value)
-return alert(" ExternalJS is being read") ;  
+return false;  
 
 }
 
