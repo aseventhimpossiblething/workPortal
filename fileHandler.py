@@ -124,9 +124,10 @@ def CommListFileHandler():
     print("type(request.files____)",type(request.files['currentBing']))
     print("Make string")
     print(str(request.files['currentBing']))      
-    print(type(str(request.files['currentBing'])))    
+    print(type(str(request.files['currentBing'])))
+    print("<FileStorage: '' ('application/octet-stream')>")
         
-    if n==3:
+    if "<FileStorage: '' ('application/octet-stream')>"==str(request.files['currentBing']):
         return "stopped by if"
     
     return "empty passed through"    
