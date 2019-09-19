@@ -9,6 +9,15 @@ import time
 import xlrd
 import io
 
+def ValidatXLSXtime(arr):
+        print("Crtitical Value ",time.time()-os.path.getctime(recent))
+        Error=arr+" Generated an error check that filetype is xlsx"
+        Valid=arr+" is valid"
+        if time.time()-os.path.getctime(recent)>600000:
+            print(Error)
+        else:
+            print(Valid)
+
 def BidOpFileHandler():
     print("********************************BidOpFileHandler() flag 1************************************************")
 
@@ -93,7 +102,7 @@ def CommListFileHandler():
 
     print("********************************CommListFileHandler() flag 3*************************************************")
 
-    
+    """
     def validateXLSX(arr): 
         print("Starting to Run Validate()")
         workingRequest=str(type(request.files[arr].filename.index('xlsx')))
@@ -109,7 +118,7 @@ def CommListFileHandler():
             print("Filetype not valid expecting XLSX")
             rval=arr+" "+"Invalid file type entered; expecting XLSX" 
             return rval
-        
+     """   
     """
     if validateXLSX('Communities')!="valid":
         return validateXLSX('Communities')
@@ -182,6 +191,7 @@ def CommListFileHandler():
 
     print("********************************CommListFileHandler() flag 6************************************************")
     #1day=86400000
+    """ 
     def ValidatXLSXtime(arr):
         print("Crtitical Value ",time.time()-os.path.getctime(recent))
         Error=arr+" Generated an error check that filetype is xlsx"
@@ -190,6 +200,7 @@ def CommListFileHandler():
             print(Error)
         else:
             print(Valid)
+    """         
             
         
         
