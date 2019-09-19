@@ -127,7 +127,7 @@ def CommListFileHandler():
     print(type(str(request.files['currentBing'])))
     print("<FileStorage: '' ('application/octet-stream')>")
         
-    if "<FileStorage: '' ('application/octet-stream')>"==str(request.files['currentBing']):
+    if "<FileStorage: '' ('application/octet-stream') >"==str(request.files['currentBing']):
         return "stopped by if"
     
     return "empty passed through"    
