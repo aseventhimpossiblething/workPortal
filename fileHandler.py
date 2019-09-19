@@ -181,12 +181,15 @@ def CommListFileHandler():
     
 
     print("********************************CommListFileHandler() flag 6************************************************")
-    1day=86400000
+    #1day=86400000
     def ValidatXLSXtime(arr):
+        print("Crtitical Value ",time.time()-os.path.getctime(recent))
+        Error=arr+" Generated an error check that filetype is xlsx"
+        Valid=arr+" is valid"
         if time.time()-os.path.getctime(recent)>86400000:
-            error=arr+" Generated an error check that filetype is xlsx"
-            valid=arr" " is valid"
-            print()
+            print(Error)
+        Else:
+            print(Valid)
             
         
         
@@ -219,6 +222,8 @@ def CommListFileHandler():
     #print(datetime.fromtimestamp(os.path.getctime(recent)).strftime('%c'))
     print(time.time())
     print(time.time()-os.path.getctime(recent))
+    print("Validate Below")
+    ValidatXLSXtime(recent)
 
 
    
