@@ -95,6 +95,8 @@ def BidOpFileHandler():
 def CommListFileHandler():
     print("********************************CommListFileHandler() flag 1************************************************")
     request.files
+    print(request.files)
+    print(type(request.files))
     """    
     print("********************************CommListFileHandler() flag 1.2************************************************"    
         
