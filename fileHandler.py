@@ -212,7 +212,7 @@ def CommListFileHandler():
         print("<class 'int'>==type(3)")
         
     """
-    print("Empty Test")    
+        
     emptyObj="<FileStorage: '' ('application/octet-stream')>"    
     if emptyObj==str(request.files['currentBing']):
         return "Bing slot is empty"
@@ -223,9 +223,9 @@ def CommListFileHandler():
    
                 
      
-    request.files['Communities'].filename
-    request.files['currentGoogle'].filename   
-    request.files['currentBing'].filename   
+    request.files['Communities'].filename.find("xlsx")
+    request.files['currentGoogle'].filename.find("xlsx")   
+    request.files['currentBing'].filename.find("xlsx")   
       
        
     print("*********************************CommListFileHandler() flag 4***********************************************")
