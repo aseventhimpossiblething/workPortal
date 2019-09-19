@@ -2,13 +2,13 @@
  <head>
 <link rel="stylesheet" href="/css">
 <!---<script src="/scripts.js">ValidateForm();</script>--->
-<script>function ValidateFormOnPAge(){console.log("internal JS read"); alert("internal js for alert read");}</script>  
+<script>function ValidateFormOnPAge(){/*console.log("internal JS read");*/ alert("internal js for alert read");}</script>  
 </head>
 <hr>  
 <body onload="ValidateFormOnPage();">
-<div class="littletop">{{CommonTag}}-{{pagetitle}} </div>  
+<div class="littletop">{{CommonTag}}-{{pagetitle}}</div>  
 <div class="containerMain">
-<div class"littltop"><div="topOfForm"> {{pagetitle}}</div>   
+<div class"littltop"><div="topOfForm">{{pagetitle}}</div>   
 <form  name="CommForm" method=POST enctype="multipart/form-data" action="/CommunityFileHander" >
 <input type="file" name="Communities" id="Communities" Value="Select Community List" size=25 >Community List<br>
 <input type="file" name="currentGoogle" id="currentGoogle" Value="Active Google Extended Ads" size=25 >Active Google Ads<br>
