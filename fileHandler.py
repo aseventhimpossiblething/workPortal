@@ -13,7 +13,7 @@ def ValidatXLSXtime(arr):
         print("Crtitical Value ",time.time()-os.path.getctime(arr))
         Error=arr+" Generated an error check that filetype is xlsx"
         Valid=arr+" is valid"
-        if time.time()-os.path.getctime(recent)>600000:
+        if time.time()-os.path.getctime(arr)>600000:
             print(Error)
         else:
             print(Valid)
