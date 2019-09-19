@@ -109,7 +109,7 @@ def CommListFileHandler():
         
     #request.form
     #print(type("request.files['Communities']",request.files[Communities]))
-    """     
+        
     print("********************************CommListFileHandler() flag 1.3************************************************")      
     print("request.files____",request.files)
     print("********************************CommListFileHandler() flag 1.4************************************************")      
@@ -120,7 +120,7 @@ def CommListFileHandler():
     print("request.files____",request.files['currentBing']) 
     print("********************************CommListFileHandler() flag 1.7************************************************")        
     reqs=request.files,request.files['currentGoogle'],request.files['currentGoogle'],request.files['currentBing']  
-    """
+    
     return "empty passed through"    
         
         
