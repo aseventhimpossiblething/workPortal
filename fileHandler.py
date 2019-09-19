@@ -93,8 +93,8 @@ def BidOpFileHandler():
 
 
 def CommListFileHandler():
-    print("********************************CommListFileHandler() flag 2************************************************")
-   
+    print("********************************CommListFileHandler() flag 1************************************************")
+    print("request.files____",request.files)    
     print("request.files____",request.files['Communities'])
     print("request.files____",request.files['currentGoogle'])
     print("request.files____",request.files['currentBing']) 
