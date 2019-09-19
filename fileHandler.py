@@ -188,7 +188,7 @@ def CommListFileHandler():
         Valid=arr+" is valid"
         if time.time()-os.path.getctime(recent)>86400000:
             print(Error)
-        Else:
+        else:
             print(Valid)
             
         
