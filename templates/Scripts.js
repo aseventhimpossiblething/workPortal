@@ -1,4 +1,4 @@
 function ValidateForm(){
-Console.log("JS is being read")  
-//Console.log(document.forms["CommForm"]["Communitites"].value)
+console.log("JS is being read")  
+//console.log(document.forms["CommForm"]["Communitites"].value)
 }
