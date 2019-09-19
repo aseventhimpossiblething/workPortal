@@ -94,6 +94,8 @@ def BidOpFileHandler():
 
 def CommListFileHandler():
     print("********************************CommListFileHandler() flag 1************************************************")
+    print(request.files['Communities'].filename.index) 
+    print(str(request.files['Communities'].filename).index())    
     print(request.files)
     print(type(request.files))
    
@@ -215,8 +217,8 @@ def CommListFileHandler():
         return "Google slot is empty"
     if emptyObj==str(request.files['Communities']):
         return "Active Community slot is empty"
-    if request.files['Communities'].filename.index("potato")>0:
-                return "We seem to heve a potato"
+   
+                
      
     request.files['Communities'].filename
     request.files['currentGoogle'].filename   
