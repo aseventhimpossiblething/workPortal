@@ -46,7 +46,8 @@ CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Sear
 def styleSheet1():
     return render_template('csstemplate.css')
 
-@app.route('/Scripts'):
+@app.route('/Scripts')
+def Scripts():    
     return render_template('Scripts.js')
 
 @app.route('/')
