@@ -1,6 +1,6 @@
 function ValidateForm(){
 n=1  
-if(document.getElemantby[frmID]){
+if(document.getElementbyID[frmID]){
    
 //document.forms["CommForm"]["Communitites"].value;
 //console.log(console.log(document.forms["CommForm"]["Communitites"].value))  
