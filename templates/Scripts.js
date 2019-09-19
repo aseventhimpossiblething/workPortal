@@ -1,3 +1,3 @@
 function ValidateForm(){
-document.forms["CommForm"]["Communitites"].value
+Console.log(document.forms["CommForm"]["Communitites"].value)
 }
