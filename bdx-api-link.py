@@ -10,6 +10,8 @@ import os
 import psycopg2
 from sklearn.ensemble import RandomForestRegressor
 
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
+
 
 #DATABASE_URL = os.environ['DATABASE_URL']
 
