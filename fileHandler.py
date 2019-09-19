@@ -100,11 +100,11 @@ def CommListFileHandler():
      
     print("********************************CommListFileHandler() flag 1.2************************************************")
     n=3
-    """      
+         
     if n=3:
           print("Stopped by if")
           return "stopped by if"
-    """      
+        
     #request.form
     #print(type("request.files['Communities']",request.files[Communities]))
      """     
