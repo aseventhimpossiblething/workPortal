@@ -101,7 +101,7 @@ def CommListFileHandler():
     print("request.files____",request.files['currentGoogle'])
     print("request.files____",request.files['currentBing']) 
     reqs=request.files,request.files['currentGoogle'],request.files['currentGoogle'],request.files['currentBing']    
-    return Markup(reqs)    
+    return "empty"    
         
         
     
