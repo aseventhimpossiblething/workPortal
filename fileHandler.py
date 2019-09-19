@@ -126,12 +126,18 @@ def CommListFileHandler():
     print(str(request.files['currentBing']))      
     print(type(str(request.files['currentBing'])))
     print("<FileStorage: '' ('application/octet-stream')>")
+    """    
     emptyObj="<FileStorage: '' ('application/octet-stream')>"    
-        
     if emptyObj==str(request.files['currentBing']):
-        return "stopped by if"
+        return "Bing slot is empty"
+    if emptyObj==str(request.files['currentGoogle']):
+        return "Google slot is empty"
+    if emptyObj==str(request.files['Communities']):
+        return "Active Community slot is empty"
+    """     
+        
     
-    return "empty passed through"    
+    #return "empty passed through"    
         
         
     
@@ -199,9 +205,18 @@ def CommListFileHandler():
         print("<class 'int'>==type(3)")
     else:
         print("<class 'int'>==type(3)")
+        
     """
-    
-   
+    print("Empty Test")    
+    emptyObj="<FileStorage: '' ('application/octet-stream')>"    
+    if emptyObj==str(request.files['currentBing']):
+        return "Bing slot is empty"
+    if emptyObj==str(request.files['currentGoogle']):
+        return "Google slot is empty"
+    if emptyObj==str(request.files['Communities']):
+        return "Active Community slot is empty"    
+           
+       
     print("*********************************CommListFileHandler() flag 4***********************************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     print("os.getcwd()_____: ",os.getcwd())
