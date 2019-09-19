@@ -93,6 +93,12 @@ def BidOpFileHandler():
 
 
 def CommListFileHandler():
+    print("********************************CommListFileHandler() flag 2************************************************")
+   
+    print("request.files____",request.files)
+    return Markup(request.files)    
+        
+        
     
     print("********************************CommListFileHandler() flag 2************************************************")
 
