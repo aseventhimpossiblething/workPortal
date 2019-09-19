@@ -223,9 +223,13 @@ def CommListFileHandler():
    
                 
      
-    request.files['Communities'].filename.find("xlsx")
-    request.files['currentGoogle'].filename.find("xlsx")   
-    request.files['currentBing'].filename.find("xlsx")   
+    if request.files['Communities'].filename.find("xlsx")<1:
+                return "The Community Sheet is not XLSX file type";
+    if request.files['currentGoogle'].filename.find("xlsx")<1:
+                return "The Google Sheet is not XLSX file type";
+    if request.files['currentBing'].filename.find("xlsx")<1:
+                return "The Bing Sheet is not XLSX file type";    
+  
       
        
     print("*********************************CommListFileHandler() flag 4***********************************************")
