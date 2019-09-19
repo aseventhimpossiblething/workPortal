@@ -45,6 +45,10 @@ CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Sear
 @app.route('/css')
 def styleSheet1():
     return render_template('csstemplate.css')
+
+@app.route(/Scripts):
+    return render_template('Scripts.js')
+
 @app.route('/')
 def index():
     indexContent=Markup('<a href="https://www.google.com">"Google"</a><br>\
