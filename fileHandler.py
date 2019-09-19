@@ -99,7 +99,7 @@ def CommListFileHandler():
    
      
     print("********************************CommListFileHandler() flag 1.2************************************************"    
-    request.data
+    request.form
     #print(type("request.files['Communities']",request.files[Communities]))
      """     
     print("********************************CommListFileHandler() flag 1.3************************************************"      
