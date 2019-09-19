@@ -1,6 +1,6 @@
 function ValidateForm(){
 n=1  
-if(n==1){  
+if(n==0){  
 //document.forms["CommForm"]["Communitites"].value;
 //console.log(console.log(document.forms["CommForm"]["Communitites"].value))  
 //console.log("ExternalJS is being read");
