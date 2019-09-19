@@ -94,7 +94,8 @@ def BidOpFileHandler():
 
 def CommListFileHandler():
     print("********************************CommListFileHandler() flag 1************************************************")
-    print(type("request.files[]",request.files))
+    request.files
+    """    
     print("********************************CommListFileHandler() flag 1.2************************************************"    
         
     #print(type("request.files['Communities']",request.files[Communities]))
@@ -107,7 +108,8 @@ def CommListFileHandler():
     print("********************************CommListFileHandler() flag 1.6************************************************"    
     print("request.files____",request.files['currentBing']) 
     print("********************************CommListFileHandler() flag 1.7************************************************"        
-    reqs=request.files,request.files['currentGoogle'],request.files['currentGoogle'],request.files['currentBing']    
+    reqs=request.files,request.files['currentGoogle'],request.files['currentGoogle'],request.files['currentBing']  
+    """
     return "empty"    
         
         
