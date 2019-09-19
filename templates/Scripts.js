@@ -7,6 +7,7 @@ if("k"){
 //alert(" ExternalJS is being read");  
 //alert(document.forms["CommForm"]["Communitites"].value)
 //console.log(document.forms["CommForm"]["Communitites"].value)
+alert("form halted")  
 return false;}  
 
 }
