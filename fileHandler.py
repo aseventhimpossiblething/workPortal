@@ -120,6 +120,8 @@ def CommListFileHandler():
     print("request.files____",request.files['currentBing']) 
     print("********************************CommListFileHandler() flag 1.7************************************************")        
     reqs=request.files,request.files['currentGoogle'],request.files['currentGoogle'],request.files['currentBing']  
+    print("********************************CommListFileHandler() flag 1.8************************************************")
+    print("type(request.files____)",type(request.files['currentBing']))   
     if n==3:
         return "stopped by if"
     
