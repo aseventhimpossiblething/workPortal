@@ -10,7 +10,7 @@ import xlrd
 import io
 
 def ValidatXLSXtime(arr):
-        print("Crtitical Value ",time.time()-os.path.getctime(recent))
+        print("Crtitical Value ",time.time()-os.path.getctime(arr))
         Error=arr+" Generated an error check that filetype is xlsx"
         Valid=arr+" is valid"
         if time.time()-os.path.getctime(recent)>600000:
