@@ -99,9 +99,9 @@ def CommListFileHandler():
    
      
     print("********************************CommListFileHandler() flag 1.2************************************************")
-    """    
+        
     n=3
-         
+    """     
     if request.files['Communities']:
         print("Stopped by if")
         return "stopped by if"
@@ -120,6 +120,8 @@ def CommListFileHandler():
     print("request.files____",request.files['currentBing']) 
     print("********************************CommListFileHandler() flag 1.7************************************************")        
     reqs=request.files,request.files['currentGoogle'],request.files['currentGoogle'],request.files['currentBing']  
+    if n==3:
+        return "stopped by if"
     
     return "empty passed through"    
         
