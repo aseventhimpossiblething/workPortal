@@ -94,13 +94,14 @@ def BidOpFileHandler():
 
 def CommListFileHandler():
     print("********************************CommListFileHandler() flag 1************************************************")
-    request.files
     print(request.files)
     print(type(request.files))
-    """    
+   
+     
     print("********************************CommListFileHandler() flag 1.2************************************************"    
-        
+    request.files[]   
     #print(type("request.files['Communities']",request.files[Communities]))
+     """     
     print("********************************CommListFileHandler() flag 1.3************************************************"      
     print("request.files____",request.files)
     print("********************************CommListFileHandler() flag 1.4************************************************"      
