@@ -16,7 +16,7 @@ def initialCommUpdatProcess():
   #print(os.listdir())
   os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
   print(os.listdir())
-  print(open(WorkingCommunities))
+  print(open('WorkingCommunities'))
   
   
   
