@@ -217,8 +217,8 @@ def CommListFileHandler():
     print("check after empty var")
     print("first if starting")    
     if emptyObj==str(request.files['currentBing']):
-    print("second if starting")            
-        return "Bing slot is empty"
+         return "Bing slot is empty"
+    print("Second if starting") 
     if emptyObj==str(request.files['currentGoogle']):
         return "Google slot is empty"
     if emptyObj==str(request.files['Communities']):
@@ -229,6 +229,7 @@ def CommListFileHandler():
      
     if request.files['Communities'].filename.find("xlsx")<1:
                 return "The Community Sheet is not XLSX file type";
+    print("second XLSX check")    
     if request.files['currentGoogle'].filename.find("xlsx")<1:
                 return "The Google Sheet is not XLSX file type";
     if request.files['currentBing'].filename.find("xlsx")<1:
