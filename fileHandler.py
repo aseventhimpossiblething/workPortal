@@ -248,16 +248,16 @@ def CommListFileHandler():
     print(newDate)    
        
         
-    request.files['Communities'].save(WorkingCommunities)
+    request.files['Communities'].save('WorkingCommunities')
     print("after first save")
     
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     print("os.getcwd()_____: ",os.getcwd())
-    request.files['currentGoogle'].save(WorkingGoogle)
+    request.files['currentGoogle'].save('WorkingGoogle')
     
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     print("os.getcwd()_____: ",os.getcwd())
-    request.files['currentBing'].save(WorkingBing)
+    request.files['currentBing'].save('WorkingBing')
 
   
                                                    
