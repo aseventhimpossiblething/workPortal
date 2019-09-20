@@ -76,7 +76,7 @@ def CommunitiesUploads():
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
     try: return "Try worked"
-    Except: return "Excepted"
+    Except: return Markup("Excepted")
     #"uh oh.. I bet the file was to large. check the file size and type If you still have trouble, Let me know when I come in ---Mike"
     
     #return fileHandler.uploadTryCatch()
