@@ -239,6 +239,7 @@ def CommListFileHandler():
        
     print("*********************************CommListFileHandler() flag 4***********************************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
+    print(DateTime.now())            
     print("os.getcwd()_____: ",os.getcwd())
     request.files['Communities'].save(Datetime.now())
     
