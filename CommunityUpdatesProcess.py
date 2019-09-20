@@ -12,6 +12,7 @@ import psycopg2
 def initialCommUpdatProcess():
   print(os.cwd())
   print(os.listdir())
+  #os.chdir()
 
 
 
