@@ -15,6 +15,7 @@ def initialCommUpdatProcess():
   print(os.getcwd())
   print(os.listdir())
   os.chdir('/app/Sheets/CommunityUpdates')
+  print(os.listdir())
 
 
 
