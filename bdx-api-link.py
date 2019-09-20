@@ -76,7 +76,7 @@ def CommunitiesUploads():
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
     try:
-        return "try"
+        return CommListFileHandler()
     except: 
         return Markup("Excepted")
     """    
