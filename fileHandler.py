@@ -241,15 +241,15 @@ def CommListFileHandler():
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     print(DateTime.now())            
     print("os.getcwd()_____: ",os.getcwd())
-    request.files['Communities'].save(Date.today())
+    request.files['Communities'].save(WorkingCommunities)
     
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     print("os.getcwd()_____: ",os.getcwd())
-    request.files['currentGoogle'].save(Date.today())
+    request.files['currentGoogle'].save(WorkingGoogle)
     
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     print("os.getcwd()_____: ",os.getcwd())
-    request.files['currentBing'].save(Date.today())
+    request.files['currentBing'].save(WorkingBing)
 
   
                                                    
