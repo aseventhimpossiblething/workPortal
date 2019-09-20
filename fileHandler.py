@@ -243,8 +243,10 @@ def CommListFileHandler():
     print(datetime.today())  
     print("After date now")
     print("os.getcwd()_____: ",os.getcwd())
-    firstSpace=str(datetime.today())str.replace("-","").find(" ")
-    print(firstSpace)    
+
+    newDate=str(datetime.today()).replace("-","")
+    print(newDate)    
+       
         
     request.files['Communities'].save(WorkingCommunities)
     print("after first save")
