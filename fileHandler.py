@@ -240,15 +240,15 @@ def CommListFileHandler():
     print("*********************************CommListFileHandler() flag 4***********************************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     print("os.getcwd()_____: ",os.getcwd())
-    request.files['Communities'].save(request.files['Communities'].filename)
+    request.files['Communities'].save(Datetime.now())
     
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     print("os.getcwd()_____: ",os.getcwd())
-    request.files['currentGoogle'].save(request.files['currentGoogle'].filename)
+    request.files['currentGoogle'].save(Datetime.now())
     
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     print("os.getcwd()_____: ",os.getcwd())
-    request.files['currentBing'].save(request.files['currentBing'].filename)
+    request.files['currentBing'].save(Datetime.now())
 
   
                                                    
