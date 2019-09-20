@@ -80,7 +80,7 @@ def CommunityFileHandling():
 """
 @app.route('/CommunityUpdatesOutPut',methods=['POST','GET'])
 def CommunitiesFormHandler():
-    return fileHandler.CommListFileHandler()
+    return fileHandler.uploadTryCatch()
 """
     
     
