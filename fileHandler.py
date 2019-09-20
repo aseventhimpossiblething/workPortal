@@ -212,14 +212,18 @@ def CommListFileHandler():
         print("<class 'int'>==type(3)")
         
     """
-        
-    emptyObj="<FileStorage: '' ('application/octet-stream')>"    
+    print("check before empty var")    
+    emptyObj="<FileStorage: '' ('application/octet-stream')>" 
+    print("check after empty var")
+    print("first if starting")    
     if emptyObj==str(request.files['currentBing']):
+    print("second if starting")            
         return "Bing slot is empty"
     if emptyObj==str(request.files['currentGoogle']):
         return "Google slot is empty"
     if emptyObj==str(request.files['Communities']):
         return "Active Community slot is empty"
+    print("last if of empty checks starting ifs of extention check")            
    
                 
      
