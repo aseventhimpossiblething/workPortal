@@ -76,7 +76,7 @@ def CommunitiesUploads():
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
     try:
-        return render_template('CommunitiesForm.html',pagetitle="Community Updates",CommonTag=CommonTagAll)
+        return "try"
     except: 
         return Markup("Excepted")
     """    
