@@ -239,9 +239,12 @@ def CommListFileHandler():
        
     print("*********************************CommListFileHandler() flag 4***********************************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-    print(DateTime.now())            
+    print("before date.now()")
+    print(DateTime.now())  
+    print("After date now")
     print("os.getcwd()_____: ",os.getcwd())
     request.files['Communities'].save(WorkingCommunities)
+    print("after first save")
     
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     print("os.getcwd()_____: ",os.getcwd())
