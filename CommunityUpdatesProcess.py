@@ -13,7 +13,7 @@ def initialCommUpdatProcess():
   
   os.chdir('/app/Sheets')
   print(os.getcwd())
-  print(listdir())
+  print(os.listdir())
 
 
 
