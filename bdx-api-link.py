@@ -17,6 +17,7 @@ from sklearn.ensemble import RandomForestRegressor
 
 
 app = Flask(__name__)   # Flask constructor
+app.config['MAX_CONTENT_LENGTH'] = 4 * 1024 * 1024
 
 
 
