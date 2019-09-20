@@ -321,7 +321,7 @@ def CommListFileHandler():
 
 def uploadTryCatch():
         try:
-                CommListFileHandler()
+                return "Try worked"
                 
                 
         except: 
