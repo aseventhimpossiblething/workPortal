@@ -12,7 +12,8 @@ import psycopg2
 def initialCommUpdatProcess():
   print(os.getcwd())
   print(os.listdir())
-  #os.chdir()
+  os.chdir(/app/Sheets)
+  print(os.getcwd())
 
 
 
