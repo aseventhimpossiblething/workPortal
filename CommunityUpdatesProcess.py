@@ -18,7 +18,7 @@ def initialCommUpdatProcess():
   os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
   WorkingCommunities1=open('WorkingCommunities')
   #WorkingCommunities2=open('WorkingCommunities.files')
-  pandas.read_excel(WorkingCommunities1)
+  pandas.read_excel('WorkingCommunities')
   
   
   
