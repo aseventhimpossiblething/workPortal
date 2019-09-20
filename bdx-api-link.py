@@ -79,11 +79,11 @@ def CommunityFileHandling():
         return fileHandler.CommListFileHandler()
     #except: 
         #return Markup("Excepted")
-    """    
+    #"""    
     #"uh oh.. I bet the file was to large. check the file size and type If you still have trouble, Let me know when I come in ---Mike"
     
     #return fileHandler.uploadTryCatch()
-    """
+    #"""
     
     
     
