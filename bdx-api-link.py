@@ -75,7 +75,7 @@ def CommunitiesUploads():
     return render_template('CommunitiesForm.html',pagetitle="Community Updates",CommonTag=CommonTagAll)
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
-    return fileHandler..uploadTryCatch()
+    return fileHandler.uploadTryCatch()
     
 """
 @app.route('/CommunityUpdatesOutPut',methods=['POST','GET'])
