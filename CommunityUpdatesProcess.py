@@ -11,11 +11,14 @@ import psycopg2
 
 def initialCommUpdatProcess():
   
-  os.chdir('/app/Sheets')
-  print(os.getcwd())
-  print(os.listdir())
+  #os.chdir('/app/Sheets')
+  #print(os.getcwd())
+  #print(os.listdir())
   os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
   print(os.listdir())
+  print(open(WorkingCommunities))
+  
+  
   
 
 
