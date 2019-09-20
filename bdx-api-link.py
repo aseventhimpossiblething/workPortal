@@ -1,4 +1,4 @@
-
+import CommunityUpdatesProcess
 import glob
 import numpy
 import scipy
