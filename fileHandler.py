@@ -281,7 +281,7 @@ def CommListFileHandler():
     
     
     
-    print(date.today())
+    #print(date.today())
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
     #print("recent____",recent)
