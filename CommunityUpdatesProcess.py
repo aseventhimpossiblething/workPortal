@@ -17,13 +17,13 @@ def initialCommUpdatProcess():
   print("***************************************************")
   os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
   WorkingCommunities1=open('WorkingCommunities')
-  WorkingCommunities2=open('WorkingCommunities.files')
+  #WorkingCommunities2=open('WorkingCommunities.files')
   
   
   print(os.listdir())
   print(open('WorkingCommunities'))
   print(WorkingCommunities1)
-  print(WorkingCommunities2)
+  #print(WorkingCommunities2)
   
   
   
