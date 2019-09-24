@@ -13,16 +13,16 @@ def initialCommUpdatProcess():
   print("**********************initialCommUpdatProcess()*****************************")
   os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
   WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
-  print(WorkingCommunities)
+  #print(WorkingCommunities)
   WorkingCommunities.columns=WorkingCommunities.iloc[0]
-  print(WorkingCommunities)
+  #print(WorkingCommunities)
   WorkingCommunities=WorkingCommunities.drop([4])
-  print(WorkingCommunities)
-  print(list(WorkingCommunities.head()))
+  #print(WorkingCommunities)
+  #print(list(WorkingCommunities.head()))
   #print(pandas.read_excel('WorkingCommunities').drop([0,1,2]))
   #pandas.DataFrame(pandas.read_excel('WorkingCommunities'),columns=['Builder Name','Brand Name','Division Id','Division Name','Community Id','Community Name','City','State','Zip','Market ID','Market Bame'])
-  pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name','Community Id','Community Name','City','State','Zip','Market ID','Market Bame'])
- 
+  WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name','Community Id','Community Name','City','State','Zip','Market ID','Market Bame'])
+  print(WorkingCommunities)
    
    
 
