@@ -156,7 +156,7 @@ def CommListFileHandler():
            
     CommunityUpdatesProcess.initialCommUpdatProcess() 
     print(CommunityUpdatesProcess.initialCommUpdatProcess()[1])    
-    HTMLoutput=Markup(CommunityUpdatesProcess.initialCommUpdatProcess()[1]) 
+    HTMLoutput=Markup(CommunityUpdatesProcess.initialCommUpdatProcess()) 
     
     toscrn = HTMLoutput
         
