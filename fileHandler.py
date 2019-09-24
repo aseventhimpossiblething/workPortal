@@ -95,79 +95,27 @@ def BidOpFileHandler():
 
 def CommListFileHandler():
             
+          
+         
+    reqs=request.files,request.files['currentGoogle'],request.files['currentGoogle'],request.files['currentBing']  
+     
     
    
-     
-    print("********************************CommListFileHandler() flag 1.2************************************************")
-        
-    #n=3
-    """     
-    if request.files['Communities']:
-        print("Stopped by if")
-        return "stopped by if"
-    """    
-        
-    #request.form
-    #print(type("request.files['Communities']",request.files[Communities]))
-        
-    print("********************************CommListFileHandler() flag 1.3************************************************")      
-    print("request.files____",request.files)
-    print("********************************CommListFileHandler() flag 1.4************************************************")      
-    print("request.files____",request.files['Communities'])
-    print("********************************CommListFileHandler() flag 1.5************************************************")       
-    print("request.files____",request.files['currentGoogle'])
-    print("********************************CommListFileHandler() flag 1.6************************************************")    
-    print("request.files____",request.files['currentBing']) 
-    print("********************************CommListFileHandler() flag 1.7************************************************")        
-    reqs=request.files,request.files['currentGoogle'],request.files['currentGoogle'],request.files['currentBing']  
-    print("********************************CommListFileHandler() flag 1.8************************************************")
-    print("type(request.files____)",type(request.files['currentBing']))
-    print("Make string")
-    print(str(request.files['currentBing']))      
-    print(type(str(request.files['currentBing'])))
-    print("<FileStorage: '' ('application/octet-stream')>")
-    """    
-    emptyObj="<FileStorage: '' ('application/octet-stream')>"    
-    if emptyObj==str(request.files['currentBing']):
-        return "Bing slot is empty"
-    if emptyObj==str(request.files['currentGoogle']):
-        return "Google slot is empty"
-    if emptyObj==str(request.files['Communities']):
-        return "Active Community slot is empty"
-    """     
-        
-    
-    #return "empty passed through"    
-        
-        
-    
-    #print("********************************CommListFileHandler() flag 2************************************************")
-
-    #print("request.files['Communities']______:    ",request.files['Communities'])
-    #print("request.files['currentGoogle']______:    ",request.files['currentGoogle'])
-    #print("request.files['currentBing']______:    ",request.files['currentBing'])
-
-    #print("********************************CommListFileHandler() flag 3*************************************************")
-
- 
-    print("check before empty var")    
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
-    print("check after empty var")
-    print("first if starting")    
+   
     if emptyObj==str(request.files['currentBing']):
          return "Bing slot is empty"
-    print("Second if starting") 
+    
     if emptyObj==str(request.files['currentGoogle']):
         return "Google slot is empty"
     if emptyObj==str(request.files['Communities']):
         return "Active Community slot is empty"
-    print("last if of empty checks starting ifs of extention check")            
    
                 
      
     if request.files['Communities'].filename.find("xlsx")<1:
                 return "The Community Sheet is not XLSX file type";
-    print("second XLSX check")    
+    
     if request.files['currentGoogle'].filename.find("xlsx")<1:
                 return "The Google Sheet is not XLSX file type";
     if request.files['currentBing'].filename.find("xlsx")<1:
@@ -186,11 +134,9 @@ def CommListFileHandler():
     print("after first save")
     
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-    print("os.getcwd()_____: ",os.getcwd())
     request.files['currentGoogle'].save('WorkingGoogle')
     
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
-    print("os.getcwd()_____: ",os.getcwd())
     request.files['currentBing'].save('WorkingBing')
                             
     
