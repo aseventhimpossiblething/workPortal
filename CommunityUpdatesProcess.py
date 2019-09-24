@@ -14,6 +14,8 @@ def initialCommUpdatProcess():
   os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
   WorkingCommunities1=open('WorkingCommunities')
   print(pandas.read_excel('WorkingCommunities'))
+  print(pandas.read_excel('WorkingCommunities').drop([1:5]))
+  
    
   print(pandas.DataFrame(pandas.read_excel('WorkingCommunities'),columns=['Builder Name','Community Id']))
   print(pandas.DataFrame(pandas.read_excel('WorkingCommunities'),columns=['Builder Name','Community Id','Bacon Shreds']))
