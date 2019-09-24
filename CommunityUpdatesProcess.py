@@ -10,15 +10,12 @@ import psycopg2
 
 
 def initialCommUpdatProcess():
-  
-  #os.chdir('/app/Sheets')
-  #print(os.getcwd())
-  #print(os.listdir())
   print("***************************************************")
   os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
   WorkingCommunities1=open('WorkingCommunities')
-  #WorkingCommunities2=open('WorkingCommunities.files')
   print(pandas.read_excel('WorkingCommunities'))
+   
+  pandas.dataframe(pandas.read_excel('WorkingCommunities'),columns=['Builder Name','Community Id'])
   
   
   
