@@ -76,11 +76,14 @@ def CommunitiesUploads():
     return render_template('CommunitiesForm.html',pagetitle="Community Updates",CommonTag=CommonTagAll)
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
+    return fileHandler.CommListFileHandler()
+    """
     try:
         return fileHandler.CommListFileHandler()
    
     except: 
         return Markup("Files Prohobited")
+    """    
    
 
 
