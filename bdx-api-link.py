@@ -80,7 +80,7 @@ def CommunityFileHandling():
         return fileHandler.CommListFileHandler()
    
     except: 
-        return Markup("Excepted")
+        return Markup("Files Prohobited")
    
 
 
