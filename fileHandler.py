@@ -175,7 +175,7 @@ def CommListFileHandler():
   
       
        
-    #print("*********************************CommListFileHandler() flag 4***********************************************")
+   
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
    
     newDate=str(datetime.today()).replace("-","")
@@ -192,50 +192,28 @@ def CommListFileHandler():
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     print("os.getcwd()_____: ",os.getcwd())
     request.files['currentBing'].save('WorkingBing')
-
-  
-                                                   
-    
-    os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-    
-   
-    os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-  
-    
-   
-    os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
+                            
     
     
-    
-
-    
+        
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
     ValidatXLSXtime(recent)
-    
-    
-    
+        
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
     ValidatXLSXtime(recent)
-    
-    
+        
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
     ValidatXLSXtime(recent)
-    
-
-
-   
-   
-       
+           
     CommunityUpdatesProcess.initialCommUpdatProcess() 
     print(CommunityUpdatesProcess.initialCommUpdatProcess())    
     HTMLoutput=Markup(CommunityUpdatesProcess.initialCommUpdatProcess()) 
     
     toscrn = HTMLoutput
-    
-    
+        
     return toscrn
 
 
