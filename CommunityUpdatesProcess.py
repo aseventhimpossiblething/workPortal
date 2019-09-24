@@ -25,7 +25,7 @@ def initialCommUpdatProcess():
     'Community Id','Community Name','City','State','Zip','Market ID','Market Name'])
   
   
-  return list(WorkingCommunities.head(50))
+  return list(WorkingCommunities)
 
     
   
