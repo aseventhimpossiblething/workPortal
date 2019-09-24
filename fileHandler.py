@@ -183,11 +183,7 @@ def CommListFileHandler():
        
     #print("*********************************CommListFileHandler() flag 4***********************************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-    #print("before datetime.today()")
-    #print(datetime.today())  
-    #print("After date now")
-    #print("os.getcwd()_____: ",os.getcwd())
-
+   
     newDate=str(datetime.today()).replace("-","")
     #print(newDate)    
        
@@ -205,71 +201,46 @@ def CommListFileHandler():
 
   
                                                    
-    #print("********************************CommListFileHandler() flag 5************************************************")
-    os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-    print("os.listdir()____:",os.listdir())
-    print(" ")
-    os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-    print("os.listdir()____:",os.listdir())
     
-    print(" ")
+    os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
+    
+   
+    os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
+  
+    
+   
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
-    print("os.listdir()____:",os.listdir())
+    
     
     
 
-    #print("********************************CommListFileHandler() flag 6************************************************")
-           
-        
-        
     
-    
-    
-    #print(date.today())
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
-    #print("recent____",recent)
-    #print("os.listdir()____:",os.listdir())
-    #print(os.path.getctime(recent))
     ValidatXLSXtime(recent)
     
-    #print(" ")
+    
     
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
-    #print("recent____",recent)
-    #print("os.listdir()____:",os.listdir())
-    #print(os.path.getctime(recent))
     ValidatXLSXtime(recent)
-    #print(" ")
+    
     
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
-    #print("recent____",recent)
-    #print("os.listdir()____:",os.listdir())
-    #print(os.path.getctime(recent))
     ValidatXLSXtime(recent)
-    #print(" ")
-    #print(datetime.now()-os.path.getctime(recent))
-    #print("time.ctime(datetime.now())",os.path.getctime(recent))
-    #print(datetime.fromtimestamp(os.path.getctime(recent)).strftime('%c'))
-    #print(time.time())
-    #print(time.time()-os.path.getctime(recent))
-    #print("Validate Below")
-    #ValidatXLSXtime(recent)
+    
 
 
    
-    #print("********************************CommListFileHandler() flag 11************************************************")
+   
        
     CommunityUpdatesProcess.initialCommUpdatProcess() 
     print(CommunityUpdatesProcess.initialCommUpdatProcess())    
-    HTMLoutput=Markup('<p>Structured HTML</p>')
+    HTMLoutput=CommunityUpdatesProcess.initialCommUpdatProcess() 
     
     toscrn = HTMLoutput
-    #print("**************************CommListFileHandler() flag 17******************************************************")
     
-
     
     return toscrn
 
