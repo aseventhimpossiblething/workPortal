@@ -78,50 +78,10 @@ def CommunitiesUploads():
 def CommunityFileHandling():
     try:
         return fileHandler.CommListFileHandler()
-    #return fileHandler.CommListFileHandler()
+   
     except: 
         return Markup("Excepted")
-    #"""    
-    #"uh oh.. I bet the file was to large. check the file size and type If you still have trouble, Let me know when I come in ---Mike"
-    
-    #return fileHandler.uploadTryCatch()
-    #"""
-    
-    
-    
    
-"""
-@app.route('/CommunityUpdatesOutPut',methods=['POST','GET'])
-def CommunitiesFormHandler():
-    return fileHandler.uploadTryCatch()
-"""
-    
-    
-
-
-
-
-
-"""
-
-
-@app.route('/1')
-def cssPulling():
-    return render_template('DefaultTemplate.html')
-
-@app.route('/2')
-def BidOpInput():
-    return render_template('BidOpInput.html') 
-
-@app.route('/3')
-def BidOpOutPut():
-    return render_template('BidOutput.html',MostRecent="Current Bid op static file",PoutPut=BidOpAssist.BidOpAssist())
- 
-
-@app.route('/4')
-def CommunityUpdate():
-    return render_template('CommunityUpdate.html')
-"""   
 
 
 
