@@ -321,7 +321,7 @@ def CommListFileHandler():
   
     HTMLoutput=Markup('<p>Structured HTML</p>')
     
-    toscrn = CommunityUpdatesProcess.initialCommUpdatProcess()
+    toscrn = HTMLoutput
     print("**************************CommListFileHandler() flag 17******************************************************")
     
 
