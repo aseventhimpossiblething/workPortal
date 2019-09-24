@@ -18,7 +18,7 @@ def initialCommUpdatProcess():
   print(WorkingCommunities)
   WorkingCommunities=WorkingCommunities.drop([4])
   print(WorkingCommunities)
-  print(WorkingCommunities.head())
+  print(list(WorkingCommunities.head()))
   #print(pandas.read_excel('WorkingCommunities').drop([0,1,2]))
   #pandas.DataFrame(pandas.read_excel('WorkingCommunities'),columns=['Builder Name','Brand Name','Division Id','Division Name','Community Id','Community Name','City','State','Zip','Market ID','Market Bame'])
   pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name','Community Id','Community Name','City','State','Zip','Market ID','Market Bame'])
