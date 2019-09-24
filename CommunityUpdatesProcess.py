@@ -23,9 +23,9 @@ def initialCommUpdatProcess():
   #pandas.DataFrame(pandas.read_excel('WorkingCommunities'),columns=['Builder Name','Brand Name','Division Id','Division Name','Community Id','Community Name','City','State','Zip','Market ID','Market Bame'])
   WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
     'Community Id','Community Name','City','State','Zip','Market ID','Market Name'])
-  WorkingCommunities[0]
+  WorkingCommunities[4]
   
-  return WorkingCommunities[0]
+  return WorkingCommunities
 
     
   
