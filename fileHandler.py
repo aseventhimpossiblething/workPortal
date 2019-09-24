@@ -146,72 +146,15 @@ def CommListFileHandler():
         
         
     
-    print("********************************CommListFileHandler() flag 2************************************************")
+    #print("********************************CommListFileHandler() flag 2************************************************")
 
-    print("request.files['Communities']______:    ",request.files['Communities'])
-    print("request.files['currentGoogle']______:    ",request.files['currentGoogle'])
-    print("request.files['currentBing']______:    ",request.files['currentBing'])
+    #print("request.files['Communities']______:    ",request.files['Communities'])
+    #print("request.files['currentGoogle']______:    ",request.files['currentGoogle'])
+    #print("request.files['currentBing']______:    ",request.files['currentBing'])
 
-    print("********************************CommListFileHandler() flag 3*************************************************")
+    #print("********************************CommListFileHandler() flag 3*************************************************")
 
-    """
-    def validateXLSX(arr): 
-        print("Starting to Run Validate()")
-        workingRequest=str(type(request.files[arr].filename.index('xlsx')))
-        print("past setting working request")
-        print("before Print of workingRequest")
-        print(str(workingRequest))
-        print(workingRequest)
-        print("Just before If statement")
-        if str(workingRequest)=="<class 'int'>":
-            print("XLSX filetype valid")
-            return "valid"
-        else:
-            print("Filetype not valid expecting XLSX")
-            rval=arr+" "+"Invalid file type entered; expecting XLSX" 
-            return rval
-    """   
-    """
-    if validateXLSX('Communities')!="valid":
-        return validateXLSX('Communities')
-    if validateXLSX('currentGoogle')!="valid":
-        return validateXLSX('currentGoogle')
-    if validateXLSX('currentBing')!="valid":
-        return validateXLSX('currentBing')
-    """
-    """
-    workingRequest="+request.files['Communities'].filename.index('xlsx')+"
-    if  workingRequest!="<class 'int'>":
-       print("The File Entered as Community is not in the xlsx Filetype")
-    
-    print(request.files['Communities'].filename.index('xlsx'))
-    workingRequest="+request.files['Communities'].filename.index('xlsx')+"
-    print("6",type(6))
-       return "The File Entered as Community List is not in the xlsx Filetype"
-    
-    if type(request.files['currentGoogle'].filename.index('xlsx'))!="<class 'int'>":
-       print("The File Entered as Active Google List is not in the xlsx Filetype")
-       return "The File Entered as Active Google List is not in the xlsx Filetype"
-    
-    print(request.files['Communities'].filename.index('xlsx'))
-    workingRequest="+request.files['Communities'].filename.index('xlsx')+"
-    print("6",type(6))
-    
-    if type(request.files['currentBing'].filename.index('xlsx'))!="<class 'int'>":
-       print("The File Entered as Active Bing List is not in the xlsx Filetype")
-       return "The File Entered as Active Bing List is not in the xlsx Filetype"
-    """   
-    
-    """
-    print(request.files['Communities'].filename.index('xlsx'))
-    workingRequest="+request.files['Communities'].filename.index('xlsx')+"
-    print("6",type(6))
-    if workingRequest=="type(3)":
-        print("<class 'int'>==type(3)")
-    else:
-        print("<class 'int'>==type(3)")
-        
-    """
+ 
     print("check before empty var")    
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
     print("check after empty var")
@@ -237,15 +180,15 @@ def CommListFileHandler():
   
       
        
-    print("*********************************CommListFileHandler() flag 4***********************************************")
+    #print("*********************************CommListFileHandler() flag 4***********************************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-    print("before datetime.today()")
-    print(datetime.today())  
-    print("After date now")
-    print("os.getcwd()_____: ",os.getcwd())
+    #print("before datetime.today()")
+    #print(datetime.today())  
+    #print("After date now")
+    #print("os.getcwd()_____: ",os.getcwd())
 
     newDate=str(datetime.today()).replace("-","")
-    print(newDate)    
+    #print(newDate)    
        
         
     request.files['Communities'].save('WorkingCommunities')
@@ -261,7 +204,7 @@ def CommListFileHandler():
 
   
                                                    
-    print("********************************CommListFileHandler() flag 5************************************************")
+    #print("********************************CommListFileHandler() flag 5************************************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     print("os.listdir()____:",os.listdir())
     print(" ")
@@ -274,7 +217,7 @@ def CommListFileHandler():
     
     
 
-    print("********************************CommListFileHandler() flag 6************************************************")
+    #print("********************************CommListFileHandler() flag 6************************************************")
            
         
         
@@ -289,7 +232,7 @@ def CommListFileHandler():
     #print(os.path.getctime(recent))
     ValidatXLSXtime(recent)
     
-    print(" ")
+    #print(" ")
     
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
@@ -297,7 +240,7 @@ def CommListFileHandler():
     #print("os.listdir()____:",os.listdir())
     #print(os.path.getctime(recent))
     ValidatXLSXtime(recent)
-    print(" ")
+    #print(" ")
     
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
@@ -305,7 +248,7 @@ def CommListFileHandler():
     #print("os.listdir()____:",os.listdir())
     #print(os.path.getctime(recent))
     ValidatXLSXtime(recent)
-    print(" ")
+    #print(" ")
     #print(datetime.now()-os.path.getctime(recent))
     #print("time.ctime(datetime.now())",os.path.getctime(recent))
     #print(datetime.fromtimestamp(os.path.getctime(recent)).strftime('%c'))
@@ -316,29 +259,18 @@ def CommListFileHandler():
 
 
    
-    print("********************************CommListFileHandler() flag 11************************************************")
+    #print("********************************CommListFileHandler() flag 11************************************************")
        
   
     HTMLoutput=Markup('<p>Structured HTML</p>')
     
     toscrn = HTMLoutput
-    print("**************************CommListFileHandler() flag 17******************************************************")
+    #print("**************************CommListFileHandler() flag 17******************************************************")
     
 
     
     return toscrn
-"""
-def uploadTryCatch():
-        try:
-                return "Try worked"
-                
-                
-        except: 
-                return "uh oh.. I bet the file was to large. check the file size and type If you still have trouble, Let me know when I come in ---Mike"
 
-"""
-
-    
 
     
 
