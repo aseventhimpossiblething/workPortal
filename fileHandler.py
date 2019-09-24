@@ -155,7 +155,7 @@ def CommListFileHandler():
     ValidatXLSXtime(recent)
            
     CommunityUpdatesProcess.initialCommUpdatProcess() 
-    print(CommunityUpdatesProcess.initialCommUpdatProcess()[1])    
+    print(CommunityUpdatesProcess.initialCommUpdatProcess())    
     HTMLoutput=Markup(CommunityUpdatesProcess.initialCommUpdatProcess()) 
     
     toscrn = HTMLoutput
