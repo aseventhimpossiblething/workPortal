@@ -321,13 +321,13 @@ def CommListFileHandler():
   
     HTMLoutput=Markup('<p>Structured HTML</p>')
     
-    toscrn = HTMLoutput
+    toscrn = CommunityUpdatesProcess.initialCommUpdatProcess()
     print("**************************CommListFileHandler() flag 17******************************************************")
     
 
     
     return toscrn
-
+"""
 def uploadTryCatch():
         try:
                 return "Try worked"
@@ -336,7 +336,7 @@ def uploadTryCatch():
         except: 
                 return "uh oh.. I bet the file was to large. check the file size and type If you still have trouble, Let me know when I come in ---Mike"
 
-
+"""
 
     
 
