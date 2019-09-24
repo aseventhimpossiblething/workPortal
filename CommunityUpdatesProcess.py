@@ -15,7 +15,8 @@ def initialCommUpdatProcess():
   #WorkingCommunities=open('WorkingCommunities')
   WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
   #print(pandas.read_excel('WorkingCommunities').drop([0,1,2]))
-  
+  pandas.DataFrame(pandas.read_excel('WorkingCommunities'),columns=['Builder Name','Brand Name','Division Id','Division Name','Community Id','Community Name','City','State','Zip','Market ID','Market Bame'])
+ 
    
   print(pandas.DataFrame(pandas.read_excel('WorkingCommunities'),columns=['Builder Name','Brand Name','Division Id','Division Name','Community Id','Community Name','City','State','Zip','Market ID','Market Bame']))
   #print(pandas.DataFrame(pandas.read_excel('WorkingCommunities'),columns=['Builder Name','Community Id','Bacon Shreds']))
