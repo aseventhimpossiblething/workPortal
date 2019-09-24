@@ -12,13 +12,12 @@ import psycopg2
 def initialCommUpdatProcess():
   print("**********************initialCommUpdatProcess()*****************************")
   os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-  WorkingCommunities1=open('WorkingCommunities')
-  print(pandas.read_excel('WorkingCommunities'))
-  print(pandas.read_excel('WorkingCommunities').drop([0,1,2,3]))
+  #WorkingCommunities=open('WorkingCommunities')
+  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
   #print(pandas.read_excel('WorkingCommunities').drop([0,1,2]))
   
    
-  #print(pandas.DataFrame(pandas.read_excel('WorkingCommunities'),columns=['Builder Name','Community Id']))
+  print(pandas.DataFrame(pandas.read_excel('WorkingCommunities'),columns=['Builder Name','Brand Name','Division Id','Division Name','Community Id','Community Name','City','State','Zip','Market ID','Market Bame']))
   #print(pandas.DataFrame(pandas.read_excel('WorkingCommunities'),columns=['Builder Name','Community Id','Bacon Shreds']))
   
   
