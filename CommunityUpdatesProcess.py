@@ -15,7 +15,7 @@ def initialCommUpdatProcess():
   WorkingCommunities1=open('WorkingCommunities')
   print(pandas.read_excel('WorkingCommunities'))
    
-  print(pandas.dataframe(pandas.read_excel('WorkingCommunities'),columns=['Builder Name','Community Id']))
+  print(pandas.DataFrame(pandas.read_excel('WorkingCommunities'),columns=['Builder Name','Community Id']))
   
   
   
