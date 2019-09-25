@@ -23,8 +23,11 @@ def initialCommUpdatProcess():
   #pandas.DataFrame(pandas.read_excel('WorkingCommunities'),columns=['Builder Name','Brand Name','Division Id','Division Name','Community Id','Community Name','City','State','Zip','Market ID','Market Bame'])
   WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
     'Community Id','Community Name','City','State','Zip','Market ID','Market Name'])
+  print("**********************WorkingCommunities.head()*****************************")
   print(WorkingCommunities.head())
+  print("**********************list(WorkingCommunities)*****************************")
   print(list(WorkingCommunities))
+  print("**********************list(WorkingCommunities.head())*****************************")
   print(list(WorkingCommunities.head()))
   
   return "finished"
