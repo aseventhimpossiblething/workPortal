@@ -50,7 +50,7 @@ def initialCommUpdatProcess():
   global CommunityRow4
   CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
   
-  #begin googl
+  #begin google
   
   os.chdir('/app/Sheets/CommunityUpdates/currentGoogle')
   WorkingGoogle=pandas.read_excel('WorkingGoogle').drop([0,1,2,3])
