@@ -16,7 +16,7 @@ CommunityRow3=0
 CommunityRow4=0
 
 
-CommunityData[
+CommunityData=[
 CommunityColTitles,
 CommunityRow1,
 CommunityRow2,
