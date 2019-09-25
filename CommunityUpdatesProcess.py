@@ -42,7 +42,7 @@ def initialCommUpdatProcess():
   print("**********************9 WorkingCommunities.iloc(5).values*****************************")
   print(WorkingCommunities.iloc[5].values)
   print("**********************10 WorkingCommunities[10]*****************************")
-  print(WorkingCommunities[10])
+  print(WorkingCommunities['10'])
   
   #print("**********************WorkingCommunities.iloc(5).transpose()*****************************")
   #print(WorkingCommunities.iloc[5].transpose())
