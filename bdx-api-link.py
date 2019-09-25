@@ -67,7 +67,7 @@ def BidOpInput():
 def BidOPUpload():
     return fileHandler.BidOpFileHandler()
 
-@app.route('/CommunityDataFrame.html')
+@app.route('/CommunityDataFrame')
 def CommunityDataFrame():
     return render_template('CommunityDataframe.html',pagetitle='Community',CommonTag=CommonTagAll)
 
