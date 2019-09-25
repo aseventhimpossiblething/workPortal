@@ -27,7 +27,7 @@ def initialCommUpdatProcess():
   print(list(WorkingCommunities))
   print(list(WorkingCommunities.head()))
   
-  #return WorkingCommunities
+  return WorkingCommunities.head()
 
     
   
