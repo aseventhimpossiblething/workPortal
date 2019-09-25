@@ -61,11 +61,11 @@ def initialCommUpdatProcess():
   global CommunityRow1
   CommunityRow1=str(WorkingCommunities.iloc[5].values)
   global CommunityRow2
-  CommunityRow2=WorkingCommunities.iloc[6].values
+  CommunityRow2=str(WorkingCommunities.iloc[6].values)
   global CommunityRow3
-  CommunityRow3=WorkingCommunities.iloc[7].values
+  CommunityRow3=str(WorkingCommunities.iloc[7].values)
   global CommunityRow4
-  CommunityRow4=WorkingCommunities.iloc[8].values
+  CommunityRow4=str(WorkingCommunities.iloc[8].values)
 
 
   """
