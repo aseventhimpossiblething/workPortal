@@ -16,15 +16,6 @@ CommunityRow3=0
 CommunityRow4=0
 
 
-CommunityData=[
-CommunityColTitles,
-CommunityRow1,
-CommunityRow2,
-CommunityRow3,
-CommunityRow4
-]
-
-
 
 def initialCommUpdatProcess():
   print("**********************initialCommUpdatProcess()*****************************")
