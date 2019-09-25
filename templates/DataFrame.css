@@ -1,84 +1,50 @@
-.col{position:static;
+.col{
+    position:static;
 }
+
 
 .topOfForm{static:center;}
 
-
-
 #form {
-
 static:center;
-
 margin-left:20px;    
 
-
-
 }
-
-
 
 #input[type='file']
-
 {
-
     Border-radius:15px
-
 }
-
-
-
-
 
 
 
 a {color:white;}
 
-
-
 .littletop {
-
     color:white;
-
     Absolute:center;
-
     min-height:5px;
-
     background-color:#00aaff;
-
     width:auto;
-
     margin-bottom:30px;
-
     padding-top:10px
-
     padding-bottom:10px    
-
    }
 
 
 
-
-
-
-
 .containerMain
-
 {   color:white;
-
     background-color:#00aaff;
-
     float:center;
-
     width:500px;
-
     height:500px;
-
     margin:auto;
-
     padding-top:10px
-
    
-
 }
-
 body {background-color:#ffffff;}
+
+
+
+
