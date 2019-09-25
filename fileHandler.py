@@ -136,8 +136,8 @@ def CommListFileHandler():
     ValidatXLSXtime(recent)
            
     CommunityUpdatesProcess.initialCommUpdatProcess() 
-    print(CommunityUpdatesProcess.initialCommUpdatProcess())    
-    HTMLoutput=Markup(CommunityUpdatesProcess.CommunityRow1)
+    #print(CommunityUpdatesProcess.initialCommUpdatProcess())    
+    HTMLoutput=<p>CommunityUpdatesProcess.initialCommUpdatProcess()</p><p>CommunityUpdatesProcess.CommunityRow1</p>
     print(CommunityUpdatesProcess.CommunityColTitles)
     print(CommunityUpdatesProcess.CommunityRow1) 
     print(CommunityUpdatesProcess.CommunityRow2)
