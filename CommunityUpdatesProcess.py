@@ -59,7 +59,7 @@ def initialCommUpdatProcess():
   global CommunityRow2=WorkingCommunities.iloc[6].values
   global CommunityRow4=WorkingCommunities.iloc[7].values
   """
-  global CommunityColTitles=list(WorkingCommunities)
+  global CommunityColTitles=28
   global CommunityRow1=27
   global CommunityRow2=26
   global CommunityRow4=25
