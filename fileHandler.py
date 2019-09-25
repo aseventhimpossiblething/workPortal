@@ -112,8 +112,7 @@ def CommListFileHandler():
    
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
    
-    #newDate=str(datetime.today()).replace("-","")
-        
+            
     request.files['Communities'].save('WorkingCommunities')
     print("after first save")
     
