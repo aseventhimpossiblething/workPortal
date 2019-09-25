@@ -67,8 +67,8 @@ def initialCommUpdatProcess():
   
   print(CommunityColTitles)                      
   print(WorkingCommunities.iloc[5].values)
-  #print(WorkingCommunities.iloc[6].values)
-  #print(WorkingCommunities.iloc[7].values)                      
+  print(WorkingCommunities.iloc[6].values)
+  print(WorkingCommunities.iloc[7].values)                      
                         
 
   
