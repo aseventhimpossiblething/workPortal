@@ -51,7 +51,7 @@ def initialCommUpdatProcess():
   CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
   
   #begin google
-  
+  """
   os.chdir('/app/Sheets/CommunityUpdates/currentGoogle')
   WorkingGoogle=pandas.read_excel('WorkingGoogle').drop([0,1,2,3])
   WorkingGoogle.columns=WorkingGoogle.iloc[0]
@@ -71,7 +71,7 @@ def initialCommUpdatProcess():
   GoogleRow3=str(WorkingGoogle.iloc[7].values)+" "+str(len(WorkingGoogle.iloc[7]))
   global GoogleRow4
   GoogleRow4=str(WorkingGoogle.iloc[8].values)+" "+str(len(WorkingGoogle.iloc[8]))
-
+  """
 
 
   return "finished"
