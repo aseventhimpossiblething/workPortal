@@ -86,7 +86,7 @@ def initialCommUpdatProcess():
   """
   return "finished"
 
-
+"""
 def CommunityTitles():
   print("Here are the titles")
   global CommunityColTitles
@@ -116,7 +116,7 @@ def CommunityRow4():
   global CommunityRow4
   print(CommunityRow4)
   return CommunityRow4
-
+"""
     
   
    
