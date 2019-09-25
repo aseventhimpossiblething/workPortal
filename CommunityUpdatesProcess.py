@@ -67,6 +67,7 @@ def initialCommUpdatProcess():
   CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
   global CommunityRow4
   CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
+  print("**********test 1 col*************")
   print(FirstCol)
   #begin google
   """
