@@ -33,6 +33,8 @@ def initialCommUpdatProcess():
   print(WorkingCommunities[['Builder Name','Brand Name']])
   print("**********************WorkingCommunities.values*****************************")
   print(WorkingCommunities.values)
+  print("**********************WorkingCommunities.iloc(5)*****************************")
+  print(WorkingCommunities.iloc(5))
   
   
   return "finished"
