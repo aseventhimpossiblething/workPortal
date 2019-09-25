@@ -137,7 +137,7 @@ def CommListFileHandler():
            
     CommunityUpdatesProcess.initialCommUpdatProcess() 
     print(CommunityUpdatesProcess.initialCommUpdatProcess())    
-    HTMLoutput=Markup(CommunityUpdatesProcess.CommunityColTitles<br>CommunityUpdatesProcess.CommunityRow1)
+    HTMLoutput=Markup(CommunityUpdatesProcess.CommunityColTitles, CommunityUpdatesProcess.CommunityRow1)
     print(CommunityUpdatesProcess.CommunityColTitles)
     print(CommunityUpdatesProcess.CommunityRow1) 
     print(CommunityUpdatesProcess.CommunityRow2)
