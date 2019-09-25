@@ -56,6 +56,7 @@ def initialCommUpdatProcess():
   WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
     'Community Id','Community Name','City','State','Zip','Market ID','Market Name'])
   
+  FirstCol=WorkingCommunities[['Builder Name']]
   global CommunityColTitles
   CommunityColTitles=str(list(WorkingCommunities))
   global CommunityRow1
@@ -66,7 +67,7 @@ def initialCommUpdatProcess():
   CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
   global CommunityRow4
   CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
-  
+  print(FirstCol)
   #begin google
   """
   os.chdir('/app/Sheets/CommunityUpdates/currentGoogle')
