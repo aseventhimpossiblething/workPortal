@@ -11,7 +11,6 @@ import xlrd
 import io
 
 def ValidatXLSXtime(arr):
-        print("Crtitical Value ",time.time()-os.path.getctime(arr))
         Error=arr+" Generated an error check that filetype is xlsx"
         Valid=arr+" is valid"
         if time.time()-os.path.getctime(arr)>600000:
@@ -93,55 +92,34 @@ def BidOpFileHandler():
     return toscrn
 
 
-def CommListFileHandler():
-            
-          
-         
-    reqs=request.files,request.files['currentGoogle'],request.files['currentGoogle'],request.files['currentBing']  
-     
-    
-   
+def CommListFileHandler():    
+    reqs=request.files,request.files['currentGoogle'],request.files['currentGoogle'],request.files['currentBing']   
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
-   
     if emptyObj==str(request.files['currentBing']):
          return "Bing slot is empty"
-    
     if emptyObj==str(request.files['currentGoogle']):
         return "Google slot is empty"
     if emptyObj==str(request.files['Communities']):
         return "Active Community slot is empty"
-   
-                
-     
+
     if request.files['Communities'].filename.find("xlsx")<1:
                 return "The Community Sheet is not XLSX file type";
     
     if request.files['currentGoogle'].filename.find("xlsx")<1:
                 return "The Google Sheet is not XLSX file type";
     if request.files['currentBing'].filename.find("xlsx")<1:
-                return "The Bing Sheet is not XLSX file type";    
-  
-      
-       
+                return "The Bing Sheet is not XLSX file type";       
    
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-   
-    newDate=str(datetime.today()).replace("-","")
-    #print(newDate)    
-       
-        
+           
     request.files['Communities'].save('WorkingCommunities')
-    print("after first save")
-    
+       
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     request.files['currentGoogle'].save('WorkingGoogle')
     
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     request.files['currentBing'].save('WorkingBing')
                             
-    
-    
-        
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
     ValidatXLSXtime(recent)
@@ -155,12 +133,22 @@ def CommListFileHandler():
     ValidatXLSXtime(recent)
            
     CommunityUpdatesProcess.initialCommUpdatProcess() 
-    print(CommunityUpdatesProcess.initialCommUpdatProcess())    
-    HTMLoutput=Markup(CommunityUpdatesProcess.initialCommUpdatProcess()) 
+       
+    WorkingCommunityOut=Markup("Sample of Active Communities "+"<br>"+CommunityUpdatesProcess.CommunityColTitles+"<br>"+CommunityUpdatesProcess.CommunityRow1+"<br>"+CommunityUpdatesProcess.CommunityRow2+"<br>"+CommunityUpdatesProcess.CommunityRow3+"<br>"+CommunityUpdatesProcess.CommunityRow4)
     
+    #print(CommunityUpdatesProcess.CommunityData)   
+    print(CommunityUpdatesProcess.CommunityColTitles)
+    print(CommunityUpdatesProcess.CommunityRow1) 
+    print(CommunityUpdatesProcess.CommunityRow2)
+    print(CommunityUpdatesProcess.CommunityRow3)
+    print(CommunityUpdatesProcess.CommunityRow4)    
+    HTMLoutput="Placeeholder"    
     toscrn = HTMLoutput
         
     return toscrn
+
+
+
 
 
     
