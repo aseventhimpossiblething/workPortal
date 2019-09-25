@@ -34,7 +34,7 @@ def initialCommUpdatProcess():
   print("**********************WorkingCommunities.values*****************************")
   print(WorkingCommunities.values)
   print("**********************WorkingCommunities.iloc(5)*****************************")
-  print(WorkingCommunities.iloc(5))
+  print(WorkingCommunities.iloc[5])
   
   
   return "finished"
