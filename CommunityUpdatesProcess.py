@@ -8,12 +8,20 @@ from flask import Flask, Markup, render_template, request
 import os
 import psycopg2
 
-CommunityData=[
-CommunityColTitles=0,
-CommunityRow1=0,
-CommunityRow2=0,
-CommunityRow3=0,
+
+CommunityColTitles=0
+CommunityRow1=0
+CommunityRow2=0
+CommunityRow3=0
 CommunityRow4=0
+
+
+CommunityData[
+CommunityColTitles,
+CommunityRow1,
+CommunityRow2,
+CommunityRow3,
+CommunityRow4
 ]
 
 
