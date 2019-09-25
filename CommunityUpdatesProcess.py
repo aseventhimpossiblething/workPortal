@@ -69,13 +69,13 @@ def initialCommUpdatProcess():
   global CommunityColTitles
   CommunityColTitles=str(list(WorkingCommunities))
   global CommunityRow1
-  CommunityRow1=str(WorkingCommunities.iloc[5].values)
+  CommunityRow1=str(WorkingCommunities.iloc[5].values)+" "+str(len(WorkingCommunities.iloc[5]))
   global CommunityRow2
-  CommunityRow2=str(WorkingCommunities.iloc[6].values)
+  CommunityRow2=str(WorkingCommunities.iloc[6].values)+" "+str(len(WorkingCommunities.iloc[5])
   global CommunityRow3
-  CommunityRow3=str(WorkingCommunities.iloc[7].values)
+  CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[5])
   global CommunityRow4
-  CommunityRow4=str(WorkingCommunities.iloc[8].values)
+  CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[5])
 
 
   """
