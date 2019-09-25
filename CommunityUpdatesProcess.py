@@ -11,7 +11,9 @@ import psycopg2
 CommunityColTitles=0
 CommunityRow1=0
 CommunityRow2=0
+CommunityRow3=0
 CommunityRow4=0
+
 
 
 def initialCommUpdatProcess():
@@ -60,20 +62,49 @@ def initialCommUpdatProcess():
   CommunityRow1=WorkingCommunities.iloc[5].values
   global CommunityRow2
   CommunityRow2=WorkingCommunities.iloc[6].values
-  global CommunityRow4
+  global CommunityRow3
   CommunityRow4=WorkingCommunities.iloc[7].values
+  global CommunityRow4
+  CommunityRow4=WorkingCommunities.iloc[8].values
 
 
   
   print(CommunityColTitles)                      
   print(WorkingCommunities.iloc[5].values)
   print(WorkingCommunities.iloc[6].values)
-  print(WorkingCommunities.iloc[7].values)                      
-                        
-
-  
-  
+  print(WorkingCommunities.iloc[7].values)        
   return "finished"
+
+
+def CommunityTitles():
+  print("Here are the titles")
+  global CommunityColTitles
+  print(CommunityColTitles)
+  return CommunityColTitles
+
+def CommunityRow1():
+  print("Here is row1")
+  global CommunityRow1
+  print(CommunityRow1)
+  return CommunityRow1
+  
+def CommunityRow2():
+  print("Here is row 2")
+  global CommunityRow2
+  print(CommunityRow2)
+  return CommunityRow2
+
+def CommunityRow3():
+  print("here is row 3")
+  global CommunityRow3
+  print(CommunityRow3)
+  return CommunityRow3
+
+def CommunityRow4():
+  print("here is row 4")
+  global CommunityRow4
+  print(CommunityRow4)
+  return CommunityRow4
 
     
   
