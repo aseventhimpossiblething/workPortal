@@ -29,8 +29,8 @@ def initialCommUpdatProcess():
   print(list(WorkingCommunities))
   print("**********************list(WorkingCommunities.head())*****************************")
   print(list(WorkingCommunities.head()))
-  print("**********************WorkingCommunities[['Community Id','Brand Name']]*****************************")
-  print(WorkingCommunities[['Builder Name','Brand Name']])
+  print("**********************WorkingCommunities[['Community Id','Brand Name','Division Id']]*****************************")
+  print(WorkingCommunities[['Builder Name','Brand Name','Division Id']])
   
   return "finished"
 
