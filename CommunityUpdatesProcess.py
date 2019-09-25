@@ -49,6 +49,29 @@ def initialCommUpdatProcess():
   CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
   global CommunityRow4
   CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
+  
+  #begin googl
+  
+  os.chdir('/app/Sheets/CommunityUpdates/currentGoogle')
+  WorkingGoogle=pandas.read_excel('WorkingGoogle').drop([0,1,2,3])
+  WorkingGoogle.columns=WorkingGoogle.iloc[0]
+  WorkingGoogle=WorkingGoogle.drop([4])
+ 
+ 
+  WorkingGoogle=pandas.DataFrame(WorkingGoogle, columns=['Builder Name','Brand Name','Division Id','Division Name',\
+    'Community Id','Community Name','City','State','Zip','Market ID','Market Name'])
+  
+  global GoogleColTitles
+  GoogleColTitles=str(list(WorkingGoogle))
+  global GoogleRow1
+  GoogleRow1=str(WorkingGoogle.iloc[5].values)+" "+str(len(WorkingGoogle.iloc[5]))
+  global GoogleRow2
+  GoogleRow2=str(WorkingGoogle.iloc[6].values)+" "+str(len(WorkingGoogle.iloc[6]))
+  global GoogleRow3
+  GoogleRow3=str(WorkingGoogle.iloc[7].values)+" "+str(len(WorkingGoogle.iloc[7]))
+  global GoogleRow4
+  GoogleRow4=str(WorkingGoogle.iloc[8].values)+" "+str(len(WorkingGoogle.iloc[8]))
+
 
 
   return "finished"
