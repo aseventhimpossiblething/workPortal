@@ -57,7 +57,7 @@ def initialCommUpdatProcess():
   """
  
   global CommunityColTitles
-  CommunityColTitles=list(WorkingCommunities)
+  CommunityColTitles=str(list(WorkingCommunities))
   global CommunityRow1
   CommunityRow1=str(WorkingCommunities.iloc[5].values)
   global CommunityRow2
