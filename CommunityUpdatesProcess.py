@@ -53,6 +53,12 @@ def initialCommUpdatProcess():
   #print("**********************WorkingCommunities.iloc(5).transpose()*****************************")
   #print(WorkingCommunities.iloc[5].transpose())
   """
+  """
+  global CommunityColTitles=list(WorkingCommunities)
+  global CommunityRow1=WorkingCommunities.iloc[5].values
+  global CommunityRow2=WorkingCommunities.iloc[6].values
+  global CommunityRow4=WorkingCommunities.iloc[7].values
+  """
   global CommunityColTitles=list(WorkingCommunities)
   global CommunityRow1=WorkingCommunities.iloc[5].values
   global CommunityRow2=WorkingCommunities.iloc[6].values
