@@ -55,7 +55,6 @@ def Scripts():
 
 @app.route('/')
 def index():
-    #CommunityUpdatesProcess.initialCommUpdatProcess()
     indexContent=Markup('<a href="https://www.google.com">"Google"</a><br>\
                  <a href="BidOps">"Bid Ops"</a><br>\
                  <a href="CommunityUpdates">Community Updates</a>')
@@ -68,8 +67,8 @@ def BidOpInput():
 def BidOPUpload():
     return fileHandler.BidOpFileHandler()
 
-@app.route('/CommunityDataframe.html')
-def BidOpInput():
+@app.route('/CommunityDataFrame.html')
+def CommunityDataFrame():
     return render_template('CommunityDataframe.html',pagetitle='Community',CommonTag=CommonTagAll)
 
 
