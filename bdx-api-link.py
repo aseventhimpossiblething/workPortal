@@ -69,7 +69,8 @@ def BidOPUpload():
 
 @app.route('/CommunityDataFrame')
 def CommunityDataFrame():
-    return render_template('CommunityDataframe.html',pagetitle='Community',CommonTag=CommonTagAll)
+    #the functon for col1
+    return render_template('CommunityDataframe.html',pagetitle='Community',CommonTag=CommonTagAll,col1="holding")
 @app.route('/DataFrameCss')
 def DataFrameCss():
     return render_template('DataFrameCss.css')
