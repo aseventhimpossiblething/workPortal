@@ -111,11 +111,9 @@ def CommListFileHandler():
                 return "The Bing Sheet is not XLSX file type";       
    
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-   
-            
+           
     request.files['Communities'].save('WorkingCommunities')
-    print("after first save")
-    
+       
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     request.files['currentGoogle'].save('WorkingGoogle')
     
@@ -135,15 +133,16 @@ def CommListFileHandler():
     ValidatXLSXtime(recent)
            
     CommunityUpdatesProcess.initialCommUpdatProcess() 
-    #print(CommunityUpdatesProcess.initialCommUpdatProcess())    
-    HTMLoutput=Markup("Sample of Active Communities "+"<br>"+CommunityUpdatesProcess.CommunityColTitles+"<br>"+CommunityUpdatesProcess.CommunityRow1+"<br>"+CommunityUpdatesProcess.CommunityRow2+"<br>"+CommunityUpdatesProcess.CommunityRow3+"<br>"+CommunityUpdatesProcess.CommunityRow4)
+       
+    WorkingCommunityOut=Markup("Sample of Active Communities "+"<br>"+CommunityUpdatesProcess.CommunityColTitles+"<br>"+CommunityUpdatesProcess.CommunityRow1+"<br>"+CommunityUpdatesProcess.CommunityRow2+"<br>"+CommunityUpdatesProcess.CommunityRow3+"<br>"+CommunityUpdatesProcess.CommunityRow4)
+    
     print(CommunityUpdatesProcess.CommunityData)   
     print(CommunityUpdatesProcess.CommunityColTitles)
     print(CommunityUpdatesProcess.CommunityRow1) 
     print(CommunityUpdatesProcess.CommunityRow2)
     print(CommunityUpdatesProcess.CommunityRow3)
     print(CommunityUpdatesProcess.CommunityRow4)    
-
+    HTMLoutput="Placeeholder"    
     toscrn = HTMLoutput
         
     return toscrn
