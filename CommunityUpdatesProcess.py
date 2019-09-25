@@ -30,7 +30,7 @@ def initialCommUpdatProcess():
   print("**********************list(WorkingCommunities.head())*****************************")
   print(list(WorkingCommunities.head()))
   print("**********************WorkingCommunities[['Community Id']]*****************************")
-  print(WorkingCommunities[['Community Id']])
+  print(WorkingCommunities[[0]])
   
   return "finished"
 
