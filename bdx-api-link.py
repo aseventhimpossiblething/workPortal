@@ -11,8 +11,6 @@ import psycopg2
 from sklearn.ensemble import RandomForestRegressor
 
 
-
-
 #DATABASE_URL = os.environ['DATABASE_URL']
 
 
@@ -69,6 +67,10 @@ def BidOpInput():
 @app.route('/BidOPUpload', methods=['POST','GET'])
 def BidOPUpload():
     return fileHandler.BidOpFileHandler()
+
+@app.route('')
+def BidOpInput():
+    return render_template('',pagetitle="",CommonTag=CommonTagAll)
 
 
 @app.route('/CommunityUpdates')
