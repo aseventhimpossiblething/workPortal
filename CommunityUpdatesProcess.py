@@ -8,6 +8,11 @@ from flask import Flask, Markup, render_template, request
 import os
 import psycopg2
 
+CommunityColTitles
+CommunityRow1
+CommunityRow2
+CommunityRow4
+
 
 def initialCommUpdatProcess():
   print("**********************initialCommUpdatProcess()*****************************")
@@ -23,6 +28,7 @@ def initialCommUpdatProcess():
   #pandas.DataFrame(pandas.read_excel('WorkingCommunities'),columns=['Builder Name','Brand Name','Division Id','Division Name','Community Id','Community Name','City','State','Zip','Market ID','Market Bame'])
   WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
     'Community Id','Community Name','City','State','Zip','Market ID','Market Name'])
+  """
   print("**********************1 WorkingCommunities.head()*****************************")
   print(WorkingCommunities.head())
   print("**********************2 WorkingCommunities.head(10)*****************************")
@@ -41,11 +47,22 @@ def initialCommUpdatProcess():
   print(WorkingCommunities.iloc[5])
   print("**********************9 WorkingCommunities.iloc(5).values*****************************")
   print(WorkingCommunities.iloc[5].values)
-  print("**********************10 WorkingCommunities[10]*****************************")
-  print(WorkingCommunities['10'])
+  #print("**********************10 WorkingCommunities[10]*****************************")
+  #print(WorkingCommunities['10'])
   
   #print("**********************WorkingCommunities.iloc(5).transpose()*****************************")
   #print(WorkingCommunities.iloc[5].transpose())
+  """
+  global CommunityColTitles=list(WorkingCommunities)
+  global CommunityRow1=WorkingCommunities.iloc[5].values
+  global CommunityRow2=WorkingCommunities.iloc[6].values
+  global CommunityRow4=WorkingCommunities.iloc[7].values
+  print(CommunityColTitles)                      
+  print(WorkingCommunities.iloc[5].values)
+  print(WorkingCommunities.iloc[6].values)
+  print(WorkingCommunities.iloc[7].values)                      
+                        
+
   
   
   return "finished"
