@@ -9,6 +9,23 @@ import os
 import psycopg2
 
 
+CommunityCol1=0
+CommunityCol2=0
+CommunityCol3=0
+CommunityCol4=0
+CommunityCol5=0
+CommunityCol6=0
+CommunityCol7=0
+CommunityCol8=0
+CommunityCol9=0
+CommunityCol10=0
+CommunityCol11=0
+CommunityCol12=0
+CommunityCol13=0
+CommunityCol14=0
+CommunityCol15=0
+CommunityCol16=0
+
 CommunityColTitles=0
 CommunityRow1=0
 CommunityRow2=0
