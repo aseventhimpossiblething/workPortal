@@ -8,10 +8,10 @@ from flask import Flask, Markup, render_template, request
 import os
 import psycopg2
 
-CommunityColTitles
-CommunityRow1
-CommunityRow2
-CommunityRow4
+CommunityColTitles=0
+CommunityRow1=0
+CommunityRow2=0
+CommunityRow4=0
 
 
 def initialCommUpdatProcess():
