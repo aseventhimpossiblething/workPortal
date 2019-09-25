@@ -11,7 +11,6 @@ import xlrd
 import io
 
 def ValidatXLSXtime(arr):
-        #print("Crtitical Value ",time.time()-os.path.getctime(arr))
         Error=arr+" Generated an error check that filetype is xlsx"
         Valid=arr+" is valid"
         if time.time()-os.path.getctime(arr)>600000:
@@ -139,14 +138,18 @@ def CommListFileHandler():
     CommunityUpdatesProcess.initialCommUpdatProcess() 
     print(CommunityUpdatesProcess.initialCommUpdatProcess())    
     HTMLoutput=Markup(CommunityUpdatesProcess.initialCommUpdatProcess())
-    print(CommunityUpdatesProcess.ommunityColTitles)
+    print(CommunityUpdatesProcess.CommunityColTitles)
     print(CommunityUpdatesProcess.CommunityRow1) 
     print(CommunityUpdatesProcess.CommunityRow2)
-    print(CommunityUpdatesProcess.CommunityRow4)
+    print(CommunityUpdatesProcess.CommunityRow3)
+    print(CommunityUpdatesProcess.CommunityRow4)    
 
     toscrn = HTMLoutput
         
     return toscrn
+
+
+
 
 
     
