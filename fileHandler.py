@@ -132,9 +132,9 @@ def CommListFileHandler():
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
     ValidatXLSXtime(recent)
            
-    CommunityUpdatesProcess.initialCommUpdatProcess() 
+    #CommunityUpdatesProcess.initialCommUpdatProcess() 
        
-    WorkingCommunityOut=Markup("Sample of Active Communities "+"<br>"+CommunityUpdatesProcess.CommunityColTitles+"<br>"+CommunityUpdatesProcess.CommunityRow1+"<br>"+CommunityUpdatesProcess.CommunityRow2+"<br>"+CommunityUpdatesProcess.CommunityRow3+"<br>"+CommunityUpdatesProcess.CommunityRow4)
+    #WorkingCommunityOut=Markup("Sample of Active Communities "+"<br>"+CommunityUpdatesProcess.CommunityColTitles+"<br>"+CommunityUpdatesProcess.CommunityRow1+"<br>"+CommunityUpdatesProcess.CommunityRow2+"<br>"+CommunityUpdatesProcess.CommunityRow3+"<br>"+CommunityUpdatesProcess.CommunityRow4)
     
     #print(CommunityUpdatesProcess.CommunityData)   
     print(CommunityUpdatesProcess.CommunityColTitles)
