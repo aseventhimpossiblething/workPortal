@@ -91,6 +91,12 @@ def initialCommUpdatProcess():
   global GoogleRow4
   GoogleRow4=str(WorkingGoogle.iloc[8].values)+" "+str(len(WorkingGoogle.iloc[8]))
   """
+  print(GoogleColTitles)
+  print(GoogleRow1)
+  print(GoogleRow2)
+  print(GoogleRow3)
+  print(GoogleRow4)
+  print(GoogleRow5)
 
 
   return "finished"
