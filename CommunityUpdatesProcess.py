@@ -71,7 +71,7 @@ def initialCommUpdatProcess():
   print(FirstCol)
   #begin google
  
-  os.chdir('/app/Sheets/CommunityUpdates/currentGoogle')
+  os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
   WorkingGoogle=pandas.read_excel('WorkingGoogle').drop([0,1,2,3])
   WorkingGoogle.columns=WorkingGoogle.iloc[0]
   WorkingGoogle=WorkingGoogle.drop([4])
