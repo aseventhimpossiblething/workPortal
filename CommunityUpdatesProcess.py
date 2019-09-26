@@ -70,15 +70,14 @@ def initialCommUpdatProcess():
   print("**********test 1 col*************")
   print(FirstCol)
   #begin google
-  """
+ 
   os.chdir('/app/Sheets/CommunityUpdates/currentGoogle')
   WorkingGoogle=pandas.read_excel('WorkingGoogle').drop([0,1,2,3])
   WorkingGoogle.columns=WorkingGoogle.iloc[0]
   WorkingGoogle=WorkingGoogle.drop([4])
  
  
-  WorkingGoogle=pandas.DataFrame(WorkingGoogle, columns=['Builder Name','Brand Name','Division Id','Division Name',\
-    'Community Id','Community Name','City','State','Zip','Market ID','Market Name'])
+  WorkingGoogle=pandas.DataFrame(WorkingGoogle, columns=['Campaign','Ad Group','Final URL'])
   
   global GoogleColTitles
   GoogleColTitles=str(list(WorkingGoogle))
@@ -90,7 +89,7 @@ def initialCommUpdatProcess():
   GoogleRow3=str(WorkingGoogle.iloc[7].values)+" "+str(len(WorkingGoogle.iloc[7]))
   global GoogleRow4
   GoogleRow4=str(WorkingGoogle.iloc[8].values)+" "+str(len(WorkingGoogle.iloc[8]))
-  """
+  
   print(GoogleColTitles)
   print(GoogleRow1)
   print(GoogleRow2)
