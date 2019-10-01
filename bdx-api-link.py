@@ -52,7 +52,7 @@ celery = Celery('myapp', broker='amqp://guest@localhost//')
 @celery.task
 def add(x, y):
     return x + y
-print(add(2,5))
+#print(add(2,5))
 
 
 
@@ -101,6 +101,7 @@ def BidOPUpload():
 
 @app.route('/CommunityDataFrame')
 def CommunityDataFrame():
+    print(add(5,3))
     #the functon for col1
     return render_template('CommunityDataframe.html',pagetitle='Community',CommonTag=CommonTagAll,col1="holding")
 @app.route('/DataFrameCss')
@@ -110,6 +111,7 @@ def DataFrameCss():
 
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
+    print(add(5,3))
     return render_template('CommunitiesForm.html',pagetitle="Community Updates",CommonTag=CommonTagAll)
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
