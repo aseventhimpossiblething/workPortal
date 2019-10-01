@@ -5,6 +5,7 @@ import scipy
 import pandas
 import BidOpAssist
 import fileHandler
+from celery import Celery
 from flask import Flask, Markup, render_template, request
 import os
 import psycopg2
@@ -42,7 +43,37 @@ app = Flask(__name__)   # Flask constructor
 #conn.close
 
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
-#{{CommonTag}}-{{pagetitle}} 
+#{{CommonTag}}-{{pagetitle}}
+print("*********Celery Code Begin********")
+
+celery = Celery('myapp', broker='amqp://guest@localhost//')
+
+@celery.task
+def add(x, y):
+    return x + y
+print(add(2,5))
+
+
+
+
+
+
+
+print("********Celery Code End*********")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
 
 @app.route('/css')
