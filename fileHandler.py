@@ -119,17 +119,20 @@ def CommListFileHandler():
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     request.files['currentBing'].save('WorkingBing')
                             
+    print("Communities")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     recent=min(glob.glob('*.xlsx'), key=os.path.getctime)
     print(recent)    
     #ValidatXLSXtime(recent)
-        
+     
+    print("google")    
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     print(os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle'))
     recent=min(glob.glob('*.xlsx'), key=os.path.getctime)
     print(recent)     
     #ValidatXLSXtime(recent)
-        
+     
+    print("Bing") 
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     recent=min(glob.glob('*.xlsx'), key=os.path.getctime)
     print(recent)     
@@ -140,11 +143,11 @@ def CommListFileHandler():
     #WorkingCommunityOut=Markup("Sample of Active Communities "+"<br>"+CommunityUpdatesProcess.CommunityColTitles+"<br>"+CommunityUpdatesProcess.CommunityRow1+"<br>"+CommunityUpdatesProcess.CommunityRow2+"<br>"+CommunityUpdatesProcess.CommunityRow3+"<br>"+CommunityUpdatesProcess.CommunityRow4)
     
     #print(CommunityUpdatesProcess.CommunityData)   
-    print(CommunityUpdatesProcess.CommunityColTitles)
-    print(CommunityUpdatesProcess.CommunityRow1) 
-    print(CommunityUpdatesProcess.CommunityRow2)
-    print(CommunityUpdatesProcess.CommunityRow3)
-    print(CommunityUpdatesProcess.CommunityRow4)    
+    #print(CommunityUpdatesProcess.CommunityColTitles)
+    #print(CommunityUpdatesProcess.CommunityRow1) 
+    #print(CommunityUpdatesProcess.CommunityRow2)
+    #print(CommunityUpdatesProcess.CommunityRow3)
+    #print(CommunityUpdatesProcess.CommunityRow4)    
     HTMLoutput="This will be 3 modules  Modules as follows  Module 1: 3 links to the Community, Google, and Bing upload outputs   Module 2:Google Outputs link1, Google KWs all match types. Link 2 google Adds Ad Types A+b and all Match types "    
     toscrn = HTMLoutput
         
