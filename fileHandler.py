@@ -110,31 +110,30 @@ def CommListFileHandler():
     if request.files['currentBing'].filename.find("xlsx")<1:
                 return "The Bing Sheet is not XLSX file type";       
    
-    os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-           
+    os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')          
     request.files['Communities'].save('WorkingCommunities')
        
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-    print(os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle'))    
     request.files['currentGoogle'].save('WorkingGoogle')
     
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
-    print(os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing'))    
     request.files['currentBing'].save('WorkingBing')
                             
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-    print( os.chdir('/app/Sheets/CommunityUpdates/currentCommunities'))    
     recent=min(glob.glob('*.xlsx'), key=os.path.getctime)
-    ValidatXLSXtime(recent)
+    print(recent)    
+    #ValidatXLSXtime(recent)
         
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     print(os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle'))
     recent=min(glob.glob('*.xlsx'), key=os.path.getctime)
-    ValidatXLSXtime(recent)
+    print(recent)     
+    #ValidatXLSXtime(recent)
         
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     recent=min(glob.glob('*.xlsx'), key=os.path.getctime)
-    ValidatXLSXtime(recent)
+    print(recent)     
+    #ValidatXLSXtime(recent)
            
     #CommunityUpdatesProcess.initialCommUpdatProcess() 
        
