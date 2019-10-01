@@ -104,7 +104,6 @@ def CommListFileHandler():
 
     if request.files['Communities'].filename.find("xlsx")<1:
                 return "The Community Sheet is not XLSX file type";
-    
     if request.files['currentGoogle'].filename.find("xlsx")<1:
                 return "The Google Sheet is not XLSX file type";
     if request.files['currentBing'].filename.find("xlsx")<1:
@@ -121,20 +120,20 @@ def CommListFileHandler():
                             
     print("Communities")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-    recent=min(glob.glob('*.xlsx'), key=os.path.getctime)
+    recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
     print(recent)    
     #ValidatXLSXtime(recent)
      
     print("google")    
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     print(os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle'))
-    recent=min(glob.glob('*.xlsx'), key=os.path.getctime)
+    recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
     print(recent)     
     #ValidatXLSXtime(recent)
      
     print("Bing") 
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
-    recent=min(glob.glob('*.xlsx'), key=os.path.getctime)
+    recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
     print(recent)     
     #ValidatXLSXtime(recent)
            
