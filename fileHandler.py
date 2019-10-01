@@ -121,15 +121,15 @@ def CommListFileHandler():
     request.files['currentBing'].save('WorkingBing')
                             
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-    recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
+    recent=min(glob.glob('*.xlsx'), key=os.path.getctime)
     ValidatXLSXtime(recent)
         
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-    recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
+    recent=min(glob.glob('*.xlsx'), key=os.path.getctime)
     ValidatXLSXtime(recent)
         
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
-    recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
+    recent=min(glob.glob('*.xlsx'), key=os.path.getctime)
     ValidatXLSXtime(recent)
            
     #CommunityUpdatesProcess.initialCommUpdatProcess() 
