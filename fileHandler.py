@@ -146,7 +146,7 @@ def CommListFileHandler():
     """    
     
            
-    #CommunityUpdatesProcess.initialCommUpdatProcess() 
+    CommunityUpdatesProcess.initialCommUpdatProcess() 
        
     #WorkingCommunityOut=Markup("Sample of Active Communities "+"<br>"+CommunityUpdatesProcess.CommunityColTitles+"<br>"+CommunityUpdatesProcess.CommunityRow1+"<br>"+CommunityUpdatesProcess.CommunityRow2+"<br>"+CommunityUpdatesProcess.CommunityRow3+"<br>"+CommunityUpdatesProcess.CommunityRow4)
     
