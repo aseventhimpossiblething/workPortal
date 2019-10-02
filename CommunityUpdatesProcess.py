@@ -82,20 +82,20 @@ def initialCommUpdatProcess():
   global GoogleColTitles
   GoogleColTitles=str(list(WorkingGoogle))
   global GoogleRow1
-  GoogleRow1=str(WorkingGoogle.iloc[5].values)+" "+str(len(WorkingGoogle.iloc[5]))
+  #GoogleRow1=str(WorkingGoogle.iloc[5].values)+" "+str(len(WorkingGoogle.iloc[5]))
   global GoogleRow2
-  GoogleRow2=str(WorkingGoogle.iloc[6].values)+" "+str(len(WorkingGoogle.iloc[6]))
+  #GoogleRow2=str(WorkingGoogle.iloc[6].values)+" "+str(len(WorkingGoogle.iloc[6]))
   global GoogleRow3
-  GoogleRow3=str(WorkingGoogle.iloc[7].values)+" "+str(len(WorkingGoogle.iloc[7]))
+  #GoogleRow3=str(WorkingGoogle.iloc[7].values)+" "+str(len(WorkingGoogle.iloc[7]))
   global GoogleRow4
-  GoogleRow4=str(WorkingGoogle.iloc[8].values)+" "+str(len(WorkingGoogle.iloc[8]))
+  #GoogleRow4=str(WorkingGoogle.iloc[8].values)+" "+str(len(WorkingGoogle.iloc[8]))
   
   print(GoogleColTitles)
   print(GoogleRow1)
   print(GoogleRow2)
   print(GoogleRow3)
   print(GoogleRow4)
-  print(GoogleRow5)
+  #print(GoogleRow5)
 
 
   return "finished"
