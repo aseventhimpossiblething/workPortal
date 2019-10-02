@@ -125,9 +125,9 @@ def CommListFileHandler():
     print("**********************file search in file handler**********************************")    
                             
     #print("Communities")
-    os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
+    os.chdir('/app/Sheets/CommunityUpdates/')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
-    #print(recent)    
+    print(recent)    
     #ValidatXLSXtime(recent)
  
      
