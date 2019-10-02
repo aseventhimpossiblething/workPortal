@@ -57,6 +57,7 @@ print(add(2,5))
 @celery.task
 def OnPageIterationOfComupdate():
     CommunityUpdatesProcess.initialCommUpdatProcess()
+    print("-----------------ran OnPageIterationOfComupdate()------------")
 
 
 
@@ -121,8 +122,9 @@ def CommunitiesUploads():
 def CommunityFileHandling():
     #CommunityUpdatesProcess.initialCommUpdatProcess()
     print("++++++++++++++++++   filehandler Running   ++++++++++++++++++++++")
-    OnPageIterationOfComupdate()
-    return fileHandler.CommListFileHandler()
+    fileHandler.CommListFileHandler()
+    
+    return OnPageIterationOfComupdate()
     """
     try:
         return fileHandler.CommListFileHandler()
