@@ -117,24 +117,31 @@ def CommListFileHandler():
     
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     request.files['currentBing'].save('WorkingBing')
+
+
+    print("**********************file search in file handler**********************************")
+    os.chdir('/app/Sheets/CommunityUpdates/Google/')
+    print(os.listdir())
+    print("**********************file search in file handler**********************************")    
                             
-    print("Communities")
+    #print("Communities")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
-    print(recent)    
+    #print(recent)    
     #ValidatXLSXtime(recent)
+ 
      
-    print("google")    
+    #print("google")    
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     print(os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle'))
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
-    print(recent)     
+    #print(recent)     
     #ValidatXLSXtime(recent)
      
-    print("Bing") 
+    #print("Bing") 
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
-    print(recent)     
+    #print(recent)     
     #ValidatXLSXtime(recent)
            
     #CommunityUpdatesProcess.initialCommUpdatProcess() 
