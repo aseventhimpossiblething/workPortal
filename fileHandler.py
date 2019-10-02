@@ -120,7 +120,7 @@ def CommListFileHandler():
 
 
     print("**********************file search in file handler**********************************")
-    os.chdir('/app/Sheets/CommunityUpdates/Google/')
+    os.chdir('/app/Sheets/CommunityUpdates/currentCommunities/')
     print(os.listdir())
     print("**********************file search in file handler**********************************")    
                             
