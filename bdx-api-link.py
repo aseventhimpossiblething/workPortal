@@ -102,6 +102,7 @@ def BidOPUpload():
 @app.route('/CommunityDataFrame')
 def CommunityDataFrame():
     print("From Comm Data should be 9*****************************************",add(5,4))
+    print("From Comm Data should be 9*****************************************",add(5,4))
     #the functon for col1
     return render_template('CommunityDataframe.html',pagetitle='Community',CommonTag=CommonTagAll,col1="holding")
 @app.route('/DataFrameCss')
@@ -111,7 +112,8 @@ def DataFrameCss():
 
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
-    print("from commudates should be 8*******************************************",add(5,3))
+    print("from commudates Form fill out sheet Data should be 8*******************************************",add(5,3))
+    print("From Commpdates Form fill out sheet Data should be 8*************************Function of page load*********************",add(5,4))
     return render_template('CommunitiesForm.html',pagetitle="Community Updates",CommonTag=CommonTagAll)
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
