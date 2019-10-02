@@ -54,8 +54,9 @@ def add(x, y):
     return x + y
 print(add(2,5))
 
-
-
+@celery.task
+def OnPageIterationOfComupdate():
+    CommunityUpdatesProcess.initialCommUpdatProcess()
 
 
 
@@ -112,11 +113,15 @@ def DataFrameCss():
 
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
+    #CommunityUpdatesProcess.initialCommUpdatProcess()
     print("from commudates Form fill out sheet Data should be 8*******************************************",add(5,3))
     print("From Commpdates Form fill out sheet Data should be 8*************************Function of page load*********************",add(5,4))
     return render_template('CommunitiesForm.html',pagetitle="Community Updates",CommonTag=CommonTagAll)
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
+    #CommunityUpdatesProcess.initialCommUpdatProcess()
+    print("++++++++++++++++++   filehandler Running   ++++++++++++++++++++++")
+    OnPageIterationOfComupdate()
     return fileHandler.CommListFileHandler()
     """
     try:
