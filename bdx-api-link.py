@@ -59,7 +59,7 @@ def add(x, y):
 def OnPageIterationOfComupdate():
     #CommunityUpdatesProcess.initialCommUpdatProcess()
     #print("-----------------ran OnPageIterationOfComupdate()------------")
-
+    print("++++++ Blank Block ")
 
 
 
