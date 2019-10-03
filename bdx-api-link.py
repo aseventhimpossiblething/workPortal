@@ -52,7 +52,7 @@ celery = Celery('myapp', broker='amqp://guest@localhost//')
 @celery.task
 def add(x, y):
     return x + y
-add(2,5).delay()
+print(add(2,5).delay())
 
 @celery.task
 def OnPageIterationOfComupdate():
