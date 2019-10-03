@@ -52,8 +52,8 @@ celery = Celery('myapp', broker='amqp://guest@localhost//')
 @celery.task
 def add(x, y):
     return x + y
-#print(add(8,9))
-#print("INDICATE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+print(add(8,9))
+print("INDICATE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
 @celery.task
 def OnPageIterationOfComupdate():
