@@ -63,20 +63,7 @@ def OnPageIterationOfComupdate():
 
 
 
-#print("********Celery Code End*********")
-
-
-
-
-
-
-
-
-
-
-
-
-
+print("********Celery Code End*********")
 
 CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
 
