@@ -63,7 +63,7 @@ def OnPageIterationOfComupdate():
 
 
 
-print("********Celery Code End*********")
+#print("********Celery Code End*********")
 
 
 
