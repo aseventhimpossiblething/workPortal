@@ -81,13 +81,13 @@ print("attempt to run spitOut")
 #print("celery failed")
 print("spitOut.delay()",spitOut.delay())
 #print("spitOut.delay().ready()",spitOut.delay().ready())
-print("spitOut.result()",spitOut.result())
+#print("spitOut.result()",spitOut.result())
 #print(spitOut().delay())
 #add.delay(a=2,b=2)
 #print("add(8,9).delay()",add(8,9).delay())
 #print("add(8,9).ready()",add(8,9).ready())
 #print("add(8,9).result()",add(8,9).result())
-print("INDICATE celery Ran !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+print("INDICATE celery Ran Kind of <<No Worker>>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
 @celery.task
 def OnPageIterationOfComupdate():
