@@ -55,15 +55,12 @@ app = Flask(__name__)
 #BROKER_URL=os.environ['REDIS_URL'],
 #CELERY_RESULT_BACKEND=os.environ['REDIS_URL']
 print(os.environ['REDIS_URL'])
-print(os.environ['REDIS_URL'])
-
-
 
 app.config['CELERY_BROKER_URL'] = os.environ['REDIS_URL']
-app.config['CELERY_RESULT_BACKEND'] = os.environ['REDIS_URL']
+#app.config['CELERY_RESULT_BACKEND'] = os.environ['REDIS_URL']
 
 
-celery = Celery(app.name, broker=app.config['CELERY_BROKER_URL'])
+celery = Celery(app.name, broker=os.environ['REDIS_URL'])
 celery.conf.update(app.config)
 #celery = Celery('bdx-api-link', broker='redis://h:pd122a563439fed3491a07052810452d7db9a1d3e03470a1b94356a4b704a2e21@ec2-34-206-10-16.compute-1.amazonaws.com:15889')
 #celery = Celery('bdx-api-link')
