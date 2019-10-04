@@ -53,7 +53,8 @@ celery = Celery('myapp', broker='amqp://guest@localhost//')
 def spitOut():
     return "Spit out, Spit Out"
 spitOut()
-spitOut().delay()
+spitOut.delay()
+#print(spitOut().delay())
 #add.delay(a=2,b=2)
 #print("add(8,9).delay()",add(8,9).delay())
 #print("add(8,9).ready()",add(8,9).ready())
