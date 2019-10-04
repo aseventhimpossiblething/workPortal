@@ -73,7 +73,9 @@ app.conf.update(BROKER_URL=os.environ['REDIS_URL'],
 
 @celery.task
 def spitOut():
-    return "Spit out, Spit Out"
+    print("this is the print command from spit out")
+    return "Spit Out Return String"
+   
 spitOut()
 print("attempt to run spitOut")
 #print("celery failed")
