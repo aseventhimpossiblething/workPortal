@@ -16,4 +16,5 @@ scipy
 pandas
 sklearn
 glob2
+redis
 
