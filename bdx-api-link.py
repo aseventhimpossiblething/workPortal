@@ -51,6 +51,12 @@ print("*********Celery Code Begin********")
 
 
 app = Flask(__name__)
+
+BROKER_URL=os.environ['REDIS_URL'],
+CELERY_RESULT_BACKEND=os.environ['REDIS_URL']
+
+
+
 app.config['CELERY_BROKER_URL'] = 'redis://localhost:6379/0'
 app.config['CELERY_RESULT_BACKEND'] = 'redis://localhost:6379/0'
 
@@ -59,8 +65,10 @@ celery.conf.update(app.config)
 #celery = Celery('bdx-api-link', broker='redis://h:pd122a563439fed3491a07052810452d7db9a1d3e03470a1b94356a4b704a2e21@ec2-34-206-10-16.compute-1.amazonaws.com:15889')
 #celery = Celery('bdx-api-link')
 #celery.config_from_object(flask_app.config)
+"""
 app.conf.update(BROKER_URL=os.environ['REDIS_URL'],
                 CELERY_RESULT_BACKEND=os.environ['REDIS_URL'])
+"""                
 
 @celery.task
 def spitOut():
