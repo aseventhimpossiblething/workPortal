@@ -48,7 +48,7 @@ app = Flask(__name__)   # Flask constructor
 #{{CommonTag}}-{{pagetitle}}
 print("*********Celery Code Begin********")
 
-celery = Celery('myapp', broker='amqp://guest@localhost//')
+celery = Celery('bdx-api-link', broker='amqp://guest@localhost//')
 
 @celery.task
 def spitOut():
