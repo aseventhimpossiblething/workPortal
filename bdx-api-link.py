@@ -52,13 +52,14 @@ print("*********Celery Code Begin********")
 
 app = Flask(__name__)
 
-BROKER_URL=os.environ['REDIS_URL'],
-CELERY_RESULT_BACKEND=os.environ['REDIS_URL']
+#BROKER_URL=os.environ['REDIS_URL'],
+#CELERY_RESULT_BACKEND=os.environ['REDIS_URL']
 
 
 
-app.config['CELERY_BROKER_URL'] = 'redis://localhost:6379/0'
-app.config['CELERY_RESULT_BACKEND'] = 'redis://localhost:6379/0'
+app.config['CELERY_BROKER_URL'] = os.environ['REDIS_URL']
+app.config['CELERY_RESULT_BACKEND'] = os.environ['REDIS_URL']
+
 
 celery = Celery(app.name, broker=app.config['CELERY_BROKER_URL'])
 celery.conf.update(app.config)
