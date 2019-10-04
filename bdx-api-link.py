@@ -5,10 +5,11 @@ import scipy
 import pandas
 import BidOpAssist
 import fileHandler
-import tasks
+
 from flask import Flask, Markup, render_template, request
 from celery import Celery
 import os
+import tasks
 import psycopg2
 from sklearn.ensemble import RandomForestRegressor
 
