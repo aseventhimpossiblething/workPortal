@@ -5,6 +5,7 @@ import scipy
 import pandas
 import BidOpAssist
 import fileHandler
+import redis
 
 from flask import Flask, Markup, render_template, request
 from celery import Celery
