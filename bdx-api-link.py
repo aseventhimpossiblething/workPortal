@@ -79,7 +79,7 @@ def spitOut():
 spitOut()
 print("attempt to run spitOut")
 #print("celery failed")
-spitOut.delay()
+print("Spit Out! from a print",spitOut.delay())
 #print(spitOut().delay())
 #add.delay(a=2,b=2)
 #print("add(8,9).delay()",add(8,9).delay())
