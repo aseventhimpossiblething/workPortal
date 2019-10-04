@@ -54,6 +54,8 @@ app = Flask(__name__)
 
 #BROKER_URL=os.environ['REDIS_URL'],
 #CELERY_RESULT_BACKEND=os.environ['REDIS_URL']
+print(os.environ['REDIS_URL'])
+print(os.environ['REDIS_URL'])
 
 
 
