@@ -1,4 +1,5 @@
 web: gunicorn bdx-api-link:app
-worker: celery worker --app=tasks.app
+worker: celery -A bdx-api-link worker -l info
+
 
 
