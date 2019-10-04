@@ -49,7 +49,7 @@ print("*********Celery Code Begin********")
 
 celery = Celery('myapp', broker='amqp://guest@localhost//')
 
-@celery.task
+@celery.tas
 def add(x, y):
     return x + y
 add(3,4).delay()
