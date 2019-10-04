@@ -52,7 +52,7 @@ celery = Celery('myapp', broker='amqp://guest@localhost//')
 @celery.task
 def add(x, y):
     return x + y
-add(3,4).delay()
+add.delay(2,2)
 #print("add(8,9).delay()",add(8,9).delay())
 #print("add(8,9).ready()",add(8,9).ready())
 #print("add(8,9).result()",add(8,9).result())
