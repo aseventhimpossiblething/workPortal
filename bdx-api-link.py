@@ -80,7 +80,7 @@ spitOut()
 print("attempt to run spitOut")
 #print("celery failed")
 print("spitOut.delay()",spitOut.delay())
-print("spitOut.ready()",spitOut.ready())
+print("spitOut.delay().ready()",spitOut.delay().ready())
 
 
 print("Celery Failing")
