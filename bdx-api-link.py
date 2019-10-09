@@ -76,10 +76,10 @@ def spitOut():
     print("this is the print command from spit out")
     return "Spit Out Return String"
    
-spitOut()
+#spitOut()
 print("attempt to run spitOut")
 #print("celery failed")
-theCall=spitOut().delay()
+theCall=spitOut.delay()
 #print("spitOut.delay()",spitOut.delay())
 #print("spitOut.delay().ready()",spitOut.delay().ready())
 theCall.ready()
