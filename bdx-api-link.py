@@ -14,6 +14,7 @@ import os
 
 import psycopg2
 from sklearn.ensemble import RandomForestRegressor
+app = Flask(__name__)
 
 
 #DATABASE_URL = os.environ['DATABASE_URL']
@@ -51,7 +52,7 @@ from sklearn.ensemble import RandomForestRegressor
 print("*********Celery Code Begin********")
 
 
-app = Flask(__name__)
+#app = Flask(__name__)
 
 
 print(os.environ['REDIS_URL'])
