@@ -23,9 +23,6 @@ app = Flask(__name__)
 #app = Flask(__name__)   # Flask constructor
 #app.config['MAX_CONTENT_LENGTH'] = 1000 * 1024 * 1024
 
-#CommunityUpdatesProcess.initialCommUpdatProcess()
-
-
 
 
 #conn = psycopg2.connect(DATABASE_URL, sslmode='require')
@@ -52,7 +49,6 @@ app = Flask(__name__)
 print("*********Celery Code Begin********")
 
 
-#app = Flask(__name__)
 
 
 print(os.environ['REDIS_URL'])
@@ -74,40 +70,21 @@ def spitOut():
     print("this is the print command from inside spitOut")
     return 0
    
-#spitOut()
-#print("attempt to run spitOut")
-#print("celery failed")
+
 theCall=spitOut.delay()
 
-#print("spitOut.delay()",spitOut.delay())
-#print("spitOut.delay().ready()",spitOut.delay().ready())
+
 print("theCall",theCall)
 print("theCall.status1",theCall.status)
 print("theCall.result",theCall.result)
 print("theCall.ready()1",theCall.ready())
-#print("theCall.get()",theCall.get())
-#print("theCall.ready()2",theCall.ready())
 print("theCall.status2",theCall.status)
 
 
 
-#print("Celery Failing")
-#print("spitOut.delay().ready()",spitOut.delay().ready())
-#print("spitOut.ready()",spitOut.ready())
-#print("spitOut.result()",spitOut.result())
-#print(spitOut().delay())
-#add.delay(a=2,b=2)
-#print("add(8,9).delay()",add(8,9).delay())
-#print("add(8,9).ready()",add(8,9).ready())
-#print("add(8,9).result()",add(8,9).result())
-#print("INDICATE celery Ran Kind of <<No Worker>>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-
 @celery.task
 def OnPageIterationOfComupdate():
-    #CommunityUpdatesProcess.initialCommUpdatProcess()
-    #print("-----------------ran OnPageIterationOfComupdate()------------")
     print("++++++ Blank Block ")
-
 
 
 print("********Celery Code End*********")
