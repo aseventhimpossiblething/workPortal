@@ -79,7 +79,11 @@ print("attempt to run spitOut")
 theCall=spitOut.delay()
 #print("spitOut.delay()",spitOut.delay())
 #print("spitOut.delay().ready()",spitOut.delay().ready())
-print("theCall.ready()",theCall.ready())
+print("theCall",theCall)
+print("theCall.ready()1",theCall.ready())
+print("theCall.result()",theCall.result())
+print("theCall.ready()2",theCall.ready())
+
 
 
 print("Celery Failing")
