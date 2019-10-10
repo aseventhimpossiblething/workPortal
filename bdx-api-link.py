@@ -81,7 +81,7 @@ theCall=spitOut.delay()
 #print("spitOut.delay().ready()",spitOut.delay().ready())
 print("theCall",theCall)
 print("theCall.ready()1",theCall.ready())
-print("theCall.result()",theCall.result())
+print("theCall.state()",theCall.state())
 print("theCall.ready()2",theCall.ready())
 
 
