@@ -81,11 +81,12 @@ theCall=spitOut.delay()
 #print("spitOut.delay()",spitOut.delay())
 #print("spitOut.delay().ready()",spitOut.delay().ready())
 print("theCall",theCall)
-print("theCall.status",theCall.status)
+print("theCall.status1",theCall.status)
 print("theCall.result",theCall.result)
 print("theCall.ready()1",theCall.ready())
 #print("theCall.get()",theCall.get())
 #print("theCall.ready()2",theCall.ready())
+print("theCall.status2",theCall.status)
 
 
 
