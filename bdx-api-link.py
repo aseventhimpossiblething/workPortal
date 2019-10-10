@@ -70,11 +70,11 @@ app.conf.update(BROKER_URL=os.environ['REDIS_URL'],
 
 @celery.task
 def spitOut():
-    print("this is the print command from spit out")
+    print("this is the print command from inside spitOut")
     return "Spit Out Return String"
    
 #spitOut()
-print("attempt to run spitOut")
+#print("attempt to run spitOut")
 #print("celery failed")
 theCall=spitOut.delay()
 #print("spitOut.delay()",spitOut.delay())
@@ -95,7 +95,7 @@ print("Celery Failing")
 #print("add(8,9).delay()",add(8,9).delay())
 #print("add(8,9).ready()",add(8,9).ready())
 #print("add(8,9).result()",add(8,9).result())
-print("INDICATE celery Ran Kind of <<No Worker>>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+#print("INDICATE celery Ran Kind of <<No Worker>>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
 @celery.task
 def OnPageIterationOfComupdate():
