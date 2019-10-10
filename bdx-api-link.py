@@ -77,16 +77,18 @@ def spitOut():
 #print("attempt to run spitOut")
 #print("celery failed")
 theCall=spitOut.delay()
+
 #print("spitOut.delay()",spitOut.delay())
 #print("spitOut.delay().ready()",spitOut.delay().ready())
 print("theCall",theCall)
-#print("theCall.ready()1",theCall.ready())
+print("theCall.result",theCall.result)
+print("theCall.ready()1",theCall.ready())
 #print("theCall.get()",theCall.get())
-print("theCall.ready()2",theCall.ready())
+#print("theCall.ready()2",theCall.ready())
 
 
 
-print("Celery Failing")
+#print("Celery Failing")
 #print("spitOut.delay().ready()",spitOut.delay().ready())
 #print("spitOut.ready()",spitOut.ready())
 #print("spitOut.result()",spitOut.result())
