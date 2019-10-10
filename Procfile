@@ -1,5 +1,5 @@
 web: gunicorn bdx-api-link:app
-celery -a bdx-api-link.celery worker
+celery worker -a bdx-api-link.celery worker
 
 
 
