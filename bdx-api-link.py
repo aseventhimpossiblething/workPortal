@@ -6,12 +6,12 @@ import pandas
 import BidOpAssist
 import fileHandler
 import redis
-#import task
+import os
 from redis import Redis
 
 from flask import Flask, Markup, render_template, request
 from celery import Celery
-import os
+
 
 import psycopg2
 from sklearn.ensemble import RandomForestRegressor
