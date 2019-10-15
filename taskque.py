@@ -7,7 +7,6 @@ import BidOpAssist
 import fileHandler
 import redis
 import os
-import task
 from redis import Redis
 
 
