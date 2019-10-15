@@ -46,11 +46,11 @@ app = Flask(__name__)
 
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 #{{CommonTag}}-{{pagetitle}}
-print("*********Celery Code Begin********")
+#print("*********Celery Code Begin********")
 
 
 
-
+"""
 print(os.environ['REDIS_URL'])
 
 app.config['CELERY_BROKER_URL'] = os.environ['REDIS_URL']
@@ -59,12 +59,13 @@ app.config['CELERY_RESULT_BACKEND'] = os.environ['REDIS_URL']
 
 celery = Celery(app.name, broker=os.environ['REDIS_URL'])
 celery.conf.update(app.config)
+"""
 
 """
 app.conf.update(BROKER_URL=os.environ['REDIS_URL'],
                 CELERY_RESULT_BACKEND=os.environ['REDIS_URL'])
 """                
-
+"""
 @celery.task
 def spitOut():
     print("this is the print command from inside spitOut")
@@ -88,6 +89,8 @@ def OnPageIterationOfComupdate():
 
 
 print("********Celery Code End*********")
+"""
+
 
 CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
 
