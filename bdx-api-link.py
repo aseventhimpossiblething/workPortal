@@ -7,7 +7,7 @@ import BidOpAssist
 import fileHandler
 import redis
 import os
-import task
+import taskque
 from redis import Redis
 
 from flask import Flask, Markup, render_template, request
@@ -21,10 +21,12 @@ app = Flask(__name__)
 
 
 
+
+
 #DATABASE_URL = os.environ['DATABASE_URL']
 
 
-#app = Flask(__name__)   # Flask constructor
+#application = Flask(__name__)   # Flask constructor
 #app.config['MAX_CONTENT_LENGTH'] = 1000 * 1024 * 1024
 
 
@@ -54,7 +56,7 @@ app = Flask(__name__)
 
 
 
-print(os.environ['REDIS_URL'])
+#print(os.environ['REDIS_URL'])
 
 app.config['CELERY_BROKER_URL'] = os.environ['REDIS_URL']
 app.config['CELERY_RESULT_BACKEND'] = os.environ['REDIS_URL']
@@ -62,6 +64,20 @@ app.config['CELERY_RESULT_BACKEND'] = os.environ['REDIS_URL']
 
 celery = Celery(app.name, broker=os.environ['REDIS_URL'])
 celery.conf.update(app.config)
+
+def make_celery(app):
+    celery = Celery(app.import_name, broker=app.config['CELERY_BROKER_URL'])
+    celery.conf.update(app.config)
+    TaskBase = celery.Task
+    class ContextTask(TaskBase):
+        abstract = True
+        def __call__(self, *args, **kwargs):
+            with app.app_context():
+                return TaskBase.__call__(self, *args, **kwargs)
+    celery.task = ContextTask
+    return celery
+
+
 
 @celery.task
 def CelTest():
