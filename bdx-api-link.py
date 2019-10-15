@@ -17,6 +17,10 @@ from sklearn.ensemble import RandomForestRegressor
 app = Flask(__name__)
 
 
+def add(x,y):
+  return x+y
+
+
 #DATABASE_URL = os.environ['DATABASE_URL']
 
 
