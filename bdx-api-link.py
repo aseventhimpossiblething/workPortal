@@ -16,6 +16,9 @@ import psycopg2
 from sklearn.ensemble import RandomForestRegressor
 app = Flask(__name__)
 
+@celery.task
+def CelTest():
+  print("CelTest is testing")
 
 def add(x,y):
   return x+y
