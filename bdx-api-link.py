@@ -76,6 +76,7 @@ def make_celery(app):
                 return TaskBase.__call__(self, *args, **kwargs)
     celery.task = ContextTask
     return celery
+make_celery(app)
 
 
 
