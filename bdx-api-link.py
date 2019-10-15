@@ -63,7 +63,7 @@ app.config['CELERY_RESULT_BACKEND'] = os.environ['REDIS_URL']
 celery = Celery(app.name, broker=os.environ['REDIS_URL'])
 celery.conf.update(app.config)
 
-"""
+
 def make_celery(app):
     celery = Celery(app.import_name, broker=app.config['CELERY_BROKER_URL'])
     celery.conf.update(app.config)
@@ -76,7 +76,7 @@ def make_celery(app):
     celery.Task = ContextTask
     return celery
 make_celery(app)
-"""
+
 
 
 @celery.task
