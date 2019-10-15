@@ -60,11 +60,10 @@ app = Flask(__name__)
 
 app.config['CELERY_BROKER_URL'] = os.environ['REDIS_URL']
 app.config['CELERY_RESULT_BACKEND'] = os.environ['REDIS_URL']
-
-
 celery = Celery(app.name, broker=os.environ['REDIS_URL'])
 celery.conf.update(app.config)
 
+"""
 def make_celery(app):
     celery = Celery(app.import_name, broker=app.config['CELERY_BROKER_URL'])
     celery.conf.update(app.config)
@@ -77,16 +76,18 @@ def make_celery(app):
     celery.Task = ContextTask
     return celery
 make_celery(app)
-
+"""
 
 
 @celery.task
 def CelTest():
   print("CelTest is testing")
   return ("Returned Value from CelTest")
-print(CelTest.delay())
-print(CelTest.delay().state)
+task=CelTest.delay()
+#print(CelTest.delay())
+#print(CelTest.delay().state)
 #print(CelTest)
+print(task)
 
 
 def add(x,y):
