@@ -7,7 +7,7 @@ import BidOpAssist
 import fileHandler
 import redis
 import os
-import Task
+import task
 from redis import Redis
 
 from flask import Flask, Markup, render_template, request
