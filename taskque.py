@@ -11,7 +11,7 @@ from redis import Redis
 
 
 
-print("Task loaded")
+#print("Task loaded")
 """
 print(os.environ['REDIS_URL'])
 
