@@ -67,8 +67,9 @@ celery.conf.update(app.config)
 def CelTest():
   print("CelTest is testing")
   return ("returned Value")
-#print(CelTest())
-print(CelTest)
+print(CelTest())
+#print(CelTest)
+
 
 def add(x,y):
   return x+y
