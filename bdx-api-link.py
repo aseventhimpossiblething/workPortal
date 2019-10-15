@@ -68,7 +68,7 @@ def CelTest():
   print("CelTest is testing")
   return ("Returned Value from CelTest")
 print(CelTest.delay())
-CelTest.delay().state()
+print(CelTest.delay().state())
 #print(CelTest)
 
 
