@@ -8,7 +8,7 @@ import fileHandler
 import redis
 import os
 from redis import Redis
-form celery import Celery
+from celery import Celery
 
 
 app = Celery('taskque', broker=os.environ['REDIS_URL'])
