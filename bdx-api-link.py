@@ -66,8 +66,8 @@ celery.conf.update(app.config)
 @celery.task
 def CelTest():
   print("CelTest is testing")
-  return ("returned Value")
-print(CelTest())
+  return ("Returned Value from CelTest")
+print(CelTest().delay())
 #print(CelTest)
 
 
