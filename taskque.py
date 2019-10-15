@@ -14,7 +14,7 @@ from celery import Celery
 app = Celery('taskque', broker=os.environ['REDIS_URL'])
 def initiLjov():
   print("tasque File Running initiJoV")
-initijoV()  
+initiLjoV()  
   
 
 #app.config['CELERY_BROKER_URL'] = os.environ['REDIS_URL']
