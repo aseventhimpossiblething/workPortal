@@ -11,15 +11,15 @@ from redis import Redis
 from celery import Celery
 from flask import Flask
 
-the_redis=redis.from_url(os.environ.get("REDIS_URL"))
-print(the_redis)
+the_redis=os.environ.get("REDIS_URL")
+#print(the_redis)
 
 #print("THIS SHOWS AS app <<<<<  in main doc",app)
 def make_celery(app):
     celery = Celery(
         app.import_name,
-        backend=app.config['CELERY_RESULT_BACKEND'],
-        broker=app.config['CELERY_BROKER_URL']
+        backend=the_redis,
+        broker=the_redis
     )
     celery.conf.update(app.config)
 
