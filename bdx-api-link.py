@@ -17,6 +17,7 @@ from celery import Celery
 import psycopg2
 from sklearn.ensemble import RandomForestRegressor
 app = Flask(__name__)
+print(app)
 
 
 
@@ -57,7 +58,7 @@ app = Flask(__name__)
 
 
 #print(os.environ['REDIS_URL'])
-
+"""
 app.config['CELERY_BROKER_URL'] = os.environ['REDIS_URL']
 app.config['CELERY_RESULT_BACKEND'] = os.environ['REDIS_URL']
 celery = Celery(app.name, broker=os.environ['REDIS_URL'])
@@ -94,7 +95,7 @@ def add(x,y):
   return x+y
 
 
-"""
+
 app.conf.update(BROKER_URL=os.environ['REDIS_URL'],
                 CELERY_RESULT_BACKEND=os.environ['REDIS_URL'])
 """                
