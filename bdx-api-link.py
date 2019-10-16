@@ -24,7 +24,7 @@ from sklearn.ensemble import RandomForestRegressor
 app = Flask(__name__)
 #print("THIS SHOWS AS app <<<<<  in main doc",app)
 #print(app)
-redis.Redis().scan()
+redis.Redis().client_getname()
 
 
 
