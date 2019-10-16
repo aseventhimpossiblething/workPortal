@@ -1,5 +1,5 @@
 web: gunicorn bdx-api-link:app
-celery: celery -A tasque worker 
+celery: celery -A bdx-api-link.tasque worker 
 
 
 
