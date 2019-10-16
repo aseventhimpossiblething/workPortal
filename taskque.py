@@ -52,7 +52,7 @@ def initiLjoV():
 #print("initiLjoV State 1",run_initiLjoV.state)
 #redis.Redis().flushdb()
 #print("ended redis")
-print(redis.dbsize())
+print(redis.scan())
 """
 print("initiLjoV State 2",run_initiLjoV.state)
 print("initiLjoV State 3",run_initiLjoV.state)
