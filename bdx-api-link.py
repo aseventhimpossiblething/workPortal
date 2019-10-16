@@ -11,7 +11,7 @@ import os
 from redis import Redis
 the_redis=redis.from_url(os.environ.get("REDIS_URL"))
 
-print("redis.from_url(os.environ.get("REDIS_URL"))",the_redis)
+print('redis.from_url(os.environ.get("REDIS_URL"))',the_redis)
 
 print(os.environ['REDIS_URL'],os.environ['REDIS_URL'])
 
