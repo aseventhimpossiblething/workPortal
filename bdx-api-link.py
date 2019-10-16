@@ -8,7 +8,7 @@ import fileHandler
 import redis
 import os
 import taskque
-from redis import Redis
+#from redis import Redis
 #the_redis=redis.from_url(os.environ.get("REDIS_URL"))
 
 #print('redis.from_url(os.environ.get("REDIS_URL"))',the_redis)
