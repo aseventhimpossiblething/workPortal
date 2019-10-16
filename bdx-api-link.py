@@ -7,13 +7,13 @@ import BidOpAssist
 import fileHandler
 import redis
 import os
-#import taskque
+import taskque
 from redis import Redis
-the_redis=redis.from_url(os.environ.get("REDIS_URL"))
+#the_redis=redis.from_url(os.environ.get("REDIS_URL"))
 
-print('redis.from_url(os.environ.get("REDIS_URL"))',the_redis)
+#print('redis.from_url(os.environ.get("REDIS_URL"))',the_redis)
 
-print("os.environ['REDIS_URL']",os.environ['REDIS_URL'])
+#print("os.environ['REDIS_URL']",os.environ['REDIS_URL'])
 
 from flask import Flask, Markup, render_template, request
 from celery import Celery
@@ -22,7 +22,7 @@ from celery import Celery
 import psycopg2
 from sklearn.ensemble import RandomForestRegressor
 app = Flask(__name__)
-print("THIS SHOWS AS app <<<<<  in main doc",app)
+#print("THIS SHOWS AS app <<<<<  in main doc",app)
 #print(app)
 
 
