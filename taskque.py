@@ -38,7 +38,7 @@ flask_app.config.update(
 )
 celery = make_celery(flask_app)
 
-print("THIS SHOWS AS app >>>>> after context is set",app)
+#print("THIS SHOWS AS app >>>>> after context is set",app)
 
   
 @celery.task()
