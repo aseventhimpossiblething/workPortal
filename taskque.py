@@ -11,7 +11,7 @@ from redis import Redis
 from celery import Celery
 from flask import Flask
 
-
+print("THIS SHOWS AS app <<<<< before context is set",app)
 def make_celery(app):
     celery = Celery(
         app.import_name,
@@ -37,6 +37,8 @@ flask_app.config.update(
     CELERY_RESULT_BACKEND='redis://localhost:6379'
 )
 celery = make_celery(flask_app)
+
+print("THIS SHOWS AS app >>>>> after context is set",app)
 
   
 @celery.task()
