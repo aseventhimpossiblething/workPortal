@@ -39,7 +39,7 @@ flask_app.config.update(
     CELERY_BROKER_URL=the_redis,
     CELERY_RESULT_BACKEND=the_redis
 )
-#celery = make_celery(flask_app)
+celery = make_celery(flask_app)
 #print("print celery",celery)
 
 #print("THIS SHOWS AS app >>>>> after context is set",app)
