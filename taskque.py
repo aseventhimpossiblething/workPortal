@@ -37,6 +37,7 @@ flask_app.config.update(
     CELERY_RESULT_BACKEND='redis://localhost:6379'
 )
 celery = make_celery(flask_app)
+print("print celery",celery)
 
 #print("THIS SHOWS AS app >>>>> after context is set",app)
 
