@@ -48,8 +48,15 @@ def initiLjoV():
   Rval="return value"
   return Rval
 run_initiLjoV=initiLjoV.delay() 
-print("Joyfully Running",run_initiLjoV)
-print("result",run_initiLjoV.result)
+print("initiLjoV State 1",run_initiLjoV.state)
+print("initiLjoV State 2",run_initiLjoV.state)
+print("initiLjoV State 3",run_initiLjoV.state)
+print("initiLjoV State 4",run_initiLjoV.state)
+print("initiLjoV State 5",run_initiLjoV.state)
+print("initiLjoV State 6",run_initiLjoV.state)
+print("initiLjoV State 7",run_initiLjoV.state)
+print("initiLjoV State 8",run_initiLjoV.state)
+#print("result",run_initiLjoV.result)
 
 
 
