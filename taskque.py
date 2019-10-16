@@ -52,7 +52,7 @@ def initiLjoV():
   return Rval
 run_initiLjoV=initiLjoV.delay() 
 print("Joyfully Running",run_initiLjoV)
-print(run_initiLjoV.get())
+print("result",run_initiLjoV.result())
 
 
 
