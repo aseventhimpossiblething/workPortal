@@ -17,7 +17,8 @@ from celery import Celery
 import psycopg2
 from sklearn.ensemble import RandomForestRegressor
 app = Flask(__name__)
-print(app)
+print("THIS SHOWS AS app <<<<<  in main doc",app)
+#print(app)
 
 
 
