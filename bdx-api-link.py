@@ -13,7 +13,7 @@ the_redis=redis.from_url(os.environ.get("REDIS_URL"))
 
 print('redis.from_url(os.environ.get("REDIS_URL"))',the_redis)
 
-print(os.environ['REDIS_URL'],os.environ['REDIS_URL'])
+print("os.environ['REDIS_URL']",os.environ['REDIS_URL'])
 
 from flask import Flask, Markup, render_template, request
 from celery import Celery
