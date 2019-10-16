@@ -50,34 +50,10 @@ def initiLjoV():
   print("tasque File Running initiJoV")
   Rval="return value"
   return Rval
-initiLjoV.delay()  
+run_initiLjoV=initiLjoV.delay() 
+print(run_initiLjoV)
 
 
 
-
-"""
-app = Celery('taskque', broker=os.environ['REDIS_URL'])
-@app.task
-def initiLjoV():
-  print("tasque File Running initiJoV")
-initiLjoV()  
-  
-
-#app.config['CELERY_BROKER_URL'] = os.environ['REDIS_URL']
-#app.config['CELERY_RESULT_BACKEND'] = os.environ['REDIS_URL']
-#celery = Celery(app.name, broker=os.environ['REDIS_URL'])
-#celery.conf.update(app.config)
-
-#print("Task loaded")
-
-print(os.environ['REDIS_URL'])
-
-app.config['CELERY_BROKER_URL'] = os.environ['REDIS_URL']
-app.config['CELERY_RESULT_BACKEND'] = os.environ['REDIS_URL']
-
-
-celery = Celery(app.name, broker=os.environ['REDIS_URL'])
-celery.conf.update(app.config)
-"""
 
 
