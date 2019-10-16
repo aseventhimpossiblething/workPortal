@@ -12,9 +12,9 @@ from celery import Celery
 from flask import Flask
 
 the_redis=os.environ.get("REDIS_URL")
-#print(the_redis)
 
-#print("THIS SHOWS AS app <<<<<  in main doc",app)
+
+
 def make_celery(app):
     celery = Celery(
         app.import_name,
@@ -40,9 +40,6 @@ flask_app.config.update(
     CELERY_RESULT_BACKEND=the_redis
 )
 celery = make_celery(flask_app)
-#print("print celery",celery)
-
-#print("THIS SHOWS AS app >>>>> after context is set",app)
 
   
 @celery.task()
@@ -52,7 +49,7 @@ def initiLjoV():
   return Rval
 run_initiLjoV=initiLjoV.delay() 
 print("Joyfully Running",run_initiLjoV)
-print("result",run_initiLjoV.result())
+print("result",run_initiLjoV.result)
 
 
 
