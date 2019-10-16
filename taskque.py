@@ -48,6 +48,7 @@ celery = make_celery(flask_app)
 @celery.task()
 def initiLjoV():
   print("tasque File Running initiJoV")
+return "return value"
 initiLjoV()  
 
 
