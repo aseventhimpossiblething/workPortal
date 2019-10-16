@@ -12,6 +12,7 @@ from celery import Celery
 
 
 app = Celery('taskque', broker=os.environ['REDIS_URL'])
+@app.task
 def initiLjoV():
   print("tasque File Running initiJoV")
 initiLjoV()  
