@@ -11,7 +11,7 @@ from redis import Redis
 from celery import Celery
 from flask import Flask
 
-#print("THIS SHOWS AS app <<<<< before context is set",app)
+print("THIS SHOWS AS app <<<<<  in main doc",app)
 def make_celery(app):
     celery = Celery(
         app.import_name,
