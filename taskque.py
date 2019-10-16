@@ -50,7 +50,7 @@ def initiLjoV():
   print("tasque File Running initiJoV")
   Rval="return value"
   return Rval
-initiLjoV()  
+initiLjoV.delay()  
 
 
 
