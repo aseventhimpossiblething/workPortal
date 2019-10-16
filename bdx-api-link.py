@@ -59,77 +59,13 @@ app = Flask(__name__)
 
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 #{{CommonTag}}-{{pagetitle}}
-#print("*********Celery Code Begin********")
 
 
 
-#print(os.environ['REDIS_URL'])
-"""
-app.config['CELERY_BROKER_URL'] = os.environ['REDIS_URL']
-app.config['CELERY_RESULT_BACKEND'] = os.environ['REDIS_URL']
-celery = Celery(app.name, broker=os.environ['REDIS_URL'])
-celery.conf.update(app.config)
-
-
-def make_celery(app):
-    celery = Celery(app.import_name, broker=app.config['CELERY_BROKER_URL'])
-    celery.conf.update(app.config)
-    TaskBase = celery.Task
-    class ContextTask(TaskBase):
-        abstract = True
-        def __call__(self, *args, **kwargs):
-            with app.app_context():
-                return TaskBase.__call__(self, *args, **kwargs)
-    celery.Task = ContextTask
-    return celery
-make_celery(app)
 
 
 
-@celery.task
-def CelTest():
-  print("CelTest is testing")
-  return ("Returned Value from CelTest")
-task=CelTest.delay()
-#print(CelTest.delay())
-#print(CelTest.delay().state)
-#print(CelTest)
-print(task)
 
-
-def add(x,y):
-  return x+y
-
-
-
-app.conf.update(BROKER_URL=os.environ['REDIS_URL'],
-                CELERY_RESULT_BACKEND=os.environ['REDIS_URL'])
-"""                
-"""
-@celery.task
-def spitOut():
-    print("this is the print command from inside spitOut")
-    return 0
-   
-
-theCall=spitOut.delay()
-
-
-print("theCall",theCall)
-print("theCall.status1",theCall.status)
-print("theCall.result",theCall.result)
-print("theCall.ready()1",theCall.ready())
-print("theCall.status2",theCall.status)
-
-
-
-@celery.task
-def OnPageIterationOfComupdate():
-    print("++++++ Blank Block ")
-
-
-print("********Celery Code End*********")
-"""
 
 
 CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
@@ -158,9 +94,6 @@ def BidOPUpload():
 
 @app.route('/CommunityDataFrame')
 def CommunityDataFrame():
-    print("From Comm Data should be 9*****************************************",add(5,4))
-    print("From Comm Data should be 9*****************************************",add(5,4))
-    #the functon for col1
     return render_template('CommunityDataframe.html',pagetitle='Community',CommonTag=CommonTagAll,col1="holding")
 @app.route('/DataFrameCss')
 def DataFrameCss():
@@ -170,8 +103,6 @@ def DataFrameCss():
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
     #CommunityUpdatesProcess.initialCommUpdatProcess()
-    print("from commudates Form fill out sheet Data should be 8*******************************************",add(5,3))
-    print("From Commpdates Form fill out sheet Data should be 8*************************Function of page load*********************",add(5,4))
     return render_template('CommunitiesForm.html',pagetitle="Community Updates",CommonTag=CommonTagAll)
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
