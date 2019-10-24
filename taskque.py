@@ -47,7 +47,7 @@ def initiLjoV():
   print("tasque File Running initiJoV")
   Rval="return value"
   return Rval
-initiLjoV().delay()
+initiLjoV.delay()
 
 #redis.Redis().client_getname()
 #run_initiLjoV=initiLjoV.delay()
