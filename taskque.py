@@ -47,8 +47,16 @@ def initiLjoV():
   print("tasque File Running initiJoV")
   Rval="return value"
   return Rval
-redis.Redis().client_getname()
+#redis.Redis().client_getname()
 #run_initiLjoV=initiLjoV.delay()
+
+
+
+
+r = redis.Redis()
+r.mset({"Croatia": "Zagreb", "Bahamas": "Nassau"})
+
+
 
 #print("initiLjoV State 1",run_initiLjoV.state)
 #redis.Redis().flushdb()
