@@ -53,7 +53,7 @@ def initiLjoV():
 
 
 
-pritn(redis.Redis())
+print(redis.Redis())
 
 
 
