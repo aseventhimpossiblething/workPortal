@@ -57,7 +57,7 @@ print(redis.Redis)
 print(redis)
 
 
-print(redis.Redis().client_id)
+print('This is the client id',redis.Redis().client_id)
 
 
 
