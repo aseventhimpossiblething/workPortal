@@ -46,7 +46,7 @@ celery = make_celery(flask_app)
 def Zfunc():
     print("IN ZFUNC")
     return "33"
-Zfunc().delay()
+Zfunc.delay()
 
 @celery.task()
 def initiLjoV():
