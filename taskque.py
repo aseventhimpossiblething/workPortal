@@ -11,8 +11,8 @@ from redis import Redis
 from celery import Celery
 from flask import Flask
 
-the_redis=os.environ.get("REDIS_URL")
-
+#the_redis=os.environ.get("REDIS_URL")
+the_redis=redis.from_url(os.environ.get("REDIS_URL"))
 
 
 def make_celery(app):
