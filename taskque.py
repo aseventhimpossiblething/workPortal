@@ -45,7 +45,7 @@ celery = make_celery(flask_app)
 @celery.task()
 def Zfunc():
     #print("IN ZFUNC")
-    return 33
+    return {'Answer':'string'}
 #Zfunc.delay()
 Zfunc.apply_async()
 @celery.task()
