@@ -53,8 +53,8 @@ def initiLjoV():
 
 
 
-r = redis.Redis()
-r.mset({"Croatia": "Zagreb", "Bahamas": "Nassau"})
+redis.Redis()
+
 
 
 
