@@ -52,8 +52,8 @@ def initiLjoV():
 
 
 
-
 print(redis.Redis())
+print(redis.Redis().client_id())
 
 
 
