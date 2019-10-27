@@ -13,7 +13,10 @@ from flask import Flask
 
 #the_redis=os.environ.get("REDIS_URL")
 the_redis=redis.from_url(os.environ.get("REDIS_URL"))
-
+print("REDIS_URL",REDIS_URL)
+print('os.environ.get("REDIS_URL")',os.environ.get("REDIS_URL"))
+print('redis.from_url(os.environ.get("REDIS_URL"))',redis.from_url(os.environ.get("REDIS_URL")))
+"""
 
 def make_celery(app):
     celery = Celery(
@@ -40,15 +43,15 @@ flask_app.config.update(
     CELERY_RESULT_BACKEND=the_redis
 )
 celery = make_celery(flask_app)
-
- 
-@celery.task()
+"""
+cel=celery.Celery("Tasks", )
+@cel.task()
 def Zfunc():
     #print("IN ZFUNC")
     return {'Answer':'string'}
 #Zfunc.delay()
 Zfunc.apply_async()
-@celery.task()
+@cel.task()
 def initiLjoV():
   print("tasque File Running initiJoV")
   Rval="return value"
