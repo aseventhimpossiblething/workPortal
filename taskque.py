@@ -51,22 +51,22 @@ def Zfunc():
     #print("IN ZFUNC")
     return {'Answer':'string'}
 #Zfunc.delay()
-Zfunc.apply_async()
+#Zfunc.apply_async()
 @cel.task()
 def initiLjoV():
   print("tasque File Running initiJoV")
   Rval="return value"
   return Rval
-initiLjoV().delay()
+#initiLjoV().delay()
 
 #redis.Redis().client_getname()
 #run_initiLjoV=initiLjoV.delay()
 
 
 
-print(redis.Redis())
-print(redis.Redis)
-print(redis)
+print('redis.Redis()',redis.Redis())
+print('redis.Redis',redis.Redis)
+print('redis',redis)
 
 
 print('This is the client id',redis.Redis().client_id)
