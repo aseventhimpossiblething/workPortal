@@ -58,9 +58,9 @@ cel=Celery("Tasks",CELERY_BROKER_URL=the_redis)
 def zfunc():
     print("--------------PRINTED FROM IN ZFUNC")
     return 42
-#zfunc
+zfunc.delay()
 #zfunc()
-print("zfunc.delay()------",zfunc.delay())
+#print("zfunc.delay()------",zfunc.delay())
 #Zfunc.delay()
 #Zfunc.apply_async()
 @cel.task()
