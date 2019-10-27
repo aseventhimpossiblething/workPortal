@@ -14,8 +14,9 @@ from flask import Flask
 #the_redis=os.environ.get("REDIS_URL")
 the_redis=redis.from_url(os.environ.get("REDIS_URL"))
 print("REDIS_URL",REDIS_URL)
-print('os.environ.get("REDIS_URL")',os.environ.get("REDIS_URL"))
+
 print('redis.from_url(os.environ.get("REDIS_URL"))',redis.from_url(os.environ.get("REDIS_URL")))
+print('os.environ.get("REDIS_URL")',os.environ.get("REDIS_URL"))
 """
 
 def make_celery(app):
