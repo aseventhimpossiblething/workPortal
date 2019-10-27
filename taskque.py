@@ -48,8 +48,9 @@ celery = make_celery(flask_app)
 cel=Celery("Tasks",CELERY_BROKER_URL=the_redis,CELERY_RESULT_BACKEND=the_redis)
 @cel.task()
 def Zfunc():
-    #print("IN ZFUNC")
-    return {'Answer':'string'}
+    print("--------------PRINTED FROM IN ZFUNC")
+    return 42
+print(zfunc())
 #Zfunc.delay()
 #Zfunc.apply_async()
 @cel.task()
