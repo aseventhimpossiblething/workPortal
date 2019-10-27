@@ -59,7 +59,7 @@ def zfunc():
     return 42
 #zfunc
 #zfunc()
-print(zfunc())
+#print(zfunc())
 #Zfunc.delay()
 #Zfunc.apply_async()
 @cel.task()
@@ -73,11 +73,11 @@ def initiLjoV():
 #run_initiLjoV=initiLjoV.delay()
 
 
-
+"""
 print('redis.Redis()',redis.Redis())
 print('redis.Redis',redis.Redis)
 print('redis',redis)
-
+"""
 
 print('This is the client id',redis.Redis().client_id)
 
