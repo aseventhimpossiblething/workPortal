@@ -60,7 +60,7 @@ def zfunc():
     return 42
 #zfunc
 #zfunc()
-print(zfunc.delay())
+print("zfunc.delay()------",zfunc.delay())
 #Zfunc.delay()
 #Zfunc.apply_async()
 @cel.task()
