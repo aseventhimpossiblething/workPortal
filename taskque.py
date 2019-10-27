@@ -17,12 +17,12 @@ from flask import Flask
 
     
 
-the_redis=os.environ.get("REDIS_URL")
-#the_redis=redis.from_url(os.environ.get("REDIS_URL"))
+#the_redis=os.environ.get("REDIS_URL")
+the_redis=redis.from_url(os.environ.get("REDIS_URL"))
 #print("REDIS_URL",REDIS_URL)
 
-print('current - setting 1 - os.environ.get("REDIS_URL")',os.environ.get("REDIS_URL"))
-print('setting 2 - redis.from_url(os.environ.get("REDIS_URL"))__:-->',redis.from_url(os.environ.get("REDIS_URL")))
+print('setting 1 - os.environ.get("REDIS_URL")',os.environ.get("REDIS_URL"))
+print('current - setting 2 - redis.from_url(os.environ.get("REDIS_URL"))__:-->',redis.from_url(os.environ.get("REDIS_URL")))
 
 """
 
