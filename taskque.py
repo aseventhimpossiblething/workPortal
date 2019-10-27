@@ -14,9 +14,7 @@ from flask import Flask
 
 
 
-def ma():
-    print("-------------ma----------")
-ma()    
+
     
 
 the_redis=os.environ.get("REDIS_URL")
@@ -55,13 +53,13 @@ celery = make_celery(flask_app)
 """
 
 cel=Celery("Tasks",CELERY_BROKER_URL=the_redis,CELERY_RESULT_BACKEND=the_redis)
-#@cel.task()
-def Zfunc():
+@cel.task()
+def zfunc():
     print("--------------PRINTED FROM IN ZFUNC")
     return 42
 #zfunc
 #zfunc()
-#print(zfunc())
+print(zfunc())
 #Zfunc.delay()
 #Zfunc.apply_async()
 @cel.task()
