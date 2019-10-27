@@ -15,7 +15,7 @@ from flask import Flask
 the_redis=redis.from_url(os.environ.get("REDIS_URL"))
 #print("REDIS_URL",REDIS_URL)
 
-print('redis.from_url(os.environ.get("REDIS_URL"))',redis.from_url(os.environ.get("REDIS_URL")))
+print('CUERRENT SETTING - redis.from_url(os.environ.get("REDIS_URL"))__:-->',redis.from_url(os.environ.get("REDIS_URL")))
 print('os.environ.get("REDIS_URL")',os.environ.get("REDIS_URL"))
 """
 
@@ -45,7 +45,7 @@ flask_app.config.update(
 )
 celery = make_celery(flask_app)
 """
-cel=celery.Celery("Tasks", )
+cel=Celery("Tasks",CELERY_BROKER_URL=the_redis,CELERY_RESULT_BACKEND=the_redis)
 @cel.task()
 def Zfunc():
     #print("IN ZFUNC")
