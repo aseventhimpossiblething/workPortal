@@ -50,6 +50,7 @@ cel=Celery("Tasks",CELERY_BROKER_URL=the_redis,CELERY_RESULT_BACKEND=the_redis)
 def Zfunc():
     print("--------------PRINTED FROM IN ZFUNC")
     return 42
+zfunc
 zfunc()
 #print(zfunc())
 #Zfunc.delay()
