@@ -52,7 +52,7 @@ flask_app.config.update(
 celery = make_celery(flask_app)
 """
 
-cel=Celery("Tasks",CELERY_BROKER_URL=the_redis,CELERY_RESULT_BACKEND=the_redis)
+cel=Celery("Tasks",CELERY_BROKER_URL=the_redis)
 @cel.task()
 def zfunc():
     print("--------------PRINTED FROM IN ZFUNC")
