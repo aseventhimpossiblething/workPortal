@@ -21,44 +21,17 @@ from flask import Flask
 the_redis=redis.from_url(os.environ.get("REDIS_URL"))
 #print("REDIS_URL",REDIS_URL)
 
-print('setting 1 - os.environ.get("REDIS_URL")',os.environ.get("REDIS_URL"))
-print('current - setting 2 - redis.from_url(os.environ.get("REDIS_URL"))__:-->',redis.from_url(os.environ.get("REDIS_URL")))
-
-"""
-
-def make_celery(app):
-    celery = Celery(
-        app.import_name,
-        backend=the_redis,
-        broker=the_redis
-    )
-    celery.conf.update(app.config)
-
-    class ContextTask(celery.Task):
-        def __call__(self, *args, **kwargs):
-            with app.app_context():
-                return self.run(*args, **kwargs)
-
-    celery.Task = ContextTask
-    return celery
+#print('setting 1 - os.environ.get("REDIS_URL")',os.environ.get("REDIS_URL"))
+#print('current - setting 2 - redis.from_url(os.environ.get("REDIS_URL"))__:-->',redis.from_url(os.environ.get("REDIS_URL")))
 
 
-
-
-flask_app = Flask(__name__)
-flask_app.config.update(
-    CELERY_BROKER_URL=the_redis,
-    CELERY_RESULT_BACKEND=the_redis
-)
-celery = make_celery(flask_app)
-"""
 
 cel=Celery("Tasks",CELERY_BROKER_URL=the_redis)
 @cel.task()
 def zfunc():
     print("--------------PRINTED FROM IN ZFUNC")
     return 42
-zfunc.delay()
+zfunc.apply_async()
 #zfunc()
 #print("zfunc.delay()------",zfunc.delay())
 #Zfunc.delay()
