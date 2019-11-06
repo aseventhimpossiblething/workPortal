@@ -11,7 +11,7 @@ from redis import Redis
 from celery import Celery
 from flask import Flask
 
-print("++++++++++++++++++++++++++++++++++++",app.name)
+print("++++++++++++++++++++++++++++++++++++",app.name())
 
 
 
