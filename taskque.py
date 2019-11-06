@@ -12,7 +12,7 @@ from celery import Celery
 from flask import Flask
 
 #print("++++++++++++++++++++++++++++++++++++",app.name())
-print("++++++++++++++++++++++++++++++++++++",app.name)
+#print("++++++++++++++++++++++++++++++++++++",app.name)
 
 
 
@@ -34,7 +34,7 @@ cel=Celery("Tasks",CELERY_BROKER_URL=the_redis)
 def zfunc():
     print("--------------PRINTED FROM IN ZFUNC")
     return 42
-#zfunc.apply_async()
+zfunc.apply_async()
 #zfunc()
 #print("zfunc.delay()------",zfunc.delay())
 #Zfunc.delay()
