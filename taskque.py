@@ -16,7 +16,7 @@ from flask import Flask
 
 
 
-    
+print(Redis)    
 #the_redis='redis://localhost:6379/0'
 #the_redis=os.environ.get("REDIS_URL")
 the_redis=redis.from_url(os.environ.get("REDIS_URL"))
@@ -32,7 +32,7 @@ cel=Celery("Tasks",the_redis)
 def zfunc():
     print("--------------PRINTED FROM IN ZFUNC")
     return 42
-zfunc.apply_async()
+#zfunc.apply_async()
 #zfunc()
 #print("zfunc.delay()------",zfunc.delay())
 #Zfunc.delay()
