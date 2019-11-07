@@ -25,7 +25,7 @@ from flask import Flask
 #print('setting 1 - os.environ.get("REDIS_URL")',os.environ.get("REDIS_URL"))
 #print('current - setting 2 - redis.from_url(os.environ.get("REDIS_URL"))__:-->',redis.from_url(os.environ.get("REDIS_URL")))
 
-#cel=Celery("Tasks",the_redis)
+cel=Celery("Tasks",the_redis)
 #cel=Celery("Tasks", broker=the_redis)
 #cel=Celery("Tasks",CELERY_BROKER_URL=the_redis)
 @cel.task()
