@@ -18,7 +18,7 @@ from flask import Flask
 
 #print(Redis)    
 #the_redis='redis://localhost:6379/0'
-the_redis=os.environ.get("REDIS_URL")
+#the_redis=os.environ.get("REDIS_URL")
 #the_redis=redis.from_url(os.environ.get("REDIS_URL"))
 #print("the_redis",the_redis)
 
@@ -54,7 +54,7 @@ print('redis.Redis',redis.Redis)
 print('redis',redis)
 """
 
-print('This is the client id',redis.Redis().client_id)
+#print('This is the client id',redis.Redis().client_id)
 
 
 
