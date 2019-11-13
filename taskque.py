@@ -19,6 +19,7 @@ from flask import Flask
 #print(Redis)    
 #the_redis='redis://localhost:6379/0'
 the_redis=os.environ.get("REDIS_URL")
+print("Is this before after the first attempt to connect which is befor redis declaration?")
 #the_redis=redis.from_url(os.environ.get("REDIS_URL"))
 print("the_redis-----------------------",the_redis)
 
