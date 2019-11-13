@@ -19,14 +19,14 @@ from flask import Flask
 #print(Redis)    
 #the_redis='redis://localhost:6379/0'
 the_redis=os.environ.get("REDIS_URL")
-print("Is this before after the first attempt to connect which is befor redis declaration?")
+print("This is the first attempt to connect Next is the REDIS_URL print?")
 #the_redis=redis.from_url(os.environ.get("REDIS_URL"))
 print("the_redis-----------------------",the_redis)
 
 #print('setting 1 - os.environ.get("REDIS_URL")',os.environ.get("REDIS_URL"))
 #print('current - setting 2 - redis.from_url(os.environ.get("REDIS_URL"))__:-->',redis.from_url(os.environ.get("REDIS_URL")))
 
-cel=Celery(the_redis)
+cel=Celery("TaskName",the_redis)
 #cel=Celery("Tasks", broker=the_redis)
 #cel=Celery("Tasks",CELERY_BROKER_URL=the_redis)
 @cel.task()
