@@ -43,11 +43,12 @@ def initiLjoV():
   print("tasque File Running initiJoV")
   Rval="return value"
   return Rval
-#initiLjoV.delay()
+initiLjoV.delay()
+initiLjoV.state
 
 
 #redis.Redis().client_getname()
-run_initiLjoV=initiLjoV.delay()
+#run_initiLjoV=initiLjoV.delay()
 
 
 """
@@ -66,7 +67,7 @@ print('redis',redis)
 #print("ended redis")
 #print(redis.scan())
 
-print("initiLjoV State 2",run_initiLjoV.state)
+#print("initiLjoV State 2",run_initiLjoV.state)
 """
 print("initiLjoV State 3",run_initiLjoV.state)
 print("initiLjoV State 4",run_initiLjoV.state)
