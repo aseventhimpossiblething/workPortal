@@ -18,9 +18,9 @@ from flask import Flask
 
 #print(Redis)    
 #the_redis='redis://localhost:6379/0'
-#the_redis=os.environ.get("REDIS_URL")
+the_redis=os.environ.get("REDIS_URL")
 print("This is the first attempt to connect Next is the REDIS_URL print?")
-the_redis=redis.from_url(os.environ.get("REDIS_URL"))
+#the_redis=redis.from_url(os.environ.get("REDIS_URL"))
 print("the_redis-----------------------",the_redis)
 
 #print('setting 1 - os.environ.get("REDIS_URL")',os.environ.get("REDIS_URL"))
