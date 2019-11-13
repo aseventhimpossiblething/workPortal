@@ -73,7 +73,7 @@ print("initiLjoV State 6",run_initiLjoV.state)
 print("initiLjoV State 7",run_initiLjoV.state)
 print("initiLjoV State 8",run_initiLjoV.state)
 """
-#print("result",run_initiLjoV.result)
+print("result",run_initiLjoV.result)
 
 
 
