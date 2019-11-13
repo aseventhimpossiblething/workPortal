@@ -44,7 +44,7 @@ def initiLjoV():
   Rval="return value"
   return Rval
 initiLjoV.delay()
-initiLjoV.state
+initiLjoV.state()
 
 
 #redis.Redis().client_getname()
