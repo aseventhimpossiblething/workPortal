@@ -65,8 +65,9 @@ print('redis',redis)
 #redis.Redis().flushdb()
 #print("ended redis")
 #print(redis.scan())
-"""
+
 print("initiLjoV State 2",run_initiLjoV.state)
+"""
 print("initiLjoV State 3",run_initiLjoV.state)
 print("initiLjoV State 4",run_initiLjoV.state)
 print("initiLjoV State 5",run_initiLjoV.state)
