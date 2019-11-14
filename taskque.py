@@ -49,7 +49,7 @@ initiLjoV.delay()
 run_initiLjoV=initiLjoV.delay()
 taskId=run_initiLjoV.task_id
 print("taskId.....",taskId)
-run_initiLjoV.result.state
+run_initiLjoV.result.state()
 
 #AsyncResult(taskId).ready()
 print('ready...',run_initiLjoV.ready())
