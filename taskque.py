@@ -10,7 +10,7 @@ import os
 from redis import Redis
 from celery import Celery
 from flask import Flask
-from celery.result import AsyncResult
+#from celery.result import AsyncResult
 
 #print("++++++++++++++++++++++++++++++++++++",app.name())
 #print("++++++++++++++++++++++++++++++++++++",app.name)
@@ -48,7 +48,7 @@ initiLjoV.delay()
 run_initiLjoV=initiLjoV.delay()
 taskId=run_initiLjoV.task_id
 AsyncResult(taskId)
-AsyncResult(taskId).status()
+#AsyncResult(taskId).status()
 
 #run_initiLjoV.state
 #run_initiLjoV.status()
