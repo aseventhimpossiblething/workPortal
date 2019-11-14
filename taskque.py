@@ -22,9 +22,9 @@ from celery.result import ResultBase
 #the_redis='redis://localhost:6379/0'
 the_redis=os.environ.get("REDIS_URL")
 print("This is the first attempt to connect Next is the REDIS_URL print?")
-#the_redis=redis.from_url(os.environ.get("REDIS_URL"))
-print("the_redis-----------------------",the_redis)
 
+
+#print("the_redis-----------------------",the_redis)
 #print('setting 1 - os.environ.get("REDIS_URL")',os.environ.get("REDIS_URL"))
 #print('current - setting 2 - redis.from_url(os.environ.get("REDIS_URL"))__:-->',redis.from_url(os.environ.get("REDIS_URL")))
 
@@ -50,6 +50,17 @@ run_initiLjoV=initiLjoV.delay()
 taskId=run_initiLjoV.task_id
 print("taskId.....",taskId)
 run_initiLjoV.result
+
+
+
+
+
+
+
+
+
+
+
 #run_initiLjoV.result.state()
 #print('result...',run_initiLjoV.result)
 
