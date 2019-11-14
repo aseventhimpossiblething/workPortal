@@ -50,7 +50,7 @@ run_initiLjoV=initiLjoV.delay()
 taskId=run_initiLjoV.task_id
 print("taskId.....",taskId)
 #AsyncResult(taskId).ready()
-run_initiLjoV.ready().status
+run_initiLjoV.ready().status()
 
 
 #AsyncResult(taskId).status()
