@@ -44,9 +44,11 @@ def initiLjoV():
   Rval="return value"
   return Rval
 initiLjoV.delay()
+run_initiLjoV=initiLjoV.delay()
+
 #initiLjoV.delay().state
 #initiLjoV.delay().status
-initiLjoV.delay().result
+#initiLjoV.delay().result
 
 
 #redis.Redis().client_getname()
