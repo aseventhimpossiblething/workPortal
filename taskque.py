@@ -53,7 +53,7 @@ print("taskId.....",taskId)
 print('result...',run_initiLjoV.result)
 
 #AsyncResult(taskId).ready()
-print('ready...',run_initiLjoV.ready())
+#print('ready...',run_initiLjoV.ready())
 
 
 #AsyncResult(taskId).status()
