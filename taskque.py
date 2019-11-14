@@ -44,7 +44,7 @@ def initiLjoV():
   Rval="return value"
   return Rval
 initiLjoV.delay()
-initiLjoV.delay().state
+#initiLjoV.delay().state
 initiLjoV.delay().status
 initiLjoV.delay().result
 
