@@ -45,7 +45,7 @@ def initiLjoV():
   return Rval
 initiLjoV.delay()
 #initiLjoV.delay().state
-initiLjoV.delay().status
+#initiLjoV.delay().status
 initiLjoV.delay().result
 
 
