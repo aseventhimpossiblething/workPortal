@@ -29,7 +29,7 @@ print("the_redis-----------------------",the_redis)
 #print('current - setting 2 - redis.from_url(os.environ.get("REDIS_URL"))__:-->',redis.from_url(os.environ.get("REDIS_URL")))
 
 #cel=Celery("TaskName",the_redis)
-cel=Celery("Tasks", broker=the_redis)
+cel=Celery("Tasks", broker=the_redis, backend=the_redis)
 #cel=Celery("Tasks",CELERY_BROKER_URL=the_redis)
 @cel.task()
 def zfunc():
@@ -50,7 +50,7 @@ run_initiLjoV=initiLjoV.delay()
 taskId=run_initiLjoV.task_id
 print("taskId.....",taskId)
 #AsyncResult(taskId).ready()
-#run_initiLjoV
+run_initiLjoV.ready()
 
 
 #AsyncResult(taskId).status()
