@@ -48,7 +48,7 @@ initiLjoV.delay()
 run_initiLjoV=initiLjoV.delay()
 taskId=run_initiLjoV.task_id
 AsyncResult(taskId)
-AsyncResult(taskId).status
+AsyncResult(taskId).status()
 
 #run_initiLjoV.state
 #run_initiLjoV.status()
