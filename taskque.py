@@ -11,6 +11,7 @@ from redis import Redis
 from celery import Celery
 from flask import Flask
 from celery.result import AsyncResult
+from celery.result import ResultBase
 
 #print("++++++++++++++++++++++++++++++++++++",app.name())
 #print("++++++++++++++++++++++++++++++++++++",app.name)
