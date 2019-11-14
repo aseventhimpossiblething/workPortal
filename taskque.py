@@ -21,7 +21,7 @@ from celery.result import ResultBase
 #print(Redis)    
 #the_redis='redis://localhost:6379/0'
 the_redis=os.environ.get("REDIS_URL")
-print("This is the first attempt to connect Next is the REDIS_URL print?")
+#print("This is the first attempt to connect Next is the REDIS_URL print?")
 
 
 #print("the_redis-----------------------",the_redis)
