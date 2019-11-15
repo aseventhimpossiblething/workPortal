@@ -56,7 +56,7 @@ initiLjoV.delay()
 run_initiLjoV=initiLjoV.delay()
 taskId=run_initiLjoV.task_id
 print("taskId.....",taskId)
-run_initiLjoV.result
+#run_initiLjoV.result
 
 
 
