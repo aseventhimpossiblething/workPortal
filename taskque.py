@@ -37,7 +37,7 @@ cel=Celery("Tasks", broker=the_redis, backend=the_redis)
 def zfunc():
     print("--------------PRINTED FROM IN ZFUNC")
     return 42
-#zfunc.apply_async()
+zfunc.apply_async()
 
 
 print("____________________________+++++++++++++++++(3)++++++++++++++_________________________________")
@@ -56,7 +56,7 @@ initiLjoV.delay()
 run_initiLjoV=initiLjoV.delay()
 taskId=run_initiLjoV.task_id
 print("taskId.....",taskId)
-#run_initiLjoV.result
+run_initiLjoV.result
 
 
 
