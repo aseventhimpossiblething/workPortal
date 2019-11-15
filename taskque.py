@@ -13,15 +13,17 @@ from flask import Flask
 from celery.result import AsyncResult
 from celery.result import ResultBase
 
-print("++++++++++++++++++++++++++++++++++++",app.name())
-print("++++++++++++++++++++++++++++++++++++",app.name)
-
+#print("++++++++++++++++++++++++++++++++++++",app.name())
+#print("++++++++++++++++++++++++++++++++++++",app.name)
+print("____________________________+++++++++++++++++(1)++++++++++++++_________________________________")
 
 
 #print(Redis)    
 #the_redis='redis://localhost:6379/0'
 the_redis=os.environ.get("REDIS_URL")
 #print("This is the first attempt to connect Next is the REDIS_URL print?")
+
+print("____________________________+++++++++++++++++(2)++++++++++++++_________________________________")
 
 
 #print("the_redis-----------------------",the_redis)
@@ -50,6 +52,10 @@ run_initiLjoV=initiLjoV.delay()
 taskId=run_initiLjoV.task_id
 print("taskId.....",taskId)
 run_initiLjoV.result
+
+
+
+print("____________________________+++++++++++++++++(3)++++++++++++++_________________________________")
 
 
 
