@@ -52,10 +52,10 @@ def initiLjoV():
   print("tasque File Running initiJoV")
   Rval="return value"
   return Rval
-initiLjoV.delay()
-run_initiLjoV=initiLjoV.delay()
-taskId=run_initiLjoV.task_id
-print("taskId.....",taskId)
+#initiLjoV.delay()
+#run_initiLjoV=initiLjoV.delay()
+#taskId=run_initiLjoV.task_id
+#print("taskId.....",taskId)
 #run_initiLjoV.result
 
 
