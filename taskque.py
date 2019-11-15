@@ -53,7 +53,7 @@ def initiLjoV():
   Rval="return value"
   return Rval
 #initiLjoV.delay()
-initiLjoV.apply_async()
+#initiLjoV.apply_async()
 #run_initiLjoV=initiLjoV.delay()
 #taskId=run_initiLjoV.task_id
 #print("taskId.....",taskId)
