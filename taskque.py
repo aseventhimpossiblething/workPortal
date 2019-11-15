@@ -52,7 +52,8 @@ def initiLjoV():
   print("tasque File Running initiJoV")
   Rval="return value"
   return Rval
-initiLjoV.delay()
+#initiLjoV.delay()
+initiLjoV.apply_async()
 #run_initiLjoV=initiLjoV.delay()
 #taskId=run_initiLjoV.task_id
 #print("taskId.....",taskId)
