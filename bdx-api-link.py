@@ -72,9 +72,9 @@ app = Flask(__name__)
 
 CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
 
-app.route('/test')
+@app.route('/test')
 def testasynch():
-    return 'Page'
+    return 'test'
 
 
 
