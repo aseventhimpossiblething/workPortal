@@ -40,7 +40,7 @@ def zfunc():
 #zfunc.apply_async()
 
 
-#print("____________________________+++++++++++++++++(3)++++++++++++++_________________________________")
+print("____________________________+++++++++++++++++(3)++++++++++++++_________________________________")
 
 
 
@@ -60,7 +60,7 @@ run_initiLjoV=initiLjoV.apply_async()
 taskId=run_initiLjoV.task_id
 print("taskId.....This is the task ID............",taskId)
 result=run_initiLjoV.result
-print(result)
+#print(result)
 
 
 
