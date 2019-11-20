@@ -1,3 +1,5 @@
+celery
+kombu
 gunicorn
 Flask
 Werkzeug

@@ -68,13 +68,13 @@ def initialCommUpdatProcess():
   global CommunityRow4
   CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
   print("**********test 1 col*************")
-  print(FirstCol)
-  #begin google
+  #print(FirstCol)
  
+  print("Google Section")
   os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-  WorkingGoogle=pandas.read_excel('WorkingGoogle').drop([0,1,2,3])
-  WorkingGoogle.columns=WorkingGoogle.iloc[0]
-  WorkingGoogle=WorkingGoogle.drop([4])
+  WorkingGoogle=pandas.read_excel('WorkingGoogle')
+  #WorkingGoogle.columns=WorkingGoogle.iloc[0]
+  #WorkingGoogle=WorkingGoogle.drop([4])
  
  
   WorkingGoogle=pandas.DataFrame(WorkingGoogle, columns=['Campaign','Ad Group','Final URL'])
@@ -82,20 +82,20 @@ def initialCommUpdatProcess():
   global GoogleColTitles
   GoogleColTitles=str(list(WorkingGoogle))
   global GoogleRow1
-  GoogleRow1=str(WorkingGoogle.iloc[5].values)+" "+str(len(WorkingGoogle.iloc[5]))
+  GoogleRow1=str(WorkingGoogle.iloc[1].values)+" "+str(len(WorkingGoogle.iloc[1]))
   global GoogleRow2
-  GoogleRow2=str(WorkingGoogle.iloc[6].values)+" "+str(len(WorkingGoogle.iloc[6]))
+  GoogleRow2=str(WorkingGoogle.iloc[2].values)+" "+str(len(WorkingGoogle.iloc[2]))
   global GoogleRow3
-  GoogleRow3=str(WorkingGoogle.iloc[7].values)+" "+str(len(WorkingGoogle.iloc[7]))
+  GoogleRow3=str(WorkingGoogle.iloc[3].values)+" "+str(len(WorkingGoogle.iloc[3]))
   global GoogleRow4
-  GoogleRow4=str(WorkingGoogle.iloc[8].values)+" "+str(len(WorkingGoogle.iloc[8]))
+  GoogleRow4=str(WorkingGoogle.iloc[4].values)+" "+str(len(WorkingGoogle.iloc[4]))
   
   print(GoogleColTitles)
   print(GoogleRow1)
-  print(GoogleRow2)
-  print(GoogleRow3)
-  print(GoogleRow4)
-  print(GoogleRow5)
+  #print(GoogleRow2)
+  #print(GoogleRow3)
+  #print(GoogleRow4)
+  #print(GoogleRow5)
 
 
   return "finished"

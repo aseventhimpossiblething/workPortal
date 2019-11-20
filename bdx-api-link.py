@@ -5,20 +5,38 @@ import scipy
 import pandas
 import BidOpAssist
 import fileHandler
-from flask import Flask, Markup, render_template, request
+import redis
 import os
+import taskque
+#from redis import Redis
+#the_redis=redis.from_url(os.environ.get("REDIS_URL"))
+
+#print('redis.from_url(os.environ.get("REDIS_URL"))',the_redis)
+
+#print("os.environ['REDIS_URL']",os.environ['REDIS_URL'])
+
+from flask import Flask, Markup, render_template, request
+from celery import Celery
+
+
 import psycopg2
 from sklearn.ensemble import RandomForestRegressor
+app = Flask(__name__)
+#print("THIS SHOWS AS app <<<<<  in main doc",app)
+#print(app)
+#redis.Redis().client_getname()
+
+
+#hgzlzxkufcvhaspkldjfh v;hgpwsodjbh;akdswryg
+#kajsnbvlajne f[lbksnv;lrgnj
+
 
 
 #DATABASE_URL = os.environ['DATABASE_URL']
 
 
-app = Flask(__name__)   # Flask constructor
+#application = Flask(__name__)   # Flask constructor
 #app.config['MAX_CONTENT_LENGTH'] = 1000 * 1024 * 1024
-
-#CommunityUpdatesProcess.initialCommUpdatProcess()
-
 
 
 
@@ -42,7 +60,16 @@ app = Flask(__name__)   # Flask constructor
 #conn.close
 
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
-#{{CommonTag}}-{{pagetitle}} 
+#{{CommonTag}}-{{pagetitle}}
+
+
+
+
+
+
+
+
+
 CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
 
 @app.route('/css')
@@ -69,7 +96,6 @@ def BidOPUpload():
 
 @app.route('/CommunityDataFrame')
 def CommunityDataFrame():
-    #the functon for col1
     return render_template('CommunityDataframe.html',pagetitle='Community',CommonTag=CommonTagAll,col1="holding")
 @app.route('/DataFrameCss')
 def DataFrameCss():
@@ -78,10 +104,15 @@ def DataFrameCss():
 
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
+    #CommunityUpdatesProcess.initialCommUpdatProcess()
     return render_template('CommunitiesForm.html',pagetitle="Community Updates",CommonTag=CommonTagAll)
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
-    return fileHandler.CommListFileHandler()
+    #CommunityUpdatesProcess.initialCommUpdatProcess()
+    print("++++++++++++++++++   filehandler Running   ++++++++++++++++++++++")
+    fileHandler.CommListFileHandler()
+    
+    return OnPageIterationOfComupdate()
     """
     try:
         return fileHandler.CommListFileHandler()
