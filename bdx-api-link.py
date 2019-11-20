@@ -72,6 +72,12 @@ app = Flask(__name__)
 
 CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
 
+app.route('/testasynch')
+def styleSheet1():
+    return '2'
+
+
+
 @app.route('/css')
 def styleSheet1():
     return render_template('csstemplate.css')
