@@ -76,7 +76,7 @@ CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Sear
 def testasynch():
     j=2+2
     h='+j+'
-    return h
+    return j
 
 
 
