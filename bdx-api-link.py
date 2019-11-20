@@ -74,7 +74,7 @@ CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Sear
 
 app.route('/test')
 def testasynch():
-    return "Page"
+    return 'Page'
 
 
 
