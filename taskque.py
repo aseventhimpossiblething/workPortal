@@ -66,6 +66,7 @@ print('printed result____________',result)
 
 
 
+
 print("____________________________+++++++++++++++++(4)++++++++++++++_________________________________")
 
 
@@ -85,13 +86,19 @@ print("____________________________+++++++++++++++++(4)++++++++++++++___________
 #print('ready...',run_initiLjoV.ready())
 
 
-#AsyncResult(taskId).status()
+AsyncResult(taskId).status()
+result.state
+result.state()
+result.status
+result.status()
 
-#run_initiLjoV.state
-#run_initiLjoV.status()
-#run_initiLjoV.status
-#run_initiLjoV.result()
-#run_initiLjoV.result
+"""
+run_initiLjoV.state
+run_initiLjoV.status()
+run_initiLjoV.status
+run_initiLjoV.result()
+run_initiLjoV.result
+"""
 
 
 #initiLjoV.delay().state
