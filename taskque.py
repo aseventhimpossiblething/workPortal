@@ -21,6 +21,7 @@ print("____________________________+++++++++++++++++(1)++++++++++++++___________
 #print(Redis)    
 #the_redis='redis://localhost:6379/0'
 the_redis=os.environ.get("REDIS_URL")
+print('REDIS_URL.....................',the_redis)
 #print("This is the first attempt to connect Next is the REDIS_URL print?")
 
 print("____________________________+++++++++++++++++(2)++++++++++++++_________________________________")
