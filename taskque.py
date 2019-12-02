@@ -57,10 +57,10 @@ def initiLjoV():
 #initiLjoV.delay()
 #initiLjoV.apply_async()
 #run_initiLjoV=initiLjoV.delay()
-#run_initiLjoV=initiLjoV.apply_async()
+run_initiLjoV=initiLjoV.apply_async()
 taskId=run_initiLjoV.task_id
 print("taskId.....This is the task ID............",taskId)
-run_initiLjoV=initiLjoV.apply_async()
+#run_initiLjoV=initiLjoV.apply_async()
 result=run_initiLjoV.result
 #run_initiLjoV=initiLjoV.apply_async()
 print('printed result____________',result)
