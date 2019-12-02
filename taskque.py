@@ -89,7 +89,7 @@ print("____________________________+++++++++++++++++(4)++++++++++++++___________
 #print('ready...',run_initiLjoV.ready())
 
 #AsyncResult(taskId).status()
-result.state
+#result.state
 result.state()
 result.status
 result.status()
