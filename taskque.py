@@ -91,7 +91,7 @@ print("____________________________+++++++++++++++++(4)++++++++++++++___________
 #AsyncResult(taskId).status()
 #result.state
 #result.state()
-result.status
+#result.status
 result.status()
 
 
