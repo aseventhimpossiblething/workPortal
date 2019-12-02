@@ -96,13 +96,13 @@ print("____________________________+++++++++++++++++(4)++++++++++++++___________
 
 
 
-run_initiLjoV.state
+#run_initiLjoV.state
 run_initiLjoV.status()
 run_initiLjoV.status
 run_initiLjoV.result()
 run_initiLjoV.result
 
-AsyncResult(taskId).status()
+#AsyncResult(taskId).status()
 
 
 
