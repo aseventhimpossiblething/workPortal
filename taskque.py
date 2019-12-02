@@ -92,7 +92,7 @@ print("____________________________+++++++++++++++++(4)++++++++++++++___________
 #result.state
 #result.state()
 #result.status
-result.status()
+#result.status()
 
 
 
