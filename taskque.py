@@ -1,6 +1,7 @@
 /*
 Need to determine state/status
 Need to limit redis/celery connections
+reliable redis/celery cmds
 */
 
 
