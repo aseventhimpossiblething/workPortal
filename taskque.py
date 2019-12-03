@@ -1,3 +1,9 @@
+/*
+Need to determine state/status
+Need to limit redis/celery connections
+*/
+
+
 import CommunityUpdatesProcess
 import glob
 import numpy
