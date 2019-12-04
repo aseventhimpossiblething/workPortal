@@ -2,6 +2,8 @@
 Need to determine state/status
 Need to limit redis/celery connections
 reliable redis/celery cmds
+voir les log persistant
+Separer les contenue static es dynamique
 """
 
 
