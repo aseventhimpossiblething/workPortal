@@ -102,7 +102,7 @@ print('run_initiLjoV.ready()...This seems to work? ...',run_initiLjoV.ready())
 #result.state
 #result.state()
 #result.status
-result.status()
+#result.status()
 
 
 
