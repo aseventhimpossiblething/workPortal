@@ -99,7 +99,7 @@ print("AsyncResult(taskId).ready()...",AsyncResult(taskId).ready())
 print('run_initiLjoV.ready()...This seems to work? ...',run_initiLjoV.ready())
 
 #AsyncResult(taskId).status()
-#result.state
+result.state
 #result.state()
 #result.status
 #result.status()
