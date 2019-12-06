@@ -5,7 +5,7 @@ reliable redis/celery cmds
 voir les log persistant
 Separer les contenue static es dynamique
 """
-
+print("this is the master branch tasque")
 
 
 import CommunityUpdatesProcess
@@ -92,34 +92,34 @@ print("____________________________+++++++++++++++++(4)++++++++++++++___________
 
 
 
-#run_initiLjoV.result.state()
-#print('result...',run_initiLjoV.result)
+run_initiLjoV.result.state()
+print('result...',run_initiLjoV.result)
 
-#AsyncResult(taskId).ready()
-#print('ready...',run_initiLjoV.ready())
+AsyncResult(taskId).ready()
+print('ready...',run_initiLjoV.ready())
 
-#AsyncResult(taskId).status()
-#result.state
-#result.state()
-#result.status
-#result.status()
-
-
-
-#run_initiLjoV.state
-#run_initiLjoV.status()
-#run_initiLjoV.status
-#run_initiLjoV.result()
-#run_initiLjoV.result
-
-#AsyncResult(taskId).status()
+AsyncResult(taskId).status()
+result.state
+result.state()
+result.status
+result.status()
 
 
 
+run_initiLjoV.state
+run_initiLjoV.status()
+run_initiLjoV.status
+run_initiLjoV.result()
+run_initiLjoV.result
 
-#initiLjoV.delay().state
-#initiLjoV.delay().status
-#initiLjoV.delay().result
+AsyncResult(taskId).status()
+
+
+
+
+initiLjoV.delay().state
+initiLjoV.delay().status
+initiLjoV.delay().result
 
 
 #redis.Redis().client_getname()
