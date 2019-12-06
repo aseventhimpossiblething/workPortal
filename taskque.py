@@ -93,12 +93,12 @@ print("____________________________+++++++++++++++++(4)++++++++++++++___________
 
 
 #run_initiLjoV.result.state()
-print('result...',run_initiLjoV.result)
+print('run_initiLjoV.result...',run_initiLjoV.result)
 
-AsyncResult(taskId).ready()
-print('ready...',run_initiLjoV.ready())
+print(AsyncResult(taskId).ready(),AsyncResult(taskId).ready())
+print('run_initiLjoV.ready()...This seems to work? ...',run_initiLjoV.ready())
 
-AsyncResult(taskId).status()
+#AsyncResult(taskId).status()
 result.state
 result.state()
 result.status
