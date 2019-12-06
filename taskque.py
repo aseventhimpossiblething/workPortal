@@ -5,7 +5,7 @@ reliable redis/celery cmds
 voir les log persistant
 Separer les contenue static es dynamique
 """
-print("this is the master branch tasque")
+print("this is the master branch tasque..............................................................")
 
 
 import CommunityUpdatesProcess
@@ -92,7 +92,7 @@ print("____________________________+++++++++++++++++(4)++++++++++++++___________
 
 
 
-run_initiLjoV.result.state()
+#run_initiLjoV.result.state()
 print('result...',run_initiLjoV.result)
 
 AsyncResult(taskId).ready()
