@@ -46,7 +46,7 @@ cel=Celery("Tasks", broker=the_redis, backend=the_redis)
 def zfunc():
     print("--------------PRINTED FROM IN ZFUNC")
     return 42
-zfunc.apply_async()
+zfunc.apply_async(countdown=100)
 
 
 print("____________________________+++++++++++++++++(3)++++++++++++++_________________________________")
