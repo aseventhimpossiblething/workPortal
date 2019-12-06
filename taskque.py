@@ -105,10 +105,9 @@ print('run_initiLjoV.ready()...This seems to work? ...',run_initiLjoV.ready())
 #result.status()
 
 
-
-print("run_initiLjoV.state".........,run_initiLjoV.state)
+print("run_initiLjoV.state.........",run_initiLjoV.state)
 #run_initiLjoV.status()
-print("run_initiLjoV.status"........,run_initiLjoV.status)
+print("run_initiLjoV.status........",run_initiLjoV.status)
 #run_initiLjoV.result()
 #run_initiLjoV.result
 
