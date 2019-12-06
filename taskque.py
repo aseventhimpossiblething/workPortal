@@ -48,7 +48,7 @@ def zfunc():
     return 42
 zfunc.apply_async()
 
-zfunc.apply_async(countdown=100)
+#zfunc.apply_async(countdown=100)
 
 
 print("____________________________+++++++++++++++++(3)++++++++++++++_________________________________")
