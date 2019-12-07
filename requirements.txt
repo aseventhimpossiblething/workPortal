@@ -1,3 +1,4 @@
+huey
 celery
 kombu
 gunicorn
@@ -18,4 +19,3 @@ pandas
 sklearn
 glob2
 redis
-

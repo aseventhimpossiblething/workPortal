@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  redis:
+    image: redis:latest
+    # maxclients 20
+    # loglevel debug
+
+  # celery:
+  #   build:
+  #     context: .
+  #     dockerfile: docker/web/Dockerfile
+  #   entrypoint: docker/wait-for-it.sh redis:6379 -- /venv/bin/celery -c 1 -A bdx-api-link.taskque worker
+  #   environment:
+  #     REDIS_URL: 'redis://redis:6379/0'
+  #   volumes:
+  #     - .:/code
+  #     - /root/.cache/pip:/root/.cache/pip
+  #   depends_on:
+  #     - redis
+
+  huey:
+    build:
+      context: .
+      dockerfile: docker/web/Dockerfile
+    entrypoint: docker/wait-for-it.sh web:8000 -- /venv/bin/huey_consumer.py taskque.huey -w 2 -k process
+    volumes:
+      - .:/code
+      - /root/.cache/pip:/root/.cache/pip
+    depends_on:
+      - redis
+
+
+  web:
+    build:
+      context: .
+      dockerfile: docker/web/Dockerfile
+    environment:
+      FLASK_APP: bdx-api-link.py
+      FLASK_DEBUG: 1
+      FLASK_ENV: development
+      REDIS_URL: 'redis://redis:6379/0'
+    entrypoint: docker/wait-for-it.sh redis:6379 -- /venv/bin/flask run -p 8000 --host=0.0.0.0 --without-threads
+    ports:
+      - 8000:8000
+    expose:
+      - "8000"
+    volumes:
+      - .:/code
+      - /root/.cache/pip:/root/.cache/pip
+    depends_on:
+      - redis
+      # - celery
