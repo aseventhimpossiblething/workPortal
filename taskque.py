@@ -93,7 +93,7 @@ print("____________________________+++++++++++++++++(4)++++++++++++++___________
 
 
 #run_initiLjoV.result.state()
-print('run_initiLjoV.result...',run_initiLjoV.result)
+#print('run_initiLjoV.result...',run_initiLjoV.result)
 
 print("AsyncResult(taskId).ready()...",AsyncResult(taskId).ready())
 print('run_initiLjoV.ready()...This seems to work? ...',run_initiLjoV.ready())
