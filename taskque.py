@@ -40,7 +40,7 @@ print("____________________________+++++++++++++++++(2)++++++++++++++___________
 
 
 
-cel=Celery("Tasks", broker=the_redis, backend=the_redis)
+cel=Celery("Taskque", broker=the_redis)
 
 @cel.task()
 def zfunc():
