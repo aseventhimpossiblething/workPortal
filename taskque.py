@@ -71,9 +71,9 @@ run_initiLjoV=initiLjoV.apply_async()
 taskId=run_initiLjoV.task_id
 print("taskId.....This is the task ID............",taskId)
 #run_initiLjoV=initiLjoV.apply_async()
-result=run_initiLjoV.result
+#result=run_initiLjoV.result
 #run_initiLjoV=initiLjoV.apply_async()
-print('printed result____________',result)
+#print('printed result____________',result)
 print(AsyncResult(taskId))
 
 
@@ -105,9 +105,9 @@ print('run_initiLjoV.ready()...This seems to work? ...',run_initiLjoV.ready())
 #result.status()
 
 
-print("run_initiLjoV.state.........",run_initiLjoV.state)
+#print("run_initiLjoV.state.........",run_initiLjoV.state)
 #run_initiLjoV.status()
-print("run_initiLjoV.status........",run_initiLjoV.status)
+#print("run_initiLjoV.status........",run_initiLjoV.status)
 #run_initiLjoV.result()
 #run_initiLjoV.result
 
