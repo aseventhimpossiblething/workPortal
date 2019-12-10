@@ -90,7 +90,6 @@ def BidOpFileHandler():
 
     
     return toscrn
-
 """
 def CommListFileHandler():    
     reqs=request.files,request.files['currentGoogle'],request.files['currentGoogle'],request.files['currentBing']   
@@ -118,7 +117,7 @@ def CommListFileHandler():
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     request.files['currentBing'].save('WorkingBing')
 
-    """
+    
     print("**********************file search in file handler**********************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities/')
     print(os.listdir())
@@ -143,7 +142,7 @@ def CommListFileHandler():
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
     #print(recent)     
     #ValidatXLSXtime(recent)
-    """    
+       
     
            
     CommunityUpdatesProcess.initialCommUpdatProcess() 
@@ -160,8 +159,8 @@ def CommListFileHandler():
     toscrn = HTMLoutput
         
     return toscrn
-
 """
+
 
 
 
