@@ -45,7 +45,7 @@ BingRow2=0
 BingRow3=0
 BingRow4=0
 
-
+print(".....Borrowed celery.....",borrowedCelery())
 taskque.borrowedCelery()
 def initialCommUpdatProcess():
   print("Running.........initialCommUpdatProcess()......")
