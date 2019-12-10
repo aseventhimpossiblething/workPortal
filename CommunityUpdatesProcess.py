@@ -55,8 +55,10 @@ def initialCommUpdatProcess():
   WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
   WorkingCommunities.columns=WorkingCommunities.iloc[0]
   WorkingCommunities=WorkingCommunities.drop([4])
-  
-  print(WorkingCommunities.iloc[1].find('Builder'))
+ 
+  print(WorkingCommunities.iloc[1])
+  print(type(WorkingCommunities.iloc[1]))
+  str(WorkingCommunities.iloc[1])
  
  
   WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
