@@ -74,8 +74,18 @@ def initialCommUpdatProcess():
 
   print("10","string anal.............")
   
-    
+  
+  def CheckSheetData(sheet,checkword1,checkword2,checkword3):
+    if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and str(sheet.iloc[1]).find(checkword3)!=-1:
+      return "Valid"
+    else:
+      return "Invalid"
+  CheckSheetData(WorkingCommunities,'Builder Name','Community Id')  
+  
+  
+  
   if str(WorkingCommunities.iloc[1]).find('Builder Name')!=-1 and str(WorkingCommunities.iloc[1]).find('Community Id')!=-1:
+    
   else:
     return "Data or format Error in Community sheet"
     #print("str(WorkingCommunities.iloc[1])==str(WorkingCommunities.iloc[1])")
