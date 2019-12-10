@@ -57,6 +57,7 @@ def initialCommUpdatProcess():
   WorkingCommunities=WorkingCommunities.drop([4])
   
   print("1","string anal.............")
+  """
   print("2",WorkingCommunities.iloc[1])
   print("3",type(WorkingCommunities.iloc[1]))
   testthis=str(WorkingCommunities.iloc[1])
@@ -71,6 +72,7 @@ def initialCommUpdatProcess():
   print("8",testthis[0:20])
   print("9",testthis[0:10])
   print("9",testthis[1])
+  """
 
   print("10","string anal.............")
   
@@ -80,7 +82,7 @@ def initialCommUpdatProcess():
       return "Valid"
     else:
       return "Invalid"
-  CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')  
+  print("CHeck Sheet output.................",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))  
   
   
   """
