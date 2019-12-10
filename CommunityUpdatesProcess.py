@@ -46,7 +46,7 @@ BingRow3=0
 BingRow4=0
 
 
-
+taskque.borrowedCelery()
 def initialCommUpdatProcess():
   print("Running.........initialCommUpdatProcess()......")
   print("communities section")
