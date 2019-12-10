@@ -73,6 +73,7 @@ def initialCommUpdatProcess():
   print("9",testthis[1])
 
   print("10","string anal.............")
+  if str(WorkingCommunities.iloc[1]==str(WorkingCommunities.iloc[1])
  
   WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
     'Community Id','Community Name','City','State','Zip','Market ID','Market Name'])
