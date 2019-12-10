@@ -45,9 +45,10 @@ BingRow2=0
 BingRow3=0
 BingRow4=0
 
-print(".....Borrowed celery.....",taskque.borrowedCelery())
-taskque.borrowedCelery()
+#print(".....Borrowed celery.....",taskque.borrowedCelery())
+#taskque.borrowedCelery()
 def initialCommUpdatProcess():
+  taskque.borrowedCelery()
   print("Running.........initialCommUpdatProcess()......")
   print("communities section")
   os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
