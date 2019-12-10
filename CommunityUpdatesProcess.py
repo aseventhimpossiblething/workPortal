@@ -73,6 +73,7 @@ def initialCommUpdatProcess():
   #print("**********test 1 col*************")
   print('Working Communities',WorkingCommunities)
  
+  
   print("Google Section")
   os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
   WorkingGoogle=pandas.read_excel('WorkingGoogle')
