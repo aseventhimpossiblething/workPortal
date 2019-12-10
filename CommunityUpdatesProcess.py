@@ -7,6 +7,7 @@ import fileHandler
 from flask import Flask, Markup, render_template, request
 import os
 import psycopg2
+import taskque
 
 
 CommunityCol1=0
@@ -68,7 +69,7 @@ def initialCommUpdatProcess():
   global CommunityRow4
   CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
   print("**********test 1 col*************")
-  #print(FirstCol)
+  print(CommunityCol1)
  
   print("Google Section")
   os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
