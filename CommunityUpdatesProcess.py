@@ -56,14 +56,15 @@ def initialCommUpdatProcess():
   WorkingCommunities.columns=WorkingCommunities.iloc[0]
   WorkingCommunities=WorkingCommunities.drop([4])
   
-  print("string anal.............")
-  print(WorkingCommunities.iloc[1])
-  print(type(WorkingCommunities.iloc[1]))
+  print("1","string anal.............")
+  print("2",WorkingCommunities.iloc[1])
+  print("3",type(WorkingCommunities.iloc[1]))
   testthis=str(WorkingCommunities.iloc[1])
-  print('testthis.......',type(testthis))
-  print(type(testthis))
-  print(testthis.find('owner'))
-  print("string anal.............")
+  print("4",'testthis.......',type(testthis))
+  print("5",type(testthis))
+  print("6",testthis.find('owner'))
+  print("7",testthis[0])
+  print("8","string anal.............")
  
   WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
     'Community Id','Community Name','City','State','Zip','Market ID','Market Name'])
