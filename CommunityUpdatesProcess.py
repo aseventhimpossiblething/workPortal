@@ -62,7 +62,7 @@ def initialCommUpdatProcess():
   testthis=str(WorkingCommunities.iloc[1])
   print('testthis.......',type(testthis))
   print(type(testthis))
-  print(testthis.find('city'))
+  print(testthis.find('owner'))
   print("string anal.............")
  
   WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
