@@ -83,7 +83,10 @@ print(AsyncResult(taskId))
 print("____________________________+++++++++++++++++(4)++++++++++++++_________________________________")
 
 
-
+@cel.task()
+def borrowedCelery():
+    print("Borrowed Celey from task to communities")
+    
 
 
 
