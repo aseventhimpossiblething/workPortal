@@ -119,8 +119,9 @@ def CommListFileHandler():
 
     
     print("**********************file search in file handler 1**********************************")
+    #print("display /app/Sheets/CommunityUpdates/currentCommunities/")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities/')
-    print(os.listdir())
+    print("display /app/Sheets/CommunityUpdates/currentCommunities/",os.listdir())
     print("**********************file search in file handler 2**********************************")    
     """                        
     #print("Communities")
