@@ -58,8 +58,8 @@ def initialCommUpdatProcess():
   print("string anal.............")
   print(WorkingCommunities.iloc[1])
   print(type(WorkingCommunities.iloc[1]))
-  testthis=str(WorkingCommunities.iloc[1]
-  #print('testthis.......',type(testthis))
+  testthis=str(WorkingCommunities.iloc[1])
+  print('testthis.......',type(testthis))
   print(type(testthis))             
   print("string anal.............")
  
