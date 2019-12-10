@@ -63,15 +63,15 @@ def initialCommUpdatProcess():
   WorkingCommunities.columns=WorkingCommunities.iloc[0]
   WorkingCommunities=WorkingCommunities.drop([4])
  
-  """
-  def CheckSheetData(sheet,checkword1,checkword2,checkword3):
-    if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and str(sheet.iloc[1]).find(checkword3)!=-1:
-      return "Valid"
-    else:
-      return "Invalid"
-  """    
-  print("Check Sheet output.................",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))  
   
+  #print("Check Sheet output.................",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))  
+def LoadCommunities():
+  if CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')=="Valid"
+    print(Load Communities will run now.............,CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
+  else:
+    print(Load COmmunities cannot run...............,CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
+    return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')
+LoadCommunities()
   
   
   WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
