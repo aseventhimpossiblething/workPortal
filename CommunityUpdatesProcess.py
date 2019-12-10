@@ -76,7 +76,6 @@ def initialCommUpdatProcess():
   
     
   if str(WorkingCommunities.iloc[1]).find('Builder Name')!=-1 and str(WorkingCommunities.iloc[1]).find('Community Id')!=-1:
-    print("clear comm sheets")
   else:
     return "Data or format Error in Community sheet"
     #print("str(WorkingCommunities.iloc[1])==str(WorkingCommunities.iloc[1])")
