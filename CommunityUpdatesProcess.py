@@ -73,7 +73,7 @@ def initialCommUpdatProcess():
   CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
   #print("**********test 1 col*************")
   print('Working Communities',WorkingCommunities)
- 
+  return WorkingCommunities
   
   print("Google Section")
   os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
