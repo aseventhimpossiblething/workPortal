@@ -50,7 +50,8 @@ def CheckSheetData(sheet,checkword1,checkword2,checkword3):
     str(sheet.iloc[1]).find(checkword3)!=-1:
       return "Valid"
     else:
-      return "Invalid"
+      Invalid=str(sheet)+" contains format or content error "  
+      return Invalid
 
 
 def initialCommUpdatProcess():
@@ -62,12 +63,13 @@ def initialCommUpdatProcess():
   WorkingCommunities.columns=WorkingCommunities.iloc[0]
   WorkingCommunities=WorkingCommunities.drop([4])
  
-  
+  """
   def CheckSheetData(sheet,checkword1,checkword2,checkword3):
     if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and str(sheet.iloc[1]).find(checkword3)!=-1:
       return "Valid"
     else:
       return "Invalid"
+  """    
   print("Check Sheet output.................",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))  
   
   
