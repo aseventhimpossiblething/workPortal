@@ -7,7 +7,9 @@ import BidOpAssist
 import fileHandler
 import redis
 import os
-#import taskque
+from flask import Flask, Markup, render_template, request
+from celery import Celery
+import taskque
 #from redis import Redis
 #the_redis=redis.from_url(os.environ.get("REDIS_URL"))
 
@@ -15,21 +17,13 @@ import os
 
 #print("os.environ['REDIS_URL']",os.environ['REDIS_URL'])
 
-from flask import Flask, Markup, render_template, request
+#from flask import Flask, Markup, render_template, request
 #from celery import Celery
 
 
 import psycopg2
 from sklearn.ensemble import RandomForestRegressor
 app = Flask(__name__)
-#print("THIS SHOWS AS app <<<<<  in main doc",app)
-#print(app)
-#redis.Redis().client_getname()
-
-
-#hgzlzxkufcvhaspkldjfh v;hgpwsodjbh;akdswryg
-#kajsnbvlajne f[lbksnv;lrgnj
-
 
 
 #DATABASE_URL = os.environ['DATABASE_URL']
