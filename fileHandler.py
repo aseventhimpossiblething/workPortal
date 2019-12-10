@@ -122,11 +122,11 @@ def CommListFileHandler():
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities/')
     print(os.listdir())
     print("**********************file search in file handler 2**********************************")    
-                            
+    """                        
     #print("Communities")
     os.chdir('/app/Sheets/CommunityUpdates/')
-    recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
-    print(recent)    
+    #recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
+    #print(recent)    
     #ValidatXLSXtime(recent)
  
      
@@ -142,7 +142,7 @@ def CommListFileHandler():
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
     #print(recent)     
     #ValidatXLSXtime(recent)
-       
+    """  
     
            
     CommunityUpdatesProcess.initialCommUpdatProcess() 
