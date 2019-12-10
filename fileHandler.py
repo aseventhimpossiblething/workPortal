@@ -90,7 +90,7 @@ def BidOpFileHandler():
 
     
     return toscrn
-"""
+
 def CommListFileHandler():    
     reqs=request.files,request.files['currentGoogle'],request.files['currentGoogle'],request.files['currentBing']   
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
@@ -118,10 +118,10 @@ def CommListFileHandler():
     request.files['currentBing'].save('WorkingBing')
 
     
-    print("**********************file search in file handler**********************************")
+    print("**********************file search in file handler 1**********************************")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities/')
     print(os.listdir())
-    print("**********************file search in file handler**********************************")    
+    print("**********************file search in file handler 2**********************************")    
                             
     #print("Communities")
     os.chdir('/app/Sheets/CommunityUpdates/')
@@ -159,7 +159,7 @@ def CommListFileHandler():
     toscrn = HTMLoutput
         
     return toscrn
-"""
+
 
 
 
