@@ -92,7 +92,7 @@ def BidOpFileHandler():
     return toscrn
 
 def CommListFileHandler():    
-    reqs=request.files,request.files['currentGoogle'],request.files['currentGoogle'],request.files['currentBing']   
+    reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']   
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
     if emptyObj==str(request.files['currentBing']):
          return "Bing slot is empty"
