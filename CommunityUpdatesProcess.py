@@ -75,7 +75,8 @@ def initialCommUpdatProcess():
   print("10","string anal.............")
   
     
-  if str(WorkingCommunities.iloc[1])==str(WorkingCommunities.iloc[1]):
+  if str(WorkingCommunities.iloc[1]).find('Builder Name')!=-1 and str(WorkingCommunities.iloc[1]).find('Community Id')!=-1:
+    else print("community sheet error")
     print("str(WorkingCommunities.iloc[1])==str(WorkingCommunities.iloc[1])")
   if 5==4:
     print("5==4") 
