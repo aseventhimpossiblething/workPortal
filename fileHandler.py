@@ -91,7 +91,7 @@ def BidOpFileHandler():
     
     return toscrn
 
-
+"""
 def CommListFileHandler():    
     reqs=request.files,request.files['currentGoogle'],request.files['currentGoogle'],request.files['currentBing']   
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
@@ -161,7 +161,7 @@ def CommListFileHandler():
         
     return toscrn
 
-
+"""
 
 
 
