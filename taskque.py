@@ -30,7 +30,7 @@ from celery.result import ResultBase
 
 #print(Redis)    
 #the_redis='redis://localhost:6379/0'
-#the_redis=os.environ.get("REDIS_URL")
+the_redis=os.environ.get("REDIS_URL")
 #print('REDIS_URL.....................',the_redis)
 
 
