@@ -120,7 +120,7 @@ def CommunityFileHandling():
     print("++++++++++++++++++   filehandler Running   ++++++++++++++++++++++")
     fileHandler.CommListFileHandler()
     
-    return OnPageIterationOfComupdate()
+    return <html><p>empty</p></html>
     """
     try:
         return fileHandler.CommListFileHandler()
