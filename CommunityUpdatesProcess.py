@@ -62,7 +62,7 @@ def initialCommUpdatProcess():
   testthis=str(WorkingCommunities.iloc[1])
   print("4",'testthis.......',type(testthis))
   print("5",type(testthis))
-  print("6" find(Name)',testthis.find('Name'))
+  print("6 find(Name)",testthis.find('Name'))
   print("7 find(4)",testthis.find('4'))
   print("8",testthis[0:20])
   print("9",testthis[0:10])
