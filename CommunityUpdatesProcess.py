@@ -48,6 +48,8 @@ BingRow4=0
 
 
 def initialCommUpdatProcess():
+  print("Running.........initialCommUpdatProcess()......")
+  print("communities section")
   os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
   WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
   WorkingCommunities.columns=WorkingCommunities.iloc[0]
@@ -68,8 +70,8 @@ def initialCommUpdatProcess():
   CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
   global CommunityRow4
   CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
-  print("**********test 1 col*************")
-  print(CommunityCol1)
+  #print("**********test 1 col*************")
+  print('Working Communities',WorkingCommunities)
  
   print("Google Section")
   os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
