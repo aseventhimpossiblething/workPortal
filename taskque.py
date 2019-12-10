@@ -23,8 +23,7 @@ from flask import Flask
 from celery.result import AsyncResult
 from celery.result import ResultBase
 
-#print("++++++++++++++++++++++++++++++++++++",app.name())
-#print("++++++++++++++++++++++++++++++++++++",app.name)
+
 #print("____________________________+++++++++++++++++(1)++++++++++++++_________________________________")
 
 
@@ -51,7 +50,7 @@ zfunc.apply_async()
 #zfunc.apply_async(countdown=100)
 
 
-print("____________________________+++++++++++++++++(3)++++++++++++++_________________________________")
+#print("____________________________+++++++++++++++++(3)++++++++++++++_________________________________")
 
 
 
@@ -74,13 +73,13 @@ print("taskId.....This is the task ID............",taskId)
 #result=run_initiLjoV.result
 #run_initiLjoV=initiLjoV.apply_async()
 #print('printed result____________',result)
-print(AsyncResult(taskId))
+print("AsyncResult(taskId)...........",AsyncResult(taskId))
 
 
 
 
 
-print("____________________________+++++++++++++++++(4)++++++++++++++_________________________________")
+#print("____________________________+++++++++++++++++(4)++++++++++++++_________________________________")
 
 
 @cel.task()
