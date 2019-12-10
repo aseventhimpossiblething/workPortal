@@ -146,7 +146,9 @@ def CommListFileHandler():
     """  
     
            
-    CommunityUpdatesProcess.initialCommUpdatProcess() 
+    #CommunityUpdatesProcess.initialCommUpdatProcess() 
+    return CommunityUpdatesProcess.initialCommUpdatProcess()
+"""
     print("running CommunityUpdatesProcess.initialCommUpdatProcess()")   
     #WorkingCommunityOut=Markup("Sample of Active Communities "+"<br>"+CommunityUpdatesProcess.CommunityColTitles+"<br>"+CommunityUpdatesProcess.CommunityRow1+"<br>"+CommunityUpdatesProcess.CommunityRow2+"<br>"+CommunityUpdatesProcess.CommunityRow3+"<br>"+CommunityUpdatesProcess.CommunityRow4)
     
@@ -160,6 +162,7 @@ def CommListFileHandler():
     toscrn = HTMLoutput
         
     return toscrn
+"""    
 
 
 
