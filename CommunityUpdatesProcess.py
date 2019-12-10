@@ -69,7 +69,7 @@ def LoadCommunities():
   if CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')=="Valid":
     print(Load Communities will run now.............,CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
   else:
-    print(Load COmmunities cannot run...............,CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
+    print("Load COmmunities cannot run...............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
     return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')
 LoadCommunities()
   
