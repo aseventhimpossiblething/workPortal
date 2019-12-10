@@ -74,7 +74,7 @@ def initialCommUpdatProcess():
   #print("**********test 1 col*************")
   print('WorkingCommunities')
   print(WorkingCommunities)
-   print(CommunityRow1)
+  print(CommunityRow1)
  
   
   print("Google Section")
