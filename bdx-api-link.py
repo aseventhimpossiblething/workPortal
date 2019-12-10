@@ -118,9 +118,11 @@ def CommunitiesUploads():
 def CommunityFileHandling():
     #CommunityUpdatesProcess.initialCommUpdatProcess()
     print("++++++++++++++++++   filehandler Running   ++++++++++++++++++++++")
-    fileHandler.CommListFileHandler()
+    #fileHandler.CommListFileHandler()
     
-    return '<html><p>empty</p></html>'
+    return fileHandler.CommListFileHandler()
+    
+    #return '<html><p>empty</p></html>'
     """
     try:
         return fileHandler.CommListFileHandler()
