@@ -83,7 +83,7 @@ def initialCommUpdatProcess():
   CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')  
   
   
-  
+  """
   if str(WorkingCommunities.iloc[1]).find('Builder Name')!=-1 and str(WorkingCommunities.iloc[1]).find('Community Id')!=-1:
     
     else:
@@ -91,7 +91,7 @@ def initialCommUpdatProcess():
     #print("str(WorkingCommunities.iloc[1])==str(WorkingCommunities.iloc[1])")
   if 5==4:
     print("5==4") 
- 
+ """
   WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
     'Community Id','Community Name','City','State','Zip','Market ID','Market Name'])
   
