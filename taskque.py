@@ -40,7 +40,7 @@ the_redis=os.environ.get("REDIS_URL")
 
 
 
-cel=Celery("taskque", broker=the_redis)
+cel=Celery("taskque", broker=the_redis, backend=the_redis)
 
 @cel.task()
 def zfunc():
