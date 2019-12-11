@@ -9,13 +9,6 @@ import os
 import psycopg2
 import taskque
 
-from redis import Redis
-from celery import Celery
-from flask import Flask
-from celery.result import AsyncResult
-from celery.result import ResultBase
-the_redis=os.environ.get("REDIS_URL")
-cel=Celery("taskque", broker=the_redis)
 
 
 
@@ -104,19 +97,11 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
   else:
     print("Load Communities cannot run...............",IsCommValid)
   return IsCommValid    
-"""
-#print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
-@cel.task()
-def celOFfgroun():
-  print("This exists of Tasque but should run on celery------------")
-celOFfgroun()  
-#print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
-"""
- 
+
 
     
 def initialCommUpdatProcess():
-  taskque.borrowedCelery()
+  taskque.borrowedCelery.apply_async()
   print("Running.........initialCommUpdatProcess()......")
   print("communities section")
   os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
@@ -127,17 +112,11 @@ def initialCommUpdatProcess():
   LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')  
     
   
-  print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
-  @cel.task()
-  def celOFfgroun():
-    print("should run on celery------------")
-  celOFfgroun()
-  print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
-  """
-  taskque.GoogleAsynchLoad()
-    
+  
+  taskque.GoogleAsynchLoad.apply_async()
+  """  
   print("Google Section.....................................................................")
-  taskque.GoogleAsynchLoad()
+  
   
   os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
   WorkingGoogle=pandas.read_excel('WorkingGoogle')
