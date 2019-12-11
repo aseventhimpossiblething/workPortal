@@ -102,6 +102,29 @@ def initialCommUpdatProcess():
     print('WorkingCommunities')
     print(WorkingCommunities)
     
+    print("--------------------------------8--------------------------------------------")
+    print("WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])")
+    WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
+    print("--------------------------------9--------------------------------------------")
+    print("WorkingCommunities")
+    print(WorkingCommunities)
+    print("--------------------------------10--------------------------------------------")
+    print('pandas.read_excel("WorkingCommunities").drop([0,1,2,3])')
+    print(pandas.read_excel('WorkingCommunities').drop([0,1,2,3]))
+    print("--------------------------------11--------------------------------------------")
+    print('WorkingCommunities.columns=WorkingCommunities.iloc[0]')
+    WorkingCommunities.columns=WorkingCommunities.iloc[0]
+    print("--------------------------------12--------------------------------------------")
+    print('WorkingCommunities')
+    print(WorkingCommunities)
+    print("--------------------------------13--------------------------------------------")
+    print('WorkingCommunities=WorkingCommunities.drop([4])')
+    WorkingCommunities=WorkingCommunities.drop([4])
+    print("--------------------------------14--------------------------------------------")
+    print('WorkingCommunities')
+    print(WorkingCommunities)
+    
+    
    
     print("***************special Orders to View and delete***************")
  
