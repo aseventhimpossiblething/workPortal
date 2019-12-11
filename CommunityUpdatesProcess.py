@@ -7,7 +7,7 @@ import fileHandler
 from flask import Flask, Markup, render_template, request
 import os
 import psycopg2
-import taskque
+#import taskque
 
 from redis import Redis
 from celery import Celery
