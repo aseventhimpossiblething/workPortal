@@ -97,8 +97,10 @@ def initialCommUpdatProcess():
     print(WorkingCommunities)
     print("--------------------------------6--------------------------------------------")
     print('WorkingCommunities=WorkingCommunities.drop([4])')
-    print(WorkingCommunities=WorkingCommunities.drop([4]))
-
+    WorkingCommunities=WorkingCommunities.drop([4])
+    print("--------------------------------7--------------------------------------------")
+    print('WorkingCommunities')
+    print(WorkingCommunities)
     
    
     print("***************special Orders to View and delete***************")
