@@ -63,12 +63,10 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
   global IsCommValid
   IsCommValid=CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)
   if CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)=="Valid":
-    print("Load Communities will run now.............",IsCommValid)
-   
     WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
                                                                    'Community Id','Community Name','City','State','Zip',\
                                                                    'Market ID','Market Name'])
-  
+    print("Load Communities will run now.............",IsCommValid)      
     FirstCol=WorkingCommunities[['Builder Name']]
     global CommunityColTitles
     CommunityColTitles=str(list(WorkingCommunities))
@@ -88,6 +86,11 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
     print(CommunityColTitles)
     print('CommunityRow1....................')
     print(CommunityRow1)
+    
+    print("**********test 2 col *************")
+    print('CommunityCol1')
+    print(CommunityCol1)
+    
   else:
     print("Load Communities cannot run...............",IsCommValid)
   return IsCommValid    
@@ -100,6 +103,7 @@ def initialCommUpdatProcess():
     print("Running.........initialCommUpdatProcess()......")
     print("communities section")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
+    
     
     """
     print("***************special Orders to View and delete***************")
@@ -151,6 +155,7 @@ def initialCommUpdatProcess():
     
    
     print("***************special Orders to View and delete***************")
+    """
     
     
     WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
@@ -160,11 +165,12 @@ def initialCommUpdatProcess():
     LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')  
  
    
-    
+    """
     WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
                                                                    'Community Id','Community Name','City','State','Zip',\
                                                                    'Market ID','Market Name'])
-  
+                                                                  
+   
     FirstCol=WorkingCommunities[['Builder Name']]
     global CommunityColTitles
     CommunityColTitles=str(list(WorkingCommunities))
