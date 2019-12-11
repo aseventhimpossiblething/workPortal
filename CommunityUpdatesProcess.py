@@ -71,11 +71,35 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
     
 
 def initialCommUpdatProcess():
+    
     taskque.borrowedCelery()
     print("Running.........initialCommUpdatProcess()......")
     print("communities section")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
+    
+    
+    print(***************specila Orders to View and delete***************)
+    
+    print(--------------------------------1--------------------------------------------)
+    print('WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])')
+    print(WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3]))
+    print(--------------------------------2--------------------------------------------)
+    print('pandas.read_excel('WorkingCommunities').drop([0,1,2,3])')
+    print(pandas.read_excel('WorkingCommunities').drop([0,1,2,3]))
+    print(--------------------------------3--------------------------------------------)
+    print('WorkingCommunities.columns=WorkingCommunities.iloc[0]')
+    print(WorkingCommunities.columns=WorkingCommunities.iloc[0])
+    print(--------------------------------4--------------------------------------------)
+    print('WorkingCommunities=WorkingCommunities.drop([4])')
+    print(WorkingCommunities=WorkingCommunities.drop([4]))
+
+    
+   
+    print(***************specila Orders to View and delete***************)
+ 
+    
     WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
+    print('pandas.read_excel('WorkingCommunities').drop([0,1,2,3])')
     WorkingCommunities.columns=WorkingCommunities.iloc[0]
     WorkingCommunities=WorkingCommunities.drop([4])
 
@@ -100,10 +124,12 @@ def initialCommUpdatProcess():
     CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
     print("**********test 1 col*************")
  
-    print('WorkingCommunities')
+    print('WorkingCommunities...............')
     print(WorkingCommunities)
+    print('CommunityRow1....................')
     print(CommunityRow1)
- 
+    
+   
   
     print("Google Section")
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
