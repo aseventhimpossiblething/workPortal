@@ -129,13 +129,14 @@ def initialCommUpdatProcess():
     WorkingCommunities=WorkingCommunities.drop([4])
 
     LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')  
- 
+    
+    """
     print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
     celOFfgroun()
     print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
  
     #taskque.GoogleAsynchLoad()
-    """ 
+    
     print("Google Section.....................................................................")
     taskque.GoogleAsynchLoad()
     
