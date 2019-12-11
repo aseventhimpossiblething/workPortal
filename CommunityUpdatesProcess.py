@@ -64,6 +64,21 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
   IsCommValid=CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)
   if CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)=="Valid":
     print("Load Communities will run now.............",IsCommValid)
+    WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
+                                                                   'Community Id','Community Name','City','State','Zip',\
+                                                                   'Market ID','Market Name'])
+  
+    FirstCol=WorkingCommunities[['Builder Name']]
+    global CommunityColTitles
+    CommunityColTitles=str(list(WorkingCommunities))
+    global CommunityRow1
+    CommunityRow1=str(WorkingCommunities.iloc[5].values)+" "+str(len(WorkingCommunities.iloc[5]))
+    global CommunityRow2
+    CommunityRow2=str(WorkingCommunities.iloc[6].values)+" "+str(len(WorkingCommunities.iloc[6]))
+    global CommunityRow3
+    CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
+    global CommunityRow4
+    CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
   else:
     print("Load Communities cannot run...............",IsCommValid)
   return IsCommValid    
@@ -127,7 +142,7 @@ def initialCommUpdatProcess():
     
    
     print("***************special Orders to View and delete***************")
-    """
+    
     
     WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
     WorkingCommunities.columns=WorkingCommunities.iloc[0]
@@ -152,6 +167,7 @@ def initialCommUpdatProcess():
     CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
     global CommunityRow4
     CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
+    """
     print("**********test 1 col *************")
  
     print('WorkingCommunities...............')
