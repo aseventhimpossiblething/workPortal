@@ -116,7 +116,7 @@ def initialCommUpdatProcess():
   
 
   print("Google Section.....................................................................")
-  taskque.GoogleAsynchLoad.apply_async()
+  #taskque.GoogleAsynchLoad.apply_async()
   
   os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
   WorkingGoogle=pandas.read_excel('WorkingGoogle')
