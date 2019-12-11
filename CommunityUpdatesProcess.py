@@ -133,6 +133,7 @@ def LoadCommunities():
 
 
     return "finished"
+initialCommUpdatProcess()
 
 
 
