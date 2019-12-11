@@ -54,13 +54,15 @@ def CheckSheetData(sheet,checkword1,checkword2,checkword3):
     else:
       Invalid=str(sheet)+" contains format or content error "  
       return Invalid
-    
+"""    
 def LoadCommunities():
   if CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')=="Valid":
     print("Load Communities will run now.............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
   else:
     print("Load Communities cannot run...............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
     return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')
+"""
+    
 
 def initialCommUpdatProcess():
     taskque.borrowedCelery()
@@ -79,6 +81,12 @@ def initialCommUpdatProcess():
     return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')  
     #initialCommUpdatProcess()
     """
+    def LoadCommunities():
+      if CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')=="Valid":
+        print("Load Communities will run now.............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
+      else:
+        print("Load Communities cannot run...............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
+      return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')
     LoadCommunities()  
  
     """
