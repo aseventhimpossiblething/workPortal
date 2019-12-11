@@ -48,19 +48,19 @@ BingRow3=0
 BingRow4=0
 
 def CheckSheetData(sheet,checkword1,checkword2,checkword3):
-    if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
-    str(sheet.iloc[1]).find(checkword3)!=-1:
-      return "Valid"
-    else:
-      Invalid=str(sheet)+" contains format or content error "  
-      return Invalid
+  if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
+   str(sheet.iloc[1]).find(checkword3)!=-1:
+   return "Valid"
+  else:
+   Invalid=str(sheet)+" contains format or content error "  
+   return Invalid
     
- def LoadCommunities(WorkingCommunities):
-      if CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')=="Valid":
-        print("Load Communities will run now.............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
-      else:
-        print("Load Communities cannot run...............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
-      return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')    
+def LoadCommunities(WorkingCommunities):
+  if CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')=="Valid":
+   print("Load Communities will run now.............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
+  else:
+   print("Load Communities cannot run...............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
+  return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')    
 """    
 def LoadCommunities():
   if CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')=="Valid":
