@@ -74,7 +74,7 @@ def borrowedCelery():
     
 @cel.task():
 def GoogleAsynchLoad():
-    print("Google Section.....................................................................")
+    print("Google Section..................Inside Asynch Google...................................................")
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     WorkingGoogle=pandas.read_excel('WorkingGoogle')
     print('WorkingGoogle')
