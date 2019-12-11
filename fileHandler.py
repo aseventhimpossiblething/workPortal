@@ -10,6 +10,9 @@ import time
 import xlrd
 import io
 
+
+
+
 def ValidatXLSXtime(arr):
         Error=arr+" Generated an error check that filetype is xlsx"
         Valid=arr+" is valid"
@@ -91,7 +94,10 @@ def BidOpFileHandler():
     
     return toscrn
 
-def CommListFileHandler():    
+def CommListFileHandler():
+    
+    print("..................CommListFileHandler()..............CommListFileHandler()..............CommListFileHandler().............")    
+        
     reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']   
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
     if emptyObj==str(request.files['currentBing']):
@@ -116,9 +122,10 @@ def CommListFileHandler():
     
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     request.files['currentBing'].save('WorkingBing')
-        
+    
+    print(".1........request.files['currentGoogle'].........request.files['currentGoogle'].....request.files['currentGoogle']......")    
     print(request.files['currentGoogle'])    
-
+    print(".2........request.files['currentGoogle'].........request.files['currentGoogle'].....request.files['currentGoogle']......")
     
     print("**********************file search in file handler 1**********************************")
     #print("display /app/Sheets/CommunityUpdates/currentCommunities/")
