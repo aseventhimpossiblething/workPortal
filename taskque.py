@@ -37,7 +37,7 @@ def initiLjoV():
   Rval="return value"
   return Rval
 @cel.task()
-def pfunk(x,z):
+def pfunk(x,y):
     print(x)
     print(y)
     
