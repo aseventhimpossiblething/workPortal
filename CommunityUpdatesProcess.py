@@ -9,6 +9,17 @@ import os
 import psycopg2
 import taskque
 
+
+from celery.result import AsyncResult
+from celery.result import ResultBase
+
+the_redis=os.environ.get("REDIS_URL")
+
+cel=Celery("taskque", broker=the_redis)
+
+
+
+
 IsCommValid=None;
 IsGoogleValid=None;
 IsBingValid=None;
