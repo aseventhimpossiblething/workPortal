@@ -61,6 +61,7 @@ app = Flask(__name__)
 #{{CommonTag}}-{{pagetitle}}
 
 taskque.zfunc.apply_async()
+taskque.pfunk.apply_async(("Baptised in the funk from index ","Executed in celery "))   
 
 """
 @cel.task
