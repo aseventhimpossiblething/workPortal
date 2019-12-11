@@ -78,18 +78,18 @@ def initialCommUpdatProcess():
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     
     
-    print(***************specila Orders to View and delete***************)
+    print("***************special Orders to View and delete***************")
     
-    print(--------------------------------1--------------------------------------------)
+    print("--------------------------------1--------------------------------------------")
     print('WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])')
     print(WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3]))
-    print(--------------------------------2--------------------------------------------)
+    print("--------------------------------2--------------------------------------------")
     print('pandas.read_excel('WorkingCommunities').drop([0,1,2,3])')
     print(pandas.read_excel('WorkingCommunities').drop([0,1,2,3]))
-    print(--------------------------------3--------------------------------------------)
+    print("--------------------------------3--------------------------------------------")
     print('WorkingCommunities.columns=WorkingCommunities.iloc[0]')
     print(WorkingCommunities.columns=WorkingCommunities.iloc[0])
-    print(--------------------------------4--------------------------------------------)
+    print("--------------------------------4--------------------------------------------")
     print('WorkingCommunities=WorkingCommunities.drop([4])')
     print(WorkingCommunities=WorkingCommunities.drop([4]))
 
