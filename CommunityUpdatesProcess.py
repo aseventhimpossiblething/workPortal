@@ -114,7 +114,7 @@ def initialCommUpdatProcess():
  
    
    
-    taskque.GoogleAsynchLoad()
+    #taskque.GoogleAsynchLoad()
     """ 
     print("Google Section.....................................................................")
     taskque.GoogleAsynchLoad()
