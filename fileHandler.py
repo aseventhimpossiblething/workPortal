@@ -96,7 +96,7 @@ def BidOpFileHandler():
 
 def CommListFileHandler():
     
-    print("..................CommListFileHandler()..............CommListFileHandler()..............CommListFileHandler().............")    
+    #print("..................CommListFileHandler()..............CommListFileHandler()..............CommListFileHandler().............")    
         
     reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']   
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
@@ -124,13 +124,18 @@ def CommListFileHandler():
     request.files['currentBing'].save('WorkingBing')
     
     print(".1........request.files['currentGoogle'].........request.files['currentGoogle'].....request.files['currentGoogle']......")    
-    print(request.files['currentGoogle'])    
+    print("Current Google file unsaved")
+    print(request.files['currentGoogle'])
+    print("")    
     print(".2........request.files['currentGoogle'].........request.files['currentGoogle'].....request.files['currentGoogle']......")
     
     print("**********************file search in file handler 1**********************************")
     #print("display /app/Sheets/CommunityUpdates/currentCommunities/")
-    os.chdir('/app/Sheets/CommunityUpdates/currentCommunities/')
-    print("display /app/Sheets/CommunityUpdates/currentCommunities/",os.listdir())
+    #os.chdir('/app/Sheets/CommunityUpdates/currentCommunities/')
+    print("Contents of Current Google")    
+    os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
+    print(os.listdir())
+    #print("display /app/Sheets/CommunityUpdates/currentCommunities/",os.listdir())
     print("**********************file search in file handler 2**********************************")    
     """                        
     #print("Communities")
