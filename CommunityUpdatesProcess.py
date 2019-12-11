@@ -108,9 +108,9 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
 print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
 @cel.task()
 def celOFfgroun():
-  print("This exists of Tasque but should run on celery------------")
+#print("This exists of Tasque but should run on celery------------")
 #celOFfgroun()  
-print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
+#print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
  
 
     
@@ -130,8 +130,10 @@ def initialCommUpdatProcess():
 
     LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')  
  
-   
-   
+    print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
+    celOFfgroun()
+    print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
+ 
     #taskque.GoogleAsynchLoad()
     """ 
     print("Google Section.....................................................................")
