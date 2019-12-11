@@ -105,7 +105,7 @@ def CommunitiesUploads():
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
     #CommunityUpdatesProcess.initialCommUpdatProcess()
-    print("++++++++++++++++++   filehandler Running   ++++++++++++++++++++++")
+    #print("++++++++++++++++++   filehandler Running   ++++++++++++++++++++++")
     #fileHandler.CommListFileHandler()
     
     return fileHandler.CommListFileHandler()
