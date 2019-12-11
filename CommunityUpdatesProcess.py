@@ -59,7 +59,7 @@ def LoadCommunities():
   else:
     print("Load Communities cannot run...............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
     return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')
-LoadCommunities()
+
 
 def initialCommUpdatProcess():
   taskque.borrowedCelery()
@@ -69,6 +69,7 @@ def initialCommUpdatProcess():
   WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
   WorkingCommunities.columns=WorkingCommunities.iloc[0]
   WorkingCommunities=WorkingCommunities.drop([4])
+  initialCommUpdatProcess()  
  
   """
   #print("Check Sheet output.................",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))  
