@@ -59,6 +59,10 @@ app = Flask(__name__)
 
 taskque.zfunc()
 
+@cel.task
+def writenonsenes():
+  print("..the should be in celery worker ...") 
+writenonsenes()
 
 
 
