@@ -77,7 +77,7 @@ def initialCommUpdatProcess():
     print("communities section")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     
-    
+    """
     print("***************special Orders to View and delete***************")
     
     print("--------------------------------1--------------------------------------------")
@@ -127,10 +127,9 @@ def initialCommUpdatProcess():
     
    
     print("***************special Orders to View and delete***************")
- 
+    """
     
     WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
-    #print('pandas.read_excel('WorkingCommunities').drop([0,1,2,3])')
     WorkingCommunities.columns=WorkingCommunities.iloc[0]
     WorkingCommunities=WorkingCommunities.drop([4])
 
@@ -153,12 +152,18 @@ def initialCommUpdatProcess():
     CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
     global CommunityRow4
     CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
-    print("**********test 1 col*************")
+    print("**********test 1 col *************")
  
     print('WorkingCommunities...............')
     print(WorkingCommunities)
+    print("CommunityColTitles")
+    print(CommunityColTitles)
     print('CommunityRow1....................')
     print(CommunityRow1)
+    
+    print("**********test 2 col *************")
+    print('CommunityCol1')
+    print(CommunityCol1=0)
     
    
   
