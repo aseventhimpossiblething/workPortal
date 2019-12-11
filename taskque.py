@@ -72,7 +72,7 @@ print("AsyncResult(taskId)...........",AsyncResult(taskId))
 def borrowedCelery():
     print("Borrowed Celey from task to communities!!!!!!!!!!!!!!!!!!!!!!!!")
     
-@cel.task():
+@cel.task()
 def GoogleAsynchLoad():
     print("Google Section..................Inside Asynch Google...................................................")
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
