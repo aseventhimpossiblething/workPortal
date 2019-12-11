@@ -26,11 +26,12 @@ from celery.result import ResultBase
 the_redis=os.environ.get("REDIS_URL")
 
 cel=Celery("taskque", broker=the_redis)
-
+"""
 @cel.task()
 def zfunc():
     print("--------------PRINTED FROM IN ZFUNC")
     return 42
+"""    
 #zfunc.apply_async()
 
 #zfunc.apply_async(countdown=100)
@@ -44,11 +45,13 @@ def zfunc():
 #print("zfunc.delay()------",zfunc.delay())
 #Zfunc.delay()
 #Zfunc.apply_async()
+"""
 @cel.task()
 def initiLjoV():
   print("tasque File Running initiJoV")
   Rval="return value"
   return Rval
+"""  
 #initiLjoV.delay()
 #initiLjoV.apply_async()
 #run_initiLjoV=initiLjoV.delay()
