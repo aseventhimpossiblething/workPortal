@@ -108,6 +108,8 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
 @cel.task()
 def celOFfgroun():
   print("This exists of Tasque but should run on celery------------")
+celOFfgroun()  
+ 
 
     
 
