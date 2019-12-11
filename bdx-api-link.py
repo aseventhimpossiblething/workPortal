@@ -57,7 +57,7 @@ app = Flask(__name__)
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 #{{CommonTag}}-{{pagetitle}}
 
-
+taskque.zfunc()
 
 
 
