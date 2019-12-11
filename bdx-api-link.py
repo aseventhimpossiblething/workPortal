@@ -13,13 +13,6 @@ import CommunityUpdatesProcess
 import taskque
 
 
-from redis import Redis
-from celery import Celery
-from flask import Flask
-from celery.result import AsyncResult
-from celery.result import ResultBase
-the_redis=os.environ.get("REDIS_URL")
-cel=Celery("taskque", broker=the_redis)
 
 
            
@@ -60,16 +53,7 @@ app = Flask(__name__)
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 #{{CommonTag}}-{{pagetitle}}
 
-taskque.zfunc.apply_async()
-taskque.pfunk.apply_async(("Baptised in the funk from index ","Executed in celery "))   
 
-"""
-@cel.task
-def writenonsenes():
-  print(".. defined in the index page =====the should be in celery worker ...") 
-writenonsenes().apply_async()
-"""
-#from taskque import zfunc 
 
 
 
