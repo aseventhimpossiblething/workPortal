@@ -9,14 +9,13 @@ import os
 import psycopg2
 import taskque
 
-
+from redis import Redis
+from celery import Celery
+from flask import Flask
 from celery.result import AsyncResult
 from celery.result import ResultBase
-
 the_redis=os.environ.get("REDIS_URL")
-
 cel=Celery("taskque", broker=the_redis)
-
 
 
 
