@@ -41,7 +41,7 @@ def initiLjoV():
 
 @cel.task()
 def borrowedCelery():
-    print("Borrowed Celey from task to communities!!!!!!!!!!!!!!!!!!!!!!!!")
+    print("should ne run on celery Borrowed Celey from task to communities!!!!!!!!!!!!!!!!!!!!!!!!")
     
 @cel.task()
 def GoogleAsynchLoad():
