@@ -96,15 +96,15 @@ WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name',
                                                                    'Market ID','Market Name'])
   
 FirstCol=WorkingCommunities[['Builder Name']]
-global CommunityColTitles
+#global CommunityColTitles
 CommunityColTitles=str(list(WorkingCommunities))
-global CommunityRow1
+#global CommunityRow1
 CommunityRow1=str(WorkingCommunities.iloc[5].values)+" "+str(len(WorkingCommunities.iloc[5]))
-global CommunityRow2
+#global CommunityRow2
 CommunityRow2=str(WorkingCommunities.iloc[6].values)+" "+str(len(WorkingCommunities.iloc[6]))
-global CommunityRow3
+#global CommunityRow3
 CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
-global CommunityRow4
+#global CommunityRow4
 CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
 #print("**********test 1 col*************")
  
@@ -121,15 +121,15 @@ WorkingGoogle=pandas.read_excel('WorkingGoogle')
  
 WorkingGoogle=pandas.DataFrame(WorkingGoogle, columns=['Campaign','Ad Group','Final URL'])
  
-global GoogleColTitles
+#global GoogleColTitles
 GoogleColTitles=str(list(WorkingGoogle))
-global GoogleRow1
+#global GoogleRow1
 GoogleRow1=str(WorkingGoogle.iloc[1].values)+" "+str(len(WorkingGoogle.iloc[1]))
-global GoogleRow2
+#global GoogleRow2
 GoogleRow2=str(WorkingGoogle.iloc[2].values)+" "+str(len(WorkingGoogle.iloc[2]))
-global GoogleRow3
+#global GoogleRow3
 GoogleRow3=str(WorkingGoogle.iloc[3].values)+" "+str(len(WorkingGoogle.iloc[3]))
-global GoogleRow4
+#global GoogleRow4
 GoogleRow4=str(WorkingGoogle.iloc[4].values)+" "+str(len(WorkingGoogle.iloc[4]))
  
 print(GoogleColTitles)
