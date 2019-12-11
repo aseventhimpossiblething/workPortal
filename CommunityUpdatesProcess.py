@@ -70,77 +70,75 @@ def initialCommUpdatProcess():
   WorkingCommunities.columns=WorkingCommunities.iloc[0]
   WorkingCommunities=WorkingCommunities.drop([4])
 
+  """
   if CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')=="Valid":
     print("Load Communities will run now.............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
   else:
     print("Load Communities cannot run...............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
     return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')  
   #initialCommUpdatProcess()
-  #LoadCommunities()  
+  """
+  LoadCommunities()  
  
   """
   #print("Check Sheet output.................",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))  
-def LoadCommunities():
+  def LoadCommunities():
   if CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')=="Valid":
     print("Load Communities will run now.............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
   else:
     print("Load Communities cannot run...............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
     return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')
- """   
+  """   
     
 
   
   
-    WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
-    'Community Id','Community Name','City','State','Zip','Market ID','Market Name'])
+  WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
+  'Community Id','Community Name','City','State','Zip','Market ID','Market Name'])
   
-    FirstCol=WorkingCommunities[['Builder Name']]
-    global CommunityColTitles
-    CommunityColTitles=str(list(WorkingCommunities))
-    global CommunityRow1
-    CommunityRow1=str(WorkingCommunities.iloc[5].values)+" "+str(len(WorkingCommunities.iloc[5]))
-    global CommunityRow2
-    CommunityRow2=str(WorkingCommunities.iloc[6].values)+" "+str(len(WorkingCommunities.iloc[6]))
-    global CommunityRow3
-    CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
-    global CommunityRow4
-    CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
-    #print("**********test 1 col*************")
+  FirstCol=WorkingCommunities[['Builder Name']]
+  global CommunityColTitles
+  CommunityColTitles=str(list(WorkingCommunities))
+  global CommunityRow1
+  CommunityRow1=str(WorkingCommunities.iloc[5].values)+" "+str(len(WorkingCommunities.iloc[5]))
+  global CommunityRow2
+  CommunityRow2=str(WorkingCommunities.iloc[6].values)+" "+str(len(WorkingCommunities.iloc[6]))
+  global CommunityRow3
+  CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
+  global CommunityRow4
+  CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
+  #print("**********test 1 col*************")
   
-    print('WorkingCommunities')
-    print(WorkingCommunities)
-    print(CommunityRow1)
+  print('WorkingCommunities')
+  print(WorkingCommunities)
+  print(CommunityRow1)
   
   
-    print("Google Section")
-    os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-    WorkingGoogle=pandas.read_excel('WorkingGoogle')
-    #WorkingGoogle.columns=WorkingGoogle.iloc[0]
-    #WorkingGoogle=WorkingGoogle.drop([4])
- 
- 
-    WorkingGoogle=pandas.DataFrame(WorkingGoogle, columns=['Campaign','Ad Group','Final URL'])
+  print("Google Section")
+  os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
+  WorkingGoogle=pandas.read_excel('WorkingGoogle')
+  #WorkingGoogle.columns=WorkingGoogle.iloc[0]
+  #WorkingGoogle=WorkingGoogle.drop([4])
   
-    global GoogleColTitles
-    GoogleColTitles=str(list(WorkingGoogle))
-    global GoogleRow1
-    GoogleRow1=str(WorkingGoogle.iloc[1].values)+" "+str(len(WorkingGoogle.iloc[1]))
-    global GoogleRow2
-    GoogleRow2=str(WorkingGoogle.iloc[2].values)+" "+str(len(WorkingGoogle.iloc[2]))
-    global GoogleRow3
-    GoogleRow3=str(WorkingGoogle.iloc[3].values)+" "+str(len(WorkingGoogle.iloc[3]))
-    global GoogleRow4
-    GoogleRow4=str(WorkingGoogle.iloc[4].values)+" "+str(len(WorkingGoogle.iloc[4]))
+ WorkingGoogle=pandas.DataFrame(WorkingGoogle, columns=['Campaign','Ad Group','Final URL'])
   
-    print(GoogleColTitles)
-    print(GoogleRow1)
-    #print(GoogleRow2)
-    #print(GoogleRow3)
-    #print(GoogleRow4)
-    #print(GoogleRow5)
+ global GoogleColTitles
+ GoogleColTitles=str(list(WorkingGoogle))
+ global GoogleRow1
+ GoogleRow1=str(WorkingGoogle.iloc[1].values)+" "+str(len(WorkingGoogle.iloc[1]))
+ global GoogleRow2
+ GoogleRow2=str(WorkingGoogle.iloc[2].values)+" "+str(len(WorkingGoogle.iloc[2]))
+ global GoogleRow3
+ GoogleRow3=str(WorkingGoogle.iloc[3].values)+" "+str(len(WorkingGoogle.iloc[3]))
+ global GoogleRow4
+ GoogleRow4=str(WorkingGoogle.iloc[4].values)+" "+str(len(WorkingGoogle.iloc[4]))
+  
+ print(GoogleColTitles)
+ print(GoogleRow1)
+   
 
 
-    return "finished"
+ return "finished"
 initialCommUpdatProcess()
 
 
