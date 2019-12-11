@@ -114,63 +114,56 @@ def celOFfgroun():
  
 
     
-
 def initialCommUpdatProcess():
-    
-    taskque.borrowedCelery()
-    print("Running.........initialCommUpdatProcess()......")
-    print("communities section")
-    os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
-    
+  taskque.borrowedCelery()
+  print("Running.........initialCommUpdatProcess()......")
+  print("communities section")
+  os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
      
+  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
+  WorkingCommunities.columns=WorkingCommunities.iloc[0]
+  WorkingCommunities=WorkingCommunities.drop([4])
+  LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')  
     
-    WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
-    WorkingCommunities.columns=WorkingCommunities.iloc[0]
-    WorkingCommunities=WorkingCommunities.drop([4])
-
-    LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')  
-    
-    """
-    print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
-    celOFfgroun()
-    print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
+  """
+  print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
+  celOFfgroun()
+  print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
  
-    #taskque.GoogleAsynchLoad()
+  taskque.GoogleAsynchLoad()
     
-    print("Google Section.....................................................................")
-    taskque.GoogleAsynchLoad()
+  print("Google Section.....................................................................")
+  taskque.GoogleAsynchLoad()
+  
+  os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
+  WorkingGoogle=pandas.read_excel('WorkingGoogle')
+  print('WorkingGoogle')
+  print(WorkingGoogle)
+  #WorkingGoogle.columns=WorkingGoogle.iloc[0]
+  #WorkingGoogle=WorkingGoogle.drop([4])
     
-    os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-    WorkingGoogle=pandas.read_excel('WorkingGoogle')
-    print('WorkingGoogle')
-    print(WorkingGoogle)
-    #WorkingGoogle.columns=WorkingGoogle.iloc[0]
-    #WorkingGoogle=WorkingGoogle.drop([4])
-    
-    print('-------------------------')
+  print('-------------------------')
     
     
-    WorkingGoogle=pandas.DataFrame(WorkingGoogle, columns=['Campaign','Ad Group','Final URL'])
+  WorkingGoogle=pandas.DataFrame(WorkingGoogle, columns=['Campaign','Ad Group','Final URL'])
  
-    global GoogleColTitles
-    GoogleColTitles=str(list(WorkingGoogle))
-    global GoogleRow1
-    GoogleRow1=str(WorkingGoogle.iloc[1].values)+" "+str(len(WorkingGoogle.iloc[1]))
-    global GoogleRow2
-    GoogleRow2=str(WorkingGoogle.iloc[2].values)+" "+str(len(WorkingGoogle.iloc[2]))
-    global GoogleRow3
-    GoogleRow3=str(WorkingGoogle.iloc[3].values)+" "+str(len(WorkingGoogle.iloc[3]))
-    global GoogleRow4
-    GoogleRow4=str(WorkingGoogle.iloc[4].values)+" "+str(len(WorkingGoogle.iloc[4]))
+  global GoogleColTitles
+  GoogleColTitles=str(list(WorkingGoogle))
+  global GoogleRow1
+  GoogleRow1=str(WorkingGoogle.iloc[1].values)+" "+str(len(WorkingGoogle.iloc[1]))
+  global GoogleRow2
+  GoogleRow2=str(WorkingGoogle.iloc[2].values)+" "+str(len(WorkingGoogle.iloc[2]))
+  global GoogleRow3
+  GoogleRow3=str(WorkingGoogle.iloc[3].values)+" "+str(len(WorkingGoogle.iloc[3]))
+  global GoogleRow4
+  GoogleRow4=str(WorkingGoogle.iloc[4].values)+" "+str(len(WorkingGoogle.iloc[4]))
  
-    print(GoogleColTitles)
-    print(GoogleRow1)
+  print(GoogleColTitles)
+  print(GoogleRow1)
     
-    print("Bing Section.....................................................................")
-    """
-
-
-    return "finished"
+  print("Bing Section.....................................................................")
+  """
+  return "finished"
 
 
 
