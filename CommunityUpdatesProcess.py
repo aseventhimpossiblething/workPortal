@@ -104,59 +104,7 @@ def initialCommUpdatProcess():
     print("communities section")
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
     
-    
-    """
-    print("***************special Orders to View and delete***************")
-    
-    print("--------------------------------1--------------------------------------------")
-    print("WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])")
-    WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
-    print("--------------------------------2--------------------------------------------")
-    print("WorkingCommunities")
-    print(WorkingCommunities)
-    print("--------------------------------3--------------------------------------------")
-    print('pandas.read_excel("WorkingCommunities").drop([0,1,2,3])')
-    print(pandas.read_excel('WorkingCommunities').drop([0,1,2,3]))
-    print("--------------------------------4--------------------------------------------")
-    print('WorkingCommunities.columns=WorkingCommunities.iloc[0]')
-    WorkingCommunities.columns=WorkingCommunities.iloc[0]
-    print("--------------------------------5--------------------------------------------")
-    print('WorkingCommunities')
-    print(WorkingCommunities)
-    print("--------------------------------6--------------------------------------------")
-    print('WorkingCommunities=WorkingCommunities.drop([4])')
-    WorkingCommunities=WorkingCommunities.drop([4])
-    print("--------------------------------7--------------------------------------------")
-    print('WorkingCommunities')
-    print(WorkingCommunities)
-    
-    print("--------------------------------8--------------------------------------------")
-    print("WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])")
-    WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
-    print("--------------------------------9--------------------------------------------")
-    print("WorkingCommunities")
-    print(WorkingCommunities)
-    print("--------------------------------10--------------------------------------------")
-    print('pandas.read_excel("WorkingCommunities").drop([0,1,2,3])')
-    print(pandas.read_excel('WorkingCommunities').drop([0,1,2,3]))
-    print("--------------------------------11--------------------------------------------")
-    print('WorkingCommunities.columns=WorkingCommunities.iloc[0]___(THIS OPERATION IS CANCELLED)')
-    WorkingCommunities.columns=WorkingCommunities.iloc[0]
-    print("--------------------------------12--------------------------------------------")
-    print('WorkingCommunities')
-    print(WorkingCommunities)
-    print("--------------------------------13--------------------------------------------")
-    print('WorkingCommunities=WorkingCommunities.drop([4])')
-    WorkingCommunities=WorkingCommunities.drop([4])
-    print("--------------------------------14--------------------------------------------")
-    print('WorkingCommunities')
-    print(WorkingCommunities)
-    
-    
-   
-    print("***************special Orders to View and delete***************")
-    """
-    
+     
     
     WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
     WorkingCommunities.columns=WorkingCommunities.iloc[0]
@@ -165,41 +113,9 @@ def initialCommUpdatProcess():
     LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')  
  
    
-    """
-    WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
-                                                                   'Community Id','Community Name','City','State','Zip',\
-                                                                   'Market ID','Market Name'])
-                                                                  
-   
-    FirstCol=WorkingCommunities[['Builder Name']]
-    global CommunityColTitles
-    CommunityColTitles=str(list(WorkingCommunities))
-    global CommunityRow1
-    CommunityRow1=str(WorkingCommunities.iloc[5].values)+" "+str(len(WorkingCommunities.iloc[5]))
-    global CommunityRow2
-    CommunityRow2=str(WorkingCommunities.iloc[6].values)+" "+str(len(WorkingCommunities.iloc[6]))
-    global CommunityRow3
-    CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
-    global CommunityRow4
-    CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
-    
-    print("**********test 1 col *************")
- 
-    print('WorkingCommunities...............')
-    print(WorkingCommunities)
-    print("CommunityColTitles")
-    print(CommunityColTitles)
-    print('CommunityRow1....................')
-    print(CommunityRow1)
-    
-    print("**********test 2 col *************")
-    print('CommunityCol1')
-    print(CommunityCol1)
-    """
-    
    
   
-    print("Google Section")
+    print("Google Section.....................................................................")
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     WorkingGoogle=pandas.read_excel('WorkingGoogle')
     #WorkingGoogle.columns=WorkingGoogle.iloc[0]
@@ -220,6 +136,8 @@ def initialCommUpdatProcess():
  
     print(GoogleColTitles)
     print(GoogleRow1)
+    
+    print("Bing Section.....................................................................")
   
 
 
