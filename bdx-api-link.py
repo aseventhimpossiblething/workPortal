@@ -60,13 +60,14 @@ app = Flask(__name__)
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 #{{CommonTag}}-{{pagetitle}}
 
-taskque.zfunc()
+#taskque.zfunc()
 
 @cel.task
 def writenonsenes():
-  print("..the should be in celery worker ...") 
-writenonsenes()
+  print(".. defined in the index page =====the should be in celery worker ...") 
+writenonsenes().apply_async()
 
+#from taskque import zfunc 
 
 
 
