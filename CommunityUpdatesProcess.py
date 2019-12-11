@@ -88,8 +88,11 @@ def initialCommUpdatProcess():
     print(pandas.read_excel('WorkingCommunities').drop([0,1,2,3]))
     print("--------------------------------3--------------------------------------------")
     print('WorkingCommunities.columns=WorkingCommunities.iloc[0]')
-    print(WorkingCommunities.columns=WorkingCommunities.iloc[0])
+    WorkingCommunities.columns=WorkingCommunities.iloc[0]
     print("--------------------------------4--------------------------------------------")
+    print('WorkingCommunities')
+    print(WorkingCommunities)
+    print("--------------------------------5--------------------------------------------")
     print('WorkingCommunities=WorkingCommunities.drop([4])')
     print(WorkingCommunities=WorkingCommunities.drop([4]))
 
