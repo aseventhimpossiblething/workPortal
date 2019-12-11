@@ -65,7 +65,7 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,UpdateVa
   if CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)=="Valid":
   print("Load Communities will run now.............",UpdateVar)
   else:
-   print("Load Communities cannot run...............",UpdateVar)
+  print("Load Communities cannot run...............",UpdateVar)
   return UpdateVar    
 """    
 def LoadCommunities():
