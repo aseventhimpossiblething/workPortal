@@ -67,14 +67,7 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
   else:
     print("Load Communities cannot run...............",IsCommValid)
   return IsCommValid    
-"""    
-def LoadCommunities():
-  if CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')=="Valid":
-    print("Load Communities will run now.............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
-  else:
-    print("Load Communities cannot run...............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
-    return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')
-"""
+
     
 
 def initialCommUpdatProcess():
@@ -86,32 +79,9 @@ def initialCommUpdatProcess():
     WorkingCommunities.columns=WorkingCommunities.iloc[0]
     WorkingCommunities=WorkingCommunities.drop([4])
 
-    """
-    if CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')=="Valid":
-    print("Load Communities will run now.............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
-    else:
-    print("Load Communities cannot run...............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
-    return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')  
-    #initialCommUpdatProcess()
-    
-    def LoadCommunities(WorkingCommunities):
-      if CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')=="Valid":
-        print("Load Communities will run now.............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
-      else:
-        print("Load Communities cannot run...............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
-      return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')
-    """   
     LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')  
  
-    """
-    #print("Check Sheet output.................",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))  
-    def LoadCommunities():
-    if CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')=="Valid":
-    print("Load Communities will run now.............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
-    else:
-    print("Load Communities cannot run...............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
-    return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')
-    """   
+   
     
     WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
                                                                    'Community Id','Community Name','City','State','Zip',\
