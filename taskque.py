@@ -36,6 +36,12 @@ def initiLjoV():
   print("tasque File Running initiJoV")
   Rval="return value"
   return Rval
+@cel.task()
+def pfunk(x,z):
+    print(x)
+    print(y)
+    
+
 
 
 
