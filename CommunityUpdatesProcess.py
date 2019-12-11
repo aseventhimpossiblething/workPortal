@@ -90,9 +90,6 @@ def initialCommUpdatProcess():
     return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')
   """   
     
-
-  
-  
   WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
                                                                    'Community Id','Community Name','City','State','Zip',\
                                                                    'Market ID','Market Name'])
@@ -121,25 +118,25 @@ def initialCommUpdatProcess():
   #WorkingGoogle.columns=WorkingGoogle.iloc[0]
   #WorkingGoogle=WorkingGoogle.drop([4])
   
- WorkingGoogle=pandas.DataFrame(WorkingGoogle, columns=['Campaign','Ad Group','Final URL'])
+  WorkingGoogle=pandas.DataFrame(WorkingGoogle, columns=['Campaign','Ad Group','Final URL'])
   
- global GoogleColTitles
- GoogleColTitles=str(list(WorkingGoogle))
- global GoogleRow1
- GoogleRow1=str(WorkingGoogle.iloc[1].values)+" "+str(len(WorkingGoogle.iloc[1]))
- global GoogleRow2
- GoogleRow2=str(WorkingGoogle.iloc[2].values)+" "+str(len(WorkingGoogle.iloc[2]))
- global GoogleRow3
- GoogleRow3=str(WorkingGoogle.iloc[3].values)+" "+str(len(WorkingGoogle.iloc[3]))
- global GoogleRow4
- GoogleRow4=str(WorkingGoogle.iloc[4].values)+" "+str(len(WorkingGoogle.iloc[4]))
+  global GoogleColTitles
+  GoogleColTitles=str(list(WorkingGoogle))
+  global GoogleRow1
+  GoogleRow1=str(WorkingGoogle.iloc[1].values)+" "+str(len(WorkingGoogle.iloc[1]))
+  global GoogleRow2
+  GoogleRow2=str(WorkingGoogle.iloc[2].values)+" "+str(len(WorkingGoogle.iloc[2]))
+  global GoogleRow3
+  GoogleRow3=str(WorkingGoogle.iloc[3].values)+" "+str(len(WorkingGoogle.iloc[3]))
+  global GoogleRow4
+  GoogleRow4=str(WorkingGoogle.iloc[4].values)+" "+str(len(WorkingGoogle.iloc[4]))
   
- print(GoogleColTitles)
- print(GoogleRow1)
+  print(GoogleColTitles)
+  print(GoogleRow1)
    
 
 
- return "finished"
+  return "finished"
 initialCommUpdatProcess()
 
 
