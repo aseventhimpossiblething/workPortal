@@ -9,7 +9,11 @@ import os
 import psycopg2
 import taskque
 
-#IsCommValid;
+IsCommValid=None;
+IsGoogleValid=None;
+IsBingValid=None;
+
+
 
 
 CommunityCol1=0
@@ -55,12 +59,13 @@ def CheckSheetData(sheet,checkword1,checkword2,checkword3):
    Invalid=str(sheet)+" contains format or content error "  
    return Invalid
     
-def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
+def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,UpdateVar):
+  global IsCommValid=CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)
   if CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)=="Valid":
-   print("Load Communities will run now.............",CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3))
+  print("Load Communities will run now.............",UpdateVar)
   else:
-   print("Load Communities cannot run...............",CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3))
-  return CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)    
+   print("Load Communities cannot run...............",UpdateVar)
+  return UpdateVar    
 """    
 def LoadCommunities():
   if CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')=="Valid":
@@ -95,7 +100,7 @@ def initialCommUpdatProcess():
         print("Load Communities cannot run...............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
       return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')
     """   
-    LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')  
+    LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City',IsCommValid)  
  
     """
     #print("Check Sheet output.................",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))  
