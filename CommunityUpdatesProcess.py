@@ -60,7 +60,8 @@ def CheckSheetData(sheet,checkword1,checkword2,checkword3):
    return Invalid
     
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,UpdateVar):
-  global IsCommValid=CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)
+  global UpdateVar
+  UpdateVar=CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)
   if CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)=="Valid":
   print("Load Communities will run now.............",UpdateVar)
   else:
