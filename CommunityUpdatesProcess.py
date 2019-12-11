@@ -145,7 +145,7 @@ def initialCommUpdatProcess():
   print(GoogleRow1)
     
   print("Bing Section.....................................................................")
-  """
+
   return "finished"
 
 
