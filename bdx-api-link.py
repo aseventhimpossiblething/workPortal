@@ -32,10 +32,15 @@ def num_redis_clients():
     print("# of redis clients", len(c.client_list()))
     return str(len(c.client_list()))
 
+# @app.route('/test')
+# def testasynch():
+#     from taskque import test
+#     r = test()
+#     return str(r)
 @app.route('/test')
 def testasynch():
     from taskque import test
-    r = test()
+    r = test.apply_async()
     return str(r)
 
 @app.route('/css')

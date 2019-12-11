@@ -6,29 +6,29 @@ services:
     # maxclients 20
     # loglevel debug
 
-  # celery:
-  #   build:
-  #     context: .
-  #     dockerfile: docker/web/Dockerfile
-  #   entrypoint: docker/wait-for-it.sh redis:6379 -- /venv/bin/celery -c 1 -A bdx-api-link.taskque worker
-  #   environment:
-  #     REDIS_URL: 'redis://redis:6379/0'
-  #   volumes:
-  #     - .:/code
-  #     - /root/.cache/pip:/root/.cache/pip
-  #   depends_on:
-  #     - redis
-
-  huey:
+  celery:
     build:
       context: .
       dockerfile: docker/web/Dockerfile
-    entrypoint: docker/wait-for-it.sh web:8000 -- /venv/bin/huey_consumer.py taskque.huey -w 2 -k process
+    entrypoint: docker/wait-for-it.sh redis:6379 -- /venv/bin/celery -c 2 -A bdx-api-link.taskque worker
+    environment:
+      REDIS_URL: 'redis://redis:6379/0'
     volumes:
       - .:/code
       - /root/.cache/pip:/root/.cache/pip
     depends_on:
       - redis
+
+  # huey:
+  #   build:
+  #     context: .
+  #     dockerfile: docker/web/Dockerfile
+  #   entrypoint: docker/wait-for-it.sh web:8000 -- /venv/bin/huey_consumer.py taskque.huey -w 2 -k process
+  #   volumes:
+  #     - .:/code
+  #     - /root/.cache/pip:/root/.cache/pip
+  #   depends_on:
+  #     - redis
 
 
   web:
