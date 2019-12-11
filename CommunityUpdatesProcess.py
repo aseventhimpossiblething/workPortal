@@ -81,10 +81,10 @@ def initialCommUpdatProcess():
     print("***************special Orders to View and delete***************")
     
     print("--------------------------------1--------------------------------------------")
-    print('WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])')
+    print("WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])")
     print(WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3]))
     print("--------------------------------2--------------------------------------------")
-    print('pandas.read_excel('WorkingCommunities').drop([0,1,2,3])')
+    print('pandas.read_excel(WorkingCommunities).drop([0,1,2,3])')
     print(pandas.read_excel('WorkingCommunities').drop([0,1,2,3]))
     print("--------------------------------3--------------------------------------------")
     print('WorkingCommunities.columns=WorkingCommunities.iloc[0]')
