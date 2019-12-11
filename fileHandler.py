@@ -116,6 +116,8 @@ def CommListFileHandler():
     
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     request.files['currentBing'].save('WorkingBing')
+        
+    print(request.files['currentGoogle'])    
 
     
     print("**********************file search in file handler 1**********************************")
