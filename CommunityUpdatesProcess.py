@@ -163,7 +163,7 @@ def initialCommUpdatProcess():
     
     print("**********test 2 col *************")
     print('CommunityCol1')
-    print(CommunityCol1=0)
+    print(CommunityCol1)
     
    
   
