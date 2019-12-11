@@ -62,7 +62,7 @@ app = Flask(__name__)
 
 taskque.zfunc().apply.async()
 
-""
+"""
 @cel.task
 def writenonsenes():
   print(".. defined in the index page =====the should be in celery worker ...") 
