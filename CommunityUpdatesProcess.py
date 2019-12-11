@@ -7,7 +7,7 @@ import fileHandler
 from flask import Flask, Markup, render_template, request
 import os
 import psycopg2
-#import taskque
+import taskque
 
 from redis import Redis
 from celery import Celery
@@ -15,7 +15,7 @@ from flask import Flask
 from celery.result import AsyncResult
 from celery.result import ResultBase
 the_redis=os.environ.get("REDIS_URL")
-cel=Celery("CommunityUpdatesProcess", broker=the_redis)
+cel=Celery("taskque", broker=the_redis)
 
 
 
@@ -130,7 +130,7 @@ def initialCommUpdatProcess():
   print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
   @cel.task()
   def celOFfgroun():
-    print("This exists of Tasque but should run on celery------------")
+    print("should run on celery------------")
   celOFfgroun()
   print("C -E-L-E-R-Y- -T-A-S-K--S-H-O-U-L-D- -R-U-N- -N-O-W")
   """
