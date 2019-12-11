@@ -116,13 +116,18 @@ def initialCommUpdatProcess():
    
   
     print("Google Section.....................................................................")
+    GoogleAsynchLoad()
+    """
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     WorkingGoogle=pandas.read_excel('WorkingGoogle')
     print('WorkingGoogle')
     print(WorkingGoogle)
     #WorkingGoogle.columns=WorkingGoogle.iloc[0]
     #WorkingGoogle=WorkingGoogle.drop([4])
-    """
+    
+    print('-------------------------')
+    
+    
     WorkingGoogle=pandas.DataFrame(WorkingGoogle, columns=['Campaign','Ad Group','Final URL'])
  
     global GoogleColTitles
