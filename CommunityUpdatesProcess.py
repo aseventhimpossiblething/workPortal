@@ -113,7 +113,7 @@ def initialCommUpdatProcess():
     print(pandas.read_excel('WorkingCommunities').drop([0,1,2,3]))
     print("--------------------------------11--------------------------------------------")
     print('WorkingCommunities.columns=WorkingCommunities.iloc[0]___(THIS OPERATION IS CANCELLED)')
-    #WorkingCommunities.columns=WorkingCommunities.iloc[0]
+    WorkingCommunities.columns=WorkingCommunities.iloc[0]
     print("--------------------------------12--------------------------------------------")
     print('WorkingCommunities')
     print(WorkingCommunities)
