@@ -72,6 +72,14 @@ print("AsyncResult(taskId)...........",AsyncResult(taskId))
 def borrowedCelery():
     print("Borrowed Celey from task to communities!!!!!!!!!!!!!!!!!!!!!!!!")
     
+@cel.Task():
+def GoogleAsynchLoad():
+    os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
+    WorkingGoogle=pandas.read_excel('WorkingGoogle')
+    print('WorkingGoogle')
+    print(WorkingGoogle)
+    
+    
 
 
 
