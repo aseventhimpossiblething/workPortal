@@ -15,7 +15,7 @@ from flask import Flask
 from celery.result import AsyncResult
 from celery.result import ResultBase
 the_redis=os.environ.get("REDIS_URL")
-cel=Celery("taskque", broker=the_redis)
+cel=Celery("CommunityUpdatesProcess", broker=the_redis)
 
 
 
