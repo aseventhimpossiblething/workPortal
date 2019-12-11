@@ -9,6 +9,8 @@ import os
 import psycopg2
 import taskque
 
+#IsCommValid;
+
 
 CommunityCol1=0
 CommunityCol2=0
@@ -59,7 +61,6 @@ def LoadCommunities():
   else:
     print("Load Communities cannot run...............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
     return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')
-
 
 def initialCommUpdatProcess():
   taskque.borrowedCelery()
@@ -136,7 +137,7 @@ def initialCommUpdatProcess():
    
 
 
-  return "finished"
+  #return "finished"
 initialCommUpdatProcess()
 
 
