@@ -95,6 +95,10 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
     print("Load Communities cannot run...............",IsCommValid)
   return IsCommValid    
 
+@cel.task()
+def celOFfgroun():
+  print("This exists of Tasque but should run on celery------------")
+
     
 
 def initialCommUpdatProcess():
