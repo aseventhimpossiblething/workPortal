@@ -59,14 +59,14 @@ def CheckSheetData(sheet,checkword1,checkword2,checkword3):
    Invalid=str(sheet)+" contains format or content error "  
    return Invalid
     
-def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,UpdateVar):
-  global UpdateVar
-  UpdateVar=CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)
+def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
+  global IsCommValid
+  IsCommValid=CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)
   if CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)=="Valid":
-    print("Load Communities will run now.............",UpdateVar)
+    print("Load Communities will run now.............",IsCommValid)
   else:
-    print("Load Communities cannot run...............",UpdateVar)
-  return UpdateVar    
+    print("Load Communities cannot run...............",IsCommValid)
+  return IsCommValid    
 """    
 def LoadCommunities():
   if CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')=="Valid":
@@ -101,7 +101,7 @@ def initialCommUpdatProcess():
         print("Load Communities cannot run...............",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))
       return CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City')
     """   
-    LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City',IsCommValid)  
+    LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')  
  
     """
     #print("Check Sheet output.................",CheckSheetData(WorkingCommunities,'Builder Name','Community Id','City'))  
