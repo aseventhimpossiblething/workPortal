@@ -18,10 +18,13 @@ import os
 from redis import Redis
 from flask import Flask
 
+the_redis=os.environ.get("REDIS_URL")
+
 from huey import RedisHuey
 
-pool = redis.BlockingConnectionPool(host="redis", max_connections=5, timeout=None)
+#pool = redis.BlockingConnectionPool(host="redis", max_connections=5, timeout=None)
 #huey = RedisHuey(name='app', connection_pool=pool)
+pool = redis.BlockingConnectionPool(host=the_redis, max_connections=5, timeout=None)
 huey = RedisHuey(name='app', connection_pool=pool)
 
 @huey.task()
