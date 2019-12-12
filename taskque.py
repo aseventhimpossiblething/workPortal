@@ -5,7 +5,7 @@ reliable redis/celery cmds
 voir les log persistant
 Separer les contenue static es dynamique
 """
-print("this is the master branch tasque..............................................................")
+print("this is the huey branch tasque..............................................................")
 
 
 import CommunityUpdatesProcess
