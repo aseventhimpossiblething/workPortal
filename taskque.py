@@ -31,6 +31,7 @@ print(type(the_redis))
 #print('pool')
 #pool = redis.BlockingConnectionPool(host=the_redis)
 print(pool)
+the_redis=str(the_redis)
 huey = RedisHuey(name='bdx-api-link', host=the_redis)
 
 @huey.task()
