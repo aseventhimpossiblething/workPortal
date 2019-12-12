@@ -109,9 +109,7 @@ def initialCommUpdatProcess():
   WorkingCommunities.columns=WorkingCommunities.iloc[0]
   WorkingCommunities=WorkingCommunities.drop([4])
   LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')
-  print("From Comm sheet Native sheet",IsCommValid)
   if IsCommValid!="Valid":
-   print(IsCommValid) 
    return IsCommValid
   
   
@@ -120,12 +118,12 @@ def initialCommUpdatProcess():
   
 
   print("Google Section.....................................................................")
-  #taskque.GoogleAsynchLoad.apply_async()
   print("os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')")
   os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
   print('os.listdir()')
   print(os.listdir())
-  
+  print(FileAsynchLoad())
+  taskque.FileAsynchLoad.apply_async()
   """
   WorkingGoogle=pandas.read_excel('WorkingGoogle')
   print('WorkingGoogle')
