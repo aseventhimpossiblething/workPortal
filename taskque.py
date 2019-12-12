@@ -27,8 +27,8 @@ from huey import RedisHuey
 #huey = RedisHuey(name='app', connection_pool=pool)
 print("the_redis")
 print(the_redis)
-print('pool')
-pool = redis.BlockingConnectionPool(host=the_redis)
+#print('pool')
+#pool = redis.BlockingConnectionPool(host=the_redis)
 print(pool)
 huey = RedisHuey(name='bdx-api-link', host=the_redis)
 
