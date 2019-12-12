@@ -28,7 +28,7 @@ from huey import RedisHuey
 huey = RedisHuey('taskque')
 #cel=huey("taskque", broker=the_redis)
 
-@huey.task
+@huey.task()
 def huey_Zfunc():
     print("Huey_ huey_Zfunc()........................what worker? ")
 #huey_Zfunc.periodic_task() 
