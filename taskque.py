@@ -30,7 +30,8 @@ huey = RedisHuey('taskque')
 
 @huey.task
 def huey_Zfunc():
-    print("Huey huey_Zfunc()........................what worker? ")
+    print("Huey_ huey_Zfunc()........................what worker? ")
+huey_Zfunc.periodic_task()    
 """
 @cel.task()
 def zfunc():
