@@ -29,6 +29,8 @@ def test():
     # sleep(1)
     print("All done")
     return 42
+test()
+
 
 # from celery import Celery
 # from celery.result import AsyncResult
