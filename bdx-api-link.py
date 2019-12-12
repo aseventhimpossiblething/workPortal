@@ -18,6 +18,8 @@ huey = RedisHuey('bdx-api-link')
 @huey.task()
 def huey_Zfunc():
     print("Huey_ huey_Zfunc()........................what worker? ")
+huey_Zfunc()    
+    
          
 
 
