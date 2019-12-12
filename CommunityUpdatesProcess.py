@@ -69,7 +69,7 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
     WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
                                                                    'Community Id','Community Name','City','State','Zip',\
                                                                    'Market ID','Market Name'])
-    print("Load Communities will run now.............",IsCommValid)      
+    #print("Load Communities will run now Community sheet is valid.............",IsCommValid)      
     FirstCol=WorkingCommunities[['Builder Name']]
     global CommunityColTitles
     CommunityColTitles=str(list(WorkingCommunities))
@@ -81,18 +81,17 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
     CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
     global CommunityRow4
     CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
-    print("**********test 1 col *************")
- 
+    
+   
+    """
     print('WorkingCommunities...............')
     print(WorkingCommunities)
     print("CommunityColTitles")
     print(CommunityColTitles)
     print('CommunityRow1....................')
     print(CommunityRow1)
+    """
     
-    print("**********test 2 col *************")
-    print('CommunityCol1')
-    print(CommunityCol1)
     return WorkingCommunities
   else:
     print("Load Communities cannot run...............",IsCommValid)
@@ -109,9 +108,13 @@ def initialCommUpdatProcess():
   WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
   WorkingCommunities.columns=WorkingCommunities.iloc[0]
   WorkingCommunities=WorkingCommunities.drop([4])
-  #LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')
-  print("LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')",LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City'))
-    
+  LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')
+  print(IsCommValid)
+  if IsCommValid!="Valid":
+    print("Conditional is inValid")
+  
+  if IsCommValid=="Valid":
+    print("Conditional is Valid")
   
   
   
