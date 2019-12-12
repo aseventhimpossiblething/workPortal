@@ -9,8 +9,14 @@ import redis
 import os
 from flask import Flask, Markup, render_template, request
 from celery import Celery
-import taskque
+#import taskque
 from huey import RedisHuey
+
+
+print(the_redis)
+@huey.task()
+def huey_Zfunc():
+    print("Huey_ huey_Zfunc()........................what worker? ")
          
 
 
