@@ -111,8 +111,8 @@ def initialCommUpdatProcess():
   LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')
   print(IsCommValid)
   if IsCommValid!="Valid":
-   print(IsCommValid!) 
-   return IsCommValid! 
+   print(IsCommValid) 
+   return IsCommValid
   
   
   
