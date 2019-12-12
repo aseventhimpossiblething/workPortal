@@ -18,6 +18,7 @@ import os
 from redis import Redis
 from flask import Flask
 
+#my addition
 the_redis=os.environ.get("REDIS_URL")
 
 from huey import RedisHuey
