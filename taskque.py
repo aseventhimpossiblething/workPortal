@@ -35,7 +35,8 @@ print(type(the_redis))
 
 
 
-huey = RedisHuey(name='bdx-api-link', host=the_redis)
+#huey = RedisHuey(name='bdx-api-link', host=the_redis)
+huey = RedisHuey(name='bdx-api-link')
 
 @huey.task()
 def test():
