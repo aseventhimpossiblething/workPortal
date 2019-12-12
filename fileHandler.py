@@ -161,19 +161,6 @@ def CommListFileHandler():
     
            
     CommunityUpdatesProcess.initialCommUpdatProcess()
-               
-    print("Run from fileHandler CommunityUpdatesProcess.IsCommValid",CommunityUpdatesProcess.IsCommValid)
-    print("second attempt...",CommunityUpdatesProcess.IsCommValid)    
-
-    print("running CommunityUpdatesProcess.initialCommUpdatProcess()")   
-    #WorkingCommunityOut=Markup("Sample of Active Communities "+"<br>"+CommunityUpdatesProcess.CommunityColTitles+"<br>"+CommunityUpdatesProcess.CommunityRow1+"<br>"+CommunityUpdatesProcess.CommunityRow2+"<br>"+CommunityUpdatesProcess.CommunityRow3+"<br>"+CommunityUpdatesProcess.CommunityRow4)
-    
-    #print(CommunityUpdatesProcess.CommunityData)   
-    #print(CommunityUpdatesProcess.CommunityColTitles)
-    #print(CommunityUpdatesProcess.CommunityRow1) 
-    #print(CommunityUpdatesProcess.CommunityRow2)
-    #print(CommunityUpdatesProcess.CommunityRow3)
-    #print(CommunityUpdatesProcess.CommunityRow4) 
     if CommunityUpdatesProcess.IsCommValid!="Valid":
      return CommunityUpdatesProcess.IsCommValid     
     HTMLoutput="This will be 3 modules  Modules as follows  Module 1: 3 links to the Community, Google, and Bing upload outputs Module 2:Google Outputs link1, Google KWs all match types. Link 2 google Adds Ad Types A+b and all Match types "    
