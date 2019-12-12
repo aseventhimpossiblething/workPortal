@@ -21,6 +21,7 @@ from flask import Flask
 from huey import RedisHuey
 
 pool = redis.BlockingConnectionPool(host="redis", max_connections=5, timeout=None)
+#huey = RedisHuey(name='app', connection_pool=pool)
 huey = RedisHuey(name='app', connection_pool=pool)
 
 @huey.task()
