@@ -18,19 +18,23 @@ import os
 from redis import Redis
 from flask import Flask
 
-#my addition
-the_redis=os.environ.get("REDIS_URL")
+
 
 from huey import RedisHuey
 
 #pool = redis.BlockingConnectionPool(host="redis", max_connections=5, timeout=None)
 #huey = RedisHuey(name='app', connection_pool=pool)
+
+#my addition
+the_redis=os.environ.get("REDIS_URL")
 print("the_redis")
 print(the_redis)
 print(type(the_redis))
-#print('pool')
-#pool = redis.BlockingConnectionPool(host=the_redis)
-#print(pool)
+print("the_redis.decode(utf-8)")
+print(the_redis.decode('utf-8'))
+print("the_redis.decode(ascii)")
+print(the_redis.decode('ascii'))
+
 the_redis=str(the_redis)
 huey = RedisHuey(name='bdx-api-link', host=the_redis)
 
