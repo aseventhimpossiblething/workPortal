@@ -47,7 +47,7 @@ def borrowedCelery():
 
 @cel.task()
 def cel_save():
-    print("@cel.task() run")
+    print("cel_save.... run")
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     request.files['currentGoogle'].save('WorkingGoogle')
     
