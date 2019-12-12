@@ -49,10 +49,11 @@ def borrowedCelery():
 def FileAsynchLoad(filename,fileLocation):
     print(filename, "..................FileAsynchLoad(file,filename)...................................................")
     print(fileLocation)
-    print(fileLocation) 
+    #print(fileLocation) 
     os.chdir(fileLocation)
     file=pandas.read_excel(filename)
     print(filename)
+    print(file)
     return file
 
     
