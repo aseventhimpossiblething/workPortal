@@ -28,7 +28,7 @@ from huey import RedisHuey
 
 #my addition
 the_redis=os.environ.get("REDIS_URL")
-the_redis=the_redis.encode(encoding='UTF-8',errors='strict')
+the_redis=the_redis.encode(encoding='ascii',errors='strict')
 print("the_redis")
 print(the_redis)
 print(type(the_redis))
