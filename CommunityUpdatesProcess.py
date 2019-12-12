@@ -123,7 +123,7 @@ def initialCommUpdatProcess():
   print('os.listdir()')
   print(os.listdir())
   print(FileAsynchLoad())
-  taskque.FileAsynchLoad.apply_async()
+  taskque.FileAsynchLoad.apply_async(WorkingGoogle,"WorkingGoogle")
   """
   WorkingGoogle=pandas.read_excel('WorkingGoogle')
   print('WorkingGoogle')
