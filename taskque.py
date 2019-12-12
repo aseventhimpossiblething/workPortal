@@ -17,13 +17,10 @@ import redis
 import os
 from redis import Redis
 from flask import Flask
+from huey import RedisHuey
 
-
-
-from huey import RedisHuey, crontab
-
-#pool = redis.BlockingConnectionPool(host="redis", max_connections=5, timeout=None)
-#huey = RedisHuey(name='app', connection_pool=pool)
+pool = redis.BlockingConnectionPool(host="redis", max_connections=5, timeout=None)
+huey = RedisHuey(name='app', connection_pool=pool)
 
 
 #my addition
@@ -35,16 +32,17 @@ print(type(the_redis))
 
 
 
-#huey = RedisHuey(name='bdx-api-link', host=the_redis)
-huey = RedisHuey(name='bdx-api-link')
+
+
+
 
 @huey.task()
 def test():
     from time import sleep
-    # sleep(1)
+    sleep(1)
     print("All done")
     return 42
-test()
+
 
 
 # from celery import Celery
