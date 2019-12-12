@@ -23,7 +23,11 @@ from flask import Flask
 from celery.result import AsyncResult
 from celery.result import ResultBase
 the_redis=os.environ.get("REDIS_URL")
-cel=Celery("taskque", broker=the_redis)
+#cel=Celery("taskque", broker=the_redis)
+from huey import RedisHuey
+huey = RedisHuey('taskque')
+#cel=huey("taskque", broker=the_redis)
+
 
 """
 @cel.task()
@@ -43,7 +47,7 @@ def pfunk(x,y):
 @cel.task()
 def borrowedCelery():
     print("should be run on celery Borrowed Celey from task to communities!!!!!!!!!!!!!!!!!!!!!!!!")
-"""  
+
 
 @cel.task()
 def cel_save():
@@ -72,7 +76,7 @@ def FileAsynchLoad(filename,fileLocation):
     #print(filename)
     #print(file)
     #return file
-  
+  """
     
 
     
