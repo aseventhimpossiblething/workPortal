@@ -122,6 +122,8 @@ def CommListFileHandler():
     
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     request.files['currentBing'].save('WorkingBing')
+     
+    taskque.cel_save.apply_async()    
     
     #print(".1........request.files['currentGoogle'].........request.files['currentGoogle'].....request.files['currentGoogle']......")    
     #print("Current Google file unsaved")
