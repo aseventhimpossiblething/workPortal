@@ -14,6 +14,7 @@ from celery import Celery
 the_redis=os.environ.get("REDIS_URL")
 from huey import RedisHuey
 print(the_redis)
+huey = RedisHuey('bdx-api-link')
 @huey.task()
 def huey_Zfunc():
     print("Huey_ huey_Zfunc()........................what worker? ")
