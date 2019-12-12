@@ -46,15 +46,15 @@ def borrowedCelery():
 """  
 
 @cel.task()
-def FileAsynchLoad(file,filename):
+def FileAsynchLoad(filename,fileLocation):
     print(filename, "..................FileAsynchLoad(file,filename)...................................................")
-    print("File Location")
-    print('/app/Sheets/CommunityUpdates/Google/currentGoogle') 
-    os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-    file=pandas.read_excel('file')
+    print(fileLocation)
+    print(fileLocation) 
+    os.chdir(fileLocation)
+    file=pandas.read_excel(filename)
     print(filename)
-    print(file)
-    
+    return file
+
     
 
 
