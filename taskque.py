@@ -22,11 +22,10 @@ from celery import Celery
 from flask import Flask
 from celery.result import AsyncResult
 from celery.result import ResultBase
-
 the_redis=os.environ.get("REDIS_URL")
-
 cel=Celery("taskque", broker=the_redis)
 
+"""
 @cel.task()
 def zfunc():
     print("--------------PRINTED FROM IN ZFUNC")
@@ -44,7 +43,7 @@ def pfunk(x,y):
 @cel.task()
 def borrowedCelery():
     print("should be run on celery Borrowed Celey from task to communities!!!!!!!!!!!!!!!!!!!!!!!!")
-    
+"""    
 @cel.task()
 def GoogleAsynchLoad():
     print("Google Section..................Inside Asynch Google...................................................")
