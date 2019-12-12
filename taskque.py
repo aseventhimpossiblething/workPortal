@@ -25,8 +25,10 @@ from huey import RedisHuey
 #pool = redis.BlockingConnectionPool(host="redis", max_connections=5, timeout=None)
 #huey = RedisHuey(name='app', connection_pool=pool)
 
+
 #my addition
 the_redis=os.environ.get("REDIS_URL")
+the_redis=the_redis.encode(encoding='UTF-8',errors='strict')
 print("the_redis")
 print(the_redis)
 print(type(the_redis))
