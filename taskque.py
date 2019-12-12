@@ -25,7 +25,7 @@ from celery.result import ResultBase
 the_redis=os.environ.get("REDIS_URL")
 #cel=Celery("taskque", broker=the_redis)
 from huey import RedisHuey
-huey = RedisHuey('bdx.api.link')
+huey = RedisHuey('bdx-api-link')
 #cel=huey("taskque", broker=the_redis)
 print(the_redis)
 
