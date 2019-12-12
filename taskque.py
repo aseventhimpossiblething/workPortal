@@ -46,6 +46,15 @@ def borrowedCelery():
 """  
 
 @cel.task()
+def cel_save():
+    print("@cel.task() run")
+    os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
+    request.files['currentGoogle'].save('WorkingGoogle')
+    
+    os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
+    request.files['currentBing'].save('WorkingBing')
+
+@cel.task()
 def FileAsynchLoad(filename,fileLocation):
     print("..................FileAsynchLoad(file,filename)...................................................")
     print('input filename',filename )
