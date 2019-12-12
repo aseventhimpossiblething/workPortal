@@ -162,6 +162,7 @@ def CommListFileHandler():
            
     CommunityUpdatesProcess.initialCommUpdatProcess() 
     print("Run from fileHandler CommunityUpdatesProcess.IsCommValid",CommunityUpdatesProcess.IsCommValid)
+    print("second attempt...",CommunityUpdatesProcess.IsCommValid)    
 
     print("running CommunityUpdatesProcess.initialCommUpdatProcess()")   
     #WorkingCommunityOut=Markup("Sample of Active Communities "+"<br>"+CommunityUpdatesProcess.CommunityColTitles+"<br>"+CommunityUpdatesProcess.CommunityRow1+"<br>"+CommunityUpdatesProcess.CommunityRow2+"<br>"+CommunityUpdatesProcess.CommunityRow3+"<br>"+CommunityUpdatesProcess.CommunityRow4)
