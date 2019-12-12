@@ -59,7 +59,7 @@ def CheckSheetData(sheet,checkword1,checkword2,checkword3):
    str(sheet.iloc[1]).find(checkword3)!=-1:
    return "Valid"
   else:
-   Invalid=str(sheet)+" contains format or content error "  
+   Invalid=" Current Community sheet contains format or content error check sheet and resubmit "  
    return Invalid
     
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
@@ -93,7 +93,7 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
     print("**********test 2 col *************")
     print('CommunityCol1')
     print(CommunityCol1)
-    
+    return WorkingCommunities
   else:
     print("Load Communities cannot run...............",IsCommValid)
   return IsCommValid    
@@ -109,8 +109,8 @@ def initialCommUpdatProcess():
   WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
   WorkingCommunities.columns=WorkingCommunities.iloc[0]
   WorkingCommunities=WorkingCommunities.drop([4])
-  LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')
-  print("!!!! Running initialCommUpdatProcess() checking IsCommValid Should return not Valid",IsCommValid)
+  #LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')
+  print("LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')",LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City'))
     
   
   
