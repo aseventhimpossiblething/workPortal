@@ -48,8 +48,9 @@ def borrowedCelery():
 @cel.task()
 def cel_save():
     print("cel_save.... run")
-    print("from cel ...fileHandler.request.files['currentGoogle'] ",fileHandler.request.files['currentGoogle'])
-    print("fileHandler.request.files['currentBing'].save('WorkingBing')",fileHandler.request.files['currentBing'].save('WorkingBing')])
+    print("from cel ...fileHandler ")
+    print(fileHandler.request.files['currentGoogle'])
+    print(fileHandler.request.files['currentBing'])
     
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
     fileHandler.request.files['currentGoogle'].save('WorkingGoogle')
