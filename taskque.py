@@ -46,8 +46,7 @@ def borrowedCelery():
 """  
 
 @cel.task()
-def FileAsynchLoad():
-    """
+def FileAsynchLoad(filename,fileLocation):
     print(filename, "..................FileAsynchLoad(file,filename)...................................................")
     print(fileLocation)
     os.chdir(fileLocation)
@@ -55,7 +54,7 @@ def FileAsynchLoad():
     print(filename)
     print(file)
     return file
-    """
+  
     
 
     
