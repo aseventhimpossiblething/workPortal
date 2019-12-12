@@ -47,13 +47,18 @@ def borrowedCelery():
 
 @cel.task()
 def FileAsynchLoad(filename,fileLocation):
-    print(filename, "..................FileAsynchLoad(file,filename)...................................................")
-    print(fileLocation)
+    print("..................FileAsynchLoad(file,filename)...................................................")
+    print('input filename',filename )
+    print('input fileLocation',fileLocation)
+    print('os.chdir(fileLocation)')
     os.chdir(fileLocation)
-    file=pandas.read_excel(filename)
-    print(filename)
-    print(file)
-    return file
+    print("os.listdir()")
+    print(os.listdir())
+    #print(fileLocation)
+    #file=pandas.read_excel(filename)
+    #print(filename)
+    #print(file)
+    #return file
   
     
 
