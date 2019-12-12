@@ -43,7 +43,8 @@ def pfunk(x,y):
 @cel.task()
 def borrowedCelery():
     print("should be run on celery Borrowed Celey from task to communities!!!!!!!!!!!!!!!!!!!!!!!!")
-"""    
+"""  
+
 @cel.task()
 def GoogleAsynchLoad():
     print("Google Section..................Inside Asynch Google...................................................")
