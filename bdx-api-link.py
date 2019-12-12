@@ -10,9 +10,9 @@ import os
 from flask import Flask, Markup, render_template, request
 from celery import Celery
 #import taskque
+
+the_redis=os.environ.get("REDIS_URL")
 from huey import RedisHuey
-
-
 print(the_redis)
 @huey.task()
 def huey_Zfunc():
