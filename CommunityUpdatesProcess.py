@@ -100,7 +100,7 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
 
     
 def initialCommUpdatProcess():
-  taskque.borrowedCelery.apply_async()
+  #taskque.borrowedCelery.apply_async()
   print("Running.........initialCommUpdatProcess()......")
   print("communities section")
   os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
@@ -111,10 +111,10 @@ def initialCommUpdatProcess():
   LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')
   print(IsCommValid)
   if IsCommValid!="Valid":
-    print("Conditional is inValid")
+   print(IsCommValid!) 
+   return IsCommValid! 
   
-  if IsCommValid=="Valid":
-    print("Conditional is Valid")
+  
   
   
   
