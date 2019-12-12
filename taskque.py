@@ -27,12 +27,13 @@ the_redis=os.environ.get("REDIS_URL")
 from huey import RedisHuey
 huey = RedisHuey('taskque')
 #cel=huey("taskque", broker=the_redis)
+print(the_redis)
 
 @huey.task()
 def huey_Zfunc():
     print("Huey_ huey_Zfunc()........................what worker? ")
 #huey_Zfunc.periodic_task() 
-huey_Zfunc()
+#huey_Zfunc()
 """
 @cel.task()
 def zfunc():
