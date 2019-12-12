@@ -32,12 +32,9 @@ the_redis=the_redis.encode(encoding='UTF-8',errors='strict')
 print("the_redis")
 print(the_redis)
 print(type(the_redis))
-print("the_redis.decode(utf-8)")
-print(the_redis.decode('utf-8'))
-print("the_redis.decode(ascii)")
-print(the_redis.decode('ascii'))
 
-the_redis=str(the_redis)
+
+
 huey = RedisHuey(name='bdx-api-link', host=the_redis)
 
 @huey.task()
