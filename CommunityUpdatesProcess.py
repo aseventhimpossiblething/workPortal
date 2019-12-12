@@ -109,7 +109,7 @@ def initialCommUpdatProcess():
   WorkingCommunities.columns=WorkingCommunities.iloc[0]
   WorkingCommunities=WorkingCommunities.drop([4])
   LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')
-  print(IsCommValid)
+  print("From Comm sheet Native sheet",IsCommValid)
   if IsCommValid!="Valid":
    print(IsCommValid) 
    return IsCommValid
