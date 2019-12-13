@@ -127,7 +127,6 @@ def initialCommUpdatProcess():
   IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
   print(IsGoogleValid)
   if IsGoogleValid!="Valid":
-   #print(IsGoogleValid)
    return IsGoogleValid
  run_fileAsyncLoad=threading.Thread(target=fileAsyncLoad)  
  run_fileAsyncLoad.start()
