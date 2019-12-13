@@ -17,6 +17,7 @@ import redis
 import os
 from redis import Redis
 from flask import Flask
+import threading
 
 
 
@@ -36,15 +37,19 @@ print(type(the_redis))
 
 
 #huey = RedisHuey(name='bdx-api-link', host=the_redis)
-huey = RedisHuey(name='tasque')
+huey = RedisHuey(name='bdx-api-link')
 
-@huey.task()
+#@huey.task()
 def test():
     from time import sleep
     # sleep(1)
     print("All done")
     return 42
-test()
+#test()
+print("the test thread should fire here")
+test=threading.Thread(target=test)
+test.start
+print("the test thread should fire here")
 
 
 # from celery import Celery
