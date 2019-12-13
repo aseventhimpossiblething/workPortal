@@ -10,7 +10,9 @@ import psycopg2
 import taskque
 import threading
 
-
+WorkingCommunities
+WorkingGoogle
+WorkingBing
 
 SheetsAreLoaded=None; 
 IsCommValid=None;
@@ -109,7 +111,7 @@ def fileAsyncLoad():
    SheetsAreLoaded="True"
    return IsGoogleValid
   
- def BingLoader():
+def BingLoader():
   print("this is for bing")
   #os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
   print("os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')")
@@ -139,7 +141,9 @@ def initialCommUpdatProcess():
  print("Bing Section.....................................................................")
  
  BingLoader() 
- print(WorkingCommunities)  
+ print(WorkingCommunities)
+ print(WorkingGoogle)
+ print(WorkingBing)
  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
 
