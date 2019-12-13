@@ -137,6 +137,9 @@ def initialCommUpdatProcess():
   print(os.listdir())
   WorkingBing=pandas.read_excel('WorkingBing')
   print(WorkingBing)
+  #WorkingBing.iloc[0]
+  IsBingValid=CheckSheetData("WorkingBing",'Campaign','Ad Group','Final URL')
+  print(IsBingValid)
  BingLoader() 
   
  print("END OF ASYNC FILE LOAD.....................................................................")
