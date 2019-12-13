@@ -102,7 +102,7 @@ def fileAsyncLoad():
   #print(WorkingGoogleColTitles)
   global IsGoogleValid 
   #print("is this thing chilling valid",IsGoogleValid)
-  IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
+  IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Headline 1')
   print(IsGoogleValid)
   if IsGoogleValid!="Valid":
    global SheetsAreLoaded
@@ -138,7 +138,7 @@ def initialCommUpdatProcess():
   WorkingBing=pandas.read_excel('WorkingBing')
   print(WorkingBing)
   #WorkingBing.iloc[0]
-  IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final URL')
+  IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1')
   print(IsBingValid)
  BingLoader() 
   
