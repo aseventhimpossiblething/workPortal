@@ -73,7 +73,6 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
    WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
                                                                    'Community Id','Community Name','City','State','Zip',\
                                                                    'Market ID','Market Name'])
-   #print("Load Communities will run now Community sheet is valid.............",IsCommValid)      
    FirstCol=WorkingCommunities[['Builder Name']]
    global CommunityColTitles
    CommunityColTitles=str(list(WorkingCommunities))
@@ -85,17 +84,6 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
    CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
    global CommunityRow4
    CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
-    
-   
-   """
-   print('WorkingCommunities...............')
-   print(WorkingCommunities)
-   print("CommunityColTitles")
-   print(CommunityColTitles)
-   print('CommunityRow1....................')
-   print(CommunityRow1)
-   """
-    
    return WorkingCommunities
   else:
    print("Load Communities cannot run...............",IsCommValid)
@@ -125,7 +113,7 @@ def initialCommUpdatProcess():
  #print("os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')")
  #os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
  #print('os.listdir()')
- print(os.listdir())
+ #print(os.listdir())
  print("start threading")
  def fileAsyncLoad():
   print('from inside threaded async .... ')
@@ -134,7 +122,10 @@ def initialCommUpdatProcess():
   #print(WorkingGoogle.iloc[0])
   print(IsGoogleValid)
   IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
-  print(IsGoogleValid)  
+  print(IsGoogleValid)
+  if IsGoogleValid!="Valid":
+   print(IsGoogleValid)
+   return IsGoogleValid
  run_fileAsyncLoad=threading.Thread(target=fileAsyncLoad)  
  run_fileAsyncLoad.start()
  print(" end threading exeriment")
