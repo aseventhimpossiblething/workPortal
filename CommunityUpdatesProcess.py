@@ -135,6 +135,8 @@ def initialCommUpdatProcess():
   print("os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')")
   os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
   print(os.listdir())
+  WorkingBing=pandas.read_excel('WorkingBing')
+  print(WorkingBing)
  BingLoader() 
   
  print("END OF ASYNC FILE LOAD.....................................................................")
