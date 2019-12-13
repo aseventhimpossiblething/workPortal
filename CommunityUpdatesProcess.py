@@ -56,88 +56,84 @@ BingRow3=0
 BingRow4=0
 
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3):
-   if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
-   str(sheet.iloc[1]).find(checkword3)!=-1:
-   print(sheetname," Valid")
-   return "Valid"
-  else:
-   Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
-   print(Invalid) 
-   return Invalid
+ if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
+  str(sheet.iloc[1]).find(checkword3)!=-1:
+  print(sheetname," Valid")
+  return "Valid"
+ else:
+  Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
+  print(Invalid) 
+  return Invalid
     
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
   global IsCommValid
   IsCommValid=CheckSheetData("WorkingCommunities",WorkingCommunities,checkword1,checkword2,checkword3)
   if CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)=="Valid":
-    WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
+   WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
                                                                    'Community Id','Community Name','City','State','Zip',\
                                                                    'Market ID','Market Name'])
-    #print("Load Communities will run now Community sheet is valid.............",IsCommValid)      
-    FirstCol=WorkingCommunities[['Builder Name']]
-    global CommunityColTitles
-    CommunityColTitles=str(list(WorkingCommunities))
-    global CommunityRow1
-    CommunityRow1=str(WorkingCommunities.iloc[5].values)+" "+str(len(WorkingCommunities.iloc[5]))
-    global CommunityRow2
-    CommunityRow2=str(WorkingCommunities.iloc[6].values)+" "+str(len(WorkingCommunities.iloc[6]))
-    global CommunityRow3
-    CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
-    global CommunityRow4
-    CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
+   #print("Load Communities will run now Community sheet is valid.............",IsCommValid)      
+   FirstCol=WorkingCommunities[['Builder Name']]
+   global CommunityColTitles
+   CommunityColTitles=str(list(WorkingCommunities))
+   global CommunityRow1
+   CommunityRow1=str(WorkingCommunities.iloc[5].values)+" "+str(len(WorkingCommunities.iloc[5]))
+   global CommunityRow2
+   CommunityRow2=str(WorkingCommunities.iloc[6].values)+" "+str(len(WorkingCommunities.iloc[6]))
+   global CommunityRow3
+   CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
+   global CommunityRow4
+   CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
     
    
-    """
-    print('WorkingCommunities...............')
-    print(WorkingCommunities)
-    print("CommunityColTitles")
-    print(CommunityColTitles)
-    print('CommunityRow1....................')
-    print(CommunityRow1)
-    """
+   """
+   print('WorkingCommunities...............')
+   print(WorkingCommunities)
+   print("CommunityColTitles")
+   print(CommunityColTitles)
+   print('CommunityRow1....................')
+   print(CommunityRow1)
+   """
     
-    return WorkingCommunities
+   return WorkingCommunities
   else:
-    print("Load Communities cannot run...............",IsCommValid)
-  return IsCommValid    
+   print("Load Communities cannot run...............",IsCommValid)
+   return IsCommValid    
 
 
     
 def initialCommUpdatProcess():
-  #taskque.borrowedCelery.apply_async()
-  print("Running.........initialCommUpdatProcess()......")
-  print("communities section")
-  os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
+ #taskque.borrowedCelery.apply_async()
+ print("Running.........initialCommUpdatProcess()......")
+ print("communities section")
+ os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
      
-  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
-  WorkingCommunities.columns=WorkingCommunities.iloc[0]
-  WorkingCommunities=WorkingCommunities.drop([4])
-  LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')
-  if IsCommValid!="Valid":
-   return IsCommValid
+ WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
+ WorkingCommunities.columns=WorkingCommunities.iloc[0]
+ WorkingCommunities=WorkingCommunities.drop([4])
+ LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')
+ if IsCommValid!="Valid":
+  return IsCommValid
   
   
   
   
   
 
-  print("Google Section.....................................................................")
-  print("os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')")
-  os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-  print('os.listdir()')
-  print(os.listdir())
-  print("start threading exeriment")
-  def fileAsyncLoad():
-    print('from inside threaded async .... ')
-    print("this is the threaded list",os.listdir())
-    WorkingGoogle=pandas.read_excel('WorkingGoogle')
-    print(WorkingGoogle.iloc[0])
-    """
-    print(str(WorkingGoogle).find('Campaign'))
-    print(srt(WorkingGoogle).find('Ad Group'))
-    print(WorkingGoogle.find('Final URL'))
-    """
+ print("Google Section.....................................................................")
+ print("os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')")
+ os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
+ print('os.listdir()')
+ print(os.listdir())
+ print("start threading exeriment")
+ def fileAsyncLoad():
+  print('from inside threaded async .... ')
+  print("this is the threaded list",os.listdir())
+  WorkingGoogle=pandas.read_excel('WorkingGoogle')
+  print(WorkingGoogle.iloc[0])
+  
     
-    CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
+  CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
     
   run_fileAsyncLoad=threading.Thread(target=fileAsyncLoad)  
   run_fileAsyncLoad.start()
