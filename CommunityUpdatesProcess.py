@@ -122,20 +122,19 @@ def initialCommUpdatProcess():
   
 
  print("Google Section.....................................................................")
- print("os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')")
- os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
- print('os.listdir()')
+ #print("os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')")
+ #os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
+ #print('os.listdir()')
  print(os.listdir())
  print("start threading")
  def fileAsyncLoad():
   print('from inside threaded async .... ')
   print("this is the threaded list",os.listdir())
   WorkingGoogle=pandas.read_excel('WorkingGoogle')
-  print(WorkingGoogle.iloc[0])
-  
-    
-  CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
-    
+  #print(WorkingGoogle.iloc[0])
+  print(IsGoogleValid)
+  IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
+  print(IsGoogleValid)  
  run_fileAsyncLoad=threading.Thread(target=fileAsyncLoad)  
  run_fileAsyncLoad.start()
  print(" end threading exeriment")
