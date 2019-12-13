@@ -65,9 +65,10 @@ def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3):
   print(Invalid) 
   return Invalid
     
-def LoadCommunities("WorkingCommunities",WorkingCommunities,checkword1,checkword2,checkword3):
+def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
+  WorkingCommunitiesname="WorkingCommunities" 
   global IsCommValid
-  IsCommValid=CheckSheetData("WorkingCommunities",WorkingCommunities,checkword1,checkword2,checkword3)
+  IsCommValid=CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3)
   if CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)=="Valid":
    WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
                                                                    'Community Id','Community Name','City','State','Zip',\
@@ -111,7 +112,7 @@ def initialCommUpdatProcess():
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
  WorkingCommunities=WorkingCommunities.drop([4])
- LoadCommunities("WorkingCommunities",WorkingCommunities,'Builder Name','Community Id','City')
+ LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')
  if IsCommValid!="Valid":
   return IsCommValid
   
