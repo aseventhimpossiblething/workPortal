@@ -164,21 +164,21 @@ def CommListFileHandler():
    
            
     CommunityUpdatesProcess.initialCommUpdatProcess()
-    print(SheetsAreLoaded)
-    if SheetsAreLoaded="True":    
-     if CommunityUpdatesProcess.IsCommValid!="Valid":
+    #print(SheetsAreLoaded)
+    #if SheetsAreLoaded="True":    
+    #if CommunityUpdatesProcess.IsCommValid!="Valid":
       print("CommunityUpdatesProcess.IsGoogleValid!=Valid")   
       #return CommunityUpdatesProcess.IsCommValid
       #return "somthing is invalid"
       #if CommunityUpdatesProcess.IsGoogleValid!="Valid":
       #return CommunityUpdatesProcess.IsGoogleValid 
-     if CommunityUpdatesProcess.IsCommValid!="Valid" or CommunityUpdatesProcess.IsGoogleValid!="Valid":
-        print("WORKING IF OR 2")
+     #if CommunityUpdatesProcess.IsCommValid!="Valid" or CommunityUpdatesProcess.IsGoogleValid!="Valid":
+      #print("WORKING IF OR 2")
         
-      HTMLoutput="This will be 3 modules  Modules as follows  Module 1: 3 links to the Community, Google, and Bing upload outputs Module 2:Google Outputs link1, Google KWs all match types. Link 2 google Adds Ad Types A+b and all Match types "    
-      toscrn = HTMLoutput
+     HTMLoutput="This will be 3 modules  Modules as follows  Module 1: 3 links to the Community, Google, and Bing upload outputs Module 2:Google Outputs link1, Google KWs all match types. Link 2 google Adds Ad Types A+b and all Match types "    
+     toscrn = HTMLoutput
         
-      return toscrn
+     return toscrn
 
 
 
