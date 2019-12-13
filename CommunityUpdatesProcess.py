@@ -123,8 +123,9 @@ def initialCommUpdatProcess():
    global SheetsAreLoaded
    SheetsAreLoaded="True"
    return IsGoogleValid
- run_fileAsyncLoad=threading.Thread(target=fileAsyncLoad)  
- run_fileAsyncLoad.start()
+ fileAsyncLoad() 
+ #run_fileAsyncLoad=threading.Thread(target=fileAsyncLoad)  
+ #run_fileAsyncLoad.start()
  print(" end threading exeriment")
     
   #print("taskqueFileAsynchLoad()")
