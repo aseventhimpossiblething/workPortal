@@ -110,6 +110,7 @@ def fileAsyncLoad():
    global SheetsAreLoaded
    SheetsAreLoaded="True"
    return IsGoogleValid
+  else return 
   
 def BingLoader():
   print("this is for bing")
