@@ -123,7 +123,7 @@ def initialCommUpdatProcess():
   #WorkingGoogleColTitles=WorkingGoogle.iloc[0]
   #print(WorkingGoogleColTitles)
   global IsGoogleValid 
-  print("is this thing chilling valid",IsGoogleValid)
+  #print("is this thing chilling valid",IsGoogleValid)
   IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
   print(IsGoogleValid)
   if IsGoogleValid!="Valid":
