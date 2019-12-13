@@ -160,7 +160,9 @@ def CommListFileHandler():
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
     #print(recent)     
     #ValidatXLSXtime(recent)
-    """  
+    """ 
+    a="a"
+    b="b"    
     if a==a or a!=b:
         print("working or 1")
            
