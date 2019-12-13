@@ -118,10 +118,11 @@ def initialCommUpdatProcess():
   print('from inside threaded async .... ')
   print("this is the threaded list",os.listdir())
   WorkingGoogle=pandas.read_excel('WorkingGoogle')
-  #print(WorkingGoogle.iloc[0])
+  WorkingGoogleColTitles=WorkingGoogle.iloc[0]
+  print(WorkingGoogleColTitles)
   global IsGoogleValid 
   print(IsGoogleValid)
-  IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
+  IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogleColTitles,'Campaign','Ad Group','Final URL')
   print(IsGoogleValid)
   if IsGoogleValid!="Valid":
    print(IsGoogleValid)
