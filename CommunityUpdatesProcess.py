@@ -134,11 +134,11 @@ def initialCommUpdatProcess():
   print(WorkingGoogle.iloc[0])
   
     
-  #CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
+  CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
     
-  run_fileAsyncLoad=threading.Thread(target=fileAsyncLoad)  
-  run_fileAsyncLoad.start()
-  print(" end threading exeriment")
+ run_fileAsyncLoad=threading.Thread(target=fileAsyncLoad)  
+ run_fileAsyncLoad.start()
+ print(" end threading exeriment")
     
   #print("taskqueFileAsynchLoad()")
   #askque.FileAsynchLoad.apply_async(('WorkingGoogle','/app/Sheets/CommunityUpdates/Google/currentGoogle'))
