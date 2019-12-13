@@ -55,10 +55,10 @@ BingRow2=0
 BingRow3=0
 BingRow4=0
 
-def CheckSheetData(sheet,checkword1,checkword2,checkword3,sheetname):
+def CheckSheetData(,sheetname,sheet,checkword1,checkword2,checkword3):
  if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
   str(sheet.iloc[1]).find(checkword3)!=-1:
-  print(sheetname," Valid")
+  print(" Valid")
   return "Valid"
  else:
   Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
@@ -68,8 +68,8 @@ def CheckSheetData(sheet,checkword1,checkword2,checkword3,sheetname):
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
   WorkingCommunitiesname="WorkingCommunities" 
   global IsCommValid
-  IsCommValid=CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3,WorkingCommunitiesname)
-  if CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)=="Valid":
+  IsCommValid=CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3)
+  if CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3)=="Valid":
    WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
                                                                    'Community Id','Community Name','City','State','Zip',\
                                                                    'Market ID','Market Name'])
