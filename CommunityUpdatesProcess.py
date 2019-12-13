@@ -171,7 +171,7 @@ def initialCommUpdatProcess():
   print("Bing Section.....................................................................")
  """
   #print("Bing Section.....................................................................")
-  return "finished"
+ return "finished"
 
 
 
