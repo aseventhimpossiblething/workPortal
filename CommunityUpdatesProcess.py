@@ -55,20 +55,20 @@ BingRow2=0
 BingRow3=0
 BingRow4=0
 
-def CheckSheetData(sheet,checkword1,checkword2,checkword3):
-  print(sheet.name)
+def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3):
+  print(sheet.name())
   if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
    str(sheet.iloc[1]).find(checkword3)!=-1:
-   print(sheet," Valid")
+   print(sheetname," Valid")
    return "Valid"
   else:
-   Invalid=sheet+" sheet contains format or content error check sheet and resubmit " 
+   Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
    print(Invalid) 
    return Invalid
     
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
   global IsCommValid
-  IsCommValid=CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)
+  IsCommValid=CheckSheetData("WorkingCommunities",WorkingCommunities,checkword1,checkword2,checkword3)
   if CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)=="Valid":
     WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
                                                                    'Community Id','Community Name','City','State','Zip',\
@@ -138,7 +138,7 @@ def initialCommUpdatProcess():
     print(WorkingGoogle.find('Final URL'))
     """
     
-    CheckSheetData(WorkingGoogle,'Campaign','Ad Group','Ad Group')
+    CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
     
   run_fileAsyncLoad=threading.Thread(target=fileAsyncLoad)  
   run_fileAsyncLoad.start()
