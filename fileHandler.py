@@ -161,7 +161,7 @@ def CommListFileHandler():
     #print(recent)     
     #ValidatXLSXtime(recent)
     """  
-if a=a or a=b:
+if a==a or a==b:
         print("working or")
            
     CommunityUpdatesProcess.initialCommUpdatProcess()
