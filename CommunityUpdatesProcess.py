@@ -92,6 +92,8 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
 
     
 def initialCommUpdatProcess():
+ 
+ 
  #taskque.borrowedCelery.apply_async()
  print("Running.........initialCommUpdatProcess()......")
  print("communities section")
@@ -110,10 +112,7 @@ def initialCommUpdatProcess():
   
 
  print("Google Section.....................................................................")
- #print("os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')")
- #os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
- #print('os.listdir()')
- #print(os.listdir())
+ os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
  print("start threading")
  def fileAsyncLoad():
   print('from inside threaded async .... ')
