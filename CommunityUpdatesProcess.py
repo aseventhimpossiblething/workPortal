@@ -55,7 +55,7 @@ BingRow2=0
 BingRow3=0
 BingRow4=0
 
-def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3):
+def CheckSheetData(sheet,checkword1,checkword2,checkword3,sheetname):
  if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
   str(sheet.iloc[1]).find(checkword3)!=-1:
   print(sheetname," Valid")
@@ -68,7 +68,7 @@ def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3):
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
   WorkingCommunitiesname="WorkingCommunities" 
   global IsCommValid
-  IsCommValid=CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3)
+  IsCommValid=CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3,WorkingCommunitiesname)
   if CheckSheetData(WorkingCommunities,checkword1,checkword2,checkword3)=="Valid":
    WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
                                                                    'Community Id','Community Name','City','State','Zip',\
