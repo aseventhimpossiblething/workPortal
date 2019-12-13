@@ -124,7 +124,7 @@ def CommListFileHandler():
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     request.files['currentBing'].save('WorkingBing')
      
-    taskque.cel_save.apply_async()    
+    #taskque.cel_save.apply_async()    
     
     #print(".1........request.files['currentGoogle'].........request.files['currentGoogle'].....request.files['currentGoogle']......")    
     #print("Current Google file unsaved")
@@ -165,7 +165,9 @@ def CommListFileHandler():
            
     CommunityUpdatesProcess.initialCommUpdatProcess()
     if CommunityUpdatesProcess.IsCommValid!="Valid":
-     return CommunityUpdatesProcess.IsCommValid     
+     return CommunityUpdatesProcess.IsCommValid
+    elif:CommunityUpdatesProcess.IsGoogleValid!="Valid"
+     return CommunityUpdatesProcess.IsGoogleValid           
     HTMLoutput="This will be 3 modules  Modules as follows  Module 1: 3 links to the Community, Google, and Bing upload outputs Module 2:Google Outputs link1, Google KWs all match types. Link 2 google Adds Ad Types A+b and all Match types "    
     toscrn = HTMLoutput
         
