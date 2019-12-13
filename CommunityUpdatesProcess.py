@@ -58,7 +58,7 @@ BingRow4=0
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3):
  if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
   str(sheet.iloc[1]).find(checkword3)!=-1:
-  print(" Valid")
+  print(sheetname," Valid")
   return "Valid"
  else:
   Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
@@ -126,7 +126,7 @@ def initialCommUpdatProcess():
  os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
  print('os.listdir()')
  print(os.listdir())
- print("start threading exeriment")
+ print("start threading")
  def fileAsyncLoad():
   print('from inside threaded async .... ')
   print("this is the threaded list",os.listdir())
@@ -134,7 +134,7 @@ def initialCommUpdatProcess():
   print(WorkingGoogle.iloc[0])
   
     
-  CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
+  #CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
     
   run_fileAsyncLoad=threading.Thread(target=fileAsyncLoad)  
   run_fileAsyncLoad.start()
