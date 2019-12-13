@@ -164,7 +164,7 @@ def CommListFileHandler():
     
            
     CommunityUpdatesProcess.initialCommUpdatProcess()
-    if CommunityUpdatesProcess.IsCommValid!="Valid" OR CommunityUpdatesProcess.IsGoogleValid!="Valid":
+    if CommunityUpdatesProcess.IsCommValid!="Valid"
      #return CommunityUpdatesProcess.IsCommValid
      return "somthing is invalid"
     #if CommunityUpdatesProcess.IsGoogleValid!="Valid":
