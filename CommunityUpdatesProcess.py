@@ -8,6 +8,7 @@ from flask import Flask, Markup, render_template, request
 import os
 import psycopg2
 import taskque
+import threading
 
 
 
@@ -122,8 +123,16 @@ def initialCommUpdatProcess():
   os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
   print('os.listdir()')
   print(os.listdir())
-  print("taskqueFileAsynchLoad()")
-  taskque.FileAsynchLoad.apply_async(('WorkingGoogle','/app/Sheets/CommunityUpdates/Google/currentGoogle'))
+  print("start threading exeriment")
+  def fileAsyncLoad():
+    print('from inside threaded async .... os.listdir()')
+    print(os.listdir())
+  run_fileAsyncLoad=threading.Thread(target=fileAsyncLoad)  
+  run_fileAsyncLoad.start()
+  print(" end threading exeriment")
+    
+  #print("taskqueFileAsynchLoad()")
+  #askque.FileAsynchLoad.apply_async(('WorkingGoogle','/app/Sheets/CommunityUpdates/Google/currentGoogle'))
   """
   WorkingGoogle=pandas.read_excel('WorkingGoogle')
   print('WorkingGoogle')
