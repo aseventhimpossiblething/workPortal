@@ -12,7 +12,7 @@ import threading
 
 
 
-
+SheetsAreLoaded=None; 
 IsCommValid=None;
 IsGoogleValid=None;
 IsBingValid=None;
@@ -127,6 +127,8 @@ def initialCommUpdatProcess():
   IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
   print(IsGoogleValid)
   if IsGoogleValid!="Valid":
+   global SheetsAreLoaded
+   SheetsAreLoaded="True"
    return IsGoogleValid
  run_fileAsyncLoad=threading.Thread(target=fileAsyncLoad)  
  run_fileAsyncLoad.start()
