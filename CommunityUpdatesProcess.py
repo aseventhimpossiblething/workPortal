@@ -58,9 +58,11 @@ BingRow4=0
 def CheckSheetData(sheet,checkword1,checkword2,checkword3):
   if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
    str(sheet.iloc[1]).find(checkword3)!=-1:
+    print(sheet," Valid")
    return "Valid"
   else:
-   Invalid=" Current Community sheet contains format or content error check sheet and resubmit "  
+   Invalid=sheet+" sheet contains format or content error check sheet and resubmit " 
+   print(Invalid) 
    return Invalid
     
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
@@ -128,11 +130,14 @@ def initialCommUpdatProcess():
     print('from inside threaded async .... ')
     print("this is the threaded list",os.listdir())
     WorkingGoogle=pandas.read_excel('WorkingGoogle')
-    print(WorkingGoogle.iloc[0])
-    print(WorkingGoogle.find('Campaign'))
-    print(WorkingGoogle.find('Ad Group'))
+    print(WorkingGoogle).iloc[0])
+    """
+    print(str(WorkingGoogle).find('Campaign'))
+    print(srt(WorkingGoogle).find('Ad Group'))
     print(WorkingGoogle.find('Final URL'))
-    print("End of Async function")
+    """
+    
+    CheckSheetData(WorkingGoogle,'Campaign','Ad Group','Ad Group')
     
   run_fileAsyncLoad=threading.Thread(target=fileAsyncLoad)  
   run_fileAsyncLoad.start()
