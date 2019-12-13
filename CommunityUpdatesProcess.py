@@ -132,11 +132,12 @@ def initialCommUpdatProcess():
  def BingLoader():
   print("this is for bing")
   #os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
-  print(os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing'))
+  print("os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')")
   os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
   print(os.listdir())
+ BingLoader() 
   
-  print("END OF ASYNC FILE LOAD.....................................................................")
+ print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
 
 
