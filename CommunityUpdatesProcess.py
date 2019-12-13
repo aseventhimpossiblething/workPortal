@@ -142,7 +142,7 @@ def initialCommUpdatProcess():
     
   #print("taskqueFileAsynchLoad()")
   #askque.FileAsynchLoad.apply_async(('WorkingGoogle','/app/Sheets/CommunityUpdates/Google/currentGoogle'))
-  """
+ """
   WorkingGoogle=pandas.read_excel('WorkingGoogle')
   print('WorkingGoogle')
   print(WorkingGoogle)
@@ -169,7 +169,7 @@ def initialCommUpdatProcess():
   print(GoogleRow1)
     
   print("Bing Section.....................................................................")
-  """
+ """
   #print("Bing Section.....................................................................")
   return "finished"
 
