@@ -89,7 +89,25 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
    return WorkingCommunities
   else:
    print("Load Communities cannot run...............",IsCommValid)
-   return IsCommValid    
+   return IsCommValid  
+  
+def fileAsyncLoad(): 
+  os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
+  #print("start threading")
+  #def fileAsyncLoad():
+  #print('from inside threaded async .... ')
+  #print("this is the threaded list",os.listdir())
+  WorkingGoogle=pandas.read_excel('WorkingGoogle')
+  #WorkingGoogleColTitles=WorkingGoogle.iloc[0]
+  #print(WorkingGoogleColTitles)
+  global IsGoogleValid 
+  #print("is this thing chilling valid",IsGoogleValid)
+  IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
+  print(IsGoogleValid)
+  if IsGoogleValid!="Valid":
+   global SheetsAreLoaded
+   SheetsAreLoaded="True"
+   return IsGoogleValid
 
 
     
@@ -105,60 +123,18 @@ def initialCommUpdatProcess():
  if IsCommValid!="Valid":
   return IsCommValid
  print("Google Section.....................................................................")
- 
- def fileAsyncLoad(): 
-  os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-  print("start threading")
-  #def fileAsyncLoad():
-  print('from inside threaded async .... ')
-  print("this is the threaded list",os.listdir())
-  WorkingGoogle=pandas.read_excel('WorkingGoogle')
-  #WorkingGoogleColTitles=WorkingGoogle.iloc[0]
-  #print(WorkingGoogleColTitles)
-  global IsGoogleValid 
-  #print("is this thing chilling valid",IsGoogleValid)
-  IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
-  print(IsGoogleValid)
-  if IsGoogleValid!="Valid":
-   global SheetsAreLoaded
-   SheetsAreLoaded="True"
-   return IsGoogleValid
  fileAsyncLoad() 
- #run_fileAsyncLoad=threading.Thread(target=fileAsyncLoad)  
- #run_fileAsyncLoad.start()
- print(" end threading exeriment")
-    
-  #print("taskqueFileAsynchLoad()")
-  #askque.FileAsynchLoad.apply_async(('WorkingGoogle','/app/Sheets/CommunityUpdates/Google/currentGoogle'))
- """
-  WorkingGoogle=pandas.read_excel('WorkingGoogle')
-  print('WorkingGoogle')
-  print(WorkingGoogle)
-  #WorkingGoogle.columns=WorkingGoogle.iloc[0]
-  #WorkingGoogle=WorkingGoogle.drop([4])
-    
-  print('-------------------------')
-    
-    
-  WorkingGoogle=pandas.DataFrame(WorkingGoogle, columns=['Campaign','Ad Group','Final URL'])
  
-  global GoogleColTitles
-  GoogleColTitles=str(list(WorkingGoogle))
-  global GoogleRow1
-  GoogleRow1=str(WorkingGoogle.iloc[1].values)+" "+str(len(WorkingGoogle.iloc[1]))
-  global GoogleRow2
-  GoogleRow2=str(WorkingGoogle.iloc[2].values)+" "+str(len(WorkingGoogle.iloc[2]))
-  global GoogleRow3
-  GoogleRow3=str(WorkingGoogle.iloc[3].values)+" "+str(len(WorkingGoogle.iloc[3]))
-  global GoogleRow4
-  GoogleRow4=str(WorkingGoogle.iloc[4].values)+" "+str(len(WorkingGoogle.iloc[4]))
- 
-  print(GoogleColTitles)
-  print(GoogleRow1)
+    
+
     
   print("Bing Section.....................................................................")
- """
+  def BingLoader():
+   print("this is for bing")
+   os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
+   print(os.list())
   #print("Bing Section.....................................................................")
+  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
 
 
