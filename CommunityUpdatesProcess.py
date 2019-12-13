@@ -56,8 +56,10 @@ BingRow3=0
 BingRow4=0
 
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3):
- if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
-  str(sheet.iloc[1]).find(checkword3)!=-1:
+ titlestring=str(sheet.iloc[1])
+ #if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
+ if stitlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
+  titlestring.find(checkword3)!=-1:
   print(sheetname," Valid")
   return "Valid"
  else:
@@ -125,7 +127,7 @@ def initialCommUpdatProcess():
   IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
   print(IsGoogleValid)
   if IsGoogleValid!="Valid":
-   print(IsGoogleValid)
+   print("Valid but behaving as invalid")
    return IsGoogleValid
  run_fileAsyncLoad=threading.Thread(target=fileAsyncLoad)  
  run_fileAsyncLoad.start()
