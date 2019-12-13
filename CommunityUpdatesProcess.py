@@ -55,11 +55,11 @@ BingRow2=0
 BingRow3=0
 BingRow4=0
 
-def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3):
+def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
  titlestring=str(sheet.iloc[1])
  #if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
-  titlestring.find(checkword3)!=-1:
+  titlestring.find(checkword3)!=-1 and titlestring.find(checkword4)!=-1:
   print(sheetname," Valid")
   return "Valid"
  else:
@@ -67,11 +67,11 @@ def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3):
   print(Invalid) 
   return Invalid
     
-def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
+def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkword4):
   WorkingCommunitiesname="WorkingCommunities" 
   global IsCommValid
-  IsCommValid=CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3)
-  if CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3)=="Valid":
+  IsCommValid=CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3,checkword4)
+  if CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3,checkword4)=="Valid":
    WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
                                                                    'Community Id','Community Name','City','State','Zip',\
                                                                    'Market ID','Market Name'])
@@ -102,7 +102,7 @@ def fileAsyncLoad():
   #print(WorkingGoogleColTitles)
   global IsGoogleValid 
   #print("is this thing chilling valid",IsGoogleValid)
-  IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Headline 1')
+  IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Headline 1','Final URL')
   print(IsGoogleValid)
   if IsGoogleValid!="Valid":
    global SheetsAreLoaded
@@ -119,7 +119,7 @@ def initialCommUpdatProcess():
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
  WorkingCommunities=WorkingCommunities.drop([4])
- LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')
+ LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
  if IsCommValid!="Valid":
   return IsCommValid
  print("Google Section.....................................................................")
@@ -138,7 +138,7 @@ def initialCommUpdatProcess():
   WorkingBing=pandas.read_excel('WorkingBing')
   print(WorkingBing)
   #WorkingBing.iloc[0]
-  IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1')
+  IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1',FInal URL)
   print(IsBingValid)
  BingLoader() 
   
