@@ -126,9 +126,10 @@ def initialCommUpdatProcess():
   print("start threading exeriment")
   def fileAsyncLoad():
     print('from inside threaded async .... os.listdir()')
-    print(os.listdir())
+    print("this is the threaded list",os.listdir())
+    pandas.read_excel('')
   run_fileAsyncLoad=threading.Thread(target=fileAsyncLoad)  
-  run_fileAsyncLoad.start()
+  run_fileAsyncLoad.start('WorkingGoogle')
   print(" end threading exeriment")
     
   #print("taskqueFileAsynchLoad()")
