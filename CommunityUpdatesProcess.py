@@ -138,7 +138,7 @@ def initialCommUpdatProcess():
   WorkingBing=pandas.read_excel('WorkingBing')
   print(WorkingBing)
   #WorkingBing.iloc[0]
-  IsBingValid=CheckSheetData("WorkingBing",'Campaign','Ad Group','Final URL')
+  IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final URL')
   print(IsBingValid)
  BingLoader() 
   
