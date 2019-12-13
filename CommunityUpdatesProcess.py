@@ -130,7 +130,7 @@ def initialCommUpdatProcess():
     print('from inside threaded async .... ')
     print("this is the threaded list",os.listdir())
     WorkingGoogle=pandas.read_excel('WorkingGoogle')
-    print(WorkingGoogle).iloc[0])
+    print(WorkingGoogle.iloc[0])
     """
     print(str(WorkingGoogle).find('Campaign'))
     print(srt(WorkingGoogle).find('Ad Group'))
