@@ -10,9 +10,11 @@ import psycopg2
 import taskque
 import threading
 
+"""
 WorkingCommunities
 WorkingGoogle
 WorkingBing
+"""
 
 SheetsAreLoaded=None; 
 IsCommValid=None;
