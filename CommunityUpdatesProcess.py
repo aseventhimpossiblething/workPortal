@@ -94,29 +94,22 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
 
     
 def initialCommUpdatProcess():
- 
- 
- #taskque.borrowedCelery.apply_async()
- print("Running.........initialCommUpdatProcess()......")
- print("communities section")
- os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
+ def fileAsyncLoad(): 
+  #taskque.borrowedCelery.apply_async()
+  print("Running.........initialCommUpdatProcess()......")
+  print("communities section")
+  os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
      
- WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
- WorkingCommunities.columns=WorkingCommunities.iloc[0]
- WorkingCommunities=WorkingCommunities.drop([4])
- LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')
- if IsCommValid!="Valid":
-  return IsCommValid
-  
-  
-  
-  
-  
-
- print("Google Section.....................................................................")
- os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
- print("start threading")
- def fileAsyncLoad():
+  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
+  WorkingCommunities.columns=WorkingCommunities.iloc[0]
+  WorkingCommunities=WorkingCommunities.drop([4])
+  LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City')
+  if IsCommValid!="Valid":
+   return IsCommValid
+  print("Google Section.....................................................................")
+  os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
+  print("start threading")
+  #def fileAsyncLoad():
   print('from inside threaded async .... ')
   print("this is the threaded list",os.listdir())
   WorkingGoogle=pandas.read_excel('WorkingGoogle')
