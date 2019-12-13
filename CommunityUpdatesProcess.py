@@ -56,6 +56,7 @@ BingRow3=0
 BingRow4=0
 
 def CheckSheetData(sheet,checkword1,checkword2,checkword3):
+  print(sheet.name)
   if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
    str(sheet.iloc[1]).find(checkword3)!=-1:
    print(sheet," Valid")
