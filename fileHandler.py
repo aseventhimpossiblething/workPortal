@@ -10,6 +10,7 @@ import time
 import xlrd
 import io
 import taskque
+import threading
 
 
 
@@ -162,8 +163,11 @@ def CommListFileHandler():
     #ValidatXLSXtime(recent)
     """ 
    
-           
-    CommunityUpdatesProcess.initialCommUpdatProcess()
+    def async_fileloader():       
+     CommunityUpdatesProcess.initialCommUpdatProcess()
+    LoadAllCommunityFiles=threading.Thread(target=async_fileloader)
+    LoadAllCommunityFiles.start()    
+    
     #print(SheetsAreLoaded)
     #if SheetsAreLoaded="True":    
     #if CommunityUpdatesProcess.IsCommValid!="Valid":
