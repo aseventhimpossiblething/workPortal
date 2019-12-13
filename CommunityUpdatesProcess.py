@@ -139,7 +139,7 @@ def initialCommUpdatProcess():
  print("Bing Section.....................................................................")
  
  BingLoader() 
-  
+ print(WorkingCommunities)  
  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
 
