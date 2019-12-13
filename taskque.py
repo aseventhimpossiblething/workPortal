@@ -48,7 +48,7 @@ def test():
 #test()
 print("the test thread should fire here")
 test=threading.Thread(target=test)
-test.start
+test.start()
 print("the test thread should fire here")
 
 
