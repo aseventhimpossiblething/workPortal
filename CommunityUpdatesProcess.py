@@ -148,7 +148,7 @@ def initialCommUpdatProcess():
  BingLoader() 
  print(WorkingCommunities)
  #print(WorkingGoogle)
- print(WorkingBing)
+ #print(WorkingBing)
  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
 
