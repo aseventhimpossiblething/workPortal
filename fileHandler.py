@@ -185,6 +185,7 @@ def CommListFileHandler():
     print(os.getcwd())
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     print(os.getcwd())
+    print(pandas.read_excel('WorkingBing'))    
     print("..............end File play.........................")    
    #return toscrn
    #return "<html><a href='https://www.google.com'>Link</a></html>"
