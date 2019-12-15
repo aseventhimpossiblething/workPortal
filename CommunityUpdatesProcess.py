@@ -65,11 +65,11 @@ def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
  #if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
   titlestring.find(checkword3)!=-1 and titlestring.find(checkword4)!=-1:
-  print(sheetname," Valid")
+  #print(sheetname," Valid")
   return "Valid"
  else:
   Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
-  print(Invalid) 
+  #print(Invalid) 
   return Invalid
     
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkword4):
@@ -109,7 +109,7 @@ def WorkingGoogle():
   global IsGoogleValid 
   #print("is this thing chilling valid",IsGoogleValid)
   IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Headline 1','Final URL')
-  print(IsGoogleValid)
+  #print(IsGoogleValid)
   if IsGoogleValid!="Valid":
    global SheetsAreLoaded
    SheetsAreLoaded="True"
@@ -119,26 +119,26 @@ def WorkingGoogle():
    return  WorkingGoogle
   
 def WorkingBing():
-  print("this is for bing")
+  #print("this is for bing")
   #os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
-  print("os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')")
+  #print("os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')")
   os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
-  print(os.listdir())
+  #print(os.listdir())
   WorkingBing=pandas.read_excel('WorkingBing')
-  print(WorkingBing)
+  #print(WorkingBing)
   #WorkingBing.iloc[0]
   IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1','Final Url')
   if IsBingValid!='Valid':
    return IsBingValid
   WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url'])
-  print(IsBingValid)
+  #print(IsBingValid)
   return WorkingBing
 
     
 def initialCommUpdatProcess():
  #taskque.borrowedCelery.apply_async()
- print("Running.........initialCommUpdatProcess()......")
- print("communities section")
+ #print("Running.........initialCommUpdatProcess()......")
+ #print("communities section")
  os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
@@ -146,21 +146,22 @@ def initialCommUpdatProcess():
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
  if IsCommValid!="Valid":
   return IsCommValid
- print("Google Section.....................................................................")
+ #print("Google Section.....................................................................")
  
  #fileAsyncLoad() 
  global WorkingGoogle
  WorkingGoogle=WorkingGoogle()    
- print("Bing Section.....................................................................")
+ #print("Bing Section.....................................................................")
  global WorkingBing
  WorkingBing=WorkingBing()
- print("Output sheets")
- print(WorkingCommunities)
- print(WorkingGoogle)
- print(WorkingBing)
- print("Bing Breakout")
+ #print("Output sheets")
+ #print(WorkingCommunities)
+ #print(WorkingGoogle)
+ #print(WorkingBing)
+ #print("Bing Breakout")
  #WorkingBing.set_option('display.max_columns',None)
- print(WorkingBing.head().to_string())
+ #print(WorkingBing.head().to_string())
+ print(os.listdir())
  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
 
