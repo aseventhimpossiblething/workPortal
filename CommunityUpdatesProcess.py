@@ -163,7 +163,7 @@ def initialCommUpdatProcess():
  #WorkingBing.set_option('display.max_columns',None)
  #print(WorkingBing.head().to_string())
  print("current directory")
- print(os.curdir())
+ print(os.getcwd())
  print(os.listdir())
  #os.chdir('WorkingBing')
  #print(os.listdir())
