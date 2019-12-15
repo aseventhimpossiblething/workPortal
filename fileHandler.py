@@ -183,9 +183,9 @@ def CommListFileHandler():
     toscrn = HTMLoutput
     print("file handler............................",os.getcwd())
     print(os.getcwd())
-    os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
+    os.chdir('/app/Sheets/CommunityUpdates')
     print(os.getcwd())
-    print(pandas.read_excel('WorkingBing'))    
+    #print(pandas.read_excel('WorkingBing'))    
     print("..............end File play.........................")    
    #return toscrn
    #return "<html><a href='https://www.google.com'>Link</a></html>"
