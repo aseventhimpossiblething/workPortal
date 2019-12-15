@@ -115,6 +115,7 @@ def WorkingGoogle():
    SheetsAreLoaded="True"
    return IsGoogleValid
   else:
+   WorkingGoogle=pandas.Dataframe(WorkingGoogle,columns=['Campaign','Ad Group', 'Final URL'])
    return  WorkingGoogle
   
 def WorkingBing():
@@ -127,6 +128,9 @@ def WorkingBing():
   print(WorkingBing)
   #WorkingBing.iloc[0]
   IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1','Final Url')
+  if IsBingValid!='Valid':
+   return IsBingValid
+  WorkingBing=pandas.Dataframe(WorkingBing,columns=['Campaign','Ad Group','Title Part 1','Final Url'])
   print(IsBingValid)
   return WorkingBing
 
