@@ -163,6 +163,9 @@ def initialCommUpdatProcess():
  #WorkingBing.set_option('display.max_columns',None)
  #print(WorkingBing.head().to_string())
  print(os.listdir())
+ os.chdir('WorkingBing')
+ print(os.listdir())
+ 
  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
 
