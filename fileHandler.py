@@ -187,6 +187,9 @@ def CommListFileHandler():
     #print(os.getcwd())
     print(os.listdir())
     print(pandas.read_excel('WorkingCommunities'))
+    TheSampleText=pandas.DataFrame(pandas.read_excel('WorkingCommunities'))
+    TheSampleText.save('TheSampleText')
+
     #os.chdir()
     #print(pandas.read_excel('WorkingBing'))    
     print("..............end File play.........................")    
