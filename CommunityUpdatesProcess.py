@@ -139,10 +139,11 @@ def initialCommUpdatProcess():
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
  WorkingCommunities=WorkingCommunities.drop([4])
- LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
+ WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
  if IsCommValid!="Valid":
   return IsCommValid
  print("Google Section.....................................................................")
+ 
  #fileAsyncLoad() 
  global WorkingGoogle
  WorkingGoogle=WorkingGoogle()    
