@@ -115,6 +115,7 @@ def WorkingGoogle():
    SheetsAreLoaded="True"
    return IsGoogleValid
   else:
+   print("WorkingGoogle")
    WorkingGoogle=pandas.DataFrame(WorkingGoogle,columns=['Campaign','Ad Group', 'Final URL'])
    return  WorkingGoogle
   
