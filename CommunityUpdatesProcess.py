@@ -162,9 +162,11 @@ def initialCommUpdatProcess():
  #print("Bing Breakout")
  #WorkingBing.set_option('display.max_columns',None)
  #print(WorkingBing.head().to_string())
+ print("current directory")
+ print(os.curdir())
  print(os.listdir())
- os.chdir('WorkingBing')
- print(os.listdir())
+ #os.chdir('WorkingBing')
+ #print(os.listdir())
  
  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
