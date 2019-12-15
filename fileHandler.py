@@ -164,7 +164,7 @@ def CommListFileHandler():
     """ 
    
     def async_fileloader():       
-    CommunityUpdatesProcess.initialCommUpdatProcess()
+     CommunityUpdatesProcess.initialCommUpdatProcess()
     LoadAllCommunityFiles=threading.Thread(target=async_fileloader)
     LoadAllCommunityFiles.start()    
     
