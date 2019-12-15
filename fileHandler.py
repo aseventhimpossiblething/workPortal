@@ -151,7 +151,7 @@ def CommListFileHandler():
      
     #print("google")    
     os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-    print(os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle'))
+    #print(os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle'))
     recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
     #print(recent)     
     #ValidatXLSXtime(recent)
@@ -171,7 +171,7 @@ def CommListFileHandler():
     #print(SheetsAreLoaded)
     #if SheetsAreLoaded="True":    
     #if CommunityUpdatesProcess.IsCommValid!="Valid":
-    print("CommunityUpdatesProcess.IsGoogleValid!=Valid")   
+    #print("CommunityUpdatesProcess.IsGoogleValid!=Valid")   
       #return CommunityUpdatesProcess.IsCommValid
       #return "somthing is invalid"
       #if CommunityUpdatesProcess.IsGoogleValid!="Valid":
@@ -181,7 +181,9 @@ def CommListFileHandler():
         
     HTMLoutput="This will be 3 modules  Modules as follows  Module 1: 3 links to the Community, Google, and Bing upload outputs Module 2:Google Outputs link1, Google KWs all match types. Link 2 google Adds Ad Types A+b and all Match types "    
     toscrn = HTMLoutput
-    print("file handler",os.getcwd())
+    print("file handler............................",os.getcwd())
+    print(os.getcwd())
+    os.chdir(app/Sheets)
     print(os.getcwd())
    #return toscrn
    #return "<html><a href='https://www.google.com'>Link</a></html>"
