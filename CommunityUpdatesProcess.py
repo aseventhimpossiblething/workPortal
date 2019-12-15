@@ -143,9 +143,10 @@ def initialCommUpdatProcess():
   return IsCommValid
  print("Google Section.....................................................................")
  #fileAsyncLoad() 
+ global WorkingGoogle
  WorkingGoogle=WorkingGoogle()    
  print("Bing Section.....................................................................")
- 
+ global WorkingBing
  WorkingBing=WorkingBing()
  print("Output sheets")
  print(WorkingCommunities)
