@@ -16,6 +16,7 @@ WorkingGoogle
 WorkingBing
 """
 
+
 SheetsAreLoaded=None; 
 IsCommValid=None;
 IsGoogleValid=None;
@@ -116,7 +117,7 @@ def WorkingGoogle():
   else:
    return  WorkingGoogle
   
-def BingLoader():
+def WorkingBing():
   print("this is for bing")
   #os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
   print("os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')")
@@ -142,13 +143,14 @@ def initialCommUpdatProcess():
   return IsCommValid
  print("Google Section.....................................................................")
  #fileAsyncLoad() 
- WorkingGoogle()    
+ WorkingGoogle=WorkingGoogle()    
  print("Bing Section.....................................................................")
  
- BingLoader() 
+ WorkingBing=WorkingBing()
+ print("Output sheets")
  print(WorkingCommunities)
- #print(WorkingGoogle)
- #print(WorkingBing)
+ print(WorkingGoogle)
+ print(WorkingBing)
  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
 
