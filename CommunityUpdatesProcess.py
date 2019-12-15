@@ -94,8 +94,9 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkwor
   else:
    print("Load Communities cannot run...............",IsCommValid)
    return IsCommValid  
-  
-def fileAsyncLoad(): 
+
+def WorkingGoogle():  
+#def fileAsyncLoad(): 
   os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
   #print("start threading")
   #def fileAsyncLoad():
@@ -140,13 +141,13 @@ def initialCommUpdatProcess():
  if IsCommValid!="Valid":
   return IsCommValid
  print("Google Section.....................................................................")
- fileAsyncLoad() 
-     
+ #fileAsyncLoad() 
+ WorkingGoogle()    
  print("Bing Section.....................................................................")
  
  BingLoader() 
  print(WorkingCommunities)
- print(WorkingGoogle)
+ #print(WorkingGoogle)
  print(WorkingBing)
  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
