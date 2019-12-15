@@ -185,6 +185,7 @@ def CommListFileHandler():
     print(os.getcwd())
     os.chdir('/app/Sheets/CommunityUpdates')
     print(os.getcwd())
+    print(os.listdir())
     #print(pandas.read_excel('WorkingBing'))    
     print("..............end File play.........................")    
    #return toscrn
