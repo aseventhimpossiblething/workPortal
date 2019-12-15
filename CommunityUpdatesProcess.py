@@ -128,6 +128,7 @@ def WorkingBing():
   #WorkingBing.iloc[0]
   IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1','Final Url')
   print(IsBingValid)
+  return WorkingBing
 
     
 def initialCommUpdatProcess():
