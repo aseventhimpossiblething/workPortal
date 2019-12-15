@@ -184,7 +184,7 @@ def CommListFileHandler():
         
    #return toscrn
     #return "<html><p>Link</p></html>"    
-    return "<html><a href="https://www.google.com">Link</a></html>"
+    return "<html><a href='https://www.google.com'>Link</a></html>"
          
 
 
