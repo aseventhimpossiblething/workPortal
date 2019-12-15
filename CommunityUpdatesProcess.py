@@ -160,7 +160,7 @@ def initialCommUpdatProcess():
  print(WorkingBing)
  print("Bing Breakout")
  #WorkingBing.set_option('display.max_columns',None)
- WorkingBing.describe().to_string()
+ print(WorkingBing.describe().to_string())
  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
 
