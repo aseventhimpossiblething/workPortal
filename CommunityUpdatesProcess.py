@@ -159,7 +159,7 @@ def initialCommUpdatProcess():
  print(WorkingGoogle)
  print(WorkingBing)
  print("Bing Breakout")
- WorkingBing.set_option('display.max_columns')
+ WorkingBing.set_option('display.max_columns',None)
  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
 
