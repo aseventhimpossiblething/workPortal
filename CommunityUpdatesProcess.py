@@ -130,7 +130,7 @@ def WorkingBing():
   IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1','Final Url')
   if IsBingValid!='Valid':
    return IsBingValid
-  WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Title Part 1','Final Url'])
+  WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url'])
   print(IsBingValid)
   return WorkingBing
 
