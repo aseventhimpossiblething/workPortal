@@ -189,7 +189,7 @@ def CommListFileHandler():
     print(pandas.read_excel('WorkingCommunities'))
     TheSampleText=pandas.DataFrame(pandas.read_excel('WorkingCommunities'))
     TheSamplefile=open('TheSampleText.txt','w+') 
-    TheSamplefile.write(TheSampleText) 
+    TheSamplefile.write(TheSampleText.to_string()) 
     TheSamplefile.close()
     #TheSampleText.save('TheSampleText')
 
