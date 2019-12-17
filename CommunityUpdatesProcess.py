@@ -160,6 +160,7 @@ def initialCommUpdatProcess():
  
  
  
+ 
 
  print("Current location.........",os.getcwd())
  print("contents..........",os.listdir())
