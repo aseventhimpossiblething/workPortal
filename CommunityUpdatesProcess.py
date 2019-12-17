@@ -141,7 +141,7 @@ def initialCommUpdatProcess():
  
  def extractCommunityID(col):  
   count=0;
-  while count < int(col.count())
+  while() count < int(col.count()):
   re.search(/\d{4,6},col[0])
   count+=1
   print(count)
