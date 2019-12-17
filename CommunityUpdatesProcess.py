@@ -141,14 +141,14 @@ def initialCommUpdatProcess():
  #print(WorkingBing.iloc[1])
  print("writing bit............................",os.getcwd())
  TheSampleText=WorkingBing
- TheSamplefile=open('TheSampleText.txt','w+') 
+ TheSamplefile=open('TheSampleText','w+') 
  TheSamplefile.write(TheSampleText.to_string()) 
  TheSamplefile.close()
  print("current directory......",os.getcwd())
  print("contents.....",os.listdir())
 
  print("It wrote now open and read")
- print(open('TheSampleText','r'))
+ print(open('TheSampleText','r+'))
  #print(pandas.read_csv(TheSamplefile))
  #print(pandas.read_csv('TheSampleText.txt'))
  #print(pandas.read_csv(TheSamplefile))
