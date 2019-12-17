@@ -126,7 +126,7 @@ def WorkingBing():
   os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
   #print(os.listdir())
   WorkingBing=pandas.read_excel('WorkingBing')
-  #print(WorkingBing)
+  print(WorkingBing)
   #WorkingBing.iloc[0]
   IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1','Final Url')
   if IsBingValid!='Valid':
@@ -168,7 +168,7 @@ def initialCommUpdatProcess():
  #os.chdir('WorkingBing')
  #print(os.listdir())
  
- print("file handler............................",os.getcwd())
+ print("writing bit............................",os.getcwd())
  #print(os.getcwd())
  #os.chdir('/app/Sheets/CommunityUpdates')
  #print(os.getcwd())
@@ -178,6 +178,9 @@ def initialCommUpdatProcess():
  TheSamplefile=open('TheSampleText.txt','w+') 
  TheSamplefile.write(TheSampleText.to_string()) 
  TheSamplefile.close()
+ TheSamplefile=open(TheSamplefile.txt,'r')
+ print("TheSamplefile")
+ print(TheSamplefile)
  
  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
