@@ -162,11 +162,22 @@ def initialCommUpdatProcess():
  #print("Bing Breakout")
  #WorkingBing.set_option('display.max_columns',None)
  #print(WorkingBing.head().to_string())
- print("current directory")
- print(os.getcwd())
- print(os.listdir())
+ #print("current directory")
+ #print(os.getcwd())
+ #print(os.listdir())
  #os.chdir('WorkingBing')
  #print(os.listdir())
+ 
+ print("file handler............................",os.getcwd())
+ #print(os.getcwd())
+ #os.chdir('/app/Sheets/CommunityUpdates')
+ #print(os.getcwd())
+ #print(os.listdir())
+ #print(WorkingCommunities)
+ TheSampleText=WorkingBing
+ TheSamplefile=open('TheSampleText.txt','w+') 
+ TheSamplefile.write(TheSampleText.to_string()) 
+ TheSamplefile.close()
  
  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
