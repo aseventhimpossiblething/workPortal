@@ -51,7 +51,7 @@ app = Flask(__name__)
 
 print("initial directory",os.getcwd())
 print("contents of current directory",os.listdir())
-os.chdir("/Sheets")
+os.chdir("/app/Sheets")
 print("current directory",os.getcwd())
 print("contents of current directory",os.listdir())
 
