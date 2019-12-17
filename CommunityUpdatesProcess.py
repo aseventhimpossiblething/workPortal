@@ -126,8 +126,22 @@ def initialCommUpdatProcess():
 
  WorkingGoogleEOF=WorkingGoogle()    
  WorkingBingEOF=WorkingBing()
- 
+ """
+ def extractCommunityID(col):  
+  count=0;
+  
+  while count < col.length()
+   col[count],find(/[\d+]{0,6})
+ """ 
+ print("printed head") 
+ print(WorkingGoogleEOF['Final URL'][0])
+ print(WorkingGoogleEOF['Final URL'][1])
+ print(WorkingGoogleEOF['Final URL'][2])
+ print(WorkingGoogleEOF['Final URL'][3])
+ print("________")
+ print("actual head")
  print(WorkingGoogleEOF['Final URL'].head())
+ 
  
  
  
