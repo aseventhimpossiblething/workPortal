@@ -155,7 +155,8 @@ def initialCommUpdatProcess():
  print(WorkingGoogleEOF['Final URL'].head())
  print("length")
  print("Length of array",WorkingGoogleEOF['Final URL'].count())
- print("Data Type of Length of array",type(str(WorkingGoogleEOF['Final URL'].count())))
+ print("Data Type of Length of array",type(int(WorkingGoogleEOF['Final URL'].count())))
+ 
  
  
  
