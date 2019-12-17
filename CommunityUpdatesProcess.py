@@ -175,14 +175,15 @@ def initialCommUpdatProcess():
  #print(WorkingCommunities)
  #print(WorkingGoogle)
  print(WorkingBing)
- print(WorkingBing.iloc[4])
+ print(WorkingBing.iloc[0])
+ print(WorkingBing.iloc[1])
  print("writing bit............................",os.getcwd())
  TheSampleText=WorkingBing
  TheSamplefile=open('TheSampleText.txt','w+') 
  TheSamplefile.write(TheSampleText.to_string()) 
  TheSamplefile.close()
  print("It wrote now open and read")
- TheSamplefile=open(TheSampleText.txt,'r')
+ TheSamplefile=open('TheSampleText.txt','r')
  print("TheSamplefile")
  print(TheSamplefile)
  
