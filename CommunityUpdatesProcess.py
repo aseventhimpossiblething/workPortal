@@ -140,6 +140,7 @@ def initialCommUpdatProcess():
  
  
  def extractCommunityID(col):
+  print("running extractor.........")
   foundElements=[];
   count=0;
   while count < int(col.count()):
