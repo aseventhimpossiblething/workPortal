@@ -143,11 +143,11 @@ def initialCommUpdatProcess():
   foundElements=[];
   count=0;
   while count < int(col.count()):
-  found=re.search(/\d{4,6},col[0])
-  foundElements.append(found)
-  count+=1
-  #print(count)
-  #col[count].find(/[\d+]{0,6})
+   found=re.search(/\d{4,6},col[0])
+   foundElements.append(found)
+   count+=1
+   #print(count)
+   #col[count].find(/[\d+]{0,6})
  extractCommunityID()
   
  
