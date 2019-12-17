@@ -122,13 +122,14 @@ def initialCommUpdatProcess():
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
  if IsCommValid!="Valid":
   return IsCommValid
- 
- 
-  
- #global WorkingGoogle
+
+
  WorkingGoogleEOF=WorkingGoogle()    
- #global WorkingBing
  WorkingBingEOF=WorkingBing()
+ 
+ print(WorkingGoogleEOF['URL'])
+ 
+ 
  
  
 
