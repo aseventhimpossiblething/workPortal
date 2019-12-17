@@ -126,6 +126,15 @@ def initialCommUpdatProcess():
 
  WorkingGoogleEOF=WorkingGoogle()    
  WorkingBingEOF=WorkingBing()
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  """
  def extractCommunityID(col):  
   count=0;
@@ -141,6 +150,8 @@ def initialCommUpdatProcess():
  print("________")
  print("actual head")
  print(WorkingGoogleEOF['Final URL'].head())
+ print("length")
+ print("Length of array",WorkingGoogleEOF.len())
  
  
  
