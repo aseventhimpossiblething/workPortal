@@ -102,6 +102,7 @@ def WorkingGoogle():
    return IsGoogleValid
   else:
    WorkingGoogle=pandas.DataFrame(WorkingGoogle,columns=['Campaign','Ad Group', 'Final URL'])
+   print("Google basic import done")
    return  WorkingGoogle
   
 def WorkingBing():
@@ -111,6 +112,7 @@ def WorkingBing():
   if IsBingValid!='Valid':
    return IsBingValid
   WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
+  print("Bing basic import done")
   return WorkingBing
 
     
