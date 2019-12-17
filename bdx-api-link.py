@@ -75,7 +75,7 @@ def testtextfile():
     print("current directory-------------",os.getcwd())
     print("contents of current directory--------------",os.listdir())
     #TheSamplefile=open('TheSampleText.txt','r')
-    TheSamplefile=open('TheSampleText.xslx','w+') 
+    TheSamplefile=open('TheSampleText.txt','w+') 
     #print(TheSamplefile.read())     
     #print(os.getcwd())
      
