@@ -148,7 +148,7 @@ def initialCommUpdatProcess():
    count+=1
    #print(count)
    #col[count].find(/[\d+]{0,6})
- extractCommunityID()
+ extractCommunityID(WorkingGoogleEOF['Final URL'])
   
  
  print("printed head") 
