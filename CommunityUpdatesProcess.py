@@ -7,7 +7,7 @@ import fileHandler
 from flask import Flask, Markup, render_template, request
 import os
 import psycopg2
-#import taskque
+import re
 import threading
 
 
@@ -142,6 +142,7 @@ def initialCommUpdatProcess():
  def extractCommunityID(col):  
   count=0;
   while count < int(col.count())
+   re.search(,col[0])
    col[count].find(/[\d+]{0,6})
  """ 
  print("printed head") 
