@@ -10,11 +10,6 @@ import psycopg2
 #import taskque
 import threading
 
-"""
-WorkingCommunities
-WorkingGoogle
-WorkingBing
-"""
 
 
 SheetsAreLoaded=None; 
@@ -97,37 +92,21 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkwor
    return IsCommValid  
 
 def WorkingGoogle():  
-#def fileAsyncLoad(): 
   os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-  #print("start threading")
-  #def fileAsyncLoad():
-  #print('from inside threaded async .... ')
-  #print("this is the threaded list",os.listdir())
   WorkingGoogle=pandas.read_excel('WorkingGoogle')
-  #WorkingGoogleColTitles=WorkingGoogle.iloc[0]
-  #print(WorkingGoogleColTitles)
   global IsGoogleValid 
-  #print("is this thing chilling valid",IsGoogleValid)
   IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Headline 1','Final URL')
-  #print(IsGoogleValid)
   if IsGoogleValid!="Valid":
    global SheetsAreLoaded
    SheetsAreLoaded="True"
    return IsGoogleValid
   else:
-   #print("WorkingGoogle")
    WorkingGoogle=pandas.DataFrame(WorkingGoogle,columns=['Campaign','Ad Group', 'Final URL'])
    return  WorkingGoogle
   
 def WorkingBing():
-  #print("this is for bing")
-  #os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
-  #print("os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')")
   os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
-  #print(os.listdir())
   WorkingBing=pandas.read_excel('WorkingBing')
-  #print("WorkingBing")
-  #WorkingBing.iloc[0]
   IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1','Final Url')
   if IsBingValid!='Valid':
    return IsBingValid
@@ -136,9 +115,6 @@ def WorkingBing():
 
     
 def initialCommUpdatProcess():
- #taskque.borrowedCelery.apply_async()
- #print("Running.........initialCommUpdatProcess()......")
- #print("communities section")
  os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
@@ -146,12 +122,11 @@ def initialCommUpdatProcess():
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
  if IsCommValid!="Valid":
   return IsCommValid
- #print("Google Section.....................................................................")
  
- #fileAsyncLoad() 
+ 
+  
  global WorkingGoogle
  WorkingGoogle=WorkingGoogle()    
- #print("Bing Section.....................................................................")
  global WorkingBing
  WorkingBing=WorkingBing()
  
