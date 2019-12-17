@@ -126,9 +126,9 @@ def initialCommUpdatProcess():
  
   
  #global WorkingGoogle
- WorkingGoogle=WorkingGoogle()    
+ WorkingGoogleEOF=WorkingGoogle()    
  #global WorkingBing
- WorkingBing=WorkingBing()
+ WorkingBingEOF=WorkingBing()
  
  
 
