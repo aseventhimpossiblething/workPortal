@@ -115,7 +115,7 @@ def WorkingGoogle():
    SheetsAreLoaded="True"
    return IsGoogleValid
   else:
-   print("WorkingGoogle")
+   #print("WorkingGoogle")
    WorkingGoogle=pandas.DataFrame(WorkingGoogle,columns=['Campaign','Ad Group', 'Final URL'])
    return  WorkingGoogle
   
@@ -126,13 +126,12 @@ def WorkingBing():
   os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
   #print(os.listdir())
   WorkingBing=pandas.read_excel('WorkingBing')
-  print(WorkingBing)
+  #print("WorkingBing")
   #WorkingBing.iloc[0]
   IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1','Final Url')
   if IsBingValid!='Valid':
    return IsBingValid
   WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url'])
-  #print(IsBingValid)
   return WorkingBing
 
     
@@ -173,12 +172,15 @@ def initialCommUpdatProcess():
  #os.chdir('/app/Sheets/CommunityUpdates')
  #print(os.getcwd())
  #print(os.listdir())
- #print(WorkingCommunities)
+ print(WorkingCommunities)
+ print(WorkingGoogle)
+ print(WorkingBing)
  TheSampleText=WorkingBing
  TheSamplefile=open('TheSampleText.txt','w+') 
  TheSamplefile.write(TheSampleText.to_string()) 
  TheSamplefile.close()
- TheSamplefile=open(TheSamplefile.txt,'r')
+ print("It wrote now open and read")
+ TheSamplefile=open(TheSampleText.txt,'r')
  print("TheSamplefile")
  print(TheSamplefile)
  
