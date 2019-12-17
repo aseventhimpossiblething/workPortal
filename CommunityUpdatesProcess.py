@@ -143,12 +143,13 @@ def initialCommUpdatProcess():
  TheSampleText=WorkingBingEOF
  
  
- #TheSamplefile=open('TheSampleText.txt','w+') 
- #TheSamplefile.write(TheSampleText.to_string())
- TheSampleText=TheSampleText.to_csv()
+ TheSamplefile=open('TheSampleText.txt','w+') 
+ TheSamplefile.write(TheSampleText.to_string())
  
- TheSamplefile=open('TheSampleText.xlsx','w+') 
- TheSamplefile.write(TheSampleText)
+ #TheSampleText=TheSampleText.to_csv()
+ 
+ #TheSamplefile=open('TheSampleText.xlsx','w+') 
+ #TheSamplefile.write(TheSampleText)
  TheSamplefile.close()
  print("current directory......",os.getcwd())
  print("contents.....",os.listdir())
