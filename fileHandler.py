@@ -98,7 +98,7 @@ def BidOpFileHandler():
 
 def CommListFileHandler():
     
-    #print("..................CommListFileHandler()..............CommListFileHandler()..............CommListFileHandler().............")    
+      
         
     reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']   
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
@@ -125,81 +125,18 @@ def CommListFileHandler():
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     request.files['currentBing'].save('WorkingBing')
      
-    #taskque.cel_save.apply_async()    
     
-    #print(".1........request.files['currentGoogle'].........request.files['currentGoogle'].....request.files['currentGoogle']......")    
-    #print("Current Google file unsaved")
-    #print(request.files['currentGoogle'])
-    #print("")    
-    #print(".2........request.files['currentGoogle'].........request.files['currentGoogle'].....request.files['currentGoogle']......")
-    
-    #print("**********************file search in file handler 1**********************************")
-    #print("display /app/Sheets/CommunityUpdates/currentCommunities/")
-    #os.chdir('/app/Sheets/CommunityUpdates/currentCommunities/')
-    #print("Cos.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')")    
-    #os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-    #print(os.listdir())
-    #print("display /app/Sheets/CommunityUpdates/currentCommunities/",os.listdir())
-    #print("**********************file search in file handler 2**********************************")    
-    """                        
-    #print("Communities")
-    os.chdir('/app/Sheets/CommunityUpdates/')
-    #recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
-    #print(recent)    
-    #ValidatXLSXtime(recent)
- 
-     
-    #print("google")    
-    os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-    #print(os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle'))
-    recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
-    #print(recent)     
-    #ValidatXLSXtime(recent)
-     
-    #print("Bing") 
-    os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
-    recent=max(glob.glob('*.xlsx'), key=os.path.getctime)
-    #print(recent)     
-    #ValidatXLSXtime(recent)
-    """ 
-   
+      
     def async_fileloader():       
      CommunityUpdatesProcess.initialCommUpdatProcess()
     LoadAllCommunityFiles=threading.Thread(target=async_fileloader)
     LoadAllCommunityFiles.start()    
     
-    #print(SheetsAreLoaded)
-    #if SheetsAreLoaded="True":    
-    #if CommunityUpdatesProcess.IsCommValid!="Valid":
-    #print("CommunityUpdatesProcess.IsGoogleValid!=Valid")   
-      #return CommunityUpdatesProcess.IsCommValid
-      #return "somthing is invalid"
-      #if CommunityUpdatesProcess.IsGoogleValid!="Valid":
-      #return CommunityUpdatesProcess.IsGoogleValid 
-     #if CommunityUpdatesProcess.IsCommValid!="Valid" or CommunityUpdatesProcess.IsGoogleValid!="Valid":
-      #print("WORKING IF OR 2")
+    
         
     HTMLoutput="This will be 3 modules  Modules as follows  Module 1: 3 links to the Community, Google, and Bing upload outputs Module 2:Google Outputs link1, Google KWs all match types. Link 2 google Adds Ad Types A+b and all Match types "    
     toscrn = HTMLoutput
-    """    
-    print("file handler............................",os.getcwd())
-    print(os.getcwd())
-    #os.chdir('/app/Sheets/CommunityUpdates')
-    #print(os.getcwd())
-    print(os.listdir())
-    print(pandas.read_excel('WorkingCommunities'))
-    TheSampleText=pandas.DataFrame(pandas.read_excel('WorkingCommunities'))
-    TheSamplefile=open('TheSampleText.txt','w+') 
-    TheSamplefile.write(TheSampleText.to_string()) 
-    TheSamplefile.close()
-    """
-    #TheSampleText.save('TheSampleText')
-
-    #os.chdir()
-    #print(pandas.read_excel('WorkingBing'))    
-    #print("..............end File play.........................")    
-   #return toscrn
-   #return "<html><a href='https://www.google.com'>Link</a></html>"
+   
     return "<html><a href='https://www.google.com'>Link</a></html>"     
          
 
