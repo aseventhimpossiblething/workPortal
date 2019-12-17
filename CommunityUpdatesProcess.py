@@ -140,7 +140,7 @@ def initialCommUpdatProcess():
  #print(WorkingBing.iloc[0])
  #print(WorkingBing.iloc[1])
  print("writing bit............................",os.getcwd())
- TheSampleText=WorkingBing
+ TheSampleText=WorkingBingEOF
  
  
  #TheSamplefile=open('TheSampleText.txt','w+') 
