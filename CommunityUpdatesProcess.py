@@ -142,8 +142,12 @@ def initialCommUpdatProcess():
  def extractCommunityID(col):  
   count=0;
   while count < int(col.count())
-   re.search(/\d{4,6},col[0])
-   #col[count].find(/[\d+]{0,6})
+  re.search(/\d{4,6},col[0])
+  count+=1
+  print(count)
+  #col[count].find(/[\d+]{0,6})
+ extractCommunityID()
+  
  
  print("printed head") 
  print(WorkingGoogleEOF['Final URL'][0])
