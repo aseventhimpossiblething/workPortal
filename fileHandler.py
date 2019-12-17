@@ -10,7 +10,7 @@ import time
 import xlrd
 import io
 import taskque
-import threading
+#import threading
 
 
 
@@ -133,14 +133,14 @@ def CommListFileHandler():
     #print("")    
     #print(".2........request.files['currentGoogle'].........request.files['currentGoogle'].....request.files['currentGoogle']......")
     
-    print("**********************file search in file handler 1**********************************")
+    #print("**********************file search in file handler 1**********************************")
     #print("display /app/Sheets/CommunityUpdates/currentCommunities/")
     #os.chdir('/app/Sheets/CommunityUpdates/currentCommunities/')
-    print("Cos.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')")    
-    os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-    print(os.listdir())
+    #print("Cos.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')")    
+    #os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
+    #print(os.listdir())
     #print("display /app/Sheets/CommunityUpdates/currentCommunities/",os.listdir())
-    print("**********************file search in file handler 2**********************************")    
+    #print("**********************file search in file handler 2**********************************")    
     """                        
     #print("Communities")
     os.chdir('/app/Sheets/CommunityUpdates/')
@@ -181,6 +181,7 @@ def CommListFileHandler():
         
     HTMLoutput="This will be 3 modules  Modules as follows  Module 1: 3 links to the Community, Google, and Bing upload outputs Module 2:Google Outputs link1, Google KWs all match types. Link 2 google Adds Ad Types A+b and all Match types "    
     toscrn = HTMLoutput
+    """    
     print("file handler............................",os.getcwd())
     print(os.getcwd())
     #os.chdir('/app/Sheets/CommunityUpdates')
@@ -191,6 +192,7 @@ def CommListFileHandler():
     TheSamplefile=open('TheSampleText.txt','w+') 
     TheSamplefile.write(TheSampleText.to_string()) 
     TheSamplefile.close()
+    """
     #TheSampleText.save('TheSampleText')
 
     #os.chdir()
