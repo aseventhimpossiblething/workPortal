@@ -68,14 +68,14 @@ CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Sear
 
 @app.route('/test')
 def testtextfile():
-    print("initial directory",os.getcwd())
-    print("contents of current directory",os.listdir())
+    print("initial directory---------",os.getcwd())
+    print("contents of current directory-------------",os.listdir())
     #os.chdir("/app/Sheets/CommunityUpdates")
     os.chdir("/app/Sheets/CommunityUpdates/Bing/currentBing")
-    print("current directory",os.getcwd())
-    print("contents of current directory",os.listdir())
+    print("current directory-------------",os.getcwd())
+    print("contents of current directory--------------",os.listdir())
     TheSamplefile=open('TheSampleText.txt','r')
-    TheSamplefile.read()     
+    print(TheSamplefile.read())     
     #print(os.getcwd())
      
     j=2+2
