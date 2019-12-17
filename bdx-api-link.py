@@ -50,7 +50,7 @@ app = Flask(__name__)
 
 
 print("current directory",os.getcwd())
-print("contents of current directory",os.lidtfir())
+print("contents of current directory",os.listdir())
 
 
 
