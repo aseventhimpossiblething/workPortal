@@ -74,7 +74,8 @@ def testtextfile():
     os.chdir("/app/Sheets/CommunityUpdates/Bing/currentBing")
     print("current directory-------------",os.getcwd())
     print("contents of current directory--------------",os.listdir())
-    TheSamplefile=open('TheSampleText.txt','r')
+    #TheSamplefile=open('TheSampleText.txt','r')
+    TheSamplefile=open('TheSampleText.xslx','w+') 
     #print(TheSamplefile.read())     
     #print(os.getcwd())
      
