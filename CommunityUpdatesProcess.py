@@ -176,7 +176,7 @@ def initialCommUpdatProcess():
  #print(WorkingGoogle)
  print(WorkingBing)
  print(WorkingBing.iloc[4])
-  print("writing bit............................",os.getcwd())
+ print("writing bit............................",os.getcwd())
  TheSampleText=WorkingBing
  TheSamplefile=open('TheSampleText.txt','w+') 
  TheSamplefile.write(TheSampleText.to_string()) 
