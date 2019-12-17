@@ -170,8 +170,8 @@ def initialCommUpdatProcess():
  #print("writing bit............................",os.getcwd())
  #print(os.getcwd())
  #os.chdir('/app/Sheets/CommunityUpdates')
- #print(os.getcwd())
- #print(os.listdir())
+ print("Current location.........",os.getcwd())
+ print("contents..........",os.listdir())
  #print(WorkingCommunities)
  #print(WorkingGoogle)
  print(WorkingBing)
@@ -182,6 +182,7 @@ def initialCommUpdatProcess():
  TheSamplefile=open('TheSampleText.txt','w+') 
  TheSamplefile.write(TheSampleText.to_string()) 
  TheSamplefile.close()
+ TheSamplefile.save['TheSampleText.txt']
  print("It wrote now open and read")
  TheSamplefile=open('TheSampleText.txt','r')
  print("TheSamplefile")
