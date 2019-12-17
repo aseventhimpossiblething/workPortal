@@ -127,7 +127,7 @@ def initialCommUpdatProcess():
  WorkingGoogleEOF=WorkingGoogle()    
  WorkingBingEOF=WorkingBing()
  
- print(WorkingGoogleEOF['Final URL'])
+ print(WorkingGoogleEOF['Final URL'].head())
  
  
  
