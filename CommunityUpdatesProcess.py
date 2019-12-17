@@ -101,7 +101,6 @@ def WorkingGoogle():
    #SheetsAreLoaded="True"
    return IsGoogleValid
   else:
-   global WorkingGoogle
    WorkingGoogle=pandas.DataFrame(WorkingGoogle,columns=['Campaign','Ad Group', 'Final URL'])
    return  WorkingGoogle
   
@@ -111,7 +110,6 @@ def WorkingBing():
   IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1','Final Url')
   if IsBingValid!='Valid':
    return IsBingValid
-  global WorkingBing
   WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
   return WorkingBing
 
@@ -127,10 +125,10 @@ def initialCommUpdatProcess():
  
  
   
- #global WorkingGoogle
- #WorkingGoogle=WorkingGoogle()    
- #global WorkingBing
- #WorkingBing=WorkingBing()
+ global WorkingGoogle
+ WorkingGoogle=WorkingGoogle()    
+ global WorkingBing
+ WorkingBing=WorkingBing()
  
  
 
