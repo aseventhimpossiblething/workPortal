@@ -49,6 +49,7 @@ app = Flask(__name__)
 #{{CommonTag}}-{{pagetitle}}
 
 
+"""
 print("initial directory",os.getcwd())
 print("contents of current directory",os.listdir())
 #os.chdir("/app/Sheets/CommunityUpdates")
@@ -57,6 +58,7 @@ print("current directory",os.getcwd())
 print("contents of current directory",os.listdir())
 TheSamplefile=open('TheSampleText.txt','r')
 TheSamplefile.read()
+"""
 
 
 
@@ -66,6 +68,14 @@ CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Sear
 
 @app.route('/test')
 def testtextfile():
+    print("initial directory",os.getcwd())
+    print("contents of current directory",os.listdir())
+    #os.chdir("/app/Sheets/CommunityUpdates")
+    os.chdir("/app/Sheets/CommunityUpdates/Bing/currentBing")
+    print("current directory",os.getcwd())
+    print("contents of current directory",os.listdir())
+    TheSamplefile=open('TheSampleText.txt','r')
+    TheSamplefile.read()     
     #print(os.getcwd())
      
     j=2+2
