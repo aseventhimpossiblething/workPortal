@@ -149,6 +149,7 @@ def initialCommUpdatProcess():
  #TheSamplefile.save['TheSampleText.txt']
  print("It wrote now open and read")
  TheSamplefile=open('TheSampleText.txt','r')
+ print(pandas.read_csv('TheSampleText.txt'))
  print("TheSamplefile")
  print(TheSamplefile)
  
