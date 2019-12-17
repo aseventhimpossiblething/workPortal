@@ -75,12 +75,12 @@ def testtextfile():
     print("current directory-------------",os.getcwd())
     print("contents of current directory--------------",os.listdir())
     TheSamplefile=open('TheSampleText.txt','r')
-    print(TheSamplefile.read())     
+    #print(TheSamplefile.read())     
     #print(os.getcwd())
      
     j=2+2
     j=str(j)
-    return j
+    return TheSamplefile.read()
 
 
 
