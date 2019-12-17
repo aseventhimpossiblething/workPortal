@@ -86,6 +86,7 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkwor
    CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
    global CommunityRow4
    CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
+   print("communities basic import done")
    return WorkingCommunities
   else:
    print("Load Communities cannot run...............",IsCommValid)
