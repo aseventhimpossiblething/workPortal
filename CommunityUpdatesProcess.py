@@ -147,9 +147,9 @@ def initialCommUpdatProcess():
  print("current directory......",os.getcwd())
  print("contents.....",os.listdir())
 
- print("It wrote now open and read")
- TheSamplefile=open('TheSampleText.txt','r')
- print(TheSamplefile.read())
+ #print("It wrote now open and read")
+ #TheSamplefile=open('TheSampleText.txt','r')
+ #print(TheSamplefile.read())
  
  #print(pandas.read_csv(TheSamplefile))
  #print(pandas.read_csv('TheSampleText.txt'))
