@@ -143,7 +143,7 @@ def initialCommUpdatProcess():
   foundElements=[];
   count=0;
   while count < int(col.count()):
-   found=re.search(/\d{4,6},col[0])
+   found=re.search(\d+,col[count])
    foundElements.append(found)
    count+=1
    #print(count)
