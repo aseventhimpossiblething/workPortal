@@ -49,7 +49,8 @@ app = Flask(__name__)
 #{{CommonTag}}-{{pagetitle}}
 
 
-
+print("current directory",os.getcwd())
+print("contents of current directory",os.lidtfir())
 
 
 
@@ -57,7 +58,9 @@ app = Flask(__name__)
 CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
 
 @app.route('/test')
-def testasynch():
+def testtextfile():
+    #print(os.getcwd())
+     
     j=2+2
     j=str(j)
     return j
