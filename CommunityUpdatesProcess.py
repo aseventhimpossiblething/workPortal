@@ -146,15 +146,15 @@ def initialCommUpdatProcess():
  TheSamplefile.close()
  print("current directory......",os.getcwd())
  print("contents.....",os.listdir())
- #TheSamplefile.save['TheSampleText.txt']
+
  print("It wrote now open and read")
- #TheSamplefile=open('TheSampleText.txt')
+ TheSamplefile=open('TheSampleText','r')
  #print(pandas.read_csv(TheSamplefile))
- print(pandas.read_csv('TheSampleText.txt'))
+ #print(pandas.read_csv('TheSampleText.txt'))
  #print(pandas.read_csv(TheSamplefile))
  
- print("TheSamplefile")
- print("TheSamplefile...module",TheSamplefile)
+ #print("TheSamplefile")
+ #print("TheSamplefile...module",TheSamplefile)
  
  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
