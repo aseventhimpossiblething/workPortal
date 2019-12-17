@@ -141,8 +141,9 @@ def initialCommUpdatProcess():
  #print(WorkingBing.iloc[1])
  print("writing bit............................",os.getcwd())
  TheSampleText=WorkingBing
- TheSamplefile=open('TheSampleText.txt','w+') 
+ #TheSamplefile=open('TheSampleText.txt','w+') 
  #TheSamplefile.write(TheSampleText.to_string())
+ TheSamplefile=open('TheSampleText.xlsx','w+') 
  TheSamplefile.write(TheSampleText)
  TheSamplefile.close()
  print("current directory......",os.getcwd())
