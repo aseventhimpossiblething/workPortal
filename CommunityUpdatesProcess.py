@@ -142,7 +142,8 @@ def initialCommUpdatProcess():
  print("writing bit............................",os.getcwd())
  TheSampleText=WorkingBing
  TheSamplefile=open('TheSampleText.txt','w+') 
- TheSamplefile.write(TheSampleText.to_string()) 
+ #TheSamplefile.write(TheSampleText.to_string())
+ TheSamplefile.write(TheSampleText)
  TheSamplefile.close()
  print("current directory......",os.getcwd())
  print("contents.....",os.listdir())
