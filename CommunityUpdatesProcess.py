@@ -9,6 +9,7 @@ import os
 import psycopg2
 import re
 import threading
+import numpy
 
 
 
@@ -163,8 +164,10 @@ def initialCommUpdatProcess():
   count=0;
   Incol1=[];
   Incol2=[];
-  print(checkin1.values())
-  print(type(checkin1.values()))
+ print(type(checkin1)) 
+ checkin1.to_numpy()
+ #print(checkin1.values())
+ #print(type(checkin1.values()))
  #while count < checkby.count():
   while count < 10:
    #print(checkin1)
