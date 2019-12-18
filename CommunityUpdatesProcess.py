@@ -160,7 +160,8 @@ def initialCommUpdatProcess():
   print(type(checkin1))
   checkin1=checkin1.tostring()
   print(type(checkin1))
-  checkin1.find("find")
+  checkin1.encode('UTF-8', errors='strict')
+  #checkin1.find("find")
   #print(type(checkin1.values()))
   #while count < checkby.count():
   while count < 10:
