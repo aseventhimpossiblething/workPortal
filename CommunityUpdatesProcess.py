@@ -158,7 +158,8 @@ def initialCommUpdatProcess():
   print(type(checkin1)) 
   checkin1=checkin1.to_numpy()
   print(type(checkin1))
-  print(checkin1)
+  checkin1=checkin1.tostring()
+  print(type(checkin1))
   #print(type(checkin1.values()))
   #while count < checkby.count():
   while count < 10:
