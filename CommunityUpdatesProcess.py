@@ -20,7 +20,7 @@ IsBingValid=None;
 
 
 
-
+"""
 CommunityCol1=0
 CommunityCol2=0
 CommunityCol3=0
@@ -55,6 +55,7 @@ BingRow1=0
 BingRow2=0
 BingRow3=0
 BingRow4=0
+""" 
 
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
  titlestring=str(sheet.iloc[1])
@@ -75,7 +76,7 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkwor
   if CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3,checkword4)=="Valid":
    WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
                                                                    'Community Id','Community Name','City','State','Zip',\
-                                                                   'Market ID','Market Name'])
+   """                                                                'Market ID','Market Name'])
    FirstCol=WorkingCommunities[['Builder Name']]
    global CommunityColTitles
    CommunityColTitles=str(list(WorkingCommunities))
@@ -87,6 +88,8 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkwor
    CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
    global CommunityRow4
    CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
+   """
+   
    print("communities basic import done")
    return WorkingCommunities
   else:
