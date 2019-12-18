@@ -130,7 +130,7 @@ def initialCommUpdatProcess():
   googleURLS=0;
   #bingURLS=0;
   count=0;
-  while count < 1000:
+  while count < 10000:
  #while count < WorkingGoogleEOF['Final URL'].count():
    googleURLS=str(googleURLS)+str(WorkingGoogleEOF['Final URL'][count])
    if count % 100:
@@ -139,7 +139,10 @@ def initialCommUpdatProcess():
   print("end MergeURLs()")
   return googleURLS
  googleURLS=GMergeURLs()
- #googleURLS.find("")
+ print(googleURLS.find("131160"))
+ print(googleURLS.find("129042"))
+ print(googleURLS.find("667530"))
+ 
  
  
  
