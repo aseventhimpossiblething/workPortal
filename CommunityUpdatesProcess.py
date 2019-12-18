@@ -145,7 +145,7 @@ def initialCommUpdatProcess():
   count=0;
   while count < int(5):
  #while count < int(col.count()):
-   found=re.search("\d{4,6}",col[count])
+   found=re.search("\d{4,6}",col[count]).group()
    #print(type(re.search("\d{4,6}",col[count])))
    print("the found value?",found.group(),type(found.group()))
    #print(type(found))
