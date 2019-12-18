@@ -156,6 +156,7 @@ def initialCommUpdatProcess():
   Incol1=[];
   Incol2=[];
   while count < checkby.count():
+   print("")
   
   
   
