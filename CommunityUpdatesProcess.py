@@ -132,7 +132,7 @@ def initialCommUpdatProcess():
   count=0;
   #while count < 100000:
   while count < chan.count():
-   URLS=str(URLS)+chan[count]
+   URLS=URLS+chan[count]
    if count % 1000 == 0:
     print(count)
    count+=1
@@ -155,6 +155,8 @@ def initialCommUpdatProcess():
   count=0;
   Incol1=[];
   Incol2=[];
+   while count < checkby
+  
   
   
   """
