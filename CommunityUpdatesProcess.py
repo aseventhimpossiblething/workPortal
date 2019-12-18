@@ -147,14 +147,38 @@ def initialCommUpdatProcess():
  extractCommunityID(WorkingGoogleEOF['Final URL'])
  """ 
  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  WorkingCommunities['Community Id']
  WorkingGoogleEOF['Final URL']  
  WorkingBingEOF['Final Url']
+ 
+ 
+ def MergeURLs():
+  googleURLS=0;
+  bingURLS=0;
+  count=0;
+  while count < WorkingGoogleEOF['Final URL'].count():
+   googleURLS=googleURLS+WorkingGoogleEOF['Final URL'][count]
+   count+=1
+ 
+ 
+ 
  
  def communityCheck(checkby,checkin1,checkin2):
   count=0;
   Incol1=[];
   Incol2=[];
+  
+  
+  """
   print(type(checkin1)) 
   checkin1=checkin1.to_numpy()
   print(type(checkin1tolist()))
@@ -168,7 +192,7 @@ def initialCommUpdatProcess():
   #print(checkin1[0])
   #print()
   #print(type(numpy.ravel(checkin1)))
-  
+  """
   #while count < checkby.count():
   while count < 10:
    #print(checkin1)
