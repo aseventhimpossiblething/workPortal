@@ -163,8 +163,8 @@ def initialCommUpdatProcess():
   count=0;
   Incol1=[];
   Incol2=[];
-  print(chekin1.values())
-  print(type(chekin1.values()))
+  print(checkin1.values())
+  print(type(checkin1.values()))
  #while count < checkby.count():
   while count < 10:
    #print(checkin1)
