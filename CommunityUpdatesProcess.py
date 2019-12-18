@@ -143,21 +143,17 @@ def initialCommUpdatProcess():
   print("running extractor.........")
   foundElements=[];
   count=0;
-  while count < int(100):
+  while count < int(10000):
  #while count < int(col.count()):
    found=re.search("\d{4,6}",col[count]).group()
-  #print("the found value?",found.group(),type(found.group()))
-  #print(count,"--",found,"--")
-  #print(col[count])
-  #print("_____")
    foundElements.append(found)
    count+=1
-   if count % 10 == 0:
+   if count % 1000 == 0:
     print(count)   
   print(foundElements)
  extractCommunityID(WorkingGoogleEOF['Final URL'])
   
- 
+ """
  print("printed head") 
  print(WorkingGoogleEOF['Final URL'][0])
  print(WorkingGoogleEOF['Final URL'][1])
@@ -169,14 +165,14 @@ def initialCommUpdatProcess():
  print("length")
  print("Length of array",WorkingGoogleEOF['Final URL'].count())
  print("Data Type of Length of array",type(int(WorkingGoogleEOF['Final URL'].count())))
+ """
  
  
  
  
  
  
- 
-
+ """
  print("Current location.........",os.getcwd())
  print("contents..........",os.listdir())
  print("WorkingCommunities")
@@ -185,6 +181,7 @@ def initialCommUpdatProcess():
  #print(WorkingBing.iloc[0])
  #print(WorkingBing.iloc[1])
  print("writing bit............................",os.getcwd())
+ """
  TheSampleText=WorkingBingEOF
  
  
@@ -196,8 +193,8 @@ def initialCommUpdatProcess():
  #TheSamplefile=open('TheSampleText.xlsx','w+') 
  #TheSamplefile.write(TheSampleText)
  TheSamplefile.close()
- print("current directory......",os.getcwd())
- print("contents.....",os.listdir())
+ #print("current directory......",os.getcwd())
+ #print("contents.....",os.listdir())
 
  #print("It wrote now open and read")
  #TheSamplefile=open('TheSampleText.txt','r')
