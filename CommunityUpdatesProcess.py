@@ -155,9 +155,15 @@ def initialCommUpdatProcess():
  extractCommunityID(WorkingGoogleEOF['Final URL'])
  """ 
  
- WorkingCommunities['Community Id'])
+ WorkingCommunities['Community Id']
  WorkingGoogleEOF['Final URL']  
  WorkingBingEOF['Final Url']
+ 
+ def communityCheck(checkby,checkin1,checkin2):
+  count=0;
+  while count < checkby.count():
+   WorkingCommunities['Community Id'][count]
+   count+=1
  
  """
  print("printed head") 
