@@ -146,12 +146,14 @@ def initialCommUpdatProcess():
   while count < int(5):
  #while count < int(col.count()):
    found=re.search("\d{4,6}",col[count])
-   foundElements.append(found)
    print(type(re.search("\d{4,6}",col[count])))
+   found=str(found)
+   print(type(found))
    print(count,"--",found,"--")
    #print(col[count])
    print(col[count])
    print("_____")
+   foundElements.append(found)
    count+=1
    #print(count)
    #col[count].find(/[\d+]{0,6})
