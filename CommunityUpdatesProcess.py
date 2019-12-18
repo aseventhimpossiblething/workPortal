@@ -20,42 +20,6 @@ IsBingValid=None;
 
 
 
-"""
-CommunityCol1=0
-CommunityCol2=0
-CommunityCol3=0
-CommunityCol4=0
-CommunityCol5=0
-CommunityCol6=0
-CommunityCol7=0
-CommunityCol8=0
-CommunityCol9=0
-CommunityCol10=0
-CommunityCol11=0
-CommunityCol12=0
-CommunityCol13=0
-CommunityCol14=0
-CommunityCol15=0
-CommunityCol16=0
-
-CommunityColTitles=0
-CommunityRow1=0
-CommunityRow2=0
-CommunityRow3=0
-CommunityRow4=0
-
-GoogleColTitles=0
-GoogleRow1=0
-GoogleRow2=0
-GoogleRow3=0
-GoogleRow4=0
-
-BingColTitles=0
-BingRow1=0
-BingRow2=0
-BingRow3=0
-BingRow4=0
-""" 
 
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
  titlestring=str(sheet.iloc[1])
@@ -162,13 +126,17 @@ def initialCommUpdatProcess():
  
  
  def MergeURLs():
+  print("MergeURLs()")
   googleURLS=0;
   bingURLS=0;
   count=0;
-  while count < WorkingGoogleEOF['Final URL'].count():
-   googleURLS=googleURLS+WorkingGoogleEOF['Final URL'][count]
+  while count < 10:
+ #while count < WorkingGoogleEOF['Final URL'].count():
+   googleURLS+=WorkingGoogleEOF['Final URL'][count]
+   print(googleURLS)
    count+=1
- 
+   print("end MergeURLs()")
+ MergeURLs()
  
  
  
@@ -179,8 +147,8 @@ def initialCommUpdatProcess():
   
   
   """
-  print(type(checkin1)) 
-  checkin1=checkin1.to_numpy()
+  #print(type(checkin1)) 
+  #checkin1=checkin1.to_numpy()
   print(type(checkin1tolist()))
   print(checkin1tolist())
   #print(checkin1.tolist())
@@ -196,9 +164,9 @@ def initialCommUpdatProcess():
   #while count < checkby.count():
   while count < 10:
    #print(checkin1)
-   print(count)
+   #print(count)
    count+=1
- communityCheck(WorkingCommunities['Community Id'],WorkingGoogleEOF['Final URL'],WorkingBingEOF['Final Url'])  
+ #communityCheck(WorkingCommunities['Community Id'],WorkingGoogleEOF['Final URL'],WorkingBingEOF['Final Url'])  
    
    
  
