@@ -146,15 +146,14 @@ def initialCommUpdatProcess():
   while count < int(5):
  #while count < int(col.count()):
    found=re.search("\d{4,6}",col[count]).group()
-   #print(type(re.search("\d{4,6}",col[count])))
-   print("the found value?",found.group(),type(found.group()))
-   #print(type(found))
-   print(count,"--",found,"--")
-   #print(col[count])
-   print(col[count])
-   print("_____")
+  #print("the found value?",found.group(),type(found.group()))
+  #print(count,"--",found,"--")
+  #print(col[count])
+  #print("_____")
    foundElements.append(found)
    count+=1
+   if count % 2 == 0:
+    print(count)   
   print(foundElemants)
  extractCommunityID(WorkingGoogleEOF['Final URL'])
   
