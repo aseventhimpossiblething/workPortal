@@ -167,10 +167,10 @@ def initialCommUpdatProcess():
  #while count < checkby.count():
   while count < 10:
    print(checkin1.find(WorkingCommunities['Community Id'][count]))
+   count+=1
  communityCheck(WorkingCommunities['Community Id'],WorkingGoogleEOF['Final URL'],WorkingBingEOF['Final Url'])  
    
    
-   count+=1
  
  """
  print("printed head") 
