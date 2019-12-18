@@ -138,8 +138,8 @@ def initialCommUpdatProcess():
    count+=1
   print("end MergeURLs()")
   return URLS
- googleURLS=MergeURLs(WorkingGoogleEOF['Final URL')
- 
+ googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'])
+ bingURLS=MergeURLs(WorkingBingEOF['Final Url'])
  print(googleURLS.find("69862"))
  print(googleURLS.find("63594")) 
  print(googleURLS.find("73142")) 
