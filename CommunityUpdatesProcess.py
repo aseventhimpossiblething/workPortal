@@ -165,6 +165,8 @@ def initialCommUpdatProcess():
   #checkin1.find("find")
   print(type(checkin1[0]))
   print(checkin1[0])
+  print(numpy.ravel(checkin1))
+  print(type(numpy.ravel(checkin1)))
   
   #while count < checkby.count():
   while count < 10:
