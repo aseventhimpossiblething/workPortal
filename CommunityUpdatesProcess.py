@@ -76,19 +76,7 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkwor
   if CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3,checkword4)=="Valid":
    WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
                                                                    'Community Id','Community Name','City','State','Zip',\
-   """                                                                'Market ID','Market Name'])
-   FirstCol=WorkingCommunities[['Builder Name']]
-   global CommunityColTitles
-   CommunityColTitles=str(list(WorkingCommunities))
-   global CommunityRow1
-   CommunityRow1=str(WorkingCommunities.iloc[5].values)+" "+str(len(WorkingCommunities.iloc[5]))
-   global CommunityRow2
-   CommunityRow2=str(WorkingCommunities.iloc[6].values)+" "+str(len(WorkingCommunities.iloc[6]))
-   global CommunityRow3
-   CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
-   global CommunityRow4
-   CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
-   """
+                                                                   'Market ID','Market Name'])
    
    print("communities basic import done")
    return WorkingCommunities
