@@ -157,16 +157,17 @@ def initialCommUpdatProcess():
   Incol2=[];
   print(type(checkin1)) 
   checkin1=checkin1.to_numpy()
-  print(type(checkin1))
-  #print(type(map(str,checkin1)))
+  print(type(checkin1tolist()))
+  print(checkin1tolist())
+  #print(checkin1.tolist())
   #checkin1=checkin1.tostring()
-  print(checkin1)
+  #print(checkin1)
   #checkin1.encode('UTF-8', errors='strict')
   #checkin1.find("find")
-  print(type(checkin1[0]))
-  print(checkin1[0])
-  print(numpy.ravel(checkin1))
-  print(type(numpy.ravel(checkin1)))
+  #print(type(checkin1[0]))
+  #print(checkin1[0])
+  #print()
+  #print(type(numpy.ravel(checkin1)))
   
   #while count < checkby.count():
   while count < 10:
