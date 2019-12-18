@@ -154,7 +154,7 @@ def initialCommUpdatProcess():
    count+=1
    if count % 2 == 0:
     print(count)   
-  print(foundElemants)
+  print(foundElements)
  extractCommunityID(WorkingGoogleEOF['Final URL'])
   
  
