@@ -169,60 +169,17 @@ def initialCommUpdatProcess():
  #communityCheck(WorkingCommunities['Community Id'],WorkingGoogleEOF['Final URL'],WorkingBingEOF['Final Url'])  
    
    
- 
- """
- print("printed head") 
- print(WorkingGoogleEOF['Final URL'][0])
- print(WorkingGoogleEOF['Final URL'][1])
- print(WorkingGoogleEOF['Final URL'][2])
- print(WorkingGoogleEOF['Final URL'][3])
- print("________")
- print("actual head")
- print(WorkingGoogleEOF['Final URL'].head())
- print("length")
- print("Length of array",WorkingGoogleEOF['Final URL'].count())
- print("Data Type of Length of array",type(int(WorkingGoogleEOF['Final URL'].count())))
- """
+
  
  
  
  
  
- 
- """
- print("Current location.........",os.getcwd())
- print("contents..........",os.listdir())
- print("WorkingCommunities")
- print("WorkingGoogle")
- print("WorkingBing")
- #print(WorkingBing.iloc[0])
- #print(WorkingBing.iloc[1])
- print("writing bit............................",os.getcwd())
- """
+
  TheSampleText=WorkingBingEOF
- 
- 
  TheSamplefile=open('TheSampleText.txt','w+') 
  TheSamplefile.write(TheSampleText.to_string())
- 
- #TheSampleText=TheSampleText.to_csv()
- 
- #TheSamplefile=open('TheSampleText.xlsx','w+') 
- #TheSamplefile.write(TheSampleText)
  TheSamplefile.close()
- #print("current directory......",os.getcwd())
- #print("contents.....",os.listdir())
-
- #print("It wrote now open and read")
- #TheSamplefile=open('TheSampleText.txt','r')
- #print(TheSamplefile.read())
- 
- #print(pandas.read_csv(TheSamplefile))
- #print(pandas.read_csv('TheSampleText.txt'))
- #print(pandas.read_csv(TheSamplefile))
- 
- #print("TheSamplefile")
- #print("TheSamplefile...module",TheSamplefile)
  
  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
