@@ -146,7 +146,7 @@ def initialCommUpdatProcess():
   while count < int(col.count()):
    found=re.search("\d",col[count])
    foundElements.append(found)
-   print(count)
+   print(count," ",found)
    count+=1
    #print(count)
    #col[count].find(/[\d+]{0,6})
