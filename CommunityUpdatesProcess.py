@@ -148,8 +148,9 @@ def initialCommUpdatProcess():
    found=re.search("\d{4,6}",col[count]).group()
    foundElements.append(found)
    count+=1
-   if count % 1000 == 0:
-    print(count)   
+   print(count)
+   #if count % 1000 == 0:
+    #print(count)   
   print(foundElements)
  extractCommunityID(WorkingGoogleEOF['Final URL'])
   
