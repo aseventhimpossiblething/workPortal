@@ -154,6 +154,9 @@ def initialCommUpdatProcess():
   print(foundElements)
  extractCommunityID(WorkingGoogleEOF['Final URL'])
  """ 
+ 
+ print(WorkingCommunities['Community Id'])
+ 
  """
  print("printed head") 
  print(WorkingGoogleEOF['Final URL'][0])
