@@ -155,8 +155,7 @@ def initialCommUpdatProcess():
    print("_____")
    foundElements.append(found)
    count+=1
-   #print(count)
-   #col[count].find(/[\d+]{0,6})
+  print(foundElemants)
  extractCommunityID(WorkingGoogleEOF['Final URL'])
   
  
