@@ -138,7 +138,7 @@ def initialCommUpdatProcess():
  
  
  
- 
+ """
  def extractCommunityID(col):
   print("running extractor.........")
   foundElements=[];
@@ -153,7 +153,7 @@ def initialCommUpdatProcess():
     #print(count)   
   print(foundElements)
  extractCommunityID(WorkingGoogleEOF['Final URL'])
-  
+ """ 
  """
  print("printed head") 
  print(WorkingGoogleEOF['Final URL'][0])
