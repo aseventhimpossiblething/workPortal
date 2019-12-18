@@ -155,7 +155,9 @@ def initialCommUpdatProcess():
  extractCommunityID(WorkingGoogleEOF['Final URL'])
  """ 
  
- print(WorkingCommunities['Community Id'])
+ WorkingCommunities['Community Id'])
+ WorkingGoogleEOF['Final URL']  
+ WorkingBingEOF['Final Url']
  
  """
  print("printed head") 
