@@ -161,8 +161,15 @@ def initialCommUpdatProcess():
  
  def communityCheck(checkby,checkin1,checkin2):
   count=0;
-  while count < checkby.count():
-   WorkingCommunities['Community Id'][count]
+  Incol1=[];
+  Incol2=[];
+  
+ #while count < checkby.count():
+  while count < 10:
+   print(checkin1.find(WorkingCommunities['Community Id'][count]))
+ communityCheck(WorkingCommunities['Community Id'],WorkingGoogleEOF['Final URL'],WorkingBingEOF['Final Url'])  
+   
+   
    count+=1
  
  """
