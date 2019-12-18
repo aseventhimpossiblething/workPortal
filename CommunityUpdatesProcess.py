@@ -143,7 +143,8 @@ def initialCommUpdatProcess():
   print("running extractor.........")
   foundElements=[];
   count=0;
-  while count < int(col.count()):
+  while count < int(1000):
+ #while count < int(col.count()):
    found=re.search("\d",col[count])
    foundElements.append(found)
    print(count," ",found)
