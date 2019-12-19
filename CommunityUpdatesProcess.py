@@ -100,7 +100,7 @@ def initialCommUpdatProcess():
    if count % 1000 == 0:
     print("Goog _",count)
    count+=1
-   print("end MergeURLs()")
+  print("end MergeURLs()")
   return URLS
  
  def BMergeURLs(chan,chan2):
