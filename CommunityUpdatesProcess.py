@@ -148,7 +148,7 @@ def initialCommUpdatProcess():
   while count < chan.count():
    URLS=URLS+chan[count]
    if count % 1000 == 0:
-    print("bing _"count)
+    print("bing _",count)
    count+=1
   print("end MergeURLs()")
   return URLS
