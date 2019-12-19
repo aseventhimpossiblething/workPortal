@@ -144,7 +144,7 @@ def initialCommUpdatProcess():
   NewBing=[];
   while count < 10:
    print("Check String") 
-   print("check strings",checkby[count])
+   print("check strings",checkby[1])
    print("check append")
    print("check append var type ",type(NewGoogle))
    print("NewGoogle")
