@@ -134,33 +134,27 @@ def initialCommUpdatProcess():
  print(WorkingBingEOF['Final Url'][2])
  print(WorkingBingEOF['Final Url'][3])
  """
- print("WorkingCommunities['Community Id']")
- print(WorkingCommunities['Community Id'][5])
- print(WorkingCommunities['Community Id'][6])
- print(WorkingCommunities['Community Id'][7])
- print(WorkingCommunities['Community Id'][8])
- """
+ # print("WorkingCommunities['Community Id']")
+ # print(WorkingCommunities['Community Id'][5])
+ #print(WorkingCommunities['Community Id'][6])
+ #print(WorkingCommunities['Community Id'][7])
+ #print(WorkingCommunities['Community Id'][8])
+ 
+ 
  def communityCheck(checkby,checkin1,checkin2):
-  print("checkby")
-  print(checkby)
-  count=0;
+  print("Community Check")
+  count=5;
   NewGoogle=[];
   NewBing=[];
-  while count < 10:
-   print("Check String") 
-   print("check strings",checkby[1])
-   print("check append")
-   print("check append var type ",type(NewGoogle))
-   print("NewGoogle")
-   print(NewGoogle)  
-  while count < 5:
-  #while count < checkby.count():
-   NewGoogle.append(checkby[count]);
+  while count < checkby.count():
+   if checkin1.find(checkby[count])<0:
+    NewGoogle.append(checkby[count]);
+   if checkin2.find(checkby[count])<0:  
+    NewBing.append(checkby[count]);
    print(count,checkby[count]);
    count+=1;
-   print(NewGoogle);
  communityCheck(WorkingCommunities['Community Id'],WorkingGoogleEOF['Final URL'],WorkingBingEOF['Final Url']) 
- """ 
+ 
 
  TheSampleText=WorkingBingEOF
  TheSamplefile=open('TheSampleText.txt','w+') 
