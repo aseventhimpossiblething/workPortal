@@ -136,8 +136,8 @@ def initialCommUpdatProcess():
  """
 
  
- 
- 
+ print(WorkingCommunities)
+ """
  def communityCheck(checkby,checkin1,checkin2):
   print("checkby")
   print(checkby)
@@ -158,7 +158,7 @@ def initialCommUpdatProcess():
    count+=1;
    print(NewGoogle);
  communityCheck(WorkingCommunities['Community Id'],WorkingGoogleEOF['Final URL'],WorkingBingEOF['Final Url']) 
-  
+ """ 
 
  TheSampleText=WorkingBingEOF
  TheSamplefile=open('TheSampleText.txt','w+') 
