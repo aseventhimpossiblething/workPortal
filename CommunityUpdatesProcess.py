@@ -139,6 +139,8 @@ def initialCommUpdatProcess():
  
  
  def communityCheck(checkby,checkin1,checkin2):
+  print("checkby")
+  print(checkby)
   count=0;
   NewGoogle=[];
   NewBing=[];
