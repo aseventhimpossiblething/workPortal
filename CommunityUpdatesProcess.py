@@ -155,17 +155,18 @@ def initialCommUpdatProcess():
  
 #googleURLS=GMergeURLs(WorkingGoogleEOF['Final URL'],"Google")
 bingURLS=BMergeURLs(WorkingBingEOF['Final Url'],"Bing")
- """
- #print(googleURLS.find("69862"))
- #print(googleURLS.find("63594")) 
- #print(googleURLS.find("73142")) 
- #print(googleURLS.find("667530"))
+
+"""
+#print(googleURLS.find("69862"))
+#print(googleURLS.find("63594")) 
+#print(googleURLS.find("73142")) 
+#print(googleURLS.find("667530"))
  
- print(WorkingBingEOF['Final Url'])
- print(WorkingBingEOF['Final Url'][1])
- print(WorkingBingEOF['Final Url'][2])
- print(WorkingBingEOF['Final Url'][3])
- """
+print(WorkingBingEOF['Final Url'])
+print(WorkingBingEOF['Final Url'][1])
+print(WorkingBingEOF['Final Url'][2])
+print(WorkingBingEOF['Final Url'][3])
+"""
  
  
  
