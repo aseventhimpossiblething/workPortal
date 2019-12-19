@@ -134,11 +134,11 @@ def initialCommUpdatProcess():
  print(WorkingBingEOF['Final Url'][2])
  print(WorkingBingEOF['Final Url'][3])
  """
- print(WorkingCommunities['Community Id'])
- print(WorkingCommunities['Community Id'][1])
- print(WorkingCommunities['Community Id'][2])
- print(WorkingCommunities['Community Id'][3])
- print(WorkingCommunities['Community Id'][0])
+ print("WorkingCommunities['Community Id']")
+ print(WorkingCommunities['Community Id'][5])
+ print(WorkingCommunities['Community Id'][6])
+ print(WorkingCommunities['Community Id'][7])
+ print(WorkingCommunities['Community Id'][8])
  """
  def communityCheck(checkby,checkin1,checkin2):
   print("checkby")
