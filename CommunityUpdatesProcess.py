@@ -174,12 +174,12 @@ print(WorkingBingEOF['Final Url'][3])
  
  
  
- def communityCheck(checkby,checkin1,checkin2):
-  count=0;
-  Incol1=[];
-  Incol2=[];
-  while count < checkby.count():
-   print("")
+def communityCheck(checkby,checkin1,checkin2):
+ count=0;
+ Incol1=[];
+ Incol2=[];
+ while count < checkby.count():
+  print("")
   
   
   
@@ -199,10 +199,10 @@ print(WorkingBingEOF['Final Url'][3])
   #print(type(numpy.ravel(checkin1)))
   """
   #while count < checkby.count():
-  while count < 10:
+  #while count < 10:
    #print(checkin1)
    #print(count)
-   count+=1
+   #count+=1
  #communityCheck(WorkingCommunities['Community Id'],WorkingGoogleEOF['Final URL'],WorkingBingEOF['Final Url'])  
    
    
