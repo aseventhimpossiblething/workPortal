@@ -95,7 +95,7 @@ def initialCommUpdatProcess():
   #bingURLS=0;
   count=0;
   #while count < 100000:
-  if chan2="Bing":
+  if chan2=="Bing":
    count=1;
   while count < 1000: 
   #while count < chan.count():
