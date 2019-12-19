@@ -97,10 +97,10 @@ def initialCommUpdatProcess():
   #while count < 100000:
   if chan2=="Bing":
    count=1;
-  while count < 1000: 
+  while count < 10: 
   #while count < chan.count():
    URLS=URLS+chan[count]
-   if count % 10 == 0:
+   if count % 1 == 0:
     print(chan2," _ ",count)
    count+=1
   print("end GMergeURLs()")
@@ -136,7 +136,7 @@ def initialCommUpdatProcess():
  """
 
  
- print(WorkingCommunities['COmmunity Id'][0])
+ print(WorkingCommunities['Community Id'][0])
  """
  def communityCheck(checkby,checkin1,checkin2):
   print("checkby")
