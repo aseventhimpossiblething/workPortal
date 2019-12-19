@@ -147,27 +147,6 @@ def initialCommUpdatProcess():
    print(NewGoogle);
  communityCheck(WorkingCommunities['Community Id'],WorkingGoogleEOF['Final URL'],WorkingBingEOF['Final Url']) 
   
-  
- """
-  #print(type(checkin1)) 
-  #checkin1=checkin1.to_numpy()
-  print(type(checkin1tolist()))
-  print(checkin1tolist())
-  #print(checkin1.tolist())
-  #checkin1=checkin1.tostring()
-  #print(checkin1)
-  #checkin1.encode('UTF-8', errors='strict')
-  #checkin1.find("find")
-  #print(type(checkin1[0]))
-  #print(checkin1[0])
-  #print()
-  #print(type(numpy.ravel(checkin1)))
- """
- 
-  
- 
- 
- 
 
  TheSampleText=WorkingBingEOF
  TheSamplefile=open('TheSampleText.txt','w+') 
