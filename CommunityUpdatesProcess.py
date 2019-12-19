@@ -117,7 +117,7 @@ def initialCommUpdatProcess():
   print("end MergeURLs()")
   return URLS
  
- #googleURLS=GMergeURLs(WorkingGoogleEOF['Final URL'],"Google")
+ googleURLS=GMergeURLs(WorkingGoogleEOF['Final URL'],"Google")
  bingURLS=BMergeURLs(WorkingBingEOF['Final Url'],"Bing")
 
  """
@@ -137,11 +137,15 @@ def initialCommUpdatProcess():
  
  def communityCheck(checkby,checkin1,checkin2):
   count=0;
-  Incol1=[];
-  Incol2=[];
-  while count < checkby.count():
-   print("")
-  
+  NewGoogle=[];
+  NewBing=[];
+  while count < 10; 
+  #while count < checkby.count():
+   NewGoogle.push(checkby[count]);
+   print(count,checkby[count]);
+   count+=1;
+   print(NewGoogle);
+ communityCheck(WorkingCommunities['Community Id'],WorkingGoogleEOF['Final URL'],WorkingBingEOF['Final Url']) 
   
   
   """
