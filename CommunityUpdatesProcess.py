@@ -103,7 +103,7 @@ def initialCommUpdatProcess():
    if count % 1 == 0:
     print(chan2," _ ",count)
    count+=1
-  print("end GMergeURLs()")
+  print("end GMergeURLs() for ",chan2)
   return URLS
  
  def BMergeURLs(chan,chan2):
