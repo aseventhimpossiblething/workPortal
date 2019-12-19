@@ -136,7 +136,7 @@ def initialCommUpdatProcess():
  """
 
  
- print(WorkingCommunities)
+ print(WorkingCommunities['COmmunity Id'][0])
  """
  def communityCheck(checkby,checkin1,checkin2):
   print("checkby")
