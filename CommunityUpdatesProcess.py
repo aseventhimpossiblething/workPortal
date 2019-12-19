@@ -146,6 +146,9 @@ def initialCommUpdatProcess():
  #print(googleURLS.find("667530"))
  
  print(WorkingBingEOF['Final Url'])
+ print(WorkingBingEOF['Final Url'][0])
+ print(WorkingBingEOF['Final Url'][1])
+ print(WorkingBingEOF['Final Url'][2])
  
  
  
