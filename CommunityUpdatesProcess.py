@@ -153,7 +153,12 @@ def initialCommUpdatProcess():
     NewBing.append(checkby[count]);
    print(count,checkby[count]);
    count+=1;
- communityCheck(WorkingCommunities['Community Id'],WorkingGoogleEOF['Final URL'],WorkingBingEOF['Final Url']) 
+   print("NewGoogle")
+   print(NewGoogle)
+   print("______________________")
+   print("NewBing")
+   print(NewBing)
+ communityCheck(WorkingCommunities['Community Id'], googleURLS, bingURLS) 
  
 
  TheSampleText=WorkingBingEOF
