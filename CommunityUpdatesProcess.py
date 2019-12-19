@@ -141,7 +141,7 @@ def initialCommUpdatProcess():
   NewBing=[];
   while count < 10: 
   #while count < checkby.count():
-   NewGoogle.push(checkby[count]);
+   NewGoogle.append(checkby[count]);
    print(count,checkby[count]);
    count+=1;
    print(NewGoogle);
