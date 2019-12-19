@@ -147,9 +147,9 @@ def initialCommUpdatProcess():
   NewGoogle=[];
   NewBing=[];
   while count < checkby.count():
-   if checkin1.find(checkby[count])<0:
+   if str(checkin1).find(checkby[count])<0:
     NewGoogle.append(checkby[count]);
-   if checkin2.find(checkby[count])<0:  
+   if str(checkin2).find(checkby[count])<0:  
     NewBing.append(checkby[count]);
    print(count,checkby[count]);
    count+=1;
