@@ -90,7 +90,7 @@ def initialCommUpdatProcess():
  
 
  def GMergeURLs(chan,chan2):
-  print("MergeURLs() start for ",chan2)
+  print("GMergeURLs() start for ",chan2)
   URLS="A";
   #bingURLS=0;
   count=0;
@@ -100,11 +100,11 @@ def initialCommUpdatProcess():
    if count % 1000 == 0:
     print("Goog _",count)
    count+=1
-  print("end MergeURLs()")
+  print("end GMergeURLs()")
   return URLS
  
  def BMergeURLs(chan,chan2):
-  print("GMergeURLs() start for ",chan2)
+  print("BMergeURLs() start for ",chan2)
   URLS="A";
   #bingURLS=0;
   count=1;
