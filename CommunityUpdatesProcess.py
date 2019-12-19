@@ -81,104 +81,65 @@ def initialCommUpdatProcess():
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
  if IsCommValid!="Valid":
   return IsCommValid
+ WorkingGoogleEOF=WorkingGoogle()    
+ WorkingBingEOF=WorkingBing()
+ 
+ WorkingCommunities['Community Id']
+ WorkingGoogleEOF['Final URL']  
+ WorkingBingEOF['Final Url']
+ 
 
-
-WorkingGoogleEOF=WorkingGoogle()    
-WorkingBingEOF=WorkingBing()
- 
- 
- 
- 
- 
- 
- 
- 
- 
- """
- def extractCommunityID(col):
-  print("running extractor.........")
-  foundElements=[];
+ def GMergeURLs(chan,chan2):
+  print("MergeURLs() start for ",chan2)
+  URLS="A";
+  #bingURLS=0;
   count=0;
-  while count < int(10000):
- #while count < int(col.count()):
-   found=re.search("\d{4,6}",col[count]).group()
-   foundElements.append(found)
+  #while count < 100000:
+  while count < chan.count():
+   URLS=URLS+chan[count]
+   if count % 1000 == 0:
+    print("Goog _",count)
    count+=1
-   print(count)
-   #if count % 1000 == 0:
-    #print(count)   
-  print(foundElements)
- extractCommunityID(WorkingGoogleEOF['Final URL'])
- """ 
+   print("end MergeURLs()")
+  return URLS
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
-WorkingCommunities['Community Id']
-WorkingGoogleEOF['Final URL']  
-WorkingBingEOF['Final Url']
- 
-
-def GMergeURLs(chan,chan2):
- print("MergeURLs() start for ",chan2)
- URLS="A";
- #bingURLS=0;
- count=0;
- #while count < 100000:
- while count < chan.count():
-  URLS=URLS+chan[count]
-  if count % 1000 == 0:
-   print("Goog _",count)
-  count+=1
+ def BMergeURLs(chan,chan2):
+  print("MergeURLs() start for ",chan2)
+  URLS="A";
+  #bingURLS=0;
+  count=1;
+  #while count < 100000:
+  while count < chan.count():
+   URLS=URLS+chan[count]
+   if count % 1000 == 0:
+    print("bing _",count)
+   count+=1
   print("end MergeURLs()")
- return URLS
+  return URLS
  
-def BMergeURLs(chan,chan2):
- print("MergeURLs() start for ",chan2)
- URLS="A";
- #bingURLS=0;
- count=1;
- #while count < 100000:
- while count < chan.count():
-  URLS=URLS+chan[count]
-  if count % 1000 == 0:
-   print("bing _",count)
-  count+=1
- print("end MergeURLs()")
- return URLS
- 
-#googleURLS=GMergeURLs(WorkingGoogleEOF['Final URL'],"Google")
-bingURLS=BMergeURLs(WorkingBingEOF['Final Url'],"Bing")
+ #googleURLS=GMergeURLs(WorkingGoogleEOF['Final URL'],"Google")
+ bingURLS=BMergeURLs(WorkingBingEOF['Final Url'],"Bing")
 
-"""
-#print(googleURLS.find("69862"))
-#print(googleURLS.find("63594")) 
-#print(googleURLS.find("73142")) 
-#print(googleURLS.find("667530"))
+ """
+ #print(googleURLS.find("69862"))
+ #print(googleURLS.find("63594")) 
+ #print(googleURLS.find("73142")) 
+ #print(googleURLS.find("667530"))
  
-print(WorkingBingEOF['Final Url'])
-print(WorkingBingEOF['Final Url'][1])
-print(WorkingBingEOF['Final Url'][2])
-print(WorkingBingEOF['Final Url'][3])
-"""
- 
- 
- 
+ print(WorkingBingEOF['Final Url'])
+ print(WorkingBingEOF['Final Url'][1])
+ print(WorkingBingEOF['Final Url'][2])
+ print(WorkingBingEOF['Final Url'][3])
+ """
+
  
  
  
- 
-def communityCheck(checkby,checkin1,checkin2):
- count=0;
- Incol1=[];
- Incol2=[];
- while count < checkby.count():
+ def communityCheck(checkby,checkin1,checkin2):
+  count=0;
+  Incol1=[];
+  Incol2=[];
+  while count < checkby.count():
   print("")
   
   
@@ -203,12 +164,9 @@ def communityCheck(checkby,checkin1,checkin2):
    #print(checkin1)
    #print(count)
    #count+=1
- #communityCheck(WorkingCommunities['Community Id'],WorkingGoogleEOF['Final URL'],WorkingBingEOF['Final Url'])  
+  #communityCheck(WorkingCommunities['Community Id'],WorkingGoogleEOF['Final URL'],WorkingBingEOF['Final Url'])  
    
-   
-
- 
- 
+  
  
  
  
