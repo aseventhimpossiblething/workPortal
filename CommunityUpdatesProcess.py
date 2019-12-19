@@ -148,7 +148,7 @@ def initialCommUpdatProcess():
  communityCheck(WorkingCommunities['Community Id'],WorkingGoogleEOF['Final URL'],WorkingBingEOF['Final Url']) 
   
   
-  """
+ """
   #print(type(checkin1)) 
   #checkin1=checkin1.to_numpy()
   print(type(checkin1tolist()))
@@ -162,14 +162,8 @@ def initialCommUpdatProcess():
   #print(checkin1[0])
   #print()
   #print(type(numpy.ravel(checkin1)))
-  """
-  #while count < checkby.count():
-  #while count < 10:
-   #print(checkin1)
-   #print(count)
-   #count+=1
-  #communityCheck(WorkingCommunities['Community Id'],WorkingGoogleEOF['Final URL'],WorkingBingEOF['Final Url'])  
-   
+ """
+ 
   
  
  
