@@ -125,7 +125,7 @@ def initialCommUpdatProcess():
  WorkingBingEOF['Final Url']
  
  
- def MergeURLs(chan,chan2):
+ def GMergeURLs(chan,chan2):
   print("MergeURLs() start for ",chan2)
   URLS="A";
   #bingURLS=0;
@@ -138,8 +138,23 @@ def initialCommUpdatProcess():
    count+=1
   print("end MergeURLs()")
   return URLS
-#googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google")
-#bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing")
+ 
+ def BMergeURLs(chan,chan2):
+  print("MergeURLs() start for ",chan2)
+  URLS="A";
+  #bingURLS=0;
+  count=1;
+  #while count < 100000:
+  while count < chan.count():
+   URLS=URLS+chan[count]
+   if count % 1000 == 0:
+    print(count)
+   count+=1
+  print("end MergeURLs()")
+  return URLS
+ 
+#googleURLS=GMergeURLs(WorkingGoogleEOF['Final URL'],"Google")
+bingURLS=BMergeURLs(WorkingBingEOF['Final Url'],"Bing")
  #print(googleURLS.find("69862"))
  #print(googleURLS.find("63594")) 
  #print(googleURLS.find("73142")) 
