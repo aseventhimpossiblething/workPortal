@@ -140,7 +140,7 @@ def initialCommUpdatProcess():
  def communityCheck(checkby,checkin1,checkin2):
   print("Community Check")
   checkby=checkby['Community Id']
-  checkby2=str(checkby)
+  checkby2=checkby
   count=5;
   
   print("checkby.count()")
