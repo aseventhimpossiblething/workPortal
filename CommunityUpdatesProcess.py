@@ -161,20 +161,14 @@ def initialCommUpdatProcess():
   print("checkby[224]",checkby[226])
   print("str(checkin1).find(checkby2[226])",checkin1.find(str(checkby[226])))
   
-  #if str(checkin1).find(checkby2[224])<0:
-    #NewGoogle.append(checkby[224]);
-  #if str(checkin1).find(checkby2[225])<0:
-    #NewGoogle.append(checkby[225]);
-  #if str(checkin1).find(str(checkby[226]))<0:
-    #NewGoogle.append(checkby[226]);  
   
   
   
   NewGoogle=[];
   NewBing=[];
   
-  while count < 224:
-  #while count < checkby.count():
+  #while count < 224:
+  while count < checkby.count():
    if checkin1.find(str(checkby[count]))<0:
     NewGoogle.append(checkby[count]);
     print(count,checkby[count]);
