@@ -143,7 +143,8 @@ def initialCommUpdatProcess():
  
  def communityCheck(checkby,checkin1,checkin2):
   print("Community Check")
-  checkby2=str(checkby['Community Id'])
+  checkby=checkby['Community Id']
+  checkby2=str(checkby)
   print("checkby2")
   print(checkby2)
   count=5;
@@ -155,6 +156,7 @@ def initialCommUpdatProcess():
    print("begin ifs")
    if str(checkin1).find(checkby2[count])<0:
     print("first if has run pushing first append")
+    print("")
     NewGoogle.append(checkby[count]);
     print("first append pushed begining second if")
    if str(checkin2).find(checkby2[count])<0:
