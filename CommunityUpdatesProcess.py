@@ -150,8 +150,8 @@ def initialCommUpdatProcess():
   
   print("checkby.count()")
   print(checkby.count())
-  print("checkby2")
-  print(checkby2)
+  #print("checkby2")
+  #print(checkby2)
   print("checkby[222]",checkby[222])
   print("checkby[223]",checkby[223])
   print("checkby[224]",checkby[224])
