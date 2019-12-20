@@ -143,17 +143,18 @@ def initialCommUpdatProcess():
  
  def communityCheck(checkby,checkin1,checkin2):
   print("Community Check")
-  checkby2=checkby['Community Id']
+  checkby2=str(checkby['Community Id'])
   print("checkby2")
   print(checkby2)
   count=5;
   NewGoogle=[];
   NewBing=[];
   while count < 100:
+   #if str(checkin2)find("1")
   #while count < checkby.count():
-   if str(checkin1).find(str(checkby2[count]))<0:
+   if str(checkin1).find(checkby2[count])<0:
     NewGoogle.append(checkby[count]);
-   if str(checkin2).find(str(checkby2[count])<0:  
+   if str(checkin2).find(checkby2[count])<0:  
     NewBing.append(checkby[count]);
    print(count,checkby[count]);
    count+=1;
