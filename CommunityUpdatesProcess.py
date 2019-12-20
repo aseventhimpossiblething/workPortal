@@ -97,7 +97,7 @@ def initialCommUpdatProcess():
   #while count < 100000:
   if chan2=="Bing":
    count=1;
-  while count < 10: 
+  while count < 1000: 
   #while count < chan.count():
    URLS=URLS+chan[count]
    if count % 1 == 0:
@@ -136,16 +136,11 @@ def initialCommUpdatProcess():
  """
  
  
- a="H"
- print(a.find("l"))
  
- a="H"
- print(a.find("1"))
  
  def communityCheck(checkby,checkin1,checkin2):
   print("Community Check")
   checkby=checkby['Community Id']
-  #checkby2=str(checkby)
   count=5;
   
   print("checkby.count()")
@@ -177,11 +172,11 @@ def initialCommUpdatProcess():
     print(count,checkby[count]);
    print("count",count) 
    count+=1;
-  print("NewGoogle")
-  print(NewGoogle)
-  print("______________________")
-  print("NewBing")
-  print(NewBing)
+  #print("NewGoogle")
+  #print(NewGoogle)
+  #print("______________________")
+  #print("NewBing")
+  #print(NewBing)
   
  communityCheck(WorkingCommunities,googleURLS,bingURLS) 
  
