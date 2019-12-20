@@ -136,8 +136,11 @@ def initialCommUpdatProcess():
  """
  
  
- #a="H"
- #print(a.find("l"))
+ a="H"
+ print(a.find("l"))
+ 
+ a="H"
+ print(a.find(1))
  
  def communityCheck(checkby,checkin1,checkin2):
   print("Community Check")
@@ -149,12 +152,14 @@ def initialCommUpdatProcess():
   print(checkby.count())
   print("checkby2")
   print(checkby2)
+  print("checkby[222]",checkby[222])
+  print("checkby[223]",checkby[223])
   print("checkby[224]",checkby[224])
-  print("str(checkin1).find(checkby2[224])",checkin1.find(checkby2[224]))
+  print("str(checkin1).find(checkby2[224])",checkin1.find(str(checkby[224])))
   print("checkby[225]",checkby[225])
-  print("str(checkin1).find(checkby2[225])",checkin1.find(checkby2[225]))
+  print("str(checkin1).find(checkby2[225])",checkin1.find(str(checkby[225])))
   print("checkby[224]",checkby[226])
-  print("str(checkin1).find(checkby2[226])",checkin1.find(checkby2[226]))
+  print("str(checkin1).find(checkby2[226])",checkin1.find(str(checkby[226])))
   
   #if str(checkin1).find(checkby2[224])<0:
     #NewGoogle.append(checkby[224]);
