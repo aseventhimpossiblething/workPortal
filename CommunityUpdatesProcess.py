@@ -146,8 +146,12 @@ def initialCommUpdatProcess():
   print("checkby2")
   print(checkby2)
   print("checkby[222]",checkby[222])
+  print("str(checkin1).find(checkby2[222])",checkby[222])
   print("checkby[223]",checkby[223])
+  print("str(checkin1).find(checkby2[223])",checkby[223])
   print("checkby[224]",checkby[224])
+  print("str(checkin1).find(checkby2[224])",checkby[224])
+  
   
   count=5;
   NewGoogle=[];
