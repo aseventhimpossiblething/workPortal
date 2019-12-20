@@ -136,11 +136,13 @@ def initialCommUpdatProcess():
  """
  
  
+ a="H"
+ print(a.find())
  
  def communityCheck(checkby,checkin1,checkin2):
   print("Community Check")
   checkby=checkby['Community Id']
-  checkby2=checkby
+  checkby2=str(checkby)
   count=5;
   
   print("checkby.count()")
@@ -148,11 +150,11 @@ def initialCommUpdatProcess():
   print("checkby2")
   print(checkby2)
   print("checkby[224]",checkby[224])
-  print("str(checkin1).find(checkby2[224])",str(checkin1).find(checkby2[224]))
+  print("str(checkin1).find(checkby2[224])",heckin1.find(checkby2[224]))
   print("checkby[225]",checkby[225])
-  print("str(checkin1).find(checkby2[225])",str(checkin1).find(checkby2[225]))
+  print("str(checkin1).find(checkby2[225])",checkin1.find(checkby2[225]))
   print("checkby[224]",checkby[226])
-  print("str(checkin1).find(checkby2[226])",str(checkin1).find(checkby2[226]))
+  print("str(checkin1).find(checkby2[226])",checkin1.find(checkby2[226]))
   
   #if str(checkin1).find(checkby2[224])<0:
     #NewGoogle.append(checkby[224]);
@@ -165,7 +167,7 @@ def initialCommUpdatProcess():
   
   NewGoogle=[];
   NewBing=[];
-  """
+  
   while count < 224:
   #while count < checkby.count():
    if str(checkin1).find(checkby2[count])<0:
@@ -181,8 +183,8 @@ def initialCommUpdatProcess():
   print("______________________")
   print("NewBing")
   print(NewBing)
-  """
- communityCheck(WorkingCommunities,googleURLS,bingURLS) 
+  
+ #communityCheck(WorkingCommunities,googleURLS,bingURLS) 
  
 
  TheSampleText=WorkingBingEOF
