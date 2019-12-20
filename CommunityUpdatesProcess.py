@@ -138,49 +138,21 @@ def initialCommUpdatProcess():
  
  
  
- def communityCheck(checkby,checkin1,checkin2):
+ def communityCheck(checkby,checkin):
   print("Community Check")
   checkby=checkby['Community Id']
   count=5;
-  
-  print("checkby.count()")
-  print(checkby.count())
-  #print("checkby2")
-  #print(checkby2)
-  print("checkby[222]",checkby[222])
-  print("checkby[223]",checkby[223])
-  print("checkby[224]",checkby[224])
-  print("str(checkin1).find(checkby2[224])",checkin1.find(str(checkby[224])))
-  print("checkby[225]",checkby[225])
-  print("str(checkin1).find(checkby2[225])",checkin1.find(str(checkby[225])))
-  print("checkby[224]",checkby[226])
-  print("str(checkin1).find(checkby2[226])",checkin1.find(str(checkby[226])))
-  
-  
-  
-  
-  NewGoogle=[];
-  NewBing=[];
-  
-  #while count < 224:
+  NewFrame=[];
+  #NewBing=[];
   while count < checkby.count():
-   if checkin1.find(str(checkby[count]))<0:
-    NewGoogle.append(checkby[count]);
+   if checkin.find(str(checkby[count]))<0:
+    NewFrame.append(checkby[count]);
     print(count,checkby[count]);
-   if checkin2.find(str(checkby[count]))<0:
-    NewBing.append(checkby[count]);
-    print(count,checkby[count]);
-   print("count",count) 
    count+=1;
-  #print("NewGoogle")
-  #print(NewGoogle)
-  #print("______________________")
-  #print("NewBing")
-  #print(NewBing)
-  
- communityCheck(WorkingCommunities,googleURLS,bingURLS) 
+  return NewFrame
+ NewGoogle=communityCheck(WorkingCommunities,googleURLS)
+ NewBing=communityCheck(WorkingCommunities,bingURLS)
  
-
  TheSampleText=WorkingBingEOF
  TheSamplefile=open('TheSampleText.txt','w+') 
  TheSamplefile.write(TheSampleText.to_string())
