@@ -145,26 +145,21 @@ def initialCommUpdatProcess():
   print("Community Check")
   checkby=checkby['Community Id']
   checkby2=str(checkby)
+  print("checkby.count()")
+  print(checkby.count())
   print("checkby2")
   print(checkby2)
   count=5;
   NewGoogle=[];
   NewBing=[];
-  while count < 100:
-   #if str(checkin2)find("1")
-  #while count < checkby.count():
-   print("begin ifs")
+  while count < checkby.count():
    if str(checkin1).find(checkby2[count])<0:
-    print("first if has run pushing first append")
-    print("")
     NewGoogle.append(checkby[count]);
-    print("first append pushed begining second if")
+    print(count,checkby[count]);
    if str(checkin2).find(checkby2[count])<0:
-    print("second if has run begining second append")
     NewBing.append(checkby[count]);
-    print("second append had run")
    print(count,checkby[count]);
-   count+=1;
+  count+=1;
   print("NewGoogle")
   print(NewGoogle)
   print("______________________")
