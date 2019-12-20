@@ -154,8 +154,8 @@ def initialCommUpdatProcess():
   print("checkby[224]",checkby[226])
   print("str(checkin1).find(checkby2[226])",checkby[226])
   
-  if str(checkin1).find(checkby2[224])<0:
-    NewGoogle.append(checkby[224]);
+  #if str(checkin1).find(checkby2[224])<0:
+    #NewGoogle.append(checkby[224]);
   if str(checkin1).find(checkby2[225])<0:
     NewGoogle.append(checkby[225]);
   if str(checkin1).find(checkby2[226])<0:
