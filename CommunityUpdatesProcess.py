@@ -134,11 +134,7 @@ def initialCommUpdatProcess():
  print(WorkingBingEOF['Final Url'][2])
  print(WorkingBingEOF['Final Url'][3])
  """
- # print("WorkingCommunities['Community Id']")
- # print(WorkingCommunities['Community Id'][5])
- #print(WorkingCommunities['Community Id'][6])
- #print(WorkingCommunities['Community Id'][7])
- #print(WorkingCommunities['Community Id'][8])
+ 
  
  
  def communityCheck(checkby,checkin1,checkin2):
@@ -149,6 +145,10 @@ def initialCommUpdatProcess():
   print(checkby.count())
   print("checkby2")
   print(checkby2)
+  print("checkby[222]",checkby[222])
+  print("checkby[223]",checkby[223])
+  print("checkby[224]",checkby[224])
+  
   count=5;
   NewGoogle=[];
   NewBing=[];
