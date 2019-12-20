@@ -159,7 +159,7 @@ def initialCommUpdatProcess():
    if str(checkin2).find(checkby2[count])<0:
     NewBing.append(checkby[count]);
    print(count,checkby[count]);
-  count+=1;
+   count+=1;
   print("NewGoogle")
   print(NewGoogle)
   print("______________________")
