@@ -148,11 +148,11 @@ def initialCommUpdatProcess():
   print("checkby2")
   print(checkby2)
   print("checkby[224]",checkby[224])
-  print("str(checkin1).find(checkby2[224])",checkby[224])
+  print("str(checkin1).find(checkby2[224])",str(checkin1).find(checkby2[224]))
   print("checkby[225]",checkby[225])
-  print("str(checkin1).find(checkby2[225])",checkby[225])
+  print("str(checkin1).find(checkby2[225])",str(checkin1).find(checkby2[225]))
   print("checkby[224]",checkby[226])
-  print("str(checkin1).find(checkby2[226])",checkby[226])
+  print("str(checkin1).find(checkby2[226])",str(checkin1).find(checkby2[226]))
   
   #if str(checkin1).find(checkby2[224])<0:
     #NewGoogle.append(checkby[224]);
