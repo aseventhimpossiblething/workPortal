@@ -152,10 +152,15 @@ def initialCommUpdatProcess():
   while count < 100:
    #if str(checkin2)find("1")
   #while count < checkby.count():
+   print("begin ifs")
    if str(checkin1).find(checkby2[count])<0:
+    print("first if has run pushing first append")
     NewGoogle.append(checkby[count]);
-   if str(checkin2).find(checkby2[count])<0:  
+    print("first append pushed begining second if")
+   if str(checkin2).find(checkby2[count])<0:
+    print("second if has run begining second append")
     NewBing.append(checkby[count]);
+    print("second append had run")
    print(count,checkby[count]);
    count+=1;
   print("NewGoogle")
