@@ -137,6 +137,13 @@ def initialCommUpdatProcess():
  
  
  
+ def filterNonParticipators(FrameToBeFiltrered):
+  count=5
+  while count < FrameToBeFiltered.count():
+   if FrameToBfiltered[count].find()
+   
+ 
+ 
  
  def communityCheck(checkby,checkin):
   print("Community Check")
