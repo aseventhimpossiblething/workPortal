@@ -136,8 +136,8 @@ def initialCommUpdatProcess():
  """
  
  
- a="H"
- print(a.find("l"))
+ #a="H"
+ #print(a.find("l"))
  
  def communityCheck(checkby,checkin1,checkin2):
   print("Community Check")
@@ -170,10 +170,10 @@ def initialCommUpdatProcess():
   
   while count < 224:
   #while count < checkby.count():
-   if str(checkin1).find(checkby2[count])<0:
+   if checkin1.find(checkby2[count])<0:
     NewGoogle.append(checkby[count]);
     print(count,checkby[count]);
-   if str(checkin2).find(checkby2[count])<0:
+   if checkin2.find(checkby2[count])<0:
     NewBing.append(checkby[count]);
     print(count,checkby[count]);
    print("count",count) 
@@ -184,7 +184,7 @@ def initialCommUpdatProcess():
   print("NewBing")
   print(NewBing)
   
- #communityCheck(WorkingCommunities,googleURLS,bingURLS) 
+ communityCheck(WorkingCommunities,googleURLS,bingURLS) 
  
 
  TheSampleText=WorkingBingEOF
