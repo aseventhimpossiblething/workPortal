@@ -147,12 +147,12 @@ def initialCommUpdatProcess():
   print(checkby.count())
   print("checkby2")
   print(checkby2)
-  print("checkby[222]",checkby[222])
-  print("str(checkin1).find(checkby2[222])",checkby[222])
-  print("checkby[223]",checkby[223])
-  print("str(checkin1).find(checkby2[223])",checkby[223])
   print("checkby[224]",checkby[224])
   print("str(checkin1).find(checkby2[224])",checkby[224])
+  print("checkby[223]",checkby[225])
+  print("str(checkin1).find(checkby2[225])",checkby[225])
+  print("checkby[224]",checkby[226])
+  print("str(checkin1).find(checkby2[226])",checkby[226])
   
   
   
