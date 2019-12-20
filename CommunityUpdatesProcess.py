@@ -137,7 +137,7 @@ def initialCommUpdatProcess():
  
  
  a="H"
- print(a.find())
+ print(a.find("l"))
  
  def communityCheck(checkby,checkin1,checkin2):
   print("Community Check")
