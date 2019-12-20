@@ -160,7 +160,7 @@ def initialCommUpdatProcess():
   print("______________________")
   print("NewBing")
   print(NewBing)
- communityCheck(WorkingCommunities['Community Id'], googleURLS, bingURLS) 
+ communityCheck(WorkingCommunities,googleURLS,bingURLS) 
  
 
  TheSampleText=WorkingBingEOF
