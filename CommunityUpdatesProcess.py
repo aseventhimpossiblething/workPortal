@@ -140,10 +140,22 @@ def initialCommUpdatProcess():
  def filterNonParticipators(FrameToBeFiltrered):
   ResultOfAcolFilter=[];
   ResultOfBcolFilter=[];
-  ResultOfCcolFilter=[];
+  ResultOfQcolFilter=[];
+  FilterString=;
   count=5
   while count < FrameToBeFiltered.count():
-   if FrameToBfiltered[][count].find()
+   if FilterString.find(FrameToBfiltered['Builder Name'][count])<0:
+    ResultOfAcolFilter.append(FrameToBfiltered[count])
+    print(FrameToBfiltered[count])
+   if FilterString.find(ResultOfAcolFilter['Brand Name'][count])<0:
+    ResultOfBcolFilter.append(ResultOfAcolFilter[count])
+    print(ResultOfAcolFilter[count])
+   if FilterString.find(ResultOfBcolFilter['Community Id'][count])<0:
+    ResultOfQcolFilter.append(ResultOfBcolFilter[count])
+    print(ResultOfAcolFilter[count])  
+     
+  
+    
    
  
  
