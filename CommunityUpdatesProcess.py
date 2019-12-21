@@ -161,7 +161,7 @@ def initialCommUpdatProcess():
     ResultOfQcolFilter.append(ResultOfBcolFilter[count])
     print("Filter out: ",ResultOfAcolFilter[count]) 
   print("End Filter")  
- ResultOfAcolFilter(WorkingCommunities)   
+ filterNonParticipators(WorkingCommunities)   
      
   
     
