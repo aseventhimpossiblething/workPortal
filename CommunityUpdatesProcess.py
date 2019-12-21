@@ -138,6 +138,7 @@ def initialCommUpdatProcess():
  
  
  def filterNonParticipators(FrameToBeFiltrered):
+  print("Start Filter")
   ResultOfAcolFilter=[];
   ResultOfBcolFilter=[];
   ResultOfQcolFilter=[];
@@ -146,13 +147,15 @@ def initialCommUpdatProcess():
   while count < FrameToBeFiltered.count():
    if FilterString.find(FrameToBfiltered['Builder Name'][count])<0:
     ResultOfAcolFilter.append(FrameToBfiltered[count])
-    print(FrameToBfiltered[count])
+    print("Filter out: ",FrameToBfiltered[count])
    if FilterString.find(ResultOfAcolFilter['Brand Name'][count])<0:
     ResultOfBcolFilter.append(ResultOfAcolFilter[count])
-    print(ResultOfAcolFilter[count])
+    print("Filter out: "ResultOfAcolFilter[count])
    if FilterString.find(ResultOfBcolFilter['Community Id'][count])<0:
     ResultOfQcolFilter.append(ResultOfBcolFilter[count])
-    print(ResultOfAcolFilter[count])  
+    print("Filter out: "ResultOfAcolFilter[count]) 
+  print("End Filter")  
+ ResultOfAcolFilter(WorkingCommunities)   
      
   
     
@@ -160,20 +163,22 @@ def initialCommUpdatProcess():
  
  
  
- def communityCheck(checkby,checkin):
+ def communityCheck(checkby,checkin,Name):
   print("Community Check")
   checkby=checkby['Community Id']
   count=5;
   NewFrame=[];
   #NewBing=[];
-  while count < checkby2.count():
+  while count < 5:
+  #while count < checkby2.count():
    if checkin.find(str(checkby2[count]))<0:
     NewFrame.append(checkby.iloc[count]);
-    print(count,checkby.iloc[count]);
+    print(Name," Community Check: ",count,checkby.iloc[count]);
    count+=1;
+  print("End Community Check") 
   return NewFrame
- NewGoogle=communityCheck(WorkingCommunities,googleURLS)
- NewBing=communityCheck(WorkingCommunities,bingURLS)
+ NewGoogle=communityCheck(WorkingCommunities,googleURLS,Google)
+ NewBing=communityCheck(WorkingCommunities,bingURLS,Bing)
  
  TheSampleText=WorkingBingEOF
  TheSamplefile=open('TheSampleText.txt','w+') 
