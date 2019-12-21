@@ -144,11 +144,11 @@ def initialCommUpdatProcess():
   ResultOfAcolFilter=[];
   ResultOfBcolFilter=[];
   ResultOfQcolFilter=[];
-  FilterString=("communityname=",Q5),("Clayton Homes",B5),("Clayton Homes",A5),\
-  ("Oakwoord Homes",A5),("Oakwoord Homes",B5),("G & I Homes",A5),("G & I Homes",B5),\
-  ("Craftmark Homes",A5),("Craftmark Homes",B5),("Freedom Homes",A5),("Freedom Homes",B5),\
-  ("Crossland Homes",A5),("Crossland Homes",B5)),("Luv Homes",A5),("Luv Homes",B5),\
-  ("International Homes",A5),("International Homes",B5),("Clayton",A5);
+  FilterString='(communityname=,Q5),(Clayton Homes,B5),(Clayton Homes,A5),\
+  (Oakwoord Homes,A5),(Oakwoord Homes,B5),(G & I Homes,A5),(G & I Homes,B5),\
+  (Craftmark Homes,A5),(Craftmark Homes,B5),(Freedom Homes,A5),(Freedom Homes,B5),\
+  (Crossland Homes,A5),(Crossland Homes,B5)),(Luv Homes,A5),(Luv Homes,B5),\
+  (International Homes,A5),(International Homes,B5),(Clayton,A5);'
   count=5
   while count < FrameToBeFiltered.count():
    if FilterString.find(FrameToBfiltered['Builder Name'][count])<0:
