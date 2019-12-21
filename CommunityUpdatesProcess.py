@@ -151,10 +151,10 @@ def initialCommUpdatProcess():
   count=5;
   NewFrame=[];
   #NewBing=[];
-  while count < checkby.count():
-   if checkin.find(str(checkby[count]))<0:
-    NewFrame.append(checkby[count]);
-    print(count,checkby[count]);
+  while count < checkby2.count():
+   if checkin.find(str(checkby2[count]))<0:
+    NewFrame.append(checkby.iloc[count]);
+    print(count,checkby.iloc[count]);
    count+=1;
   return NewFrame
  NewGoogle=communityCheck(WorkingCommunities,googleURLS)
