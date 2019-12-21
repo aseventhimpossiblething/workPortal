@@ -143,7 +143,7 @@ def initialCommUpdatProcess():
   ResultOfCcolFilter=[];
   count=5
   while count < FrameToBeFiltered.count():
-   if FrameToBfiltered[count].find()
+   if FrameToBfiltered[][count].find()
    
  
  
