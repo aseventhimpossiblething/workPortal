@@ -159,7 +159,7 @@ def initialCommUpdatProcess():
     print("Filter out: ",ResultOfAcolFilter[count])
    if FilterString.find(ResultOfBcolFilter['Community Id'][count])<0:
     ResultOfQcolFilter.append(ResultOfBcolFilter[count])
-    print("Filter out: "ResultOfAcolFilter[count]) 
+    print("Filter out: ",ResultOfAcolFilter[count]) 
   print("End Filter")  
  ResultOfAcolFilter(WorkingCommunities)   
      
