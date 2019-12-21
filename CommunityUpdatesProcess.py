@@ -138,6 +138,9 @@ def initialCommUpdatProcess():
  
  
  def filterNonParticipators(FrameToBeFiltrered):
+  ResultOfAcolFilter=[];
+  ResultOfBcolFilter=[];
+  ResultOfCcolFilter=[];
   count=5
   while count < FrameToBeFiltered.count():
    if FrameToBfiltered[count].find()
