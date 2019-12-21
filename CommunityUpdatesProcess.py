@@ -156,7 +156,7 @@ def initialCommUpdatProcess():
     print("Filter out: ",FrameToBfiltered[count])
    if FilterString.find(ResultOfAcolFilter['Brand Name'][count])<0:
     ResultOfBcolFilter.append(ResultOfAcolFilter[count])
-    print("Filter out: "ResultOfAcolFilter[count])
+    print("Filter out: ",ResultOfAcolFilter[count])
    if FilterString.find(ResultOfBcolFilter['Community Id'][count])<0:
     ResultOfQcolFilter.append(ResultOfBcolFilter[count])
     print("Filter out: "ResultOfAcolFilter[count]) 
