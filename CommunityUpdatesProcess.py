@@ -175,7 +175,7 @@ def initialCommUpdatProcess():
      print("#10   if str(ResultOfAcolFilter).find(str(count))<0:")
      ResultOfAcolFilter.append([count])
      #print("Filter out: ",ResultOfAcolFilter[count]," Row",count)
-   if FilterString.find(ResultOfBcolFilter['Community Id'][count])<0:
+   if FilterString.find(FrameToBeFiltered['Community Id'][count])<0:
     print("#11 first if in Second if stack in first while loop running")
     if str(ResultOfAcolFilter).find(str(count))<0:
      print("#12 Second if in second if stack in first while loop running")
