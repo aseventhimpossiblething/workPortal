@@ -171,7 +171,7 @@ def initialCommUpdatProcess():
    print("second loop of filter ",count," of ",ResultOfAcolFilter.len())
    count+=1;
   print("End Filter") 
-  #return ResultOfAcolFilter
+  return FilteredFrame
  filterNonParticipators(WorkingCommunities)   
      
   
