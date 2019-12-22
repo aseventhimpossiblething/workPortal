@@ -164,7 +164,7 @@ def initialCommUpdatProcess():
      ResultOfAcolFilter.append([count])
      print("#6  Pushing append in first loop")
      print("#7  count ", count)
-     print("#8  ResultOfAcolFilter ",ResultOfAcolFilter)
+     #print("#8  ResultOfAcolFilter ",ResultOfAcolFilter)
      
      #print("Filter out: ",FrameToBeFiltered[count]," Row",count)
      #print("FilterString.find(ResultOfAcolFilter['Brand Name'][count])",ResultOfAcolFilter['Brand Name'][count]))
