@@ -157,9 +157,12 @@ def initialCommUpdatProcess():
   while count < FrameToBeFiltered['Builder Name'].count():
    print("first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
    if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:
-    print(" First of first loop running ",)
+    print(" First if of first loop running ",)
     if str(ResultOfAcolFilter).find(str(count))<0:
+     print("Second if of first loop running ")
+     print("prpared to puch to array")
      ResultOfAcolFilter.append([count])
+     print("Pushing append in first loop")
      print("Filter out: ",FrameToBeFiltered[count]," Row",count)
    if FilterString.find(ResultOfAcolFilter['Brand Name'][count])<0:
     if str(ResultOfAcolFilter).find(str(count))<0:
