@@ -153,36 +153,36 @@ def initialCommUpdatProcess():
   (International Homes,A5),(International Homes,B5),(Clayton,A5);'
   count=5;
   count2=0;
-  print("#1 Variables initiated Begin first while loop")
+  #print("#1 Variables initiated Begin first while loop")
   while count < FrameToBeFiltered['Builder Name'].count():
-   print("#2 first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
+   #print("#2 first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
    if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:
-    print("#3 First if of first loop running ",)
+    #print("#3 First if of first loop running ",)
     if str(ResultOfAcolFilter).find(str(count))<0:
-     print("#4 Second if of first loop running ")
-     print("#5 prpared to push to array")
+     #print("#4 Second if of first loop running ")
+     #print("#5 prpared to push to array")
      ResultOfAcolFilter.append([count])
-     print("#6  Pushing append in first loop")
-     print("#7  count ", count)
+     #print("#6  Pushing append in first loop")
+     #print("#7  count ", count)
      #print("#8  ResultOfAcolFilter ",ResultOfAcolFilter)
      
      #print("Filter out: ",FrameToBeFiltered[count]," Row",count)
      #print("FilterString.find(ResultOfAcolFilter['Brand Name'][count])",ResultOfAcolFilter['Brand Name'][count]))
      
    if FilterString.find(str(FrameToBeFiltered['Brand Name'][count]))<0:
-    print("#9  if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:")
+    #print("#9  if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:")
     if str(ResultOfAcolFilter).find(str(count))<0:
-     print("#10   if str(ResultOfAcolFilter).find(str(count))<0:")
+     #print("#10   if str(ResultOfAcolFilter).find(str(count))<0:")
      ResultOfAcolFilter.append([count])
      #print("Filter out: ",ResultOfAcolFilter[count]," Row",count)
    if FilterString.find(str(FrameToBeFiltered['Community Id'][count]))<0:
-    print("#11 first if in Second if stack in first while loop running")
+    #print("#11 first if in Second if stack in first while loop running")
     if str(ResultOfAcolFilter).find(str(count))<0:
      print("#12 Second if in second if stack in first while loop running")
      ResultOfAcolFilter.append([count])
      #print("Filter out: ",ResultOfAcolFilter[count]," Row",count) 
    count+=1;
-  while count2 < ResultOfAcolFilter.len():
+  while count2 < ResultOfAcolFilter.count():
    FilteredFrame=FilteredFrame.iloc(int(ResultOfAcolFilter[count2])).drop()
    ResultOfAcolFilter[count2] 
    print("#13 second loop of filter ",count," of ",ResultOfAcolFilter.len())
