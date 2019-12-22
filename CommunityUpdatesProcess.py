@@ -181,6 +181,7 @@ def initialCommUpdatProcess():
      print("#12 Second if in second if stack in first while loop running")
      ResultOfAcolFilter.append([count])
      #print("Filter out: ",ResultOfAcolFilter[count]," Row",count) 
+   count+=1;
   while count2 < ResultOfAcolFilter.len():
    FilteredFrame=FilteredFrame.iloc(int(ResultOfAcolFilter[count2])).drop()
    ResultOfAcolFilter[count2] 
