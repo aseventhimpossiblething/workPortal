@@ -137,7 +137,7 @@ def initialCommUpdatProcess():
  
  
  
- def filterNonParticipators(FrameToBeFiltrered):
+ def filterNonParticipators(FrameToBeFiltered):
   print("Start Filter ",FrameToBeFiltrered['Builder Name'].count()," rows")
   #print()
   FilteredFrame=FrameToBeFiltered
@@ -153,10 +153,10 @@ def initialCommUpdatProcess():
   count=5;
   count2=0;
   while count < FrameToBeFiltered['Builde Name'].count():
-   if FilterString.find(FrameToBfiltered['Builder Name'][count])<0:
+   if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:
     if str(ResultOfAcolFilter).find(str(count))<0:
      ResultOfAcolFilter.append([count])
-     print("Filter out: ",FrameToBfiltered[count]," Row",count)
+     print("Filter out: ",FrameToBeFiltered[count]," Row",count)
    if FilterString.find(ResultOfAcolFilter['Brand Name'][count])<0:
     if str(ResultOfAcolFilter).find(str(count))<0:
      ResultOfAcolFilter.append([count])
