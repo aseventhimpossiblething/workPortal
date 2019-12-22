@@ -149,7 +149,8 @@ def initialCommUpdatProcess():
   (Craftmark Homes,A5),(Craftmark Homes,B5),(Freedom Homes,A5),(Freedom Homes,B5),\
   (Crossland Homes,A5),(Crossland Homes,B5)),(Luv Homes,A5),(Luv Homes,B5),\
   (International Homes,A5),(International Homes,B5),(Clayton,A5);'
-  count=5
+  count=5;
+  count2=0;
   while count < FrameToBeFiltered['Builde Name'].count():
    if FilterString.find(FrameToBfiltered['Builder Name'][count])<0:
     if str(ResultOfAcolFilter).find(str(count))<0:
@@ -163,8 +164,14 @@ def initialCommUpdatProcess():
     if str(ResultOfAcolFilter).find(str(count))<0:
      ResultOfAcolFilter.append([count])
      print("Filter out: ",ResultOfAcolFilter[count]," Row",count) 
+  while count2 < ResultOfAcolFilter.len():
+   FrameToBeFiltered.iloc(count2).drop()
+   ResultOfAcolFilter[count2]
+   
+   FrameToBeFiltered.iloc().drop()
+  #while FrameToBeFiltrered   
   print("End Filter") 
-  return ResultOfAcolFilter
+  #return ResultOfAcolFilter
  filterNonParticipators(WorkingCommunities)   
      
   
