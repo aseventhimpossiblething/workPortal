@@ -157,7 +157,7 @@ def initialCommUpdatProcess():
   while count < FrameToBeFiltered['Builder Name'].count():
    #print("#2 first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
    if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:
-    #print("#3 First if of first loop running ",)
+    #print(count,"#3 First if of first loop running ",)
     if str(ResultOfAcolFilter).find(str(count))<0:
      #print("#4 Second if of first loop running ")
      #print("#5 prpared to push to array")
@@ -187,6 +187,7 @@ def initialCommUpdatProcess():
    ResultOfAcolFilter[count2] 
    print("#13 second loop of filter ",count," of ",ResultOfAcolFilter.len())
    count+=1;
+   
   print("End Filter") 
   return FilteredFrame
  filterNonParticipators(WorkingCommunities)   
@@ -209,6 +210,7 @@ def initialCommUpdatProcess():
     NewFrame.append(checkby.iloc[count]);
     print(Name," Community Check: ",count,checkby.iloc[count]);
    count+=1;
+  print(ResultOfAcolFilter) 
   print("End Community Check") 
   return NewFrame
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,Google)
