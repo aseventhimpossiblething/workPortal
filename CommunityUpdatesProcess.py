@@ -97,7 +97,8 @@ def initialCommUpdatProcess():
   #while count < 100000:
   if chan2=="Bing":
    count=1;
-  while count < 1000: 
+  while count < 1000:
+   print("Low count setting inGMergeURLS nonfunctional")
   #while count < chan.count():
    URLS=URLS+chan[count]
    if count % 1 == 0:
