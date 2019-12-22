@@ -166,7 +166,7 @@ def initialCommUpdatProcess():
      print("count ", count)
      print("ResultOfAcolFilter ",ResultOfAcolFilter)
      
-     print("Filter out: ",FrameToBeFiltered[count]," Row",count)
+     #print("Filter out: ",FrameToBeFiltered[count]," Row",count)
    if FilterString.find(ResultOfAcolFilter['Brand Name'][count])<0:
     if str(ResultOfAcolFilter).find(str(count))<0:
      ResultOfAcolFilter.append([count])
