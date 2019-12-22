@@ -155,6 +155,7 @@ def initialCommUpdatProcess():
   count2=0;
   
   print("FrameToBeFiltered['Brand Name']",FrameToBeFiltered['Brand Name'])
+  print("FrameToBeFiltered['Brand Name'][1]",FrameToBeFiltered['Brand Name'][1])
   #print("FilterString.find(str(FrameToBeFiltered['Brand Name']))",FilterString.find(str(FrameToBeFiltered['Brand Name'])))
   #FilterString.find(str(FrameToBeFiltered['Brand Name'][1]))
   #print("FrameToBeFiltered['Brand Name'][1]",FrameToBeFiltered['Brand Name'][1])
@@ -221,7 +222,7 @@ def initialCommUpdatProcess():
     NewFrame.append(checkby.iloc[count]);
     print(Name," Community Check: ",count,checkby.iloc[count]);
    count+=1;
-  print(ResultOfAcolFilter) 
+  #print(ResultOfAcolFilter) 
   print("End Community Check") 
   return NewFrame
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google")
