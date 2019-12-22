@@ -169,7 +169,7 @@ def initialCommUpdatProcess():
      #print("Filter out: ",FrameToBeFiltered[count]," Row",count)
      #print("FilterString.find(ResultOfAcolFilter['Brand Name'][count])",ResultOfAcolFilter['Brand Name'][count]))
      
-   if FilterString.find(FrameToBeFiltered['Brand Name'][count])<0:
+   if FilterString.find(str(FrameToBeFiltered['Brand Name'][count]))<0:
     print("#9  if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:")
     if str(ResultOfAcolFilter).find(str(count))<0:
      print("#10   if str(ResultOfAcolFilter).find(str(count))<0:")
