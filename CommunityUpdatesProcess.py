@@ -152,8 +152,11 @@ def initialCommUpdatProcess():
   (International Homes,A5),(International Homes,B5),(Clayton,A5);'
   count=5;
   count2=0;
+  print("Variables initiated Begin first while loop")
   while count < FrameToBeFiltered['Builder Name'].count():
+  print("first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
    if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:
+    print(" First of first loop running ",)
     if str(ResultOfAcolFilter).find(str(count))<0:
      ResultOfAcolFilter.append([count])
      print("Filter out: ",FrameToBeFiltered[count]," Row",count)
