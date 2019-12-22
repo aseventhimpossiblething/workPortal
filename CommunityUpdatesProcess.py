@@ -160,7 +160,7 @@ def initialCommUpdatProcess():
     print(" First if of first loop running ",)
     if str(ResultOfAcolFilter).find(str(count))<0:
      print("Second if of first loop running ")
-     print("prpared to puch to array")
+     print("prpared to push to array")
      ResultOfAcolFilter.append([count])
      print("Pushing append in first loop")
      print("count ", count)
