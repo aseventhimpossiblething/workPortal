@@ -138,7 +138,7 @@ def initialCommUpdatProcess():
  
  
  def filterNonParticipators(FrameToBeFiltered):
-  print("Start Filter ",FrameToBeFiltrered['Builder Name'].count()," rows")
+  print("Start Filter ",FrameToBeFiltered['Builder Name'].count()," rows")
   #print()
   FilteredFrame=FrameToBeFiltered
   ResultOfAcolFilter=[];
