@@ -154,7 +154,7 @@ def initialCommUpdatProcess():
   count2=0;
   print("Variables initiated Begin first while loop")
   while count < FrameToBeFiltered['Builder Name'].count():
-  print("first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
+   print("first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
    if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:
     print(" First of first loop running ",)
     if str(ResultOfAcolFilter).find(str(count))<0:
