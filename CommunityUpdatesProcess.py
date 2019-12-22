@@ -140,10 +140,11 @@ def initialCommUpdatProcess():
  def filterNonParticipators(FrameToBeFiltrered):
   print("Start Filter ",FrameToBeFiltrered['Builder Name'].count()," rows")
   #print()
-  
+  FilteredFrame=FrameToBeFiltered
   ResultOfAcolFilter=[];
   ResultOfBcolFilter=[];
   ResultOfQcolFilter=[];
+  
   FilterString='(communityname=,Q5),(Clayton Homes,B5),(Clayton Homes,A5),\
   (Oakwoord Homes,A5),(Oakwoord Homes,B5),(G & I Homes,A5),(G & I Homes,B5),\
   (Craftmark Homes,A5),(Craftmark Homes,B5),(Freedom Homes,A5),(Freedom Homes,B5),\
@@ -165,10 +166,10 @@ def initialCommUpdatProcess():
      ResultOfAcolFilter.append([count])
      print("Filter out: ",ResultOfAcolFilter[count]," Row",count) 
   while count2 < ResultOfAcolFilter.len():
-   FrameToBeFiltered.iloc(count2).drop()
+   FilteredFrame=FilteredFrame.iloc(ResultOfAcolFilter[count2]).drop()
    ResultOfAcolFilter[count2]
    
-   FrameToBeFiltered.iloc().drop()
+   FilteredFrame.iloc().drop()
   #while FrameToBeFiltrered   
   print("End Filter") 
   #return ResultOfAcolFilter
