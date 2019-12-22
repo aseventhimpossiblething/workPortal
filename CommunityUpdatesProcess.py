@@ -167,10 +167,7 @@ def initialCommUpdatProcess():
      print("Filter out: ",ResultOfAcolFilter[count]," Row",count) 
   while count2 < ResultOfAcolFilter.len():
    FilteredFrame=FilteredFrame.iloc(ResultOfAcolFilter[count2]).drop()
-   ResultOfAcolFilter[count2]
-   
-   FilteredFrame.iloc().drop()
-  #while FrameToBeFiltrered   
+   ResultOfAcolFilter[count2]     
   print("End Filter") 
   #return ResultOfAcolFilter
  filterNonParticipators(WorkingCommunities)   
