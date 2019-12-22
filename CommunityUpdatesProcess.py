@@ -152,7 +152,7 @@ def initialCommUpdatProcess():
   (International Homes,A5),(International Homes,B5),(Clayton,A5);'
   count=5;
   count2=0;
-  while count < FrameToBeFiltered['Builde Name'].count():
+  while count < FrameToBeFiltered['Builder Name'].count():
    if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:
     if str(ResultOfAcolFilter).find(str(count))<0:
      ResultOfAcolFilter.append([count])
