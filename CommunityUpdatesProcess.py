@@ -172,11 +172,13 @@ def initialCommUpdatProcess():
      ResultOfAcolFilter.append([count])
      print("Filter out: ",ResultOfAcolFilter[count]," Row",count)
    if FilterString.find(ResultOfBcolFilter['Community Id'][count])<0:
+    print("first if in Second if stack in first while loop running")
     if str(ResultOfAcolFilter).find(str(count))<0:
+     print("Second if in second if stack in first while loop running")
      ResultOfAcolFilter.append([count])
      print("Filter out: ",ResultOfAcolFilter[count]," Row",count) 
   while count2 < ResultOfAcolFilter.len():
-   FilteredFrame=FilteredFrame.iloc(ResultOfAcolFilter[count2]).drop()
+   FilteredFrame=FilteredFrame.iloc(int(ResultOfAcolFilter[count2])).drop()
    ResultOfAcolFilter[count2] 
    print("second loop of filter ",count," of ",ResultOfAcolFilter.len())
    count+=1;
