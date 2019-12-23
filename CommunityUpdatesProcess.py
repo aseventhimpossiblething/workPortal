@@ -156,7 +156,7 @@ def initialCommUpdatProcess():
   (International Homes,A5),(International Homes,B5),(Clayton,A5);'
   count=5;
   count2=0;
-  
+  """
   print("len(numpy.array(FrameToBeFiltered['Brand Name']))",len(numpy.array(FrameToBeFiltered['Brand Name'])))
   
   print("numpy.array(FrameToBeFiltered['Brand Name'])",numpy.array(FrameToBeFiltered['Brand Name']))
@@ -173,12 +173,12 @@ def initialCommUpdatProcess():
   #print("FrameToBeFiltered['Brand Name'][1]",FrameToBeFiltered['Brand Name'][1])
   #print("FilterString.find(str(FrameToBeFiltered['Brand Name'][1]))",FilterString.find(str(FrameToBeFiltered['Brand Name'][1])))
   #FilterString.find(str(FrameToBeFiltered['Brand Name'][1]))
-  
   """
+  
   #print("#1 Variables initiated Begin first while loop")
-  while count < FrameToBeFiltered['Builder Name'].count():
+  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
    #print("#2 first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
-   if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:
+   if FilterString.find(numpy.array(FrameToBeFiltered['Brand Name'])[[0]])<0:
     #print(count,"#3 First if of first loop running ",)
     if str(ResultOfAcolFilter).find(str(count))<0:
      #print("#4 Second if of first loop running ")
@@ -213,7 +213,7 @@ def initialCommUpdatProcess():
    
   print("End Filter") 
   return FilteredFrame
-  """
+ 
  filterNonParticipators(WorkingCommunities)   
      
   
