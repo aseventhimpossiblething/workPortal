@@ -23,8 +23,8 @@ IsBingValid=None;
 
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
  titlestring=str(sheet.iloc[1])
- print(sheet.iloc[[0]])
- print(sheet.iloc[[1]])
+ #print(sheet.iloc[[0]])
+ #print(sheet.iloc[[1]])
  #if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
   titlestring.find(checkword3)!=-1 and titlestring.find(checkword4)!=-1:
