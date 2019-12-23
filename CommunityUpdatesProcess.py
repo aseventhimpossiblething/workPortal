@@ -157,6 +157,8 @@ def initialCommUpdatProcess():
   count=5;
   count2=0;
   
+   print("len(numpy.array(FrameToBeFiltered['Brand Name'])"),len(numpy.array(FrameToBeFiltered['Brand Name'])))
+  
   print("numpy.array(FrameToBeFiltered['Brand Name'])",numpy.array(FrameToBeFiltered['Brand Name']))
   print("numpy.array(FrameToBeFiltered['Brand Name'])[1]",numpy.array(FrameToBeFiltered['Brand Name'])[1])
   print("FrameToBeFiltered",FrameToBeFiltered)
