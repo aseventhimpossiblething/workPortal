@@ -158,7 +158,7 @@ def initialCommUpdatProcess():
   
   print("numpy.array(FrameToBeFiltered['Brand Name'])[1]",numpy.array(FrameToBeFiltered['Brand Name'])[1])
   print("FrameToBeFiltered",FrameToBeFiltered)
-  print("FrameToBeFiltered.iloc(1)",FrameToBeFiltered.iloc(1))
+  print("FrameToBeFiltered.iloc[1]",FrameToBeFiltered.iloc[1])
   
   print("FrameToBeFiltered['Brand Name']",FrameToBeFiltered['Brand Name'])
   print("FrameToBeFiltered['Brand Name'][1]",FrameToBeFiltered['Brand Name'][1])
