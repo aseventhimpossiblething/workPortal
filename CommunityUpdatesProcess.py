@@ -178,7 +178,7 @@ def initialCommUpdatProcess():
   #print("#1 Variables initiated Begin first while loop")
   while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
    #print("#2 first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
-   if FilterString.find(numpy.array(FrameToBeFiltered['Brand Name'])[[0]])<0:
+   if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0:
     #print(count,"#3 First if of first loop running ",)
     if str(ResultOfAcolFilter).find(str(count))<0:
      #print("#4 Second if of first loop running ")
