@@ -103,7 +103,7 @@ def initialCommUpdatProcess():
    #print("Low count setting in GMergeURLS nonfunctional")
   #while count < chan.count():
    URLS=URLS+chan[count]
-   if count % 10 == 0:
+   if count % 20 == 0:
     print(chan2," _ ",count)
     print("Low count setting in GMergeURLS nonfunctional")
    count+=1
@@ -174,12 +174,12 @@ def initialCommUpdatProcess():
   #print("FilterString.find(str(FrameToBeFiltered['Brand Name'][1]))",FilterString.find(str(FrameToBeFiltered['Brand Name'][1])))
   #FilterString.find(str(FrameToBeFiltered['Brand Name'][1]))
   """
- """
+ 
   #print("#1 Variables initiated Begin first while loop")
   while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
    #print("#2 first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0:
-    #print(count,"#3 First if of first loop running ",)
+    #print(count,"#3 First if of first loop running ")
     if str(ResultOfAcolFilter).find(str(count))<0:
      #print("#4 Second if of first loop running ")
      #print("#5 prpared to push to array")
@@ -213,7 +213,7 @@ def initialCommUpdatProcess():
    
   print("End Filter") 
   return FilteredFrame
- """
+ 
  filterNonParticipators(WorkingCommunities)   
      
   
