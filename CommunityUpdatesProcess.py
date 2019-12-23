@@ -23,6 +23,8 @@ IsBingValid=None;
 
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
  titlestring=str(sheet.iloc[1])
+ print(sheet.iloc[[0]])
+ print(sheet.iloc[[1]])
  #if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
   titlestring.find(checkword3)!=-1 and titlestring.find(checkword4)!=-1:
@@ -155,12 +157,13 @@ def initialCommUpdatProcess():
   count2=0;
   
   print("numpy.array(FrameToBeFiltered['Brand Name'])",numpy.array(FrameToBeFiltered['Brand Name']))
-  
   print("numpy.array(FrameToBeFiltered['Brand Name'])[1]",numpy.array(FrameToBeFiltered['Brand Name'])[1])
   print("FrameToBeFiltered",FrameToBeFiltered)
   print("FrameToBeFiltered.iloc[1]",FrameToBeFiltered.iloc[1])
   
   print("FrameToBeFiltered['Brand Name']",FrameToBeFiltered['Brand Name'])
+  print("numpy.array(FrameToBeFiltered['Brand Name'])[[0]]",numpy.array(FrameToBeFiltered['Brand Name'])[[0]])
+  print("numpy.array(FrameToBeFiltered['Brand Name'])[[1]]",numpy.array(FrameToBeFiltered['Brand Name'])[[1]])
   print("FrameToBeFiltered['Brand Name'][1]",FrameToBeFiltered['Brand Name'][1])
   #print("FilterString.find(str(FrameToBeFiltered['Brand Name']))",FilterString.find(str(FrameToBeFiltered['Brand Name'])))
   #FilterString.find(str(FrameToBeFiltered['Brand Name'][1]))
