@@ -158,7 +158,7 @@ def initialCommUpdatProcess():
   count2=0;
   print("FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0",FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0)
   print("FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))",FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]])))
-  print("numpy.array(FrameToBeFiltered['Brand Name'])[[count]])",numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))
+  print("numpy.array(FrameToBeFiltered['Brand Name'])[[count]])",numpy.array(FrameToBeFiltered['Brand Name'])[[count]])
   """
   print("len(numpy.array(FrameToBeFiltered['Brand Name']))",len(numpy.array(FrameToBeFiltered['Brand Name'])))
   
