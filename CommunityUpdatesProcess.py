@@ -156,6 +156,9 @@ def initialCommUpdatProcess():
   (International Homes,A5),(International Homes,B5),(Clayton,A5);'
   count=5;
   count2=0;
+  print("FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0",FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0)
+  print("FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))",FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]])))
+  print("numpy.array(FrameToBeFiltered['Brand Name'])[[count]])",numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))
   """
   print("len(numpy.array(FrameToBeFiltered['Brand Name']))",len(numpy.array(FrameToBeFiltered['Brand Name'])))
   
@@ -174,7 +177,7 @@ def initialCommUpdatProcess():
   #print("FilterString.find(str(FrameToBeFiltered['Brand Name'][1]))",FilterString.find(str(FrameToBeFiltered['Brand Name'][1])))
   #FilterString.find(str(FrameToBeFiltered['Brand Name'][1]))
   """
- 
+""" 
   #print("#1 Variables initiated Begin first while loop")
   while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
    #print("#2 first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
@@ -212,6 +215,7 @@ def initialCommUpdatProcess():
    count+=1;
    
   print("End Filter") 
+"""  
   return FilteredFrame
  
  filterNonParticipators(WorkingCommunities)   
