@@ -185,7 +185,7 @@ def initialCommUpdatProcess():
    #print("#2 first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0:
     CatchDiscards.append(FrameToBeFiltered['Brand Name'][count])
-    print(ResultOfAcolFilter)
+    #print(ResultOfAcolFilter)
     
     print("Brand Name exclusion not found in row ",count)
     #print(count,"#3 First if of first loop running ")
