@@ -148,6 +148,7 @@ def initialCommUpdatProcess():
   ResultOfAcolFilter=[];
   ResultOfBcolFilter=[];
   ResultOfQcolFilter=[];
+  CatchDiscards=[];
   
   FilterString='(communityname=,Q5),(Clayton Homes,B5),(Clayton Homes,A5),\
   (Oakwoord Homes,A5),(Oakwoord Homes,B5),(G & I Homes,A5),(G & I Homes,B5),\
@@ -183,6 +184,8 @@ def initialCommUpdatProcess():
   #while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
    #print("#2 first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0:
+    CatchDiscards.append(FrameToBeFiltered['Brand Name'][count])
+    
     print("Brand Name exclusion not found in row ",count)
     #print(count,"#3 First if of first loop running ")
     if str(ResultOfAcolFilter).find(str(count))<0:
