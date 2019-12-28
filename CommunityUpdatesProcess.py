@@ -180,7 +180,7 @@ def initialCommUpdatProcess():
   """
 
   #print("#1 Variables initiated Begin first while loop")
-  while count < 10:
+  while count < 30:
   #while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
    #print("#2 first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0:
