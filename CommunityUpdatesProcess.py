@@ -217,9 +217,10 @@ def initialCommUpdatProcess():
   while count2 < 3: 
   #while count2 < len(ResultOfAcolFilter):
    print("ResultOfAcolFilter",ResultOfAcolFilter)
+   print("type(ResultOfAcolFilter[count2])",type(ResultOfAcolFilter[count2]))
    #print("ResultOfAcolFilter[count2]",ResultOfAcolFilter[count2])
    print("ResultOfAcolFilter[count2]",ResultOfAcolFilter[count2])
-   FilteredFrame=FilteredFrame.iloc(ResultOfAcolFilter[count2]).drop()
+   #FilteredFrame=FilteredFrame.iloc(ResultOfAcolFilter[count2]).drop()
    ResultOfAcolFilter[count2] 
    print("#13 second loop of filter amount of members len(ResultOfAcolFilter) ",len(ResultOfAcolFilter))
    count+=1;
