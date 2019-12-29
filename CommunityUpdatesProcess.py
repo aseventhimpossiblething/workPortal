@@ -232,10 +232,12 @@ def initialCommUpdatProcess():
    
    
    print("ResultOfAcolFilter[count2]",ResultOfAcolFilter[count2])
-   print("str(ResultOfAcolFilter[count2])[0:(len(str(ResultOfAcolFilter[count2])))-1]",str(ResultOfAcolFilter[count2])[1:(len(str(ResultOfAcolFilter[count2])))-1])
-   print("int(str(ResultOfAcolFilter[count2])[1:(len(str(ResultOfAcolFilter[count2])))-1])",int(str(ResultOfAcolFilter[count2])[1:(len(str(ResultOfAcolFilter[count2])))-1]))
+   
+   #print("str(ResultOfAcolFilter[count2])[0:(len(str(ResultOfAcolFilter[count2])))-1]",str(ResultOfAcolFilter[count2])[1:(len(str(ResultOfAcolFilter[count2])))-1])
+   #print("int(str(ResultOfAcolFilter[count2])[1:(len(str(ResultOfAcolFilter[count2])))-1])",int(str(ResultOfAcolFilter[count2])[1:(len(str(ResultOfAcolFilter[count2])))-1]))
    str(ResultOfAcolFilter[count2])
-   FilteredFrame=FilteredFrame.iloc(int(str(ResultOfAcolFilter[count2])[1:(len(str(ResultOfAcolFilter[count2])))-1])).drop()
+   FilteredFrame=FilteredFrame.iloc(6).drop()
+   #FilteredFrame=FilteredFrame.iloc(int(str(ResultOfAcolFilter[count2])[1:(len(str(ResultOfAcolFilter[count2])))-1])).drop()
    #FilteredFrame=FilteredFrame.iloc(ResultOfAcolFilter[count2]).drop()
    ResultOfAcolFilter[count2] 
    print("#13 second loop of filter amount of members len(ResultOfAcolFilter) ",len(ResultOfAcolFilter))
