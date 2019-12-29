@@ -180,7 +180,7 @@ def initialCommUpdatProcess():
 
   #print("#1 Variables initiated Begin first while loop")
   print("len(numpy.array(FrameToBeFiltered['Brand Name']))",len(numpy.array(FrameToBeFiltered['Brand Name'])))
-  while count < 3000:
+  while count < 10000:
   #while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
    #print("count  ",count)
   
