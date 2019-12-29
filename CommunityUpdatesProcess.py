@@ -146,9 +146,9 @@ def initialCommUpdatProcess():
   print("Start Filter ",FrameToBeFiltered['Builder Name'].count()," rows")
   #print()
   FilteredFrame=FrameToBeFiltered
-  ResultOfAcolFilter=[];
-  ResultOfBcolFilter=[];
-  ResultOfQcolFilter=[];
+  #ResultOfAcolFilter=[];
+  #ResultOfBcolFilter=[];
+  #ResultOfQcolFilter=[];
   CatchDiscards=[];
   
   FilterString='(communityname=,Q5),(Clayton Homes,B5),(Clayton Homes,A5),\
@@ -185,21 +185,21 @@ def initialCommUpdatProcess():
    #print("count  ",count)
   
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0:
-    ResultOfAcolFilter.append(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))
+    #ResultOfAcolFilter.append(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))
     #print(ResultOfAcolFilter)    
    elif FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))>-1:
     CatchDiscards.append(count)
     #print(CatchDiscards)
    
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))<0:
-    ResultOfBcolFilter.append(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))
+    #ResultOfBcolFilter.append(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))
     #print(ResultOfBcolFilter) 
    elif FilterString.find(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))>-1:
     CatchDiscards.append(count)
     #print(CatchDiscards)
    
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))<0:
-    ResultOfQcolFilter.append(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))
+    #ResultOfQcolFilter.append(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))
     #print(ResultOfQcolFilter) 
    elif FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))>-1:
     CatchDiscards.append(count)
@@ -223,6 +223,12 @@ def initialCommUpdatProcess():
    CatchDiscards.append(5)
    CatchDiscards.append(6)
    CatchDiscards.append(7)
+  print(CatchDiscards) 
+  count2=0
+  while count2<len(CatchDiscards):
+   FilteredFrame=FrameToBeFiltered.drop(count2)
+   
+   
   print("CatchDiscards ",CatchDiscards) 
   print("End Filter") 
   print("CatchDiscards",CatchDiscards)
