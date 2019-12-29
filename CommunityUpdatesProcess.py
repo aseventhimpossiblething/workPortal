@@ -189,24 +189,24 @@ def initialCommUpdatProcess():
   #while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0:
-    ResultOfAcolFilter.append()
+    ResultOfAcolFilter.append(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))
     print(ResultOfAcolFilter)    
    elif FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))>-1:
-    CatchDiscards.append()
+    CatchDiscards.append(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))
     print(CatchDiscards)
    
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))<0:
-    ResultOfBcolFilter.append()
+    ResultOfBcolFilter.append(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))
     print(ResultOfBcolFilter) 
    elif FilterString.find(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))>-1:
-    CatchDiscards.append()
+    CatchDiscards.append(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))
     print(CatchDiscards)
    
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))<0:
-    ResultOfQcolFilter.append()
+    ResultOfQcolFilter.append(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))
     print(ResultOfQcolFilter) 
    elif FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))>-1:
-    CatchDiscards.append()
+    CatchDiscards.append(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))
     print(CatchDiscards)
     
     
