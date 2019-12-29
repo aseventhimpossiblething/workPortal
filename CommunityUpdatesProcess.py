@@ -224,6 +224,8 @@ def initialCommUpdatProcess():
    #ListToInt=int(ListToInt)
    print("ListToInt",ListToInt)
    print("type(ListToInt)",type(ListToInt))
+   print("ListToInt[0]",ListToInt[0])
+   
    
    print("ResultOfAcolFilter[count2]",ResultOfAcolFilter[count2])
    #FilteredFrame=FilteredFrame.iloc(ResultOfAcolFilter[count2]).drop()
