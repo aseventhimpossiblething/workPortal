@@ -105,7 +105,7 @@ def initialCommUpdatProcess():
    URLS=URLS+chan[count]
    if count % 10000 == 0:
     print(chan2," _ ",count)
-    print("Low count setting in MergeURLS nonfunctional")
+    #print("Low count setting in MergeURLS nonfunctional")
    count+=1
   print("end MergeURLs() for ",chan2)
   return URLS
@@ -157,7 +157,7 @@ def initialCommUpdatProcess():
   (Crossland Homes,A5),(Crossland Homes,B5)),(Luv Homes,A5),(Luv Homes,B5),\
   (International Homes,A5),(International Homes,B5),(Clayton,A5);'
   count=5;
-  count2=0;
+  #count2=0;
   
   """
   print("len(numpy.array(FrameToBeFiltered['Brand Name']))",len(numpy.array(FrameToBeFiltered['Brand Name'])))
