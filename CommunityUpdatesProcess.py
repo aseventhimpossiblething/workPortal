@@ -189,23 +189,13 @@ def initialCommUpdatProcess():
   #while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
    #print("#2 first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0:
-    CatchDiscards.append(FrameToBeFiltered['Brand Name'][count])
-    #print(ResultOfAcolFilter)
-    
     print("Brand Name exclusion not found in row ",count)
-    #print(count,"#3 First if of first loop running ")
     if str(ResultOfAcolFilter).find(str(count))<0:
-     #print("#4 Second if of first loop running ")
-     #print("#5 prpared to push to array")
      print("While 1 if stack 1",count)
-     ResultOfAcolFilter.append([count])
-     #print("#6  Pushing append in first loop")
-     #print("#7  count ", count)
-     #print("#8  ResultOfAcolFilter ",ResultOfAcolFilter)
-     
-     #print("Filter out: ",FrameToBeFiltered[count]," Row",count)
-     #print("FilterString.find(ResultOfAcolFilter['Brand Name'][count])",ResultOfAcolFilter['Brand Name'][count]))
-     
+     ResultOfAcolFilter.append(count)
+   if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))>-1:
+    CatchDiscards.append(count)
+    
    if FilterString.find(str(FrameToBeFiltered['Brand Name'][count]))<0:
     #print("#9  if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:")
     if str(ResultOfAcolFilter).find(str(count))<0:
