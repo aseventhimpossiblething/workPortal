@@ -208,6 +208,8 @@ def initialCommUpdatProcess():
     #print(ResultOfQcolFilter) 
    elif FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))>-1:
     CatchDiscards.append(count)
+    
+   count+=1; 
     #print(CatchDiscards)
   print("ResultOfAcolFilter") 
   print(ResultOfAcolFilter.count()) 
