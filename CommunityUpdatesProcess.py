@@ -225,6 +225,8 @@ def initialCommUpdatProcess():
    print("ListToInt",ListToInt)
    print("type(ListToInt)",type(ListToInt))
    print("ListToInt[0]",ListToInt[0])
+   print("len(ListToInt)",len(ListToInt))
+   
    
    
    print("ResultOfAcolFilter[count2]",ResultOfAcolFilter[count2])
