@@ -91,8 +91,8 @@ def initialCommUpdatProcess():
  WorkingBingEOF['Final Url']
  
 
- def GMergeURLs(chan,chan2):
-  print("GMergeURLs() start for ",chan2)
+ def MergeURLs(chan,chan2):
+  print("MergeURLs() start for ",chan2)
   URLS="A";
   #bingURLS=0;
   count=0;
@@ -105,9 +105,9 @@ def initialCommUpdatProcess():
    URLS=URLS+chan[count]
    if count % 20 == 0:
     print(chan2," _ ",count)
-    print("Low count setting in GMergeURLS nonfunctional")
+    print("Low count setting in MergeURLS nonfunctional")
    count+=1
-  print("end GMergeURLs() for ",chan2)
+  print("end MergeURLs() for ",chan2)
   return URLS
  
  def BMergeURLs(chan,chan2):
@@ -124,8 +124,8 @@ def initialCommUpdatProcess():
   print("end BMergeURLs()")
   return URLS
  
- googleURLS=GMergeURLs(WorkingGoogleEOF['Final URL'],"Google")
- bingURLS=GMergeURLs(WorkingBingEOF['Final Url'],"Bing")
+ googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google")
+ bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing")
 
  """
  #print(googleURLS.find("69862"))
@@ -142,11 +142,11 @@ def initialCommUpdatProcess():
  
  
  def filterNonParticipators(FrameToBeFiltered):
-  print("FrameToBeFiltered")
-  print(FrameToBeFiltered)
-  print("")
-  print("FrameToBeFiltered.drop([6])")
-  print(FrameToBeFiltered.drop([6]))
+  #print("FrameToBeFiltered")
+  #print(FrameToBeFiltered)
+  #print("")
+  #print("FrameToBeFiltered.drop([6])")
+  #print(FrameToBeFiltered.drop([6]))
   print("Start Filter ",FrameToBeFiltered['Builder Name'].count()," rows")
   #print()
   FilteredFrame=FrameToBeFiltered
@@ -162,9 +162,9 @@ def initialCommUpdatProcess():
   (International Homes,A5),(International Homes,B5),(Clayton,A5);'
   count=5;
   count2=0;
-  print("FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0",FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0)
-  print("FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))",FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]])))
-  print("numpy.array(FrameToBeFiltered['Brand Name'])[[count]])",numpy.array(FrameToBeFiltered['Brand Name'])[[count]])
+  #print("FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0",FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0)
+  #print("FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))",FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]])))
+  #print("numpy.array(FrameToBeFiltered['Brand Name'])[[count]])",numpy.array(FrameToBeFiltered['Brand Name'])[[count]])
   """
   print("len(numpy.array(FrameToBeFiltered['Brand Name']))",len(numpy.array(FrameToBeFiltered['Brand Name'])))
   
@@ -187,6 +187,7 @@ def initialCommUpdatProcess():
   #print("#1 Variables initiated Begin first while loop")
   while count < 30:
   #while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
+   print("count  ",count)
   
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0:
     ResultOfAcolFilter.append(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))
