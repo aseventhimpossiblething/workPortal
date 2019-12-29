@@ -226,15 +226,15 @@ def initialCommUpdatProcess():
    print("type(ListToInt)",type(ListToInt))
    print("ListToInt[0]",ListToInt[0])
    print("len(ListToInt)",len(ListToInt))
-   print("ListToInt[1:(len(ListToInt))-1]",ListToInt[0:(len(ListToInt))-1])
+   print("ListToInt[1:(len(ListToInt))-1]",ListToInt[1:(len(ListToInt))-1])
    
    
    
    
    print("ResultOfAcolFilter[count2]",ResultOfAcolFilter[count2])
-   str(ResultOfAcolFilter[count2])[0:(len(str(ResultOfAcolFilter[count2])))-1]
+   print("str(ResultOfAcolFilter[count2])[0:(len(str(ResultOfAcolFilter[count2])))-1]",str(ResultOfAcolFilter[count2])[0:(len(str(ResultOfAcolFilter[count2])))-1])
    str(ResultOfAcolFilter[count2])
-   FilteredFrame=FilteredFrame.iloc().drop()
+   #FilteredFrame=FilteredFrame.iloc().drop()
    #FilteredFrame=FilteredFrame.iloc(ResultOfAcolFilter[count2]).drop()
    ResultOfAcolFilter[count2] 
    print("#13 second loop of filter amount of members len(ResultOfAcolFilter) ",len(ResultOfAcolFilter))
