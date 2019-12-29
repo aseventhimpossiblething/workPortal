@@ -180,8 +180,8 @@ def initialCommUpdatProcess():
 
   #print("#1 Variables initiated Begin first while loop")
   print("len(numpy.array(FrameToBeFiltered['Brand Name']))",len(numpy.array(FrameToBeFiltered['Brand Name'])))
-  while count < 10000:
-  #while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
+  #while count < 10000:
+  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
    #print("count  ",count)
   
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0:
@@ -218,7 +218,12 @@ def initialCommUpdatProcess():
   print("CatchDiscards") 
   print(CatchDiscards)
   print("len(CatchDiscards) ",len(CatchDiscards))
-  #if (CatchDiscards)  
+  if len(CatchDiscards)==0:
+   print("CatchDiscards is empty")
+   CatchDiscards.append(5)
+   CatchDiscards.append(6)
+   CatchDiscards.append(7)
+  print("CatchDiscards ",CatchDiscards) 
     
   """  
    #print("#2 first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
