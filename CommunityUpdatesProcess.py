@@ -217,10 +217,11 @@ def initialCommUpdatProcess():
   while count2 < 3: 
   #while count2 < len(ResultOfAcolFilter):
    print("ResultOfAcolFilter",ResultOfAcolFilter)
+   print("ResultOfAcolFilter[count2]",ResultOfAcolFilter[count2])
    
    print("type(ResultOfAcolFilter[count2])",type(ResultOfAcolFilter[count2]))
    ListToInt=str(ResultOfAcolFilter[count2])
-   ListToInt=int(ListToInt)
+   #ListToInt=int(ListToInt)
    print("ListToInt",ListToInt)
    print("type(ListToInt)",type(ListToInt))
    
