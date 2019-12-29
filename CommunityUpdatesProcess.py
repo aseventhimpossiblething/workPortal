@@ -184,36 +184,36 @@ def initialCommUpdatProcess():
   while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
    #print("count  ",count)
   
-   if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0:
+   #if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0:
     #ResultOfAcolFilter.append(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))
     #print(ResultOfAcolFilter)    
-   elif FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))>-1:
+   if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))>-1:
     CatchDiscards.append(count)
     #print(CatchDiscards)
    
-   if FilterString.find(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))<0:
+   #if FilterString.find(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))<0:
     #ResultOfBcolFilter.append(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))
     #print(ResultOfBcolFilter) 
-   elif FilterString.find(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))>-1:
+   if FilterString.find(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))>-1:
     CatchDiscards.append(count)
     #print(CatchDiscards)
    
-   if FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))<0:
+   #if FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))<0:
     #ResultOfQcolFilter.append(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))
     #print(ResultOfQcolFilter) 
-   elif FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))>-1:
+   if FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))>-1:
     CatchDiscards.append(count)
     
    count+=1; 
     #print(CatchDiscards)
-  print("ResultOfAcolFilter") 
-  print(len(ResultOfAcolFilter)) 
+  #print("ResultOfAcolFilter") 
+  #print(len(ResultOfAcolFilter)) 
   print("")
-  print("ResultOfBcolFilter") 
-  print(len(ResultOfBcolFilter))
-  print("")
-  print("ResultOfQcolFilter") 
-  print(len(ResultOfQcolFilter))
+  #print("ResultOfBcolFilter") 
+  #print(len(ResultOfBcolFilter))
+  #print("")
+  #print("ResultOfQcolFilter") 
+  #print(len(ResultOfQcolFilter))
   print("")
   print("CatchDiscards") 
   print(CatchDiscards)
