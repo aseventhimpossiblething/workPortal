@@ -109,7 +109,7 @@ def initialCommUpdatProcess():
    count+=1
   print("end MergeURLs() for ",chan2)
   return URLS
- 
+ """
  def BMergeURLs(chan,chan2):
   print("BMergeURLs() start for ",chan2)
   URLS="A";
@@ -123,7 +123,7 @@ def initialCommUpdatProcess():
    count+=1
   print("end BMergeURLs()")
   return URLS
- 
+ """
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google")
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing")
 
@@ -217,7 +217,8 @@ def initialCommUpdatProcess():
   print("")
   print("CatchDiscards") 
   print(CatchDiscards)
-    
+  print("len(CatchDiscards)",len(CatchDiscards))
+  #if (CatchDiscards)  
     
   """  
    #print("#2 first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
