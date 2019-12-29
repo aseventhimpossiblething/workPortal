@@ -226,6 +226,8 @@ def initialCommUpdatProcess():
    print("type(ListToInt)",type(ListToInt))
    print("ListToInt[0]",ListToInt[0])
    print("len(ListToInt)",len(ListToInt))
+   print("ListToInt[0:(len(ListToInt))-1]",ListToInt[0:(len(ListToInt))-1])
+   
    
    
    
