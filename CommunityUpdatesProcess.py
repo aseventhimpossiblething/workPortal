@@ -209,6 +209,7 @@ def initialCommUpdatProcess():
      ResultOfAcolFilter.append([count])
      #print("Filter out: ",ResultOfAcolFilter[count]," Row",count) 
    count+=1;
+  """ 
   while count2 < 3: 
   #while count2 < len(ResultOfAcolFilter):
    print("ResultOfAcolFilter",ResultOfAcolFilter)
@@ -238,9 +239,10 @@ def initialCommUpdatProcess():
    print("#13 second loop of filter amount of members len(ResultOfAcolFilter) ",len(ResultOfAcolFilter))
    count+=1;
    count2+=1;
-   
+  """ 
   print("End Filter") 
   
+  print("CatchDiscards",CatchDiscards)
   return FilteredFrame
  
  filterNonParticipators(WorkingCommunities)   
