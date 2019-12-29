@@ -217,7 +217,7 @@ def initialCommUpdatProcess():
   print("")
   print("CatchDiscards") 
   print(CatchDiscards)
-  print("len(CatchDiscards)",len(CatchDiscards))
+  print("len(CatchDiscards) ",len(CatchDiscards))
   #if (CatchDiscards)  
     
   """  
