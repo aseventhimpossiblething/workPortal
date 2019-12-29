@@ -219,7 +219,7 @@ def initialCommUpdatProcess():
    print("ResultOfAcolFilter",ResultOfAcolFilter)
    
    print("type(ResultOfAcolFilter[count2])",type(ResultOfAcolFilter[count2]))
-   ListToInt=str(ResultOfAcolFilter[count2])
+   ListToInt=int(str(ResultOfAcolFilter[count2]))
    print("ListToInt",ListToInt)
    print("type(ListToInt)",type(ListToInt))
    
