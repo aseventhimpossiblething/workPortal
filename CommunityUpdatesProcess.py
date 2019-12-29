@@ -208,17 +208,17 @@ def initialCommUpdatProcess():
    elif FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))>-1:
     CatchDiscards.append(count)
     #print(CatchDiscards)
-   print("ResultOfAcolFilter") 
-   print(ResultOfAcolFilter.count()) 
-   print("")
-   print("ResultOfBcolFilter") 
-   print(ResultOfBcolFilter.count())
-   print("")
-   print("ResultOfQcolFilter") 
-   print(ResultOfQcolFilter.count())
-   print("")
-   print("CatchDiscards") 
-   print(CatchDiscards)
+  print("ResultOfAcolFilter") 
+  print(ResultOfAcolFilter.count()) 
+  print("")
+  print("ResultOfBcolFilter") 
+  print(ResultOfBcolFilter.count())
+  print("")
+  print("ResultOfQcolFilter") 
+  print(ResultOfQcolFilter.count())
+  print("")
+  print("CatchDiscards") 
+  print(CatchDiscards)
     
     
   """  
