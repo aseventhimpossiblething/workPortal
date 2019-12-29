@@ -145,8 +145,8 @@ def initialCommUpdatProcess():
   print("FrameToBeFiltered")
   print(FrameToBeFiltered)
   print("")
-  print("FrameToBeFiltered[[6]]")
-  print(FrameToBeFiltered[[6]])
+  print("FrameToBeFiltered.drop([6])")
+  print(FrameToBeFiltered.drop([6]))
   print("Start Filter ",FrameToBeFiltered['Builder Name'].count()," rows")
   #print()
   FilteredFrame=FrameToBeFiltered
