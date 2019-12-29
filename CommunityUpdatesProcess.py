@@ -187,11 +187,36 @@ def initialCommUpdatProcess():
   #print("#1 Variables initiated Begin first while loop")
   while count < 30:
   #while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
+  
+   if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0:
+    ResultOfAcolFilter.append()
+    print(ResultOfAcolFilter)    
+   elif FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))>-1:
+    CatchDiscards.append()
+    print(CatchDiscards)
+   
+   if FilterString.find(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))<0:
+    ResultOfBcolFilter.append()
+    print(ResultOfBcolFilter) 
+   elif FilterString.find(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))>-1:
+    CatchDiscards.append()
+    print(CatchDiscards)
+   
+   if FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))<0:
+    ResultOfQcolFilter.append()
+    print(ResultOfQcolFilter) 
+   elif FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))>-1:
+    CatchDiscards.append()
+    print(CatchDiscards)
+    
+    
+    
+  """  
    #print("#2 first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0:
     print("Brand Name exclusion not found in row ",count)
     if str(ResultOfAcolFilter).find(str(count))<0:
-     print("While 1 if stack 1",count)
+     print("While 1 if stack 1 row ",count)
      ResultOfAcolFilter.append(count)
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))>-1:
     CatchDiscards.append(count)
@@ -209,6 +234,7 @@ def initialCommUpdatProcess():
      ResultOfAcolFilter.append([count])
      #print("Filter out: ",ResultOfAcolFilter[count]," Row",count) 
    count+=1;
+  """ 
   """ 
   while count2 < 3: 
   #while count2 < len(ResultOfAcolFilter):
