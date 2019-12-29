@@ -224,68 +224,10 @@ def initialCommUpdatProcess():
    CatchDiscards.append(6)
    CatchDiscards.append(7)
   print("CatchDiscards ",CatchDiscards) 
-    
-  """  
-   #print("#2 first while loop running if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:") 
-   if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0:
-    print("Brand Name exclusion not found in row ",count)
-    if str(ResultOfAcolFilter).find(str(count))<0:
-     print("While 1 if stack 1 row ",count)
-     ResultOfAcolFilter.append(count)
-   if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))>-1:
-    CatchDiscards.append(count)
-    
-   if FilterString.find(str(FrameToBeFiltered['Brand Name'][count]))<0:
-    #print("#9  if FilterString.find(FrameToBeFiltered['Builder Name'][count])<0:")
-    if str(ResultOfAcolFilter).find(str(count))<0:
-     #print("#10   if str(ResultOfAcolFilter).find(str(count))<0:")
-     ResultOfAcolFilter.append([count])
-     #print("Filter out: ",ResultOfAcolFilter[count]," Row",count)
-   if FilterString.find(str(FrameToBeFiltered['Community Id'][count]))<0:
-    #print("#11 first if in Second if stack in first while loop running")
-    if str(ResultOfAcolFilter).find(str(count))<0:
-     print("#12 Second if in second if stack in first while loop running")
-     ResultOfAcolFilter.append([count])
-     #print("Filter out: ",ResultOfAcolFilter[count]," Row",count) 
-   count+=1;
-  """ 
-  """ 
-  while count2 < 3: 
-  #while count2 < len(ResultOfAcolFilter):
-   print("ResultOfAcolFilter",ResultOfAcolFilter)
-   print("ResultOfAcolFilter[count2]",ResultOfAcolFilter[count2])
-   
-   print("type(ResultOfAcolFilter[count2])",type(ResultOfAcolFilter[count2]))
-   ListToInt=str(ResultOfAcolFilter[count2])
-   #ListToInt=int(ListToInt)
-   print("ListToInt",ListToInt)
-   print("type(ListToInt)",type(ListToInt))
-   print("ListToInt[0]",ListToInt[0])
-   print("len(ListToInt)",len(ListToInt))
-   print("ListToInt[1:(len(ListToInt))-1]",ListToInt[1:(len(ListToInt))-1])
-   
-   
-   
-   
-   print("ResultOfAcolFilter[count2]",ResultOfAcolFilter[count2])
-   
-   #print("str(ResultOfAcolFilter[count2])[0:(len(str(ResultOfAcolFilter[count2])))-1]",str(ResultOfAcolFilter[count2])[1:(len(str(ResultOfAcolFilter[count2])))-1])
-   #print("int(str(ResultOfAcolFilter[count2])[1:(len(str(ResultOfAcolFilter[count2])))-1])",int(str(ResultOfAcolFilter[count2])[1:(len(str(ResultOfAcolFilter[count2])))-1]))
-   str(ResultOfAcolFilter[count2])
-   #FilteredFrame=FilteredFrame.iloc[6].drop()
-   #FilteredFrame=FilteredFrame.iloc(int(str(ResultOfAcolFilter[count2])[1:(len(str(ResultOfAcolFilter[count2])))-1])).drop()
-   #FilteredFrame=FilteredFrame.iloc(ResultOfAcolFilter[count2]).drop()
-   ResultOfAcolFilter[count2] 
-   print("#13 second loop of filter amount of members len(ResultOfAcolFilter) ",len(ResultOfAcolFilter))
-   count+=1;
-   count2+=1;
-  """ 
   print("End Filter") 
-  
   print("CatchDiscards",CatchDiscards)
   return FilteredFrame
- 
- filterNonParticipators(WorkingCommunities)   
+filterNonParticipators(WorkingCommunities)   
      
   
     
