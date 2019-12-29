@@ -223,8 +223,9 @@ def initialCommUpdatProcess():
    CatchDiscards.append(5)
    CatchDiscards.append(6)
    CatchDiscards.append(7)
-  print(CatchDiscards) 
-  count2=0
+  print("CatchDiscards",CatchDiscards) 
+  count2=0;
+  print("CatchDiscards[0] ",CatchDiscards[0]) 
   while count2<len(CatchDiscards):
    FilteredFrame=FrameToBeFiltered.drop(count2)
    
