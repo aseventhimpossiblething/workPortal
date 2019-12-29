@@ -217,11 +217,12 @@ def initialCommUpdatProcess():
   while count2 < 3: 
   #while count2 < len(ResultOfAcolFilter):
    print("ResultOfAcolFilter",ResultOfAcolFilter)
-   #print("type(ResultOfAcolFilter[count2])",type(ResultOfAcolFilter[count2]))
-   #print("ResultOfAcolFilter[count2]",ResultOfAcolFilter[count2])
+   
    print("type(ResultOfAcolFilter[count2])",type(ResultOfAcolFilter[count2]))
-   print("int(ResultOfAcolFilter[count2])",int(ResultOfAcolFilter[count2]))
-   print("type(int(ResultOfAcolFilter[count2]))",type(int(ResultOfAcolFilter[count2])))
+   ListToInt=ResultOfAcolFilter[count2]
+   print("ListToInt",ListToInt)
+   print("type(ListToInt)",type(ListToInt))
+   
    print("ResultOfAcolFilter[count2]",ResultOfAcolFilter[count2])
    #FilteredFrame=FilteredFrame.iloc(ResultOfAcolFilter[count2]).drop()
    ResultOfAcolFilter[count2] 
