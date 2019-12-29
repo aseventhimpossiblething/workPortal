@@ -142,6 +142,8 @@ def initialCommUpdatProcess():
  
  
  def filterNonParticipators(FrameToBeFiltered):
+  print("FrameToBeFiltered")
+  print(FrameToBeFiltered)
   print("Start Filter ",FrameToBeFiltered['Builder Name'].count()," rows")
   #print()
   FilteredFrame=FrameToBeFiltered
@@ -236,7 +238,7 @@ def initialCommUpdatProcess():
    #print("str(ResultOfAcolFilter[count2])[0:(len(str(ResultOfAcolFilter[count2])))-1]",str(ResultOfAcolFilter[count2])[1:(len(str(ResultOfAcolFilter[count2])))-1])
    #print("int(str(ResultOfAcolFilter[count2])[1:(len(str(ResultOfAcolFilter[count2])))-1])",int(str(ResultOfAcolFilter[count2])[1:(len(str(ResultOfAcolFilter[count2])))-1]))
    str(ResultOfAcolFilter[count2])
-   FilteredFrame=FilteredFrame.iloc[6].drop()
+   #FilteredFrame=FilteredFrame.iloc[6].drop()
    #FilteredFrame=FilteredFrame.iloc(int(str(ResultOfAcolFilter[count2])[1:(len(str(ResultOfAcolFilter[count2])))-1])).drop()
    #FilteredFrame=FilteredFrame.iloc(ResultOfAcolFilter[count2]).drop()
    ResultOfAcolFilter[count2] 
