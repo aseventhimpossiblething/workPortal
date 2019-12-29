@@ -236,6 +236,12 @@ def initialCommUpdatProcess():
    #FilteredFrame=FilteredFrame.drop([count2])
    print("Fitlered Frame done")
    print("__________________________")
+   print("__________________________")
+   print("FilteredFrame.iloc[count2]")
+   print(FilteredFrame.iloc[count2])
+   #FilteredFrame=FilteredFrame.drop([count2])
+   print("Fitlered Frame done")
+   print("__________________________")
    count2+=1;
    
    
