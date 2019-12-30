@@ -144,8 +144,16 @@ def initialCommUpdatProcess():
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
  
  def KeywordGen(NewDataFrame,MatchType,SearchChan):
-  print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType)
+  print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
+  Campaign_Name=[];
+  Adgroup=[];
+  Keyword=[];
+  Match_Type=[];
+  Status=[];
+  Bid=[];
   CommName=NewDataFrame['Community Name'];
+  
+  
   
   
  
