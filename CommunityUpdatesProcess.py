@@ -151,8 +151,8 @@ def initialCommUpdatProcess():
   #checkby=checkby['Community Id']
   count=5;
   NewFrame=[];
-  #while count < 1000:
-  while count < NewCommIDs.count():
+  while count < 100:
+  #while count < NewCommIDs.count():
    if checkin.find(str(NewCommIDs[count]))<0:
     NewFrame.append(checkby.iloc[count]);
     print("checkby.iloc[[",count."]]");
