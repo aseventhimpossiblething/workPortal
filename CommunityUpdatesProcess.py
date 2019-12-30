@@ -145,7 +145,7 @@ def initialCommUpdatProcess():
  
  def KeywordGen(NewDataFrame,MatchType,SearchChan):
   print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType)
-  NewDataFrame=[];
+  CommName=NewDataFrame['Community Name'];
   
   
  
