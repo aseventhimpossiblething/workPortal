@@ -146,9 +146,6 @@ def initialCommUpdatProcess():
    CatchDiscards.append(5)
    CatchDiscards.append(6)
    CatchDiscards.append(7)
-   
-   print("CatchDiscards",CatchDiscards) 
-   
    count2=0;
    print("CatchDiscards[0] ",CatchDiscards[0]) 
    while count2<len(CatchDiscards):
@@ -158,24 +155,9 @@ def initialCommUpdatProcess():
   print(FilteredFrame)                                 
   print("Fitlered Frame done")
   print("__________________________")
-    
-   
-  """ 
-  print("CatchDiscards",CatchDiscards) 
-  count2=0;
-  print("CatchDiscards[0] ",CatchDiscards[0]) 
-  while count2<len(CatchDiscards):
-   print("Entered the second while loop count2= ",count2)
-   FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
-   print(FilteredFrame)                                 
-   print("Fitlered Frame done")
-   print("__________________________")
-   count2+=1;
-  """ 
-   
-  print("CatchDiscards ",CatchDiscards) 
+  #print("CatchDiscards ",CatchDiscards) 
   print("End Filter") 
-  print("CatchDiscards",CatchDiscards)
+  #print("CatchDiscards",CatchDiscards)
   return FilteredFrame
  filterNonParticipators(WorkingCommunities)   
      
