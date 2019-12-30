@@ -171,10 +171,6 @@ def initialCommUpdatProcess():
   while count2<len(CatchDiscards):
    print("Entered the second while loop count2= ",count2)
    print("__________________________")
-   #print("FilteredFrame.iloc[[count2]]")
-   #print(FilteredFrame.iloc[[count2]])
-   #print("FilteredFrame=FilteredFrame.drop([count2]")
-   #print(FilteredFrame=FilteredFrame.drop([count2]))
    print("__________________________")
    print("FilteredFrame.drop(CatchDiscards[count2])")
    print(FilteredFrame.drop(CatchDiscards[count2]))
@@ -182,11 +178,6 @@ def initialCommUpdatProcess():
    #print(FilteredFrame.drop(CatchDiscards[count2])))
    print("Fitlered Frame done")
    print("__________________________")
-   #print("FilteredFrame.drop([count2])")
-   #FilteredFrame=FilteredFrame.drop([count2])
-   #print("Fitlered Frame done")
-   #print("__________________________")
-   
    count2+=1;
    
    
