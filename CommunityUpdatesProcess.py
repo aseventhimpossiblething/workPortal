@@ -74,6 +74,43 @@ def WorkingBing():
   print("Bing basic import done")
   return WorkingBing
 
+def filterNonParticipators(FrameToBeFiltered):
+  print("Start Filter ",FrameToBeFiltered['Builder Name'].count()," rows")
+  FilteredFrame=FrameToBeFiltered
+  CatchDiscards=[];
+  FilterString='(communityname=,Q5),(Clayton Homes,B5),(Clayton Homes,A5),\
+  (Oakwoord Homes,A5),(Oakwoord Homes,B5),(G & I Homes,A5),(G & I Homes,B5),\
+  (Craftmark Homes,A5),(Craftmark Homes,B5),(Freedom Homes,A5),(Freedom Homes,B5),\
+  (Crossland Homes,A5),(Crossland Homes,B5)),(Luv Homes,A5),(Luv Homes,B5),\
+  (International Homes,A5),(International Homes,B5),(Clayton,A5);'
+  count=5;
+  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
+   if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))>-1:
+    CatchDiscards.append(count)
+   if FilterString.find(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))>-1:
+    CatchDiscards.append(count)
+   if FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))>-1:
+    CatchDiscards.append(count)
+   count+=1; 
+  if len(CatchDiscards)==0:
+   print("CatchDiscards is empty")
+   CatchDiscards.append(5)
+   CatchDiscards.append(6)
+   CatchDiscards.append(7)
+   count2=0;
+   print("CatchDiscards[0] ",CatchDiscards[0]) 
+   while count2<len(CatchDiscards):
+    print("Entered the second while loop count2= ",count2)
+    FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
+    count2+=1;
+  print(FilteredFrame)                                 
+  print("Fitlered Frame done")
+  print("__________________________")
+  #print("CatchDiscards ",CatchDiscards) 
+  print("End Filter") 
+  #print("CatchDiscards",CatchDiscards)
+  return FilteredFrame 
+
     
 def initialCommUpdatProcess():
  os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
@@ -122,7 +159,7 @@ def initialCommUpdatProcess():
  """
  
  
- 
+""" 
  def filterNonParticipators(FrameToBeFiltered):
   print("Start Filter ",FrameToBeFiltered['Builder Name'].count()," rows")
   FilteredFrame=FrameToBeFiltered
@@ -159,6 +196,7 @@ def initialCommUpdatProcess():
   print("End Filter") 
   #print("CatchDiscards",CatchDiscards)
   return FilteredFrame
+"""  
  filterNonParticipators(WorkingCommunities)   
      
   
