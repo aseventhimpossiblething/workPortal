@@ -165,14 +165,16 @@ def initialCommUpdatProcess():
     print(checkby['Community Id'][count])
     print("checkby.iloc[[count",count,"]]")
     print(checkby.iloc[[count]])
-    print("DROP OCCURS---------")
+    #print("DROP OCCURS---------")
     DropRows.append(count);
     checkby=checkby.drop([count])
+    """
     #checkby=checkby.reset_index()
     print("checkby['Community Id'][count",count,"]")
     print(checkby['Community Id'][count])
     print("checkby.iloc[[count",count,"]]")
     print(checkby.iloc[[count]])
+    """
    count+=1;
   print("DropRows",DropRows) 
   print("End Community Check for ",Name) 
