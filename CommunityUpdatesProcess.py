@@ -160,7 +160,7 @@ def initialCommUpdatProcess():
   #while count < 1000:
   while count < NewCommIDs.count():
    if checkin.find(str(checkby['Community Id'][count]))>-1:
-    if count % 100==0:
+    if count % 10000==0:
      print("count ",count)
     """
     print("Pre Drop")
@@ -171,7 +171,7 @@ def initialCommUpdatProcess():
     #print("DROP OCCURS---------")
     """
     DropRows.append(count);
-    checkby=checkby.drop([count])
+    checkby=checkby.drop([count]);
     """
     #checkby=checkby.reset_index()
     print("checkby['Community Id'][count",count,"]")
