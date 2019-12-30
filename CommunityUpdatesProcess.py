@@ -92,11 +92,12 @@ def filterNonParticipators(FrameToBeFiltered):
   if FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))>-1:
    CatchDiscards.append(count)
   count+=1; 
-  if len(CatchDiscards)==0:
-   print("CatchDiscards is empty")
-   CatchDiscards.append(5)
-   CatchDiscards.append(6)
-   CatchDiscards.append(7)
+  if len(CatchDiscards)!=0:
+   #print("CatchDiscards is empty")
+   #CatchDiscards.append(5)
+   #CatchDiscards.append(6)
+   #CatchDiscards.append(7)
+   #else :
    count2=0;
    print("CatchDiscards[0] ",CatchDiscards[0]) 
    while count2<len(CatchDiscards):
@@ -149,9 +150,9 @@ def initialCommUpdatProcess():
  """
  
  
- googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google")
- bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing")
- filterNonParticipators(WorkingCommunities);   
+ googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
+ bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
+ WorkingCommunities=filterNonParticipators(WorkingCommunities);   
      
   
     
