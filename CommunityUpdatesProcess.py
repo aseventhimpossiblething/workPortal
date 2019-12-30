@@ -124,6 +124,7 @@ def communityCheck(checkby,checkin,Name):
    checkby=checkby.drop([count]);
   count+=1;
  checkby=checkby.reset_index()
+ print("End Community Check for ",Name)
  return checkby
  
  
