@@ -18,6 +18,7 @@ IsBingValid=None;
 
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
  titlestring=str(sheet.iloc[1])
+ titlestring=str(sheet.iloc[0])
  print("titlestring")
  print(titlestring)
  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
