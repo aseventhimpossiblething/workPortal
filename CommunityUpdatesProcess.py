@@ -172,10 +172,10 @@ def initialCommUpdatProcess():
    print("Entered the second while loop count2= ",count2)
    print("__________________________")
    print("__________________________")
-   print("FilteredFrame.drop(CatchDiscards[count2])")
-   print(FilteredFrame.drop(CatchDiscards[count2]))
-   #print("FilteredFrame.drop(CatchDiscards[count2]))")
-   #print(FilteredFrame.drop(CatchDiscards[count2])))
+   #print("FilteredFrame.drop(CatchDiscards[count2])")
+   #print(FilteredFrame.drop(CatchDiscards[count2]))
+   FilteredFrame=FilteredFrame.drop(CatchDiscards[count2]
+   print(FilteredFrame)                                 
    print("Fitlered Frame done")
    print("__________________________")
    count2+=1;
