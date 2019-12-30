@@ -169,7 +169,7 @@ def initialCommUpdatProcess():
     #NewFrame.append(checkby.iloc[[count]]);
     #print("checkby.iloc[[",count."]]");
     #print(checkby.iloc[[count]]);
-    #print("_______________________");
+    print("_______________________");
     #print("checkby.iloc[[",count,"]]");
     #print(checkby.iloc[[count]]);
     #print(Name," Community Check: ",count,checkby.iloc[[count]]);
