@@ -157,8 +157,8 @@ def initialCommUpdatProcess():
   checkby=checkby.reset_index()
   count=0;
   DropRows=[];
-  while count < 1000:
-  #while count < NewCommIDs.count():
+  #while count < 1000:
+  while count < NewCommIDs.count():
    if checkin.find(str(checkby['Community Id'][count]))>-1:
     if count % 100==0:
      print("count ",count)
@@ -180,7 +180,7 @@ def initialCommUpdatProcess():
     print(checkby.iloc[[count]])
     """
    count+=1;
-  print("DropRows",DropRows) 
+  #print("DropRows",DropRows) 
   print("len(DropRows)",len(DropRows)) 
   print("End Community Check for ",Name) 
   return checkby
