@@ -158,6 +158,7 @@ def initialCommUpdatProcess():
    #CommName=NewDataFrame['Community Name'];
    if MatchType!=SX.casefold();
     NewDataFrame['Market ID']
+    print("count ",count)
    
   
   
