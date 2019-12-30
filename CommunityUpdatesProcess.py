@@ -112,7 +112,22 @@ def MergeURLs(chan,chan2):
  print("end MergeURLs() for ",chan2)
  return URLS
     
-def initialCommUpdatProcess():
+
+def communityCheck(checkby,checkin,Name):
+ print("Start Community Check for ",Name)
+ checkby=checkby.reset_index()
+ count=0;
+ DropRows=[];
+ while count < checkby['Community Id'].count():
+  if checkin.find(str(checkby['Community Id'][count]))>-1:
+   DropRows.append(count);
+   checkby=checkby.drop([count]);
+  count+=1;
+ checkby=checkby.reset_index()
+ return checkby
+ 
+ 
+ def initialCommUpdatProcess():
  os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
@@ -145,7 +160,7 @@ def initialCommUpdatProcess():
  #print(WorkingCommunities)
 
  
- 
+ """
  def communityCheck(checkby,checkin,Name):
   print("Start Community Check for ",Name)
   checkby=checkby.reset_index()
@@ -159,6 +174,7 @@ def initialCommUpdatProcess():
    count+=1;
   checkby=checkby.reset_index()
   return checkby
+ """ 
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google")
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing")
  
