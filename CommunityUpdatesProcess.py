@@ -159,10 +159,6 @@ def initialCommUpdatProcess():
     DropRows.append(count);
     checkby=checkby.drop([count]);
    count+=1;
-  print("len(checkby)",len(checkby)) 
-  print("len(DropRows) ",len(DropRows)) 
-  #print("DropRows.count() ",DropRows.count()) 
-  print("End Community Check for ",Name)
   checkby=checkby.reset_index()
   print("checkby.iloc[[15]]",checkby.iloc[[15]])
   return checkby
