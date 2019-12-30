@@ -144,24 +144,24 @@ def initialCommUpdatProcess():
  print(WorkingCommunities)
 
  
- """
+ 
  def communityCheck(checkby,checkin,Name):
-  print("Community Check")
-  checkby=checkby['Community Id']
+  print("Start Community Check")
+  NewCommIDs=checkby['Community Id']
+  #checkby=checkby['Community Id']
   count=5;
   NewFrame=[];
   #while count < 5:
-  while count < checkby.count():
-   if checkin.find(str(checkby[count]))<0:
+  while count < NewCommIDs.count():
+   if checkin.find(str(NewCommIDs[count]))<0:
     NewFrame.append(checkby.iloc[count]);
     print(Name," Community Check: ",count,checkby.iloc[count]);
    count+=1;
-  #print(ResultOfAcolFilter) 
   print("End Community Check") 
   return NewFrame
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google")
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing")
- """
+ 
  
  TheSampleText=WorkingBingEOF
  TheSamplefile=open('TheSampleText.txt','w+') 
