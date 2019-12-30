@@ -148,10 +148,10 @@ def initialCommUpdatProcess():
  
  def communityCheck(checkby,checkin,Name):
   print("Start Community Check")
-  print("checkby",checkby)
+  print("checkby pre new DataFrame",checkby)
   checkby=pandas.DataFrame(checkby,columns=['Builder Name','Brand Name','Division Id','Division Name','Community Id',\
                                             'Community Name','City','State','Zip','Market ID','Market Name']);
-  print("checkby",checkby)
+  print("checkby Post New DataFrame",checkby)
   NewCommIDs=checkby['Community Id']
   #checkby=checkby['Community Id']
   count=5;
