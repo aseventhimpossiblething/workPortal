@@ -197,7 +197,7 @@ def initialCommUpdatProcess():
   #print("CatchDiscards",CatchDiscards)
   return FilteredFrame
 """  
- filterNonParticipators(WorkingCommunities)   
+filterNonParticipators(WorkingCommunities)   
      
   
     
