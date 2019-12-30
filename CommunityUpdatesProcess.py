@@ -153,31 +153,23 @@ def initialCommUpdatProcess():
   checkby=pandas.DataFrame(checkby,columns=['Builder Name','Brand Name','Division Id','Division Name','Community Id',\
                                             'Community Name','City','State','Zip','Market ID','Market Name']);
   """                                          
-  #print("checkby Post New DataFrame",checkby)
-  #print("checkby reset_index()",checkby.reset_index())
-  #print("checkby reset_index()[0]",checkby.reset_index().iloc[[0]])
+  
   checkby=checkby.reset_index()
   NewCommIDs=checkby['Community Id']
   count=0;
-  NewFrame=[];
+  #NewFrame=[];
   DropRows=[];
   while count < 10:
   #while count < NewCommIDs.count():
    if checkin.find(str(NewCommIDs[count]))>-1:
     DropRows.append(count);
     print(checkby[[count]]);
-    #NewFrame.append(checkby.iloc[[count]]);
-    #print("checkby.iloc[[",count."]]");
-    #print(checkby.iloc[[count]]);
     print("_______________________");
-    #print("checkby.iloc[[",count,"]]");
-    #print(checkby.iloc[[count]]);
-    #print(Name," Community Check: ",count,checkby.iloc[[count]]);
-    #print(Name," Community Check: ",count,checkby.iloc[count]);
    count+=1;
-  print(NewFrame) 
+  print("DropRows",DropRows) 
+  #print("NewFrame",NewFrame) 
   print("End Community Check") 
-  return NewFrame
+  #return NewFrame
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google")
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing")
  
