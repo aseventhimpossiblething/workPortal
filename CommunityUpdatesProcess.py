@@ -152,6 +152,7 @@ def initialCommUpdatProcess():
   checkby=pandas.DataFrame(checkby,columns=['Builder Name','Brand Name','Division Id','Division Name','Community Id',\
                                             'Community Name','City','State','Zip','Market ID','Market Name']);
   print("checkby Post New DataFrame",checkby)
+  print("checkby reset_index()",checkby.reset_index())
   NewCommIDs=checkby['Community Id']
   #checkby=checkby['Community Id']
   count=5;
