@@ -99,13 +99,13 @@ def initialCommUpdatProcess():
   #while count < 100000:
   if chan2=="Bing":
    count=1;
-  #while count < 100000:
+  while count < 10000:
    #print("Low count setting in GMergeURLS nonfunctional")
-  while count < chan.count():
+  #while count < chan.count():
    URLS=URLS+chan[count]
-   if count % 10000 == 0:
+   if count % 2000 == 0:
     print(chan2," _ ",count)
-    #print("Low count setting in MergeURLS nonfunctional")
+    print("Low count setting in MergeURLS nonfunctional")
    count+=1
   print("end MergeURLs() for ",chan2)
   return URLS
