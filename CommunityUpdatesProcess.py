@@ -109,21 +109,7 @@ def initialCommUpdatProcess():
    count+=1
   print("end MergeURLs() for ",chan2)
   return URLS
- """
- def BMergeURLs(chan,chan2):
-  print("BMergeURLs() start for ",chan2)
-  URLS="A";
-  #bingURLS=0;
-  count=1;
-  #while count < 100000:
-  while count < chan.count():
-   URLS=URLS+chan[count]
-   if count % 1000 == 0:
-    print("bing _",count)
-   count+=1
-  print("end BMergeURLs()")
-  return URLS
- """
+ 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google")
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing")
 
@@ -157,63 +143,19 @@ def initialCommUpdatProcess():
   (Crossland Homes,A5),(Crossland Homes,B5)),(Luv Homes,A5),(Luv Homes,B5),\
   (International Homes,A5),(International Homes,B5),(Clayton,A5);'
   count=5;
-  #count2=0;
-  
-  """
-  print("len(numpy.array(FrameToBeFiltered['Brand Name']))",len(numpy.array(FrameToBeFiltered['Brand Name'])))
-  
-  print("numpy.array(FrameToBeFiltered['Brand Name'])",numpy.array(FrameToBeFiltered['Brand Name']))
-  print("numpy.array(FrameToBeFiltered['Brand Name'])[1]",numpy.array(FrameToBeFiltered['Brand Name'])[1])
-  print("FrameToBeFiltered",FrameToBeFiltered)
-  print("FrameToBeFiltered.iloc[1]",FrameToBeFiltered.iloc[1])
-  
-  print("FrameToBeFiltered['Brand Name']",FrameToBeFiltered['Brand Name'])
-  print("numpy.array(FrameToBeFiltered['Brand Name'])[[0]]",numpy.array(FrameToBeFiltered['Brand Name'])[[0]])
-  print("numpy.array(FrameToBeFiltered['Brand Name'])[[1]]",numpy.array(FrameToBeFiltered['Brand Name'])[[1]])
-  #print("FrameToBeFiltered['Brand Name'][1]",FrameToBeFiltered['Brand Name'][1])
-  #print("FilterString.find(str(FrameToBeFiltered['Brand Name']))",FilterString.find(str(FrameToBeFiltered['Brand Name'])))
-  #FilterString.find(str(FrameToBeFiltered['Brand Name'][1]))
-  #print("FrameToBeFiltered['Brand Name'][1]",FrameToBeFiltered['Brand Name'][1])
-  #print("FilterString.find(str(FrameToBeFiltered['Brand Name'][1]))",FilterString.find(str(FrameToBeFiltered['Brand Name'][1])))
-  #FilterString.find(str(FrameToBeFiltered['Brand Name'][1]))
-  """
-
-  #print("#1 Variables initiated Begin first while loop")
-  print("len(numpy.array(FrameToBeFiltered['Brand Name']))",len(numpy.array(FrameToBeFiltered['Brand Name'])))
-  #while count < 10000:
   while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
-   #print("count  ",count)
-  
-   #if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))<0:
-    #ResultOfAcolFilter.append(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))
-    #print(ResultOfAcolFilter)    
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))>-1:
     CatchDiscards.append(count)
-    #print(CatchDiscards)
-   
-   #if FilterString.find(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))<0:
-    #ResultOfBcolFilter.append(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))
-    #print(ResultOfBcolFilter) 
+    
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))>-1:
     CatchDiscards.append(count)
-    #print(CatchDiscards)
-   
-   #if FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))<0:
-    #ResultOfQcolFilter.append(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))
-    #print(ResultOfQcolFilter) 
+    
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))>-1:
     CatchDiscards.append(count)
     
    count+=1; 
-    #print(CatchDiscards)
-  #print("ResultOfAcolFilter") 
-  #print(len(ResultOfAcolFilter)) 
+  
   print("")
-  #print("ResultOfBcolFilter") 
-  #print(len(ResultOfBcolFilter))
-  #print("")
-  #print("ResultOfQcolFilter") 
-  #print(len(ResultOfQcolFilter))
   print("")
   print("CatchDiscards") 
   print(CatchDiscards)
@@ -228,8 +170,6 @@ def initialCommUpdatProcess():
   print("CatchDiscards[0] ",CatchDiscards[0]) 
   while count2<len(CatchDiscards):
    print("Entered the second while loop count2= ",count2)
-   #print("FilteredFrame")
-   #print(FilteredFrame)
    print("__________________________")
    print("FilteredFrame.iloc[[count2]]")
    print(FilteredFrame.iloc[[count2]])
