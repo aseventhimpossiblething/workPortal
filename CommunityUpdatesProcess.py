@@ -85,8 +85,7 @@ def filterNonParticipators(FrameToBeFiltered):
    while count2<len(CatchDiscards):
     print("Entered the second while loop count2= ",count2)
     FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
-    count2+=1;
- print(FilteredFrame)                                 
+    count2+=1;                  
  print("End Filter") 
  return FilteredFrame 
  
@@ -137,14 +136,6 @@ def initialCommUpdatProcess():
  WorkingBingEOF['Final Url']
  
 
- """
- #print(googleURLS.find("69862"))
- #print(googleURLS.find("63594")) 
- #print(googleURLS.find("73142")) 
- #print(googleURLS.find("667530"))
-  
- """
-  
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
