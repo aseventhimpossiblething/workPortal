@@ -151,7 +151,14 @@ def initialCommUpdatProcess():
   Match_Type=[];
   Status=[];
   Bid=[];
-  CommName=NewDataFrame['Community Name'];
+  
+  count=0;
+  print("NewDataFrame['Market ID'].count()",NewDataFrame['Market ID'].count());
+  while count < NewDataFrame['Market ID'].count();
+   #CommName=NewDataFrame['Community Name'];
+   if MatchType!=SX.casefold();
+    NewDataFrame['Market ID']
+   
   
   
   
