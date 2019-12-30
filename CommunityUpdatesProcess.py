@@ -149,7 +149,7 @@ def initialCommUpdatProcess():
  def communityCheck(checkby,checkin,Name):
   print("Start Community Check")
   print("checkby",checkby)
-  checkby=pandas.DataFrame(checkby);
+  checkby=pandas.DataFrame(checkby,columns=['Builder Name','Brand Name']);
   print("checkby",checkby)
   NewCommIDs=checkby['Community Id']
   #checkby=checkby['Community Id']
