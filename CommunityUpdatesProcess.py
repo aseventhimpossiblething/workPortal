@@ -157,25 +157,8 @@ def initialCommUpdatProcess():
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
- #print("WorkingCommunities")
- #print(WorkingCommunities)
-
  
- """
- def communityCheck(checkby,checkin,Name):
-  print("Start Community Check for ",Name)
-  checkby=checkby.reset_index()
-  count=0;
-  DropRows=[];
-  #while count < 1000:
-  while count < checkby['Community Id'].count():
-   if checkin.find(str(checkby['Community Id'][count]))>-1:
-    DropRows.append(count);
-    checkby=checkby.drop([count]);
-   count+=1;
-  checkby=checkby.reset_index()
-  return checkby
- """ 
+ 
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google")
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing")
  
