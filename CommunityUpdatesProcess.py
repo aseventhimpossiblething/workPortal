@@ -39,7 +39,7 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkwor
                                                                    'Community Id','Community Name','City','State','Zip',\
                                                                    'Market ID','Market Name'])
    
-   print("communities basic import done")
+   #print("communities basic import done")
    return WorkingCommunities
   else:
    print("Load Communities cannot run...............",IsCommValid)
@@ -120,6 +120,7 @@ def initialCommUpdatProcess():
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
  if IsCommValid!="Valid":
   return IsCommValid
+ print("WorkingCommunities LoadCommunitites has run ",IsCommValid)
  WorkingGoogleEOF=WorkingGoogle()    
  WorkingBingEOF=WorkingBing()
  
