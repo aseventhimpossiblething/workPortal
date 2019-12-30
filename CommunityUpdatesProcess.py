@@ -141,31 +141,23 @@ def initialCommUpdatProcess():
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
- print("WorkingCommunities")
- print(WorkingCommunities)
+ #print("WorkingCommunities")
+ #print(WorkingCommunities)
 
  
  
  def communityCheck(checkby,checkin,Name):
   print("Start Community Check for ",Name)
-  #print("checkby pre new DataFrame",checkby)
-  """
-  checkby=pandas.DataFrame(checkby,columns=['Builder Name','Brand Name','Division Id','Division Name','Community Id',\
-                                            'Community Name','City','State','Zip','Market ID','Market Name']);
-  """                                          
-  
   checkby=checkby.reset_index()
   count=0;
   DropRows=[];
   #while count < 1000:
   while count < checkby['Community Id'].count():
    if checkin.find(str(checkby['Community Id'][count]))>-1:
-    if count % 10000==0:
-     print("count ",count)
-   
+    #if count % 10000==0:
+     #print("count ",count)
     DropRows.append(count);
     checkby=checkby.drop([count]);
-   
    count+=1;
   print("len(checkby)",len(checkby)) 
   print("len(DropRows) ",len(DropRows)) 
