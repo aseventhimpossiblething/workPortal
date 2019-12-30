@@ -154,13 +154,10 @@ def initialCommUpdatProcess():
   #while count < 1000:
   while count < checkby['Community Id'].count():
    if checkin.find(str(checkby['Community Id'][count]))>-1:
-    #if count % 10000==0:
-     #print("count ",count)
     DropRows.append(count);
     checkby=checkby.drop([count]);
    count+=1;
   checkby=checkby.reset_index()
-  print("checkby.iloc[[15]]",checkby.iloc[[15]])
   return checkby
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google")
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing")
