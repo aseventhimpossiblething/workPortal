@@ -91,7 +91,7 @@ def filterNonParticipators(FrameToBeFiltered):
     print("Entered the second while loop count2= ",count2)
     FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
     count2+=1;
- print(FilteredFrame)                                 
+ #print(FilteredFrame)                                 
  print("End Filter") 
  return FilteredFrame 
  
@@ -155,7 +155,13 @@ def initialCommUpdatProcess():
   #while count < NewCommIDs.count():
    if checkin.find(str(NewCommIDs[count]))<0:
     NewFrame.append(checkby.iloc[count]);
-    print(Name," Community Check: ",count,checkby.iloc[[count]]);
+    print("checkby.iloc[[count]]");
+    print(checkby.iloc[[count]]);
+    print("_______________________");
+    print("checkby.iloc[count]");
+    print(checkby.iloc[count]);
+    #print(Name," Community Check: ",count,checkby.iloc[[count]]);
+    #print(Name," Community Check: ",count,checkby.iloc[count]);
    count+=1;
   print("End Community Check") 
   return NewFrame
