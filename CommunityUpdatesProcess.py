@@ -155,28 +155,18 @@ def initialCommUpdatProcess():
   """                                          
   
   checkby=checkby.reset_index()
-  NewCommIDs=checkby['Community Id']
   count=0;
-  #NewFrame=[];
   DropRows=[];
-  while count < 100:
+  while count < 1000:
   #while count < NewCommIDs.count():
-   if checkin.find(str(NewCommIDs[count]))>-1:
+   if checkin.find(str(checkby['Community Id'][count]))>-1:
     DropRows.append(count);
-    checkby.drop([count])
-    """
-    print("checkby.iloc[[count ",count,"]]");
-    print(checkby.iloc[[count]]);
-    print(checkby.iloc[[count]]);
-    print("NewCommIDs[ count",count,"]")
-    print(NewCommIDs[count])
-    print("_______________________");
-    """
+    checkby=checkby.drop([count])
+    checkby=checkby.reset_index()
    count+=1;
   print("DropRows",DropRows) 
-  #print("NewFrame",NewFrame) 
   print("End Community Check for ",Name) 
-  #return NewFrame
+  return checkby
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google")
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing")
  
