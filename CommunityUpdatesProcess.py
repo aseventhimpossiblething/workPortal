@@ -177,7 +177,7 @@ def initialCommUpdatProcess():
    #print(FilteredFrame=FilteredFrame.drop([count2]))
    print("__________________________")
    print("FilteredFrame.drop(CatchDiscards[count2])")
-   print(FilteredFrame.drop(CatchDiscards[count2])))
+   print(FilteredFrame.drop(CatchDiscards[count2]))
    #print("FilteredFrame.drop(CatchDiscards[count2]))")
    #print(FilteredFrame.drop(CatchDiscards[count2])))
    print("Fitlered Frame done")
