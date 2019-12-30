@@ -159,7 +159,7 @@ def initialCommUpdatProcess():
  """
  
  
-""" 
+ """ 
  def filterNonParticipators(FrameToBeFiltered):
   print("Start Filter ",FrameToBeFiltered['Builder Name'].count()," rows")
   FilteredFrame=FrameToBeFiltered
@@ -196,8 +196,8 @@ def initialCommUpdatProcess():
   print("End Filter") 
   #print("CatchDiscards",CatchDiscards)
   return FilteredFrame
-"""  
-filterNonParticipators(WorkingCommunities)   
+ """  
+ filterNonParticipators(WorkingCommunities);   
      
   
     
