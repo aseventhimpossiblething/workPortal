@@ -23,16 +23,11 @@ IsBingValid=None;
 
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
  titlestring=str(sheet.iloc[1])
- #print(sheet.iloc[[0]])
- #print(sheet.iloc[[1]])
- #if str(sheet.iloc[1]).find(checkword1)!=-1 and str(sheet.iloc[1]).find(checkword2)!=-1 and\
  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
   titlestring.find(checkword3)!=-1 and titlestring.find(checkword4)!=-1:
-  #print(sheetname," Valid")
   return "Valid"
  else:
   Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
-  #print(Invalid) 
   return Invalid
     
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkword4):
@@ -56,8 +51,6 @@ def WorkingGoogle():
   global IsGoogleValid 
   IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Headline 1','Final URL')
   if IsGoogleValid!="Valid":
-   #global SheetsAreLoaded
-   #SheetsAreLoaded="True"
    return IsGoogleValid
   else:
    WorkingGoogle=pandas.DataFrame(WorkingGoogle,columns=['Campaign','Ad Group', 'Final URL'])
@@ -93,13 +86,7 @@ def filterNonParticipators(FrameToBeFiltered):
    CatchDiscards.append(count)
   count+=1; 
   if len(CatchDiscards)!=0:
-   #print("CatchDiscards is empty")
-   #CatchDiscards.append(5)
-   #CatchDiscards.append(6)
-   #CatchDiscards.append(7)
-   #else :
    count2=0;
-   print("CatchDiscards[0] ",CatchDiscards[0]) 
    while count2<len(CatchDiscards):
     print("Entered the second while loop count2= ",count2)
     FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
@@ -120,7 +107,7 @@ def MergeURLs(chan,chan2):
   URLS=URLS+chan[count]
   if count % 10000 == 0:
    print(chan2," _ ",count)
-   print("Low count setting in MergeURLS nonfunctional")
+   #print("Low count setting in MergeURLS nonfunctional")
   count+=1
  print("end MergeURLs() for ",chan2)
  return URLS
@@ -152,12 +139,10 @@ def initialCommUpdatProcess():
  
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
- WorkingCommunities=filterNonParticipators(WorkingCommunities);   
-     
-  
-    
-   
- 
+ WorkingCommunities=filterNonParticipators(WorkingCommunities);
+ print("WorkingCommunities")
+ print(WorkingCommunities)
+
  
  
  def communityCheck(checkby,checkin,Name):
@@ -165,9 +150,8 @@ def initialCommUpdatProcess():
   checkby=checkby['Community Id']
   count=5;
   NewFrame=[];
-  #NewBing=[];
-  while count < 5:
-  #while count < checkby2.count():
+  #while count < 5:
+  while count < checkby2.count():
    if checkin.find(str(checkby2[count]))<0:
     NewFrame.append(checkby.iloc[count]);
     print(Name," Community Check: ",count,checkby.iloc[count]);
