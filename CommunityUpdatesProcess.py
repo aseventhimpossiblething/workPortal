@@ -98,7 +98,7 @@ def MergeURLs(chan,chan2):
  #while count < 10000:
  while count < chan.count():
   URLS=URLS+chan[count]
-  if count % 10000 == 0:
+  if count % 20000 == 0:
    print(chan2," _ ",count)
    #print("Low count setting in MergeURLS nonfunctional")
   count+=1
