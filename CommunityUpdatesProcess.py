@@ -64,7 +64,7 @@ def WorkingBing():
   if IsBingValid!='Valid':
    return IsBingValid
   WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
-  print("Bing basic import done")
+  #print("Bing basic import done")
   return WorkingBing
 
 def filterNonParticipators(FrameToBeFiltered):
@@ -91,7 +91,7 @@ def filterNonParticipators(FrameToBeFiltered):
     print("Entered the second while loop count2= ",count2)
     FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
     count2+=1;
- #print(FilteredFrame)                                 
+ print(FilteredFrame)                                 
  print("End Filter") 
  return FilteredFrame 
  
