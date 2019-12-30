@@ -59,7 +59,7 @@ def WorkingBing():
   if IsBingValid!='Valid':
    return IsBingValid
   WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
-  #print("Bing basic import done")
+  print("Bing basic import done")
   return WorkingBing
 
 def filterNonParticipators(FrameToBeFiltered):
