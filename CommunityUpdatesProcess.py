@@ -172,6 +172,7 @@ def initialCommUpdatProcess():
   #print("DropRows.count() ",DropRows.count()) 
   print("End Community Check for ",Name)
   checkby=checkby.reset_index()
+  print("checkby.iloc[[15]]",checkby.iloc[[15]])
   return checkby
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google")
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing")
