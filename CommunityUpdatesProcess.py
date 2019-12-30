@@ -140,8 +140,16 @@ def initialCommUpdatProcess():
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
  
- NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google")
- NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing")
+ NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
+ NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
+ 
+ def KeywordGen(NewDataFrame,MatchType,SearchChan):
+  print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType)
+  NewDataFrame=[];
+  
+  
+ 
+ 
  
  TheSampleText=WorkingBingEOF
  TheSamplefile=open('TheSampleText.txt','w+') 
