@@ -147,7 +147,7 @@ def initialCommUpdatProcess():
  
  
  def communityCheck(checkby,checkin,Name):
-  print("Start Community Check")
+  print("Start Community Check for ",Name)
   #print("checkby pre new DataFrame",checkby)
   """
   checkby=pandas.DataFrame(checkby,columns=['Builder Name','Brand Name','Division Id','Division Name','Community Id',\
@@ -175,7 +175,7 @@ def initialCommUpdatProcess():
    count+=1;
   print("DropRows",DropRows) 
   #print("NewFrame",NewFrame) 
-  print("End Community Check") 
+  print("End Community Check for ",Name) 
   #return NewFrame
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google")
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing")
