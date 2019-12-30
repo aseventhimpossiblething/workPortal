@@ -148,12 +148,14 @@ def initialCommUpdatProcess():
  
  def communityCheck(checkby,checkin,Name):
   print("Start Community Check")
+  print("checkby",checkby)
   checkby=pandas.DataFrame(checkby);
+  print("checkby",checkby)
   NewCommIDs=checkby['Community Id']
   #checkby=checkby['Community Id']
   count=5;
   NewFrame=[];
-  while count < 25:
+  while count < 3:
   #while count < NewCommIDs.count():
    if checkin.find(str(NewCommIDs[count]))<0:
     NewFrame.append(checkby.iloc[[count]]);
