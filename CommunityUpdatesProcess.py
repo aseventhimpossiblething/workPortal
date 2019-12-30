@@ -147,7 +147,7 @@ def initialCommUpdatProcess():
  
  def communityCheck(checkby,checkin,Name):
   print("Start Community Check")
-  checkby=pandas.dataframe(checkby);
+  checkby=pandas.DataFrame(checkby);
   NewCommIDs=checkby['Community Id']
   #checkby=checkby['Community Id']
   count=5;
