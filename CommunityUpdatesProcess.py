@@ -136,18 +136,11 @@ def initialCommUpdatProcess():
   while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))>-1:
     CatchDiscards.append(count)
-    
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]))>-1:
     CatchDiscards.append(count)
-    
    if FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))>-1:
     CatchDiscards.append(count)
-    
    count+=1; 
-  
-  #print("CatchDiscards") 
-  #print(CatchDiscards)
-  #print("len(CatchDiscards) ",len(CatchDiscards))
   if len(CatchDiscards)==0:
    print("CatchDiscards is empty")
    CatchDiscards.append(5)
@@ -158,10 +151,6 @@ def initialCommUpdatProcess():
   print("CatchDiscards[0] ",CatchDiscards[0]) 
   while count2<len(CatchDiscards):
    print("Entered the second while loop count2= ",count2)
-   print("__________________________")
-   print("__________________________")
-   #print("FilteredFrame.drop(CatchDiscards[count2])")
-   #print(FilteredFrame.drop(CatchDiscards[count2]))
    FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
    print(FilteredFrame)                                 
    print("Fitlered Frame done")
