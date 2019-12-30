@@ -11,18 +11,15 @@ import re
 import threading
 import numpy
 
-
-
 SheetsAreLoaded=None; 
 IsCommValid=None;
 IsGoogleValid=None;
 IsBingValid=None;
 
-
-
-
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
  titlestring=str(sheet.iloc[1])
+ print("titlestring")
+ print(titlestring)
  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
   titlestring.find(checkword3)!=-1 and titlestring.find(checkword4)!=-1:
   return "Valid"
@@ -39,7 +36,7 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkwor
                                                                    'Community Id','Community Name','City','State','Zip',\
                                                                    'Market ID','Market Name'])
    
-   #print("communities basic import done")
+   print("communities basic import done")
    return WorkingCommunities
   else:
    print("Load Communities cannot run...............",IsCommValid)
@@ -95,24 +92,22 @@ def filterNonParticipators(FrameToBeFiltered):
  print("End Filter") 
  return FilteredFrame 
  
-
 def MergeURLs(chan,chan2):
  print("MergeURLs() start for ",chan2)
  URLS="A";
  count=0;
  if chan2=="Bing":
   count=1;
- while count < 10000:
- #while count < chan.count():
+ #while count < 10000:
+ while count < chan.count():
   URLS=URLS+chan[count]
   if count % 10000 == 0:
    print(chan2," _ ",count)
-   print("Low count setting in MergeURLS nonfunctional")
+   #print("Low count setting in MergeURLS nonfunctional")
   count+=1
  print("end MergeURLs() for ",chan2)
  return URLS
-    
-
+ 
 def communityCheck(checkby,checkin,Name):
  print("Start Community Check for ",Name)
  checkby=checkby.reset_index()
@@ -126,7 +121,6 @@ def communityCheck(checkby,checkin,Name):
  checkby=checkby.reset_index()
  print("End Community Check for ",Name)
  return checkby
- 
  
 def initialCommUpdatProcess():
  os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
@@ -152,16 +146,13 @@ def initialCommUpdatProcess():
  #print(googleURLS.find("667530"))
   
  """
- 
- 
+  
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
  
- 
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google")
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing")
- 
  
  TheSampleText=WorkingBingEOF
  TheSamplefile=open('TheSampleText.txt','w+') 
