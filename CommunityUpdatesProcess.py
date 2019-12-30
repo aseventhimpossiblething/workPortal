@@ -167,7 +167,7 @@ def initialCommUpdatProcess():
     checkby=checkby.drop([count]);
    
    count+=1;
-  #print("DropRows",DropRows) 
+  print("len(checkby)",len(checkby)) 
   print("len(DropRows) ",len(DropRows)) 
   #print("DropRows.count() ",DropRows.count()) 
   print("End Community Check for ",Name)
