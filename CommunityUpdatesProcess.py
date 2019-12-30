@@ -163,7 +163,11 @@ def initialCommUpdatProcess():
   #while count < NewCommIDs.count():
    if checkin.find(str(NewCommIDs[count]))>-1:
     DropRows.append(count);
-    print(checkby[[count]]);
+    print("checkby.iloc[[count ",count,"]]");
+    print(checkby.iloc[[count]]);
+    print(checkby.iloc[[count]]);
+    print("NewCommIDs[ count",count,"]")
+    print(NewCommIDs[count])
     print("_______________________");
    count+=1;
   print("DropRows",DropRows) 
