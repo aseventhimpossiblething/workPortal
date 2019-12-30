@@ -124,19 +124,9 @@ def initialCommUpdatProcess():
  
  
  def filterNonParticipators(FrameToBeFiltered):
-  #print("FrameToBeFiltered")
-  #print(FrameToBeFiltered)
-  #print("")
-  #print("FrameToBeFiltered.drop([6])")
-  #print(FrameToBeFiltered.drop([6]))
   print("Start Filter ",FrameToBeFiltered['Builder Name'].count()," rows")
-  #print()
   FilteredFrame=FrameToBeFiltered
-  #ResultOfAcolFilter=[];
-  #ResultOfBcolFilter=[];
-  #ResultOfQcolFilter=[];
   CatchDiscards=[];
-  
   FilterString='(communityname=,Q5),(Clayton Homes,B5),(Clayton Homes,A5),\
   (Oakwoord Homes,A5),(Oakwoord Homes,B5),(G & I Homes,A5),(G & I Homes,B5),\
   (Craftmark Homes,A5),(Craftmark Homes,B5),(Freedom Homes,A5),(Freedom Homes,B5),\
@@ -155,11 +145,9 @@ def initialCommUpdatProcess():
     
    count+=1; 
   
-  print("")
-  print("")
-  print("CatchDiscards") 
-  print(CatchDiscards)
-  print("len(CatchDiscards) ",len(CatchDiscards))
+  #print("CatchDiscards") 
+  #print(CatchDiscards)
+  #print("len(CatchDiscards) ",len(CatchDiscards))
   if len(CatchDiscards)==0:
    print("CatchDiscards is empty")
    CatchDiscards.append(5)
