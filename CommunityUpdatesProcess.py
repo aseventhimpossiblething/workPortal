@@ -155,7 +155,7 @@ def initialCommUpdatProcess():
   """                                          
   #print("checkby Post New DataFrame",checkby)
   print("checkby reset_index()",checkby.reset_index())
-  print("checkby reset_index()[0]",checkby.reset_index()[0])
+  print("checkby reset_index()[0]",checkby.reset_index()[[0]])
   #checkby=checkby.reset_index()
   NewCommIDs=checkby['Community Id']
   count=5;
