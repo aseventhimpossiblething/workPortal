@@ -113,7 +113,7 @@ def MergeURLs(chan,chan2):
  URLS="A";
  count=0;
  if chan2=="Bing":
- count=1;
+  count=1;
  #while count < 10000:
  while count < chan.count():
   URLS=URLS+chan[count]
