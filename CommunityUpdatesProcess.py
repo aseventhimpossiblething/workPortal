@@ -127,7 +127,7 @@ def communityCheck(checkby,checkin,Name):
  return checkby
  
  
- def initialCommUpdatProcess():
+def initialCommUpdatProcess():
  os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
