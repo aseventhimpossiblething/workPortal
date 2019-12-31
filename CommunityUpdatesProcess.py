@@ -177,6 +177,8 @@ def initialCommUpdatProcess():
     print("Market_Lookup[6] ",Market_Lookup[6])
     print("Market_LookUp.Markets[308]" ,Market_LookUp.Markets[308])
     print("Market_LookUp.Markets[254]" ,Market_LookUp.Markets[254])
+    print("Market_LookUp.Markets[304]" ,Market_LookUp.Markets[304])
+    print("Market_LookUp.Markets[303]" ,Market_LookUp.Markets[303])
    count+=1; 
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType);  
  print(" Before Keyworden") 
