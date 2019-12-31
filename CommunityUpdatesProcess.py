@@ -12,6 +12,7 @@ import threading
 import numpy
 import Market_LookUp
 
+
 SheetsAreLoaded=None; 
 IsCommValid=None;
 IsGoogleValid=None;
