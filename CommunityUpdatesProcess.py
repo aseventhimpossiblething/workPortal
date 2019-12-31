@@ -181,7 +181,7 @@ def initialCommUpdatProcess():
     print("Market_LookUp.Markets[343]" ,Market_LookUp.Markets[343])
    count+=1; 
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType);  
- print(" Before Keyworden") 
+ print(" Before KeyworGen") 
  KeywordGen(NewGoogle,"sbmm","NewGoogle")
  KeywordGen(NewBing,"sbmm","NewBing") 
  print(" Before Keyworden") 
