@@ -157,7 +157,9 @@ def initialCommUpdatProcess():
   Status=[];
   Bid=[];
   
-  Market_Lookup={5:"Dog",3:"Bees"};
+  Market_Lookup={5:"Dog",3:"Bees",
+                 6:"Blacks"
+                };
   
   MatchType=MatchType.lower();
   count=0;
@@ -170,6 +172,7 @@ def initialCommUpdatProcess():
     print("count ",count)
     print("Market_Lookup[3] ",Market_Lookup[3])
     print("Market_Lookup[5] ",Market_Lookup[5])
+    print("Market_Lookup[6] ",Market_Lookup[6])
    count+=1; 
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType);  
  print(" Before Keyworden") 
