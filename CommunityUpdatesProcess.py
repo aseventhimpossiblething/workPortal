@@ -174,6 +174,7 @@ def initialCommUpdatProcess():
   while count < 6:
   #while count < len(NewDataFrame['Market ID']):
    Campaign_Nameing_Conv=Market_LookUp.SearchChan[NewDataFrame['Market ID']].replace("SBMM",MatchType)
+   if MatchType="SX":
    
    if SearchChan=="bing":
     #if MatchType!="sx":
