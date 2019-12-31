@@ -181,17 +181,7 @@ def initialCommUpdatProcess():
      print("NewDataFrame['Market ID']",NewDataFrame['Market ID']);
      Market_LookUp.SearchChan[NewDataFrame['Market ID']]
      print("Market_LookUp.SearchChan[NewDataFrame['Market ID']]" ,Market_LookUp.SearchChan[NewDataFrame['Market ID']])
-    
-    """
-    print("count ",count)
-    print("Market_Lookup[3] ",Market_Lookup[3])
-    print("Market_Lookup[5] ",Market_Lookup[5])
-    print("Market_Lookup[6] ",Market_Lookup[6])
-    print("Market_LookUp.Markets[308]" ,Market_LookUp.Markets[308])
-    print("Market_LookUp.Markets[254]" ,Market_LookUp.Markets[254])
-    print("Market_LookUp.Markets[306]" ,Market_LookUp.Markets[306])
-    print("Market_LookUp.Markets[343]" ,Market_LookUp.Markets[343])
-    """
+        
    count+=1; 
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType);  
  print(" Before KeyworGen") 
