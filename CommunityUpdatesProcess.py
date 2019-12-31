@@ -105,7 +105,7 @@ def MergeURLs(chan,chan2):
  hilecount=len(chan)
  print("hilecount",hilecount)
  if type(MaintatanceVar)!="<class 'int'>":
-  whilecount=MaintatanceVar;
+   hilecount=MaintatanceVar;
  while count < hilecount:
  #while count < chan.count():
   URLS=URLS+chan[count]
@@ -121,10 +121,10 @@ def communityCheck(checkby,checkin,Name):
  checkby=checkby.reset_index()
  count=0;
  DropRows=[];
- whilecount=checkby['Community Id'].count();
+ hilecount=checkby['Community Id'].count();
  if type(MaintatanceVar)!="<class 'int'>":
-  whilecount=MaintatanceVar;
- while count < whilecount:
+  hilecount=MaintatanceVar;
+ while count < hilecount:
  #while count < checkby['Community Id'].count():
   if checkin.find(str(checkby['Community Id'][count]))>-1:
    DropRows.append(count);
@@ -176,10 +176,10 @@ def initialCommUpdatProcess():
   Bid=[];
 
   count=0;
-  whilecount=len(NewDataFrame['Market ID']);
+  hilecount=len(NewDataFrame['Market ID']);
   if type(MaintatanceVar)!="<class 'int'>":
-   whilecount=MaintatanceVar;
-  while count < whilecount:
+   hilecount=MaintatanceVar;
+  while count < hilecount:
   #while count < 3:
   #while count < len(NewDataFrame['Market ID']):
    if SearchChan=="google":
