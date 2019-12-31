@@ -182,6 +182,11 @@ def initialCommUpdatProcess():
    hilecount=MaintatanceVar;
   while count < hilecount:
    print("NewDataFrame['Market ID'][count]",NewDataFrame['Market ID'][count])
+   try:
+    print("Successful AttemptMarket_LookUp.google[NewDataFrame['Market ID'][count]]",Market_LookUp.google[NewDataFrame['Market ID'][count]])
+   except:
+    print("Failed Attempt Market_LookUp.google[NewDataFrame['Market ID'][count]]")
+     
    #while count < len(NewDataFrame['Market ID']):
    if SearchChan=="google":
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
