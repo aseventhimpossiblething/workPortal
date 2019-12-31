@@ -160,7 +160,7 @@ def initialCommUpdatProcess():
   #print("NewDataFrame['Market ID'].count()",NewDataFrame['Market ID'].count();
   while count < 6:
   #while count < len(NewDataFrame['Market ID']):
-   if MatchType!="sx";
+   if MatchType!="sx":
     NewDataFrame['Market ID']
     print("count ",count)
     print("Market_Lookup(5) ",Market_Lookup(5))
