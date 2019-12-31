@@ -103,7 +103,7 @@ def MergeURLs(chan,chan2):
  while count < 10000:
  #while count < chan.count():
   URLS=URLS+chan[count]
-  if count % 20000 == 0:
+  if count % 3000 == 0:
    print(chan2," _ ",count)
    print("Low count setting in MergeURLS nonfunctional")
   count+=1
@@ -120,7 +120,7 @@ def communityCheck(checkby,checkin,Name):
   if checkin.find(str(checkby['Community Id'][count]))>-1:
    DropRows.append(count);
    checkby=checkby.drop([count]);
-   if count % 10==0:
+   if count % 100==0:
     print("count ",count)
     print("Community check set for testing lower throttle check Merge also ")
   count+=1;
@@ -167,13 +167,12 @@ def initialCommUpdatProcess():
   Bid=[];
 
   count=0;
-  while count < numberofLoops:
+  while count < whilecounter:
   #while count < len(NewDataFrame['Market ID']):
    if SearchChan=="google":
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     if MatchType=="SB":
-     #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
      print("count ",count," Google SB ::",Campaign_Nameing_Conv)
     if MatchType=="SX":
