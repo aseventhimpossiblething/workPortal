@@ -181,8 +181,8 @@ def initialCommUpdatProcess():
   if type(MaintatanceVar)=="<class 'int'>":
    hilecount=MaintatanceVar;
   while count < hilecount:
-  #while count < 3:
-  #while count < len(NewDataFrame['Market ID']):
+   print("NewDataFrame['Market ID'][count]",NewDataFrame['Market ID'][count])
+   #while count < len(NewDataFrame['Market ID']):
    if SearchChan=="google":
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
