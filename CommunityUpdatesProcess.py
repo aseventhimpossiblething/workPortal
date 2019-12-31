@@ -162,11 +162,7 @@ def initialCommUpdatProcess():
   Status=[];
   Bid=[];
   
-  #Market_Lookup={5:"Dog",3:"Bees",
-                 6:"Blacks"
-                };
-  
-  
+    
   count=0;
   print("len(NewDataFrame['Market ID']) ",len(NewDataFrame['Market ID']));
   #print("NewDataFrame['Market ID'].count()",NewDataFrame['Market ID'].count();
