@@ -177,7 +177,9 @@ def initialCommUpdatProcess():
    if SearchChan=="google":
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
+    print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
     if MatchType=="SB":
+     #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
      print("count ",count," Google SB ::",Campaign_Nameing_Conv)
     if MatchType=="SX":
