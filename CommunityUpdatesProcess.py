@@ -151,20 +151,19 @@ def initialCommUpdatProcess():
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
  
  def KeywordGen(NewDataFrame,MatchType,SearchChan):
-  print("")
   MatchType=MatchType.upper();
   SearchChan=SearchChan.lower();
+  print("")
   print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
+  print("len(NewDataFrame['Market ID']) ",len(NewDataFrame['Market ID']));
   Campaign_Name=[];
   Adgroup=[];
   Keyword=[];
   Match_Type=[];
   Status=[];
   Bid=[];
-  
-    
+
   count=0;
-  print("len(NewDataFrame['Market ID']) ",len(NewDataFrame['Market ID']));
   while count < 3:
   #while count < len(NewDataFrame['Market ID']):
    if SearchChan=="google":
@@ -193,7 +192,9 @@ def initialCommUpdatProcess():
    Campaign_Name.append(Campaign_Nameing_Conv);  
    print("count ",count," Campaign_Nameing_Conv Output ::",Campaign_Nameing_Conv) 
    print("________END CYCLE NUMBER______",count)
-   print("")
+   count+=1;
+  count=0; 
+  while count < len(NewDataFrame['Market ID']):
    count+=1; 
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType); 
   
