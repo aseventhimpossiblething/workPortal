@@ -1,4 +1,4 @@
-
+MaintatanceVar=5;
 
 import glob
 import numpy
@@ -100,7 +100,10 @@ def MergeURLs(chan,chan2):
  count=0;
  if chan2=="Bing":
   count=1;
- while count < 10000:
+ whilecount=chan.count()
+ if type(MaintatanceVar)!="<class 'int'>":
+  whilecount=MaintatanceVar;
+ while count < whilecount:
  #while count < chan.count():
   URLS=URLS+chan[count]
   if count % 3000 == 0:
@@ -115,7 +118,10 @@ def communityCheck(checkby,checkin,Name):
  checkby=checkby.reset_index()
  count=0;
  DropRows=[];
- while count < 1000:
+ whilecount=checkby['Community Id'].count();
+ if type(MaintatanceVar)!="<class 'int'>":
+  whilecount=MaintatanceVar;
+ while count < whilecount:
  #while count < checkby['Community Id'].count():
   if checkin.find(str(checkby['Community Id'][count]))>-1:
    DropRows.append(count);
@@ -167,7 +173,11 @@ def initialCommUpdatProcess():
   Bid=[];
 
   count=0;
-  while count < 3:
+  whilecount=len(NewDataFrame['Market ID']);
+  if type(MaintatanceVar)!="<class 'int'>":
+   whilecount=MaintatanceVar;
+  while count < whilecount:
+  #while count < 3:
   #while count < len(NewDataFrame['Market ID']):
    if SearchChan=="google":
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
