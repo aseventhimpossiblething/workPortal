@@ -165,8 +165,10 @@ def initialCommUpdatProcess():
     print("count ",count)
     print("Market_Lookup[5] ",Market_Lookup[5])
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType);  
+ print(" Before Keyworden") 
  KeywordGen(NewGoogle,"sbmm","NewGoogle")
- KeywordGen(NewBing,"sbmm","NewBing")  
+ KeywordGen(NewBing,"sbmm","NewBing") 
+ print(" Before Keyworden") 
     
    
   
