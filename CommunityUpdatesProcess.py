@@ -152,6 +152,8 @@ def initialCommUpdatProcess():
   Status=[];
   Bid=[];
   
+  Market_Lookup={5:"Dog"};
+  
   MatchType=MatchType.lower();
   count=0;
   print("len(NewDataFrame['Market ID'])",len(NewDataFrame['Market ID']));
@@ -161,6 +163,10 @@ def initialCommUpdatProcess():
    if MatchType!="sx";
     NewDataFrame['Market ID']
     print("count ",count)
+    print("Market_Lookup(5) ",Market_Lookup(5))
+  print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType);  
+ KeywordGen(NewGoogle,"sbmm","NewGoogle")
+ KeywordGen(NewBing,"sbmm","NewBing")  
     
    
   
