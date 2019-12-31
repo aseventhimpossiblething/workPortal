@@ -152,12 +152,13 @@ def initialCommUpdatProcess():
   Status=[];
   Bid=[];
   
+  txt="sx";
   count=0;
   print("len(NewDataFrame['Market ID'])",len(NewDataFrame['Market ID']));
   #print("NewDataFrame['Market ID'].count()",NewDataFrame['Market ID'].count();
   while count < len(NewDataFrame['Market ID']):
    #CommName=NewDataFrame['Community Name'];
-   if MatchType!=SX.casefold();
+   if MatchType!=txt.casefold();
     NewDataFrame['Market ID']
     print("count ",count)
    
