@@ -10,6 +10,7 @@ import psycopg2
 import re
 import threading
 import numpy
+import Market_LookUp
 
 SheetsAreLoaded=None; 
 IsCommValid=None;
@@ -173,6 +174,7 @@ def initialCommUpdatProcess():
     print("Market_Lookup[3] ",Market_Lookup[3])
     print("Market_Lookup[5] ",Market_Lookup[5])
     print("Market_Lookup[6] ",Market_Lookup[6])
+    Market_LookUp.Markets[308]
    count+=1; 
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType);  
  print(" Before Keyworden") 
