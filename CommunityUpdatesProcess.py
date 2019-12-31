@@ -1,5 +1,5 @@
 MaintananceLoops=3;
-print(type(MaintananceLoops))
+print("type(MaintananceLoops)",type(MaintananceLoops))
 
 import glob
 import numpy
@@ -215,7 +215,8 @@ def initialCommUpdatProcess():
  KeywordGen(NewBing,"sbmm","bing") 
  KeywordGen(NewBing,"sb","bing") 
  KeywordGen(NewBing,"sx","bing") 
- print(" After KeyworGen") 
+ print(" After KeyworGen")
+ print("type(MaintananceLoops)",type(MaintananceLoops))
     
    
   
