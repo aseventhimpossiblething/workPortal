@@ -167,8 +167,8 @@ def initialCommUpdatProcess():
   count=0;
   print("len(NewDataFrame['Market ID'])",len(NewDataFrame['Market ID']));
   #print("NewDataFrame['Market ID'].count()",NewDataFrame['Market ID'].count();
-  print("Market_LookUp.Google[308]",Market_LookUp.Google[308])
-  print("Market_LookUp.Bing[308]",Market_LookUp.Bing[308])
+  print("Market_LookUp.Google[308]",Market_LookUp.google[308])
+  print("Market_LookUp.Bing[308]",Market_LookUp.bing[308])
   while count < 6:
   #while count < len(NewDataFrame['Market ID']):
    if MatchType!="sx":
