@@ -177,6 +177,7 @@ def initialCommUpdatProcess():
     print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
     print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
     print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
+    print("MatchType is ",MatchType)
     if MatchType=="SB":
      #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
@@ -193,6 +194,7 @@ def initialCommUpdatProcess():
     print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
     print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
     print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
+    print("MatchType is ",MatchType)
     if MatchType=="SB":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
      print("count ",count," Bing SB ::",Campaign_Nameing_Conv)  
