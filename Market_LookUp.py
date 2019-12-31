@@ -1,4 +1,4 @@
-Market_LuukUp={308:"Seattle-Bellevue_WA>308>SBMM>Community_MSM203",19:"Tucson_AZ>19>SBMM>Community_MSM203",\
+Markets={308:"Seattle-Bellevue_WA>308>SBMM>Community_MSM203",19:"Tucson_AZ>19>SBMM>Community_MSM203",\
  166:"St. Louis_MO>166>SBMM>Community_MSM203",290:"Tyler_TX>290>SBMM>Community_MSM203",40:"Stockton-Lodi_CA>40>SBMM>Community_MSM203",\
  41:"Vallejo-Napa_CA>41>SBMM>Community_MSM203",310:"Tacoma_WA>310>SBMM>Community_MSM203",216:"Syracuse_NY>216>SBMM>Community_MSM203",\
  251:"York_PA>251>SBMM>Community_MSM203",79:"Tallahassee_FL>79>SBMM>Community_MSM203",350:"Sussex_DE>350>SBMM>Community_MSM203",\
