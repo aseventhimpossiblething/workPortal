@@ -9,6 +9,7 @@ import redis
 import os
 from flask import Flask, Markup, render_template, request
 from celery import Celery
+import Market_LookUp
 #import taskque
 
 the_redis=os.environ.get("REDIS_URL")
