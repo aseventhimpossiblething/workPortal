@@ -164,6 +164,7 @@ def initialCommUpdatProcess():
     NewDataFrame['Market ID']
     print("count ",count)
     print("Market_Lookup[5] ",Market_Lookup[5])
+   count+=1; 
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType);  
  print(" Before Keyworden") 
  KeywordGen(NewGoogle,"sbmm","NewGoogle")
