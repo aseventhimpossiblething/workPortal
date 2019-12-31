@@ -173,8 +173,8 @@ def initialCommUpdatProcess():
   print("Market_LookUp.bing[308]",Market_LookUp.bing[308])
   while count < 6:
   #while count < len(NewDataFrame['Market ID']):
-   Campaign_Nameing_Conv=Market_LookUp.SearchChan[NewDataFrame['Market ID']].replace("SBMM",MatchType)
    if SearchChan=="google":
+    Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID']].replace("SBMM",MatchType)
     if MatchType=="SB":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
      print("Google SB",Campaign_Nameing_Conv)
@@ -184,6 +184,7 @@ def initialCommUpdatProcess():
     else:
      Print("Unchancged S0 should be Google SBMM GPPC403 ",Campaign_Nameing_Conv)   
    if SearchChan=="bing":
+    Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID']].replace("SBMM",MatchType)
     if MatchType=="SB":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
      print("Bing SB",Campaign_Nameing_Conv)  
