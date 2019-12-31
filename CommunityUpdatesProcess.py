@@ -167,10 +167,13 @@ def initialCommUpdatProcess():
   count=0;
   print("len(NewDataFrame['Market ID'])",len(NewDataFrame['Market ID']));
   #print("NewDataFrame['Market ID'].count()",NewDataFrame['Market ID'].count();
+  print("Market_LookUp.Google[308]",Market_LookUp.Google[308])
+  print("Market_LookUp.Bing[308]",Market_LookUp.Bing[308])
   while count < 6:
   #while count < len(NewDataFrame['Market ID']):
    if MatchType!="sx":
     NewDataFrame['Market ID']
+    """
     print("count ",count)
     print("Market_Lookup[3] ",Market_Lookup[3])
     print("Market_Lookup[5] ",Market_Lookup[5])
@@ -179,6 +182,7 @@ def initialCommUpdatProcess():
     print("Market_LookUp.Markets[254]" ,Market_LookUp.Markets[254])
     print("Market_LookUp.Markets[306]" ,Market_LookUp.Markets[306])
     print("Market_LookUp.Markets[343]" ,Market_LookUp.Markets[343])
+    """
    count+=1; 
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType);  
  print(" Before KeyworGen") 
