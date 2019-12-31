@@ -189,7 +189,7 @@ def initialCommUpdatProcess():
      print("count ",count," Unchanged So should be Google SBMM GPPC403 :: ",Campaign_Nameing_Conv)   
    if SearchChan=="bing":
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
-    Campaign_Nameing_Conv.replace("SBMM",MatchType)
+    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     print("MatchType is ",MatchType)
     print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
     print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
