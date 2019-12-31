@@ -105,7 +105,7 @@ def MergeURLs(chan,chan2):
  hilecount=len(chan)
  print("hilecount",hilecount)
  print("type(hilecount)",type(hilecount))
- if type(MaintatanceVar)!="<class 'int'>":
+ if type(MaintatanceVar)=="<class 'int'>":
    hilecount=MaintatanceVar;
  while count < hilecount :
  #while count < chan.count():
@@ -123,7 +123,7 @@ def communityCheck(checkby,checkin,Name):
  count=0;
  DropRows=[];
  hilecount=checkby['Community Id'].count();
- if type(MaintatanceVar)!="<class 'int'>":
+ if type(MaintatanceVar)=="<class 'int'>":
   hilecount=MaintatanceVar;
  while count < hilecount:
  #while count < checkby['Community Id'].count():
@@ -178,7 +178,7 @@ def initialCommUpdatProcess():
 
   count=0;
   hilecount=len(NewDataFrame['Market ID']);
-  if type(MaintatanceVar)!="<class 'int'>":
+  if type(MaintatanceVar)=="<class 'int'>":
    hilecount=MaintatanceVar;
   while count < hilecount:
   #while count < 3:
