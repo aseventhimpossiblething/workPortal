@@ -1,4 +1,5 @@
-google={53:"Bridgeport_CT>53>SBMM>Community_GPPC403",
+google={206:"Binghamton_NY>206>SBMM>Community_GPPC203",
+53:"Bridgeport_CT>53>SBMM>Community_GPPC403",
 276:"El Paso_TX>276>SBMM>Community_GPPC403",
 180:"Jacksonville_NC>180>SBMM>Community_GPPC403",
 48:"Denver_CO>48>SBMM>Community_GPPC403",
