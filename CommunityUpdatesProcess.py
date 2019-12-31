@@ -114,6 +114,9 @@ def communityCheck(checkby,checkin,Name):
   if checkin.find(str(checkby['Community Id'][count]))>-1:
    DropRows.append(count);
    checkby=checkby.drop([count]);
+   if count % 100==0;
+    print("count ",count)
+    print("Community check set for testing lower throttle check Merge also ")
   count+=1;
  checkby=checkby.reset_index()
  print("End Community Check for ",Name)
