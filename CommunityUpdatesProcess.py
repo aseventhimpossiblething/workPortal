@@ -151,6 +151,7 @@ def initialCommUpdatProcess():
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
  
  def KeywordGen(NewDataFrame,MatchType,SearchChan):
+  print("")
   MatchType=MatchType.upper();
   SearchChan=SearchChan.lower();
   print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
@@ -202,7 +203,11 @@ def initialCommUpdatProcess():
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType);  
  print(" Before KeyworGen") 
  KeywordGen(NewGoogle,"sbmm","google")
+ KeywordGen(NewGoogle,"sb","google")
+ KeywordGen(NewGoogle,"sx","google")
  KeywordGen(NewBing,"sbmm","bing") 
+ KeywordGen(NewBing,"sb","bing") 
+ KeywordGen(NewBing,"sx","bing") 
  print(" After KeyworGen") 
     
    
