@@ -174,24 +174,32 @@ def initialCommUpdatProcess():
   while count < 6:
   #while count < len(NewDataFrame['Market ID']):
    Campaign_Nameing_Conv=Market_LookUp.SearchChan[NewDataFrame['Market ID']].replace("SBMM",MatchType)
-   if MatchType="SX":
-   
+      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM403","_MSM402")
+   if SearchChan=="google":
+    if MatchType=="SB":
+     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
+     print("Google SB",Campaign_Nameing_Conv)
+    if MatchType=="SX":
+     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
+     print("Google SX",Campaign_Nameing_Conv)  
+    else:
+     Print("Unchancged S0 should be Google SBMM GPPC403 ",Campaign_Nameing_Conv)   
    if SearchChan=="bing":
-    #if MatchType!="sx":
-     print("NewDataFrame['Market ID']",NewDataFrame['Market ID']);
-     Market_LookUp.SearchChan[NewDataFrame['Market ID']]
-     print("Market_LookUp.SearchChan[NewDataFrame['Market ID']]" ,Market_LookUp.SearchChan[NewDataFrame['Market ID']])
-   if SearchChan=="google": 
-     print("NewDataFrame['Market ID']",NewDataFrame['Market ID']);
-     Market_LookUp.SearchChan[NewDataFrame['Market ID']]
-     print("Market_LookUp.SearchChan[NewDataFrame['Market ID']]" ,Market_LookUp.SearchChan[NewDataFrame['Market ID']])
-        
+    if MatchType=="SB":
+     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
+     print("Bing SB",Campaign_Nameing_Conv)  
+    if MatchType=="SX":
+     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201") 
+     print("Bing SX",Campaign_Nameing_Conv) 
+    else:
+     Print("Unchancged S0 should be Bing SBMM MSM403 ",Campaign_Nameing_Conv) 
+   Print("Campaign_Nameing_Conv Output",Campaign_Nameing_Conv)  
    count+=1; 
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType);  
  print(" Before KeyworGen") 
- KeywordGen(NewGoogle,"sbmm","NewGoogle")
- KeywordGen(NewBing,"sbmm","NewBing") 
- print(" Before Keyworden") 
+ KeywordGen(NewGoogle,"sbmm","google")
+ KeywordGen(NewBing,"sbmm","bing") 
+ print(" After KeyworGen") 
     
    
   
