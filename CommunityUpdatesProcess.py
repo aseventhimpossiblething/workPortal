@@ -178,6 +178,8 @@ def initialCommUpdatProcess():
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
+    print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
+    print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
     if MatchType=="SB":
      #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
@@ -190,6 +192,9 @@ def initialCommUpdatProcess():
    if SearchChan=="bing":
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv.replace("SBMM",MatchType)
+    print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
+    print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
+    print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
     if MatchType=="SB":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
      print("count ",count," Bing SB ::",Campaign_Nameing_Conv)  
