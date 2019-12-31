@@ -95,12 +95,14 @@ def filterNonParticipators(FrameToBeFiltered):
  return FilteredFrame 
  
 def MergeURLs(chan,chan2):
+ print("len(chan)",len(chan))
+ print("chan.count()",chan.count())
  print("MergeURLs() start for ",chan2)
  URLS="A";
  count=0;
  if chan2=="Bing":
   count=1;
- whilecount=chan.count()
+ whilecount=len(chan)
  if type(MaintatanceVar)!="<class 'int'>":
   whilecount=MaintatanceVar;
  while count < whilecount:
