@@ -1,3 +1,6 @@
+MaintananceLoops=3;
+print(type(MaintananceLoops))
+
 import glob
 import numpy
 import scipy
@@ -98,6 +101,7 @@ def MergeURLs(chan,chan2):
  count=0;
  if chan2=="Bing":
   count=1;
+ #if type(MaintananceLoops)!="int"  
  while count < 10000:
  #while count < chan.count():
   URLS=URLS+chan[count]
