@@ -178,24 +178,24 @@ def initialCommUpdatProcess():
     Campaign_Nameing_Conv.replace("SBMM",MatchType)
     if MatchType=="SB":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
-     print("Google SB",Campaign_Nameing_Conv)
+     print("count ",count," Google SB",Campaign_Nameing_Conv)
     if MatchType=="SX":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
-     print("Google SX",Campaign_Nameing_Conv)  
+     print("count ",count," Google SX",Campaign_Nameing_Conv)  
     else:
-     print("Unchanged So should be Google SBMM GPPC403 ",Campaign_Nameing_Conv)   
+     print("count ",count," Unchanged So should be Google SBMM GPPC403 ",Campaign_Nameing_Conv)   
    if SearchChan=="bing":
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv.replace("SBMM",MatchType)
     if MatchType=="SB":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
-     print("Bing SB",Campaign_Nameing_Conv)  
+     print("count ",count," Bing SB",Campaign_Nameing_Conv)  
     if MatchType=="SX":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201") 
-     print("Bing SX",Campaign_Nameing_Conv) 
+     print("count ",count," Bing SX",Campaign_Nameing_Conv) 
     else:
      print("Unchanged So should be Bing SBMM MSM403 ",Campaign_Nameing_Conv) 
-   print("Campaign_Nameing_Conv Output",Campaign_Nameing_Conv)  
+   print("count ",count," Campaign_Nameing_Conv Output",Campaign_Nameing_Conv)  
    count+=1; 
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType);  
  print(" Before KeyworGen") 
