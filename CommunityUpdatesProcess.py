@@ -189,6 +189,7 @@ def initialCommUpdatProcess():
    if SearchChan=="bing":
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv.replace("SBMM",MatchType)
+    print("MatchType is ",MatchType)
     print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
     print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
     print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
