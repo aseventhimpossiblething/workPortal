@@ -177,7 +177,7 @@ def initialCommUpdatProcess():
      print("NewDataFrame['Market ID']",NewDataFrame['Market ID']);
      Market_LookUp.SearchChan[NewDataFrame['Market ID']]
      print("Market_LookUp.SearchChan[NewDataFrame['Market ID']]" ,Market_LookUp.SearchChan[NewDataFrame['Market ID']])
-    if SearchChan=="google": 
+   if SearchChan=="google": 
      print("NewDataFrame['Market ID']",NewDataFrame['Market ID']);
      Market_LookUp.SearchChan[NewDataFrame['Market ID']]
      print("Market_LookUp.SearchChan[NewDataFrame['Market ID']]" ,Market_LookUp.SearchChan[NewDataFrame['Market ID']])
