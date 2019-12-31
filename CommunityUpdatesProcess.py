@@ -167,7 +167,7 @@ def initialCommUpdatProcess():
   Bid=[];
 
   count=0;
-  while count < whilecounter:
+  while count < 3:
   #while count < len(NewDataFrame['Market ID']):
    if SearchChan=="google":
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
