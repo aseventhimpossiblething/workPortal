@@ -172,12 +172,12 @@ def initialCommUpdatProcess():
   print("Market_LookUp.bing[308]",Market_LookUp.bing[308])
   while count < 6:
   #while count < len(NewDataFrame['Market ID']):
-   if SearchChan="bing":
+   if SearchChan=="bing":
     #if MatchType!="sx":
      print("NewDataFrame['Market ID']",NewDataFrame['Market ID']);
      Market_LookUp.SearchChan[NewDataFrame['Market ID']]
      print("Market_LookUp.SearchChan[NewDataFrame['Market ID']]" ,Market_LookUp.SearchChan[NewDataFrame['Market ID']])
-    if SearchChan="google": 
+    if SearchChan=="google": 
      print("NewDataFrame['Market ID']",NewDataFrame['Market ID']);
      Market_LookUp.SearchChan[NewDataFrame['Market ID']]
      print("Market_LookUp.SearchChan[NewDataFrame['Market ID']]" ,Market_LookUp.SearchChan[NewDataFrame['Market ID']])
