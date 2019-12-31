@@ -162,21 +162,22 @@ def initialCommUpdatProcess():
   Status=[];
   Bid=[];
   
-  Market_Lookup={5:"Dog",3:"Bees",
+  #Market_Lookup={5:"Dog",3:"Bees",
                  6:"Blacks"
                 };
   
   
   count=0;
-  print("len(NewDataFrame['Market ID'])",len(NewDataFrame['Market ID']));
+  print("len(NewDataFrame['Market ID']) ",len(NewDataFrame['Market ID']));
   #print("NewDataFrame['Market ID'].count()",NewDataFrame['Market ID'].count();
-  print("Market_LookUp.google[308]",Market_LookUp.google[308])
-  print("Market_LookUp.bing[308]",Market_LookUp.bing[308])
+  #print("Market_LookUp.google[308]",Market_LookUp.google[308])
+  #print("Market_LookUp.bing[308]",Market_LookUp.bing[308])
   while count < 6:
   #while count < len(NewDataFrame['Market ID']):
    if SearchChan=="google":
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
+    print("MatchType is ",MatchType)
     print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
     print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
     print("Matchtype Should be set here SBMM SB SX",Campaign_Nameing_Conv)
