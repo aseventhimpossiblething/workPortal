@@ -101,7 +101,8 @@ def MergeURLs(chan,chan2):
  count=0;
  if chan2=="Bing":
   count=1;
- #if type(MaintananceLoops)!="int"  
+ if type(MaintananceLoops)!="<class 'int'>" :
+  print("Passed Class test")
  while count < 10000:
  #while count < chan.count():
   URLS=URLS+chan[count]
@@ -217,6 +218,8 @@ def initialCommUpdatProcess():
  KeywordGen(NewBing,"sx","bing") 
  print(" After KeyworGen")
  print("type(MaintananceLoops)",type(MaintananceLoops))
+ if type(MaintananceLoops)!="<class 'int'>" :
+  print("Passed Class test")
     
    
   
