@@ -151,6 +151,7 @@ def initialCommUpdatProcess():
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
  
  def KeywordGen(NewDataFrame,MatchType,SearchChan):
+  numberofLoops=3;
   MatchType=MatchType.upper();
   SearchChan=SearchChan.lower();
   print("")
@@ -164,7 +165,7 @@ def initialCommUpdatProcess():
   Bid=[];
 
   count=0;
-  while count < 3:
+  while count < numberofLoops:
   #while count < len(NewDataFrame['Market ID']):
    if SearchChan=="google":
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
@@ -190,11 +191,15 @@ def initialCommUpdatProcess():
     else:
      print("count ",count," Default Bing SBMM MSM403 ",Campaign_Nameing_Conv)
    Campaign_Name.append(Campaign_Nameing_Conv);  
+   print("Testing Incomplete Loops Also Check Merge and Filter")
    print("count ",count," Campaign_Nameing_Conv Output ::",Campaign_Nameing_Conv) 
    print("________END CYCLE NUMBER______",count)
    count+=1;
   count=0; 
-  while count < len(NewDataFrame['Market ID']):
+  while count < numberofLoops:
+   print("Testing Incomplete Loops Also Check Merge and Filter")
+  #while count < len(NewDataFrame['Market ID']):
+  
    count+=1; 
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType); 
   
