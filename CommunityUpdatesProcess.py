@@ -95,12 +95,12 @@ def MergeURLs(chan,chan2):
  count=0;
  if chan2=="Bing":
   count=1;
- #while count < 10000:
- while count < chan.count():
+ while count < 10000:
+ #while count < chan.count():
   URLS=URLS+chan[count]
   if count % 20000 == 0:
    print(chan2," _ ",count)
-   #print("Low count setting in MergeURLS nonfunctional")
+   print("Low count setting in MergeURLS nonfunctional")
   count+=1
  print("end MergeURLs() for ",chan2)
  return URLS
