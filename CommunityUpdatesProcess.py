@@ -194,7 +194,7 @@ def initialCommUpdatProcess():
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201") 
      print("count ",count," Bing SX",Campaign_Nameing_Conv) 
     else:
-     print("Unchanged So should be Bing SBMM MSM403 ",Campaign_Nameing_Conv) 
+     print("count ",count," Unchanged So should be Bing SBMM MSM403 ",Campaign_Nameing_Conv) 
    print("count ",count," Campaign_Nameing_Conv Output",Campaign_Nameing_Conv)  
    count+=1; 
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType);  
