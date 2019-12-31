@@ -132,7 +132,7 @@ def communityCheck(checkby,checkin,Name):
    checkby=checkby.drop([count]);
    if count % 100==0:
     print("count ",count)
-    print("Community check set for testing lower throttle check Merge also ")
+    print("Community check set for testing lower throttle check Merge also ",Name)
   count+=1;
  checkby=checkby.reset_index()
  print("End Community Check for ",Name)
