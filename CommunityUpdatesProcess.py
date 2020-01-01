@@ -218,9 +218,10 @@ def initialCommUpdatProcess():
    print("Testing Incomplete Loops Also Check Merge and Filter Second While Loop is empty AdGroups Not Created")
    try:
     #print("2nd while Loopin successfully ",count)
-    #print("NewDataFrame['City'][count]",NewDataFrame['City'][count])
-    #print("NewDataFrame['State'][count]",NewDataFrame['State'][count])
-    
+    print("NewDataFrame['City'][count]",NewDataFrame['City'][count])
+    print("NewDataFrame['State'][count]",NewDataFrame['State'][count])
+    AdgroupNaming_conv=NewDataFrame['City'][count]+"_"+NewDataFrame['State'][count]+">"+NewDataFrame['Market ID'][count]+">"+NewDataFrame['Community Name'][count]+">"+NewDataFrame['Community Id'][count]           
+    print("AdgroupNaming_conv",AdgroupNaming_conv)
    except:
     print("2nd while Loop failed ",count)
   
