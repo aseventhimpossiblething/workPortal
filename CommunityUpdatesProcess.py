@@ -223,7 +223,9 @@ def initialCommUpdatProcess():
      print("AdgroupNaming_conv",AdgroupNaming_conv);
    except:
     print("2nd while Loop failed ",count);
-   count+=1; 
+   count+=1;
+  print("Campaign_Name.count()",Campaign_Name.count())  
+  print("Adgroup.count()",Adgroup.count()) 
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType); 
   
   
