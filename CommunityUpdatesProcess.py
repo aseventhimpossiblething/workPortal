@@ -203,7 +203,7 @@ def initialCommUpdatProcess():
       MatchType_Conv="Broad"
      if MatchType=="SX":
       Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201") 
-       MatchType_Conv="Exact"
+      MatchType_Conv="Exact"
       #print("count ",count," Bing SX ::",Campaign_Nameing_Conv) 
      if MatchType=="SBMM":
       Keyword_conv=NewDataFrame['Community Name'][count]
