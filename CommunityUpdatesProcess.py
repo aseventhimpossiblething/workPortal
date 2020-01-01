@@ -265,7 +265,7 @@ def initialCommUpdatProcess():
   print(NewDataFrame['City'][3296],NewDataFrame['State'][3296],NewDataFrame['Zip'][3296],NewDataFrame['Market ID'][3296],NewDataFrame['Market Name'][3296])
   print(NewDataFrame['City'][3310],NewDataFrame['State'][3310],NewDataFrame['Zip'][3310],NewDataFrame['Market ID'][3310],NewDataFrame['Market Name'][3310])
   print(NewDataFrame['City'][3312],NewDataFrame['State'][3312],NewDataFrame['Zip'][3312],NewDataFrame['Market ID'][3312],NewDataFrame['Market Name'][3312])
-  print(NewDataFrame['City'][3326],NewDataFrame['State'][3326],NewDataFrame['Zip'][3326],NewDataFrame['Market ID'][3326],NewDataFrame['Market Name'][3326])
+  print(NewDataFrame['City'][3325],NewDataFrame['State'][3325],NewDataFrame['Zip'][3325],NewDataFrame['Market ID'][3325],NewDataFrame['Market Name'][3325])
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType); 
   
   
