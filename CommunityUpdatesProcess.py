@@ -165,6 +165,7 @@ def initialCommUpdatProcess():
   print("")
   print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
   print("len(NewDataFrame['Market ID']) ",len(NewDataFrame['Market ID']));
+  Failed_Rows=[];
   Campaign_Name=[];
   Adgroup=[];
   Keyword=[];
@@ -231,12 +232,15 @@ def initialCommUpdatProcess():
   count=0 
   while count < hilecount:
    count+=1;
-  print("Campaign_Name.count() ",Campaign_Name.count())  
-  print("Adgroup.count() ",Adgroup.count()) 
-  print("Keyword.count() " ,Keyword.count())
-  print("Match_Type.count() ",Match_Type.count())
-  print("Status.count() ",Status.count())
-  print("Bid.count() ",Bid.count())
+  count=0 
+  while count < hilecount:
+   count+=1; 
+  print("len(Campaign_Name) ",len(Campaign_Name))  
+  print("len(Adgroup)) ",len(Adgroup)) 
+  print("len(Keyword) " ,len(Keyword))
+  print("len(Match_Type) ",len(Match_Type))
+  print("len(Status) ",len(Status))
+  print("len(Bid) ",len(Bid))
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType); 
   
   
