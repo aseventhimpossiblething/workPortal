@@ -215,7 +215,7 @@ def initialCommUpdatProcess():
     #print("________END CYCLE NUMBER______",count)
    
    
-   #except:
+    #except:
     #NewDataFrame=NewDataFrame.drop([count])
     #print("Failed Attempt Market_LookUp.google[NewDataFrame['Market ID'][count]]")
     #print("________END CYCLE NUMBER______",count)
