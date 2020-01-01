@@ -177,6 +177,7 @@ def initialCommUpdatProcess():
   hilecount=len(NewDataFrame['Market ID']);
   Keyword_conv=0; 
   MatchType_Conv=0;
+  set_bid=.30;
   if type(MaintatanceVar)=="<class 'int'>":
    hilecount=MaintatanceVar;
   while count < hilecount:
@@ -193,6 +194,7 @@ def initialCommUpdatProcess():
      if MatchType=="SX":
       Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
       MatchType_Conv="Exact"
+      set_bid=.35;
     if SearchChan=="bing":
      Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
@@ -204,6 +206,7 @@ def initialCommUpdatProcess():
      if MatchType=="SX":
       Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201") 
       MatchType_Conv="Exact"
+      set_bid=.35;
       #print("count ",count," Bing SX ::",Campaign_Nameing_Conv) 
      if MatchType=="SBMM":
       Keyword_conv=NewDataFrame['Community Name'][count]
@@ -218,6 +221,7 @@ def initialCommUpdatProcess():
     Keyword.append(Keyword_conv)
     Match_Type.append(MatchType_Conv)
     Status.append("Active")
+    Bid.append(set_bid)
     
     #print("Testing Incomplete Loops Also Check Merge and Filter")
     #print("count ",count," Campaign_Nameing_Conv Output ::",Campaign_Nameing_Conv) 
