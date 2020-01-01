@@ -224,6 +224,13 @@ def initialCommUpdatProcess():
    except:
     print("2nd while Loop failed ",count);
    count+=1;
+  hilecount=0 
+  count=0;
+  while count < hilecount:
+   count+=1;
+  count=0 
+  while count < hilecount:
+   count+=1;
   print("Campaign_Name.count() ",Campaign_Name.count())  
   print("Adgroup.count() ",Adgroup.count()) 
   print("Keyword.count() " ,Keyword.count())
