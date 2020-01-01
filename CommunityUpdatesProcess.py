@@ -230,8 +230,10 @@ def initialCommUpdatProcess():
   count=0;
   while count < hilecount:
    try:
+    print("try")
     
-   except: 
+   except:
+    print("except")
    count+=1;
   count=0 
   while count < hilecount:
