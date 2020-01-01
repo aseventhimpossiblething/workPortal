@@ -241,6 +241,12 @@ def initialCommUpdatProcess():
   count=0 
   while count < hilecount:
    count+=1; 
+  print("NewDataFrame.iloc[[0]] ",NewDataFrame.iloc[[0]])
+  print("NewDataFrame.iloc[[3296]] ",NewDataFrame.iloc[[3296]]) 
+  print("NewDataFrame.iloc[[3310]] ",NewDataFrame.iloc[[3310]]) 
+  print("NewDataFrame.iloc[[3312]] ",NewDataFrame.iloc[[3312]]) 
+  print("NewDataFrame.iloc[[3326]] ",NewDataFrame.iloc[[3326]])
+  #print("NewDataFrame.iloc[[]] ",NewDataFrame.iloc[[]]) 
   print("numberofLoops ",numberofLoops) 
   print("NewDataFrame.count() ",NewDataFrame.count())  
   print("len(Campaign_Name) ",len(Campaign_Name))  
