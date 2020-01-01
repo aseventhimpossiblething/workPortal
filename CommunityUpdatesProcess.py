@@ -251,10 +251,11 @@ def initialCommUpdatProcess():
     
     if count % 100==0:
      print("AdgroupNaming_conv",AdgroupNaming_conv);
-   """
+   
+    """
    except:
     print("2nd while Loop failed ",count);
-   """ 
+    """ 
   
    count+=1; 
   
