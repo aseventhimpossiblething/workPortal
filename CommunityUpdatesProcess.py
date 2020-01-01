@@ -252,12 +252,12 @@ def initialCommUpdatProcess():
     if count % 100==0:
      print("AdgroupNaming_conv",AdgroupNaming_conv);
    
-    """
-    #except:
-    print("2nd while Loop failed ",count);
-    """ 
+     """
+     #except:
+     print("2nd while Loop failed ",count);
+     """ 
   
-   count+=1; 
+    count+=1; 
   
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType); 
   
