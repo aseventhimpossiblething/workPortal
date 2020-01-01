@@ -130,7 +130,7 @@ def communityCheck(checkby,checkin,Name):
   if checkin.find(str(checkby['Community Id'][count]))>-1:
    DropRows.append(count);
    checkby=checkby.drop([count]);
-   if count % 2000==0:
+   if count % 000==0:
     print("count ",count)
     print("Community check set for testing lower throttle check Merge also ",Name)
   count+=1;
@@ -163,7 +163,7 @@ def initialCommUpdatProcess():
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
  
  def KeywordGen(NewDataFrame,MatchType,SearchChan):
-  numberofLoops=3;
+  #numberofLoops=3;
   MatchType=MatchType.upper();
   SearchChan=SearchChan.lower();
   print("")
@@ -215,13 +215,14 @@ def initialCommUpdatProcess():
    count+=1;
   count=0;  
   while count < hilecount:
-   print("Testing Incomplete Loops Also Check Merge and Filter Second While Loop is empty AdGroups Not Created")
+   #print("Testing Incomplete Loops Also Check Merge and Filter Second While Loop is empty AdGroups Not Created")
    try:
     #print("2nd while Loopin successfully ",count)
-    print("NewDataFrame['City'][count]",NewDataFrame['City'][count])
-    print("NewDataFrame['State'][count]",NewDataFrame['State'][count])
+    #print("NewDataFrame['City'][count]",NewDataFrame['City'][count])
+    #print("NewDataFrame['State'][count]",NewDataFrame['State'][count])
     AdgroupNaming_conv=NewDataFrame['City'][count]+"_"+NewDataFrame['State'][count]+">"+NewDataFrame['Market ID'][count]+">"+NewDataFrame['Community Name'][count]+">"+NewDataFrame['Community Id'][count]           
-    print("AdgroupNaming_conv",AdgroupNaming_conv)
+    if count % 1000==0:
+     print("AdgroupNaming_conv",AdgroupNaming_conv)
    except:
     print("2nd while Loop failed ",count)
   
