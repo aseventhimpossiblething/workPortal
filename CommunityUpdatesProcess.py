@@ -219,7 +219,7 @@ def initialCommUpdatProcess():
     #NewDataFrame=NewDataFrame.drop([count])
     #print("Failed Attempt Market_LookUp.google[NewDataFrame['Market ID'][count]]")
     #print("________END CYCLE NUMBER______",count)
-   count+=1;
+    count+=1;
    
   count=0;  
   while count < hilecount:
