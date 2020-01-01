@@ -218,6 +218,8 @@ def initialCommUpdatProcess():
    print("Testing Incomplete Loops Also Check Merge and Filter Second WHile Loop is empty AdGroups Not Created")
    try:
     print("2nd while Loopin successfully ",count)
+    print("NewDataFrame['City'][count]",NewDataFrame['City'][count])
+    print("NewDataFrame['State'][count]",NewDataFrame['State'][count])
     
    except:
     print("2nd while Loop failed ",count)
