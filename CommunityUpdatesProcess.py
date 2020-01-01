@@ -185,28 +185,30 @@ def initialCommUpdatProcess():
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
      if MatchType=="SB":
       Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
-      #print("count ",count," Google SB ::",Campaign_Nameing_Conv)
+      Keyword_conv=NewDataFrame['Community Name'][count]
+      Keyword_conv=Keyword_conv.replace(" "," +")      
      if MatchType=="SX":
       Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
-      #print("count ",count," Google SX ::",Campaign_Nameing_Conv)  
-     #else:
-      #print("count ",count," Default Google SBMM GPPC403 :: ",Campaign_Nameing_Conv)   
     if SearchChan=="bing":
      Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
      if MatchType=="SB":
       Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
-      #print("count ",count," Bing SB ::",Campaign_Nameing_Conv)  
+      Keyword_conv=NewDataFrame['Community Name'][count]
+      Keyword_conv=Keyword_conv.replace(" "," +")    
      if MatchType=="SX":
       Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201") 
       #print("count ",count," Bing SX ::",Campaign_Nameing_Conv) 
-     #else:
+     if MatchType=="SBMM":
+      Keyword_conv=NewDataFrame['Community Name'][count]
+      Keyword_conv=Keyword_conv.replace(" "," +")    
       #print("count ",count," Default Bing SBMM MSM403 ",Campaign_Nameing_Conv)
     Campaign_Name.append(Campaign_Nameing_Conv);
     
     AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
     #print("count ",count,"AdgroupNaming_conv",AdgroupNaming_conv)
     Adgroup.append(AdgroupNaming_conv)
+    Keyword.append(Keyword_conv)
     
     #print("Testing Incomplete Loops Also Check Merge and Filter")
     #print("count ",count," Campaign_Nameing_Conv Output ::",Campaign_Nameing_Conv) 
