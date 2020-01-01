@@ -159,7 +159,7 @@ def initialCommUpdatProcess():
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
  
  def KeywordGen(NewDataFrame,MatchType,SearchChan):
-  #numberofLoops=3;
+  numberofLoops=NewDataFrame.count();
   MatchType=MatchType.upper();
   SearchChan=SearchChan.lower();
   print("")
@@ -239,6 +239,8 @@ def initialCommUpdatProcess():
   count=0 
   while count < hilecount:
    count+=1; 
+  print("numberofLoops ",numberofLoops) 
+  print("NewDataFrame.count() ",NewDataFrame.count())  
   print("len(Campaign_Name) ",len(Campaign_Name))  
   print("len(Adgroup)) ",len(Adgroup)) 
   print("len(Keyword) " ,len(Keyword))
