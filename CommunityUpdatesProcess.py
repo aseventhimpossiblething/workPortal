@@ -260,6 +260,7 @@ def initialCommUpdatProcess():
   print("len(Match_Type) ",len(Match_Type))
   print("len(Status) ",len(Status))
   print("len(Bid) ",len(Bid))
+  print(NewDataFrame)
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType); 
   
   
