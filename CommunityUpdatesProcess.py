@@ -183,7 +183,7 @@ def initialCommUpdatProcess():
   while count < hilecount:
    print("NewDataFrame['Market ID'][count]",NewDataFrame['Market ID'][count])
    try:
-    print("Successful AttemptMarket_LookUp.google[NewDataFrame['Market ID'][count]]",Market_LookUp.google[NewDataFrame['Market ID'][count]])
+    #print("Successful AttemptMarket_LookUp.google[NewDataFrame['Market ID'][count]]",Market_LookUp.google[NewDataFrame['Market ID'][count]])
     #except:
     #print("Failed Attempt Market_LookUp.google[NewDataFrame['Market ID'][count]]")
      
