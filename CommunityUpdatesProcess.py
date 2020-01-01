@@ -226,10 +226,10 @@ def initialCommUpdatProcess():
    count+=1;
   print("Campaign_Name.count() ",Campaign_Name.count())  
   print("Adgroup.count() ",Adgroup.count()) 
-  print("Keyword " ,Keyword)
-  print("Match_Type ",Match_Type)
-  print("Status ",Status)
-  print("Bid ",Bid)
+  print("Keyword.count() " ,Keyword.count())
+  print("Match_Type.count() ",Match_Type.count())
+  print("Status.count() ",Status.count())
+  print("Bid.count() ",Bid.count())
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType); 
   
   
