@@ -215,10 +215,10 @@ def initialCommUpdatProcess():
     #print("count ",count," Campaign_Nameing_Conv Output ::",Campaign_Nameing_Conv) 
     #print("________END CYCLE NUMBER______",count)
    except:
-    #print("Failed Attempt Market_LookUp.google[NewDataFrame['Market ID'][count]]")
-    #print("________END CYCLE NUMBER______",count)
+    print("Failed Attempt Market_LookUp.google[NewDataFrame['Market ID'][count]]")
+    print("________END CYCLE NUMBER______",count)
    count+=1;
-  #count=0; 
+  count=0; 
   """
   while count < hilecount:
    print("Testing Incomplete Loops Also Check Merge and Filter Second WHile Loop is empty AdGroups Not Created")
