@@ -159,12 +159,12 @@ def initialCommUpdatProcess():
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
  
  def KeywordGen(NewDataFrame,MatchType,SearchChan):
-  numberofLoops=NewDataFrame.count();
+  #numberofLoops=NewDataFrame.count();
   MatchType=MatchType.upper();
   SearchChan=SearchChan.lower();
   print("")
   print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
-  print("len(NewDataFrame['Market ID']) ",len(NewDataFrame['Market ID']));
+  #print("len(NewDataFrame['Market ID']) ",len(NewDataFrame['Market ID']));
   Failed_Rows=[];
   Campaign_Name=[];
   Adgroup=[];
@@ -234,40 +234,7 @@ def initialCommUpdatProcess():
     print("________END CYCLE NUMBER______",count)
    count+=1;
    
-  count=0;  
-  while count < hilecount:
-  #print("Testing Incomplete Loops Also Check Merge and Filter Second While Loop is empty AdGroups Not Created")
-   """
-   try:
-    #print("2nd while Loopin successfully ",count)
-    #print("NewDataFrame['City'][count]",NewDataFrame['City'][count])
-    #print("NewDataFrame['State'][count]",NewDataFrame['State'][count])
-    
-    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
-    #print("count ",count,"AdgroupNaming_conv",AdgroupNaming_conv)
-    Adgroup.append(AdgroupNaming_conv)
-    
-    if count % 1000==0:     
-     print("AdgroupNaming_conv",AdgroupNaming_conv);
-   except:
-    print("2nd while Loop failed ",count);
-   """
-   count+=1;
-  hilecount=0 
-  count=0;
-  while count < hilecount:
-   try:
-    print("try")
-    
-   except:
-    print("except")
-   count+=1;
-  count=0 
-  while count < hilecount:
-   count+=1;
-  count=0 
-  while count < hilecount:
-   count+=1; 
+  """
   print("________________________________________________________")  
   print("NewDataFrame.iloc[[0]] ",NewDataFrame.iloc[[0]])
   print("________________________________________________________") 
@@ -276,25 +243,27 @@ def initialCommUpdatProcess():
   print("NewDataFrame.iloc[[3310]] ",NewDataFrame.iloc[[3310]]) 
   print("________________________________________________________") 
   print("NewDataFrame.iloc[[3311]] ",NewDataFrame.iloc[[3311]]) 
-  print("________________________________________________________") 
+  print("________________________________________________________")
+  """
   #print("NewDataFrame.iloc[[3326]] ",NewDataFrame.iloc[[3326]])
   #print("NewDataFrame.iloc[[]] ",NewDataFrame.iloc[[]]) 
-  print("numberofLoops ",numberofLoops) 
+  #print("numberofLoops ",numberofLoops) 
   print("NewDataFrame.count() ",NewDataFrame.count())  
   print("len(Campaign_Name) ",len(Campaign_Name))  
-  print("len(Adgroup)) ",len(Adgroup)) 
+  print("len(Adgroup) ",len(Adgroup)) 
   print("len(Keyword) " ,len(Keyword))
   print("len(Match_Type) ",len(Match_Type))
   print("len(Status) ",len(Status))
   print("len(Bid) ",len(Bid))
-  print(NewDataFrame)
+  """
+  #print(NewDataFrame)
   print(NewDataFrame['City'][1],NewDataFrame['State'][1],NewDataFrame['Zip'][1],NewDataFrame['Market ID'][1],NewDataFrame['Market Name'][1])
   print(NewDataFrame['City'][3296],NewDataFrame['State'][3296],NewDataFrame['Zip'][3296],NewDataFrame['Market ID'][3296],NewDataFrame['Market Name'][3296])
   print(NewDataFrame['City'][3310],NewDataFrame['State'][3310],NewDataFrame['Zip'][3310],NewDataFrame['Market ID'][3310],NewDataFrame['Market Name'][3310])
   print(NewDataFrame['City'][3312],NewDataFrame['State'][3312],NewDataFrame['Zip'][3312],NewDataFrame['Market ID'][3312],NewDataFrame['Market Name'][3312])
   print(NewDataFrame['City'][3325],NewDataFrame['State'][3325],NewDataFrame['Zip'][3325],NewDataFrame['Market ID'][3325],NewDataFrame['Market Name'][3325])
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType); 
-  
+  """
   
  print(" Before KeyworGen") 
  KeywordGen(NewGoogle,"sbmm","google")
