@@ -217,15 +217,19 @@ def initialCommUpdatProcess():
     #print("NewDataFrame['City'][count]",NewDataFrame['City'][count])
     #print("NewDataFrame['State'][count]",NewDataFrame['State'][count])
     AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
-    print("count ",count,"AdgroupNaming_conv",AdgroupNaming_conv)
+    #print("count ",count,"AdgroupNaming_conv",AdgroupNaming_conv)
     Adgroup.append(AdgroupNaming_conv)
     if count % 1000==0:
      print("AdgroupNaming_conv",AdgroupNaming_conv);
    except:
     print("2nd while Loop failed ",count);
    count+=1;
-  print("Campaign_Name.count()",Campaign_Name.count())  
-  print("Adgroup.count()",Adgroup.count()) 
+  print("Campaign_Name.count() ",Campaign_Name.count())  
+  print("Adgroup.count() ",Adgroup.count()) 
+  print("Keyword " ,Keyword)
+  print("Match_Type ",Match_Type)
+  print("Status ",Status)
+  print("Bid ",Bid)
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType); 
   
   
