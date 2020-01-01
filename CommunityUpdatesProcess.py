@@ -208,7 +208,7 @@ def initialCommUpdatProcess():
      if MatchType=="SX":
       Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201") 
       #print("count ",count," Bing SX ::",Campaign_Nameing_Conv) 
-     else:
+     #else:
       #print("count ",count," Default Bing SBMM MSM403 ",Campaign_Nameing_Conv)
     Campaign_Name.append(Campaign_Nameing_Conv);  
     #print("Testing Incomplete Loops Also Check Merge and Filter")
