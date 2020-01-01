@@ -253,7 +253,7 @@ def initialCommUpdatProcess():
      print("AdgroupNaming_conv",AdgroupNaming_conv);
    
     """
-   #except:
+    #except:
     print("2nd while Loop failed ",count);
     """ 
   
