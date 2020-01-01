@@ -219,17 +219,11 @@ def initialCommUpdatProcess():
     AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
     print("count ",count,"AdgroupNaming_conv",AdgroupNaming_conv)
     Adgroup.append(AdgroupNaming_conv)
-    
     if count % 1000==0:
      print("AdgroupNaming_conv",AdgroupNaming_conv);
-     
-   
    except:
     print("2nd while Loop failed ",count);
-    
-  
    count+=1; 
-  
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType); 
   
   
