@@ -216,10 +216,12 @@ def initialCommUpdatProcess():
     #print("2nd while Loopin successfully ",count)
     #print("NewDataFrame['City'][count]",NewDataFrame['City'][count])
     #print("NewDataFrame['State'][count]",NewDataFrame['State'][count])
+    
+    """
     AdgroupNaming_conv=str(NewDataFrame['City'][count])
     print("no 1 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv)
     
-    """
+   
     AdgroupNaming_conv=AdgroupNaming_conv+"_"
     print("no 2 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv
     
