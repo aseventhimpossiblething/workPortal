@@ -261,6 +261,7 @@ def initialCommUpdatProcess():
   print("len(Status) ",len(Status))
   print("len(Bid) ",len(Bid))
   print(NewDataFrame)
+  print(NewDataFrame['City'],NewDataFrame['State'],NewDataFrame['Zip'],NewDataFrame['Market Id'],NewDataFrame['Market Name'])
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType); 
   
   
