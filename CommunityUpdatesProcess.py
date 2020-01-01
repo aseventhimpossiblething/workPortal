@@ -180,7 +180,7 @@ def initialCommUpdatProcess():
    hilecount=MaintatanceVar;
   while count < hilecount:
    #print("NewDataFrame['Market ID'][count]",NewDataFrame['Market ID'][count])
-   #try:
+   try:
     if SearchChan=="google":
      Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
@@ -216,11 +216,11 @@ def initialCommUpdatProcess():
     #print("________END CYCLE NUMBER______",count)
    
    
-    #except:
-    #NewDataFrame=NewDataFrame.drop([count])
-    #print("Failed Attempt Market_LookUp.google[NewDataFrame['Market ID'][count]]")
-    #print("________END CYCLE NUMBER______",count)
-    count+=1;
+   except:
+    NewDataFrame=NewDataFrame.drop([count])
+    print("Failed Attempt Market_LookUp.google[NewDataFrame['Market ID'][count]]")
+    print("________END CYCLE NUMBER______",count)
+   count+=1;
    
   count=0;  
   while count < hilecount:
