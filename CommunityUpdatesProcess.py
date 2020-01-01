@@ -216,16 +216,17 @@ def initialCommUpdatProcess():
     #print("2nd while Loopin successfully ",count)
     #print("NewDataFrame['City'][count]",NewDataFrame['City'][count])
     #print("NewDataFrame['State'][count]",NewDataFrame['State'][count])
-    AdgroupNaming_conv=NewDataFrame['City'][count]
+    AdgroupNaming_conv=str(NewDataFrame['City'][count])
     print("no 1 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv)
     
-    AdgroupNaming_conv=NewDataFrame['City'][count]+"_"
+    """
+    AdgroupNaming_conv=AdgroupNaming_conv+"_"
     print("no 2 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv
     
     AdgroupNaming_conv=str(NewDataFrame['City'][count])+"_"+str(NewDataFrame['State'][count])
     print("no 3 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv
     
-    """     
+        
     AdgroupNaming_conv=NewDataFrame['City'][count]+"_"+NewDataFrame['State'][count]+">"
     print("no 4 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv
     
@@ -240,10 +241,12 @@ def initialCommUpdatProcess():
     
     AdgroupNaming_conv=NewDataFrame['City'][count]+"_"+NewDataFrame['State'][count]+">"+NewDataFrame['Market ID'][count]+">"+NewDataFrame['Community Name'][count]+">"
     print("no 8 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv 
-    
-    AdgroupNaming_conv=NewDataFrame['City'][count]+"_"+NewDataFrame['State'][count]+">"+NewDataFrame['Market ID'][count]+">"+NewDataFrame['Community Name'][count]+">"+NewDataFrame['Community Id'][count]           
-    print("no 9 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv
     """
+    
+    
+    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
+    print("no 9 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv
+    
     if count % 1000==0:
      print("AdgroupNaming_conv",AdgroupNaming_conv)
    """
