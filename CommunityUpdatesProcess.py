@@ -193,37 +193,39 @@ def initialCommUpdatProcess():
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
      if MatchType=="SB":
       Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
-      print("count ",count," Google SB ::",Campaign_Nameing_Conv)
+      #print("count ",count," Google SB ::",Campaign_Nameing_Conv)
      if MatchType=="SX":
       Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
-      print("count ",count," Google SX ::",Campaign_Nameing_Conv)  
-     else:
-      print("count ",count," Default Google SBMM GPPC403 :: ",Campaign_Nameing_Conv)   
+      #print("count ",count," Google SX ::",Campaign_Nameing_Conv)  
+     #else:
+      #print("count ",count," Default Google SBMM GPPC403 :: ",Campaign_Nameing_Conv)   
     if SearchChan=="bing":
      Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
      if MatchType=="SB":
       Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
-      print("count ",count," Bing SB ::",Campaign_Nameing_Conv)  
+      #print("count ",count," Bing SB ::",Campaign_Nameing_Conv)  
      if MatchType=="SX":
       Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201") 
-      print("count ",count," Bing SX ::",Campaign_Nameing_Conv) 
+      #print("count ",count," Bing SX ::",Campaign_Nameing_Conv) 
      else:
-      print("count ",count," Default Bing SBMM MSM403 ",Campaign_Nameing_Conv)
+      #print("count ",count," Default Bing SBMM MSM403 ",Campaign_Nameing_Conv)
     Campaign_Name.append(Campaign_Nameing_Conv);  
-    print("Testing Incomplete Loops Also Check Merge and Filter")
-    print("count ",count," Campaign_Nameing_Conv Output ::",Campaign_Nameing_Conv) 
-    print("________END CYCLE NUMBER______",count)
+    #print("Testing Incomplete Loops Also Check Merge and Filter")
+    #print("count ",count," Campaign_Nameing_Conv Output ::",Campaign_Nameing_Conv) 
+    #print("________END CYCLE NUMBER______",count)
    except:
-    print("Failed Attempt Market_LookUp.google[NewDataFrame['Market ID'][count]]")
-    print("________END CYCLE NUMBER______",count)
+    #print("Failed Attempt Market_LookUp.google[NewDataFrame['Market ID'][count]]")
+    #print("________END CYCLE NUMBER______",count)
    count+=1;
   count=0; 
-  while count < numberofLoops:
-   print("Testing Incomplete Loops Also Check Merge and Filter")
+  """
+  while count < hilecount:
+   print("Testing Incomplete Loops Also Check Merge and Filter Second WHile Loop is empty AdGroups Not Created")
   #while count < len(NewDataFrame['Market ID']):
   
    count+=1; 
+   """
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType); 
   
   
