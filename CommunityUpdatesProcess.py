@@ -183,11 +183,6 @@ def initialCommUpdatProcess():
   while count < hilecount:
    #print("NewDataFrame['Market ID'][count]",NewDataFrame['Market ID'][count])
    try:
-    #print("Successful AttemptMarket_LookUp.google[NewDataFrame['Market ID'][count]]",Market_LookUp.google[NewDataFrame['Market ID'][count]])
-    #except:
-    #print("Failed Attempt Market_LookUp.google[NewDataFrame['Market ID'][count]]")
-     
-    #while count < len(NewDataFrame['Market ID']):
     if SearchChan=="google":
      Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
@@ -218,14 +213,17 @@ def initialCommUpdatProcess():
     print("Failed Attempt Market_LookUp.google[NewDataFrame['Market ID'][count]]")
     print("________END CYCLE NUMBER______",count)
    count+=1;
-  count=0; 
-  """
+  count=0;  
   while count < hilecount:
    print("Testing Incomplete Loops Also Check Merge and Filter Second WHile Loop is empty AdGroups Not Created")
-  #while count < len(NewDataFrame['Market ID']):
+   try:
+    print("2nd while Loopin successfully ",count)
+    
+   except:
+    print("2nd while Loop failed ",count)
   
    count+=1; 
-   """
+  
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType); 
   
   
