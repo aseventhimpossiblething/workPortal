@@ -181,7 +181,7 @@ def initialCommUpdatProcess():
   if type(MaintatanceVar)=="<class 'int'>":
    hilecount=MaintatanceVar;
   while count < hilecount:
-   print("NewDataFrame['Market ID'][count]",NewDataFrame['Market ID'][count])
+   #print("NewDataFrame['Market ID'][count]",NewDataFrame['Market ID'][count])
    try:
     #print("Successful AttemptMarket_LookUp.google[NewDataFrame['Market ID'][count]]",Market_LookUp.google[NewDataFrame['Market ID'][count]])
     #except:
