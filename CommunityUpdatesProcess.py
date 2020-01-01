@@ -175,6 +175,7 @@ def initialCommUpdatProcess():
 
   count=0;
   hilecount=len(NewDataFrame['Market ID']);
+  Keyword_conv=0;  
   if type(MaintatanceVar)=="<class 'int'>":
    hilecount=MaintatanceVar;
   while count < hilecount:
