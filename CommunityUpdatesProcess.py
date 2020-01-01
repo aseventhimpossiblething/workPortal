@@ -202,7 +202,12 @@ def initialCommUpdatProcess():
       #print("count ",count," Bing SX ::",Campaign_Nameing_Conv) 
      #else:
       #print("count ",count," Default Bing SBMM MSM403 ",Campaign_Nameing_Conv)
-    Campaign_Name.append(Campaign_Nameing_Conv);  
+    Campaign_Name.append(Campaign_Nameing_Conv);
+    
+    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
+    #print("count ",count,"AdgroupNaming_conv",AdgroupNaming_conv)
+    Adgroup.append(AdgroupNaming_conv)
+    
     #print("Testing Incomplete Loops Also Check Merge and Filter")
     #print("count ",count," Campaign_Nameing_Conv Output ::",Campaign_Nameing_Conv) 
     #print("________END CYCLE NUMBER______",count)
@@ -214,17 +219,21 @@ def initialCommUpdatProcess():
   count=0;  
   while count < hilecount:
   #print("Testing Incomplete Loops Also Check Merge and Filter Second While Loop is empty AdGroups Not Created")
+   """
    try:
     #print("2nd while Loopin successfully ",count)
     #print("NewDataFrame['City'][count]",NewDataFrame['City'][count])
     #print("NewDataFrame['State'][count]",NewDataFrame['State'][count])
+    
     AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
     #print("count ",count,"AdgroupNaming_conv",AdgroupNaming_conv)
     Adgroup.append(AdgroupNaming_conv)
-    if count % 1000==0:
+    
+    if count % 1000==0:     
      print("AdgroupNaming_conv",AdgroupNaming_conv);
    except:
     print("2nd while Loop failed ",count);
+   """
    count+=1;
   hilecount=0 
   count=0;
