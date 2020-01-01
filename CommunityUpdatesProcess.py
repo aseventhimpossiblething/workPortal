@@ -212,15 +212,43 @@ def initialCommUpdatProcess():
   count=0;  
   while count < hilecount:
    #print("Testing Incomplete Loops Also Check Merge and Filter Second While Loop is empty AdGroups Not Created")
-   try:
+   #try:
     #print("2nd while Loopin successfully ",count)
     #print("NewDataFrame['City'][count]",NewDataFrame['City'][count])
     #print("NewDataFrame['State'][count]",NewDataFrame['State'][count])
+    AdgroupNaming_conv=NewDataFrame['City'][count]
+    print("no 1 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv)
+    
+    AdgroupNaming_conv=NewDataFrame['City'][count]+"_"
+    print("no 2 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv
+    
+    AdgroupNaming_conv=NewDataFrame['City'][count]+"_"+NewDataFrame['State'][count]
+    print("no 3 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv
+    
+    AdgroupNaming_conv=NewDataFrame['City'][count]+"_"+NewDataFrame['State'][count]+">"
+    print("no 4 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv
+    
+    AdgroupNaming_conv=NewDataFrame['City'][count]+"_"+NewDataFrame['State'][count]+">"+NewDataFrame['Market ID'][count]
+    print("no 5 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv
+     
+    AdgroupNaming_conv=NewDataFrame['City'][count]+"_"+NewDataFrame['State'][count]+">"+NewDataFrame['Market ID'][count]+">" 
+    print("no 6 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv
+    
+    AdgroupNaming_conv=NewDataFrame['City'][count]+"_"+NewDataFrame['State'][count]+">"+NewDataFrame['Market ID'][count]+">"+NewDataFrame['Community Name'][count]
+    print("no 7 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv
+    
+    AdgroupNaming_conv=NewDataFrame['City'][count]+"_"+NewDataFrame['State'][count]+">"+NewDataFrame['Market ID'][count]+">"+NewDataFrame['Community Name'][count]+">"
+    print("no 8 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv 
+    
     AdgroupNaming_conv=NewDataFrame['City'][count]+"_"+NewDataFrame['State'][count]+">"+NewDataFrame['Market ID'][count]+">"+NewDataFrame['Community Name'][count]+">"+NewDataFrame['Community Id'][count]           
+    print("no 9 ","count ",count,"AdgroupNaming_conv",AdgroupNaming_conv
+    
     if count % 1000==0:
      print("AdgroupNaming_conv",AdgroupNaming_conv)
+   """
    except:
-    print("2nd while Loop failed ",count)
+    print("2nd while Loop failed ",count);
+   """ 
   
    count+=1; 
   
