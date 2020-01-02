@@ -158,6 +158,7 @@ def initialCommUpdatProcess():
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
  
+ expDataCol=[];
  def KeywordGen(NewDataFrame,MatchType,SearchChan):
   #numberofLoops=NewDataFrame.count();
   MatchType=MatchType.upper();
@@ -230,8 +231,9 @@ def initialCommUpdatProcess():
    
    except:
     NewDataFrame=NewDataFrame.drop([count])
-    print("Failed Attempt Market_LookUp.google[NewDataFrame['Market ID'][count]]")
-    print("________END CYCLE NUMBER______",count)
+    expDataCol.append(count)
+    #print("Failed Attempt Market_LookUp.google[NewDataFrame['Market ID'][count]]")
+    #print("________END CYCLE NUMBER______",count)
    count+=1;
    
   """
@@ -248,7 +250,7 @@ def initialCommUpdatProcess():
   #print("NewDataFrame.iloc[[3326]] ",NewDataFrame.iloc[[3326]])
   #print("NewDataFrame.iloc[[]] ",NewDataFrame.iloc[[]]) 
   #print("numberofLoops ",numberofLoops) 
-  print("NewDataFrame.count() ",NewDataFrame.count())  
+  #print("NewDataFrame.count() ",NewDataFrame.count())  
   print("len(Campaign_Name) ",len(Campaign_Name))  
   print("len(Adgroup) ",len(Adgroup)) 
   print("len(Keyword) " ,len(Keyword))
