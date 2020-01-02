@@ -305,19 +305,21 @@ def initialCommUpdatProcess():
     NewDataFrame=NewDataFrame.drop([count])
     expDataCol.append(count)
    count+=1;
-   
+  
   print("len(Campaign_Name) ",len(Campaign_Name))  
   print("len(Adgroup) ",len(Adgroup)) 
   print("len(Keyword) " ,len(Keyword))
   print("len(Match_Type) ",len(Match_Type))
   print("len(Status) ",len(Status))
   print("len(Bid) ",len(Bid))
+  """
+  
  """  
  
  print("expDataCol",expDataCol)
  print("len(expDataCol)",len(expDataCol))
  print(" Before KeyworGen") 
- """
+ 
  KeywordGen(NewGoogle,"sbmm","google")
  print("len(expDataCol)",len(expDataCol))
  KeywordGen(NewGoogle,"sb","google")
@@ -329,11 +331,11 @@ def initialCommUpdatProcess():
  KeywordGen(NewBing,"sb","bing")
  print("len(expDataCol)",len(expDataCol))
  KeywordGen(NewBing,"sx","bing") 
- """
+ 
  print(" After KeyworGen")
  print("")
  print("",)
- """
+ 
  KeywordGen(NewGoogle,"sbmm","google")
  KeywordGen(NewGoogle,"sb","google")
  KeywordGen(NewGoogle,"sx","google")
@@ -342,7 +344,7 @@ def initialCommUpdatProcess():
  KeywordGen(NewBing,"sx","bing") 
  print("expDataCol",expDataCol)
  """
- 
+ """
  print("")
  print('KeywordGen(NewGoogle,"sbmm","google")[0]',KeywordGen(NewGoogle,"sbmm","google")[0])
  print('KeywordGen(NewGoogle,"sb","google")[0]',KeywordGen(NewGoogle,"sb","google")[0])
@@ -352,6 +354,7 @@ def initialCommUpdatProcess():
  print(' KeywordGen(NewBing,"sx","bing")[0]',KeywordGen(NewBing,"sx","bing")[0])
  print('')
  print('')
+ """
  
  print("expDataCol",expDataCol)
  
