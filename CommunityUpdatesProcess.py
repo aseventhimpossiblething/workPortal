@@ -335,6 +335,7 @@ def initialCommUpdatProcess():
  print(" After KeyworGen")
  print("")
  print("",)
+ """
  
  KeywordGen(NewGoogle,"sbmm","google")
  KeywordGen(NewGoogle,"sb","google")
@@ -343,7 +344,7 @@ def initialCommUpdatProcess():
  KeywordGen(NewBing,"sb","bing")
  KeywordGen(NewBing,"sx","bing") 
  print("expDataCol",expDataCol)
- """
+ 
  """
  print("")
  print('KeywordGen(NewGoogle,"sbmm","google")[0]',KeywordGen(NewGoogle,"sbmm","google")[0])
@@ -354,9 +355,10 @@ def initialCommUpdatProcess():
  print(' KeywordGen(NewBing,"sx","bing")[0]',KeywordGen(NewBing,"sx","bing")[0])
  print('')
  print('')
- """
+ 
  
  print("expDataCol",expDataCol)
+ """
  
 
   
