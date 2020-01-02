@@ -312,7 +312,7 @@ def initialCommUpdatProcess():
   print("len(Status) ",len(Status))
   print("len(Bid) ",len(Bid))
  """  
- 
+ """
  print("expDataCol",expDataCol)
  print("len(expDataCol)",len(expDataCol))
  print(" Before KeyworGen") 
@@ -329,9 +329,10 @@ def initialCommUpdatProcess():
  KeywordGen(NewBing,"sx","bing") 
  print(" After KeyworGen")
  print("expDataCol",expDataCol)
+ """
  
   
-  
+ KeywordGen(NewGoogle,"sbmm","google")
   
  
  
