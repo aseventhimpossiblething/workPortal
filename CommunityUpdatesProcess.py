@@ -342,15 +342,17 @@ def initialCommUpdatProcess():
  KeywordGen(NewBing,"sx","bing") 
  print("expDataCol",expDataCol)
  """
+ 
  print("")
- print('KeywordGen(NewGoogle,"sbmm","google")',KeywordGen(NewGoogle,"sbmm","google"))
- print('KeywordGen(NewGoogle,"sb","google")',KeywordGen(NewGoogle,"sb","google"))
- print('KeywordGen(NewGoogle,"sx","google")',KeywordGen(NewGoogle,"sx","google"))
- print('KeywordGen(NewBing,"sbmm","bing")',KeywordGen(NewBing,"sbmm","bing"))
- print('KeywordGen(NewBing,"sb","bing")',KeywordGen(NewBing,"sb","bing"))
- print(' KeywordGen(NewBing,"sx","bing")',KeywordGen(NewBing,"sx","bing"))
+ print('KeywordGen(NewGoogle,"sbmm","google")[0]',KeywordGen(NewGoogle,"sbmm","google")[0])
+ print('KeywordGen(NewGoogle,"sb","google")[0]',KeywordGen(NewGoogle,"sb","google")[0])
+ print('KeywordGen(NewGoogle,"sx","google")[0]',KeywordGen(NewGoogle,"sx","google")[0])
+ print('KeywordGen(NewBing,"sbmm","bing")[0]',KeywordGen(NewBing,"sbmm","bing")[0])
+ print('KeywordGen(NewBing,"sb","bing")[0]',KeywordGen(NewBing,"sb","bing")[0])
+ print(' KeywordGen(NewBing,"sx","bing")[0]',KeywordGen(NewBing,"sx","bing")[0])
  print('')
  print('')
+ 
  print("expDataCol",expDataCol)
  
 
