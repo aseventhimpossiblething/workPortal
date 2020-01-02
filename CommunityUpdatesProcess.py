@@ -202,12 +202,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    expDataCol.append(count)
   count+=1;
    
-  print("len(Campaign_Name) ",len(Campaign_Name))  
-  print("len(Adgroup) ",len(Adgroup)) 
-  print("len(Keyword) " ,len(Keyword))
-  print("len(Match_Type) ",len(Match_Type))
-  print("len(Status) ",len(Status))
-  print("len(Bid) ",len(Bid))
+ print("len(Campaign_Name) ",len(Campaign_Name))  
+ print("len(Adgroup) ",len(Adgroup)) 
+ print("len(Keyword) " ,len(Keyword))
+ print("len(Match_Type) ",len(Match_Type))
+ print("len(Status) ",len(Status))
+ print("len(Bid) ",len(Bid))
  
  
     
@@ -310,7 +310,7 @@ def initialCommUpdatProcess():
   print("len(Status) ",len(Status))
   print("len(Bid) ",len(Bid))
  """  
- """
+ 
  print("expDataCol",expDataCol)
  print("len(expDataCol)",len(expDataCol))
  print(" Before KeyworGen") 
@@ -327,7 +327,7 @@ def initialCommUpdatProcess():
  KeywordGen(NewBing,"sx","bing") 
  print(" After KeyworGen")
  print("expDataCol",expDataCol)
- """
+ 
   
   
   
