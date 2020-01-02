@@ -236,7 +236,8 @@ def initialCommUpdatProcess():
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
- 
+
+""" 
  expDataCol=[];
  def KeywordGen(NewDataFrame,MatchType,SearchChan):
   #numberofLoops=NewDataFrame.count();
@@ -252,7 +253,7 @@ def initialCommUpdatProcess():
   Match_Type=[];
   Status=[];
   Bid=[];
-"""
+
   count=0;
   hilecount=len(NewDataFrame['Market ID']);
   Keyword_conv=0; 
