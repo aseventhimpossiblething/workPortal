@@ -266,16 +266,22 @@ def initialCommUpdatProcess():
   print(NewDataFrame['City'][3325],NewDataFrame['State'][3325],NewDataFrame['Zip'][3325],NewDataFrame['Market ID'][3325],NewDataFrame['Market Name'][3325])
   print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType); 
   """
-  
+ print("expDataCol",expDataCol)
+ print("len(expDataCol)",len(expDataCol))
  print(" Before KeyworGen") 
  KeywordGen(NewGoogle,"sbmm","google")
+ print("len(expDataCol)",len(expDataCol))
  KeywordGen(NewGoogle,"sb","google")
+ print("len(expDataCol)",len(expDataCol))
  KeywordGen(NewGoogle,"sx","google")
- KeywordGen(NewBing,"sbmm","bing") 
- KeywordGen(NewBing,"sb","bing") 
+ print("len(expDataCol)",len(expDataCol))
+ KeywordGen(NewBing,"sbmm","bing")
+ print("len(expDataCol)",len(expDataCol))
+ KeywordGen(NewBing,"sb","bing")
+ print("len(expDataCol)",len(expDataCol))
  KeywordGen(NewBing,"sx","bing") 
  print(" After KeyworGen")
- print(expDataCol)
+ print("expDataCol",expDataCol)
  
   
   
