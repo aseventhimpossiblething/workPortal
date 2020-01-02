@@ -201,15 +201,17 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    NewDataFrame=NewDataFrame.drop([count])
    expDataCol.append(count)
   count+=1;
-   
+  
+ OutPutFrame=[Campaign_Name, Adgroup,Keyword,Match_Type,Status,Bid] 
+ pandas.DataFrame(OutPutFrame)  
  print("len(Campaign_Name) ",len(Campaign_Name))  
  print("len(Adgroup) ",len(Adgroup)) 
  print("len(Keyword) " ,len(Keyword))
  print("len(Match_Type) ",len(Match_Type))
  print("len(Status) ",len(Status))
  print("len(Bid) ",len(Bid))
- 
- 
+ print("")
+ print("OutPutFrame",OutPutFrame)
     
   
   
