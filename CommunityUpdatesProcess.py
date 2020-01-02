@@ -240,79 +240,7 @@ def initialCommUpdatProcess():
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
 
- """ 
- expDataCol=[];
- def KeywordGen(NewDataFrame,MatchType,SearchChan):
-  #numberofLoops=NewDataFrame.count();
-  MatchType=MatchType.upper();
-  SearchChan=SearchChan.lower();
-  print("")
-  print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
-  #print("len(NewDataFrame['Market ID']) ",len(NewDataFrame['Market ID']));
-  Failed_Rows=[];
-  Campaign_Name=[];
-  Adgroup=[];
-  Keyword=[];
-  Match_Type=[];
-  Status=[];
-  Bid=[];
 
-  count=0;
-  hilecount=len(NewDataFrame['Market ID']);
-  Keyword_conv=0; 
-  MatchType_Conv=0;
-  set_bid=.30;
-  if type(MaintatanceVar)=="<class 'int'>":
-   hilecount=MaintatanceVar;
-  while count < hilecount:
-   try:
-    if SearchChan=="google":
-     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
-     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
-     if MatchType=="SB":
-      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
-      Keyword_conv=NewDataFrame['Community Name'][count]
-      Keyword_conv=Keyword_conv.replace(" "," +")
-      MatchType_Conv="Broad"
-     if MatchType=="SX":
-      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
-      MatchType_Conv="Exact"
-      set_bid=.35;
-    if SearchChan=="bing":
-     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
-     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
-     if MatchType=="SB":
-      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
-      Keyword_conv=NewDataFrame['Community Name'][count]
-      Keyword_conv=Keyword_conv.replace(" "," +")  
-      MatchType_Conv="Broad"
-     if MatchType=="SX":
-      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201") 
-      MatchType_Conv="Exact"
-      set_bid=.35;
-     if MatchType=="SBMM":
-      Keyword_conv=NewDataFrame['Community Name'][count]
-      Keyword_conv=Keyword_conv.replace(" "," +")
-      MatchType_Conv="Broad"
-    Campaign_Name.append(Campaign_Nameing_Conv);
-    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
-    Adgroup.append(AdgroupNaming_conv)
-    Keyword.append(Keyword_conv)
-    Match_Type.append(MatchType_Conv)
-    Status.append("Active")
-    Bid.append(set_bid)
-   except:
-    NewDataFrame=NewDataFrame.drop([count])
-    expDataCol.append(count)
-   count+=1;
-  
-  print("len(Campaign_Name) ",len(Campaign_Name))  
-  print("len(Adgroup) ",len(Adgroup)) 
-  print("len(Keyword) " ,len(Keyword))
-  print("len(Match_Type) ",len(Match_Type))
-  print("len(Status) ",len(Status))
-  print("len(Bid) ",len(Bid))
-  """
   
  """  
  
@@ -345,20 +273,20 @@ def initialCommUpdatProcess():
  KeywordGen(NewBing,"sx","bing") 
  print("expDataCol",expDataCol)
  
- """
+ 
  print("")
- print('KeywordGen(NewGoogle,"sbmm","google")[0]',KeywordGen(NewGoogle,"sbmm","google")[0])
- print('KeywordGen(NewGoogle,"sb","google")[0]',KeywordGen(NewGoogle,"sb","google")[0])
- print('KeywordGen(NewGoogle,"sx","google")[0]',KeywordGen(NewGoogle,"sx","google")[0])
- print('KeywordGen(NewBing,"sbmm","bing")[0]',KeywordGen(NewBing,"sbmm","bing")[0])
- print('KeywordGen(NewBing,"sb","bing")[0]',KeywordGen(NewBing,"sb","bing")[0])
- print(' KeywordGen(NewBing,"sx","bing")[0]',KeywordGen(NewBing,"sx","bing")[0])
+ print('KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0]',KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0])
+ print('KeywordGen(NewGoogle,"sb","google")[Adgroup][0]',KeywordGen(NewGoogle,"sb","google")[Adgroup][0])
+ print('KeywordGen(NewGoogle,"sx","google")[Keyword][0]',KeywordGen(NewGoogle,"sx","google")[Keyword][0])
+ print('KeywordGen(NewBing,"sbmm","bing")[Match_Type][0]',KeywordGen(NewBing,"sbmm","bing")[Match_Type][0])
+ print('KeywordGen(NewBing,"sb","bing")[Status][0]',KeywordGen(NewBing,"sb","bing")[Status][0])
+ print(' KeywordGen(NewBing,"sx","bing")[Bid][0]',KeywordGen(NewBing,"sx","bing")[Bid][0])
  print('')
  print('')
  
  
- print("expDataCol",expDataCol)
- """
+ #print("expDataCol",expDataCol)
+ 
  
 
   
