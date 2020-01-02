@@ -212,6 +212,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("len(Bid) ",len(Bid))
  print("")
  print("OutPutFrame",OutPutFrame)
+ return OutPutFrame
     
   
   
@@ -316,6 +317,7 @@ def initialCommUpdatProcess():
  print("expDataCol",expDataCol)
  print("len(expDataCol)",len(expDataCol))
  print(" Before KeyworGen") 
+ """
  KeywordGen(NewGoogle,"sbmm","google")
  print("len(expDataCol)",len(expDataCol))
  KeywordGen(NewGoogle,"sb","google")
@@ -327,9 +329,29 @@ def initialCommUpdatProcess():
  KeywordGen(NewBing,"sb","bing")
  print("len(expDataCol)",len(expDataCol))
  KeywordGen(NewBing,"sx","bing") 
+ """
  print(" After KeyworGen")
+ print("")
+ print("",)
+ """
+ KeywordGen(NewGoogle,"sbmm","google")
+ KeywordGen(NewGoogle,"sb","google")
+ KeywordGen(NewGoogle,"sx","google")
+ KeywordGen(NewBing,"sbmm","bing")
+ KeywordGen(NewBing,"sb","bing")
+ KeywordGen(NewBing,"sx","bing") 
  print("expDataCol",expDataCol)
- 
+ """
+ print("")
+ print('KeywordGen(NewGoogle,"sbmm","google")',KeywordGen(NewGoogle,"sbmm","google"))
+ print('KeywordGen(NewGoogle,"sb","google")',KeywordGen(NewGoogle,"sb","google"))
+ print('KeywordGen(NewGoogle,"sx","google")',KeywordGen(NewGoogle,"sx","google"))
+ print('KeywordGen(NewBing,"sbmm","bing")',KeywordGen(NewBing,"sbmm","bing"))
+ print('KeywordGen(NewBing,"sb","bing")',KeywordGen(NewBing,"sb","bing"))
+ print(' KeywordGen(NewBing,"sx","bing")',KeywordGen(NewBing,"sx","bing"))
+ print('')
+ print('')
+ print("expDataCol",expDataCol)
  
 
   
