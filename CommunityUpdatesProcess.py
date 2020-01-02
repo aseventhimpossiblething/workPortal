@@ -237,7 +237,7 @@ def initialCommUpdatProcess():
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
 
-""" 
+ """ 
  expDataCol=[];
  def KeywordGen(NewDataFrame,MatchType,SearchChan):
   #numberofLoops=NewDataFrame.count();
@@ -309,7 +309,7 @@ def initialCommUpdatProcess():
   print("len(Match_Type) ",len(Match_Type))
   print("len(Status) ",len(Status))
   print("len(Bid) ",len(Bid))
-"""  
+ """  
  
  print("expDataCol",expDataCol)
  print("len(expDataCol)",len(expDataCol))
