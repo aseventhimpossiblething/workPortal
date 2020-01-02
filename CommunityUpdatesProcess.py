@@ -134,6 +134,85 @@ def communityCheck(checkby,checkin,Name):
  print("End Community Check for ",Name)
  return checkby
  
+ 
+ 
+ 
+ expDataCol=[];
+ def KeywordGen(NewDataFrame,MatchType,SearchChan):
+  #numberofLoops=NewDataFrame.count();
+  MatchType=MatchType.upper();
+  SearchChan=SearchChan.lower();
+  print("")
+  print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
+  #print("len(NewDataFrame['Market ID']) ",len(NewDataFrame['Market ID']));
+  Failed_Rows=[];
+  Campaign_Name=[];
+  Adgroup=[];
+  Keyword=[];
+  Match_Type=[];
+  Status=[];
+  Bid=[];
+
+  count=0;
+  hilecount=len(NewDataFrame['Market ID']);
+  Keyword_conv=0; 
+  MatchType_Conv=0;
+  set_bid=.30;
+  if type(MaintatanceVar)=="<class 'int'>":
+   hilecount=MaintatanceVar;
+  while count < hilecount:
+   try:
+    if SearchChan=="google":
+     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
+     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
+     if MatchType=="SB":
+      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
+      Keyword_conv=NewDataFrame['Community Name'][count]
+      Keyword_conv=Keyword_conv.replace(" "," +")
+      MatchType_Conv="Broad"
+     if MatchType=="SX":
+      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
+      MatchType_Conv="Exact"
+      set_bid=.35;
+    if SearchChan=="bing":
+     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
+     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
+     if MatchType=="SB":
+      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
+      Keyword_conv=NewDataFrame['Community Name'][count]
+      Keyword_conv=Keyword_conv.replace(" "," +")  
+      MatchType_Conv="Broad"
+     if MatchType=="SX":
+      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201") 
+      MatchType_Conv="Exact"
+      set_bid=.35;
+     if MatchType=="SBMM":
+      Keyword_conv=NewDataFrame['Community Name'][count]
+      Keyword_conv=Keyword_conv.replace(" "," +")
+      MatchType_Conv="Broad"
+    Campaign_Name.append(Campaign_Nameing_Conv);
+    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
+    Adgroup.append(AdgroupNaming_conv)
+    Keyword.append(Keyword_conv)
+    Match_Type.append(MatchType_Conv)
+    Status.append("Active")
+    Bid.append(set_bid)
+   except:
+    NewDataFrame=NewDataFrame.drop([count])
+    expDataCol.append(count)
+   count+=1;
+   
+  print("len(Campaign_Name) ",len(Campaign_Name))  
+  print("len(Adgroup) ",len(Adgroup)) 
+  print("len(Keyword) " ,len(Keyword))
+  print("len(Match_Type) ",len(Match_Type))
+  print("len(Status) ",len(Status))
+  print("len(Bid) ",len(Bid))
+ 
+ 
+    
+  
+  
 def initialCommUpdatProcess():
  os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
@@ -173,7 +252,7 @@ def initialCommUpdatProcess():
   Match_Type=[];
   Status=[];
   Bid=[];
-
+"""
   count=0;
   hilecount=len(NewDataFrame['Market ID']);
   Keyword_conv=0; 
@@ -182,7 +261,6 @@ def initialCommUpdatProcess():
   if type(MaintatanceVar)=="<class 'int'>":
    hilecount=MaintatanceVar;
   while count < hilecount:
-   #print("NewDataFrame['Market ID'][count]",NewDataFrame['Market ID'][count])
    try:
     if SearchChan=="google":
      Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
@@ -208,64 +286,30 @@ def initialCommUpdatProcess():
       Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201") 
       MatchType_Conv="Exact"
       set_bid=.35;
-      #print("count ",count," Bing SX ::",Campaign_Nameing_Conv) 
      if MatchType=="SBMM":
       Keyword_conv=NewDataFrame['Community Name'][count]
       Keyword_conv=Keyword_conv.replace(" "," +")
       MatchType_Conv="Broad"
-      #print("count ",count," Default Bing SBMM MSM403 ",Campaign_Nameing_Conv)
     Campaign_Name.append(Campaign_Nameing_Conv);
-    
     AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
-    #print("count ",count,"AdgroupNaming_conv",AdgroupNaming_conv)
     Adgroup.append(AdgroupNaming_conv)
     Keyword.append(Keyword_conv)
     Match_Type.append(MatchType_Conv)
     Status.append("Active")
     Bid.append(set_bid)
-    
-    #print("Testing Incomplete Loops Also Check Merge and Filter")
-    #print("count ",count," Campaign_Nameing_Conv Output ::",Campaign_Nameing_Conv) 
-    #print("________END CYCLE NUMBER______",count)
-   
-   
    except:
     NewDataFrame=NewDataFrame.drop([count])
     expDataCol.append(count)
-    #print("Failed Attempt Market_LookUp.google[NewDataFrame['Market ID'][count]]")
-    #print("________END CYCLE NUMBER______",count)
    count+=1;
    
-  """
-  print("________________________________________________________")  
-  print("NewDataFrame.iloc[[0]] ",NewDataFrame.iloc[[0]])
-  print("________________________________________________________") 
-  print("NewDataFrame.iloc[[3296]] ",NewDataFrame.iloc[[3296]])
-  print("________________________________________________________") 
-  print("NewDataFrame.iloc[[3310]] ",NewDataFrame.iloc[[3310]]) 
-  print("________________________________________________________") 
-  print("NewDataFrame.iloc[[3311]] ",NewDataFrame.iloc[[3311]]) 
-  print("________________________________________________________")
-  """
-  #print("NewDataFrame.iloc[[3326]] ",NewDataFrame.iloc[[3326]])
-  #print("NewDataFrame.iloc[[]] ",NewDataFrame.iloc[[]]) 
-  #print("numberofLoops ",numberofLoops) 
-  #print("NewDataFrame.count() ",NewDataFrame.count())  
   print("len(Campaign_Name) ",len(Campaign_Name))  
   print("len(Adgroup) ",len(Adgroup)) 
   print("len(Keyword) " ,len(Keyword))
   print("len(Match_Type) ",len(Match_Type))
   print("len(Status) ",len(Status))
   print("len(Bid) ",len(Bid))
-  """
-  #print(NewDataFrame)
-  print(NewDataFrame['City'][1],NewDataFrame['State'][1],NewDataFrame['Zip'][1],NewDataFrame['Market ID'][1],NewDataFrame['Market Name'][1])
-  print(NewDataFrame['City'][3296],NewDataFrame['State'][3296],NewDataFrame['Zip'][3296],NewDataFrame['Market ID'][3296],NewDataFrame['Market Name'][3296])
-  print(NewDataFrame['City'][3310],NewDataFrame['State'][3310],NewDataFrame['Zip'][3310],NewDataFrame['Market ID'][3310],NewDataFrame['Market Name'][3310])
-  print(NewDataFrame['City'][3312],NewDataFrame['State'][3312],NewDataFrame['Zip'][3312],NewDataFrame['Market ID'][3312],NewDataFrame['Market Name'][3312])
-  print(NewDataFrame['City'][3325],NewDataFrame['State'][3325],NewDataFrame['Zip'][3325],NewDataFrame['Market ID'][3325],NewDataFrame['Market Name'][3325])
-  print("Ending KeywordGen for ",SearchChan,"Match Type ",MatchType); 
-  """
+"""  
+ 
  print("expDataCol",expDataCol)
  print("len(expDataCol)",len(expDataCol))
  print(" Before KeyworGen") 
