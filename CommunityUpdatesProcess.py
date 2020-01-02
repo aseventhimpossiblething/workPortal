@@ -275,6 +275,7 @@ def initialCommUpdatProcess():
  KeywordGen(NewBing,"sb","bing") 
  KeywordGen(NewBing,"sx","bing") 
  print(" After KeyworGen")
+ print(expDataCol)
  
   
   
