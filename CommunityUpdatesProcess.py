@@ -31,41 +31,41 @@ def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
   return Invalid
     
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkword4):
-  WorkingCommunitiesname="WorkingCommunities" 
-  global IsCommValid
-  IsCommValid=CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3,checkword4)
-  if CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3,checkword4)=="Valid":
-   WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
+ WorkingCommunitiesname="WorkingCommunities" 
+ global IsCommValid
+ IsCommValid=CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3,checkword4)
+ if CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3,checkword4)=="Valid":
+  WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division Id','Division Name',\
                                                                    'Community Id','Community Name','City','State','Zip',\
                                                                    'Market ID','Market Name'])
    
-   print("communities basic import done")
-   return WorkingCommunities
-  else:
-   print("Load Communities cannot run...............",IsCommValid)
-   return IsCommValid  
+  print("communities basic import done")
+  return WorkingCommunities
+ else:
+  print("Load Communities cannot run...............",IsCommValid)
+  return IsCommValid  
 
 def WorkingGoogle():  
-  os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
-  WorkingGoogle=pandas.read_excel('WorkingGoogle')
-  global IsGoogleValid 
-  IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Headline 1','Final URL')
-  if IsGoogleValid!="Valid":
-   return IsGoogleValid
-  else:
-   WorkingGoogle=pandas.DataFrame(WorkingGoogle,columns=['Campaign','Ad Group', 'Final URL'])
-   print("Google basic import done")
-   return  WorkingGoogle
+ os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
+ WorkingGoogle=pandas.read_excel('WorkingGoogle')
+ global IsGoogleValid 
+ IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Headline 1','Final URL')
+ if IsGoogleValid!="Valid":
+  return IsGoogleValid
+ else:
+  WorkingGoogle=pandas.DataFrame(WorkingGoogle,columns=['Campaign','Ad Group', 'Final URL'])
+  print("Google basic import done")
+  return  WorkingGoogle
   
 def WorkingBing():
-  os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
-  WorkingBing=pandas.read_excel('WorkingBing')
-  IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1','Final Url')
-  if IsBingValid!='Valid':
-   return IsBingValid
-  WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
-  print("Bing basic import done")
-  return WorkingBing
+ os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
+ WorkingBing=pandas.read_excel('WorkingBing')
+ IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1','Final Url')
+ if IsBingValid!='Valid':
+  return IsBingValid
+ WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
+ print("Bing basic import done")
+ return WorkingBing
 
 def filterNonParticipators(FrameToBeFiltered):
  print("Start Filter ",FrameToBeFiltered['Builder Name'].count()," rows")
@@ -137,70 +137,70 @@ def communityCheck(checkby,checkin,Name):
  
  
  
- expDataCol=[];
- def KeywordGen(NewDataFrame,MatchType,SearchChan):
-  #numberofLoops=NewDataFrame.count();
-  MatchType=MatchType.upper();
-  SearchChan=SearchChan.lower();
-  print("")
-  print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
-  #print("len(NewDataFrame['Market ID']) ",len(NewDataFrame['Market ID']));
-  Failed_Rows=[];
-  Campaign_Name=[];
-  Adgroup=[];
-  Keyword=[];
-  Match_Type=[];
-  Status=[];
-  Bid=[];
+expDataCol=[];
+def KeywordGen(NewDataFrame,MatchType,SearchChan):
+ #numberofLoops=NewDataFrame.count();
+ MatchType=MatchType.upper();
+ SearchChan=SearchChan.lower();
+ print("")
+ print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
+ #print("len(NewDataFrame['Market ID']) ",len(NewDataFrame['Market ID']));
+ Failed_Rows=[];
+ Campaign_Name=[];
+ Adgroup=[];
+ Keyword=[];
+ Match_Type=[];
+ Status=[];
+ Bid=[];
 
-  count=0;
-  hilecount=len(NewDataFrame['Market ID']);
-  Keyword_conv=0; 
-  MatchType_Conv=0;
-  set_bid=.30;
-  if type(MaintatanceVar)=="<class 'int'>":
-   hilecount=MaintatanceVar;
-  while count < hilecount:
-   try:
-    if SearchChan=="google":
-     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
-     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
-     if MatchType=="SB":
-      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
-      Keyword_conv=NewDataFrame['Community Name'][count]
-      Keyword_conv=Keyword_conv.replace(" "," +")
-      MatchType_Conv="Broad"
-     if MatchType=="SX":
-      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
-      MatchType_Conv="Exact"
-      set_bid=.35;
-    if SearchChan=="bing":
-     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
-     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
-     if MatchType=="SB":
-      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
-      Keyword_conv=NewDataFrame['Community Name'][count]
-      Keyword_conv=Keyword_conv.replace(" "," +")  
-      MatchType_Conv="Broad"
-     if MatchType=="SX":
-      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201") 
-      MatchType_Conv="Exact"
-      set_bid=.35;
-     if MatchType=="SBMM":
-      Keyword_conv=NewDataFrame['Community Name'][count]
-      Keyword_conv=Keyword_conv.replace(" "," +")
-      MatchType_Conv="Broad"
-    Campaign_Name.append(Campaign_Nameing_Conv);
-    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
-    Adgroup.append(AdgroupNaming_conv)
-    Keyword.append(Keyword_conv)
-    Match_Type.append(MatchType_Conv)
-    Status.append("Active")
-    Bid.append(set_bid)
-   except:
-    NewDataFrame=NewDataFrame.drop([count])
-    expDataCol.append(count)
-   count+=1;
+ count=0;
+ hilecount=len(NewDataFrame['Market ID']);
+ Keyword_conv=0; 
+ MatchType_Conv=0;
+ set_bid=.30;
+ if type(MaintatanceVar)=="<class 'int'>":
+  hilecount=MaintatanceVar;
+ while count < hilecount:
+  try:
+   if SearchChan=="google":
+    Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
+    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
+    if MatchType=="SB":
+     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
+     Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=Keyword_conv.replace(" "," +")
+     MatchType_Conv="Broad"
+    if MatchType=="SX":
+     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
+     MatchType_Conv="Exact"
+     set_bid=.35;
+   if SearchChan=="bing":
+    Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
+    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
+    if MatchType=="SB":
+     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
+     Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=Keyword_conv.replace(" "," +")  
+     MatchType_Conv="Broad"
+    if MatchType=="SX":
+     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201") 
+     MatchType_Conv="Exact"
+     set_bid=.35;
+    if MatchType=="SBMM":
+     Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=Keyword_conv.replace(" "," +")
+     MatchType_Conv="Broad"
+   Campaign_Name.append(Campaign_Nameing_Conv);
+   AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
+   Adgroup.append(AdgroupNaming_conv)
+   Keyword.append(Keyword_conv)
+   Match_Type.append(MatchType_Conv)
+   Status.append("Active")
+   Bid.append(set_bid)
+  except:
+   NewDataFrame=NewDataFrame.drop([count])
+   expDataCol.append(count)
+  count+=1;
    
   print("len(Campaign_Name) ",len(Campaign_Name))  
   print("len(Adgroup) ",len(Adgroup)) 
