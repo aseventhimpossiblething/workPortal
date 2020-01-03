@@ -211,7 +211,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("len(Status) ",len(Status))
  print("len(Bid) ",len(Bid))
  print("")
- print("OutPutFrame[OutPutFrame.columns[0]]-OutPutFrame[OutputFrame.columns[1]]",OutPutFrame[OutPutFrame.columns[0]],OutPutFrame[OutPutFrame.columns[1]])
+ print("OutPutFrame[OutPutFrame.columns[0]]-OutPutFrame[OutputFrame.columns[1]]-OutPutFrame[OutputFrame.columns[2]",\
+       OutPutFrame[OutPutFrame.columns[0]],OutPutFrame[OutPutFrame.columns[1]],OutPutFrame[OutputFrame.columns[1])
  
  """
  print("[0]")
