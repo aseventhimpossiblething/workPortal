@@ -213,7 +213,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("")
  print("OutPutFrame",OutPutFrame)
  
- 
+ print("[0]")
  print("")
  print('KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0]',KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0])
  print('KeywordGen(NewGoogle,"sb","google")[Adgroup][0]',KeywordGen(NewGoogle,"sb","google")[Adgroup][0])
@@ -222,6 +222,16 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print('KeywordGen(NewBing,"sb","bing")[Status][0]',KeywordGen(NewBing,"sb","bing")[Status][0])
  print(' KeywordGen(NewBing,"sx","bing")[Bid][0]',KeywordGen(NewBing,"sx","bing")[Bid][0])
  print('')
+ 
+ print("[1]")
+ print('KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0]',KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0])
+ print('KeywordGen(NewGoogle,"sb","google")[Adgroup][0]',KeywordGen(NewGoogle,"sb","google")[Adgroup][0])
+ print('KeywordGen(NewGoogle,"sx","google")[Keyword][0]',KeywordGen(NewGoogle,"sx","google")[Keyword][0])
+ print('KeywordGen(NewBing,"sbmm","bing")[Match_Type][0]',KeywordGen(NewBing,"sbmm","bing")[Match_Type][0])
+ print('KeywordGen(NewBing,"sb","bing")[Status][0]',KeywordGen(NewBing,"sb","bing")[Status][0])
+ print(' KeywordGen(NewBing,"sx","bing")[Bid][0]',KeywordGen(NewBing,"sx","bing")[Bid][0])
+ print('')
+ 
  
  return OutPutFrame
     
