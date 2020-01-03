@@ -191,7 +191,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=Keyword_conv.replace(" "," +")
      MatchType_Conv="Broad"
    Campaign_Name.append(Campaign_Nameing_Conv);
-   AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
+   )   AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
    Adgroup.append(AdgroupNaming_conv)
    Keyword.append(Keyword_conv)
    Match_Type.append(MatchType_Conv)
@@ -211,8 +211,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("len(Status) ",len(Status))
  print("len(Bid) ",len(Bid))
  print("")
- #print("OutPutFrame",OutPutFrame)
+ print("OutPutFrame.columns['Campaign_Name']-OutPutFrame.columns['Adgroup']",OutPutFrame.columns['Campaign_Name'],OutPutFrame.columns['Adgroup'])
  
+ """
  print("[0]")
  print("")
  print('KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0]',KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0])
@@ -231,7 +232,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print('KeywordGen(NewBing,"sb","bing")[Status][0]',KeywordGen(NewBing,"sb","bing")[Status][0])
  print(' KeywordGen(NewBing,"sx","bing")[Bid][0]',KeywordGen(NewBing,"sx","bing")[Bid][0])
  print('')
- 
+ """
  
  return OutPutFrame
     
