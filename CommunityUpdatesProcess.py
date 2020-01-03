@@ -211,7 +211,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("len(Status) ",len(Status))
  print("len(Bid) ",len(Bid))
  print("")
- print("OutPutFrame",OutPutFrame)
+ #print("OutPutFrame",OutPutFrame)
  
  print("[0]")
  print("")
