@@ -213,6 +213,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("")
  print("OutPutFrame[OutPutFrame.columns[0]]-OutPutFrame[OutputFrame.columns[1]]-OutPutFrame[OutputFrame.columns[2]",\
        OutPutFrame[OutPutFrame.columns[0]],OutPutFrame[OutPutFrame.columns[1]],OutPutFrame[OutPutFrame.columns[2]])
+ print("-------------------")
+ print("Keyword")
+ print(Keyword)
+ print("-------------------")
  
  """
  print("[0]")
