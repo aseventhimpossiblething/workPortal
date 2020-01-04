@@ -305,7 +305,7 @@ def initialCommUpdatProcess():
  print("",)
  """
  
- KeywordGen(NewGoogle,"sb","google")
+ KeywordGen(NewGoogle,"sbmm","google")
  
  """
  KeywordGen(NewGoogle,"sb","google")
