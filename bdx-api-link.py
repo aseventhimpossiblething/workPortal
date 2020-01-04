@@ -63,7 +63,7 @@ TheSamplefile.read()
 
 
 
-print("CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
+print(" start of index CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
 
 CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
 
@@ -88,7 +88,7 @@ def testtextfile():
 
 @app.route('/DisplayCommUpdate')
 def CommUpdateDisplay():
-    print("CommunityUpdatesProcess.IsCommUpdateRunning" ,CommunityUpdatesProcess.IsCommUpdateRunning)
+    print(" in route CommunityUpdatesProcess.IsCommUpdateRunning" ,CommunityUpdatesProcess.IsCommUpdateRunning)
 
 
 
