@@ -85,6 +85,19 @@ def testtextfile():
 
 
 
+@app.route('/DisplayCommUpdate')
+def CommUpdateDisplay():
+    print("CommunityUpdatesProcess.IsCommUpdateRunning" ,CommunityUpdatesProcess.IsCommUpdateRunning)
+
+
+
+
+
+
+
+
+
+
 @app.route('/css')
 def styleSheet1():
     return render_template('csstemplate.css')
