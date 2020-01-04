@@ -15,7 +15,7 @@ from flask import send_file
 import gc
 
 print("top of filehandler CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
-CommunityUpdatesProcess.IsCommUpdateRunning="YES"
+#CommunityUpdatesProcess.IsCommUpdateRunning="YES"
 
 
 
