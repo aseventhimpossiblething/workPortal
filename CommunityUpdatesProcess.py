@@ -220,12 +220,17 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("len(Status) ",len(Status))
  print("len(Bid) ",len(Bid))
  print("")
- print("In KeywordGen ")
- print("os.getcwd()",os.getcwd())
- print("os.listdir()",os.listdir())
- print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates'))
- print("os.getcwd()",os.getcwd())
- print("os.listdir()",os.listdir())
+ if NewDataFrame==NewGoogle:
+  if MatchType=='SBMM':
+   print("In KeywordGen ")
+   print("os.getcwd()",os.getcwd())
+   print("os.listdir()",os.listdir())
+   print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'))
+   print("os.getcwd()",os.getcwd())
+   print("os.listdir()",os.listdir())
+   #GoogleSBMMKeyWordoutput=open('DefaultSheet.xlsx','w+')
+ OutPutFrame
+ 
  
  
  
@@ -314,7 +319,7 @@ def initialCommUpdatProcess():
  print("",)
  """
  
- KeywordGen(NewBing,"sb","bing")
+ KeywordGen(NewGoogle,"sbmm","google")
  
  """
  KeywordGen(NewGoogle,"sb","google")
@@ -335,7 +340,7 @@ def initialCommUpdatProcess():
 
   
  print("Main ")
- os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
+ os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
  print("os.getcwd()",os.getcwd())
  print("os.listdir()",os.listdir()) 
  
