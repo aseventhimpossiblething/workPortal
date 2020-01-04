@@ -223,7 +223,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("In KeywordGen ")
  print("os.getcwd()",os.getcwd())
  print("os.listdir()",os.listdir())
- print("os.chdir('app/Sheets/CommunityUpdates')",os.chdir('app/Sheets/CommunityUpdates'))
+ print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates'))
  print("os.getcwd()",os.getcwd())
  print("os.listdir()",os.listdir())
  
