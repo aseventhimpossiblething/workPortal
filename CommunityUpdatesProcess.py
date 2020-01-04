@@ -139,7 +139,7 @@ def communityCheck(checkby,checkin,Name):
  
 expDataCol=[];
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
- #print("google Keyword_conv DF ",NewDataFrame['Community Name'])
+ print("google Keyword_conv DF ",NewDataFrame['Community Name'])
  #numberofLoops=NewDataFrame.count();
  MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
@@ -166,6 +166,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if SearchChan=="google":
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
+    if MatchType=="SBMM":
+     Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=Keyword_conv.replace(" "," +")
+     MatchType_Conv="Broad"
     if MatchType=="SB":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
      Keyword_conv=NewDataFrame['Community Name'][count]
@@ -175,6 +179,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      MatchType_Conv="Broad"
     if MatchType=="SX":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
+     Keyword_conv=NewDataFrame['Community Name'][count]
      MatchType_Conv="Exact"
      set_bid=.35;
    if SearchChan=="bing":
@@ -186,7 +191,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=Keyword_conv.replace(" "," +")  
      MatchType_Conv="Broad"
     if MatchType=="SX":
-     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201") 
+     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201")
+     Keyword_conv=NewDataFrame['Community Name'][count]
      MatchType_Conv="Exact"
      set_bid=.35;
     if MatchType=="SBMM":
