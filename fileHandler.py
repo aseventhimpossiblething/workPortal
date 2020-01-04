@@ -132,7 +132,7 @@ def CommListFileHandler():
      
     
 #IsCommUpdateRunning="YES"
-    CommunityUpdatesProcess.IsCommUpdateRunning="YES"  
+    #CommunityUpdatesProcess.IsCommUpdateRunning="YES"  
     def async_fileloader():       
      CommunityUpdatesProcess.initialCommUpdatProcess()
     LoadAllCommunityFiles=threading.Thread(target=async_fileloader)
