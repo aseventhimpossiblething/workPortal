@@ -229,6 +229,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("os.getcwd()",os.getcwd())
    print("os.listdir()",os.listdir())
    GoogleSBMMKeyWordoutput=open('DefaultSheet.xlsx','w+')
+   GoogleSBMMKeyWordoutput.write(OutPutFrame.to_string())
+   GoogleSBMMKeywordoutput.close()
+   
  OutPutFrame
  
  
