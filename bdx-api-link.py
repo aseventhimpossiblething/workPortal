@@ -88,8 +88,11 @@ def testtextfile():
 
 @app.route('/DisplayCommUpdate')
 def CommUpdateDisplay():
-    print(" in route CommunityUpdatesProcess.IsCommUpdateRunning" ,CommunityUpdatesProcess.IsCommUpdateRunning)
-    return CommunityUpdatesProcess.IsCommUpdateRunning
+    if CommunityUpdatesProcess.IsCommUpdateRunning=="YES":
+     return "LOADING..... need reload code"
+    else:
+     print(" in route CommunityUpdatesProcess.IsCommUpdateRunning" ,CommunityUpdatesProcess.IsCommUpdateRunning)
+     return "need tepmlate"
 
 
 
