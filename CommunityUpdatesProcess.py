@@ -139,7 +139,7 @@ def communityCheck(checkby,checkin,Name):
  
 expDataCol=[];
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
- print("google Keyword_conv DF ",NewDataFrame['Community Name'])
+ #print("google Keyword_conv DF ",NewDataFrame['Community Name'])
  #numberofLoops=NewDataFrame.count();
  MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
