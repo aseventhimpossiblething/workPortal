@@ -361,6 +361,7 @@ def initialCommUpdatProcess():
  IsCommUpdateRunning="NO";
  
  print("END OF ASYNC FILE LOAD.....................................................................")
+ sys.exit()
  return "finished"
 
 
