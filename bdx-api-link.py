@@ -89,6 +89,7 @@ def testtextfile():
 @app.route('/DisplayCommUpdate')
 def CommUpdateDisplay():
     print(" in route CommunityUpdatesProcess.IsCommUpdateRunning" ,CommunityUpdatesProcess.IsCommUpdateRunning)
+    return CommunityUpdatesProcess.IsCommUpdateRunning
 
 
 
