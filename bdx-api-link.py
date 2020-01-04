@@ -94,7 +94,7 @@ def CommUpdateDisplay():
      print(" in route CommunityUpdatesProcess.IsCommUpdateRunning" ,CommunityUpdatesProcess.IsCommUpdateRunning)
      #commthread=fileHandler.CommListFileHandler().LoadAllCommunityFiles.isAlive()
      #commthread.stop()    
-     return <meta http-equiv="expires" content="0"><html>"need template"</html>
+     return "<meta http-equiv='expires' content='0'><html>need template</html>"
 
 
 
