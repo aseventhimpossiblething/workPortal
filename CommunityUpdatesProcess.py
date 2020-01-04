@@ -359,7 +359,7 @@ def initialCommUpdatProcess():
  TheSamplefile.close()
  
  #global IsCommUpdateRunning
- IsCommUpdateRunning="NO";
+ #IsCommUpdateRunning="NO";
  
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
