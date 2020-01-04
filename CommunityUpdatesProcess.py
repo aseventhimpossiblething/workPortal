@@ -220,7 +220,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("len(Status) ",len(Status))
  print("len(Bid) ",len(Bid))
  print("")
- if NewDataFrame==NewGoogle:
+ if NewDataFrame=="NewGoogle":
   if MatchType=='SBMM':
    print("In KeywordGen ")
    print("os.getcwd()",os.getcwd())
