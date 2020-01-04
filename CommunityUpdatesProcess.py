@@ -1,5 +1,6 @@
 MaintatanceVar="Off";
-
+IsCommUpdateRunning="no";
+IsCommUpdateRunning="Yes";
 import glob
 import numpy
 import scipy
@@ -352,6 +353,7 @@ def initialCommUpdatProcess():
  TheSamplefile=open('TheSampleText.txt','w+') 
  TheSamplefile.write(TheSampleText.to_string())
  TheSamplefile.close()
+ IsCommUpdateRunning="no";
  
  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
