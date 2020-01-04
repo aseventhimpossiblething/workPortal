@@ -174,7 +174,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
      Keyword_conv=NewDataFrame['Community Name'][count]
      #print("google Keyword_conv DF SB ",Keyword_conv)
-     Keyword_conv=Keyword_conv.replace(" "," +")
+     #Keyword_conv=Keyword_conv.replace(" "," +")
      #print("google Keyword_conv after replace SB ",Keyword_conv)
      MatchType_Conv="Broad"
     if MatchType=="SX":
@@ -188,7 +188,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     if MatchType=="SB":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
      Keyword_conv=NewDataFrame['Community Name'][count]
-     Keyword_conv=Keyword_conv.replace(" "," +")  
+     #Keyword_conv=Keyword_conv.replace(" "," +")  
      MatchType_Conv="Broad"
     if MatchType=="SX":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201")
@@ -220,6 +220,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("len(Status) ",len(Status))
  print("len(Bid) ",len(Bid))
  print("")
+ print("In KeywordGen ")
+ print("os.getcwd()",os.getcwd())
+ print("os.listdir()",os.listdir())
+ #print("os.listdir()",os.listdir())
+ 
+ 
+ 
  #print("OutPutFrame[OutPutFrame.columns[0]]-OutPutFrame[OutputFrame.columns[1]]-OutPutFrame[OutputFrame.columns[2]",\
        #OutPutFrame[OutPutFrame.columns[0]],OutPutFrame[OutPutFrame.columns[1]],OutPutFrame[OutPutFrame.columns[2]])
  
@@ -250,7 +257,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print(' KeywordGen(NewBing,"sx","bing")[Bid][0]',KeywordGen(NewBing,"sx","bing")[Bid][0])
  print('')
  """
- print("Keyword ",Keyword)
+ #print("Keyword ",Keyword)
  
  return OutPutFrame
     
@@ -316,26 +323,18 @@ def initialCommUpdatProcess():
  print("expDataCol",expDataCol)
  
  
- print("")
- print('KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0]',KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0])
- print('KeywordGen(NewGoogle,"sb","google")[Adgroup][0]',KeywordGen(NewGoogle,"sb","google")[Adgroup][0])
- print('KeywordGen(NewGoogle,"sx","google")[Keyword][0]',KeywordGen(NewGoogle,"sx","google")[Keyword][0])
- print('KeywordGen(NewBing,"sbmm","bing")[Match_Type][0]',KeywordGen(NewBing,"sbmm","bing")[Match_Type][0])
- print('KeywordGen(NewBing,"sb","bing")[Status][0]',KeywordGen(NewBing,"sb","bing")[Status][0])
- print(' KeywordGen(NewBing,"sx","bing")[Bid][0]',KeywordGen(NewBing,"sx","bing")[Bid][0])
- print('')
- print('')
+ 
  """
- print("os.getcwd()",os.getcwd())
- print("os.listdir()",os.listdir())                                                                                          
+                                                                                          
                                                                                            
  print("expDataCol",expDataCol)
  
  
 
   
- 
- 
+ print("Main ")
+ print("os.getcwd()",os.getcwd())
+ print("os.listdir()",os.listdir()) 
  
  TheSampleText=WorkingBingEOF
  TheSamplefile=open('TheSampleText.txt','w+') 
