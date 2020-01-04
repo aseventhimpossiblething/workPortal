@@ -13,7 +13,7 @@ import io
 import threading
 from flask import send_file
 
-print("CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
+print("top of filehandler CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
 
 
 
