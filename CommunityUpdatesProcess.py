@@ -357,7 +357,7 @@ def initialCommUpdatProcess():
  TheSamplefile.write(TheSampleText.to_string())
  TheSamplefile.close()
  
- global IsCommUpdateRunning
+ #global IsCommUpdateRunning
  IsCommUpdateRunning="no";
  
  print("END OF ASYNC FILE LOAD.....................................................................")
