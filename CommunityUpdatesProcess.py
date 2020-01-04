@@ -1,6 +1,6 @@
 MaintatanceVar="Off";
-IsCommUpdateRunning="no";
-#IsCommUpdateRunning="Yes";
+IsCommUpdateRunning="NO";
+#IsCommUpdateRunning="YES";
 import glob
 import numpy
 import scipy
@@ -277,7 +277,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   
 def initialCommUpdatProcess():
  global IsCommUpdateRunning
- IsCommUpdateRunning="Yes";
+ IsCommUpdateRunning="YES";
  
  os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
@@ -358,7 +358,7 @@ def initialCommUpdatProcess():
  TheSamplefile.close()
  
  #global IsCommUpdateRunning
- IsCommUpdateRunning="no";
+ IsCommUpdateRunning="NO";
  
  print("END OF ASYNC FILE LOAD.....................................................................")
  return "finished"
