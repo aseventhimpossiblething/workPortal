@@ -88,11 +88,13 @@ def testtextfile():
 
 @app.route('/DisplayCommUpdate')
 def CommUpdateDisplay():
-    print("CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
+    print("from start of route CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
     if CommunityUpdatesProcess.IsCommUpdateRunning=="YES":
      return '<meta http-equiv="refresh" content="10"><html>"LOADING..... need reload code"</html>'
+    if CommunityUpdatesProcess.IsCommUpdateRunning=="NO":
+     print("second if in route looking for no CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)           
     else:
-     print(" in route CommunityUpdatesProcess.IsCommUpdateRunning" ,CommunityUpdatesProcess.IsCommUpdateRunning)
+     print(" in else of route CommunityUpdatesProcess.IsCommUpdateRunning" ,CommunityUpdatesProcess.IsCommUpdateRunning)
      #commthread=fileHandler.CommListFileHandler().LoadAllCommunityFiles.isAlive()
      #commthread.stop()    
      return "<meta http-equiv='expires' content='0'><html>need template</html>"
