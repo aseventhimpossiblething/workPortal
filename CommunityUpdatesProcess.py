@@ -309,7 +309,9 @@ def initialCommUpdatProcess():
  print('')
  print('')
  """
- 
+ print("os.getcwd()",os.getcwd())
+ print("os.listdir()",os.listdir())                                                                                          
+                                                                                           
  print("expDataCol",expDataCol)
  
  
