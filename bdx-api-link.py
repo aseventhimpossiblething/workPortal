@@ -92,7 +92,7 @@ def CommUpdateDisplay():
      return '<meta http-equiv="refresh" content="10"><html>"LOADING..... need reload code"</html>'
     else:
      print(" in route CommunityUpdatesProcess.IsCommUpdateRunning" ,CommunityUpdatesProcess.IsCommUpdateRunning)
-     commthread=fileHandler.CommListFileHandler().LoadAllCommunityFiles.stop()
+     commthread=fileHandler.CommListFileHandler().LoadAllCommunityFiles.isAlive()
      #commthread.stop()    
      return "need template"
 
