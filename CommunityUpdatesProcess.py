@@ -276,7 +276,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   
   
 def initialCommUpdatProcess():
- golobal IsCommUpdateRunning
+ global IsCommUpdateRunning
  IsCommUpdateRunning="Yes";
  
  os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
