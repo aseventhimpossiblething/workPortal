@@ -88,6 +88,7 @@ def testtextfile():
 
 @app.route('/DisplayCommUpdate')
 def CommUpdateDisplay():
+    print("CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
     if CommunityUpdatesProcess.IsCommUpdateRunning=="YES":
      return '<meta http-equiv="refresh" content="10"><html>"LOADING..... need reload code"</html>'
     else:
