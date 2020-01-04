@@ -155,7 +155,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
 
  count=0;
  hilecount=len(NewDataFrame['Market ID']);
- Keyword_conv=0; 
+ Keyword_conv="none"; 
  MatchType_Conv=0;
  set_bid=.30;
  if type(MaintatanceVar)=="<class 'int'>":
@@ -168,7 +168,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     if MatchType=="SB":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
      Keyword_conv=NewDataFrame['Community Name'][count]
+     print("google Keyword_conv DF SB ",Keyword_conv)
      Keyword_conv=Keyword_conv.replace(" "," +")
+     print("google Keyword_conv after replace SB ",Keyword_conv)
      MatchType_Conv="Broad"
     if MatchType=="SX":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
@@ -213,10 +215,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("")
  print("OutPutFrame[OutPutFrame.columns[0]]-OutPutFrame[OutputFrame.columns[1]]-OutPutFrame[OutputFrame.columns[2]",\
        OutPutFrame[OutPutFrame.columns[0]],OutPutFrame[OutPutFrame.columns[1]],OutPutFrame[OutPutFrame.columns[2]])
+ 
+ """
  print("-------------------")
  print("Keyword")
  print(Keyword)
  print("-------------------")
+ """
  
  """
  print("[0]")
