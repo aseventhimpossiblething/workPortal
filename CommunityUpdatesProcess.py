@@ -169,9 +169,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     if MatchType=="SB":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
      Keyword_conv=NewDataFrame['Community Name'][count]
-     print("google Keyword_conv DF SB ",Keyword_conv)
+     #print("google Keyword_conv DF SB ",Keyword_conv)
      Keyword_conv=Keyword_conv.replace(" "," +")
-     print("google Keyword_conv after replace SB ",Keyword_conv)
+     #print("google Keyword_conv after replace SB ",Keyword_conv)
      MatchType_Conv="Broad"
     if MatchType=="SX":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
@@ -244,6 +244,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print(' KeywordGen(NewBing,"sx","bing")[Bid][0]',KeywordGen(NewBing,"sx","bing")[Bid][0])
  print('')
  """
+ print("Keyword ",Keyword)
  
  return OutPutFrame
     
