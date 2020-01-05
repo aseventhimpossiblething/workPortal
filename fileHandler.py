@@ -159,10 +159,10 @@ def CommListFileHandler():
     toscrn = HTMLoutput
     #return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/911cor.xlsx", attachment_filename="911cor.xlsx")
     
-    return "<html> <a href='https://bdx-api-link.herokuapp.com/DisplayCommUpdate'>NEW TEST BUT STILL WAIT FOR CLEARANCE BEFORE LINK CLICK! OTHERWISE EPIC FAILURE</a></html>" 
+    #return "<html> <a href='https://bdx-api-link.herokuapp.com/DisplayCommUpdate'>NEW TEST BUT STILL WAIT FOR CLEARANCE BEFORE LINK CLICK! OTHERWISE EPIC FAILURE</a></html>" 
    
     #return "<html> <a href='https://bdx-api-link.herokuapp.com/test'>WAIT FOR CLEARANCE BEFORE LINK CLICK! OTHERWISE EPIC FAILURE</a></html>" 
-    #return "<meta http-equiv='refresh' content='0; URL=https://bdx-api-link.herokuapp.com/DisplayCommUpdate'><html>Lets Ride!</html>"
+    return "<meta http-equiv='refresh' content='0; URL=https://bdx-api-link.herokuapp.com/DisplayCommUpdate'><html>Lets Ride!</html>"
          
 
 
