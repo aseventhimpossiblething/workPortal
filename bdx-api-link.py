@@ -89,7 +89,7 @@ def testtextfile():
 @app.route('/DisplayCommUpdate')
 def CommUpdateDisplay():
     print("from start of route CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
-    print("________________________________________________________________exp ",read_storeRequest1,:,read_storeRequest2)
+    print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
      
     if CommunityUpdatesProcess.IsCommUpdateRunning=="YES":
      return '<meta http-equiv="refresh" content="10"><html>"LOADING..... need reload code"</html>'
