@@ -334,8 +334,8 @@ def initialCommUpdatProcess():
  print("os.getcwd() ",os.getcwd())
  storeRequest=open('RequestsVsResponses.txt','a+')
  storeRequest.write("Response , ")
- #storeRequest.close() 
- #storeRequest=open('RequestsVsResponses.txt','r+')
+ storeRequest.close() 
+ storeRequest=open('RequestsVsResponses.txt','r+')
  print("storeRequest.read() ",storeRequest.read())
  storeRequest.close()
  
