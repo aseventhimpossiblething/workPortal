@@ -102,7 +102,15 @@ def CommUpdateDisplay():
     print("read_storeRequest ",read_storeRequest)     
     print("from start of route CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
-     
+    if read_storeRequest1==read_storeRequest2:
+       return "<meta http-equiv='expires' content='0'><html>need template</html>"  
+         
+         
+    if read_storeRequest1!=read_storeRequest2:
+       return '<meta http-equiv="refresh" content="120"><html>"LOADING..... need reload code"</html>'  
+         
+         
+    """ 
     if CommunityUpdatesProcess.IsCommUpdateRunning=="YES":
      print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)             
      return '<meta http-equiv="refresh" content="120"><html>"LOADING..... need reload code"</html>'
@@ -116,6 +124,7 @@ def CommUpdateDisplay():
      #commthread.stop() 
      print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
      return "<meta http-equiv='expires' content='0'><html>need template</html>"
+     """
 
 
 
