@@ -92,14 +92,17 @@ def CommUpdateDisplay():
     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
      
     if CommunityUpdatesProcess.IsCommUpdateRunning=="YES":
+     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)             
      return '<meta http-equiv="refresh" content="10"><html>"LOADING..... need reload code"</html>'
     if CommunityUpdatesProcess.IsCommUpdateRunning=="NO":
      print("second if in route looking for no CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
+     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
      return "<meta http-equiv='expires' content='0'><html>if no</html>"
     else:
      print(" in else of route CommunityUpdatesProcess.IsCommUpdateRunning" ,CommunityUpdatesProcess.IsCommUpdateRunning)
      #commthread=fileHandler.CommListFileHandler().LoadAllCommunityFiles.isAlive()
-     #commthread.stop()    
+     #commthread.stop() 
+     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
      return "<meta http-equiv='expires' content='0'><html>need template</html>"
 
 
