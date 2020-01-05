@@ -305,42 +305,10 @@ def initialCommUpdatProcess():
 
 
   
- """  
- 
- print("expDataCol",expDataCol)
- print("len(expDataCol)",len(expDataCol))
- print(" Before KeyworGen") 
- 
- KeywordGen(NewGoogle,"sbmm","google")
- print("len(expDataCol)",len(expDataCol))
- KeywordGen(NewGoogle,"sb","google")
- print("len(expDataCol)",len(expDataCol))
- KeywordGen(NewGoogle,"sx","google")
- print("len(expDataCol)",len(expDataCol))
- KeywordGen(NewBing,"sbmm","bing")
- print("len(expDataCol)",len(expDataCol))
- KeywordGen(NewBing,"sb","bing")
- print("len(expDataCol)",len(expDataCol))
- KeywordGen(NewBing,"sx","bing") 
- 
- print(" After KeyworGen")
- print("")
- print("",)
- """
  
  KeywordGen(NewGoogle,"sbmm","google")
  
- """
- KeywordGen(NewGoogle,"sb","google")
- KeywordGen(NewGoogle,"sx","google")
- KeywordGen(NewBing,"sbmm","bing")
- KeywordGen(NewBing,"sb","bing")
- KeywordGen(NewBing,"sx","bing") 
- print("expDataCol",expDataCol)
  
- 
- 
- """
                                                                                           
                                                                                            
  print("expDataCol",expDataCol)
@@ -358,8 +326,14 @@ def initialCommUpdatProcess():
  TheSamplefile.write(TheSampleText.to_string())
  TheSamplefile.close()
  
- #global IsCommUpdateRunning
- #IsCommUpdateRunning="NO";
+ 
+ 
+ print("os.getcwd() ",os.cwd())
+ print("os.listdir() ",os.listdir()) 
+ print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
+ storeRequest=open('RequestsVsResponses.txt','a')
+ storeRequest.write("Response , ")
+ storeRequest.close()    
  
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
