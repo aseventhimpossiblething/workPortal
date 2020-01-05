@@ -106,8 +106,8 @@ def CommUpdateDisplay():
     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
     if read_storeRequest1==read_storeRequest2:
        #return "<meta http-equiv='expires' content='0'><html><a href=>need template</a></html>"  
-       return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/911cor.xlsx", attachment_filename="911cor.xlsx")
-         
+       send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/911cor.xlsx", attachment_filename="911cor.xlsx")
+       return "<meta http-equiv='expires' content='0'><html><a href=>need template</a></html>  
          
     if read_storeRequest1!=read_storeRequest2:
        return '<meta http-equiv="refresh" content="60"><html>"LOADING..... need reload code"</html>'  
