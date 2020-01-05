@@ -98,7 +98,7 @@ def CommUpdateDisplay():
     print("read_storeRequest ",read_storeRequest)
     read_storeRequest1=read_storeRequest.count('Request')
     read_storeRequest2=read_storeRequest.count('Response')
-    print(read_storeRequest1," <> ",read_storeRequest     
+    print(read_storeRequest1," <> ",read_storeRequest)     
     print("read_storeRequest ",read_storeRequest)     
     print("from start of route CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
