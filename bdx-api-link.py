@@ -55,8 +55,9 @@ print("os.listdir() ",os.listdir())
 print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
 storeRequest=open('RequestsVsResponses.txt','r')
 read_storeRequest=storeRequest.read()
-read_storeRequest1=read_storeRequest.count('Request ,')
-read_storeRequest2=read_storeRequest.count('Request ,')
+read_storeRequest1=read_storeRequest.count('Request')
+read_storeRequest2=read_storeRequest.count('Response')
+print(read_storeRequest1," ",read_storeRequest2)
 #storeRequest.close()
 
 
