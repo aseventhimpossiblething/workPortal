@@ -333,7 +333,8 @@ def initialCommUpdatProcess():
  print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
  storeRequest=open('RequestsVsResponses.txt','a')
  storeRequest.write("Response , ")
- storeRequest.close()    
+ storeRequest.close()  
+ print("storeRequest.read() ",storeRequest.read())
  
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
