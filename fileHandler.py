@@ -129,10 +129,19 @@ def CommListFileHandler():
     
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     request.files['currentBing'].save('WorkingBing')
-     
+  
     
-#IsCommUpdateRunning="YES"
-    #CommunityUpdatesProcess.IsCommUpdateRunning="YES"  
+    #IsCommUpdateRunning="YES"
+    #CommunityUpdatesProcess.IsCommUpdateRunning="YES" 
+    print("os.getcwd() ",os.cwd())
+    print("os.listdir() ",os.listdir()) 
+    print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
+    storeRequest=open('RequestsVsResponses.txt','a')
+    storeRequest.write("Request, ")
+    storeRequest.close()    
+     
+
+    
     def async_fileloader():       
      CommunityUpdatesProcess.initialCommUpdatProcess()
     LoadAllCommunityFiles=threading.Thread(target=async_fileloader)
