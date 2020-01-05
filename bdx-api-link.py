@@ -50,7 +50,7 @@ app = Flask(__name__)
 
 
 
-print("os.getcwd() ",os.cwd())
+print("os.getcwd() ",os.getcwd())
 print("os.listdir() ",os.listdir()) 
 print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
 storeRequest=open('RequestsVsResponses.txt','r')
