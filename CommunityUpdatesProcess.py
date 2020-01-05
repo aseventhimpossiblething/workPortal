@@ -278,7 +278,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   
 def initialCommUpdatProcess():
  global IsCommUpdateRunning
- IsCommUpdateRunning="YES";
+ #IsCommUpdateRunning="YES";
  
  os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
@@ -331,10 +331,13 @@ def initialCommUpdatProcess():
  print("os.getcwd() ",os.getcwd())
  print("os.listdir() ",os.listdir()) 
  print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
- storeRequest=open('RequestsVsResponses.txt','a')
+ storeRequest=open('RequestsVsResponses.txt','a+')
  storeRequest.write("Response , ")
- storeRequest.close()  
+ #storeRequest.close() 
+ #storeRequest=open('RequestsVsResponses.txt','r+')
  print("storeRequest.read() ",storeRequest.read())
+ storeRequest.close()
+ 
  
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
