@@ -140,9 +140,10 @@ def CommListFileHandler():
     print("os.getcwd() ",os.getcwd())
     storeRequest=open('RequestsVsResponses.txt','a+')
     storeRequest.write("Request, ")
-    #storeRequest.close()   
+    storeRequest.close()
+    storeRequest=open('RequestsVsResponses.txt','r+')
     print("storeRequest.read() ",storeRequest.read())
-    storeRequest.close()    
+    #storeRequest.close()    
      
 
     
