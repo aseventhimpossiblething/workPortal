@@ -49,16 +49,16 @@ app = Flask(__name__)
 #{{CommonTag}}-{{pagetitle}}
 
 
-"""
-print("initial directory",os.getcwd())
-print("contents of current directory",os.listdir())
-#os.chdir("/app/Sheets/CommunityUpdates")
-os.chdir("/app/Sheets/CommunityUpdates/Bing/currentBing")
-print("current directory",os.getcwd())
-print("contents of current directory",os.listdir())
-TheSamplefile=open('TheSampleText.txt','r')
-TheSamplefile.read()
-"""
+
+print("os.getcwd() ",os.cwd())
+print("os.listdir() ",os.listdir()) 
+print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
+storeRequest=open('RequestsVsResponses.txt','r')
+read_storeRequest=storeRequest.read()
+read_storeRequest1=read_storeRequest.count('Request ,')
+read_storeRequest2=read_storeRequest.count('Request ,')
+storeRequest.close()
+
 
 
 
@@ -89,6 +89,8 @@ def testtextfile():
 @app.route('/DisplayCommUpdate')
 def CommUpdateDisplay():
     print("from start of route CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
+    print("________________________________________________________________exp ",read_storeRequest1,:,read_storeRequest2)
+     
     if CommunityUpdatesProcess.IsCommUpdateRunning=="YES":
      return '<meta http-equiv="refresh" content="10"><html>"LOADING..... need reload code"</html>'
     if CommunityUpdatesProcess.IsCommUpdateRunning=="NO":
