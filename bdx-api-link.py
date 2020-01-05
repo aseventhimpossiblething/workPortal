@@ -9,6 +9,7 @@ import redis
 import os
 from flask import Flask, Markup, render_template, request
 from celery import Celery
+from flask import send_file
 #import taskque
          
 
@@ -104,7 +105,7 @@ def CommUpdateDisplay():
     print("from start of route CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
     if read_storeRequest1==read_storeRequest2:
-       return "<meta http-equiv='expires' content='0'><html>need template</html>"  
+       return "<meta http-equiv='expires' content='0'><html><a href=>need template</a></html>"  
          
          
     if read_storeRequest1!=read_storeRequest2:
