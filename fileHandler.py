@@ -143,7 +143,7 @@ def CommListFileHandler():
     storeRequest.close()
     storeRequest=open('RequestsVsResponses.txt','r+')
     print("storeRequest.read() ",storeRequest.read())
-    #storeRequest.close()    
+    storeRequest.close()    
      
 
     
