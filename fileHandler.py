@@ -133,9 +133,11 @@ def CommListFileHandler():
     
     #IsCommUpdateRunning="YES"
     #CommunityUpdatesProcess.IsCommUpdateRunning="YES" 
+    print('WRITE REQUEST SEQUENCE!')
     print("os.getcwd() ",os.getcwd())
     print("os.listdir() ",os.listdir()) 
     print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
+    print("os.getcwd() ",os.getcwd())
     storeRequest=open('RequestsVsResponses.txt','a+')
     storeRequest.write("Request, ")
     #storeRequest.close()   
