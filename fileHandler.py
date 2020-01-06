@@ -162,7 +162,7 @@ def CommListFileHandler():
     #return "<html> <a href='https://bdx-api-link.herokuapp.com/DisplayCommUpdate'>NEW TEST BUT STILL WAIT FOR CLEARANCE BEFORE LINK CLICK! OTHERWISE EPIC FAILURE</a></html>" 
    
     #return "<html> <a href='https://bdx-api-link.herokuapp.com/test'>WAIT FOR CLEARANCE BEFORE LINK CLICK! OTHERWISE EPIC FAILURE</a></html>" 
-    return "<meta http-equiv='refresh' content='0;URL=https://bdx-api-link.herokuapp.com/DisplayCommUpdate'><html>did not forward</html>"
+    return "<meta http-equiv='refresh' content='0;URL=https://bdx-api-link.herokuapp.com/arbitraryname'><html>did not forward</html>"
          
 
 
