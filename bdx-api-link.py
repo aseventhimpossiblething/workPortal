@@ -105,12 +105,9 @@ def CommUpdateDisplay():
     print("from start of route CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
     if read_storeRequest1==read_storeRequest2:
-       #return "<meta http-equiv='expires' content='0'><html><a href=>need template</a></html>"  
-       #send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/911cor.xlsx", attachment_filename="911cor.xlsx")
-       #return "<meta http-equiv='expires' content='0'><html><a href='https://bdx-api-link.herokuapp.com/dnlde'>need template</a></html>"  
-       return "Are they equal? They Should be"  
+     return "Are they equal? They Should be"  
     if read_storeRequest1!=read_storeRequest2:
-       return '<meta http-equiv="refresh" content="60"><html>"LOADING..... need reload code"</html>'  
+     return '<meta http-equiv="refresh" content="60"><html>"LOADING..... need reload code"</html>'  
 
 @app.route('/dnlde')
 def dnld():
