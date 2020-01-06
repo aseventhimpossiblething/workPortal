@@ -50,7 +50,7 @@ app = Flask(__name__)
 #{{CommonTag}}-{{pagetitle}}
 
 
-
+"""
 print("os.getcwd() ",os.getcwd())
 print("os.listdir() ",os.listdir()) 
 print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
@@ -61,12 +61,13 @@ read_storeRequest1=read_storeRequest.count('Request')
 read_storeRequest2=read_storeRequest.count('Response')
 print(read_storeRequest1," <> ",read_storeRequest2)
 #storeRequest.close()
+"""
 
 
 
 
 
-print(" start of index CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
+#print(" start of index CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
 
 CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
 
@@ -91,6 +92,7 @@ def testtextfile():
 
 @app.route('/DisplayCommUpdate')
 def CommUpdateDisplay():
+    print("ALERT OF ARRIVAL OF REQUEST AT /DisplayCommUpdate ")     
     print("os.getcwd() ",os.getcwd())
     print("os.listdir() ",os.listdir()) 
     print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
