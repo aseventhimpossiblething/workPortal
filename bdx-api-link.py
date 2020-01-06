@@ -108,27 +108,13 @@ def CommUpdateDisplay():
      return "Are they equal? They Should be"  
     if read_storeRequest1!=read_storeRequest2:
      return '<meta http-equiv="refresh" content="60"><html>"LOADING..... need reload code"</html>'  
-
+"""
 @app.route('/dnlde')
 def dnld():
     return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/911cor.xlsx", attachment_filename="911cor.xlsx")     
+"""         
          
-         
-    """ 
-    if CommunityUpdatesProcess.IsCommUpdateRunning=="YES":
-     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)             
-     return '<meta http-equiv="refresh" content="120"><html>"LOADING..... need reload code"</html>'
-    if CommunityUpdatesProcess.IsCommUpdateRunning=="NO":
-     print("second if in route looking for no CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
-     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
-     return "<meta http-equiv='expires' content='0'><html>if no</html>"
-    else:
-     print(" in else of route CommunityUpdatesProcess.IsCommUpdateRunning" ,CommunityUpdatesProcess.IsCommUpdateRunning)
-     #commthread=fileHandler.CommListFileHandler().LoadAllCommunityFiles.isAlive()
-     #commthread.stop() 
-     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
-     return "<meta http-equiv='expires' content='0'><html>need template</html>"
-     """
+    
 
 
 
