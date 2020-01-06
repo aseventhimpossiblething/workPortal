@@ -89,7 +89,7 @@ def testtextfile():
     return TheSamplefile.read()
 
 
-"""
+
 @app.route('/DisplayCommUpdate')
 def CommUpdateDisplay():
     print("ALERT OF ARRIVAL OF REQUEST AT /DisplayCommUpdate ")     
@@ -106,7 +106,7 @@ def CommUpdateDisplay():
     print("read_storeRequest ",read_storeRequest)     
     print("from start of route CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
-"""    
+   
 """
     if read_storeRequest1==read_storeRequest2:
      return "Are they equal? They Should be"  
