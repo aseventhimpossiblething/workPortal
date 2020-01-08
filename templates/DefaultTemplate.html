@@ -8,7 +8,9 @@
 <body>
 <div class="littletop">{{CommonTag}}-{{pagetitle}} </div>  
 
-<div class="containerMain">{{content}}</div>
+<div class="containerMain">{% block content %}{% endblock %}{{content}}</div>
 
 </body>
 </HTML>
+
+
