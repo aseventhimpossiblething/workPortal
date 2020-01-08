@@ -115,6 +115,7 @@ def CommUpdateDisplay():
 
 @app.route('/NEWEXPINDEX')
 def ABTEST():
+  render_template('NEWEXPINDEX.html')       
          
 
 
