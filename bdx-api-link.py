@@ -112,6 +112,14 @@ def CommUpdateDisplay():
      return '<meta http-equiv="refresh" content="60"><html>LOADING..... need reload code</html>'  
 
 
+
+@app.route('/NEWEXPINDEX')
+def ABTEST():
+         
+
+
+
+
 """
 @app.route('/dnlde')
 def dnld():
