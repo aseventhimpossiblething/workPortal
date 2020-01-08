@@ -107,7 +107,7 @@ def CommUpdateDisplay():
     print("from start of route CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
     if read_storeRequest1==read_storeRequest2:
-     return "Are they equal? They Should be solid page"  
+     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><html>Frame for downloads list Google, Bing</html>"
     if read_storeRequest1!=read_storeRequest2:
      return '<meta http-equiv="refresh" content="60"><html>LOADING..... need reload code</html>'  
 
