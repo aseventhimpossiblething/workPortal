@@ -231,11 +231,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("In KeywordGen google SBMM ")
    #print("os.getcwd()",os.getcwd())
    #print("os.listdir()",os.listdir())
-   print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'))
+   print("os.chdir('/app/Sheets/CommunityUpdates')",\
+         os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'))
    print("SBMM os.getcwd()",os.getcwd())
    print("SBMM os.listdir()",os.listdir())
-   OutPutFrame.to_excel(r'DefaultSheet.xlsx')
    
+   OutPutFrame['Campaign'].to_excel(r'/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/DefaultSheets.xlsx')
+   print(OutPutFrame)
+   print(OutPutFrame['Campaign'])
    
    """
    GoogleSBMMKeyWordoutput=open('DefaultSheet.xlsx','w+')
