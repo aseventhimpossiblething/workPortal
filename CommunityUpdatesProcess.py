@@ -15,7 +15,7 @@ import threading
 import numpy
 import Market_LookUp
 import sys
-import openpyxl
+from openpyxl import Workbook
 
 
 
