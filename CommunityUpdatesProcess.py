@@ -231,9 +231,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'))
    print("os.getcwd()",os.getcwd())
    print("os.listdir()",os.listdir())
+   OutPutFrame.to_excel('DefaultSheet.xlsx')
+   
+   
+   """
    GoogleSBMMKeyWordoutput=open('DefaultSheet.xlsx','w+')
    GoogleSBMMKeyWordoutput.write(OutPutFrame.to_string())
    GoogleSBMMKeyWordoutput.close()
+   """
   if MatchType=='SB':
    print("In KeywordGen google SB ")
    print("os.getcwd()",os.getcwd())
@@ -242,9 +247,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW/
    print("os.getcwd()",os.getcwd())
    print("os.listdir()",os.listdir())
+   OutPutFrame.to_excel('DefaultSheet.xlsx')
+   
+   """
    GoogleBroadKeyWordoutput=open('DefaultSheet.xlsx','w+')
    GoogleBroadKeyWordoutput.write(OutPutFrame.to_string())
-   GoogleBroadKeyWordoutput.close()      
+   GoogleBroadKeyWordoutput.close() 
+   """
    
  #OutPutFrame
  return OutPutFrame
