@@ -20,4 +20,5 @@ glob2
 redis
 huey
 redis-py
+openpyxl
 
