@@ -111,7 +111,7 @@ def CommUpdateDisplay():
 def CommUpdateExcel():
  return render_template('CommUpdateExcel.html')
 
-@app.route('/GoogleKWSBMMdnld')
+@app.route('/GoogleKWSBMMdld')
 def GoogleKWSBMMKW():
  """         
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/911cor.xlsx",\
