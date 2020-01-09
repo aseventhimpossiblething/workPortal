@@ -242,8 +242,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    """
   if MatchType=='SB':
    print("In KeywordGen google SB ")
-   print("os.getcwd()",os.getcwd())
-   print("os.listdir()",os.listdir())
+   #print("os.getcwd()",os.getcwd())
+   #print("os.listdir()",os.listdir())
    print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW'))
    #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW/
    print("os.getcwd()",os.getcwd())
@@ -310,8 +310,8 @@ def initialCommUpdatProcess():
   
  print("Main ")
  os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
- print("os.getcwd()",os.getcwd())
- print("os.listdir()",os.listdir()) 
+ #print("os.getcwd()",os.getcwd())
+ #print("os.listdir()",os.listdir()) 
  
  TheSampleText=WorkingBingEOF
  TheSamplefile=open('TheSampleText.txt','w+') 
@@ -319,11 +319,11 @@ def initialCommUpdatProcess():
  TheSamplefile.close()
  
  
- 
- print("os.getcwd() ",os.getcwd())
- print("os.listdir() ",os.listdir()) 
- print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
- print("os.getcwd() ",os.getcwd())
+ os.chdir('/app/Sheets/')
+ #print("os.getcwd() ",os.getcwd())
+ #print("os.listdir() ",os.listdir()) 
+ #print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
+ #print("os.getcwd() ",os.getcwd())
  storeRequest=open('RequestsVsResponses.txt','a+')
  storeRequest.write("Response , ")
  storeRequest.close() 
