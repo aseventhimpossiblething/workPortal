@@ -246,7 +246,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #print(OutPutFrame['Campaign'])
    #print("SBMM os.listdir() ",os.listdir())
    
-
   if MatchType=='SB':
    print("In KeywordGen google SB ")
    #print("os.getcwd()",os.getcwd())
@@ -268,10 +267,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
          os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW'))
    print("SB os.getcwd()",os.getcwd())
    print("SB os.listdir()",os.listdir())
-   #OutPutFrame.to_excel("DefaultSheet.xlsx")
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    OutPutFrame.to_excel(writer)
    writer.save()  
+   
  """  
  if SearchChan=="bing":
   if MatchType=='SBMM':
@@ -339,27 +338,20 @@ def initialCommUpdatProcess():
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
 
-
-  
  
  KeywordGen(NewGoogle,"sbmm","google")
  KeywordGen(NewGoogle,"sb","google")
  KeywordGen(NewGoogle,"sx","google")
+
+ 
  """        
  KeywordGen(NewGoogle,"sx","google")
  KeywordGen(NewBing,"sbmm","bing")
  KeywordGen(NewBing,"sb","bing")
  KeywordGen(NewBing,"sx","bing")
  """
- 
- 
-                                                                                          
-                                                                                           
- #print("expDataCol",expDataCol)
- 
- 
-
-  
+                       
+   
  print("Main ")
  os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
  #print("os.getcwd()",os.getcwd())
