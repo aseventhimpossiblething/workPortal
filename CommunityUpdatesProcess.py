@@ -226,8 +226,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  if SearchChan=="google":
   if MatchType=='SBMM':
    print("In KeywordGen google SBMM ")
-   print("os.getcwd()",os.getcwd())
-   print("os.listdir()",os.listdir())
+   #print("os.getcwd()",os.getcwd())
+   #print("os.listdir()",os.listdir())
    print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'))
    print("os.getcwd()",os.getcwd())
    print("os.listdir()",os.listdir())
@@ -235,12 +235,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    GoogleSBMMKeyWordoutput.write(OutPutFrame.to_string())
    GoogleSBMMKeyWordoutput.close()
   if MatchType=='SB':
-   print("os.getcwd()",os.getcwd())
-   print("os.listdir()",os.listdir())
    print("In KeywordGen google SB ")
    print("os.getcwd()",os.getcwd())
    print("os.listdir()",os.listdir())
-   print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW/'))
+   print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW'))
    #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW/
    print("os.getcwd()",os.getcwd())
    print("os.listdir()",os.listdir())
@@ -249,42 +247,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    GoogleBroadKeyWordoutput.close()      
    
  #OutPutFrame
- 
- 
- 
- 
- #print("OutPutFrame[OutPutFrame.columns[0]]-OutPutFrame[OutputFrame.columns[1]]-OutPutFrame[OutputFrame.columns[2]",\
-       #OutPutFrame[OutPutFrame.columns[0]],OutPutFrame[OutPutFrame.columns[1]],OutPutFrame[OutPutFrame.columns[2]])
- 
- """
- print("-------------------")
- print("Keyword")
- print(Keyword)
- print("-------------------")
- """
- 
- """
- print("[0]")
- print("")
- print('KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0]',KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0])
- print('KeywordGen(NewGoogle,"sb","google")[Adgroup][0]',KeywordGen(NewGoogle,"sb","google")[Adgroup][0])
- print('KeywordGen(NewGoogle,"sx","google")[Keyword][0]',KeywordGen(NewGoogle,"sx","google")[Keyword][0])
- print('KeywordGen(NewBing,"sbmm","bing")[Match_Type][0]',KeywordGen(NewBing,"sbmm","bing")[Match_Type][0])
- print('KeywordGen(NewBing,"sb","bing")[Status][0]',KeywordGen(NewBing,"sb","bing")[Status][0])
- print(' KeywordGen(NewBing,"sx","bing")[Bid][0]',KeywordGen(NewBing,"sx","bing")[Bid][0])
- print('')
- 
- print("[1]")
- print('KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0]',KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0])
- print('KeywordGen(NewGoogle,"sb","google")[Adgroup][0]',KeywordGen(NewGoogle,"sb","google")[Adgroup][0])
- print('KeywordGen(NewGoogle,"sx","google")[Keyword][0]',KeywordGen(NewGoogle,"sx","google")[Keyword][0])
- print('KeywordGen(NewBing,"sbmm","bing")[Match_Type][0]',KeywordGen(NewBing,"sbmm","bing")[Match_Type][0])
- print('KeywordGen(NewBing,"sb","bing")[Status][0]',KeywordGen(NewBing,"sb","bing")[Status][0])
- print(' KeywordGen(NewBing,"sx","bing")[Bid][0]',KeywordGen(NewBing,"sx","bing")[Bid][0])
- print('')
- """
- #print("Keyword ",Keyword)
- 
  return OutPutFrame
     
   
