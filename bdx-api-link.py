@@ -109,7 +109,7 @@ def CommUpdateDisplay():
     if read_storeRequest1==read_storeRequest2:
      #return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='Cache-Control' content='0;URL=https://bdx-api-link.herokuapp.com/CommUpdateExcel'><html>This Message indicates an error in URL Forward</html>"
      #return "Alt Message Test"
-     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='Cache-Control' content='0;URL=https://www.google.com'><html>This Message indicates an error in URL Forward</html>"
+     return "<meta http-equiv='Cache-Control' content='0;URL=https://www.google.com'><html>Should forward to google</html>"
     if read_storeRequest1!=read_storeRequest2:
      return '<meta http-equiv="refresh" content="60"><html>LOADING..... This can Take up to 5 minuites </html>'
 
