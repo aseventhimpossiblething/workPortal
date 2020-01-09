@@ -107,12 +107,12 @@ def CommUpdateDisplay():
     print("from start of route CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
     if read_storeRequest1==read_storeRequest2:
-     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='Cache-Control' content='0;URL=https://bdx-api-link.herokuapp.com/DisplayCommUpdate'><html>This Message indicates an error in URL Forward</html>"
+     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='Cache-Control' content='0;URL=https://bdx-api-link.herokuapp.com/CommUpdateExcel'><html>This Message indicates an error in URL Forward</html>"
     if read_storeRequest1!=read_storeRequest2:
-     return '<meta http-equiv="refresh" content="60"><html>LOADING..... need reload code</html>'
+     return '<meta http-equiv="refresh" content="60"><html>LOADING..... This can Take up to 5 minuites </html>'
 
 
-'0;URL=https://bdx-api-link.herokuapp.com/DisplayCommUpdate'
+#'0;URL=https://bdx-api-link.herokuapp.com/DisplayCommUpdate'
 #https://bdx-api-link.herokuapp.com/GoogleKWSBMM
 @app.route('/CommUpdateExcel')
 def CommUpdateExcel():
