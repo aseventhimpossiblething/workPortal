@@ -141,7 +141,7 @@ def communityCheck(checkby,checkin,Name):
  
  
  
-expDataCol=[];
+#expDataCol=[];
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
  #print("google Keyword_conv DF ",NewDataFrame['Community Name'])
  #numberofLoops=NewDataFrame.count();
@@ -212,17 +212,19 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Bid.append(set_bid)
   except:
    NewDataFrame=NewDataFrame.drop([count])
-   expDataCol.append(count)
+   #expDataCol.append(count)
   count+=1;
   
  OutPutFrame={"Campaign":Campaign_Name,"Adgroup":Adgroup,"Keyword":Keyword,"Match_Type":Match_Type,"Status":Status,"Bid":Bid} 
- OutPutFrame=pandas.DataFrame(OutPutFrame)  
+ OutPutFrame=pandas.DataFrame(OutPutFrame)
+ """
  print("len(Campaign_Name) ",len(Campaign_Name))  
  print("len(Adgroup) ",len(Adgroup)) 
  print("len(Keyword) " ,len(Keyword))
  print("len(Match_Type) ",len(Match_Type))
  print("len(Status) ",len(Status))
  print("len(Bid) ",len(Bid))
+ """
  print("")
  if SearchChan=="google":
   if MatchType=='SBMM':
@@ -230,8 +232,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #print("os.getcwd()",os.getcwd())
    #print("os.listdir()",os.listdir())
    print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'))
-   print("os.getcwd()",os.getcwd())
-   print("os.listdir()",os.listdir())
+   print("SBMM os.getcwd()",os.getcwd())
+   print("SBMM os.listdir()",os.listdir())
    OutPutFrame.to_excel('DefaultSheet.xlsx')
    
    
@@ -246,8 +248,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #print("os.listdir()",os.listdir())
    print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW'))
    #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW/
-   print("os.getcwd()",os.getcwd())
-   print("os.listdir()",os.listdir())
+   print("SB os.getcwd()",os.getcwd())
+   print("SB os.listdir()",os.listdir())
    OutPutFrame.to_excel('DefaultSheet.xlsx')
    
    """
@@ -303,7 +305,7 @@ def initialCommUpdatProcess():
  
                                                                                           
                                                                                            
- print("expDataCol",expDataCol)
+ #print("expDataCol",expDataCol)
  
  
 
