@@ -20,3 +20,4 @@ glob2
 redis
 huey
 openpyxl
+XlsxWriter
