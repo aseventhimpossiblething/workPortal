@@ -113,7 +113,7 @@ def CommUpdateExcel():
 
 @app.route('/GoogleKWSBMM')
 def GoogleKWSBMMKW():
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/DefaultSheet.xlsx",\
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/911.cor.xlsx",\
                   attachment_filename="GoogleKWSBMM.xlsx")
 
          
