@@ -236,7 +236,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("SBMM os.getcwd()",os.getcwd())
    print("SBMM os.listdir()",os.listdir())
    
-   OutPutFrame['Campaign'].to_excel(r'/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/DefaultSheets.xlsx')
+   OutPutFrame['Campaign'].to_excel("AttemptToWrite.xlsx")
    print(OutPutFrame)
    print(OutPutFrame['Campaign'])
    
@@ -253,7 +253,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW/
    print("SB os.getcwd()",os.getcwd())
    print("SB os.listdir()",os.listdir())
-   OutPutFrame.to_excel('DefaultSheet.xlsx')
+   OutPutFrame.to_excel("DefaultSheet.xlsx")
    
    """
    GoogleBroadKeyWordoutput=open('DefaultSheet.xlsx','w+')
