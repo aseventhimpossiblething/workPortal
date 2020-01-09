@@ -120,7 +120,7 @@ def GoogleKWSBMMKW():
 
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/911cor.xlsx",\
 
-                  attachment_filename="911cor.xlsx")
+                  attachment_filename="GoogleBMMKW.xlsx")
 
 
 
