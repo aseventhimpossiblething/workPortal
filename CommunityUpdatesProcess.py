@@ -261,8 +261,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
   if MatchType=='SX':
    print("In KeywordGen google SX ")
-   #print("os.getcwd()",os.getcwd())
-   #print("os.listdir()",os.listdir())
    print("os.chdir('/app/Sheets/CommunityUpdates')",\
          os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW'))
    print("SB os.getcwd()",os.getcwd())
@@ -270,6 +268,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    OutPutFrame.to_excel(writer)
    writer.save()  
+   print("OutPutFrame")
+   print(OutPutFrame)
    
  """  
  if SearchChan=="bing":
