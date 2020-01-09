@@ -236,9 +236,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("SBMM os.getcwd()",os.getcwd())
    print("SBMM os.listdir()",os.listdir())
    
-   OutPutFrame['Campaign'].to_excel("AttemptToWrite.xlsx")
-   print(OutPutFrame)
-   print(OutPutFrame['Campaign'])
+   writer=OutPutFrame.ExcelWriter('DefaultSheet.xlsx', engine='xlsxwriter')
+   
+   OutPutFrame.to_excel(writer)
+   writer.save()
+   #print(OutPutFrame)
+   #print(OutPutFrame['Campaign'])
    
    """
    GoogleSBMMKeyWordoutput=open('DefaultSheet.xlsx','w+')
