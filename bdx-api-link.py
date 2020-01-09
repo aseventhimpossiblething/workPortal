@@ -112,10 +112,14 @@ def CommUpdateDisplay():
      return '<meta http-equiv="refresh" content="60"><html>LOADING..... need reload code</html>'  
 
 
+#https://bdx-api-link.herokuapp.com/GoogleKWSBMM
+@app.route('/CommUpdateExcel')
+def CommUpdateExcel():
+ return render_template('CommUpdateExcel.html')
 
-@app.route('/NEWEXPINDEX')
-def ABTEST():
- return render_template('NEWEXPINDEX.html')       
+@app.route('/GoogleKWSBMM')
+def GoogleKWSBMMWK():
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/911cor.xlsx", attachment_filename="GoogleKWSBMM.xlsx)
          
 
 
