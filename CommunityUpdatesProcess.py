@@ -246,17 +246,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #print(OutPutFrame['Campaign'])
    #print("SBMM os.listdir() ",os.listdir())
    
-   """
-   GoogleSBMMKeyWordoutput=open('DefaultSheet.xlsx','w+')
-   GoogleSBMMKeyWordoutput.write(OutPutFrame.to_string())
-   GoogleSBMMKeyWordoutput.close()
-   """
+
   if MatchType=='SB':
    print("In KeywordGen google SB ")
    #print("os.getcwd()",os.getcwd())
    #print("os.listdir()",os.listdir())
-   print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW'))
-   #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW/
+   print("os.chdir('/app/Sheets/CommunityUpdates')",\
+         os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW'))
    print("SB os.getcwd()",os.getcwd())
    print("SB os.listdir()",os.listdir())
    #OutPutFrame.to_excel("DefaultSheet.xlsx")
@@ -264,13 +260,54 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    OutPutFrame.to_excel(writer)
    writer.save()
    
-   """
-   GoogleBroadKeyWordoutput=open('DefaultSheet.xlsx','w+')
-   GoogleBroadKeyWordoutput.write(OutPutFrame.to_string())
-   GoogleBroadKeyWordoutput.close() 
-   """
+  if MatchType=='SX':
+   print("In KeywordGen google SX ")
+   #print("os.getcwd()",os.getcwd())
+   #print("os.listdir()",os.listdir())
+   print("os.chdir('/app/Sheets/CommunityUpdates')",\
+         os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW'))
+   print("SB os.getcwd()",os.getcwd())
+   print("SB os.listdir()",os.listdir())
+   #OutPutFrame.to_excel("DefaultSheet.xlsx")
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   OutPutFrame.to_excel(writer)
+   writer.save()  
+ """  
+ if SearchChan=="bing":
+  if MatchType=='SBMM':
+   print("In KeywordGen bing SBMM ")
+   print("os.chdir('/app/Sheets/CommunityUpdates')",\
+         os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM'))
+   print("SBMM os.getcwd()",os.getcwd())
+   print("SBMM os.listdir()",os.listdir())
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   OutPutFrame.to_excel(writer)
+   writer.save()
    
- #OutPutFrame
+  if MatchType=='SB':
+   print("In KeywordGen bing SB ")
+   print("os.chdir('/app/Sheets/CommunityUpdates')",\
+         os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad'))
+   print("SB os.getcwd()",os.getcwd())
+   print("SB os.listdir()",os.listdir())
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   OutPutFrame.to_excel(writer)
+   writer.save()
+   
+  if MatchType=='SX':
+   print("In KeywordGen bing SX ")
+   print("os.chdir('/app/Sheets/CommunityUpdates')",\
+         os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact'))
+   print("SB os.getcwd()",os.getcwd())
+   print("SB os.listdir()",os.listdir())
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   OutPutFrame.to_excel(writer)
+   writer.save()
+ """  
+   
+   
+   
+
  return OutPutFrame
     
   
