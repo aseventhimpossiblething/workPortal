@@ -236,7 +236,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    GoogleSBMMKeyWordoutput.close()
   if MatchType=='SB':
    print("os.getcwd()",os.getcwd())
-   print("os.listdir()",os.listdir()
+   print("os.listdir()",os.listdir())
    print("In KeywordGen google SB ")
    print("os.getcwd()",os.getcwd())
    print("os.listdir()",os.listdir())
