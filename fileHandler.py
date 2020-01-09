@@ -12,8 +12,10 @@ import io
 #import taskque
 import threading
 from flask import send_file
+import gc
 
 print("top of filehandler CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
+#CommunityUpdatesProcess.IsCommUpdateRunning="YES"
 
 
 
@@ -127,9 +129,24 @@ def CommListFileHandler():
     
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     request.files['currentBing'].save('WorkingBing')
-     
+  
     
-      
+    #IsCommUpdateRunning="YES"
+    #CommunityUpdatesProcess.IsCommUpdateRunning="YES" 
+    print('WRITE REQUEST SEQUENCE!')
+    print("os.getcwd() ",os.getcwd())
+    print("os.listdir() ",os.listdir()) 
+    print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
+    print("os.getcwd() ",os.getcwd())
+    storeRequest=open('RequestsVsResponses.txt','a+')
+    storeRequest.write("Request, ")
+    storeRequest.close()
+    storeRequest=open('RequestsVsResponses.txt','r+')
+    print("storeRequest.read() ",storeRequest.read())
+    storeRequest.close()    
+     
+
+    
     def async_fileloader():       
      CommunityUpdatesProcess.initialCommUpdatProcess()
     LoadAllCommunityFiles=threading.Thread(target=async_fileloader)
@@ -145,7 +162,7 @@ def CommListFileHandler():
     #return "<html> <a href='https://bdx-api-link.herokuapp.com/DisplayCommUpdate'>NEW TEST BUT STILL WAIT FOR CLEARANCE BEFORE LINK CLICK! OTHERWISE EPIC FAILURE</a></html>" 
    
     #return "<html> <a href='https://bdx-api-link.herokuapp.com/test'>WAIT FOR CLEARANCE BEFORE LINK CLICK! OTHERWISE EPIC FAILURE</a></html>" 
-    return "<meta http-equiv='refresh' content='0; URL=https://bdx-api-link.herokuapp.com/DisplayCommUpdate'><html>Lets Ride!</html>"
+    return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=https://bdx-api-link.herokuapp.com/DisplayCommUpdate'><html>did not forward</html>"
          
 
 

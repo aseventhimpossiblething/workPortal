@@ -14,6 +14,8 @@ import re
 import threading
 import numpy
 import Market_LookUp
+import sys
+from openpyxl import Workbook
 
 
 
@@ -139,7 +141,7 @@ def communityCheck(checkby,checkin,Name):
  
  
  
-expDataCol=[];
+#expDataCol=[];
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
  #print("google Keyword_conv DF ",NewDataFrame['Community Name'])
  #numberofLoops=NewDataFrame.count();
@@ -210,74 +212,63 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Bid.append(set_bid)
   except:
    NewDataFrame=NewDataFrame.drop([count])
-   expDataCol.append(count)
+   #expDataCol.append(count)
   count+=1;
   
  OutPutFrame={"Campaign":Campaign_Name,"Adgroup":Adgroup,"Keyword":Keyword,"Match_Type":Match_Type,"Status":Status,"Bid":Bid} 
- OutPutFrame=pandas.DataFrame(OutPutFrame)  
+ OutPutFrame=pandas.DataFrame(OutPutFrame)
+ """
  print("len(Campaign_Name) ",len(Campaign_Name))  
  print("len(Adgroup) ",len(Adgroup)) 
  print("len(Keyword) " ,len(Keyword))
  print("len(Match_Type) ",len(Match_Type))
  print("len(Status) ",len(Status))
  print("len(Bid) ",len(Bid))
+ """
  print("")
  if SearchChan=="google":
   if MatchType=='SBMM':
-   print("In KeywordGen ")
-   print("os.getcwd()",os.getcwd())
-   print("os.listdir()",os.listdir())
-   print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'))
-   print("os.getcwd()",os.getcwd())
-   print("os.listdir()",os.listdir())
+   print("In KeywordGen google SBMM ")
+   #print("os.getcwd()",os.getcwd())
+   #print("os.listdir()",os.listdir())
+   print("os.chdir('/app/Sheets/CommunityUpdates')",\
+         os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'))
+   print("SBMM os.getcwd()",os.getcwd())
+   print("SBMM os.listdir()",os.listdir())
+   
+   OutPutFrame['Campaign'].to_excel("AttemptToWrite.xlsx")
+   print(OutPutFrame)
+   print(OutPutFrame['Campaign'])
+   
+   """
    GoogleSBMMKeyWordoutput=open('DefaultSheet.xlsx','w+')
    GoogleSBMMKeyWordoutput.write(OutPutFrame.to_string())
    GoogleSBMMKeyWordoutput.close()
+   """
+  if MatchType=='SB':
+   print("In KeywordGen google SB ")
+   #print("os.getcwd()",os.getcwd())
+   #print("os.listdir()",os.listdir())
+   print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW'))
+   #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW/
+   print("SB os.getcwd()",os.getcwd())
+   print("SB os.listdir()",os.listdir())
+   OutPutFrame.to_excel("DefaultSheet.xlsx")
    
- OutPutFrame
- 
- 
- 
- 
- #print("OutPutFrame[OutPutFrame.columns[0]]-OutPutFrame[OutputFrame.columns[1]]-OutPutFrame[OutputFrame.columns[2]",\
-       #OutPutFrame[OutPutFrame.columns[0]],OutPutFrame[OutPutFrame.columns[1]],OutPutFrame[OutPutFrame.columns[2]])
- 
- """
- print("-------------------")
- print("Keyword")
- print(Keyword)
- print("-------------------")
- """
- 
- """
- print("[0]")
- print("")
- print('KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0]',KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0])
- print('KeywordGen(NewGoogle,"sb","google")[Adgroup][0]',KeywordGen(NewGoogle,"sb","google")[Adgroup][0])
- print('KeywordGen(NewGoogle,"sx","google")[Keyword][0]',KeywordGen(NewGoogle,"sx","google")[Keyword][0])
- print('KeywordGen(NewBing,"sbmm","bing")[Match_Type][0]',KeywordGen(NewBing,"sbmm","bing")[Match_Type][0])
- print('KeywordGen(NewBing,"sb","bing")[Status][0]',KeywordGen(NewBing,"sb","bing")[Status][0])
- print(' KeywordGen(NewBing,"sx","bing")[Bid][0]',KeywordGen(NewBing,"sx","bing")[Bid][0])
- print('')
- 
- print("[1]")
- print('KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0]',KeywordGen(NewGoogle,"sbmm","google")[Campaign_Name][0])
- print('KeywordGen(NewGoogle,"sb","google")[Adgroup][0]',KeywordGen(NewGoogle,"sb","google")[Adgroup][0])
- print('KeywordGen(NewGoogle,"sx","google")[Keyword][0]',KeywordGen(NewGoogle,"sx","google")[Keyword][0])
- print('KeywordGen(NewBing,"sbmm","bing")[Match_Type][0]',KeywordGen(NewBing,"sbmm","bing")[Match_Type][0])
- print('KeywordGen(NewBing,"sb","bing")[Status][0]',KeywordGen(NewBing,"sb","bing")[Status][0])
- print(' KeywordGen(NewBing,"sx","bing")[Bid][0]',KeywordGen(NewBing,"sx","bing")[Bid][0])
- print('')
- """
- #print("Keyword ",Keyword)
- 
+   """
+   GoogleBroadKeyWordoutput=open('DefaultSheet.xlsx','w+')
+   GoogleBroadKeyWordoutput.write(OutPutFrame.to_string())
+   GoogleBroadKeyWordoutput.close() 
+   """
+   
+ #OutPutFrame
  return OutPutFrame
     
   
   
 def initialCommUpdatProcess():
  global IsCommUpdateRunning
- IsCommUpdateRunning="YES";
+ #IsCommUpdateRunning="YES";
  
  os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
@@ -304,63 +295,50 @@ def initialCommUpdatProcess():
 
 
   
- """  
- 
- print("expDataCol",expDataCol)
- print("len(expDataCol)",len(expDataCol))
- print(" Before KeyworGen") 
  
  KeywordGen(NewGoogle,"sbmm","google")
- print("len(expDataCol)",len(expDataCol))
  KeywordGen(NewGoogle,"sb","google")
- print("len(expDataCol)",len(expDataCol))
- KeywordGen(NewGoogle,"sx","google")
- print("len(expDataCol)",len(expDataCol))
- KeywordGen(NewBing,"sbmm","bing")
- print("len(expDataCol)",len(expDataCol))
- KeywordGen(NewBing,"sb","bing")
- print("len(expDataCol)",len(expDataCol))
- KeywordGen(NewBing,"sx","bing") 
- 
- print(" After KeyworGen")
- print("")
- print("",)
- """
- 
- KeywordGen(NewGoogle,"sbmm","google")
- 
- """
- KeywordGen(NewGoogle,"sb","google")
+ """        
  KeywordGen(NewGoogle,"sx","google")
  KeywordGen(NewBing,"sbmm","bing")
  KeywordGen(NewBing,"sb","bing")
- KeywordGen(NewBing,"sx","bing") 
- print("expDataCol",expDataCol)
- 
- 
- 
+ KeywordGen(NewBing,"sx","bing")
  """
+ 
+ 
                                                                                           
                                                                                            
- print("expDataCol",expDataCol)
+ #print("expDataCol",expDataCol)
  
  
 
   
  print("Main ")
  os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
- print("os.getcwd()",os.getcwd())
- print("os.listdir()",os.listdir()) 
+ #print("os.getcwd()",os.getcwd())
+ #print("os.listdir()",os.listdir()) 
  
  TheSampleText=WorkingBingEOF
  TheSamplefile=open('TheSampleText.txt','w+') 
  TheSamplefile.write(TheSampleText.to_string())
  TheSamplefile.close()
  
- #global IsCommUpdateRunning
- IsCommUpdateRunning="NO";
+ 
+ os.chdir('/app/Sheets/')
+ #print("os.getcwd() ",os.getcwd())
+ #print("os.listdir() ",os.listdir()) 
+ #print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
+ #print("os.getcwd() ",os.getcwd())
+ storeRequest=open('RequestsVsResponses.txt','a+')
+ storeRequest.write("Response , ")
+ storeRequest.close() 
+ storeRequest=open('RequestsVsResponses.txt','r+')
+ print("storeRequest.read() ",storeRequest.read())
+ storeRequest.close()
+ 
  
  print("END OF ASYNC FILE LOAD.....................................................................")
+ sys.exit()
  return "finished"
 
 

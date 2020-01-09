@@ -9,6 +9,7 @@ import redis
 import os
 from flask import Flask, Markup, render_template, request
 from celery import Celery
+from flask import send_file
 #import taskque
          
 
@@ -49,21 +50,12 @@ app = Flask(__name__)
 #{{CommonTag}}-{{pagetitle}}
 
 
-"""
-print("initial directory",os.getcwd())
-print("contents of current directory",os.listdir())
-#os.chdir("/app/Sheets/CommunityUpdates")
-os.chdir("/app/Sheets/CommunityUpdates/Bing/currentBing")
-print("current directory",os.getcwd())
-print("contents of current directory",os.listdir())
-TheSamplefile=open('TheSampleText.txt','r')
-TheSamplefile.read()
-"""
 
 
 
 
-print(" start of index CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
+
+#print(" start of index CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
 
 CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
 
@@ -88,11 +80,58 @@ def testtextfile():
 
 @app.route('/DisplayCommUpdate')
 def CommUpdateDisplay():
-    if CommunityUpdatesProcess.IsCommUpdateRunning=="YES":
-     return '<meta http-equiv="refresh" content="10"><html>"LOADING..... need reload code"</html>'
-    else:
-     print(" in route CommunityUpdatesProcess.IsCommUpdateRunning" ,CommunityUpdatesProcess.IsCommUpdateRunning)
-     return "need template"
+    """     
+    print("ALERT OF ARRIVAL OF REQUEST AT /DisplayCommUpdate ")     
+    print("os.getcwd() ",os.getcwd())
+    print("os.listdir() ",os.listdir())
+    """
+    #print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
+    os.chdir('/app/Sheets/')     
+    storeRequest=open('RequestsVsResponses.txt','r+')
+    read_storeRequest=storeRequest.read()
+    storeRequest.close()
+    print("read_storeRequest ",read_storeRequest)
+    read_storeRequest1=read_storeRequest.count('Request')
+    read_storeRequest2=read_storeRequest.count('Response')
+    print(read_storeRequest1," <> ",read_storeRequest)     
+    print("read_storeRequest ",read_storeRequest)     
+    print("from start of route CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
+    print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
+    if read_storeRequest1==read_storeRequest2:
+     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=https://bdx-api-link.herokuapp.com/CommUpdateExcel'><html>This Message indicates an error in URL Forward</html>"
+     #return "Alt Message Test"
+     #return "<meta http-equiv='refresh' content='0;URL=https://www.google.com'><html>Should forward to google</html>"
+    if read_storeRequest1!=read_storeRequest2:
+     return '<meta http-equiv="refresh" content="240"><html>LOADING..... This can Take up to 10 minuites </html>'
+
+
+#'0;URL=https://bdx-api-link.herokuapp.com/DisplayCommUpdate'
+#https://bdx-api-link.herokuapp.com/GoogleKWSBMM
+@app.route('/CommUpdateExcel')
+def CommUpdateExcel():
+ return render_template('CommUpdateExcel.html')
+
+@app.route('/GoogleKWSBMM')
+def GoogleKWSBMMKW():
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/DefaultSheet.xlsx",\
+                  attachment_filename="GoogleKWSBMM.xlsx")
+
+         
+@app.route('/GoogleKWSB')
+def GoogleKWSBKW():
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW/DefaultSheet.xlsx",\
+                  attachment_filename="GoogleKWSB.xlsx")
+         
+
+
+
+"""
+@app.route('/dnlde')
+def dnld():
+    return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/911cor.xlsx", attachment_filename="911cor.xlsx")     
+"""         
+         
+    
 
 
 

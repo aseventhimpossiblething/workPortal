@@ -6,9 +6,11 @@
 </head>
 
 <body>
-<div class="littletop">{{CommonTag}}-{{pagetitle}} </div>  
+<div class="littletop"><a href='https://bdx-api-link.herokuapp.com'>BDX Paid Search Portal</a></div>  
 
-<div class="containerMain">{{content}}</div>
+<div class="containerMain">{% block content %}{% endblock %}{{content}}</div>
 
 </body>
 </HTML>
+
+
