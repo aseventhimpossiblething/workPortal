@@ -121,11 +121,16 @@ def CommUpdateExcel():
  return render_template('CommUpdateExcel.html')
 
 @app.route('/GoogleKWSBMM')
-def GoogleKWSBMMWK():
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/DefaultSheet.xlsx.xlsx",\
+def GoogleKWSBMMKW():
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/DefaultSheet.xlsx",\
                   attachment_filename="GoogleKWSBMM.xlsx")
-         
 
+         
+@app.route('/GoogleKWSB')
+def GoogleKWSBKW():
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW/DefaultSheet.xlsx",\
+                  attachment_filename="GoogleKWSB.xlsx")
+         
 
 
 
