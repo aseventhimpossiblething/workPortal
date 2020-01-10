@@ -352,8 +352,12 @@ def initialCommUpdatProcess():
   Final_URL=[];
   status=[];
   print("AdGen Running!")
-  print(NewDataFrame['Community Name'])
-  print("len(NewDataFrame['Community Name'])  ",len(NewDataFrame['Community Name']))
+  #print(NewDataFrame['Community Name'])
+  #print("len(NewDataFrame['Community Name'])  ",len(NewDataFrame['Community Name']))
+  count=0;
+  while count > len(NewDataFrame['Community Name']):
+   Title1.append(NewDataFrame['Community Name'][count])
+   print(Title)
  AdGen(NewGoogle,"SBMM","google")
  
   
