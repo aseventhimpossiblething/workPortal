@@ -364,10 +364,12 @@ def initialCommUpdatProcess():
  storeRequest.close()
  
  def AdGen(NewDataFrame,MatchType,SearchChan):
+  Title1=[];
+  Title2=[];
   print("AdGen Running!")
   print(NewDataFrame)
  Adgen(NewGoogle,"SBMM","google") 
- pandas.DataFrame(NewDataFrame,columns=)
+  #NewDataFrame[['Campaign','Adgroup']]
  
  
  print("END OF ASYNC FILE LOAD.....................................................................")
