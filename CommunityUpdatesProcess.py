@@ -143,7 +143,7 @@ def communityCheck(checkby,checkin,Name):
  
  
  
-#expDataCol=[];
+
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
  #print("google Keyword_conv DF ",NewDataFrame['Community Name'])
  #numberofLoops=NewDataFrame.count();
@@ -356,16 +356,17 @@ def initialCommUpdatProcess():
  
  
  os.chdir('/app/Sheets/')
- #print("os.getcwd() ",os.getcwd())
- #print("os.listdir() ",os.listdir()) 
- #print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
- #print("os.getcwd() ",os.getcwd())
  storeRequest=open('RequestsVsResponses.txt','a+')
  storeRequest.write("Response , ")
  storeRequest.close() 
  storeRequest=open('RequestsVsResponses.txt','r+')
  print("storeRequest.read() ",storeRequest.read())
  storeRequest.close()
+ 
+ def AdGen(NewDataFrame,MatchType,SearchChan):
+  print("AdGen Running!")
+  print(NewDataFrame)
+  
  
  
  print("END OF ASYNC FILE LOAD.....................................................................")
