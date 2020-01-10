@@ -246,8 +246,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    OutPutFrame.to_excel(writer)
    writer.save()  
-   print("OutPutFrame")
-   print(OutPutFrame)
+   #print("OutPutFrame")
+   #print(OutPutFrame)
    
   
  if SearchChan=="bing":
@@ -357,7 +357,7 @@ def initialCommUpdatProcess():
   count=0;
   while count > len(NewDataFrame['Community Name']):
    Title1.append(NewDataFrame['Community Name'][count])
-   print(Title)
+   print(Title1)
  AdGen(NewGoogle,"SBMM","google")
  
   
