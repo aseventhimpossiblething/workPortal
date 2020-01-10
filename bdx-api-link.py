@@ -130,7 +130,15 @@ def GoogleKWSX():
 def BingSBMMKW():
  return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM/DefaultSheet.xlsx",\
                   attachment_filename="BingBMMKW.xlsx")
+ 
          
+@app.route('/BingKWSB')
+def BingSBKW():
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM/DefaultSheet.xlsx",\
+                  attachment_filename="BingSBKW.xlsx")
+         
+
+                  
 
          
 
