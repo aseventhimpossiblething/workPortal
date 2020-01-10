@@ -271,7 +271,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("OutPutFrame")
    print(OutPutFrame)
    
- """  
+  
  if SearchChan=="bing":
   if MatchType=='SBMM':
    print("In KeywordGen bing SBMM ")
@@ -282,6 +282,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    OutPutFrame.to_excel(writer)
    writer.save()
+ """  
    
   if MatchType=='SB':
    print("In KeywordGen bing SB ")
