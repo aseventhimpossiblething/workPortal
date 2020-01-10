@@ -354,7 +354,7 @@ def initialCommUpdatProcess():
   print("AdGen Running!")
   print(NewDataFrame['Community Name'])
   print("length(NewDataFrame['Community Name'])  ",length(NewDataFrame['Community Name']))
- Adgen(NewGoogle,"SBMM","google")
+ AdGen(NewGoogle,"SBMM","google")
  
   
  
