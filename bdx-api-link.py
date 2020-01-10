@@ -125,6 +125,13 @@ def GoogleKWSBKW():
 def GoogleKWSX():
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW/DefaultSheet.xlsx",\
                   attachment_filename="GoogleKWSX.xlsx")
+
+@app.route('/BingKWSBMM')
+def BingSBMMKW():
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM/DefaultSheet.xlsx",\
+                  attachment_filename="BingBMMKW.xlsx")
+         
+
          
 
 
