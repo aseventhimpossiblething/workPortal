@@ -353,7 +353,7 @@ def initialCommUpdatProcess():
   status=[];
   print("AdGen Running!")
   print(NewDataFrame['Community Name'])
-  print("length(NewDataFrame['Community Name'])  ",length(NewDataFrame['Community Name']))
+  print("len(NewDataFrame['Community Name'])  ",len(NewDataFrame['Community Name']))
  AdGen(NewGoogle,"SBMM","google")
  
   
