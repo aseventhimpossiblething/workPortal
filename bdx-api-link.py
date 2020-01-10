@@ -136,7 +136,17 @@ def BingSBMMKW():
 def BingSBKW():
  return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM/DefaultSheet.xlsx",\
                   attachment_filename="BingSBKW.xlsx")
+
+
+
+@app.route('/BingKWSX')
+def BingSBKW():
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM/DefaultSheet.xlsx",\
+                  attachment_filename="BingSXKW.xlsx")
          
+
+         
+       
 
                   
 
