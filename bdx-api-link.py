@@ -140,7 +140,7 @@ def BingSBKW():
 
 
 @app.route('/BingKWSX')
-def BingSBKW():
+def BingSXKW():
  return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM/DefaultSheet.xlsx",\
                   attachment_filename="BingSXKW.xlsx")
          
