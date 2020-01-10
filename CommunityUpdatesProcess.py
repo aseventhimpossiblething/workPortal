@@ -282,7 +282,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    OutPutFrame.to_excel(writer)
    writer.save()
- """  
+ 
    
   if MatchType=='SB':
    print("In KeywordGen bing SB ")
@@ -303,11 +303,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    OutPutFrame.to_excel(writer)
    writer.save()
- """  
-   
-   
-   
-
  return OutPutFrame
     
   
@@ -343,14 +338,10 @@ def initialCommUpdatProcess():
  KeywordGen(NewGoogle,"sbmm","google")
  KeywordGen(NewGoogle,"sb","google")
  KeywordGen(NewGoogle,"sx","google")
-
- 
- """        
- KeywordGen(NewGoogle,"sx","google")
  KeywordGen(NewBing,"sbmm","bing")
  KeywordGen(NewBing,"sb","bing")
  KeywordGen(NewBing,"sx","bing")
- """
+
                        
    
  print("Main ")
