@@ -355,7 +355,7 @@ def initialCommUpdatProcess():
   #print(NewDataFrame['Community Name'])
   #print("len(NewDataFrame['Community Name'])  ",len(NewDataFrame['Community Name']))
   count=0;
-  while count > len(NewDataFrame['Community Name']):
+  while count < len(NewDataFrame['Community Name']):
    Title1.append(NewDataFrame['Community Name'][count])
    print("NewDataFrame['Community Name'][count] ",NewDataFrame['Community Name'][count])
    print("Title1")
