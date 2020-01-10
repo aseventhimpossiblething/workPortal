@@ -1,6 +1,5 @@
 MaintatanceVar="Off";
 IsCommUpdateRunning="NO";
-#IsCommUpdateRunning="YES";
 import glob
 import numpy
 import scipy
@@ -145,13 +144,9 @@ def communityCheck(checkby,checkin,Name):
  
 
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
- #print("google Keyword_conv DF ",NewDataFrame['Community Name'])
- #numberofLoops=NewDataFrame.count();
  MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
- print("")
  print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
- #print("len(NewDataFrame['Market ID']) ",len(NewDataFrame['Market ID']));
  Failed_Rows=[];
  Campaign_Name=[];
  Adgroup=[];
@@ -179,9 +174,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     if MatchType=="SB":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
      Keyword_conv=NewDataFrame['Community Name'][count]
-     #print("google Keyword_conv DF SB ",Keyword_conv)
-     #Keyword_conv=Keyword_conv.replace(" "," +")
-     #print("google Keyword_conv after replace SB ",Keyword_conv)
      MatchType_Conv="Broad"
     if MatchType=="SX":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
@@ -194,7 +186,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     if MatchType=="SB":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
      Keyword_conv=NewDataFrame['Community Name'][count]
-     #Keyword_conv=Keyword_conv.replace(" "," +")  
      MatchType_Conv="Broad"
     if MatchType=="SX":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201")
@@ -219,26 +210,15 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   
  OutPutFrame={"Campaign":Campaign_Name,"Adgroup":Adgroup,"Keyword":Keyword,"Match_Type":Match_Type,"Status":Status,"Bid":Bid} 
  OutPutFrame=pandas.DataFrame(OutPutFrame)
- """
- print("len(Campaign_Name) ",len(Campaign_Name))  
- print("len(Adgroup) ",len(Adgroup)) 
- print("len(Keyword) " ,len(Keyword))
- print("len(Match_Type) ",len(Match_Type))
- print("len(Status) ",len(Status))
- print("len(Bid) ",len(Bid))
- """
- print("")
+ 
+
  if SearchChan=="google":
   if MatchType=='SBMM':
    print("In KeywordGen google SBMM ")
-   #print("os.getcwd()",os.getcwd())
-   #print("os.listdir()",os.listdir())
-   print("os.chdir('/app/Sheets/CommunityUpdates')",\
-         os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'))
+   #print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'))
+   os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW')
    print("SBMM os.getcwd()",os.getcwd())
    print("SBMM os.listdir()",os.listdir())
-   
-   #writer=pandas.ExcelWriter('DefaultSheet.xlsx', engine='xlsxwriter')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    OutPutFrame.to_excel(writer)
    writer.save()
@@ -248,10 +228,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
   if MatchType=='SB':
    print("In KeywordGen google SB ")
-   #print("os.getcwd()",os.getcwd())
-   #print("os.listdir()",os.listdir())
-   print("os.chdir('/app/Sheets/CommunityUpdates')",\
-         os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW'))
+   #print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW'))
+   os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW')
    print("SB os.getcwd()",os.getcwd())
    print("SB os.listdir()",os.listdir())
    #OutPutFrame.to_excel("DefaultSheet.xlsx")
@@ -261,8 +239,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
   if MatchType=='SX':
    print("In KeywordGen google SX ")
-   print("os.chdir('/app/Sheets/CommunityUpdates')",\
-         os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW'))
+   print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW'))
+   os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW')
    print("SB os.getcwd()",os.getcwd())
    print("SB os.listdir()",os.listdir())
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
@@ -275,8 +253,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  if SearchChan=="bing":
   if MatchType=='SBMM':
    print("In KeywordGen bing SBMM ")
-   print("os.chdir('/app/Sheets/CommunityUpdates')",\
-         os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM'))
+   #print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM'))
+   os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM')
    print("SBMM os.getcwd()",os.getcwd())
    print("SBMM os.listdir()",os.listdir())
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
@@ -296,8 +274,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
   if MatchType=='SX':
    print("In KeywordGen bing SX ")
-   print("os.chdir('/app/Sheets/CommunityUpdates')",\
-         os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact'))
+   #print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact'))
+   os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact')
    print("SB os.getcwd()",os.getcwd())
    print("SB os.listdir()",os.listdir())
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
@@ -318,7 +296,7 @@ def initialCommUpdatProcess():
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
  if IsCommValid!="Valid":
   return IsCommValid
- print("WorkingCommunities LoadCommunitites has run ",IsCommValid)
+ #print("WorkingCommunities LoadCommunitites has run ",IsCommValid)
  WorkingGoogleEOF=WorkingGoogle()    
  WorkingBingEOF=WorkingBing()
  
@@ -360,7 +338,7 @@ def initialCommUpdatProcess():
  storeRequest.write("Response , ")
  storeRequest.close() 
  storeRequest=open('RequestsVsResponses.txt','r+')
- print("storeRequest.read() ",storeRequest.read())
+ #print("storeRequest.read() ",storeRequest.read())
  storeRequest.close()
  
  def AdGen(NewDataFrame,MatchType,SearchChan):
@@ -374,9 +352,11 @@ def initialCommUpdatProcess():
   Final_URL=[];
   status=[];
   print("AdGen Running!")
-  print(NewDataFrame)
- Adgen(NewGoogle,"SBMM","google") 
-  #NewDataFrame[['Campaign','Adgroup']]
+  print(NewDataFrame['Community Name'])
+  print("length(NewDataFrame['Community Name'])  ",length(NewDataFrame['Community Name']))
+ Adgen(NewGoogle,"SBMM","google")
+ 
+  
  
  
  print("END OF ASYNC FILE LOAD.....................................................................")
