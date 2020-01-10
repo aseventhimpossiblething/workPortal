@@ -371,6 +371,8 @@ def initialCommUpdatProcess():
   Description2=[];
   Path1=[];
   Path2=[];
+  Final_URL=[];
+  status=[];
   print("AdGen Running!")
   print(NewDataFrame)
  Adgen(NewGoogle,"SBMM","google") 
