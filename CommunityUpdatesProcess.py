@@ -366,7 +366,7 @@ def initialCommUpdatProcess():
  def AdGen(NewDataFrame,MatchType,SearchChan):
   print("AdGen Running!")
   print(NewDataFrame)
-  
+ Adgen(NewGoogle,"SBMM","google") 
  
  
  print("END OF ASYNC FILE LOAD.....................................................................")
