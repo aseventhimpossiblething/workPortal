@@ -366,6 +366,11 @@ def initialCommUpdatProcess():
  def AdGen(NewDataFrame,MatchType,SearchChan):
   Title1=[];
   Title2=[];
+  Title3=[];
+  Descrition=[];
+  Description2=[];
+  Path1=[];
+  Path2=[];
   print("AdGen Running!")
   print(NewDataFrame)
  Adgen(NewGoogle,"SBMM","google") 
