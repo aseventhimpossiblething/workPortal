@@ -367,6 +367,7 @@ def initialCommUpdatProcess():
   print("AdGen Running!")
   print(NewDataFrame)
  Adgen(NewGoogle,"SBMM","google") 
+ pandas.DataFrame(NewDataFrame,columns=)
  
  
  print("END OF ASYNC FILE LOAD.....................................................................")
