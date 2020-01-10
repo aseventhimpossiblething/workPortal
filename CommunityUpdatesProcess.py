@@ -361,6 +361,7 @@ def initialCommUpdatProcess():
    print("Title1")
    print(Title1)
    print("Title1")
+   count+=1;
  AdGen(NewGoogle,"SBMM","google")
  
   
