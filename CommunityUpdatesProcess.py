@@ -212,8 +212,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Match_Type.append(MatchType_Conv)
    Status.append("Active")
    Bid.append(set_bid)
-   #if len(NewDataFrame['Community Name'][count])< 20:
-    #NewDataFrame['Community Name'][count]+" New Homes"
+   """
+   if len(NewDataFrame['Community Name'][count])< 20:
+    Title1A.append(NewDataFrame['Community Name'][count]+" New Homes")
+   if len(NewDataFrame['Community Name'][count])>29: 
+    Title1A.append(NewDataFrame['Community Name'][count])
+   """ 
+   print("No More Than 4 chars  ",NewDataFrame['Community Name'][count][:4])
+    
    Title1A.append(NewDataFrame['Community Name'][count])
    print("NewDataFrame['Community Name'][count] ",NewDataFrame['Community Name'][count])
    print("len(NewDataFrame['Community Name'][count]) ",len(NewDataFrame['Community Name'][count]))
