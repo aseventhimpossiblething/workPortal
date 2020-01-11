@@ -353,14 +353,16 @@ def initialCommUpdatProcess():
   Path2A=[];
   Final_URLA=[];
   statusA=[];
+  MatchType=MatchType.Upper()
   print("AdGen Running!")
   #print(NewDataFrame['Community Name'])
   #print("len(NewDataFrame['Community Name'])  ",len(NewDataFrame['Community Name']))
   count=0;
   while count < len(NewDataFrame['Community Name']):
    try:
-    print(NewDataFrame['Market ID'][count])
+    #print(NewDataFrame['Market ID'][count])
     Campaign.append(Market_LookUp.google[NewDataFrame['Market ID'][count]])
+    #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     #Adgroup.append()
     Title1A.append(NewDataFrame['Community Name'][count])
     Title2A.append(NewDataFrame['City'][count]+" "+"New Homes for sale")
@@ -370,7 +372,7 @@ def initialCommUpdatProcess():
     #print("NewDataFrame['City'][count].find(' ') ",NewDataFrame['City'][count].find(' ')," ",NewDataFrame['City'][count])
     Path1A.append(NewDataFrame['City'][count].replace(" ","-"))
    except:
-    print(print(NewDataFrame['Market ID'][count]))
+    print("Failed Market ID ",NewDataFrame['Market ID'][count])
    count+=1;
   #print(Path1A);
   print("len(Path1A) ",len(Path1A))
