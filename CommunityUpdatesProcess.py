@@ -368,7 +368,7 @@ def initialCommUpdatProcess():
    print(count)
    if NewDataFrame['City'][count].find(" ")>0:
     print(NewDataFrame['City'][count].find(" "))
-    Path1A.append(count," ",NewDataFrame['City'][count].replace(" ","-"))
+    Path1A.append(NewDataFrame['City'][count].replace(" ","-"))
     print(NewDataFrame['City'][count]," ",NewDataFrame['City'][count].replace(" ","-"))
    count+=1;
   print(Path1A); 
