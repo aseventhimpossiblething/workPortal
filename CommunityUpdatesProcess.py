@@ -364,8 +364,9 @@ def initialCommUpdatProcess():
    TextA.append("Find your family a perfect new home at Legacy at East Greenwich 55+ in Clarksboro, NJ!")
    Text2A.append("New homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    print("NewDataFrame['City'][count].find(' ') ",NewDataFrame['City'][count].find(' ')," ",NewDataFrame['City'][count])
+   print(count)
    if NewDataFrame['City'][count].find(" ")<0:
-    Path1A.append(NewDataFrame['City'][count].replace(" ","-"))
+    Path1A.append(count," ",NewDataFrame['City'][count].replace(" ","-"))
     print(NewDataFrame['City'][count]," ",NewDataFrame['City'][count].replace(" ","-"))
    
    count+=1;
