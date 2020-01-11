@@ -358,26 +358,19 @@ def initialCommUpdatProcess():
   #print("len(NewDataFrame['Community Name'])  ",len(NewDataFrame['Community Name']))
   count=0;
   while count < len(NewDataFrame['Community Name']):
-   print(NewDataFrame['Market ID'][count])
-   Campaign.append(Market_LookUp.google[NewDataFrame['Market ID'][count]])
-   #Adgroup.append()
-   Title1A.append(NewDataFrame['Community Name'][count])
-   Title2A.append(NewDataFrame['City'][count]+" "+"New Homes for sale")
-   Title3A.append("Schedule a New Home Tour Today")
-   TextA.append("Find your family a perfect new home at Legacy at East Greenwich 55+ in Clarksboro, NJ!")
-   Text2A.append("New homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
-   #print("NewDataFrame['City'][count].find(' ') ",NewDataFrame['City'][count].find(' ')," ",NewDataFrame['City'][count])
-   Path1A.append(NewDataFrame['City'][count].replace(" ","-"))
-   
-   """
-   print(count)
-   if NewDataFrame['City'][count].find(" ")>0:
-    #print(NewDataFrame['City'][count].find(" "))
+   try:
+    print(NewDataFrame['Market ID'][count])
+    Campaign.append(Market_LookUp.google[NewDataFrame['Market ID'][count]])
+    #Adgroup.append()
+    Title1A.append(NewDataFrame['Community Name'][count])
+    Title2A.append(NewDataFrame['City'][count]+" "+"New Homes for sale")
+    Title3A.append("Schedule a New Home Tour Today")
+    TextA.append("Find your family a perfect new home at Legacy at East Greenwich 55+ in Clarksboro, NJ!")
+    Text2A.append("New homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
+    #print("NewDataFrame['City'][count].find(' ') ",NewDataFrame['City'][count].find(' ')," ",NewDataFrame['City'][count])
     Path1A.append(NewDataFrame['City'][count].replace(" ","-"))
-    #print(NewDataFrame['City'][count]," ",NewDataFrame['City'][count].replace(" ","-"))
-   else:
-    Path1A.append(NewDataFrame['City'][count])
-   """
+   except:
+    print(print(NewDataFrame['Market ID'][count]))
    count+=1;
   #print(Path1A);
   print("len(Path1A) ",len(Path1A))
