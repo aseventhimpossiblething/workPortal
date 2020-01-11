@@ -212,32 +212,31 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Match_Type.append(MatchType_Conv)
    Status.append("Active")
    Bid.append(set_bid)
-   print("_________________________end first block in keyGen__________________________")
-   print("_________________________start second block in keyGen__________________________")
+   #print("_________________________end first block in keyGen__________________________")
+   #print("_________________________start second block in keyGen__________________________")
    Title1A.append(NewDataFrame['Community Name'][count])
-   print("_________________________Title1A.append(NewDataFrame['Community Name'][count])_________________________")
+   #print("_________________________Title1A.append(NewDataFrame['Community Name'][count])_________________________")
    Title2A.append(NewDataFrame['City'][count]+" "+"New Homes for sale")
-   print('_______________________1_________________________')
+   #print('_______________________1_________________________')
    Title3A.append("Schedule a New Home Tour Today")
-   print('_______________________2_________________________')
+   #print('_______________________2_________________________')
    TextA.append("Find your family a perfect new home at Legacy at East Greenwich 55+ in Clarksboro, NJ!")
-   print('_______________________3________________________')
+   #print('_______________________3________________________')
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
-   print('_______________________4_________________________')
+   #print('_______________________4_________________________')
    Path1A.append(NewDataFrame['City'][count].replace(" ","-"))
-   print('_______________________5_________________________')
+   #print('_______________________5_________________________')
    Path2A.append("New Homes")
-   print('_______________________6_________________________')
-   print("State ",NewDataFrame['State'][count].lower(),)
-   print("City ",NewDataFrame['City'][count].replace(" ","-").lower())
+   #print('_______________________6_________________________')
+   #print("State ",NewDataFrame['State'][count].lower(),)
+   #print("City ",NewDataFrame['City'][count].replace(" ","-").lower())
    Final_URL.append("https://www.newhomesource.com/community/"+NewDataFrame['State'][count].lower()+NewDataFrame['City'][count].replace(" ","-").lower())
-   print('_______________________7_____________________________________________________________________________')
-   print("https://www.newhomesource.com/community/"+NewDataFrame['State'][count].lower()+"/"+NewDataFrame['City'][count].replace(" ","-").lower())
-   #print(Title1A) 
+   #print('_______________________7_____________________________________________________________________________')
+   #print("https://www.newhomesource.com/community/"+NewDataFrame['State'][count].lower()+"/"+NewDataFrame['City'][count].replace(" ","-").lower())
+   print(Final_URL) 
    
   except:
    NewDataFrame=NewDataFrame.drop([count])
-   #expDataCol.append(count)
   count+=1;
   
  OutPutFrame={"Campaign":Campaign_Name,"Adgroup":Adgroup,"Keyword":Keyword,"Match_Type":Match_Type,"Status":Status,"Bid":Bid} 
@@ -247,48 +246,31 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  if SearchChan=="google":
   if MatchType=='SBMM':
    print("In KeywordGen google SBMM ")
-   #print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'))
    os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW')
-   #print("SBMM os.getcwd()",os.getcwd())
-   #print("SBMM os.listdir()",os.listdir())
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    OutPutFrame.to_excel(writer)
    writer.save()
-   #print(OutPutFrame)
-   #print(OutPutFrame['Campaign'])
-   #print("SBMM os.listdir() ",os.listdir())
    
   if MatchType=='SB':
    print("In KeywordGen google SB ")
-   #print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW'))
    os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW')
-   #print("SB os.getcwd()",os.getcwd())
-   #print("SB os.listdir()",os.listdir())
-   #OutPutFrame.to_excel("DefaultSheet.xlsx")
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    OutPutFrame.to_excel(writer)
    writer.save()
    
   if MatchType=='SX':
    print("In KeywordGen google SX ")
-   #print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW'))
    os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW')
-   #print("SB os.getcwd()",os.getcwd())
-   #print("SB os.listdir()",os.listdir())
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    OutPutFrame.to_excel(writer)
    writer.save()  
-   #print("OutPutFrame")
-   #print(OutPutFrame)
+  
    
   
  if SearchChan=="bing":
   if MatchType=='SBMM':
    print("In KeywordGen bing SBMM ")
-   #print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM'))
    os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM')
-   #print("SBMM os.getcwd()",os.getcwd())
-   #print("SBMM os.listdir()",os.listdir())
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    OutPutFrame.to_excel(writer)
    writer.save()
@@ -296,20 +278,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
   if MatchType=='SB':
    print("In KeywordGen bing SB ")
-   #print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad'))
    os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad')
-   #print("SB os.getcwd()",os.getcwd())
-   #print("SB os.listdir()",os.listdir())
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    OutPutFrame.to_excel(writer)
    writer.save()
    
   if MatchType=='SX':
    print("In KeywordGen bing SX ")
-   #print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact'))
    os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact')
-   #print("SB os.getcwd()",os.getcwd())
-   #print("SB os.listdir()",os.listdir())
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    OutPutFrame.to_excel(writer)
    writer.save()
@@ -328,7 +304,6 @@ def initialCommUpdatProcess():
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
  if IsCommValid!="Valid":
   return IsCommValid
- #print("WorkingCommunities LoadCommunitites has run ",IsCommValid)
  WorkingGoogleEOF=WorkingGoogle()    
  WorkingBingEOF=WorkingBing()
  
