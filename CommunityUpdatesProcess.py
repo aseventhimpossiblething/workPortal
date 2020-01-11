@@ -360,7 +360,7 @@ def initialCommUpdatProcess():
   while count < len(NewDataFrame['Community Name']):
    Title1A.append(NewDataFrame['Community Name'][count])
    Title2A.append(NewDataFrame['City'][count]+" "+"New Homes for sale")
-   Title3A.append"(Schedule a New Home Tour Today")
+   Title3A.append("Schedule a New Home Tour Today")
    TextA.append("Find your family a perfect new home at Legacy at East Greenwich 55+ in Clarksboro, NJ!")
    Text2A.append("New homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    print("NewDataFrame['City'][count].find(' ') ",NewDataFrame['City'][count].find(' '))
