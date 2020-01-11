@@ -212,6 +212,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Match_Type.append(MatchType_Conv)
    Status.append("Active")
    Bid.append(set_bid)
+   print("_________________________end first block in keyGen__________________________")
    
    Title1A.append(NewDataFrame['Community Name'][count])
    Title2A.append(NewDataFrame['City'][count]+" "+"New Homes for sale")
@@ -261,7 +262,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
   if MatchType=='SX':
    print("In KeywordGen google SX ")
-   print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW'))
+   #print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW'))
    os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW')
    #print("SB os.getcwd()",os.getcwd())
    #print("SB os.listdir()",os.listdir())
@@ -286,8 +287,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
   if MatchType=='SB':
    print("In KeywordGen bing SB ")
-   print("os.chdir('/app/Sheets/CommunityUpdates')",\
-         os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad'))
+   #print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad'))
+   os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad'))
    #print("SB os.getcwd()",os.getcwd())
    #print("SB os.listdir()",os.listdir())
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
