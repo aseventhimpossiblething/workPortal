@@ -221,6 +221,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path1A.append(NewDataFrame['City'][count].replace(" ","-"))
    Path2A.append("New Homes")
    Final_URL.append("https://www.newhomesource.com/community/",NewDataFrame['State'][count],NewDataFrame['City'][count].lower)
+   print("__________________________________Mid New Block_________________________________________________________________________________")
    print("https://www.newhomesource.com/community/",NewDataFrame['State'][count],NewDataFrame['City'][count].lower)
    #print(Title1A) 
    
