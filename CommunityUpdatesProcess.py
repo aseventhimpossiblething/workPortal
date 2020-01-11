@@ -212,8 +212,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Match_Type.append(MatchType_Conv)
    Status.append("Active")
    Bid.append(set_bid)
+   #if len(NewDataFrame['Community Name'][count])< 20:
+    #NewDataFrame['Community Name'][count]+" New Homes"
    Title1A.append(NewDataFrame['Community Name'][count])
    print("NewDataFrame['Community Name'][count] ",NewDataFrame['Community Name'][count])
+   print("len(NewDataFrame['Community Name'][count]) ",len(NewDataFrame['Community Name'][count]))
    Title2A.append(NewDataFrame['City'][count]+" "+"New Homes for sale")
    Title3A.append("Schedule a New Home Tour Today")
    TextA.append("Find your family a perfect new home at Legacy at East Greenwich 55+ in Clarksboro, NJ!")
