@@ -358,6 +358,7 @@ def initialCommUpdatProcess():
   #print("len(NewDataFrame['Community Name'])  ",len(NewDataFrame['Community Name']))
   count=0;
   while count < len(NewDataFrame['Community Name']):
+   
    Title1A.append(NewDataFrame['Community Name'][count])
    Title2A.append(NewDataFrame['City'][count]+" "+"New Homes for sale")
    Title3A.append("Schedule a New Home Tour Today")
@@ -365,10 +366,10 @@ def initialCommUpdatProcess():
    Text2A.append("New homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    print("NewDataFrame['City'][count].find(' ') ",NewDataFrame['City'][count].find(' ')," ",NewDataFrame['City'][count])
    print(count)
-   if NewDataFrame['City'][count].find(" ")<0:
+   if NewDataFrame['City'][count].find(" ")>0:
+    print(NewDataFrame['City'][count].find(" "))
     Path1A.append(count," ",NewDataFrame['City'][count].replace(" ","-"))
     print(NewDataFrame['City'][count]," ",NewDataFrame['City'][count].replace(" ","-"))
-   
    count+=1;
   print(Path1A); 
  AdGen(NewGoogle,"SBMM","google")
