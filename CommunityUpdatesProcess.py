@@ -229,7 +229,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path2A.append("New Homes")
    print('_______________________6_________________________')
    print("State ",NewDataFrame['State'][count].lower(),)
-   print("City ",NewDataFrame['City'][count]replace(" ","-").lower())
+   print("City ",NewDataFrame['City'][count].replace(" ","-").lower())
    Final_URL.append("https://www.newhomesource.com/community/"+NewDataFrame['State'][count].lower()+NewDataFrame['City'][count].replace(" ","-").lower())
    print('_______________________7_____________________________________________________________________________')
    print("https://www.newhomesource.com/community/"+NewDataFrame['State'][count].lower()+"/"+NewDataFrame['City'][count].replace(" ","-").lower())
