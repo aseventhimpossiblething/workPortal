@@ -288,7 +288,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   if MatchType=='SB':
    print("In KeywordGen bing SB ")
    #print("os.chdir('/app/Sheets/CommunityUpdates')",os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad'))
-   os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad'))
+   os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad')
    #print("SB os.getcwd()",os.getcwd())
    #print("SB os.listdir()",os.listdir())
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
