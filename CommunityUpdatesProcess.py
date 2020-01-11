@@ -220,8 +220,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Path1A.append(NewDataFrame['City'][count].replace(" ","-"))
    Path2A.append("New Homes")
-   Final_URL.append("https://www.newhomesource.com/community/",NewDataFrame['State'][count],(NewDataFrame['City'][count]).lower)
-   print("https://www.newhomesource.com/community/",NewDataFrame['State'][count],NewDataFrame['City'][count]).lower)
+   Final_URL.append("https://www.newhomesource.com/community/",NewDataFrame['State'][count],NewDataFrame['City'][count].lower)
+   print("https://www.newhomesource.com/community/",NewDataFrame['State'][count],NewDataFrame['City'][count].lower)
    #print(Title1A) 
    
   except:
