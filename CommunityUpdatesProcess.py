@@ -342,24 +342,34 @@ def initialCommUpdatProcess():
  storeRequest.close()
  
  def AdGen(NewDataFrame,MatchType,SearchChan):
-  Title1=[];
-  Title2=[];
-  Title3=[];
-  Descrition=[];
-  Description2=[];
-  Path1=[];
-  Path2=[];
-  Final_URL=[];
-  status=[];
+  Campaign=[];
+  Adgroup=[];
+  Title1A=[];
+  Title2A=[];
+  Title3A=[];
+  TextA=[];
+  Text2A=[];
+  Path1A=[];
+  Path2A=[];
+  Final_URLA=[];
+  statusA=[];
   print("AdGen Running!")
   #print(NewDataFrame['Community Name'])
   #print("len(NewDataFrame['Community Name'])  ",len(NewDataFrame['Community Name']))
   count=0;
   while count < len(NewDataFrame['Community Name']):
-   Title1.append(NewDataFrame['Community Name'][count])
-   Title2.append(NewDataFrame['City'][count]+" "+"New Homes for sale")
+   Title1A.append(NewDataFrame['Community Name'][count])
+   Title2A.append(NewDataFrame['City'][count]+" "+"New Homes for sale")
+   Title3A.append"(Schedule a New Home Tour Today")
+   TextA.append("Find your family a perfect new home at Legacy at East Greenwich 55+ in Clarksboro, NJ!")
+   Text2A.append("New homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
+   print("NewDataFrame['City'][count].find(' ') ",NewDataFrame['City'][count].find(' '))
+   """
+   if NewDataFrame['City'][count]:
+   Path1A.apppend(NewDataFrame['City'][count])
+   """
    count+=1;
-  print(Title2); 
+  #print(Title2); 
  AdGen(NewGoogle,"SBMM","google")
  
   
