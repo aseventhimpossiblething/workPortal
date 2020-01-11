@@ -360,7 +360,7 @@ def initialCommUpdatProcess():
   while count < len(NewDataFrame['Community Name']):
    print(NewDataFrame['Market ID'][count])
    Campaign.append(Market_LookUp.google[NewDataFrame['Market ID'][count]])
-   Adgroup.append(NewDataFrame['Adgroup'][count])
+   #Adgroup.append()
    Title1A.append(NewDataFrame['Community Name'][count])
    Title2A.append(NewDataFrame['City'][count]+" "+"New Homes for sale")
    Title3A.append("Schedule a New Home Tour Today")
