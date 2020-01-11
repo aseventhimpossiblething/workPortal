@@ -363,11 +363,13 @@ def initialCommUpdatProcess():
    Title3A.append("Schedule a New Home Tour Today")
    TextA.append("Find your family a perfect new home at Legacy at East Greenwich 55+ in Clarksboro, NJ!")
    Text2A.append("New homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
-   print("NewDataFrame['City'][count].find(' ') ",NewDataFrame['City'][count].find(' '))
-   """
-   if NewDataFrame['City'][count]:
-   Path1A.apppend(NewDataFrame['City'][count])
-   """
+   print("NewDataFrame['City'][count].find(' ') ",NewDataFrame['City'][count].find(' ')," ",NewDataFrame['City'][count])
+   
+   
+   if NewDataFrame['City'][count].find(" ")<0:
+    Path1A.apppend(NewDataFrame['City'][count].replace(" ","-"))
+    print(NewDataFrame['City'][count]," ",NewDataFrame['City'][count].replace(" ","-"))
+   
    count+=1;
   #print(Title2); 
  AdGen(NewGoogle,"SBMM","google")
