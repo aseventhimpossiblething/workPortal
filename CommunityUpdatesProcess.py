@@ -353,7 +353,7 @@ def initialCommUpdatProcess():
   Path2A=[];
   Final_URLA=[];
   statusA=[];
-  MatchType=MatchType.Upper()
+  MatchType=MatchType.upper()
   print("AdGen Running!")
   #print(NewDataFrame['Community Name'])
   #print("len(NewDataFrame['Community Name'])  ",len(NewDataFrame['Community Name']))
