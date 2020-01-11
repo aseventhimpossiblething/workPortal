@@ -357,12 +357,9 @@ def initialCommUpdatProcess():
   count=0;
   while count < len(NewDataFrame['Community Name']):
    Title1.append(NewDataFrame['Community Name'][count])
-   print("NewDataFrame['Community Name'][count] ",NewDataFrame['Community Name'][count])
-   print("Title1")
-   print(Title1)
-   print("Title1")
-   print(count)
+   Title2.append(NewDataFrame['City'][count]+" "+"New Homes for sale")
    count+=1;
+  print(Title2); 
  AdGen(NewGoogle,"SBMM","google")
  
   
