@@ -230,7 +230,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print('_______________________6_________________________')
    print("State ",NewDataFrame['State'][count].lower(),)
    print("City ",NewDataFrame['City'][count].lower())
-   Final_URL.append("https://www.newhomesource.com/community/"+NewDataFrame['State'][count].lower()+NewDataFrame['City'][count].lower())
+   Final_URL.append("https://www.newhomesource.com/community/"+NewDataFrame['State'][count].lower()+NewDataFrame['City'][count].replace(" ","-").lower())
    print('_______________________7_____________________________________________________________________________')
    print("https://www.newhomesource.com/community/"+NewDataFrame['State'][count].lower()+"/"+NewDataFrame['City'][count].lower())
    #print(Title1A) 
