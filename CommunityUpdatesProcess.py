@@ -213,7 +213,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Status.append("Active")
    Bid.append(set_bid)
    Title1A.append(NewDataFrame['Community Name'][count])
-   print("Title1A.append(NewDataFrame['Community Name'][count]) ",Title1A.append(NewDataFrame['Community Name'][count]))
+   print("NewDataFrame['Community Name'][count] ",NewDataFrame['Community Name'][count])
    Title2A.append(NewDataFrame['City'][count]+" "+"New Homes for sale")
    Title3A.append("Schedule a New Home Tour Today")
    TextA.append("Find your family a perfect new home at Legacy at East Greenwich 55+ in Clarksboro, NJ!")
