@@ -230,6 +230,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
    print("Title1A_Name_Conv ",Title1A_Name_Conv)
    print("len(Title1A_Name_Conv) ",len(Title1A_Name_Conv))
+   print("len(Title1A) ",len(Title1A))
    print("len(Campaign_Name) ",len(Campaign_Name)) 
     #Title1A.append(NewDataFrame['Community Name'][count]+" New Homes")
    
