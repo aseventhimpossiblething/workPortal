@@ -241,8 +241,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
    if len(Path1A_conv)>15:
-    print("_____________________________________")
-    print("Pulled for size ",Path1A_conv)
+    #print("_____________________________________")
+    #print("Pulled for size ",Path1A_conv)
     Path1A_conv=Path1A_conv.replace("-","")
     Path1A_conv=Path1A_conv.replace("North","N")
     Path1A_conv=Path1A_conv.replace("South","S")
@@ -259,13 +259,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("Valley","Vlly")
     Path1A_conv=Path1A_conv.replace("Lake","lk")
     Path1A_conv=Path1A_conv.replace("Estates","Est")
-    print("Pulled for size ",Path1A_conv)
-    print("len(Path1A_conv)",len(Path1A_conv))
-    print("_____________________________________") 
-    
+    #print("Pulled for size ",Path1A_conv)
+    #print("len(Path1A_conv)",len(Path1A_conv))
+    #print("_____________________________________") 
+   print("________Before size check_______________") 
    if len(Path1A_conv)>15:
     print("count ",count," | ",Path1A_conv," |length ",len(Path1A_conv))
-      
+   print("________after size check________________________________")   
      
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
