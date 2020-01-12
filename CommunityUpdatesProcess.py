@@ -212,6 +212,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Match_Type.append(MatchType_Conv)
    Status.append("Active")
    Bid.append(set_bid)
+   print("____________________________________________________Before comment_____________________________________________________________________")
    """
    Title1A_Name_Conv=NewDataFrame['Community Name'][count]
    if len(Title1A_Name_Conv)>29:
@@ -221,7 +222,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if len(Title1A_Name_Conv)< 20:
     Title1A_Name_Conv=Title1A_Name_Conv+" New Homes" 
    """ 
+   print("____________________________________________________After comment_____________________________________________________________________")
+   
    Title1A.append(Title1A_Name_Conv)
+   print("____________________________________________________After append_____________________________________________________________________")
+   
    print("Title1A_Name_Conv ",Title1A_Name_Conv)
    print("len(Title1A_Name_Conv) ",len(Title1A_Name_Conv))
    print("len(Campaign_Name) ",len(Campaign_Name)) 
