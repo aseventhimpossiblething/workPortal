@@ -244,9 +244,25 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     print("_____________________________________")
     print("Pulled for size ",Path1A_conv)
     Path1A_conv=Path1A_conv.replace("-","")
+    Path1A_conv=Path1A_conv.replace("North","N")
+    Path1A_conv=Path1A_conv.replace("South","S")
+    Path1A_conv=Path1A_conv.replace("West","W")
+    Path1A_conv=Path1A_conv.replace("East","E")
+    Path1A_conv=Path1A_conv.replace("Viejo","")
+    Path1A_conv=Path1A_conv.replace("Township","Twnshp")
     print("Pulled for size ",Path1A_conv)
     print("len(Path1A_conv)",len(Path1A_conv))
     print("_____________________________________") 
+    """
+    if len(Path1A_conv)>15:
+     Path1A_conv=Path1A_conv.replace("North","N")
+     Path1A_conv=Path1A_conv.replace("South","S")
+     Path1A_conv=Path1A_conv.replace("West","W")
+     Path1A_conv=Path1A_conv.replace("East","E")
+     Path1A_conv=Path1A_conv.replace("Viejo","")
+     Path1A_conv=Path1A_conv.replace("Township","Twnshp")
+    """  
+     
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
    
