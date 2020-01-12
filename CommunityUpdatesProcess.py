@@ -230,7 +230,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("len(Title2A_conv) ",len(Title2A_conv))
    print("len(Title2A) ",len(Title2A))
    print("Title1A) ",len(Title1A))
-   print("len(Campaign_Name) ",len(Campaign_Name)
+   print("len(Campaign_Name) ",len(Campaign_Name))
    
    
    
