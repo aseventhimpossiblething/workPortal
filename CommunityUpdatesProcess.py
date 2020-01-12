@@ -223,11 +223,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Title2A_conv=NewDataFrame['City'][count]
    if len(Title2A_conv)<12:
     Title2A_conv=Title2A_conv+" New Homes for sale"   
-   else:
-    if len(Title2A_conv)<20:
+   elif len(Title2A_conv)<20:
      Title2A_conv=Title2A_conv+" New Homes"
-   else:
-    if len(Title2A_conv)<25:
+   elif len(Title2A_conv)<25:
      Title2A_conv=Title2A_conv+" Homes"
      
     
