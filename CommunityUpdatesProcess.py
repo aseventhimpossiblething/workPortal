@@ -227,27 +227,32 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Title2A_conv=Title2A_conv+" New Homes"
    elif len(Title2A_conv)<25:
      Title2A_conv=Title2A_conv+" Homes"
-     
-    
-    
    Title2A.append(Title2A_conv)
-   
+   """
    print("Title2A_conv ",Title2A_conv)
    print("len(Title2A_conv) ",len(Title2A_conv))
    print("len(Title2A) ",len(Title2A))
    print("Title1A) ",len(Title1A))
    print("len(Campaign_Name) ",len(Campaign_Name))
-   
-   
-   
-   
+   """
+      
    Title3A.append("Schedule a New Home Tour Today")
    TextA.append("Find your family a perfect new home at Legacy at East Greenwich 55+ in Clarksboro, NJ!")
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
-   Path1A.append(NewDataFrame['City'][count].replace(" ","-"))
+   Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
+   Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
    Final_URL.append("https://www.newhomesource.com/community/"+NewDataFrame['State'][count].lower()+NewDataFrame['City'][count].replace(" ","-").lower())
    #print("len(Final_URL) ",len(Final_URL)) 
+   
+   
+   print("Path1A_conv",Path1A_conv)
+   print("len(Path1A_conv) ",len(Path1A_conv))
+   print("len(Title2A_conv) ",len(Title2A_conv))
+   print("len(Title2A) ",len(Title2A))
+   print("Title1A) ",len(Title1A))
+   print("len(Campaign_Name) ",len(Campaign_Name))
+   
    
   except:
    NewDataFrame=NewDataFrame.drop([count])
