@@ -246,7 +246,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #print("len(Final_URL) ",len(Final_URL)) 
    
    
-   print("Path1A_conv",Path1A_conv)
+   print("Path1A_conv ",Path1A_conv)
    print("len(Path1A_conv) ",len(Path1A_conv))
    print("len(Title2A_conv) ",len(Title2A_conv))
    print("len(Title2A) ",len(Title2A))
