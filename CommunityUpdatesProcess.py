@@ -241,11 +241,15 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
    if len(Path1A_conv)>15:
+    print("_____________________________________")
     print("Pulled for size ",Path1A_conv)
     Path1A_conv=Path1A_conv.replace("-","")
     print("Pulled for size ",Path1A_conv)
+    print("len(Path1A_conv)",len(Path1A_conv))
+    print("_____________________________________") 
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
+   
    Final_URL.append("https://www.newhomesource.com/community/"+NewDataFrame['State'][count].lower()+NewDataFrame['City'][count].replace(" ","-").lower())
    
    
