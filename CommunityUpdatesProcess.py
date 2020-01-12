@@ -212,17 +212,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Match_Type.append(MatchType_Conv)
    Status.append("Active")
    Bid.append(set_bid)
-   """
    if len(NewDataFrame['Community Name'][count])< 20:
     Title1A.append(NewDataFrame['Community Name'][count]+" New Homes")
    if len(NewDataFrame['Community Name'][count])>29: 
-    Title1A.append(NewDataFrame['Community Name'][count])
-   """ 
-   print("No More Than 4 chars  ",NewDataFrame['Community Name'][count][:4])
-    
-   Title1A.append(NewDataFrame['Community Name'][count])
-   print("NewDataFrame['Community Name'][count] ",NewDataFrame['Community Name'][count])
-   print("len(NewDataFrame['Community Name'][count]) ",len(NewDataFrame['Community Name'][count]))
+    Title1A.append(NewDataFrame['Community Name'][count][:25])
+    print("No More Than 4 chars  ",NewDataFrame['Community Name'][count][:25])
+   #Title1A.append(NewDataFrame['Community Name'][count])
+   #print("NewDataFrame['Community Name'][count] ",NewDataFrame['Community Name'][count])
+   #print("len(NewDataFrame['Community Name'][count]) ",len(NewDataFrame['Community Name'][count]))
    Title2A.append(NewDataFrame['City'][count]+" "+"New Homes for sale")
    Title3A.append("Schedule a New Home Tour Today")
    TextA.append("Find your family a perfect new home at Legacy at East Greenwich 55+ in Clarksboro, NJ!")
@@ -230,7 +227,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path1A.append(NewDataFrame['City'][count].replace(" ","-"))
    Path2A.append("New Homes")
    Final_URL.append("https://www.newhomesource.com/community/"+NewDataFrame['State'][count].lower()+NewDataFrame['City'][count].replace(" ","-").lower())
-   print("len(Final_URL) ",len(Final_URL)) 
+   #print("len(Final_URL) ",len(Final_URL)) 
    
   except:
    NewDataFrame=NewDataFrame.drop([count])
