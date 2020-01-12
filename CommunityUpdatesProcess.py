@@ -254,21 +254,18 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("Beach","Bch")
     Path1A_conv=Path1A_conv.replace("Gardens","Gdns")
     Path1A_conv=Path1A_conv.replace("Point","Pnt")
-    Path1A_conv=Path1A_conv.replace("Heighst","Hghts")
+    Path1A_conv=Path1A_conv.replace("Heights","Hghts")
     Path1A_conv=Path1A_conv.replace("Plains","Plns")
     Path1A_conv=Path1A_conv.replace("Valley","Vlly")
+    Path1A_conv=Path1A_conv.replace("Lake","lk")
+    Path1A_conv=Path1A_conv.replace("Estates","Est")
     print("Pulled for size ",Path1A_conv)
     print("len(Path1A_conv)",len(Path1A_conv))
     print("_____________________________________") 
-    """
-    if len(Path1A_conv)>15:
-     Path1A_conv=Path1A_conv.replace("North","N")
-     Path1A_conv=Path1A_conv.replace("South","S")
-     Path1A_conv=Path1A_conv.replace("West","W")
-     Path1A_conv=Path1A_conv.replace("East","E")
-     Path1A_conv=Path1A_conv.replace("Viejo","")
-     Path1A_conv=Path1A_conv.replace("Township","Twnshp")
-    """  
+    
+   if len(Path1A_conv)>15:
+    print("count ",count," | ",Path1A_conv," |length ",len(Path1A_conv))
+      
      
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
