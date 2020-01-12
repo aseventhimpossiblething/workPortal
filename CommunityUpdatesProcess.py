@@ -212,9 +212,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Match_Type.append(MatchType_Conv)
    Status.append("Active")
    Bid.append(set_bid)
-   print("____________________________________________________Before comment_____________________________________________________________________")
-   """
+   #print("____________________________________________________Before comment_____________________________________________________________________")
+   
    Title1A_Name_Conv=NewDataFrame['Community Name'][count]
+   """
    if len(Title1A_Name_Conv)>29:
     Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find("at")-1]
    if len(Title1A_Name_Conv)>29:
