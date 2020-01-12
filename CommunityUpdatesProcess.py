@@ -212,9 +212,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Match_Type.append(MatchType_Conv)
    Status.append("Active")
    Bid.append(set_bid)
-  
    Title1A_Name_Conv=NewDataFrame['Community Name'][count]
-   
    if len(Title1A_Name_Conv)>29:
     Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find("at")-1]
    if len(Title1A_Name_Conv)>29:
@@ -222,9 +220,19 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if len(Title1A_Name_Conv)< 20:
     Title1A_Name_Conv=Title1A_Name_Conv+" New Homes" 
    Title1A.append(Title1A_Name_Conv)
-   
-   Title2A_conv=NewDataFrame['City'][count]+" "+"New Homes for sale"   
-   Title2A.append(NewDataFrame['City'][count]+" "+"New Homes for sale")
+   Title2A_conv=NewDataFrame['City'][count]
+   if len(Title2A_conv)<12:
+    Title2A_conv=Title2A_conv+" New Homes for sale"   
+   else:
+    if len(Title2A_conv)<20:
+     Title2A_conv=Title2A_conv+" New Homes"
+   else:
+    if len(Title2A_conv)<25:
+     Title2A_conv=Title2A_conv+" Homes"
+     
+    
+    
+   Title2A.append(Title2A_conv)
    
    print("Title2A_conv ",Title2A_conv)
    print("len(Title2A_conv) ",len(Title2A_conv))
