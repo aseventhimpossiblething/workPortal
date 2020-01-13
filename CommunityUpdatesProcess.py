@@ -266,7 +266,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
  GoogleAdFrame={"Campaign Name":Campaign_Name,"Ad group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
                 "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}          
- GoogleAdFrame=pandas.DataFrame[GoogleAdFrame]
+ GoogleAdFrame=pandas.DataFrame(GoogleAdFrame)
 
 
  
