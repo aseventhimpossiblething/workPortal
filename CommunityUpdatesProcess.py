@@ -154,6 +154,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  Match_Type=[];
  Status=[];
  Bid=[];
+ Final_URL=[];
 
  Title1A=[];
  Title2A=[];
@@ -162,7 +163,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  Text2A=[];
  Path1A=[];
  Path2A=[];
- Final_URL=[];
+ 
+ Title1B=[];
+ Title2B=[];
+ Title3B=[];
+ TextB=[];
+ Text2B=[];
+ Path1B=[];
+ Path2B=[];
  
  count=0;
  hilecount=len(NewDataFrame['Market ID']);
@@ -269,14 +277,20 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   
  GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid} 
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
- GoogleAdFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
-                "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}          
- GoogleAdFrame=pandas.DataFrame(GoogleAdFrame)
+ GoogleAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
+                "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}
+ GoogleAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
+                "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}
+ GoogleAdFrameA=pandas.DataFrame(GoogleAdFrameA)
+ GoogleAdFrameB=pandas.DataFrame(GoogleAdFrameB)
  BingKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Bid":Bid} 
- BingAdFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
+ BingAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
+                "Text":TextA,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}
+ BingAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
                 "Text":TextA,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}
  BingKWFrame=pandas.DataFrame(BingKWFrame)
- BingAdFrame=pandas.DataFrame(BingAdFrame)
+ BingAdFrameA=pandas.DataFrame(BingAdFrameA)
+ BingAdFrameB=pandas.DataFrame(BingAdFrameB)
  
  """
  print("len(Campaign_Name)",len(Campaign_Name))
@@ -299,13 +313,24 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("os.listdir() ",os.listdir())
    os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   GoogleAdFrame.to_excel(writer)
+   GoogleAdFrameA.to_excel(writer)
    writer.save()
    #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
-   print(GoogleAdFrame)
+   print(GoogleAdFrameA)
    
+   
+   print("os.getcwd() ",os.getcwd())
+   print("os.listdir() ",os.listdir())
+   os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBMM/')
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   GoogleAdFrameB.to_excel(writer)
+   writer.save()
+   #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/
+   print("os.getcwd() ",os.getcwd())
+   print("os.listdir() ",os.listdir())
+   print(GoogleAdFrameB)
    
    
   if MatchType=='SB':
@@ -314,6 +339,17 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleKWFrame.to_excel(writer)
    writer.save()
+   
+   print("os.getcwd() ",os.getcwd())
+   print("os.listdir() ",os.listdir())
+   os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM')
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   GoogleAdFrameA.to_excel(writer)
+   writer.save()
+   #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/
+   print("os.getcwd() ",os.getcwd())
+   print("os.listdir() ",os.listdir())
+   print(GoogleAdFrame)
    
   if MatchType=='SX':
    print("In KeywordGen google SX ")
