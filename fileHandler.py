@@ -137,11 +137,13 @@ def CommListFileHandler():
     print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
     #print("os.getcwd() ",os.getcwd())
     """
-    os.chdir('/app/Sheets/')    
-    storeRequest=open('RequestsVsResponses.txt','a+')
+    os.chdir('/app/Sheets/') 
+    """
+    storeRequest=open('RequestsVsResponses.txt','w')
     storeRequest.write(" ")
-    storeRequest.close() 
-    storeRequest=open('RequestsVsResponses.txt','a+')    
+    storeRequest.close()
+    """
+    storeRequest=open('RequestsVsResponses.txt','w')    
     storeRequest.write("Request, ")
     storeRequest.close()
     storeRequest=open('RequestsVsResponses.txt','r+')
