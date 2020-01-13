@@ -140,7 +140,7 @@ def CommListFileHandler():
     os.chdir('/app/Sheets/')    
     storeRequest=open('RequestsVsResponses.txt','a+')
     storeRequest.write(" ")
-    storeRequest.close()    
+    #storeRequest.close()    
     storeRequest.write("Request, ")
     storeRequest.close()
     storeRequest=open('RequestsVsResponses.txt','r+')
