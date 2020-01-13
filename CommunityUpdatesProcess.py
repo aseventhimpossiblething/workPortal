@@ -267,6 +267,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("Collection","")
     Path1A_conv=Path1A_conv.replace("Vistoso","")
     Path1A_conv=Path1A_conv.replace("Station","STA")
+     Path1A_conv=Path1A_conv.replace("and","&")
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
    Final_URL.append("https://www.newhomesource.com/community/"+NewDataFrame['State'][count].lower()+NewDataFrame['City'][count].replace(" ","-").lower())
