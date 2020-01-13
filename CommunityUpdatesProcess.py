@@ -349,7 +349,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
-   print(GoogleAdFrame)
+   print(GoogleAdFrameA)
    
   if MatchType=='SX':
    print("In KeywordGen google SX ")
