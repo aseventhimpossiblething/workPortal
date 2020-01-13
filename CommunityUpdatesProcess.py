@@ -261,7 +261,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   count+=1;
   
  KWFrame={"Campaign":Campaign_Name,"Adgroup":Adgroup,"Keyword":Keyword,"Match_Type":Match_Type,"Status":Status,"Bid":Bid} 
- KWFrame=pandas.DataFrame(OutPutFrame)
+ KWFrame=pandas.DataFrame(KWFrame)
  
  
  print("len(Campaign_Name)",len(Campaign_Name))
