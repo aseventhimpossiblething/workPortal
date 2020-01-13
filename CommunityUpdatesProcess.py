@@ -259,43 +259,19 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("Valley","Vlly")
     Path1A_conv=Path1A_conv.replace("Lake","lk")
     Path1A_conv=Path1A_conv.replace("Estates","Est")
-    #print("Pulled for size ",Path1A_conv)
-    #print("len(Path1A_conv)",len(Path1A_conv))
-    #print("_____________________________________") 
-   print("________Before size check_______________") 
-   if len(Path1A_conv)>15:
-    print("count ",count," | ",Path1A_conv," |length ",len(Path1A_conv))
-   print("________after size check________________________________")
-   print("len(Path1A) ",len(Path1A))
-   #print("len(Title2A_conv) ",len(Title2A_conv))
-   #print("len(Title2A) ",len(Title2A))
-   print("len(Title1A) ",len(Title1A))
-   print("len(Campaign_Name) ",len(Campaign_Name))
-     
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
-   
    Final_URL.append("https://www.newhomesource.com/community/"+NewDataFrame['State'][count].lower()+NewDataFrame['City'][count].replace(" ","-").lower())
    
    
-   """
-   print("__________________________________") 
-   print("Path1A_conv ",Path1A_conv)
-   print("________________1 __________________") 
-   print("len(Path1A_conv) ",len(Path1A_conv))
    
-   print("________________2 __________________") 
-   print("len(Path1A) ",len(Path1A))
+   
+   print("Path1A ",Path1A)
    print("________________3 __________________")
-   print("len(Title2A_conv) ",len(Title2A_conv))
-   print("________________4 __________________")
    print("len(Title2A) ",len(Title2A))
-   print("________________5 __________________")
    print("len(Title1A) ",len(Title1A))
-   print("________________6 __________________")
    print("len(Campaign_Name) ",len(Campaign_Name))
-   print("________________7 __________________")
-   """
+  
    
    
   except:
