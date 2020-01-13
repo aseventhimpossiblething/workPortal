@@ -321,9 +321,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
  
  
- 
- return OutPutFrame
-    
+ """
+ return KWFrame
+ """   
   
   
 def initialCommUpdatProcess():
