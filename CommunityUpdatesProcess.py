@@ -266,7 +266,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if len(Path1A_conv)>15:
     print("count ",count," | ",Path1A_conv," |length ",len(Path1A_conv))
    print("________after size check________________________________")
-   print("len(Path1A_conv) ",len(Path1A_conv))
+   print("len(Path1A) ",len(Path1A))
    #print("len(Title2A_conv) ",len(Title2A_conv))
    #print("len(Title2A) ",len(Title2A))
    print("len(Title1A) ",len(Title1A))
