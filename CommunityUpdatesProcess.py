@@ -255,41 +255,41 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
    Final_URL.append("https://www.newhomesource.com/community/"+NewDataFrame['State'][count].lower()+NewDataFrame['City'][count].replace(" ","-").lower())
-      
-   print("len(Path1A) ",len(Path1A))
-   print("________________3 __________________")
-   print("len(Title2A) ",len(Title2A))
-   print("len(Title1A) ",len(Title1A))
-   print("len(Campaign_Name) ",len(Campaign_Name))
-     
+        
   except:
    NewDataFrame=NewDataFrame.drop([count])
   count+=1;
   
- OutPutFrame={"Campaign":Campaign_Name,"Adgroup":Adgroup,"Keyword":Keyword,"Match_Type":Match_Type,"Status":Status,"Bid":Bid} 
- OutPutFrame=pandas.DataFrame(OutPutFrame)
+ KWFrame={"Campaign":Campaign_Name,"Adgroup":Adgroup,"Keyword":Keyword,"Match_Type":Match_Type,"Status":Status,"Bid":Bid} 
+ KWFrame=pandas.DataFrame(OutPutFrame)
  
+ 
+ print("len(Campaign_Name)",len(Campaign_Name))
+ print("len(Path1A) ",len(Path1A))
+ print("len(Title2A) ",len(Title2A))
+ print("len(Title1A) ",len(Title1A))
+ print("len(Campaign_Name) ",len(Campaign_Name))
 
  if SearchChan=="google":
   if MatchType=='SBMM':
    print("In KeywordGen google SBMM ")
    os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   OutPutFrame.to_excel(writer)
+   KWFrame.to_excel(writer)
    writer.save()
    
   if MatchType=='SB':
    print("In KeywordGen google SB ")
    os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   OutPutFrame.to_excel(writer)
+   KWFrame.to_excel(writer)
    writer.save()
    
   if MatchType=='SX':
    print("In KeywordGen google SX ")
    os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   OutPutFrame.to_excel(writer)
+   KWFrame.to_excel(writer)
    writer.save()  
   
    
@@ -299,7 +299,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("In KeywordGen bing SBMM ")
    os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   OutPutFrame.to_excel(writer)
+   KWFrame.to_excel(writer)
    writer.save()
  
    
@@ -307,15 +307,21 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("In KeywordGen bing SB ")
    os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   OutPutFrame.to_excel(writer)
+   KWFrame.to_excel(writer)
    writer.save()
    
   if MatchType=='SX':
    print("In KeywordGen bing SX ")
    os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   OutPutFrame.to_excel(writer)
+   KWFrame.to_excel(writer)
    writer.save()
+ 
+ 
+   
+ 
+ 
+ 
  return OutPutFrame
     
   
