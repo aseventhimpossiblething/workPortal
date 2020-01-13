@@ -80,12 +80,6 @@ def testtextfile():
 
 @app.route('/DisplayCommUpdate')
 def CommUpdateDisplay():
-    """     
-    print("ALERT OF ARRIVAL OF REQUEST AT /DisplayCommUpdate ")     
-    print("os.getcwd() ",os.getcwd())
-    print("os.listdir() ",os.listdir())
-    """
-    #print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
     os.chdir('/app/Sheets/')     
     storeRequest=open('RequestsVsResponses.txt','r+')
     read_storeRequest=storeRequest.read()
@@ -95,14 +89,13 @@ def CommUpdateDisplay():
     read_storeRequest2=read_storeRequest.count('Response')
     print(read_storeRequest1," <> ",read_storeRequest)     
     print("read_storeRequest ",read_storeRequest)     
-    print("from start of route CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
     if read_storeRequest1==read_storeRequest2:
      return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=https://bdx-api-link.herokuapp.com/CommUpdateExcel'><html>This Message indicates an error in URL Forward</html>"
      #return "Alt Message Test"
      #return "<meta http-equiv='refresh' content='0;URL=https://www.google.com'><html>Should forward to google</html>"
     if read_storeRequest1!=read_storeRequest2:
-     return '<meta http-equiv="refresh" content="240"><html>LOADING..... This can Take up to 10 minuites </html>'
+     return '<meta http-equiv="refresh" content="120"><html>LOADING..... This can Take up to 10 minuites </html>'
 
 
 #'0;URL=https://bdx-api-link.herokuapp.com/DisplayCommUpdate'
