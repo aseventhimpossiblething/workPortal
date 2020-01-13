@@ -1,5 +1,5 @@
 MaintatanceVar="Off";
-IsCommUpdateRunning="NO";
+#IsCommUpdateRunning="NO";
 import glob
 import numpy
 import scipy
@@ -284,6 +284,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleKWFrame.to_excel(writer)
    writer.save()
+   
+   print("Site of ad words code_________________-")
+   print("os.getcwd() ",os.getcwd())
+   print("os.listdir() ",os.listdir())
    
    
    
