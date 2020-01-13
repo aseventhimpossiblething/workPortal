@@ -228,14 +228,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    elif len(Title2A_conv)<25:
      Title2A_conv=Title2A_conv+" Homes"
    Title2A.append(Title2A_conv)
-   """
-   print("Title2A_conv ",Title2A_conv)
-   print("len(Title2A_conv) ",len(Title2A_conv))
-   print("len(Title2A) ",len(Title2A))
-   print("Title1A) ",len(Title1A))
-   print("len(Campaign_Name) ",len(Campaign_Name))
-   """
-      
+        
    Title3A.append("Schedule a New Home Tour Today")
    TextA.append("Find your family a perfect new home at Legacy at East Greenwich 55+ in Clarksboro, NJ!")
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
@@ -386,50 +379,8 @@ def initialCommUpdatProcess():
  storeRequest=open('RequestsVsResponses.txt','r+')
  #print("storeRequest.read() ",storeRequest.read())
  storeRequest.close()
- """
- def AdGen(NewDataFrame,MatchType,SearchChan):
-  Campaign=[];
-  Adgroup=[];
-  Title1A=[];
-  Title2A=[];
-  Title3A=[];
-  TextA=[];
-  Text2A=[];
-  Path1A=[];
-  Path2A=[];
-  Final_URLA=[];
-  statusA=[];
-  MatchType=MatchType.upper()
-  print("AdGen Running!")
-  #print(NewDataFrame['Community Name'])
-  #print("len(NewDataFrame['Community Name'])  ",len(NewDataFrame['Community Name']))
-  count=0;
-  while count < len(NewDataFrame['Community Name']):
-   try:
-    if SearchChan=="google":
-    Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
-    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
-    #if MatchType=="SBMM":
-     
-    #print(NewDataFrame['Market ID'][count])
-    Campaign.append(Market_LookUp.google[NewDataFrame['Market ID'][count]])
-    #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
-    #Adgroup.append()
-    Title1A.append(NewDataFrame['Community Name'][count])
-    Title2A.append(NewDataFrame['City'][count]+" "+"New Homes for sale")
-    Title3A.append("Schedule a New Home Tour Today")
-    TextA.append("Find your family a perfect new home at Legacy at East Greenwich 55+ in Clarksboro, NJ!")
-    Text2A.append("New homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
-    #print("NewDataFrame['City'][count].find(' ') ",NewDataFrame['City'][count].find(' ')," ",NewDataFrame['City'][count])
-    Path1A.append(NewDataFrame['City'][count].replace(" ","-"))
-   except:
-    print("Failed Market ID ",NewDataFrame['Market ID'][count])
-   count+=1;
-  #print(Path1A);
-  print("len(Path1A) ",len(Path1A))
-  print("len(Campaign) ",len(Campaign))
- AdGen(NewGoogle,"SBMM","google")
- """
+ 
+  
   
  
  
