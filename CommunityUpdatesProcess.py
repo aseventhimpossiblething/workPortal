@@ -262,6 +262,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   
  KWFrame={"Campaign":Campaign_Name,"Adgroup":Adgroup,"Keyword":Keyword,"Match_Type":Match_Type,"Status":Status,"Bid":Bid} 
  KWFrame=pandas.DataFrame(KWFrame)
+ AdFrame=["Campaign":Campaign_Name,"Adgroup":Adgroup]
  
  
  print("len(Campaign_Name)",len(Campaign_Name))
@@ -277,6 +278,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    KWFrame.to_excel(writer)
    writer.save()
+   
+   
    
   if MatchType=='SB':
    print("In KeywordGen google SB ")
