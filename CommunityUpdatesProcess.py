@@ -314,7 +314,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("In KeywordGen bing SBMM ")
    os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   GoogleKWFrame.to_excel(writer)
+   BingKWFrame.to_excel(writer)
    writer.save()
  
    
@@ -322,14 +322,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("In KeywordGen bing SB ")
    os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   GoogleKWFrame.to_excel(writer)
+   BingKWFrame.to_excel(writer)
    writer.save()
    
   if MatchType=='SX':
    print("In KeywordGen bing SX ")
    os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   GoogleKWFrame.to_excel(writer)
+   BingKWFrame.to_excel(writer)
    writer.save()
  
  
