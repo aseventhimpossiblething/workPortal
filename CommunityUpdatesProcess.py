@@ -255,18 +255,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
    Final_URL.append("https://www.newhomesource.com/community/"+NewDataFrame['State'][count].lower()+NewDataFrame['City'][count].replace(" ","-").lower())
-   
-   
-   
-   
-   print("Path1A ",Path1A)
+      
+   print("len(Path1A) ",len(Path1A))
    print("________________3 __________________")
    print("len(Title2A) ",len(Title2A))
    print("len(Title1A) ",len(Title1A))
    print("len(Campaign_Name) ",len(Campaign_Name))
-  
-   
-   
+     
   except:
    NewDataFrame=NewDataFrame.drop([count])
   count+=1;
