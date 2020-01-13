@@ -180,7 +180,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=NewDataFrame['Community Name'][count]
      Keyword_conv=Keyword_conv.replace(" "," +")
      Keyword_conv="+"+Keyword_conv
-     print(Keyword_conv)
      MatchType_Conv="Broad"
     if MatchType=="SB":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
