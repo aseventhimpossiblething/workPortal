@@ -278,12 +278,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  BingKWFrame=pandas.DataFrame(BingKWFrame)
  BingAdFrame=pandas.DataFrame(BingAdFrame)
  
- 
+ """
  print("len(Campaign_Name)",len(Campaign_Name))
  print("len(Path1A) ",len(Path1A))
  print("len(Title2A) ",len(Title2A))
  print("len(Title1A) ",len(Title1A))
  print("len(Campaign_Name) ",len(Campaign_Name))
+ """
 
  if SearchChan=="google":
   if MatchType=='SBMM':
@@ -296,6 +297,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("Site of ad words code_________________-")
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
+   os.chdir(/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM)
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   GoogleAdFrame.to_excel(writer)
+   writer.save()
+   #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/
+   print("os.getcwd() ",os.getcwd())
+   print("os.listdir() ",os.listdir())
+   print(GoogleAdFrame)
    
    
    
