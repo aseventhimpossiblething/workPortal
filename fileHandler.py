@@ -129,14 +129,18 @@ def CommListFileHandler():
     request.files['currentBing'].save('WorkingBing')
   
     
-    #IsCommUpdateRunning="YES"
-    #CommunityUpdatesProcess.IsCommUpdateRunning="YES" 
+   
     print('WRITE REQUEST SEQUENCE!')
+    """
     print("os.getcwd() ",os.getcwd())
     print("os.listdir() ",os.listdir()) 
     print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
-    print("os.getcwd() ",os.getcwd())
+    #print("os.getcwd() ",os.getcwd())
+    """
+    os.chdir('/app/Sheets/')    
     storeRequest=open('RequestsVsResponses.txt','a+')
+    storeRequest.write(" ")
+    storeRequest.close()    
     storeRequest.write("Request, ")
     storeRequest.close()
     storeRequest=open('RequestsVsResponses.txt','r+')
@@ -151,10 +155,10 @@ def CommListFileHandler():
     LoadAllCommunityFiles.start()    
     
     
-    print(" end of filehandler CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
+    #print(" end of filehandler CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
         
-    HTMLoutput="This will be 3 modules  Modules as follows  Module 1: 3 links to the Community, Google, and Bing upload outputs Module 2:Google Outputs link1, Google KWs all match types. Link 2 google Adds Ad Types A+b and all Match types "    
-    toscrn = HTMLoutput
+    #HTMLoutput="This will be 3 modules  Modules as follows  Module 1: 3 links to the Community, Google, and Bing upload outputs Module 2:Google Outputs link1, Google KWs all match types. Link 2 google Adds Ad Types A+b and all Match types "    
+    #toscrn = HTMLoutput
     #return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/911cor.xlsx", attachment_filename="911cor.xlsx")
     
     #return "<html> <a href='https://bdx-api-link.herokuapp.com/DisplayCommUpdate'>NEW TEST BUT STILL WAIT FOR CLEARANCE BEFORE LINK CLICK! OTHERWISE EPIC FAILURE</a></html>" 
