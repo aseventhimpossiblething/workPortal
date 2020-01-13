@@ -262,13 +262,15 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    NewDataFrame=NewDataFrame.drop([count])
   count+=1;
   
- GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid} 
+ GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid} 
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
- GoogleAdFrame={"Campaign Name":Campaign_Name,"Ad group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
+ GoogleAdFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
                 "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}          
  GoogleAdFrame=pandas.DataFrame(GoogleAdFrame)
-
-
+ BingKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Bid":Bid} 
+ BingAdFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
+                "Text":TextA,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}
+ BingAdFrame=pandas.DataFrame(BingAdFrame)
  
  
  print("len(Campaign_Name)",len(Campaign_Name))
