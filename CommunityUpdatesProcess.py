@@ -264,7 +264,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   
  KWFrame={"Campaign Name":Campaign_Name,"Ad group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid} 
  KWFrame=pandas.DataFrame(KWFrame)
- AdFrame=["Campaign Name":Campaign_Name,"Ad group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,"Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Finsl URL":Final_URL,"Status":Status]           
+ AdFrame=["Campaign Name":Campaign_Name,"Ad group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A]#\
+          #"Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status]           
  
 
 
