@@ -297,7 +297,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("Site of ad words code_________________-")
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
-   os.chdir(/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM)
+   os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrame.to_excel(writer)
    writer.save()
