@@ -244,6 +244,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("West","W")
     Path1A_conv=Path1A_conv.replace("East","E")
     Path1A_conv=Path1A_conv.replace("Viejo","")
+    Path1A_conv=Path1A_conv.replace("Parkland","Pklnd")
+    Path1A_conv=Path1A_conv.replace("Park","Pk")
     Path1A_conv=Path1A_conv.replace("Township","Twnshp")
     Path1A_conv=Path1A_conv.replace("Springs","Spngs")
     Path1A_conv=Path1A_conv.replace("Beach","Bch")
