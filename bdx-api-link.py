@@ -119,6 +119,17 @@ def GoogleKWSX():
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW/DefaultSheet.xlsx",\
                   attachment_filename="GoogleKWSX.xlsx")
 
+
+@app.route('/GoogleAdSBMMA')
+def GoogleASBMM():
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/DefaultSheet.xlsx",\
+                  attachment_filename="GoogleAdSBMMA.xlsx")
+
+
+
+
+
+
 @app.route('/BingKWSBMM')
 def BingSBMMKW():
  return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM/DefaultSheet.xlsx",\
