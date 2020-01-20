@@ -82,17 +82,7 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
     CommunityRow3=str(WorkingCommunities.iloc[7].values)+" "+str(len(WorkingCommunities.iloc[7]))
     global CommunityRow4
     CommunityRow4=str(WorkingCommunities.iloc[8].values)+" "+str(len(WorkingCommunities.iloc[8]))
-    
-   
-    """
-    print('WorkingCommunities...............')
-    print(WorkingCommunities)
-    print("CommunityColTitles")
-    print(CommunityColTitles)
-    print('CommunityRow1....................')
-    print(CommunityRow1)
-    """
-    
+       
     return WorkingCommunities
   else:
     print("Load Communities cannot run...............",IsCommValid)
@@ -101,7 +91,6 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
 
     
 def initialCommUpdatProcess():
-  #taskque.borrowedCelery.apply_async()
   print("Running.........initialCommUpdatProcess()......")
   print("communities section")
   os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
