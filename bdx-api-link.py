@@ -122,8 +122,10 @@ def GoogleKWSX():
 
 @app.route('/GoogleAdSBMMA')
 def GoogleASBMM():
+ TodaysDate="EL-Dia-De-Hoy"        
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/DefaultSheet.xlsx",\
-                  attachment_filename="GoogleAdSBMMA.xlsx")
+                 #attachment_filename="GoogleAdSBMMA.xlsx")
+                  attachment_filename=TodaysDate)  
 
 
 
