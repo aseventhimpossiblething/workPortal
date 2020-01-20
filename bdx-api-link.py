@@ -108,17 +108,17 @@ def CommUpdateExcel():
 
 @app.route('/GoogleKWSBMM')
 def GoogleKWSBMMKW():
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/DefaultSheet.xlsx/?",\
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/DefaultSheet.xlsx",\
                   attachment_filename="GoogleBMMKW.xlsx")
          
 @app.route('/GoogleKWSB')
 def GoogleKWSBKW():
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW/DefaultSheet.xlsx/?",\
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW/DefaultSheet.xlsx",\
                   attachment_filename="GoogleKWSB.xlsx")
 
 @app.route('/GoogleKWSX')
 def GoogleKWSX():
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW/DefaultSheet.xlsx/?",\
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW/DefaultSheet.xlsx",\
                   attachment_filename="GoogleKWSX.xlsx")
 
 
@@ -126,7 +126,7 @@ def GoogleKWSX():
 def GoogleASBMM():
  #print(date.today())        
  #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/DefaultSheet.xlsx?",\
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdSBMMA.xlsx")
                  #attachment_filename=TodaysDate) 
          
@@ -136,7 +136,7 @@ def GoogleASBMM():
 def GoogleBSBMM():
  #print(date.today())        
  #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBMM/DefaultSheet.xlsx?",\
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBMM/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdSBMMB.xlsx")
                  #attachment_filename=TodaysDate)  
 
@@ -145,20 +145,20 @@ def GoogleBSBMM():
 
 @app.route('/BingKWSBMM')
 def BingSBMMKW():
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM/DefaultSheet.xlsx?",\
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM/DefaultSheet.xlsx",\
                   attachment_filename="BingBMMKW.xlsx")
  
          
 @app.route('/BingKWSB')
 def BingSBKW():
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad/DefaultSheet.xlsx?",\
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad/DefaultSheet.xlsx",\
                   attachment_filename="BingSBKW.xlsx")
 
 
 
 @app.route('/BingKWSX')
 def BingSXKW():
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact/DefaultSheet.xlsx?",\
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact/DefaultSheet.xlsx",\
                   attachment_filename="BingSXKW.xlsx")
          
 
