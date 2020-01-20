@@ -316,7 +316,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameA.to_excel(writer)
    writer.save()
-   #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    print(GoogleAdFrameA)
@@ -328,7 +327,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameB.to_excel(writer)
    writer.save()
-   #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    print(GoogleAdFrameB)
@@ -347,7 +345,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameA.to_excel(writer)
    writer.save()
-   #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    print(GoogleAdFrameA)
@@ -358,7 +355,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameB.to_excel(writer)
    writer.save()
-   #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    print(GoogleAdFrameB)
