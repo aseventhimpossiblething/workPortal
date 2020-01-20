@@ -11,6 +11,7 @@ from flask import Flask, Markup, render_template, request
 from celery import Celery
 from flask import send_file
 #import taskque
+from datetime import date
          
 
 
@@ -122,6 +123,7 @@ def GoogleKWSX():
 
 @app.route('/GoogleAdSBMMA')
 def GoogleASBMM():
+ print(date.today())        
  TodaysDate="EL-Dia-De-Hoy"        
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/DefaultSheet.xlsx",\
                  #attachment_filename="GoogleAdSBMMA.xlsx")
