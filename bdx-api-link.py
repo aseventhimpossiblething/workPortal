@@ -12,6 +12,7 @@ from celery import Celery
 from flask import send_file
 #import taskque
 from datetime import date
+print("TODAYS DATE!!_________________",date.today())
          
 
 
