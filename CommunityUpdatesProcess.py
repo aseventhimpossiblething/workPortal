@@ -352,6 +352,17 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("os.listdir() ",os.listdir())
    print(GoogleAdFrameA)
    
+   print("os.getcwd() ",os.getcwd())
+   print("os.listdir() ",os.listdir())
+   os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBroad')
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   GoogleAdFrameB.to_excel(writer)
+   writer.save()
+   #/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/
+   print("os.getcwd() ",os.getcwd())
+   print("os.listdir() ",os.listdir())
+   print(GoogleAdFrameB)
+   
   if MatchType=='SX':
    print("In KeywordGen google SX ")
    os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW')
