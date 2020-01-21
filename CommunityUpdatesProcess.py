@@ -189,7 +189,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=Keyword_conv.replace(" "," +")
      Keyword_conv=Keyword_conv.replace("+55+","55+")
      Keyword_conv=Keyword_conv.replace("+-","-")
-     Keyword_conv=Keyword_conv.replace("+G +& +I","G&I ")
+     Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
      Keyword_conv="+"+Keyword_conv
      MatchType_Conv="Broad"
     if MatchType=="SB":
