@@ -1,5 +1,4 @@
 MaintatanceVar="Off";
-#IsCommUpdateRunning="NO";
 import glob
 import numpy
 import scipy
@@ -519,15 +518,18 @@ def initialCommUpdatProcess():
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
-
- 
+ print("NewGoogle")
+ print(NewGoogle)
+ print("NewBing")
+ print(NewBing)
+ """
  KeywordGen(NewGoogle,"sbmm","google")
  KeywordGen(NewGoogle,"sb","google")
  KeywordGen(NewGoogle,"sx","google")
  KeywordGen(NewBing,"sbmm","bing")
  KeywordGen(NewBing,"sb","bing")
  KeywordGen(NewBing,"sx","bing")
-
+ """
                        
    
  print("Main ")
