@@ -226,8 +226,27 @@ def BingBSBMM():
                  attachment_filename="BingAdSBMMB.xlsx")
                  #attachment_filename=TodaysDate)
                   
+ 
 
+
+
+@app.route('/BingAdSBA')
+def BingASB():
+ #print(date.today())        
+ #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBMM/DefaultSheet.xlsx",\
+                 attachment_filename="BingAdSBA.xlsx")
+                 #attachment_filename=TodaysDate) 
          
+
+
+@app.route('/BingAdSBB')
+def BingBSB():
+ #print(date.today())        
+ #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBMM/DefaultSheet.xlsx",\
+                 attachment_filename="BingAdSBB.xlsx")
+                 #attachment_filename=TodaysDate)         
 
 
          
