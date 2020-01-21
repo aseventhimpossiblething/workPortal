@@ -222,30 +222,55 @@ def BingASBMM():
 def BingBSBMM():
  #print(date.today())        
  #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBMM/DefaultSheet.xlsx",\
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsBtypeBMM/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSBMMB.xlsx")
                  #attachment_filename=TodaysDate)
-                  
- 
-
-
-
+         
+         
+         
+         
+         
+         
 @app.route('/BingAdSBA')
 def BingASB():
  #print(date.today())        
  #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBMM/DefaultSheet.xlsx",\
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBroad/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSBA.xlsx")
                  #attachment_filename=TodaysDate) 
          
-
+         
+  
 
 @app.route('/BingAdSBB')
 def BingBSB():
  #print(date.today())        
  #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBMM/DefaultSheet.xlsx",\
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsBtypeBroad/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSBB.xlsx")
+                 #attachment_filename=TodaysDate)         
+                  
+ 
+
+
+
+@app.route('/BingAdSXA')
+def BingASX():
+ #print(date.today())        
+ #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeExact/DefaultSheet.xlsx",\
+                 attachment_filename="BingAdSXA.xlsx")
+                 #attachment_filename=TodaysDate) 
+         
+         
+  
+
+@app.route('/BingAdSXB')
+def BingBSX():
+ #print(date.today())        
+ #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBExact/DefaultSheet.xlsx",\
+                 attachment_filename="BingAdSXB.xlsx")
                  #attachment_filename=TodaysDate)         
 
 
