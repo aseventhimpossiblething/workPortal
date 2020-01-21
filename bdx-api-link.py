@@ -145,7 +145,7 @@ def GoogleBSBMM():
 def GoogleASBM():
  #print(date.today())        
  #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABoad/DefaultSheet.xlsx",\
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABroad/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdSBMA.xlsx")
                  #attachment_filename=TodaysDate) 
          
