@@ -138,7 +138,28 @@ def GoogleBSBMM():
  #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBMM/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdSBMMB.xlsx")
+                 #attachment_filename=TodaysDate)
+         
+  
+@app.route('/GoogleAdSBMA')
+def GoogleASBMM():
+ #print(date.today())        
+ #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABM/DefaultSheet.xlsx",\
+                 attachment_filename="GoogleAdSBMMA.xlsx")
+                 #attachment_filename=TodaysDate) 
+         
+
+
+@app.route('/GoogleAdSBMB')
+def GoogleBSBMM():
+ #print(date.today())        
+ #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBM/DefaultSheet.xlsx",\
+                 attachment_filename="GoogleAdSBMMB.xlsx")
                  #attachment_filename=TodaysDate)  
+
+
 
 
 
