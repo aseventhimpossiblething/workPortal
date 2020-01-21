@@ -43,7 +43,7 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkwor
                                                                    'Community Id','Community Name','City','State','Zip',\
                                                                    'Market ID','Market Name'])
    
-  print("communities basic import done")
+  #print("communities basic import done")
   return WorkingCommunities
  else:
   print("Load Communities cannot run...............",IsCommValid)
@@ -136,12 +136,12 @@ def communityCheck(checkby,checkin,Name):
    checkby=checkby.drop([count]);
    if count % 4000==0:
     print("count ",count)
-    print("Community check set for testing lower throttle check Merge also ",Name)
+    #print("Community check set for testing lower throttle check Merge also ",Name)
   count+=1;
  checkby=checkby.reset_index()
  print("End Community Check for ",Name)
  print("DropRows")
- print(DropRows)
+ print(len(DropRows))
  print("DropRows")
  return checkby
  
