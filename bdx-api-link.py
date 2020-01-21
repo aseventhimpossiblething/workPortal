@@ -162,7 +162,29 @@ def GoogleBSBM():
 
 
 
+@app.route('/GoogleAdSXA')
+def GoogleASX():
+ #print(date.today())        
+ #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionAExact/DefaultSheet.xlsx",\
+                 attachment_filename="GoogleAdASX.xlsx")
+                 #attachment_filename=TodaysDate) 
+         
 
+
+@app.route('/GoogleAdSXB')
+def GoogleBSX():
+ #print(date.today())        
+ #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
+ return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBExact/DefaultSheet.xlsx",\
+                 attachment_filename="GoogleAdBSX.xlsx")
+                 #attachment_filename=TodaysDate)  
+
+         
+         
+         
+         
+         
 
 @app.route('/BingKWSBMM')
 def BingSBMMKW():
