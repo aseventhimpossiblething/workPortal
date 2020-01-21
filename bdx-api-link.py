@@ -78,6 +78,12 @@ def testtextfile():
     j=str(j)
     return TheSamplefile.read()
 
+@app.route('/test2')
+def freetodelete():
+    j=2+2
+    j=str(j)     
+    return "on a tuesday "+j      
+
 
 
 @app.route('/DisplayCommUpdate')
