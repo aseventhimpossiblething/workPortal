@@ -79,10 +79,17 @@ def testtextfile():
     return TheSamplefile.read()
 
 @app.route('/test2')
+def freetodelete2():
+    j=2+2
+    j=str(j)     
+    return "<html><head><script></script><head></html> "
+
+@app.route('/test3')
 def freetodelete():
     j=2+2
     j=str(j)     
     return "on a tuesday "+j      
+
 
 
 
