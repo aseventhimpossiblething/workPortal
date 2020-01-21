@@ -204,10 +204,27 @@ def BingSXKW():
  return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact/DefaultSheet.xlsx",\
                   attachment_filename="BingSXKW.xlsx")
          
+         
 
          
        
+@app.route('/BingAdSBMMA')
+def BingASBMM():
+ #print(date.today())        
+ #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBMM/DefaultSheet.xlsx",\
+                 attachment_filename="BingAdSBMMA.xlsx")
+                 #attachment_filename=TodaysDate) 
+         
 
+
+@app.route('/BingAdSBMMB')
+def BingBSBMM():
+ #print(date.today())        
+ #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBMM/DefaultSheet.xlsx",\
+                 attachment_filename="BingAdSBMMB.xlsx")
+                 #attachment_filename=TodaysDate)
                   
 
          
