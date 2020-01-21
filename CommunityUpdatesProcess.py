@@ -364,8 +364,28 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleKWFrame.to_excel(writer)
-   writer.save()  
-  
+   writer.save() 
+   
+   
+   print("os.getcwd() ",os.getcwd())
+   print("os.listdir() ",os.listdir())
+   os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionAExact')
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   GoogleAdFrameA.to_excel(writer)
+   writer.save()
+   print("os.getcwd() ",os.getcwd())
+   print("os.listdir() ",os.listdir())
+   print(GoogleAdFrameA)
+   
+   print("os.getcwd() ",os.getcwd())
+   print("os.listdir() ",os.listdir())
+   os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBExact')
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   GoogleAdFrameB.to_excel(writer)
+   writer.save()
+   print("os.getcwd() ",os.getcwd())
+   print("os.listdir() ",os.listdir())
+   print(GoogleAdFrameB)
    
   
  if SearchChan=="bing":
