@@ -113,8 +113,12 @@ def MergeURLs(chan,chan2):
   URLS=URLS+chan[count]
   if count % 50000 == 0:
    print(chan2," _ ",count)
-   print("Low count setting in MergeURLS nonfunctional")
+   #print("Low count setting in MergeURLS nonfunctional")
   count+=1
+ print("end MergeURLs() for ",chan2)
+ print(URLS)
+ print("end MergeURLs() for ",chan2)
+ print("end MergeURLs() for ",chan2)
  print("end MergeURLs() for ",chan2)
  return URLS
  
