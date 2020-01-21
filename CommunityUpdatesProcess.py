@@ -109,17 +109,18 @@ def MergeURLs(chan,chan2):
  if type(MaintatanceVar)=="<class 'int'>":
    hilecount=MaintatanceVar;
  while count < hilecount :
- #while count < chan.count():
   URLS=URLS+chan[count]
   if count % 50000 == 0:
    print(chan2," _ ",count)
    #print("Low count setting in MergeURLS nonfunctional")
   count+=1
+ """ 
  print("end MergeURLs() for ",chan2)
  print(URLS)
  print("end MergeURLs() for ",chan2)
  print("end MergeURLs() for ",chan2)
  print("end MergeURLs() for ",chan2)
+ """
  return URLS
  
 def communityCheck(checkby,checkin,Name):
@@ -131,7 +132,6 @@ def communityCheck(checkby,checkin,Name):
  if type(MaintatanceVar)=="<class 'int'>":
   hilecount=MaintatanceVar;
  while count < hilecount:
- #while count < checkby['Community Id'].count():
   if checkin.find(str(checkby['Community Id'][count]))>-1:
    DropRows.append(count);
    checkby=checkby.drop([count]);
@@ -141,6 +141,9 @@ def communityCheck(checkby,checkin,Name):
   count+=1;
  checkby=checkby.reset_index()
  print("End Community Check for ",Name)
+ print("DropRows")
+ print(DropRows)
+ print("DropRows")
  return checkby
  
  
