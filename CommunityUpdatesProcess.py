@@ -87,7 +87,7 @@ def filterNonParticipators(FrameToBeFiltered):
    CatchDiscards.append(count)
   if FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))>-1:
    CatchDiscards.append(count)
-  if numpy.array(FrameToBeFiltered['Brand Name'])[[count]]="Clayton Homes":
+  if numpy.array(FrameToBeFiltered['Brand Name'])[[count]]=="Clayton Homes":
    print(count," Clayton Homes")
   """ 
   else:
