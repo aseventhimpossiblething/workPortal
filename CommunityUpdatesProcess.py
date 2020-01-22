@@ -91,7 +91,7 @@ def filterNonParticipators(FrameToBeFiltered):
    print("___________________________________________")
    print(count," Clayton Homes?-> ",numpy.array(FrameToBeFiltered['Brand Name'])[[count]])
    print("FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]])) : Clayton homes Location ", FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]])))
-   print(" Strip [ ] ",(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")))
+   print(" Strip [ ] ",(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("]",""))
    print("___________________________________________")
   """ 
   else:
