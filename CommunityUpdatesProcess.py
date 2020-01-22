@@ -81,14 +81,14 @@ def filterNonParticipators(FrameToBeFiltered):
  (International Homes,A5),(International Homes,B5),(Clayton,A5);'
  count=5;
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
-  if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("[",""))>-1:
-   print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("[",""))
+  if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))>-1:
+   print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
    CatchDiscards.append(count)
-  if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("]","")).replace("[",""))>-1:
-   print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("[",""))
+  if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("']","")).replace("['",""))>-1:
+   print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
    CatchDiscards.append(count)
-  if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("]","")).replace("[",""))>-1:
-   print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("[",""))
+  if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['",""))>-1:
+   print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
    CatchDiscards.append(count)
   #if numpy.array(FrameToBeFiltered['Brand Name'])[[count]]=="Clayton Homes":
    #print("___________________________________________")
