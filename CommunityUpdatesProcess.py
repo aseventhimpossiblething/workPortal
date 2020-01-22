@@ -521,7 +521,7 @@ def initialCommUpdatProcess():
  
  print("WorkingCommunities")
  print(WorkingCommunities)
- 
+ """
  print("NewGoogle")
  print(NewGoogle)
  print("NewBing")
@@ -533,7 +533,7 @@ def initialCommUpdatProcess():
  KeywordGen(NewBing,"sbmm","bing")
  KeywordGen(NewBing,"sb","bing")
  KeywordGen(NewBing,"sx","bing")
- """
+ 
                        
    
  print("Main ")
