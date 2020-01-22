@@ -89,9 +89,11 @@ def filterNonParticipators(FrameToBeFiltered):
    CatchDiscards.append(count)
   else:
    print("Passed Filter Brand Name : ",numpy.array(FrameToBeFiltered['Brand Name'])[[count]]," : End Brand Name")
-   print("Passed Filter Brand Name : ",FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))," : End Brand Name")
+   #print("Passed Filter Brand Name : ",FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))," : End Brand Name")
    print("Passed Filter Builder Name : ",numpy.array(FrameToBeFiltered['Builder Name'])[[count]]," : End Builder Name")
-   print("Passed Filter Builder Name : ",FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))," : End Brand Name")
+   #print("Passed Filter Builder Name : ",FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))," : End Brand Name")
+   print('FilterString.find(str("Clayton Homes"))',FilterString.find(str("Clayton Homes")))
+   print('FilterString.find(str("Oakwoord Homes"))',FilterString.find(str("Oakwoord Homes")))
   count+=1; 
   if len(CatchDiscards)!=0:
    count2=0;
