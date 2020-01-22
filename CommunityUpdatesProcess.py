@@ -82,13 +82,13 @@ def filterNonParticipators(FrameToBeFiltered):
  count=5;
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))>-1:
-   print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
+   #print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
    CatchDiscards.append(count)
   if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("']","")).replace("['",""))>-1:
-   print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
+   #print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
    CatchDiscards.append(count)
   if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['",""))>-1:
-   print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
+   #print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
    CatchDiscards.append(count)
   #if numpy.array(FrameToBeFiltered['Brand Name'])[[count]]=="Clayton Homes":
    #print("___________________________________________")
@@ -113,12 +113,16 @@ def filterNonParticipators(FrameToBeFiltered):
  if len(CatchDiscards)!=0:
   count2=0;
   while count2<len(CatchDiscards):
-   print("Entered the second while loop count2 in Filter= ",count2)
-   print(CatchDiscards[count2])
+   #print("Entered the second while loop count2 in Filter= ",count2)
+   #print(CatchDiscards[count2])
    #FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
    count2+=1;   
  print("from Filter") 
- print(CatchDiscards)
+ print(len(CatchDiscards))
+ print(FilteredFrame)
+ #FilteredFrame
+ 
+ print(FilteredFrame)
  print("End Filter") 
  return FilteredFrame 
  
