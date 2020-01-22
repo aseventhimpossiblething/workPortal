@@ -11,7 +11,8 @@ from flask import Flask, Markup, render_template, request
 from celery import Celery
 from flask import send_file
 #import taskque
-from datetime import date
+from datetime import datetime
+print("datetime.now()",datetime.now())
 
          
 
@@ -117,7 +118,8 @@ def CommUpdateDisplay():
 #https://bdx-api-link.herokuapp.com/GoogleKWSBMM
 @app.route('/CommUpdateExcel')
 def CommUpdateExcel():
- return render_template('CommUpdateExcel.html')
+    CacheBreakStamp=datetime.now()     
+ return render_template('CommUpdateExcel.html',CacheBreakStamp)
 
 @app.route('/GoogleKWSBMM')
 def GoogleKWSBMMKW():
