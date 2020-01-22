@@ -82,18 +82,21 @@ def filterNonParticipators(FrameToBeFiltered):
  count=5;
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("[",""))>-1:
+   print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("[",""))
    CatchDiscards.append(count)
   if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("]","")).replace("[",""))>-1:
+   print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("[",""))
    CatchDiscards.append(count)
   if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("]","")).replace("[",""))>-1:
+   print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("[",""))
    CatchDiscards.append(count)
-  if numpy.array(FrameToBeFiltered['Brand Name'])[[count]]=="Clayton Homes":
-   print("___________________________________________")
-   print(count," Clayton Homes?-> ",numpy.array(FrameToBeFiltered['Brand Name'])[[count]])
+  #if numpy.array(FrameToBeFiltered['Brand Name'])[[count]]=="Clayton Homes":
+   #print("___________________________________________")
+   #print(count," Clayton Homes?-> ",numpy.array(FrameToBeFiltered['Brand Name'])[[count]])
    #print("FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]])) : Clayton homes Location ", FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]])))
    #print(" Strip [ ] ",(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("]",""))
-   print((str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("[","")))
-   print("___________________________________________")
+   #print((str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("[","")))
+   #print("___________________________________________")
   """ 
   else:
    print("Passed Filter Brand Name : ",numpy.array(FrameToBeFiltered['Brand Name'])[[count]]," : End Brand Name")
