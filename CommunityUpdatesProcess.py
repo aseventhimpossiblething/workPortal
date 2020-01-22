@@ -98,8 +98,8 @@ def filterNonParticipators(FrameToBeFiltered):
    #print((str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("[","")))
    #print("___________________________________________")
    
-  else:
-   print("else ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("[",""))
+  #else:
+   #print("else ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("[",""))
    """
    print("Passed Filter Brand Name : ",numpy.array(FrameToBeFiltered['Brand Name'])[[count]]," : End Brand Name")
    #print("Passed Filter Brand Name : ",FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))," : End Brand Name")
@@ -110,12 +110,13 @@ def filterNonParticipators(FrameToBeFiltered):
    """
    
   count+=1; 
-  if len(CatchDiscards)!=0:
-   count2=0;
-   while count2<len(CatchDiscards):
-    print("Entered the second while loop count2 in Filter= ",count2)
-    FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
-    count2+=1;   
+ if len(CatchDiscards)!=0:
+  count2=0;
+  while count2<len(CatchDiscards):
+   print("Entered the second while loop count2 in Filter= ",count2)
+   print(CatchDiscards[count2])
+   #FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
+   count2+=1;   
  print("from Filter") 
  print(CatchDiscards)
  print("End Filter") 
