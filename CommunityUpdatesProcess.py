@@ -68,7 +68,6 @@ def WorkingBing():
  if IsBingValid!='Valid':
   return IsBingValid
  WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
- print("Bing basic import done")
  return WorkingBing
 
 def filterNonParticipators(FrameToBeFiltered):
@@ -94,7 +93,9 @@ def filterNonParticipators(FrameToBeFiltered):
    while count2<len(CatchDiscards):
     print("Entered the second while loop count2= ",count2)
     FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
-    count2+=1;                  
+    count2+=1;   
+ print("from Filter") 
+ print(CatchDiscards)
  print("End Filter") 
  return FilteredFrame 
  
@@ -320,29 +321,35 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleKWFrame.to_excel(writer)
    writer.save()
-   
+   ""
    print("Site of ad words code_________________-")
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
+   ""
    os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameA.to_excel(writer)
    writer.save()
+   """
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    print(GoogleAdFrameA)
    
    
+   
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
+   """
    os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBMM/')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameB.to_excel(writer)
    writer.save()
+   
+   """
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    print(GoogleAdFrameB)
-   
+   """
    
   if MatchType=='SB':
    print("In KeywordGen google SB ")
@@ -357,19 +364,26 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameA.to_excel(writer)
    writer.save()
+   
+   """
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    print(GoogleAdFrameA)
    
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
+   """
+   
    os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBroad')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameB.to_excel(writer)
    writer.save()
+   
+   """
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    print(GoogleAdFrameB)
+   """
    
   if MatchType=='SX':
    print("In KeywordGen google SX ")
@@ -378,26 +392,35 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    GoogleKWFrame.to_excel(writer)
    writer.save() 
    
-   
+   """
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
+   """
    os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionAExact')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameA.to_excel(writer)
    writer.save()
+   
+   """
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    print(GoogleAdFrameA)
    
+   
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
+   """
+   
    os.chdir('/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBExact')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameB.to_excel(writer)
    writer.save()
+   
+   """
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    print(GoogleAdFrameB)
+   """
    
   
  if SearchChan=="bing":
@@ -408,25 +431,34 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    BingKWFrame.to_excel(writer)
    writer.save()
    
+   """
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBMM')
+   """
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    BingAdFrameA.to_excel(writer)
    writer.save()
+   
+   """
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    print(BingAdFrameA)
    
+   
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
+   """
    os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeBMM')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    BingAdFrameB.to_excel(writer)
    writer.save()
+   
+   """
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    print(BingAdFrameB)
+   """
  
    
   if MatchType=='SB':
@@ -436,26 +468,34 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    BingKWFrame.to_excel(writer)
    writer.save()
    
-   
+   """
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
+   """
    os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBroad')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    BingAdFrameA.to_excel(writer)
    writer.save()
+   
+   """
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    print(BingAdFrameA)
    
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
+   """
+   
    os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeBroad')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    BingAdFrameB.to_excel(writer)
    writer.save()
+   
+   """
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    print(BingAdFrameB)
+   """
    
   if MatchType=='SX':
    print("In KeywordGen bing SX ")
@@ -464,39 +504,40 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    BingKWFrame.to_excel(writer)
    writer.save()
    
+   """
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
+   """
+   
    os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeExact')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    BingAdFrameA.to_excel(writer)
    writer.save()
+   
+   """
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    print(BingAdFrameA)
    
+   
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
+   """
    os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeExact')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    BingAdFrameB.to_excel(writer)
    writer.save()
+   
+   """
    print("os.getcwd() ",os.getcwd())
    print("os.listdir() ",os.listdir())
    print(BingAdFrameB)
+   """
  
  
-   
- 
- 
- """
- return KWFrame
- """   
-  
-  
 def initialCommUpdatProcess():
  global IsCommUpdateRunning
- #IsCommUpdateRunning="YES";
- 
+  
  os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
@@ -518,15 +559,11 @@ def initialCommUpdatProcess():
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
- 
+ """
  print("WorkingCommunities")
  print(WorkingCommunities)
  """
- print("NewGoogle")
- print(NewGoogle)
- print("NewBing")
- print(NewBing)
- """
+ 
  KeywordGen(NewGoogle,"sbmm","google")
  KeywordGen(NewGoogle,"sb","google")
  KeywordGen(NewGoogle,"sx","google")
@@ -538,8 +575,7 @@ def initialCommUpdatProcess():
    
  print("Main ")
  os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
- #print("os.getcwd()",os.getcwd())
- #print("os.listdir()",os.listdir()) 
+  
  
  TheSampleText=WorkingBingEOF
  TheSamplefile=open('TheSampleText.txt','w+') 
@@ -552,7 +588,6 @@ def initialCommUpdatProcess():
  storeRequest.write("Response , ")
  storeRequest.close() 
  storeRequest=open('RequestsVsResponses.txt','r+')
- #print("storeRequest.read() ",storeRequest.read())
  storeRequest.close()
  
   
