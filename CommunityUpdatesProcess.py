@@ -88,9 +88,9 @@ def filterNonParticipators(FrameToBeFiltered):
   if FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))>-1:
    CatchDiscards.append(count)
   else:
-   print("Passed Filter Brand Name : "numpy.array(FrameToBeFiltered['Brand Name'])[[count]]," : End Brand Name")
+   print("Passed Filter Brand Name : ",numpy.array(FrameToBeFiltered['Brand Name'])[[count]]," : End Brand Name")
    print("Passed Filter Brand Name : ",FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))," : End Brand Name")
-   print("Passed Filter Builder Name : "numpy.array(FrameToBeFiltered['Builder Name'])[[count]]," : End Builder Name")
+   print("Passed Filter Builder Name : ",numpy.array(FrameToBeFiltered['Builder Name'])[[count]]," : End Builder Name")
    print("Passed Filter Builder Name : ",FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))," : End Brand Name")
   count+=1; 
   if len(CatchDiscards)!=0:
