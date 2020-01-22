@@ -108,17 +108,13 @@ def CommUpdateDisplay():
     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
     if read_storeRequest1==read_storeRequest2:
      return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=https://bdx-api-link.herokuapp.com/CommUpdateExcel?'><html>This Message indicates an error in URL Forward</html>"
-     #return "Alt Message Test"
-     #return "<meta http-equiv='refresh' content='0;URL=https://www.google.com'><html>Should forward to google</html>"
     if read_storeRequest1!=read_storeRequest2:
      return '<meta http-equiv="refresh" content="120"><html>LOADING..... This can Take up to 10 minuites </html>'
 
 
-#'0;URL=https://bdx-api-link.herokuapp.com/DisplayCommUpdate'
-#https://bdx-api-link.herokuapp.com/GoogleKWSBMM
+
 @app.route('/CommUpdateExcel')
 def CommUpdateExcel():
- #CacheBreakStamp=datetime.now()     
  return render_template('CommUpdateExcel.html',CacheBreakStamp=datetime.now())
 
 @app.route('/GoogleKWSBMM')
@@ -139,8 +135,6 @@ def GoogleKWSX():
 
 @app.route('/GoogleAdSBMMA')
 def GoogleASBMM():
- #print(date.today())        
- #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdSBMMA.xlsx")
                  #attachment_filename=TodaysDate) 
@@ -149,8 +143,6 @@ def GoogleASBMM():
 
 @app.route('/GoogleAdSBMMB')
 def GoogleBSBMM():
- #print(date.today())        
- #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBMM/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdSBMMB.xlsx")
                  #attachment_filename=TodaysDate)
@@ -158,8 +150,6 @@ def GoogleBSBMM():
   
 @app.route('/GoogleAdSBMA')
 def GoogleASBM():
- #print(date.today())        
- #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABroad/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdSBMA.xlsx")
                  #attachment_filename=TodaysDate) 
@@ -168,8 +158,6 @@ def GoogleASBM():
 
 @app.route('/GoogleAdSBMB')
 def GoogleBSBM():
- #print(date.today())        
- #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBroad/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdSBMB.xlsx")
                  #attachment_filename=TodaysDate)  
@@ -179,8 +167,6 @@ def GoogleBSBM():
 
 @app.route('/GoogleAdSXA')
 def GoogleASX():
- #print(date.today())        
- #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionAExact/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdASX.xlsx")
                  #attachment_filename=TodaysDate) 
@@ -189,8 +175,6 @@ def GoogleASX():
 
 @app.route('/GoogleAdSXB')
 def GoogleBSX():
- #print(date.today())        
- #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBExact/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdBSX.xlsx")
                  #attachment_filename=TodaysDate)  
@@ -282,8 +266,6 @@ def BingASX():
 
 @app.route('/BingAdSXB')
 def BingBSX():
- #print(date.today())        
- #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
  return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeExact/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSXB.xlsx")
                  #attachment_filename=TodaysDate)         
