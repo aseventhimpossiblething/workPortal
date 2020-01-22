@@ -118,7 +118,7 @@ def CommUpdateDisplay():
 #https://bdx-api-link.herokuapp.com/GoogleKWSBMM
 @app.route('/CommUpdateExcel')
 def CommUpdateExcel():
-    CacheBreakStamp=datetime.now()     
+ CacheBreakStamp=datetime.now()     
  return render_template('CommUpdateExcel.html',CacheBreakStamp)
 
 @app.route('/GoogleKWSBMM')
