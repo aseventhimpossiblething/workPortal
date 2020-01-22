@@ -518,6 +518,10 @@ def initialCommUpdatProcess():
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
+ 
+ print("WorkingCommunities")
+ print(WorkingCommunities)
+ 
  print("NewGoogle")
  print(NewGoogle)
  print("NewBing")
