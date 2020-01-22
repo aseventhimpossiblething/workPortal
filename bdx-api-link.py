@@ -137,7 +137,7 @@ def GoogleKWSX():
 def GoogleASBMM():
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdSBMMA.xlsx")
-                 #attachment_filename=TodaysDate) 
+                 
          
 
 
@@ -145,14 +145,14 @@ def GoogleASBMM():
 def GoogleBSBMM():
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBMM/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdSBMMB.xlsx")
-                 #attachment_filename=TodaysDate)
+                 
          
   
 @app.route('/GoogleAdSBMA')
 def GoogleASBM():
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABroad/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdSBMA.xlsx")
-                 #attachment_filename=TodaysDate) 
+                
          
 
 
@@ -160,8 +160,7 @@ def GoogleASBM():
 def GoogleBSBM():
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBroad/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdSBMB.xlsx")
-                 #attachment_filename=TodaysDate)  
-
+                 
 
 
 
@@ -169,7 +168,7 @@ def GoogleBSBM():
 def GoogleASX():
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionAExact/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdASX.xlsx")
-                 #attachment_filename=TodaysDate) 
+              
          
 
 
@@ -177,7 +176,7 @@ def GoogleASX():
 def GoogleBSX():
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBExact/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdBSX.xlsx")
-                 #attachment_filename=TodaysDate)  
+               
 
          
          
@@ -209,21 +208,16 @@ def BingSXKW():
        
 @app.route('/BingAdSBMMA')
 def BingASBMM():
- #print(date.today())        
- #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
  return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBMM/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSBMMA.xlsx")
-                 #attachment_filename=TodaysDate) 
-         
+                
 
 
 @app.route('/BingAdSBMMB')
 def BingBSBMM():
- #print(date.today())        
- #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
  return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsBtypeBMM/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSBMMB.xlsx")
-                 #attachment_filename=TodaysDate)
+              
          
          
          
@@ -232,22 +226,18 @@ def BingBSBMM():
          
 @app.route('/BingAdSBA')
 def BingASB():
- #print(date.today())        
- #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
  return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBroad/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSBA.xlsx")
-                 #attachment_filename=TodaysDate) 
+              
          
          
   
 
 @app.route('/BingAdSBB')
 def BingBSB():
- #print(date.today())        
- #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
  return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsBtypeBroad/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSBB.xlsx")
-                 #attachment_filename=TodaysDate)         
+                      
                   
  
 
@@ -255,11 +245,9 @@ def BingBSB():
 
 @app.route('/BingAdSXA')
 def BingASX():
- #print(date.today())        
- #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
  return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeExact/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSXA.xlsx")
-                 #attachment_filename=TodaysDate) 
+                  
          
          
   
@@ -268,19 +256,12 @@ def BingASX():
 def BingBSX():
  return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeExact/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSXB.xlsx")
-                 #attachment_filename=TodaysDate)         
-
+                 
 
          
 
 
 
-"""
-@app.route('/dnlde')
-def dnld():
-    return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/911cor.xlsx", attachment_filename="911cor.xlsx")     
-"""         
-         
     
 
 
