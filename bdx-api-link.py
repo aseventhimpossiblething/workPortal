@@ -284,7 +284,7 @@ def BingASX():
 def BingBSX():
  #print(date.today())        
  #TodaysDate="EL-Dia-De-Hoy"+str(date.today())+".xlsx"        
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBExact/DefaultSheet.xlsx",\
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeExact/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSXB.xlsx")
                  #attachment_filename=TodaysDate)         
 
