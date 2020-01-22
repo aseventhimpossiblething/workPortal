@@ -209,6 +209,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=Keyword_conv.replace("+-","-")
      Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
      Keyword_conv="+"+Keyword_conv
+     if len(Keyword_conv)<12:
+      Keyword_conv=Keyword_conv+" Community"
      MatchType_Conv="Broad"
     if MatchType=="SB":
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
@@ -238,6 +240,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=Keyword_conv.replace("+-","-")
      Keyword_conv=Keyword_conv.replace("+G +& +I","G&I ")
      Keyword_conv="+"+Keyword_conv
+     if len(Keyword_conv)<12:
+      Keyword_conv=Keyword_conv+" Community"
      MatchType_Conv="Broad"
    Campaign_Name.append(Campaign_Nameing_Conv);
    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
