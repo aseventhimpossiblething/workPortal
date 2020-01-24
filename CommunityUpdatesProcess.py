@@ -114,10 +114,11 @@ def filterNonParticipators(FrameToBeFiltered):
   count2=0;
   while count2<len(CatchDiscards):
    #print("count2 ",count2)
-   print("CatchDiscards count2 ",count2)
+   #print("CatchDiscards count2 ",count2)
    #print("CatchDiscards[count2] ",count2-1," :",CatchDiscards[count2-1])
-   print("CatchDiscards[count2] ",count2," :",CatchDiscards[count2])
-   print("FilteredFrame[[count2]] ",FilteredFrame[[count2]])
+   #print("CatchDiscards[count2] ",count2," :",CatchDiscards[count2])
+   print(count2+5)
+   print("FilteredFrame[[count2]] ",FilteredFrame[[count2+5]])
    #print("FilteredFrame[count2]")
    #print(FilteredFrame[count2])
    #print(FilteredFrame[count2])
@@ -296,8 +297,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
    if len(Path1A_conv)>15:
-    #print("_____________________________________")
-    #print("Pulled for size ",Path1A_conv)
     Path1A_conv=Path1A_conv.replace("-","")
     Path1A_conv=Path1A_conv.replace("North","N")
     Path1A_conv=Path1A_conv.replace("South","S")
