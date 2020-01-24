@@ -12,7 +12,7 @@ from celery import Celery
 from flask import send_file
 #import taskque
 from datetime import datetime
-print("datetime.now()",datetime.now())
+
 
          
 
