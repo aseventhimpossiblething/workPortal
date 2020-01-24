@@ -58,7 +58,7 @@ app = Flask(__name__)
 
 
 
-#print(" start of index CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
+
 
 CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
 
@@ -291,6 +291,7 @@ def index():
 @app.route('/BidOps')
 def BidOpInput():
     return render_template('BidOpForm.html',pagetitle="Bid Optimisation",CommonTag=CommonTagAll)
+
 @app.route('/BidOPUpload', methods=['POST','GET'])
 def BidOPUpload():
     return fileHandler.BidOpFileHandler()
@@ -302,27 +303,14 @@ def CommunityDataFrame():
 def DataFrameCss():
     return render_template('DataFrameCss.css')
 
-
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
-    #CommunityUpdatesProcess.initialCommUpdatProcess()
     return render_template('CommunitiesForm.html',pagetitle="Community Updates",CommonTag=CommonTagAll)
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
-    #CommunityUpdatesProcess.initialCommUpdatProcess()
-    #print("++++++++++++++++++   filehandler Running   ++++++++++++++++++++++")
-    #fileHandler.CommListFileHandler()
-    
     return fileHandler.CommListFileHandler()
     
-    #return '<html><p>empty</p></html>'
-    """
-    try:
-        return fileHandler.CommListFileHandler()
    
-    except: 
-        return Markup("Files Prohobited")
-    """    
    
 
 
