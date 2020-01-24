@@ -118,7 +118,7 @@ def filterNonParticipators(FrameToBeFiltered):
    #print("CatchDiscards[count2] ",count2-1," :",CatchDiscards[count2-1])
    #print("CatchDiscards[count2] ",count2," :",CatchDiscards[count2])
    print(count2+5)
-   print("FilteredFrame[count2] ",FilteredFrame[count2+5])
+   print("FilteredFrame.iloc[count2+5] ",FilteredFrame.iloc[count2+5])
    #print("FilteredFrame[count2]")
    #print(FilteredFrame[count2])
    #print(FilteredFrame[count2])
