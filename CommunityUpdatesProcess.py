@@ -118,7 +118,7 @@ def filterNonParticipators(FrameToBeFiltered):
    print("CatchDiscards 1 :",CatchDiscards[1])
    print("CatchDiscards 2 :",CatchDiscards[2])
    print("CatchDiscards 3 :",CatchDiscards[3])
-   print("CatchDiscards 4 :",CatchDiscards[4]
+   print("CatchDiscards 4 :",CatchDiscards[4])
    print("CatchDiscards 5 :",CatchDiscards[5])
    print("CatchDiscards 6 :",CatchDiscards[6])
    print("CatchDiscards 7 :",CatchDiscards[7])
