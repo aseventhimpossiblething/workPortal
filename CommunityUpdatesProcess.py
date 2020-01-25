@@ -106,6 +106,7 @@ def filterNonParticipators(FrameToBeFiltered):
    print("occurs ",CommunityMarketsArray.count(CommunityMarket2[count]),"TImes :",BuilderNameFilter," ",CommunityMarket2[count])
   """ 
   count+=1;
+ CatchDiscards=list(dict.fromkeys(CatchDiscards)))
  print(len(CatchDiscards)) 
  if len(CatchDiscards)!=0:
   print("Length Before ",len(FilteredFrame)) 
@@ -113,6 +114,7 @@ def filterNonParticipators(FrameToBeFiltered):
   print(CatchDiscards)
   while count2<len(CatchDiscards):
    print("count2 ",count2)
+   #if CatchDiscards.count(count2)>1
    #print("CatchDiscards[count2] ",CatchDiscards[count2])
    #print("Current loop number ",count2)
    #print("Will drop row ",CatchDiscards[count2])
