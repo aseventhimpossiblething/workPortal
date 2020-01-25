@@ -78,15 +78,15 @@ def filterNonParticipators(FrameToBeFiltered):
  (Crossland Homes,A5),(Crossland Homes,B5),(Luv Homes,A5),(Luv Homes,B5)(G & ),( G & I ),\
  (International Homes,A5),(International Homes,B5),(Clayton,A5);'
  CommunityMarketsArray=[]
- """
+ 
  Scount=5
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   CommunityMarket=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[Scount]]).replace("']","")).\
   replace("['","")+"-"+str(str(numpy.array(FrameToBeFiltered['Market Name'])[[Scount]]).replace("']",""))
   CommunityMarketsArray.append(CommunityMarket)
-  print(CommunityMarketsArray)
+  print("COMMUNITY MARKETS!!!  ",CommunityMarketsArray)
   Scount+=1
- """
+ 
  count=5;
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   BrandFilter=str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")
@@ -106,12 +106,12 @@ def filterNonParticipators(FrameToBeFiltered):
    print("occurs ",CommunityMarketsArray.count(CommunityMarket2[count]),"TImes :",BuilderNameFilter," ",CommunityMarket2[count])
   """ 
   count+=1;
- CatchDiscards=list(dict.fromkeys(CatchDiscards)))
+ CatchDiscards=list(dict.fromkeys(CatchDiscards))
  print(len(CatchDiscards)) 
  if len(CatchDiscards)!=0:
   print("Length Before ",len(FilteredFrame)) 
   count2=0;
-  print(CatchDiscards)
+  #print(CatchDiscards)
   while count2<len(CatchDiscards):
    print("count2 ",count2)
    #if CatchDiscards.count(count2)>1
