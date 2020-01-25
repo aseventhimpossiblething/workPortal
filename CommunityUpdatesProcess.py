@@ -125,10 +125,10 @@ def filterNonParticipators(FrameToBeFiltered):
    #print("Entered the second while loop count2 in Filter= ",count2)
    #print(CatchDiscards[count2])
    #FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
-   print("len(FilteredFrame) ",FilteredFrame)
+   print("len(FilteredFrame) ",len(FilteredFrame))
    #print(FilteredFrame.iloc[CatchDiscards[count2]])
    FilteredFrame.drop([CatchDiscards[count2]])
-   print("len(FilteredFrame) ",FilteredFrame)
+   print("len(FilteredFrame) ",len(FilteredFrame))
    count2+=1;   
  print("from Filter") 
  #print(len(CatchDiscards))
