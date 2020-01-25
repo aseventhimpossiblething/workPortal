@@ -146,6 +146,7 @@ def filterNonParticipators(FrameToBeFiltered):
   while count2<len(CatchDiscards):
    print("CatchDiscard  ",CatchDiscards[count2])
    FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
+   print(len(FilteredFrame['Brand Name']))
    count2+=1; 
   print("Length of Frame After ",len(FilteredFrame))   
  print("End Filter") 
