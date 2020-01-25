@@ -80,7 +80,7 @@ def filterNonParticipators(FrameToBeFiltered):
  CommunityMarketsArray=[]
  
  Scount=5
- while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
+ while Scount < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   CommunityMarket=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[Scount]]).replace("']","")).\
   replace("['","")+"-"+str(str(numpy.array(FrameToBeFiltered['Market Name'])[[Scount]]).replace("']",""))
   CommunityMarketsArray.append(CommunityMarket)
