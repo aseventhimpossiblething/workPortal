@@ -88,7 +88,7 @@ def filterNonParticipators(FrameToBeFiltered):
   if FilterString.find(BrandFilter)!=-1:
    CatchDiscards.append(count)
    if BrandFilter !="Clayton Homes" or BrandFilter !="Craftmark Homes" or BrandFilter !="Luv Homes" :
-   print(BrandFilter)
+    print(BrandFilter)
    #print("Brand ",BrandFilter," found at row ",count," position ",FilterString.find(BrandFilter)," is being Dropped")
   if FilterString.find(CommIDFilter)!=-1:
    CatchDiscards.append(count)
