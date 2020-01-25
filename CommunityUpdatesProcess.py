@@ -87,7 +87,7 @@ def filterNonParticipators(FrameToBeFiltered):
   #print("Brand ",BrandFilter)
   if FilterString.find(BrandFilter)>=-1:
    CatchDiscards.append(count)
-   print(Brand," is being Dropped")
+   print(BrandFilter," is being Dropped")
   if FilterString.find(CommIDFilter)>=-1:
    CatchDiscards.append(count)
    print(CommIDFilter," is being Dropped")
