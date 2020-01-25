@@ -87,8 +87,14 @@ def filterNonParticipators(FrameToBeFiltered):
   #print("Brand ",BrandFilter)
   if FilterString.find(BrandFilter)!=-1:
    CatchDiscards.append(count)
-   if (BrandFilter!="Clayton Homes") or (BrandFilter!="Luv Homes") or (BrandFilter!="Freedom Homes"):
-    print("Not Luv Homes ",BrandFilter)
+   if BrandFilter!="Clayton Homes":# or (BrandFilter!="Luv Homes") or (BrandFilter!="Freedom Homes"):
+    #print("Not Clayton Homes ",BrandFilter)
+    if BrandFilter!="Luv Homes":
+     #print("Not Luv Homes ",Luv Homes)
+     if BrandFilter!="Freedom Homes": 
+      print("Not Luv Homes ",Luv Homes)
+    
+    
   
    #print("Brand ",BrandFilter," found at row ",count," position ",FilterString.find(BrandFilter)," is being Dropped")
   if FilterString.find(CommIDFilter)!=-1:
