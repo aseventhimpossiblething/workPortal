@@ -86,7 +86,7 @@ def filterNonParticipators(FrameToBeFiltered):
   replace("['","")
   MarketW=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[Scount]]).replace("']","")).\
   replace("['","")
-  CommunityMarketsArray="None"
+  CommunityMarketArray="None"
   #CommunityMarket=CommunityMarket
   #Community=Community+" "+CommunityW
   #Market=Market+" "+MarketW
@@ -116,9 +116,9 @@ def filterNonParticipators(FrameToBeFiltered):
   if FilterString.find(BuilderNameFilter)!=-1:
    CatchDiscards.append(count)
    
-  if CommunityMarketsArray.find(CommunityMarket2)>1:
+  if CommunityMarketArray.find(CommunityMarket2)>1:
    CatchDiscards.append(count)
-   print("occurs ",CommunityMarketsArray.count(CommunityMarket2[count])," TImes : ",BuilderNameFilter," ",CommunityMarket2[count])
+   print("occurs ",CommunityMarketArray.count(CommunityMarket2[count])," TImes : ",BuilderNameFilter," ",CommunityMarket2[count])
   
   count+=1;
  CatchDiscards=list(dict.fromkeys(CatchDiscards))
