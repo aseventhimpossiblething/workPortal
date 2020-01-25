@@ -82,18 +82,19 @@ def filterNonParticipators(FrameToBeFiltered):
  count=5;
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))>-1:
-   #print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
    CatchDiscards.append(count)
+   print("Caught ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
   if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("']","")).replace("['",""))>-1:
-   #print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
    CatchDiscards.append(count)
+   print("Caught ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
   if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['",""))>-1:
-   #print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
    CatchDiscards.append(count)
+   print("Caught ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
+   """ 
   if str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","").find("Clayton")>-1:
    print(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")," Found at row ",count)
    print(FilterString.find(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")))
-   
+   """
   count+=1; 
  if len(CatchDiscards)!=0:
   count2=0;
