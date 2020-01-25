@@ -43,7 +43,6 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkwor
                                                                    'Community Id','Community Name','City','State','Zip',\
                                                                    'Market ID','Market Name'])
    
-  #print("communities basic import done")
   return WorkingCommunities
  else:
   print("Load Communities cannot run...............",IsCommValid)
@@ -58,7 +57,6 @@ def WorkingGoogle():
   return IsGoogleValid
  else:
   WorkingGoogle=pandas.DataFrame(WorkingGoogle,columns=['Campaign','Ad Group', 'Final URL'])
-  print("Google basic import done")
   return  WorkingGoogle
   
 def WorkingBing():
@@ -120,7 +118,7 @@ def filterNonParticipators(FrameToBeFiltered):
    #print(FilteredFrame[CatchDiscards[count2]])
    print("type(CatchDiscards[count2]) ",type(CatchDiscards[count2]))
    print("type(count2) ",type(count2))
-   FilteredFrame=FilteredFrame.drop([count2])
+   FilteredFrame=FilteredFrame.drop([count2+5])
    #FilteredFrame=FilteredFrame.drop([CatchDiscards[count2]])
    count2+=1; 
   print("Length After ",len(FilteredFrame))   
