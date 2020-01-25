@@ -74,26 +74,27 @@ def filterNonParticipators(FrameToBeFiltered):
  print("Start Filter ",FrameToBeFiltered['Builder Name'].count()," rows")
  FilteredFrame=FrameToBeFiltered
  CatchDiscards=[];
- FilterString='(communityname=,Q5),(Clayton Homes,B5),(Clayton Homes,A5),\
+ FilterString='(communityname=,Q5),(Clayton Homes,B5),(Clayton Homes (Corporation),A5),\
  (Oakwoord Homes,A5),(Oakwoord Homes,B5),(G & I Homes ,A5),(G & I Homes ,B5),\
  (Craftmark Homes,A5),(Craftmark Homes,B5),(Freedom Homes,A5),(Freedom Homes,B5),\
  (Crossland Homes,A5),(Crossland Homes,B5),(Luv Homes,A5),(Luv Homes,B5)(G & ),( G & I ),\
  (International Homes,A5),(International Homes,B5),(Clayton,A5);'
  communs=0
+ CommunityMarketsArray=[]
  count=5;
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   BrandFilter=str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")
   CommIDFilter=str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("']","")).replace("['","")
   BuilderNameFilter=str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['","")
+  CommunityMarket=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[count]]).replace("']","")).replace("['","")+"-"+str(str(numpy.array(FrameToBeFiltered['Market Name'])[[count]]).replace("']",""))
+  CommunityMarketsArray.append(CommunityMarket)
+  print(CommunityMarketsArray)
   #print("Brand ",BrandFilter)
   if FilterString.find(BrandFilter)!=-1:
    CatchDiscards.append(count)
    #print("Brand ",BrandFilter," found at row ",count," position ",FilterString.find(BrandFilter)," is being Dropped")
   if FilterString.find(CommIDFilter)!=-1:
    CatchDiscards.append(count)
-   communs+=1;
-   
-   print("Community num on list-",communs,"CommunityID ",CommIDFilter," found at row ",count," position ",FilterString.find(CommIDFilter)," is being Dropped")
   if FilterString.find(BuilderNameFilter)!=-1:
    CatchDiscards.append(count)
    #print("Builder ",BuilderNameFilter," found at row ",count," position ",FilterString.find(BuilderNameFilter)," is being Dropped")
