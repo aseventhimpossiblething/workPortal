@@ -108,18 +108,20 @@ def filterNonParticipators(FrameToBeFiltered):
    CatchDiscards.append(count)
    #print("Caught ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
   """
-  if BrandFilter.find("G & I")>-1:
-   print("Found G & I? -> :",BrandFilter)
+  #if BrandFilter.find("G & I")>-1:
+   #print("Found G & I? -> :",BrandFilter)
    #print(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")," Found at row ",count)
    #print(FilterString.find(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")))
   count+=1;
  #print(len(CatchDiscards)) 
  #print(CatchDiscards)
  if len(CatchDiscards)!=0:
+ print("Length Before ",len(FilteredFrame)) 
   count2=0;
   while count2<len(CatchDiscards):
    FilteredFrame=FilteredFrame.drop([CatchDiscards[count2]])
-   count2+=1;   
+   count2+=1; 
+ print("Length After ",len(FilteredFrame))   
  print("End Filter") 
  return FilteredFrame 
  
