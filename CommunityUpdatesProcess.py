@@ -120,7 +120,7 @@ def filterNonParticipators(FrameToBeFiltered):
    #print(FilteredFrame[CatchDiscards[count2]])
    print("type(CatchDiscards[count2]) ",type(CatchDiscards[count2]))
    print("type(count2) ",type(count2))
-   FilteredFrame=FilteredFrame.drop([count])
+   FilteredFrame=FilteredFrame.drop([count2])
    #FilteredFrame=FilteredFrame.drop([CatchDiscards[count2]])
    count2+=1; 
   print("Length After ",len(FilteredFrame))   
