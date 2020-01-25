@@ -84,7 +84,7 @@ def filterNonParticipators(FrameToBeFiltered):
  while Scount < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   CommunityW=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[Scount]]).replace("']","")).\
   replace("['","").replace('"]','').replace('["','')
-  MarketW=str(FrameToBeFiltered['Market ID'])
+  MarketW=str(FrameToBeFiltered['Market ID'][Scount])
   """ 
   MarketW=str(str(numpy.array(FrameToBeFiltered['Market ID'])[[Scount]]).replace("']","")).\
   .replace("['","").replace('"]','').replace('["','')
@@ -111,7 +111,7 @@ def filterNonParticipators(FrameToBeFiltered):
   BuilderNameFilter=str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['","")
   Community2=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[count]]).replace("']","")).\
   replace("['","")
-  Market2=str(FrameToBeFiltered['Market ID'])
+  Market2=str(FrameToBeFiltered['Market ID'][count])
   """
   Market2=str(str(numpy.array(FrameToBeFiltered['Market ID'])[[count]]).replace("']","")).\
   replace("['","")
