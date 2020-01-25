@@ -92,6 +92,8 @@ def filterNonParticipators(FrameToBeFiltered):
    CatchDiscards.append(count)
   if str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","").find("Clayton")>-1:
    print(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")," Found at row ",count)
+   print(FilterString.find(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")))
+   
   count+=1; 
  if len(CatchDiscards)!=0:
   count2=0;
