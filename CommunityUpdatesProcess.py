@@ -135,7 +135,7 @@ def filterNonParticipators(FrameToBeFiltered):
   if CommunityMarketArray.find(CommunityMarket2)>1:
    CatchDiscards.append(count)
    print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter," ",CommunityMarket2)
-  print("CommunityMarket2 ",CommunityMarket2)
+  #print("CommunityMarket2 ",CommunityMarket2)
   count+=1;
  CatchDiscards=list(dict.fromkeys(CatchDiscards))
  print(len(CatchDiscards)) 
