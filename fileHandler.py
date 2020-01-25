@@ -136,27 +136,24 @@ def CommListFileHandler():
     print("os.listdir() ",os.listdir()) 
     print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
     #print("os.getcwd() ",os.getcwd())
+    
     """
+    """    
     os.chdir('/app/Sheets/') 
-    """
-    storeRequest=open('RequestsVsResponses.txt','w')
-    storeRequest.write(" ")
-    storeRequest.close()
-    """
     storeRequest=open('RequestsVsResponses.txt','w')    
     storeRequest.write("Request, ")
     storeRequest.close()
-    storeRequest=open('RequestsVsResponses.txt','r+')
-    print("storeRequest.read() ",storeRequest.read())
-    storeRequest.close()    
-     
-
-    
-    def async_fileloader():       
+    """
+       
+    def async_fileloader():
+     os.chdir('/app/Sheets/') 
+     storeRequest=open('RequestsVsResponses.txt','w')    
+     storeRequest.write("Request, ")
+     storeRequest.close()           
      CommunityUpdatesProcess.initialCommUpdatProcess()
     LoadAllCommunityFiles=threading.Thread(target=async_fileloader)
     LoadAllCommunityFiles.start()    
-    
+    print("Should respond now! ")
     
     #print(" end of filehandler CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
         
