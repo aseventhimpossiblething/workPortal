@@ -87,13 +87,13 @@ def filterNonParticipators(FrameToBeFiltered):
   #print("Brand ",BrandFilter)
   if FilterString.find(BrandFilter)!=-1:
    CatchDiscards.append(count)
-   print("Brand ",BrandFilter," found at row ",count," position ",FilterString.find(BrandFilter)," is being Dropped")
+   #print("Brand ",BrandFilter," found at row ",count," position ",FilterString.find(BrandFilter)," is being Dropped")
   if FilterString.find(CommIDFilter)!=-1:
    CatchDiscards.append(count)
-   print("Community Id",CommIDFilter," found at row ",count," position ",FilterString.find(CommIDFilter)," is being Dropped")
+   #print("Community Id",CommIDFilter," found at row ",count," position ",FilterString.find(CommIDFilter)," is being Dropped")
   if FilterString.find(BuilderNameFilter)!=-1:
    CatchDiscards.append(count)
-   print("Builder ",BuilderNameFilter," found at row ",count," position ",FilterString.find(BuilderNameFilter)," is being Dropped")
+   #print("Builder ",BuilderNameFilter," found at row ",count," position ",FilterString.find(BuilderNameFilter)," is being Dropped")
    
    
   """
@@ -108,12 +108,12 @@ def filterNonParticipators(FrameToBeFiltered):
    CatchDiscards.append(count)
    #print("Caught ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
   """
-  #if BrandFilter.find("G & I")>-1:
-   #print("Found G & I? -> :",BrandFilter)
+  if BrandFilter.find("G & I")!=-1:
+   print("Found G & I? -> :",BrandFilter)
    #print(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")," Found at row ",count)
    #print(FilterString.find(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")))
   count+=1;
- #print(len(CatchDiscards)) 
+ print(len(CatchDiscards)) 
  #print(CatchDiscards)
  if len(CatchDiscards)!=0:
  print("Length Before ",len(FilteredFrame)) 
