@@ -125,9 +125,10 @@ def filterNonParticipators(FrameToBeFiltered):
    #print("Entered the second while loop count2 in Filter= ",count2)
    #print(CatchDiscards[count2])
    #FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
-   print(FilteredFrame.iloc[CatchDiscards[count2]])
+   print("len(FilteredFrame) ",FilteredFrame)
+   #print(FilteredFrame.iloc[CatchDiscards[count2]])
    FilteredFrame.drop([CatchDiscards[count2]])
-   
+   print("len(FilteredFrame) ",FilteredFrame)
    count2+=1;   
  print("from Filter") 
  #print(len(CatchDiscards))
@@ -180,9 +181,9 @@ def communityCheck(checkby,checkin,Name):
   count+=1;
  checkby=checkby.reset_index()
  print("End Community Check for ",Name)
- print("DropRows")
- print(len(DropRows))
- print("DropRows")
+ #print("DropRows")
+ #print(len(DropRows))
+ #print("DropRows")
  return checkby
  
  
