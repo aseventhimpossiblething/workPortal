@@ -108,7 +108,7 @@ def filterNonParticipators(FrameToBeFiltered):
   BuilderNameFilter=str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['","")
   Community2=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[count]]).replace("']","")).\
   replace("['","")
-  Market2=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[Scount]]).replace("']","")).\
+  Market2=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[count]]).replace("']","")).\
   replace("['","")
   CommunityMarket2=Community2+"-"+Market2 
   if FilterString.find(BrandFilter)!=-1:
