@@ -81,6 +81,21 @@ def filterNonParticipators(FrameToBeFiltered):
  (International Homes,A5),(International Homes,B5),(Clayton,A5);'
  count=5;
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
+  BrandFilter=str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")
+  CommIDFilter=str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("']","")).replace("['","")
+  BuilderNameFilter=str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['","")
+  #print("Brand ",BrandFilter)
+  if FilterString.find(BrandFilter)
+   CatchDiscards.append(count)
+   print(Brand," is being Dropped")
+  if FilterString.find(CommIDFilter)
+   CatchDiscards.append(count)
+   print(CommIDFilter," is being Dropped")
+  if FilterString.find(BuilderNameFilter)
+   CatchDiscards.append(count)
+   print(BuilderNameFilter," is being Dropped")
+   
+  """
   if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))>-1:
    CatchDiscards.append(count)
    if str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","").find("Clayton")=-1:
@@ -91,10 +106,11 @@ def filterNonParticipators(FrameToBeFiltered):
   if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['",""))>-1:
    CatchDiscards.append(count)
    #print("Caught ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
-  
-  if str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","").find("G & I")>-1:
-   print(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")," Found at row ",count)
-   print(FilterString.find(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")))
+  """
+  if BrandFilter.find("G & I")>-1:
+   print("Found G & I? -> :",BrandFilter)
+   #print(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")," Found at row ",count)
+   #print(FilterString.find(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")))
   count+=1;
  print(len(CatchDiscards))  
  if len(CatchDiscards)!=0:
