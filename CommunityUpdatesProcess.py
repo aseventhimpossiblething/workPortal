@@ -85,13 +85,13 @@ def filterNonParticipators(FrameToBeFiltered):
   CommIDFilter=str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("']","")).replace("['","")
   BuilderNameFilter=str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['","")
   #print("Brand ",BrandFilter)
-  if FilterString.find(BrandFilter)=>-1:
+  if FilterString.find(BrandFilter)>=-1:
    CatchDiscards.append(count)
    print(Brand," is being Dropped")
-  if FilterString.find(CommIDFilter)=>-1:
+  if FilterString.find(CommIDFilter)>=-1:
    CatchDiscards.append(count)
    print(CommIDFilter," is being Dropped")
-  if FilterString.find(BuilderNameFilter)=>-1:
+  if FilterString.find(BuilderNameFilter)>=-1:
    CatchDiscards.append(count)
    print(BuilderNameFilter," is being Dropped")
    
