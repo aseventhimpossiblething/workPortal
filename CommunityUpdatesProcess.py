@@ -113,12 +113,14 @@ def filterNonParticipators(FrameToBeFiltered):
   print("Length Before ",len(FilteredFrame)) 
   count2=0;
   while count2<len(CatchDiscards):
-   print("CatchDiscards[count2] ",CatchDiscards[count2])
+   #print("CatchDiscards[count2] ",CatchDiscards[count2])
    #print("Current loop number ",count2)
    #print("Will drop row ",CatchDiscards[count2])
    #print("How many Rows can I see ...row ",count2," ",FilteredFrame.iloc[count2])
    #print(FilteredFrame[CatchDiscards[count2]])
-   #FilteredFrame=FilteredFrame.drop([])
+   print("type(CatchDiscards[count2]) ",type(CatchDiscards[count2]))
+   print("type(count2) ",type(count2))
+   FilteredFrame=FilteredFrame.drop([count])
    #FilteredFrame=FilteredFrame.drop([CatchDiscards[count2]])
    count2+=1; 
   print("Length After ",len(FilteredFrame))   
