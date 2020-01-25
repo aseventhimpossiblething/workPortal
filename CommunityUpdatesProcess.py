@@ -106,9 +106,10 @@ def filterNonParticipators(FrameToBeFiltered):
   #print("CommunityMarket ",CommunityMarket)
   #print("COMMUNITY MARKETS!!!  ",CommunityMarketsArray)
   Scount+=1
-  print("CommunityMarket ",CommunityMarket)
+  #print("CommunityMarket ",CommunityMarket)
  #print("COMMUNITY MARKETS!!!  ",CommunityMarketsArray)
  count=5;
+ print(CommunityMarketArray)
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   BrandFilter=str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")
   CommIDFilter=str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("']","")).replace("['","")
