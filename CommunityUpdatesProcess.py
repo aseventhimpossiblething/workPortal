@@ -86,7 +86,7 @@ def filterNonParticipators(FrameToBeFiltered):
   replace("['","")
   MarketW=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[Scount]]).replace("']","")).\
   replace("['","")
-  #CommunityMarketsArray=
+  CommunityMarketsArray="None"
   #CommunityMarket=CommunityMarket
   #Community=Community+" "+CommunityW
   #Market=Market+" "+MarketW
