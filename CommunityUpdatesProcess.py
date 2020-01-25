@@ -83,7 +83,11 @@ def filterNonParticipators(FrameToBeFiltered):
  Scount=5
  while Scount < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   CommunityW=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[Scount]]).replace("']","")).\
-  replace("['","").replace('"]','').replace('["','')
+  replace("['","").replace('"]','').replace('["','').replace("40s","").replace("40",)\
+  .replace("45","").replace("45s","").replace("50","").replace("50s","").replace("55","").replace("55s","")\
+  .replace("60","").replace("60s","").replace("65","").replace("65s","").replace("70","").replace("70s","")\
+  .replace("75","").replace("75s","").replace("80","").replace("80s","").replace("85","").replace("85s","")\
+  .replace("90","").replace("90s","").replace("100","").replace("110","")
   MarketW=str(FrameToBeFiltered['Market ID'][Scount])
   """ 
   MarketW=str(str(numpy.array(FrameToBeFiltered['Market ID'])[[Scount]]).replace("']","")).\
