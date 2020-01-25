@@ -107,7 +107,7 @@ def filterNonParticipators(FrameToBeFiltered):
   #print("COMMUNITY MARKETS!!!  ",CommunityMarketsArray)
   Scount+=1
   
- print("COMMUNITY MARKETS!!!  ",CommunityMarketsArray)
+ #print("COMMUNITY MARKETS!!!  ",CommunityMarketsArray)
  count=5;
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   BrandFilter=str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")
@@ -138,15 +138,16 @@ def filterNonParticipators(FrameToBeFiltered):
   #print("CommunityMarket2 ",CommunityMarket2)
   count+=1;
  CatchDiscards=list(dict.fromkeys(CatchDiscards))
- print(len(CatchDiscards)) 
+ print("size of CatchDiscard Array ",len(CatchDiscards)) 
  if len(CatchDiscards)!=0:
-  print("Length Before ",len(FilteredFrame)) 
+  print("Length of Frame Before ",len(FilteredFrame)) 
   count2=0;
   #print(CatchDiscards)
   while count2<len(CatchDiscards):
+   print("CatchDiscard  ",CatchDiscards[count2])
    FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
    count2+=1; 
-  print("Length After ",len(FilteredFrame))   
+  print("Length of Frame After ",len(FilteredFrame))   
  print("End Filter") 
  return FilteredFrame 
  
