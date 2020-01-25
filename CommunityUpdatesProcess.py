@@ -77,7 +77,8 @@ def filterNonParticipators(FrameToBeFiltered):
  (Craftmark Homes,A5),(Craftmark Homes,B5),(Freedom Homes,A5),(Freedom Homes,B5),\
  (Crossland Homes,A5),(Crossland Homes,B5),(Luv Homes,A5),(Luv Homes,B5)(G & ),( G & I ),\
  (International Homes,A5),(International Homes,B5),(Clayton,A5);'
- CommunityMarketsArray=[]
+ CommunityMarketsArray=""
+ CommunityMarket=""
  
  Scount=5
  while Scount < len(numpy.array(FrameToBeFiltered['Brand Name'])):
@@ -85,11 +86,11 @@ def filterNonParticipators(FrameToBeFiltered):
   replace("['","")
   MarketW=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[Scount]]).replace("']","")).\
   replace("['","")
-  #CommunityMarketsArray.append(CommunityMarket)
-  CommunityMarket=CommunityMarket
-  Community=Community+" "+CommunityW
-  Market=Market+" "+MarketW
-  CommunityMarket=CommunityMarket
+  #CommunityMarketsArray=
+  #CommunityMarket=CommunityMarket
+  #Community=Community+" "+CommunityW
+  #Market=Market+" "+MarketW
+  CommunityMarket=CommunityW+"-"+MarketW
   CommunityMarketArray=CommunityMarketArray+" "+"CommunityMarket"+" "
   #print("Community ",CommunityW)
   #print("Market ",MarketW)
