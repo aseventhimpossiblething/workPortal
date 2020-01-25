@@ -90,7 +90,7 @@ def filterNonParticipators(FrameToBeFiltered):
   if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['",""))>-1:
    #print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
    CatchDiscards.append(count)
-  if str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","").find("Clayton")<-1:
+  if str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","").find("Clayton")>-1:
    print(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")," Found at row ",count)
   count+=1; 
  if len(CatchDiscards)!=0:
@@ -116,13 +116,6 @@ def MergeURLs(chan,chan2):
    print(chan2," _ ",count)
    #print("Low count setting in MergeURLS nonfunctional")
   count+=1
- """ 
- print("end MergeURLs() for ",chan2)
- print(URLS)
- print("end MergeURLs() for ",chan2)
- print("end MergeURLs() for ",chan2)
- print("end MergeURLs() for ",chan2)
- """
  return URLS
  
 def communityCheck(checkby,checkin,Name):
