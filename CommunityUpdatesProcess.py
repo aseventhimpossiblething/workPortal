@@ -84,19 +84,22 @@ def filterNonParticipators(FrameToBeFiltered):
  while Scount < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   CommunityW=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[Scount]]).replace("']","")).\
   replace("['","").replace('"]','').replace('["','')
-  MarketW=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[Scount]]).replace("']","")).\
-  replace("['","").replace('"]','').replace('["','')
+  MarketW=str(FrameToBeFiltered['Market ID'])
+  """ 
+  MarketW=str(str(numpy.array(FrameToBeFiltered['Market ID'])[[Scount]]).replace("']","")).\
+  .replace("['","").replace('"]','').replace('["','')
+  """
   CommunityMarketArray="None"
   #CommunityMarket=CommunityMarket
   #Community=Community+" "+CommunityW
   #Market=Market+" "+MarketW
   CommunityMarket=CommunityW+"-"+MarketW
   CommunityMarketArray=CommunityMarketArray+" "+"CommunityMarket"+" "
-  print("CommunityW ",CommunityW)
-  print("MarketW ",MarketW)
+  #print("CommunityW ",CommunityW)
+  #print("MarketW ",MarketW)
   #print("Community ",CommunityW)
   #print("Market ",MarketW)
-  #print("CommunityMarket ",CommunityMarket)
+  print("CommunityMarket ",CommunityMarket)
   #print("COMMUNITY MARKETS!!!  ",CommunityMarketsArray)
   Scount+=1
   
@@ -108,8 +111,11 @@ def filterNonParticipators(FrameToBeFiltered):
   BuilderNameFilter=str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['","")
   Community2=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[count]]).replace("']","")).\
   replace("['","")
-  Market2=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[count]]).replace("']","")).\
+  Market2=str(FrameToBeFiltered['Market ID'])
+  """
+  Market2=str(str(numpy.array(FrameToBeFiltered['Market ID'])[[count]]).replace("']","")).\
   replace("['","")
+  """
   CommunityMarket2=Community2+"-"+Market2 
   if FilterString.find(BrandFilter)!=-1:
    CatchDiscards.append(count)
@@ -120,7 +126,7 @@ def filterNonParticipators(FrameToBeFiltered):
    
   if CommunityMarketArray.find(CommunityMarket2)>1:
    CatchDiscards.append(count)
-   print("occurs ",CommunityMarketArray.count(CommunityMarket2[count])," TImes : ",BuilderNameFilter," ",CommunityMarket2[count])
+   print("occurs ",CommunityMarketArray.count(CommunityMarket2[count])," Times : ",BuilderNameFilter," ",CommunityMarket2[count])
   
   count+=1;
  CatchDiscards=list(dict.fromkeys(CatchDiscards))
