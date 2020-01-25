@@ -83,7 +83,7 @@ def filterNonParticipators(FrameToBeFiltered):
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))>-1:
    CatchDiscards.append(count)
-   print("Caught ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
+   #print("Caught ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
   if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("']","")).replace("['",""))>-1:
    CatchDiscards.append(count)
    print("Caught ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
