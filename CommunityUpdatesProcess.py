@@ -92,7 +92,7 @@ def filterNonParticipators(FrameToBeFiltered):
     if BrandFilter!="Luv Homes":
      #print("Not Luv Homes ",Luv Homes)
      if BrandFilter!="Freedom Homes": 
-      print("Not Luv Homes ",Luv Homes)
+      print("Not Luv Homes ",BrandFilter)
     
     
   
