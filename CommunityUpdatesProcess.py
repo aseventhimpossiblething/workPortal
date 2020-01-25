@@ -79,46 +79,33 @@ def filterNonParticipators(FrameToBeFiltered):
  (Craftmark Homes,A5),(Craftmark Homes,B5),(Freedom Homes,A5),(Freedom Homes,B5),\
  (Crossland Homes,A5),(Crossland Homes,B5),(Luv Homes,A5),(Luv Homes,B5)(G & ),( G & I ),\
  (International Homes,A5),(International Homes,B5),(Clayton,A5);'
- communs=0
  CommunityMarketsArray=[]
+ Scount=5
+ while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
+  CommunityMarket=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[Scount]]).replace("']","")).\
+  replace("['","")+"-"+str(str(numpy.array(FrameToBeFiltered['Market Name'])[[Scount]]).replace("']",""))
+  CommunityMarketsArray.append(CommunityMarket)
+  print(CommunityMarketsArray)
+  Scount+=1
  count=5;
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   BrandFilter=str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")
   CommIDFilter=str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("']","")).replace("['","")
   BuilderNameFilter=str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['","")
-  CommunityMarket=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[count]]).replace("']","")).replace("['","")+"-"+str(str(numpy.array(FrameToBeFiltered['Market Name'])[[count]]).replace("']",""))
-  CommunityMarketsArray.append(CommunityMarket)
-  print(CommunityMarketsArray)
-  #print("Brand ",BrandFilter)
+  CommunityMarket2=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[count]]).replace("']","")).\
+  replace("['","")+"-"+str(str(numpy.array(FrameToBeFiltered['Market Name'])[[count]]).replace("']",""))
   if FilterString.find(BrandFilter)!=-1:
    CatchDiscards.append(count)
-   #print("Brand ",BrandFilter," found at row ",count," position ",FilterString.find(BrandFilter)," is being Dropped")
   if FilterString.find(CommIDFilter)!=-1:
    CatchDiscards.append(count)
   if FilterString.find(BuilderNameFilter)!=-1:
    CatchDiscards.append(count)
-   #print("Builder ",BuilderNameFilter," found at row ",count," position ",FilterString.find(BuilderNameFilter)," is being Dropped")
+  if CommunityMarketsArray.count(CommunityMarket2[count])
+   CatchDiscards.append(count)
+   print(BuilderNameFilter," ",CommunityMarket2[count])
    
-   
-  """
-  if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))>-1:
-   CatchDiscards.append(count)
-   if str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","").find("Clayton")=-1:
-    print("Caught ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
-  if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("']","")).replace("['",""))>-1:
-   CatchDiscards.append(count)
-   #print("Caught ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
-  if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['",""))>-1:
-   CatchDiscards.append(count)
-   #print("Caught ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
-  """
-  #if BrandFilter.find("G & I")!=-1:
-   #print("Found G & I? -> :",BrandFilter)
-   #print(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")," Found at row ",count)
-   #print(FilterString.find(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")))
   count+=1;
  print(len(CatchDiscards)) 
- #print(CatchDiscards)
  if len(CatchDiscards)!=0:
   print("Length Before ",len(FilteredFrame)) 
   count2=0;
