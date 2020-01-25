@@ -122,7 +122,7 @@ def filterNonParticipators(FrameToBeFiltered):
    #print(FilteredFrame)
    #FilteredFrame=FilteredFrame.drop([6])
    #FilteredFrame=FilteredFrame.drop([96])
-   FilteredFrame.drop([count2])
+   FilteredFrame.drop([CatchDiscards[count2]])
    count2+=1; 
   print("Length After ",len(FilteredFrame))   
  print("End Filter") 
