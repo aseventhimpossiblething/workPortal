@@ -81,9 +81,14 @@ def filterNonParticipators(FrameToBeFiltered):
  
  Scount=5
  while Scount < len(numpy.array(FrameToBeFiltered['Brand Name'])):
-  CommunityMarket=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[Scount]]).replace("']","")).\
-  replace("['","")+"-"+str(str(numpy.array(FrameToBeFiltered['Market Name'])[[Scount]]).replace("']",""))
+  Community=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[Scount]]).replace("']","")).\
+  replace("['","")
+  Market=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[Scount]]).replace("']",""))
   #CommunityMarketsArray.append(CommunityMarket)
+  CommunityMarket="Nothing"
+  
+  print("Community ",Community)
+  print("Market ",Market)
   print("CommunityMarket ",CommunityMarket)
   #print("COMMUNITY MARKETS!!!  ",CommunityMarketsArray)
   Scount+=1
@@ -128,7 +133,7 @@ def filterNonParticipators(FrameToBeFiltered):
    #print(FilteredFrame)
    #FilteredFrame=FilteredFrame.drop([6])
    #FilteredFrame=FilteredFrame.drop([96])
-   FilteredFrame=FilteredFrame.drop(CatchDiscards[count2+1])
+   FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
    count2+=1; 
   print("Length After ",len(FilteredFrame))   
  print("End Filter") 
