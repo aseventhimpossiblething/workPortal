@@ -101,7 +101,7 @@ def BidOpFileHandler():
 
 def CommListFileHandler():
     
-      
+     print(Starting to HAndle Files) 
         
     reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']   
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
@@ -111,13 +111,16 @@ def CommListFileHandler():
         return "Google slot is empty"
     if emptyObj==str(request.files['Communities']):
         return "Active Community slot is empty"
+    
+    print("Check That FIles Slots are FIlled")    
 
     if request.files['Communities'].filename.find("xlsx")<1:
                 return "The Community Sheet is not XLSX file type";
     if request.files['currentGoogle'].filename.find("xlsx")<1:
                 return "The Google Sheet is not XLSX file type";
     if request.files['currentBing'].filename.find("xlsx")<1:
-                return "The Bing Sheet is not XLSX file type";       
+                return "The Bing Sheet is not XLSX file type";  
+    print("Checked that FIlles are XlSX")    
    
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')          
     request.files['Communities'].save('WorkingCommunities')
@@ -127,10 +130,12 @@ def CommListFileHandler():
     
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     request.files['currentBing'].save('WorkingBing')
+     
+    print("saved FIles") 
   
     
    
-    print('WRITE REQUEST SEQUENCE!')
+    #print('WRITE REQUEST SEQUENCE!')
     """
     print("os.getcwd() ",os.getcwd())
     print("os.listdir() ",os.listdir()) 
@@ -153,7 +158,7 @@ def CommListFileHandler():
      CommunityUpdatesProcess.initialCommUpdatProcess()
     LoadAllCommunityFiles=threading.Thread(target=async_fileloader)
     LoadAllCommunityFiles.start()    
-    print("Should respond now! ")
+    print("Should respond now!!! ")
     
     #print(" end of filehandler CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
         
