@@ -98,7 +98,7 @@ def filterNonParticipators(FrameToBeFiltered):
   #Community=Community+" "+CommunityW
   #Market=Market+" "+MarketW
   CommunityMarket=CommunityW+"-"+MarketW
-  CommunityMarketArray=CommunityMarketArray+" "+" CommunityMarket "+" "
+  CommunityMarketArray=CommunityMarketArray+" "+CommunityMarket+" "
   #print("CommunityW ",CommunityW)
   #print("MarketW ",MarketW)
   #print("Community ",CommunityW)
