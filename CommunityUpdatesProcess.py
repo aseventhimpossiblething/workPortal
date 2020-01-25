@@ -90,52 +90,14 @@ def filterNonParticipators(FrameToBeFiltered):
   if FilterString.find(str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['",""))>-1:
    #print(count," from filter ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['",""))
    CatchDiscards.append(count)
-  #if numpy.array(FrameToBeFiltered['Brand Name'])[[count]]=="Clayton Homes":
-   #print("___________________________________________")
-   #print(count," Clayton Homes?-> ",numpy.array(FrameToBeFiltered['Brand Name'])[[count]])
-   #print("FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]])) : Clayton homes Location ", FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]])))
-   #print(" Strip [ ] ",(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("]",""))
-   #print((str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("[","")))
-   #print("___________________________________________")
-   
-  #else:
-   #print("else ",str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("]","")).replace("[",""))
-   """
-   print("Passed Filter Brand Name : ",numpy.array(FrameToBeFiltered['Brand Name'])[[count]]," : End Brand Name")
-   #print("Passed Filter Brand Name : ",FilterString.find(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]))," : End Brand Name")
-   print("Passed Filter Builder Name : ",numpy.array(FrameToBeFiltered['Builder Name'])[[count]]," : End Builder Name")
-   #print("Passed Filter Builder Name : ",FilterString.find(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]))," : End Brand Name")
-   print('count [',count,'] FilterString.find(str("Clayton Homes")) location in string ',FilterString.find(str("Clayton Homes")))
-   print('count [',count,']FilterString.find(str("Oakwoord Homes")) location in string ',FilterString.find(str("Oakwoord Homes")))
-   """
-   
+  if str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","").find("Clayton"):
+   print(str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")," Found at row ",count)
   count+=1; 
  if len(CatchDiscards)!=0:
   count2=0;
   while count2<len(CatchDiscards):
-   #print("count2 ",count2)
-   #print("CatchDiscards count2 ",count2)
-   #print("CatchDiscards[count2] ",count2-1," :",CatchDiscards[count2-1])
-   #print("CatchDiscards[count2] ",count2," :",CatchDiscards[count2])
-   #print(count2+5)
-   #print("FilteredFrame.iloc[count2+5] ",FilteredFrame.iloc[count2+5])
-   #print("FilteredFrame[count2]")
-   #print(FilteredFrame[count2])
-   #print(FilteredFrame[count2])
-   #print("Entered the second while loop count2 in Filter= ",count2)
-   #print(CatchDiscards[count2])
-   #FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
-   print("len(FilteredFrame) ",len(FilteredFrame))
-   #print(FilteredFrame.iloc[CatchDiscards[count2]])
    FilteredFrame=FilteredFrame.drop([CatchDiscards[count2]])
-   print("len(FilteredFrame) ",len(FilteredFrame))
    count2+=1;   
- print("from Filter") 
- #print(len(CatchDiscards))
- #print(FilteredFrame)
- #FilteredFrame
- 
- #print(FilteredFrame)
  print("End Filter") 
  return FilteredFrame 
  
