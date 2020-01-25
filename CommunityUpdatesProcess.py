@@ -114,7 +114,7 @@ def filterNonParticipators(FrameToBeFiltered):
   CommIDFilter=str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("']","")).replace("['","")
   BuilderNameFilter=str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['","")
   Community2=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[count]]).replace("']","")).\
-  replace("['","").replace('"]','').replace('["','').replace("40s","").replace("40",)\
+  replace("['","").replace('"]','').replace('["','').replace("40s","").replace("40","")\
   .replace("45","").replace("45s","").replace("50","").replace("50s","").replace("55","").replace("55s","")\
   .replace("60","").replace("60s","").replace("65","").replace("65s","").replace("70","").replace("70s","")\
   .replace("75","").replace("75s","").replace("80","").replace("80s","").replace("85","").replace("85s","")\
