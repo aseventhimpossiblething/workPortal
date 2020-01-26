@@ -155,7 +155,7 @@ def filterNonParticipators(FrameToBeFiltered):
    #if CommunityMarketADF.count(CommunityMarket2) > CommunityMarketArray.count(CommunityMarket2):
    #print(CommunityMarket2," Alerts more for CommunityMarketADF total=",CommunityMarketADF.count(CommunityMarket2)," vs CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
    if CommunityMarketArray.count(CommunityMarket2)!=-1:
-     print("remove ",CommunityMarket2)
+    print("remove ",CommunityMarket2)
     CatchDiscards.append(count)
     #print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter,"> ",CommunityMarket2)
    #print("CommunityMarket2 ",CommunityMarket2)
