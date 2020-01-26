@@ -100,7 +100,7 @@ def filterNonParticipators(FrameToBeFiltered):
   #Market=Market+" "+MarketW
   CommunityMarket=CommunityW.replace(" ","")+"-"+MarketW
   CommunityMarketArray=CommunityMarketArray+" "+CommunityMarket+" "
-  CommunityMarketADF.append(CommunityW.replace(" ","")+MarketW)
+  CommunityMarketADF.append(CommunityW.replace(" ","")+"-"+MarketW)
   #print("CommunityW ",CommunityW)
   #print("MarketW ",MarketW)
   #print("Community ",CommunityW)
