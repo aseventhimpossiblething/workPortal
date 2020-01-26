@@ -138,8 +138,8 @@ def filterNonParticipators(FrameToBeFiltered):
    CatchDiscards.append(count)
   #print("CommunityMarketADF.count(CommunityMarket2) ",CommunityMarketADF.count(CommunityMarket2))
   #print("CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
-  if CommunityMarketADF.count(CommunityMarket2)!=CommunityMarketArray.count(CommunityMarket2):
-   print(CommunityMarket2, " Mismatch ","CommunityMarketADF.count(CommunityMarket2)=",CommunityMarketADF.count(CommunityMarket2)," CommunityMarketArray.count(CommunityMarket2)=",CommunityMarketArray.count(CommunityMarket2))
+  #if CommunityMarketADF.count(CommunityMarket2)!=CommunityMarketArray.count(CommunityMarket2):
+   #print(CommunityMarket2, " Mismatch ","CommunityMarketADF.count(CommunityMarket2)=",CommunityMarketADF.count(CommunityMarket2)," CommunityMarketArray.count(CommunityMarket2)=",CommunityMarketArray.count(CommunityMarket2))
   if CommunityMarketADF.count(CommunityMarket2) > CommunityMarketArray.count(CommunityMarket2):
    print(CommunityMarket2," Alerts more for CommunityMarketADF total=",CommunityMarketADF.count(CommunityMarket2)," vs CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
   if CommunityMarketArray.count(CommunityMarket2)>1:
