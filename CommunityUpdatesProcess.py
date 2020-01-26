@@ -530,7 +530,10 @@ def initialCommUpdatProcess():
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
- WorkingCommunities=filterNonParticipators(WorkingCommunities);
+ #WorkingCommunities=filterNonParticipators(WorkingCommunities);
+ WorkingCommunities=filterNonParticipators(filterNonParticipators(WorkingCommunities));
+ 
+ 
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
