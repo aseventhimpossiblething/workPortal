@@ -163,7 +163,7 @@ def filterNonParticipators(FrameToBeFiltered):
    count2+=1; 
   print("Length of Frame After ",len(FilteredFrame))
  #LastCount= 
- while 
+ #while 
  FilteredFrame['Community Name'] 
   
   
