@@ -80,6 +80,7 @@ def filterNonParticipators(FrameToBeFiltered):
  CommunityMarketArray=""
  CommunityMarket=""
  CommunityMarketADF=[]
+ CommunityMarketNN=""
  
  Scount=5
  while Scount < len(numpy.array(FrameToBeFiltered['Brand Name'])):
@@ -90,16 +91,17 @@ def filterNonParticipators(FrameToBeFiltered):
   .replace("75","").replace("75s","").replace("80","").replace("80s","").replace("85","").replace("85s","")\
   .replace("90","").replace("90s","").replace("100","").replace("110","")
   MarketW=str(FrameToBeFiltered['Market ID'][Scount])
-  """ 
-  MarketW=str(str(numpy.array(FrameToBeFiltered['Market ID'])[[Scount]]).replace("']","")).\
+  
+  MarketN=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[Scount]]).replace("']","")).\
   .replace("['","").replace('"]','').replace('["','')
-  """
+  
   #CommunityMarketArray="None"
   #CommunityMarket=CommunityMarket
   #Community=Community+" "+CommunityW
   #Market=Market+" "+MarketW
   CommunityMarket=CommunityW.replace(" ","")+"-"+MarketW
   CommunityMarketArray=CommunityMarketArray+" "+CommunityMarket+" "
+  CommunityMarketNN=CommunityMarketNN+" "+CommunityW+"-"+MarketN
   #CommunityMarketADF.append(CommunityW.replace(" ","")+"-"+MarketW)
   #print("CommunityW ",CommunityW)
   #print("MarketW ",MarketW)
@@ -110,6 +112,7 @@ def filterNonParticipators(FrameToBeFiltered):
   Scount+=1
  #print("CommunityMarketArray LENGTH ",len(CommunityMarket)
  #print("COMMUNITY MARKETS!!!  ",CommunityMarketArray)
+ print("CommunityMarketNN ",CommunityMarketNN)
  count=5;
  #print(CommunityMarketArray)
  #print("CommunityMarketADF ",CommunityMarketADF)
@@ -125,10 +128,9 @@ def filterNonParticipators(FrameToBeFiltered):
   .replace("75","").replace("75s","").replace("80","").replace("80s","").replace("85","").replace("85s","")\
   .replace("90","").replace("90s","").replace("100","").replace("110","")
   Market2=str(FrameToBeFiltered['Market ID'][count])
-  """
-  Market2=str(str(numpy.array(FrameToBeFiltered['Market ID'])[[count]]).replace("']","")).\
-  replace("['","")
-  """
+  Market2N=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[count]]).replace("']","")).\
+  .replace("['","").replace('"]','').replace('["','')
+  
   CommunityMarket2=Community2.replace(" ","")+"-"+Market2 
   if FilterString.find(BrandFilter)!=-1:
    CatchDiscards.append(count)
@@ -146,8 +148,15 @@ def filterNonParticipators(FrameToBeFiltered):
    CatchDiscards.append(count)
    #print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter,"> ",CommunityMarket2)
   #print("CommunityMarket2 ",CommunityMarket2)
+  if CommunityMarketNN.count()>1:
+   print("_______________________________________")
+   print("CommunityMarketNN= ",CommunityMarketNN.count(Community2"-"+Market2N)
+   CatchDiscards.append(count)
+   #print("Community2"-"+Market2N= ",Community2"-"+Market2N)
+   print("CommunityMarketArray.count(CommunityMarket2)=",CommunityMarketArray.count(CommunityMarket2))      
+   print("_______________________________________")
   count+=1;
- #CatchDiscards=list(dict.fromkeys(CatchDiscards))
+ CatchDiscards=list(dict.fromkeys(CatchDiscards))
  print("size of CatchDiscard Array ",len(CatchDiscards)) 
  if len(CatchDiscards)!=0:
   print("Length of Frame Before ",len(FilteredFrame)) 
@@ -162,9 +171,13 @@ def filterNonParticipators(FrameToBeFiltered):
    #print("Frame Length ",len(FilteredFrame['Brand Name']))
    count2+=1; 
   print("Length of Frame After ",len(FilteredFrame))
- #LastCount= 
- #while 
- FilteredFrame['Community Name'] 
+ LastFilter="" 
+ LastCount=0 
+ """
+ while LastCount<len(FilteredFrame['Community Name']):
+  ZCommunity=FilteredFrame['Community Name'] 
+  ZMarket=FilteredFrame['Market Name']
+ """ 
   
   
  print("End Filter") 
