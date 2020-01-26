@@ -150,7 +150,7 @@ def filterNonParticipators(FrameToBeFiltered):
   #print("CommunityMarket2 ",CommunityMarket2)
   if CommunityMarketNN.count()>1:
    print("_______________________________________")
-   print("CommunityMarketNN= ",CommunityMarketNN.count(Community2"-"+Market2N))
+   print("CommunityMarketNN= ",CommunityMarketNN.count(Community2+"-"+Market2N))
    CatchDiscards.append(count)
    #print("Community2"-"+Market2N= ",Community2"-"+Market2N)
    print("CommunityMarketArray.count(CommunityMarket2)=",CommunityMarketArray.count(CommunityMarket2))      
