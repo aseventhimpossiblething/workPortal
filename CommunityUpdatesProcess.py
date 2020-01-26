@@ -125,7 +125,7 @@ def filterNonParticipators(FrameToBeFiltered):
   Market2=str(str(numpy.array(FrameToBeFiltered['Market ID'])[[count]]).replace("']","")).\
   replace("['","")
   """
-  CommunityMarket2=Community2+"-"+Market2 
+  CommunityMarket2=Community2+" - "+Market2 
   if FilterString.find(BrandFilter)!=-1:
    CatchDiscards.append(count)
   if FilterString.find(CommIDFilter)!=-1:
