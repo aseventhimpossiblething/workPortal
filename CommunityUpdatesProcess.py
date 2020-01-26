@@ -133,9 +133,9 @@ def filterNonParticipators(FrameToBeFiltered):
   if FilterString.find(BuilderNameFilter)!=-1:
    CatchDiscards.append(count)
    
-  if CommunityMarketArray.find(CommunityMarket2)>1:
+  if CommunityMarketArray.find(CommunityMarket2)>=2:
    CatchDiscards.append(count)
-   print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter," ",CommunityMarket2)
+   #print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter," ",CommunityMarket2)
   #print("CommunityMarket2 ",CommunityMarket2)
   count+=1;
  CatchDiscards=list(dict.fromkeys(CatchDiscards))
