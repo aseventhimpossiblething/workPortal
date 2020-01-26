@@ -84,31 +84,34 @@ def filterNonParticipators(FrameToBeFiltered):
  
  Scount=5
  while Scount < len(numpy.array(FrameToBeFiltered['Brand Name'])):
-  CommunityW=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[Scount]]).replace("']","")).\
-  replace("['","").replace('"]','').replace('["','').replace("40s","").replace("40","")\
-  .replace("45","").replace("45s","").replace("50","").replace("50s","").replace("55","").replace("55s","")\
-  .replace("60","").replace("60s","").replace("65","").replace("65s","").replace("70","").replace("70s","")\
-  .replace("75","").replace("75s","").replace("80","").replace("80s","").replace("85","").replace("85s","")\
-  .replace("90","").replace("90s","").replace("100","").replace("110","")
-  MarketW=str(FrameToBeFiltered['Market ID'][Scount])
+  try:
+   CommunityW=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[Scount]]).replace("']","")).\
+   replace("['","").replace('"]','').replace('["','').replace("40s","").replace("40","")\
+   .replace("45","").replace("45s","").replace("50","").replace("50s","").replace("55","").replace("55s","")\
+   .replace("60","").replace("60s","").replace("65","").replace("65s","").replace("70","").replace("70s","")\
+   .replace("75","").replace("75s","").replace("80","").replace("80s","").replace("85","").replace("85s","")\
+   .replace("90","").replace("90s","").replace("100","").replace("110","")
+   MarketW=str(FrameToBeFiltered['Market ID'][Scount])
   
-  MarketN=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[Scount]]).replace("']","")).\
-  replace("['","").replace('"]','').replace('["','')
+   MarketN=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[Scount]]).replace("']","")).\
+   replace("['","").replace('"]','').replace('["','')
   
-  #CommunityMarketArray="None"
-  #CommunityMarket=CommunityMarket
-  #Community=Community+" "+CommunityW
-  #Market=Market+" "+MarketW
-  CommunityMarket=CommunityW.replace(" ","")+"-"+MarketW
-  CommunityMarketArray=CommunityMarketArray+" "+CommunityMarket+" "
-  CommunityMarketNN=CommunityMarketNN+" "+CommunityW+"-"+MarketN
-  #CommunityMarketADF.append(CommunityW.replace(" ","")+"-"+MarketW)
-  #print("CommunityW ",CommunityW)
-  #print("MarketW ",MarketW)
-  #print("Community ",CommunityW)
-  #print("Market ",MarketW)
-  #print("CommunityMarket ",CommunityMarket)
-  #print("COMMUNITY MARKETS!!!  ",CommunityMarketsArray)
+   #CommunityMarketArray="None"
+   #CommunityMarket=CommunityMarket
+   #Community=Community+" "+CommunityW
+   #Market=Market+" "+MarketW
+   CommunityMarket=CommunityW.replace(" ","")+"-"+MarketW
+   CommunityMarketArray=CommunityMarketArray+" "+CommunityMarket+" "
+   CommunityMarketNN=CommunityMarketNN+" "+CommunityW+"-"+MarketN
+   #CommunityMarketADF.append(CommunityW.replace(" ","")+"-"+MarketW)
+   #print("CommunityW ",CommunityW)
+   #print("MarketW ",MarketW)
+   #print("Community ",CommunityW)
+   #print("Market ",MarketW)
+   #print("CommunityMarket ",CommunityMarket)
+   #print("COMMUNITY MARKETS!!!  ",CommunityMarketsArray)
+  except:
+   print("Failed Scount Loop")
   Scount+=1
  #print("CommunityMarketArray LENGTH ",len(CommunityMarket)
  #print("COMMUNITY MARKETS!!!  ",CommunityMarketArray)
@@ -118,43 +121,46 @@ def filterNonParticipators(FrameToBeFiltered):
  #print("CommunityMarketADF ",CommunityMarketADF)
  #print("len(CommunityMarketADF) ",len(CommunityMarketADF))
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
-  BrandFilter=str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")
-  CommIDFilter=str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("']","")).replace("['","")
-  BuilderNameFilter=str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['","")
-  Community2=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[count]]).replace("']","")).\
-  replace("['","").replace('"]','').replace('["','').replace("40s","").replace("40","")\
-  .replace("45","").replace("45s","").replace("50","").replace("50s","").replace("55","").replace("55s","")\
-  .replace("60","").replace("60s","").replace("65","").replace("65s","").replace("70","").replace("70s","")\
-  .replace("75","").replace("75s","").replace("80","").replace("80s","").replace("85","").replace("85s","")\
-  .replace("90","").replace("90s","").replace("100","").replace("110","")
-  Market2=str(FrameToBeFiltered['Market ID'][count])
-  Market2N=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[count]]).replace("']","")).\
-  replace("['","").replace('"]','').replace('["','')
+  try:
+   BrandFilter=str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")
+   CommIDFilter=str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("']","")).replace("['","")
+   BuilderNameFilter=str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['","")
+   Community2=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[count]]).replace("']","")).\
+   replace("['","").replace('"]','').replace('["','').replace("40s","").replace("40","")\
+   .replace("45","").replace("45s","").replace("50","").replace("50s","").replace("55","").replace("55s","")\
+   .replace("60","").replace("60s","").replace("65","").replace("65s","").replace("70","").replace("70s","")\
+   .replace("75","").replace("75s","").replace("80","").replace("80s","").replace("85","").replace("85s","")\
+   .replace("90","").replace("90s","").replace("100","").replace("110","")
+   Market2=str(FrameToBeFiltered['Market ID'][count])
+   Market2N=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[count]]).replace("']","")).\
+   replace("['","").replace('"]','').replace('["','')
   
-  CommunityMarket2=Community2.replace(" ","")+"-"+Market2 
-  if FilterString.find(BrandFilter)!=-1:
-   CatchDiscards.append(count)
-  if FilterString.find(CommIDFilter)!=-1:
-   CatchDiscards.append(count)
-  if FilterString.find(BuilderNameFilter)!=-1:
-   CatchDiscards.append(count)
-  #print("CommunityMarketADF.count(CommunityMarket2) ",CommunityMarketADF.count(CommunityMarket2))
-  #print("CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
-  #if CommunityMarketADF.count(CommunityMarket2)!=CommunityMarketArray.count(CommunityMarket2):
+   CommunityMarket2=Community2.replace(" ","")+"-"+Market2 
+   if FilterString.find(BrandFilter)!=-1:
+    CatchDiscards.append(count)
+   if FilterString.find(CommIDFilter)!=-1:
+    CatchDiscards.append(count)
+   if FilterString.find(BuilderNameFilter)!=-1:
+    CatchDiscards.append(count)
+   #print("CommunityMarketADF.count(CommunityMarket2) ",CommunityMarketADF.count(CommunityMarket2))
+   #print("CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
+   #if CommunityMarketADF.count(CommunityMarket2)!=CommunityMarketArray.count(CommunityMarket2):
    #print(CommunityMarket2, " Mismatch ","CommunityMarketADF.count(CommunityMarket2)=",CommunityMarketADF.count(CommunityMarket2)," CommunityMarketArray.count(CommunityMarket2)=",CommunityMarketArray.count(CommunityMarket2))
-  #if CommunityMarketADF.count(CommunityMarket2) > CommunityMarketArray.count(CommunityMarket2):
+   #if CommunityMarketADF.count(CommunityMarket2) > CommunityMarketArray.count(CommunityMarket2):
    #print(CommunityMarket2," Alerts more for CommunityMarketADF total=",CommunityMarketADF.count(CommunityMarket2)," vs CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
-  if CommunityMarketArray.count(CommunityMarket2)>1:
-   CatchDiscards.append(count)
-   #print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter,"> ",CommunityMarket2)
-  #print("CommunityMarket2 ",CommunityMarket2)
-  if CommunityMarketNN.count(Community2+"-"+Market2N)>1:
-   #print("_______________________________________")
-   #print("CommunityMarketNN= ",CommunityMarketNN.count(Community2+"-"+Market2N))
-   CatchDiscards.append(count)
-   #print("Community2"-"+Market2N= ",Community2"-"+Market2N)
-   #print("CommunityMarketArray.count(CommunityMarket2)=",CommunityMarketArray.count(CommunityMarket2))      
-   #print("_______________________________________")
+   if CommunityMarketArray.count(CommunityMarket2)>1:
+    CatchDiscards.append(count)
+    #print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter,"> ",CommunityMarket2)
+   #print("CommunityMarket2 ",CommunityMarket2)
+   if CommunityMarketNN.count(Community2+"-"+Market2N)>1:
+    #print("_______________________________________")
+    #print("CommunityMarketNN= ",CommunityMarketNN.count(Community2+"-"+Market2N))
+    CatchDiscards.append(count)
+    #print("Community2"-"+Market2N= ",Community2"-"+Market2N)
+    #print("CommunityMarketArray.count(CommunityMarket2)=",CommunityMarketArray.count(CommunityMarket2))      
+    #print("_______________________________________")
+  except:
+   print("Failed loop in main filterloop")
   count+=1;
  CatchDiscards=list(dict.fromkeys(CatchDiscards))
  print("size of CatchDiscard Array ",len(CatchDiscards)) 
