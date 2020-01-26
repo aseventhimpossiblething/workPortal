@@ -136,8 +136,8 @@ def filterNonParticipators(FrameToBeFiltered):
    CatchDiscards.append(count)
   if FilterString.find(BuilderNameFilter)!=-1:
    CatchDiscards.append(count)
-  #print("CommunityMarketADF.count(CommunityMarket2) ",CommunityMarketADF.count(CommunityMarket2))
-  #print("CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
+  print("CommunityMarketADF.count(CommunityMarket2) ",CommunityMarketADF.count(CommunityMarket2))
+  print("CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
   if CommunityMarketArray.count(CommunityMarket2)>1:
    CatchDiscards.append(count)
    #print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter,"> ",CommunityMarket2)
