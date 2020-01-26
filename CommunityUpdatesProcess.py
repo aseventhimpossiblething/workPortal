@@ -69,6 +69,7 @@ def WorkingBing():
  return WorkingBing
 
 def filterNonParticipators(FrameToBeFiltered):
+ 
  print("Start Filter ",FrameToBeFiltered['Builder Name'].count()," rows")
  FilteredFrame=FrameToBeFiltered
  CatchDiscards=[];
@@ -82,7 +83,7 @@ def filterNonParticipators(FrameToBeFiltered):
  CommunityMarketADF=[]
  CommunityMarketNN=""
  
- Scount=5
+ Scount=0
  while Scount < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   try:
    CommunityW=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[Scount]]).replace("']","")).\
@@ -116,7 +117,7 @@ def filterNonParticipators(FrameToBeFiltered):
  #print("CommunityMarketArray LENGTH ",len(CommunityMarket)
  #print("COMMUNITY MARKETS!!!  ",CommunityMarketArray)
  #print("CommunityMarketNN ",CommunityMarketNN)
- count=5;
+ count=0;
  #print(CommunityMarketArray)
  #print("CommunityMarketADF ",CommunityMarketADF)
  #print("len(CommunityMarketADF) ",len(CommunityMarketADF))
