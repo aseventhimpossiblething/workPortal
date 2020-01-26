@@ -79,6 +79,7 @@ def filterNonParticipators(FrameToBeFiltered):
  (International Homes,A5),(International Homes,B5),(Clayton,A5), Oakwood Homes ;'
  CommunityMarketArray=""
  CommunityMarket=""
+ CommunityMarketADF=[]
  
  Scount=5
  while Scount < len(numpy.array(FrameToBeFiltered['Brand Name'])):
@@ -99,6 +100,7 @@ def filterNonParticipators(FrameToBeFiltered):
   #Market=Market+" "+MarketW
   CommunityMarket=CommunityW.replace(" ","")+"-"+MarketW
   CommunityMarketArray=CommunityMarketArray+" "+CommunityMarket+" "
+  CommunityMarketADF.append(CommunityW.replace(" ","")+MarketW)
   #print("CommunityW ",CommunityW)
   #print("MarketW ",MarketW)
   #print("Community ",CommunityW)
@@ -107,7 +109,7 @@ def filterNonParticipators(FrameToBeFiltered):
   #print("COMMUNITY MARKETS!!!  ",CommunityMarketsArray)
   Scount+=1
  #print("CommunityMarketArray LENGTH ",len(CommunityMarket)
- print("COMMUNITY MARKETS!!!  ",CommunityMarketArray)
+ #print("COMMUNITY MARKETS!!!  ",CommunityMarketArray)
  count=5;
  #print(CommunityMarketArray)
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
@@ -132,10 +134,11 @@ def filterNonParticipators(FrameToBeFiltered):
    CatchDiscards.append(count)
   if FilterString.find(BuilderNameFilter)!=-1:
    CatchDiscards.append(count)
-   
+  print("CommunityMarketADF.count(CommunityMarket2) ",CommunityMarketADF.count(CommunityMarket2))
+  print("CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
   if CommunityMarketArray.count(CommunityMarket2)>1:
    CatchDiscards.append(count)
-   print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter,"> ",CommunityMarket2)
+   #print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter,"> ",CommunityMarket2)
   #print("CommunityMarket2 ",CommunityMarket2)
   count+=1;
  CatchDiscards=list(dict.fromkeys(CatchDiscards))
