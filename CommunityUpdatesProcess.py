@@ -112,7 +112,7 @@ def filterNonParticipators(FrameToBeFiltered):
   Scount+=1
  #print("CommunityMarketArray LENGTH ",len(CommunityMarket)
  #print("COMMUNITY MARKETS!!!  ",CommunityMarketArray)
- print("CommunityMarketNN ",CommunityMarketNN)
+ #print("CommunityMarketNN ",CommunityMarketNN)
  count=5;
  #print(CommunityMarketArray)
  #print("CommunityMarketADF ",CommunityMarketADF)
@@ -149,12 +149,12 @@ def filterNonParticipators(FrameToBeFiltered):
    #print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter,"> ",CommunityMarket2)
   #print("CommunityMarket2 ",CommunityMarket2)
   if CommunityMarketNN.count(Community2+"-"+Market2N)>1:
-   print("_______________________________________")
-   print("CommunityMarketNN= ",CommunityMarketNN.count(Community2+"-"+Market2N))
+   #print("_______________________________________")
+   #print("CommunityMarketNN= ",CommunityMarketNN.count(Community2+"-"+Market2N))
    CatchDiscards.append(count)
    #print("Community2"-"+Market2N= ",Community2"-"+Market2N)
-   print("CommunityMarketArray.count(CommunityMarket2)=",CommunityMarketArray.count(CommunityMarket2))      
-   print("_______________________________________")
+   #print("CommunityMarketArray.count(CommunityMarket2)=",CommunityMarketArray.count(CommunityMarket2))      
+   #print("_______________________________________")
   count+=1;
  CatchDiscards=list(dict.fromkeys(CatchDiscards))
  print("size of CatchDiscard Array ",len(CatchDiscards)) 
@@ -452,7 +452,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    BingKWFrame.to_excel(writer)
    writer.save()
-  
+   
+   os.chdir('/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBMM')
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    BingAdFrameA.to_excel(writer)
    writer.save()
@@ -461,6 +462,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    BingAdFrameB.to_excel(writer)
    writer.save()
+   
    
       
   if MatchType=='SB':
