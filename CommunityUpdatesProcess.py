@@ -93,7 +93,7 @@ def filterNonParticipators(FrameToBeFiltered):
   MarketW=str(FrameToBeFiltered['Market ID'][Scount])
   
   MarketN=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[Scount]]).replace("']","")).\
-  .replace("['","").replace('"]','').replace('["','')
+  replace("['","").replace('"]','').replace('["','')
   
   #CommunityMarketArray="None"
   #CommunityMarket=CommunityMarket
@@ -129,7 +129,7 @@ def filterNonParticipators(FrameToBeFiltered):
   .replace("90","").replace("90s","").replace("100","").replace("110","")
   Market2=str(FrameToBeFiltered['Market ID'][count])
   Market2N=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[count]]).replace("']","")).\
-  .replace("['","").replace('"]','').replace('["','')
+  replace("['","").replace('"]','').replace('["','')
   
   CommunityMarket2=Community2.replace(" ","")+"-"+Market2 
   if FilterString.find(BrandFilter)!=-1:
