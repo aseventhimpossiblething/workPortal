@@ -140,13 +140,13 @@ def filterNonParticipators(FrameToBeFiltered):
   
    CommunityMarket2=Community2.replace(" ","")+"-"+Market2 
    if FilterString.find(BrandFilter)!=-1:
-    print("remove ",BrandFilter)
+    print(" Brand remove ",BrandFilter)
     CatchDiscards.append(count)
    if FilterString.find(CommIDFilter)!=-1:
-    print("remove ",CommIDFilter)
+    print("Community remove ",CommIDFilter)
     CatchDiscards.append(count)
    if FilterString.find(BuilderNameFilter)!=-1:
-    print("remove ",BuilderNameFilter)
+    print("Builder remove ",BuilderNameFilter)
     CatchDiscards.append(count)
    #print("CommunityMarketADF.count(CommunityMarket2) ",CommunityMarketADF.count(CommunityMarket2))
    #print("CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
@@ -155,12 +155,12 @@ def filterNonParticipators(FrameToBeFiltered):
    #if CommunityMarketADF.count(CommunityMarket2) > CommunityMarketArray.count(CommunityMarket2):
    #print(CommunityMarket2," Alerts more for CommunityMarketADF total=",CommunityMarketADF.count(CommunityMarket2)," vs CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
    if CommunityMarketArray.count(CommunityMarket2)!=-1:
-    print("remove ",CommunityMarket2)
+    print("CommunityMarketArray remove ",CommunityMarket2)
     CatchDiscards.append(count)
     #print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter,"> ",CommunityMarket2)
    #print("CommunityMarket2 ",CommunityMarket2)
    if CommunityMarketNN.count(Community2+"-"+Market2N)!=-1:
-    print("remove ",Community2+"-"+Market2N)
+    print("CommunityMarketNN  remove ",Community2+"-"+Market2N)
     
     #print("_______________________________________")
     #print("CommunityMarketNN= ",CommunityMarketNN.count(Community2+"-"+Market2N))
