@@ -147,7 +147,7 @@ def filterNonParticipators(FrameToBeFiltered):
    #print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter,"> ",CommunityMarket2)
   #print("CommunityMarket2 ",CommunityMarket2)
   count+=1;
- CatchDiscards=list(dict.fromkeys(CatchDiscards))
+ #CatchDiscards=list(dict.fromkeys(CatchDiscards))
  print("size of CatchDiscard Array ",len(CatchDiscards)) 
  if len(CatchDiscards)!=0:
   print("Length of Frame Before ",len(FilteredFrame)) 
