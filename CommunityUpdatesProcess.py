@@ -109,7 +109,7 @@ def filterNonParticipators(FrameToBeFiltered):
   #print("CommunityMarket ",CommunityMarket)
  #print("COMMUNITY MARKETS!!!  ",CommunityMarketsArray)
  count=5;
- print(CommunityMarketArray)
+ #print(CommunityMarketArray)
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   BrandFilter=str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")
   CommIDFilter=str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("']","")).replace("['","")
@@ -133,7 +133,7 @@ def filterNonParticipators(FrameToBeFiltered):
   if FilterString.find(BuilderNameFilter)!=-1:
    CatchDiscards.append(count)
    
-  if CommunityMarketArray.find(CommunityMarket2)>=2:
+  if CommunityMarketArray.count(CommunityMarket2)>=2:
    CatchDiscards.append(count)
    #print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter," ",CommunityMarket2)
   #print("CommunityMarket2 ",CommunityMarket2)
