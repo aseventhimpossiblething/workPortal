@@ -162,7 +162,7 @@ def filterNonParticipators(FrameToBeFiltered):
    #print("Frame Length ",len(FilteredFrame['Brand Name']))
    count2+=1; 
   print("Length of Frame After ",len(FilteredFrame))
- LastCount= 
+ #LastCount= 
  while 
  FilteredFrame['Community Name'] 
   
