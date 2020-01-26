@@ -100,7 +100,7 @@ def filterNonParticipators(FrameToBeFiltered):
   #Market=Market+" "+MarketW
   CommunityMarket=CommunityW.replace(" ","")+"-"+MarketW
   CommunityMarketArray=CommunityMarketArray+" "+CommunityMarket+" "
-  CommunityMarketADF.append(CommunityW.replace(" ","")+"-"+MarketW)
+  #CommunityMarketADF.append(CommunityW.replace(" ","")+"-"+MarketW)
   #print("CommunityW ",CommunityW)
   #print("MarketW ",MarketW)
   #print("Community ",CommunityW)
@@ -112,8 +112,8 @@ def filterNonParticipators(FrameToBeFiltered):
  #print("COMMUNITY MARKETS!!!  ",CommunityMarketArray)
  count=5;
  #print(CommunityMarketArray)
- print("CommunityMarketADF ",CommunityMarketADF)
- print("len(CommunityMarketADF) ",len(CommunityMarketADF))
+ #print("CommunityMarketADF ",CommunityMarketADF)
+ #print("len(CommunityMarketADF) ",len(CommunityMarketADF))
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   BrandFilter=str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")
   CommIDFilter=str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("']","")).replace("['","")
@@ -140,8 +140,8 @@ def filterNonParticipators(FrameToBeFiltered):
   #print("CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
   #if CommunityMarketADF.count(CommunityMarket2)!=CommunityMarketArray.count(CommunityMarket2):
    #print(CommunityMarket2, " Mismatch ","CommunityMarketADF.count(CommunityMarket2)=",CommunityMarketADF.count(CommunityMarket2)," CommunityMarketArray.count(CommunityMarket2)=",CommunityMarketArray.count(CommunityMarket2))
-  if CommunityMarketADF.count(CommunityMarket2) > CommunityMarketArray.count(CommunityMarket2):
-   print(CommunityMarket2," Alerts more for CommunityMarketADF total=",CommunityMarketADF.count(CommunityMarket2)," vs CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
+  #if CommunityMarketADF.count(CommunityMarket2) > CommunityMarketArray.count(CommunityMarket2):
+   #print(CommunityMarket2," Alerts more for CommunityMarketADF total=",CommunityMarketADF.count(CommunityMarket2)," vs CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
   if CommunityMarketArray.count(CommunityMarket2)>1:
    CatchDiscards.append(count)
    #print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter,"> ",CommunityMarket2)
@@ -155,10 +155,18 @@ def filterNonParticipators(FrameToBeFiltered):
   #print(CatchDiscards)
   while count2<len(CatchDiscards):
    #print("CatchDiscard  ",CatchDiscards[count2])
+   try:
    FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
+   except:
+    count+0;
    #print("Frame Length ",len(FilteredFrame['Brand Name']))
    count2+=1; 
-  print("Length of Frame After ",len(FilteredFrame))   
+  print("Length of Frame After ",len(FilteredFrame))
+ LastCount= 
+ while 
+ FilteredFrame['Community Name'] 
+  
+  
  print("End Filter") 
  return FilteredFrame 
  
