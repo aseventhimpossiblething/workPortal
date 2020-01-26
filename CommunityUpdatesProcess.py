@@ -69,6 +69,8 @@ def WorkingBing():
  return WorkingBing
 
 def filterNonParticipators(FrameToBeFiltered):
+ FrameToBeFiltered.reset_index();
+ 
  
  print("Start Filter ",FrameToBeFiltered['Builder Name'].count()," rows")
  FilteredFrame=FrameToBeFiltered
@@ -157,7 +159,7 @@ def filterNonParticipators(FrameToBeFiltered):
     CatchDiscards.append(count)
     #print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter,"> ",CommunityMarket2)
    #print("CommunityMarket2 ",CommunityMarket2)
-   if CommunityMarketNN.count(Community2+"-"+Market2N)=-1:
+   if CommunityMarketNN.count(Community2+"-"+Market2N)!=-1:
     print("remove ",Community2+"-"+Market2N)
     
     #print("_______________________________________")
