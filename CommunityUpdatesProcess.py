@@ -70,7 +70,7 @@ def WorkingBing():
 
 
 def filterNonParticipators(theFrame):
- print("len(theFrame) ",len(theFrame));
+ print("at start of filter len(theFrame) ",len(theFrame));
  theFrame.reset_index();
  
  def subfilter(word):
@@ -87,13 +87,14 @@ def filterNonParticipators(theFrame):
  def wordLoop():
   FilterTerms=['Clayton','Freedom']
   wlcount=0;
-  while wlcount<len(FilterTerms=['Clayton','Freedom'])
+  while wlcount<len(FilterTerms=['Clayton','Freedom']):
+   print(FilterTerms[wlcount]," ",wlcount )
   subfilter("Clayton");
   #return FilterTerms[wlcount]
  
  wordLoop();
  
- print("len(theFrame) ",len(theFrame))
+ print("At end of Filter len(theFrame) ",len(theFrame))
  return theFrame;
  
 """
