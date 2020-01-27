@@ -76,7 +76,7 @@ def filterNonParticipators(theFrame):
  
  def subfilter(word,theFrame):
   theFrame0=numpy.array(theFrame['Brand Name']);
-  recursion_level=0;
+  #recursion_level=0;
   scount=0;
   found=0;
   theBrand=str(theFrame0[[scount]]);
@@ -99,7 +99,7 @@ def filterNonParticipators(theFrame):
    scount+=1;
    
   if found!=0:
-   recursion_level+=1
+   #recursion_level+=1
    subfilter(word,theFrame);
    
   return theFrame;
