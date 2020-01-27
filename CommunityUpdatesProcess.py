@@ -78,10 +78,14 @@ def filterNonParticipators(theFrame):
   theFrame0=numpy.array(theFrame['Brand Name']);
   scount=0;
   theBrand=str(theFrame0[[scount]]);
+  print("Running Subfilter ")
   while scount<len(theFrame0):
+   print("Looping in Subfilter")
    if theBrand.find(word)!=-1:
     theFrame=theFrame.drop([scount]);
     print("theBrand ",theBrand);
+   else:
+    print("Filter is not finding word")
    scount+=1; 
   return theFrame;
  #subfilter("Clayton");
