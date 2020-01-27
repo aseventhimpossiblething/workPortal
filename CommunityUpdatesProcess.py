@@ -70,16 +70,17 @@ def WorkingBing():
 
 
 def filterNonParticipators(theFrame):
- theFrame=numpy.array(FrameToBeFiltered['Brand Name']];
+ theFrame=theFrame;
  print("at start of filter len(theFrame) ",len(theFrame));
  theFrame.reset_index();
  
  def subfilter(word,theFrame):
+  theFrame0=numpy.array(FrameToBeFiltered['Brand Name']]);
   scount=0;
-  theBrand=theFrame[[scount]];
+  theBrand=theFrame0[[scount]];
   while scount<theBrand:
    if theBrand.find(word)!=-1:
-    theFrame=theFrame.drop([scount]);
+    theFrame0=theFram0.drop([scount]);
     print("theBrand ",theBrand);
    scount+=1; 
   return theBrand;
