@@ -148,6 +148,64 @@ def filterNonParticipators(FrameToBeFiltered):
    if FilterString.find(BuilderNameFilter)!=-1:
     print("Builder remove ",BuilderNameFilter)
     CatchDiscards.append(count)
+    
+   if BrandFilter.find("Clayton")!=-1:
+    CatchDiscards.append(count)
+    print('BrandFilter.find("Clayton") ',BrandFilter)
+   if BrandFilter.find("Freedom")!=-1:
+    CatchDiscards.append(count) 
+    print('BrandFilter.find("Freedom") ',BrandFilter)
+   if BrandFilter.find("Oakwood")!=-1:
+    CatchDiscards.append(count)
+    print('BrandFilter.find("Oakwood") ',BrandFilter)
+   if BrandFilter.find("Craftmark")!=-1:
+    CatchDiscards.append(count) 
+    print('BrandFilter.find("Craftmark") ',BrandFilter)
+   if BrandFilter.find("G & I")!=-1:
+    CatchDiscards.append(count) 
+    print('BrandFilter.find("G & I") ',BrandFilter)
+   if BrandFilter.find("Crossland")!=-1:
+    CatchDiscards.append(count) 
+    print('BrandFilter.find("Crossland") ',BrandFilter) 
+    
+   if CommIDFilter.find("Clayton")!=-1:
+    CatchDiscards.append(count)
+    print('CommIDFilter.find("Clayton") ',BrandFilter)
+   if CommIDFilter.find("Freedom")!=-1:
+    CatchDiscards.append(count) 
+    print('CommIDFilter.find("Freedom") ',BrandFilter)
+   if CommIDFilter.find("Oakwood")!=-1:
+    CatchDiscards.append(count)
+    print('CommIDFilter.find("Oakwood") ',BrandFilter)
+   if CommIDFilter.find("Craftmark")!=-1:
+    CatchDiscards.append(count) 
+    print('CommIDFilter.find("Craftmark") ',BrandFilter)
+   if CommIDFilter.find("G & I")!=-1:
+    CatchDiscards.append(count) 
+    print('CommIDFilter.find("G & I") ',BrandFilter)
+   if CommIDFilter.find("Crossland")!=-1:
+    CatchDiscards.append(count) 
+    print('CommIDFilter.find("Crossland") ',BrandFilter) 
+    
+   if BuilderNameFilter.find("Clayton")!=-1:
+    CatchDiscards.append(count)
+    print('BuilderNameFilter.find("Clayton") ',BrandFilter)
+   if BuilderNameFilter.find("Freedom")!=-1:
+    CatchDiscards.append(count) 
+    print('BuilderNameFilter.find("Freedom") ',BrandFilter)
+   if BuilderNameFilter.find("Oakwood")!=-1:
+    CatchDiscards.append(count)
+    print('BuilderNameFilter.find("Oakwood") ',BrandFilter)
+   if BuilderNameFilter.find("Craftmark")!=-1:
+    BuilderNameFilter.append(count) 
+    print('BuilderNameFilter.find("Craftmark") ',BrandFilter)
+   if BuilderNameFilter.find("G & I")!=-1:
+    CatchDiscards.append(count) 
+    print('BuilderNameFilter.find("G & I") ',BrandFilter)
+   if BuilderNameFilterunt) 
+    print('BuilderNameFilter.find("Crossland") ',BrandFilter)  
+     
+    
    #print("CommunityMarketADF.count(CommunityMarket2) ",CommunityMarketADF.count(CommunityMarket2))
    #print("CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
    #if CommunityMarketADF.count(CommunityMarket2)!=CommunityMarketArray.count(CommunityMarket2):
@@ -539,8 +597,8 @@ def initialCommUpdatProcess():
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
- #WorkingCommunities=filterNonParticipators(WorkingCommunities);
- WorkingCommunities=filterNonParticipators(filterNonParticipators(filterNonParticipators(WorkingCommunities)));
+ WorkingCommunities=filterNonParticipators(WorkingCommunities);
+ #WorkingCommunities=filterNonParticipators(filterNonParticipators(filterNonParticipators(WorkingCommunities)));
  
  
  
