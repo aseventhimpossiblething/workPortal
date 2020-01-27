@@ -80,12 +80,14 @@ def filterNonParticipators(theFrame):
   theBrand=str(theFrame0[[scount]]);
   print("Running Subfilter ")
   while scount<len(theFrame0):
-   print("Looping in Subfilter")
+   theBrand=str(theFrame0[[scount]]);
+   #print("Looping in Subfilter")
    if theBrand.find(word)!=-1:
     theFrame=theFrame.drop([scount]);
-    print("theBrand ",theBrand);
+    print(" filter droped theBrand ",theBrand);
    else:
     print("Filter is not finding word count ",scount)
+    print(" filter did not drop theBrand ",theBrand)
    scount+=1; 
   return theFrame;
  #subfilter("Clayton");
