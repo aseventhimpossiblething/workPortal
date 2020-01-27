@@ -68,6 +68,35 @@ def WorkingBing():
  WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
  return WorkingBing
 
+
+def filterNonParticipators(theFrame):
+ print("len(theFrame) ",len(theFrame));
+ theFrame.reset_index();
+ 
+ def subfilter(word):
+  scount=0;
+  theBrand=theFrame['Brand'][scount];
+  while scount<theBrand:
+   if theBrand.find(word)!=-1:
+    theFrame=theFrame.drop([scount]);
+    print("theBrand ",theBrand);
+   scount+=1; 
+  return theBrand;
+ #subfilter("Clayton");
+ 
+ def wordLoop():
+  FilterTerms=['Clayton','Freedom']
+  wlcount=0;
+  while wlcount<len(FilterTerms=['Clayton','Freedom'])
+  subfilter("Clayton");
+  #return FilterTerms[wlcount]
+ 
+ wordLoop();
+ 
+ print("len(theFrame) ",len(theFrame))
+ return theFrame;
+ 
+"""
 def filterNonParticipators(FrameToBeFiltered):
  FrameToBeFiltered.reset_index();
  
@@ -377,13 +406,8 @@ def filterNonParticipators(FrameToBeFiltered):
      CatchDiscards.append(count)
      #print("Failed Erasure 2nd loop") 
      
-     
-     """
-     if FilteredFrame['Brand'][count2].find("Clayton")!=-1:
-     #CatchDiscards.append(count)
-     print('second loop ("Clayton") ',FilteredFrame['Brand'][count2]," row ",count2)
-     FilteredFrame=FilteredFrame.drop([count2])
-     """
+  
+
     
     FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
     CatchDiscards.append(count)
@@ -401,7 +425,8 @@ def filterNonParticipators(FrameToBeFiltered):
  #print(FilteredFrame) 
  print("End Filter") 
  return FilteredFrame 
- 
+"""
+
 def MergeURLs(chan,chan2):
  print("MergeURLs() start for ",chan2)
  URLS="A";
