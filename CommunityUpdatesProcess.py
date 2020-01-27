@@ -344,7 +344,7 @@ def filterNonParticipators(FrameToBeFiltered):
   except:
    count+0;
    #print("Failed loop in main filterloop")
-  count+=1;
+ count+=1;
  CatchDiscards=list(dict.fromkeys(CatchDiscards))
  print("size of CatchDiscard Array ",len(CatchDiscards))
  if len(CatchDiscards)!=0:
