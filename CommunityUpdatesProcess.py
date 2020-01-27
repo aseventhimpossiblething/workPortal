@@ -99,31 +99,18 @@ def filterNonParticipators(FrameToBeFiltered):
    MarketN=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[Scount]]).replace("']","")).\
    replace("['","").replace('"]','').replace('["','')
   
-   #CommunityMarketArray="None"
-   #CommunityMarket=CommunityMarket
-   #Community=Community+" "+CommunityW
-   #Market=Market+" "+MarketW
+  
    CommunityMarket=CommunityW.replace(" ","")+"-"+MarketW
    CommunityMarketArray=CommunityMarketArray+" "+CommunityMarket+" "
    CommunityMarketNN=CommunityMarketNN+" "+CommunityW+"-"+MarketN
-   #CommunityMarketADF.append(CommunityW.replace(" ","")+"-"+MarketW)
-   #print("CommunityW ",CommunityW)
-   #print("MarketW ",MarketW)
-   #print("Community ",CommunityW)
-   #print("Market ",MarketW)
-   #print("CommunityMarket ",CommunityMarket)
-   #print("COMMUNITY MARKETS!!!  ",CommunityMarketsArray)
+   
   except:
    Scount+0;
    #print("Failed Scount Loop")
   Scount+=1
- #print("CommunityMarketArray LENGTH ",len(CommunityMarket)
- #print("COMMUNITY MARKETS!!!  ",CommunityMarketArray)
- #print("CommunityMarketNN ",CommunityMarketNN)
+ 
  count=0;
- #print(CommunityMarketArray)
- #print("CommunityMarketADF ",CommunityMarketADF)
- #print("len(CommunityMarketADF) ",len(CommunityMarketADF))
+ 
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   try:
    BrandFilter=str(str(numpy.array(FilteredFrame['Brand Name'])[[count]]).replace("']","")).replace("['","")
@@ -340,8 +327,8 @@ def filterNonParticipators(FrameToBeFiltered):
   #count(CommunityMarket2)," vs CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray\
   #.count(CommunityMarket2))
    if CommunityMarketArray.count(CommunityMarket2)>1:
-    print("CommunityMarketArray remove ",CommunityMarket2," times occurs= ",\
-          CommunityMarketArray.count(CommunityMarket2)," row ",count)
+    #print("CommunityMarketArray remove ",CommunityMarket2," times occurs= ",\
+          #CommunityMarketArray.count(CommunityMarket2)," row ",count)
     CatchDiscards.append(count)
     FilteredFrame.drop([count])
     
