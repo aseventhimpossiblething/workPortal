@@ -70,6 +70,8 @@ def WorkingBing():
 
 
 def filterNonParticipators(theFrame):
+ theFrame[theFrame['model'].str.contains('ac')]
+ """
  theFrame=theFrame;
  print("at start of filter len(theFrame) ",len(theFrame));
  theFrame.reset_index();
@@ -92,11 +94,9 @@ def filterNonParticipators(theFrame):
     else:
      if scount<100:
       scount+0;
-      #print("Filter is not finding word count ",scount)
-      #print(" filter did not drop theBrand ",theBrand)
    except:
      found=found+0;
-     #print("try loop failed number ",scount)
+    
    scount+=1;
    
   if found!=0:
@@ -104,7 +104,7 @@ def filterNonParticipators(theFrame):
    subfilter(word,theFrame);
    
   return theFrame;
-
+ 
  
 
  #theFrame=subfilter("Clayton",theFrame);
@@ -113,7 +113,7 @@ def filterNonParticipators(theFrame):
  
  print("At end of Filter len(theFrame) ",len(theFrame))
  return theFrame;
- 
+ """
 
 def MergeURLs(chan,chan2):
  print("MergeURLs() start for ",chan2)
