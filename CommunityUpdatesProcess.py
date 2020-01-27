@@ -270,7 +270,7 @@ def filterNonParticipators(FrameToBeFiltered):
     #print("CommunityMarketArray.count(CommunityMarket2)=",CommunityMarketArray.count(CommunityMarket2))      
     #print("_______________________________________")
   except:
-   #count+0;
+   count+0;
    #print("Failed loop in main filterloop")
   count+=1;
  CatchDiscards=list(dict.fromkeys(CatchDiscards))
