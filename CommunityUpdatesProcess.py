@@ -76,7 +76,7 @@ def filterNonParticipators(theFrame):
  
  def subfilter(word,theFrame):
   scount=0;
-  theBrand=theFrame['Brand'][scount];
+  theBrand=theFrame['Brand Name'][scount];
   while scount<theBrand:
    if theBrand.find(word)!=-1:
     theFrame=theFrame.drop([scount]);
