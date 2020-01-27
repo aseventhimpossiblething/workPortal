@@ -114,6 +114,7 @@ def filterNonParticipators(FrameToBeFiltered):
    #print("CommunityMarket ",CommunityMarket)
    #print("COMMUNITY MARKETS!!!  ",CommunityMarketsArray)
   except:
+   Scount+0;
    #print("Failed Scount Loop")
   Scount+=1
  #print("CommunityMarketArray LENGTH ",len(CommunityMarket)
