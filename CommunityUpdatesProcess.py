@@ -107,114 +107,13 @@ def filterNonParticipators(theFrame):
 
  
 
- theFrame=subfilter("Clayton",theFrame);
- theFrame=subfilter("Clayton ",theFrame);
- theFrame=subfilter("Clay",theFrame)
+ #theFrame=subfilter("Clayton",theFrame);
+ #theFrame=subfilter("Clayton ",theFrame);
+ theFrame=subfilter("Clayt",theFrame)
  
  print("At end of Filter len(theFrame) ",len(theFrame))
  return theFrame;
  
-"""
-
-  
- 
-   except:
-    count+0;
-    #print("Failed Erasure ,BuilderNameFilter ",BuilderNameFilter)
-    
-   try: 
-    if BuilderNameFilter.find("G & I")!=-1:
-     CatchDiscards.append(count) 
-     #print('BuilderNameFilter.find("G & I") ',BrandFilter," row ",count)
-     FilteredFrame=FilteredFrame.drop([count])
-   except:
-    count+0;
-    #print("Failed Erasure BuilderNameFilter ",BuilderNameFilter)
-    
-    
-   try: 
-    if BuilderNameFilter.find("Crossland")!=-1:
-     CatchDiscards.append(count) 
-     #print('BuilderNameFilter.find("Crossland") ',BrandFilter," row ",count) 
-     FilteredFrame=FilteredFrame.drop([count])
-   except:
-    count+0;
-    #print("Failed Erasure BuilderNameFilter ",BuilderNameFilter)
-    
-    
- 
-   #print(CommunityMarket2," Alerts more for CommunityMarketADF total=",CommunityMarketADF.\
-  #count(CommunityMarket2)," vs CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray\
-  #.count(CommunityMarket2))
-   if CommunityMarketArray.count(CommunityMarket2)>1:
-    #print("CommunityMarketArray remove ",CommunityMarket2," times occurs= ",\
-          #CommunityMarketArray.count(CommunityMarket2)," row ",count)
-    CatchDiscards.append(count)
-    FilteredFrame.drop([count])
-    
-    #print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter,"> ",CommunityMarket2)
-   #print("CommunityMarket2 ",CommunityMarket2)
-   if CommunityMarketNN.count(Community2+"-"+Market2N)>1:
-    #print("CommunityMarketNN  remove ",Community2+"-"+Market2N," times Occurs ",\
-          #CommunityMarketNN.count(Community2+"-"+Market2N)," row ",count)
-    FilteredFrame.drop([count])
-    CatchDiscards.append(count)
-    
-  except:
-   count+0;
-   #print("Failed loop in main filterloop")
-  count+=1;
- CatchDiscards=list(dict.fromkeys(CatchDiscards))
- print("size of CatchDiscard Array ",len(CatchDiscards))
- if len(CatchDiscards)!=0:
-  print("Length of Frame Before ",len(FilteredFrame)) 
-  count2=0;
-  #print(CatchDiscards)
-  while count2<len(CatchDiscards):
-   print("CatchDiscard ",len(CatchDiscards))
-   #print("CatchDiscard  ",CatchDiscards[count2])
-   try:
-    try:
-     if FilteredFrame['Builder'][count2].find("Clayton")!=-1:
-      CatchDiscards.append(count)
-      #print('second loop ("Clayton") ',FilteredFrame['Builder'][count2]," row ",count2)
-      FilteredFrame=FilteredFrame.drop([count2])
-    except:
-     count+0;
-     CatchDiscards.append(count)
-     #print("Failed Erasure 2nd loop") 
-    
-    
-    try:
-     if FilteredFrame['Brand'][count2].find("Clayton")!=-1:
-      CatchDiscards.append(count)
-      #print('second loop ("Clayton") ',FilteredFrame['Brand'][count2]," row ",count2)
-      FilteredFrame=FilteredFrame.drop([count2])
-    except:
-     count+0;
-     CatchDiscards.append(count)
-     #print("Failed Erasure 2nd loop") 
-     
-  
-
-    
-    FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
-    CatchDiscards.append(count)
-    #print("Drop row ",count2)
-   except:
-    count+0;
-    CatchDiscards.append(count)
-   #print("Frame Length ",len(FilteredFrame['Brand Name']))
-   count2+=1; 
-  print("Length of Frame After ",len(FilteredFrame))
-  FilteredFrame=filterNonParticipators(FilteredFrame)
- LastFilter="" 
- LastCount=0 
-   
- #print(FilteredFrame) 
- print("End Filter") 
- return FilteredFrame 
-"""
 
 def MergeURLs(chan,chan2):
  print("MergeURLs() start for ",chan2)
