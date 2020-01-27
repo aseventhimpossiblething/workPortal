@@ -285,6 +285,11 @@ def filterNonParticipators(FrameToBeFiltered):
   while count2<len(CatchDiscards):
    #print("CatchDiscard  ",CatchDiscards[count2])
    try:
+    if BuilderNameFilter.find("Clayton")!=-1:
+    #CatchDiscards.append(count)
+    print('BuilderNameFilter.find("Clayton") ',BrandFilter," row ",count2)
+    FilteredFrame=FilteredFrame.drop([count2])
+    
     FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
     print("Drop row ",count2)
    except:
