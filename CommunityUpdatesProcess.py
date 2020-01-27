@@ -202,7 +202,8 @@ def filterNonParticipators(FrameToBeFiltered):
    if BuilderNameFilter.find("G & I")!=-1:
     CatchDiscards.append(count) 
     print('BuilderNameFilter.find("G & I") ',BrandFilter)
-   if BuilderNameFilterunt) 
+   if BuilderNameFilter.find("Crossland")!=-1:
+    CatchDiscards.append(count) 
     print('BuilderNameFilter.find("Crossland") ',BrandFilter)  
      
     
