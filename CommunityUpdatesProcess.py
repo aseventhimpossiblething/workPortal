@@ -358,9 +358,9 @@ def filterNonParticipators(FrameToBeFiltered):
    #print("Failed loop in main filterloop")
   count+=1;
  CatchDiscards=list(dict.fromkeys(CatchDiscards))
- #print("size of CatchDiscard Array ",len(CatchDiscards)) 
+ print("size of CatchDiscard Array ",len(CatchDiscards)) 
  if len(CatchDiscards)!=0:
-  #print("Length of Frame Before ",len(FilteredFrame)) 
+  print("Length of Frame Before ",len(FilteredFrame)) 
   count2=0;
   #print(CatchDiscards)
   while count2<len(CatchDiscards):
@@ -408,7 +408,7 @@ def filterNonParticipators(FrameToBeFiltered):
  LastFilter="" 
  LastCount=0 
    
- print(FilteredFrame) 
+ #print(FilteredFrame) 
  print("End Filter") 
  return FilteredFrame 
  
