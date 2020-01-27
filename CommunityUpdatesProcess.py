@@ -70,7 +70,7 @@ def WorkingBing():
 
 
 def filterNonParticipators(theFrame):
- theFrame[theFrame['model'].str.contains('ac')]
+ theFrame[theFrame['Brand Name'].str.contains('Clayton')]
  """
  theFrame=theFrame;
  print("at start of filter len(theFrame) ",len(theFrame));
