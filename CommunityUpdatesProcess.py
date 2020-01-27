@@ -146,7 +146,7 @@ def filterNonParticipators(FrameToBeFiltered):
      CatchDiscards.append(count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure",Brand remove ",BrandFilter)
+    print("Failed Erasure Brand remove ",BrandFilter)
    
    try:
     if FilterString.find(CommIDFilter)!=-1:
@@ -154,7 +154,7 @@ def filterNonParticipators(FrameToBeFiltered):
      CatchDiscards.append(count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-     print("Failed Erasure",Community remove ",CommIDFilter)
+     print("Failed Erasure Community remove ",CommIDFilter)
            
    try: 
     if FilterString.find(BuilderNameFilter)!=-1:
@@ -162,7 +162,7 @@ def filterNonParticipators(FrameToBeFiltered):
      CatchDiscards.append(count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure","BuilderNameFilter ",BuilderNameFilter) 
+    print("Failed Erasure BuilderNameFilter ",BuilderNameFilter) 
     
    try: 
     if BrandFilter.find("Clayton")!=-1:
