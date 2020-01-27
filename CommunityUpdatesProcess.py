@@ -87,7 +87,7 @@ def filterNonParticipators(theFrame):
  def wordLoop():
   FilterTerms=['Clayton','Freedom']
   wlcount=0;
-  while wlcount<len(FilterTerms=['Clayton','Freedom']):
+  while wlcount<len(FilterTerms):
    print(FilterTerms[wlcount]," ",wlcount )
   subfilter("Clayton");
   #return FilterTerms[wlcount]
