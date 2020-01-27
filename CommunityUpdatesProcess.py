@@ -114,7 +114,7 @@ def filterNonParticipators(FrameToBeFiltered):
    #print("CommunityMarket ",CommunityMarket)
    #print("COMMUNITY MARKETS!!!  ",CommunityMarketsArray)
   except:
-   print("Failed Scount Loop")
+   #print("Failed Scount Loop")
   Scount+=1
  #print("CommunityMarketArray LENGTH ",len(CommunityMarket)
  #print("COMMUNITY MARKETS!!!  ",CommunityMarketArray)
@@ -228,7 +228,8 @@ def filterNonParticipators(FrameToBeFiltered):
     #print("CommunityMarketArray.count(CommunityMarket2)=",CommunityMarketArray.count(CommunityMarket2))      
     #print("_______________________________________")
   except:
-   print("Failed loop in main filterloop")
+   #count+0;
+   #print("Failed loop in main filterloop")
   count+=1;
  CatchDiscards=list(dict.fromkeys(CatchDiscards))
  print("size of CatchDiscard Array ",len(CatchDiscards)) 
