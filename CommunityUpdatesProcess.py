@@ -70,8 +70,11 @@ def WorkingBing():
 
 
 def filterNonParticipators(theFrame):
+ theFrame=theFrame.drop_duplicates();
+ theFrame=theFrame.dropna()
  #theFrame.query('Brand Name'=='Clayton')
- theFrame[theFrame['Brand Name']=='Clayton']
+ #theFrame[theFrame['Brand Name']=='Clayton']
+ #theFrame[]
  """
  theFrame=theFrame;
  print("at start of filter len(theFrame) ",len(theFrame));
