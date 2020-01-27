@@ -96,7 +96,7 @@ def filterNonParticipators(theFrame):
   #return FilterTerms[wlcount]
  
  #wordLoop(theFrame);
- theFrame=subfilter("Clayton")
+ theFrame=subfilter("Clayton",theFrame)
  print("At end of Filter len(theFrame) ",len(theFrame))
  return theFrame;
  
