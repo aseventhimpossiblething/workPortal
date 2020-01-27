@@ -70,7 +70,7 @@ def WorkingBing():
 
 
 def filterNonParticipators(theFrame):
- theFrame.query('Brand Name'=='Clayton')
+ #theFrame.query('Brand Name'=='Clayton')
  theFrame[theFrame['Brand Name']=='Clayton']
  """
  theFrame=theFrame;
