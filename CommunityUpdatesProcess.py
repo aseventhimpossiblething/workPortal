@@ -141,108 +141,108 @@ def filterNonParticipators(FrameToBeFiltered):
   
    CommunityMarket2=Community2.replace(" ","")+"-"+Market2 
    if FilterString.find(BrandFilter)!=-1:
-    print(" Brand remove ",BrandFilter)
+    print(" Brand remove ",BrandFilter," row ",count)
     CatchDiscards.append(count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if FilterString.find(CommIDFilter)!=-1:
-    print("Community remove ",CommIDFilter)
+    print("Community remove ",CommIDFilter," row ",count)
     CatchDiscards.append(count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if FilterString.find(BuilderNameFilter)!=-1:
-    print("Builder remove ",BuilderNameFilter)
+    print("Builder remove ",BuilderNameFilter," row ",count)
     CatchDiscards.append(count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if BrandFilter.find("Clayton")!=-1:
     CatchDiscards.append(count)
-    print('BrandFilter.find("Clayton") ',BrandFilter)
+    print('BrandFilter.find("Clayton") ',BrandFilter," row ",count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if BrandFilter.find("Freedom")!=-1:
     CatchDiscards.append(count) 
-    print('BrandFilter.find("Freedom") ',BrandFilter)
+    print('BrandFilter.find("Freedom") ',BrandFilter," row ",count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if BrandFilter.find("Oakwood")!=-1:
     CatchDiscards.append(count)
     FilteredFrame=FilteredFrame.drop([count])
-    print('BrandFilter.find("Oakwood") ',BrandFilter)
+    print('BrandFilter.find("Oakwood") ',BrandFilter," row ",count)
     
    if BrandFilter.find("Craftmark")!=-1:
     CatchDiscards.append(count) 
-    print('BrandFilter.find("Craftmark") ',BrandFilter)
+    print('BrandFilter.find("Craftmark") ',BrandFilter," row ",count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if BrandFilter.find("G & I")!=-1:
     CatchDiscards.append(count) 
-    print('BrandFilter.find("G & I") ',BrandFilter)
+    print('BrandFilter.find("G & I") ',BrandFilter," row ",count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if BrandFilter.find("Crossland")!=-1:
     CatchDiscards.append(count) 
-    print('BrandFilter.find("Crossland") ',BrandFilter) 
+    print('BrandFilter.find("Crossland") ',BrandFilter," row ",count) 
     FilteredFrame=FilteredFrame.drop([count])
     
    if CommIDFilter.find("Clayton")!=-1:
     CatchDiscards.append(count)
-    print('CommIDFilter.find("Clayton") ',BrandFilter)
+    print('CommIDFilter.find("Clayton") ',BrandFilter," row ",count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if CommIDFilter.find("Freedom")!=-1:
     CatchDiscards.append(count) 
-    print('CommIDFilter.find("Freedom") ',BrandFilter)
+    print('CommIDFilter.find("Freedom") ',BrandFilter," row ",count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if CommIDFilter.find("Oakwood")!=-1:
     CatchDiscards.append(count)
-    print('CommIDFilter.find("Oakwood") ',BrandFilter)
+    print('CommIDFilter.find("Oakwood") ',BrandFilter," row ",count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if CommIDFilter.find("Craftmark")!=-1:
     CatchDiscards.append(count) 
-    print('CommIDFilter.find("Craftmark") ',BrandFilter)
+    print('CommIDFilter.find("Craftmark") ',BrandFilter," row ",count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if CommIDFilter.find("G & I")!=-1:
     CatchDiscards.append(count) 
-    print('CommIDFilter.find("G & I") ',BrandFilter)
+    print('CommIDFilter.find("G & I") ',BrandFilter," row ",count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if CommIDFilter.find("Crossland")!=-1:
     CatchDiscards.append(count) 
-    print('CommIDFilter.find("Crossland") ',BrandFilter)
+    print('CommIDFilter.find("Crossland") ',BrandFilter," row ",count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if BuilderNameFilter.find("Clayton")!=-1:
     CatchDiscards.append(count)
-    print('BuilderNameFilter.find("Clayton") ',BrandFilter)
+    print('BuilderNameFilter.find("Clayton") ',BrandFilter," row ",count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if BuilderNameFilter.find("Freedom")!=-1:
     CatchDiscards.append(count) 
-    print('BuilderNameFilter.find("Freedom") ',BrandFilter)
+    print('BuilderNameFilter.find("Freedom") ',BrandFilter," row ",count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if BuilderNameFilter.find("Oakwood")!=-1:
     CatchDiscards.append(count)
-    print('BuilderNameFilter.find("Oakwood") ',BrandFilter)
+    print('BuilderNameFilter.find("Oakwood") ',BrandFilter," row ",count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if BuilderNameFilter.find("Craftmark")!=-1:
     BuilderNameFilter.append(count) 
-    print('BuilderNameFilter.find("Craftmark") ',BrandFilter)
+    print('BuilderNameFilter.find("Craftmark") ',BrandFilter," row ",count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if BuilderNameFilter.find("G & I")!=-1:
     CatchDiscards.append(count) 
-    print('BuilderNameFilter.find("G & I") ',BrandFilter)
+    print('BuilderNameFilter.find("G & I") ',BrandFilter," row ",count)
     FilteredFrame=FilteredFrame.drop([count])
     
    if BuilderNameFilter.find("Crossland")!=-1:
     CatchDiscards.append(count) 
-    print('BuilderNameFilter.find("Crossland") ',BrandFilter) 
+    print('BuilderNameFilter.find("Crossland") ',BrandFilter," row ",count) 
     FilteredFrame=FilteredFrame.drop([count])
      
     
@@ -253,15 +253,18 @@ def filterNonParticipators(FrameToBeFiltered):
    #if CommunityMarketADF.count(CommunityMarket2) > CommunityMarketArray.count(CommunityMarket2):
    #print(CommunityMarket2," Alerts more for CommunityMarketADF total=",CommunityMarketADF.count(CommunityMarket2)," vs CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
    if CommunityMarketArray.count(CommunityMarket2)>1:
-    print("CommunityMarketArray remove ",CommunityMarket2," times occurs= ",CommunityMarketArray.count(CommunityMarket2))
+    print("CommunityMarketArray remove ",CommunityMarket2," times occurs= ",\
+          CommunityMarketArray.count(CommunityMarket2)," row ",count)
     CatchDiscards.append(count)
     FilteredFrame.drop([count])
     
     #print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter,"> ",CommunityMarket2)
    #print("CommunityMarket2 ",CommunityMarket2)
    if CommunityMarketNN.count(Community2+"-"+Market2N)>1:
-    print("CommunityMarketNN  remove ",Community2+"-"+Market2N," times Occurs ",CommunityMarketNN.count(Community2+"-"+Market2N))
+    print("CommunityMarketNN  remove ",Community2+"-"+Market2N," times Occurs ",\
+          CommunityMarketNN.count(Community2+"-"+Market2N)," row ",count)
     FilteredFrame.drop([count])
+    
     
     #print("_______________________________________")
     #print("CommunityMarketNN= ",CommunityMarketNN.count(Community2+"-"+Market2N))
@@ -283,6 +286,7 @@ def filterNonParticipators(FrameToBeFiltered):
    #print("CatchDiscard  ",CatchDiscards[count2])
    try:
     FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
+    print("Drop row ",count2)
    except:
     count+0;
    #print("Frame Length ",len(FilteredFrame['Brand Name']))
