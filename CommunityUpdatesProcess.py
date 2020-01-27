@@ -80,18 +80,19 @@ def filterNonParticipators(theFrame):
   theBrand=str(theFrame0[[scount]]);
   while scount<len(theFrame0):
    if theBrand.find(word)!=-1:
-    theFrame0=theFram0.drop([scount]);
+    theFrame=theFrame.drop([scount]);
     print("theBrand ",theBrand);
    scount+=1; 
-  return theFrame0;
+  return theFrame;
  #subfilter("Clayton");
- 
+ """
  def wordLoop(theFrame):
   FilterTerms=['Clayton','Freedom']
   wlcount=0;
   while wlcount<len(FilterTerms):
    print(FilterTerms[wlcount]," ",wlcount )
    wlcount+=1;
+  """ 
   #subfilter("Clayton",theFrame);
   #return FilterTerms[wlcount]
  
