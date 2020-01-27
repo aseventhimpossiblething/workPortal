@@ -92,7 +92,7 @@ def filterNonParticipators(theFrame):
      print("Filter is not finding word count ",scount)
      print(" filter did not drop theBrand ",theBrand)
    scount+=1;
-  if found!=0;
+  if found!=0:
    subfilter(word,theFrame);
    
   return theFrame;
