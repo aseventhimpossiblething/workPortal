@@ -112,6 +112,7 @@ def filterNonParticipators(FrameToBeFiltered):
  count=0;
  
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
+  print(len(CatchDiscards))
   try:
    BrandFilter=str(str(numpy.array(FilteredFrame['Brand Name'])[[count]]).replace("']","")).replace("['","")
    CommIDFilter=str(str(numpy.array(FilteredFrame['Community Id'])[[count]]).replace("']","")).replace("['","")
