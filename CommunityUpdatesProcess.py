@@ -139,62 +139,97 @@ def filterNonParticipators(FrameToBeFiltered):
    Market2N=str(str(numpy.array(FilteredFrame['Market Name'])[[count]]).replace("']","")).\
    replace("['","").replace('"]','').replace('["','')
   
-   CommunityMarket2=Community2.replace(" ","")+"-"+Market2 
-   if FilterString.find(BrandFilter)!=-1:
-    print(" Brand remove ",BrandFilter," row ",count)
-    CatchDiscards.append(count)
-    FilteredFrame=FilteredFrame.drop([count])
+   CommunityMarket2=Community2.replace(" ","")+"-"+Market2
+   try: 
+    if FilterString.find(BrandFilter)!=-1:
+     print(" Brand remove ",BrandFilter," row ",count)
+     CatchDiscards.append(count)
+     FilteredFrame=FilteredFrame.drop([count])
+   except:
+    print("Failed Erasure")
+   
+   try:
+    if FilterString.find(CommIDFilter)!=-1:
+     print("Community remove ",CommIDFilter," row ",count)
+     CatchDiscards.append(count)
+     FilteredFrame=FilteredFrame.drop([count])
+    except:
+    print("Failed Erasure")
+   try: 
+    if FilterString.find(BuilderNameFilter)!=-1:
+     print("Builder remove ",BuilderNameFilter," row ",count)
+     CatchDiscards.append(count)
+     FilteredFrame=FilteredFrame.drop([count])
+   except:
+    print("Failed Erasure") 
     
-   if FilterString.find(CommIDFilter)!=-1:
-    print("Community remove ",CommIDFilter," row ",count)
-    CatchDiscards.append(count)
-    FilteredFrame=FilteredFrame.drop([count])
+   try: 
+    if BrandFilter.find("Clayton")!=-1:
+     CatchDiscards.append(count)
+     print('BrandFilter.find("Clayton") ',BrandFilter," row ",count)
+     FilteredFrame=FilteredFrame.drop([count])
+   except:
+    print("Failed Erasure") 
+   
+   try:
+    if BrandFilter.find("Freedom")!=-1:
+     CatchDiscards.append(count) 
+     print('BrandFilter.find("Freedom") ',BrandFilter," row ",count)
+     FilteredFrame=FilteredFrame.drop([count])
+   except:
+    print("Failed Erasure")
+   
+   try:
+    if BrandFilter.find("Oakwood")!=-1:
+     CatchDiscards.append(count)
+     FilteredFrame=FilteredFrame.drop([count])
+     print('BrandFilter.find("Oakwood") ',BrandFilter," row ",count)
+   except:
+    print("Failed Erasure") 
+   
+   try:
+    if BrandFilter.find("Craftmark")!=-1:
+     CatchDiscards.append(count) 
+     print('BrandFilter.find("Craftmark") ',BrandFilter," row ",count)
+     FilteredFrame=FilteredFrame.drop([count])
+   except:
+    print("Failed Erasure") 
+   
+   
+   try:
+    if BrandFilter.find("G & I")!=-1:
+     CatchDiscards.append(count) 
+     print('BrandFilter.find("G & I") ',BrandFilter," row ",count)
+     FilteredFrame=FilteredFrame.drop([count])
+   except:
+    print("Failed Erasure") 
     
-   if FilterString.find(BuilderNameFilter)!=-1:
-    print("Builder remove ",BuilderNameFilter," row ",count)
-    CatchDiscards.append(count)
-    FilteredFrame=FilteredFrame.drop([count])
+   try: 
+    if BrandFilter.find("Crossland")!=-1:
+     CatchDiscards.append(count) 
+     print('BrandFilter.find("Crossland") ',BrandFilter," row ",count) 
+     FilteredFrame=FilteredFrame.drop([count])
+   except:
+    print("Failed Erasure") 
     
-   if BrandFilter.find("Clayton")!=-1:
-    CatchDiscards.append(count)
-    print('BrandFilter.find("Clayton") ',BrandFilter," row ",count)
-    FilteredFrame=FilteredFrame.drop([count])
+   
+   
+   try:
+    if CommIDFilter.find("Clayton")!=-1:
+     CatchDiscards.append(count)
+     print('CommIDFilter.find("Clayton") ',BrandFilter," row ",count)
+     FilteredFrame=FilteredFrame.drop([count])
+    except:
+    print("Failed Erasure")
     
-   if BrandFilter.find("Freedom")!=-1:
-    CatchDiscards.append(count) 
-    print('BrandFilter.find("Freedom") ',BrandFilter," row ",count)
-    FilteredFrame=FilteredFrame.drop([count])
-    
-   if BrandFilter.find("Oakwood")!=-1:
-    CatchDiscards.append(count)
-    FilteredFrame=FilteredFrame.drop([count])
-    print('BrandFilter.find("Oakwood") ',BrandFilter," row ",count)
-    
-   if BrandFilter.find("Craftmark")!=-1:
-    CatchDiscards.append(count) 
-    print('BrandFilter.find("Craftmark") ',BrandFilter," row ",count)
-    FilteredFrame=FilteredFrame.drop([count])
-    
-   if BrandFilter.find("G & I")!=-1:
-    CatchDiscards.append(count) 
-    print('BrandFilter.find("G & I") ',BrandFilter," row ",count)
-    FilteredFrame=FilteredFrame.drop([count])
-    
-   if BrandFilter.find("Crossland")!=-1:
-    CatchDiscards.append(count) 
-    print('BrandFilter.find("Crossland") ',BrandFilter," row ",count) 
-    FilteredFrame=FilteredFrame.drop([count])
-    
-   if CommIDFilter.find("Clayton")!=-1:
-    CatchDiscards.append(count)
-    print('CommIDFilter.find("Clayton") ',BrandFilter," row ",count)
-    FilteredFrame=FilteredFrame.drop([count])
-    
-   if CommIDFilter.find("Freedom")!=-1:
-    CatchDiscards.append(count) 
-    print('CommIDFilter.find("Freedom") ',BrandFilter," row ",count)
-    FilteredFrame=FilteredFrame.drop([count])
-    
+   try: 
+    if CommIDFilter.find("Freedom")!=-1:
+     CatchDiscards.append(count) 
+     print('CommIDFilter.find("Freedom") ',BrandFilter," row ",count)
+     FilteredFrame=FilteredFrame.drop([count])
+   except:
+    print("Failed Erasure")
+   
    if CommIDFilter.find("Oakwood")!=-1:
     CatchDiscards.append(count)
     print('CommIDFilter.find("Oakwood") ',BrandFilter," row ",count)
@@ -285,10 +320,17 @@ def filterNonParticipators(FrameToBeFiltered):
   while count2<len(CatchDiscards):
    #print("CatchDiscard  ",CatchDiscards[count2])
    try:
-    if BuilderNameFilter.find("Clayton")!=-1:
-    #CatchDiscards.append(count)
-    print('BuilderNameFilter.find("Clayton") ',BrandFilter," row ",count2)
-    FilteredFrame=FilteredFrame.drop([count2])
+    """ 
+    if FilteredFrame['Builder'][count2].find("Clayton")!=-1:
+     #CatchDiscards.append(count)
+     print('second loop ("Clayton") ',FilteredFrame['Builder'][count2]," row ",count2)
+     FilteredFrame=FilteredFrame.drop([count2])
+     
+     if FilteredFrame['Brand'][count2].find("Clayton")!=-1:
+     #CatchDiscards.append(count)
+     print('second loop ("Clayton") ',FilteredFrame['Brand'][count2]," row ",count2)
+     FilteredFrame=FilteredFrame.drop([count2])
+     """
     
     FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
     print("Drop row ",count2)
