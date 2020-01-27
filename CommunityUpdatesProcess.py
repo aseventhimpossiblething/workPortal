@@ -76,21 +76,22 @@ def filterNonParticipators(theFrame):
  
  def subfilter(word,theFrame):
   theFrame0=numpy.array(theFrame['Brand Name']);
+  recursion_level=0;
   scount=0;
   found=0;
   theBrand=str(theFrame0[[scount]]);
-  print("Running Subfilter ")
+  print("Running Subfilter recusion Level ",recursion_level)
   while scount<len(theFrame0):
    theBrand=str(theFrame0[[scount]]);
    #print("Looping in Subfilter")
    try:
     if theBrand.find(word)!=-1:
      theFrame=theFrame.drop([scount]);
-     print(" filter droped theBrand ",theBrand);
+     #print(" filter droped theBrand ",theBrand);
      found+=1
     else:
      if scount<100:
-      print("Filter is not finding word count ",scount)
+      #print("Filter is not finding word count ",scount)
       print(" filter did not drop theBrand ",theBrand)
    except:
     found+0;
@@ -98,6 +99,7 @@ def filterNonParticipators(theFrame):
    scount+=1;
    
   if found!=0:
+   recursion_level+=1
    subfilter(word,theFrame);
    
   return theFrame;
