@@ -75,7 +75,7 @@ def filterNonParticipators(theFrame):
  theFrame.reset_index();
  
  def subfilter(word,theFrame):
-  theFrame0=numpy.array(FrameToBeFiltered['Brand Name']]);
+  theFrame0=numpy.array(FrameToBeFiltered['Brand Name']);
   scount=0;
   theBrand=theFrame0[[scount]];
   while scount<theBrand:
