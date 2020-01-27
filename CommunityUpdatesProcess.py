@@ -142,184 +142,203 @@ def filterNonParticipators(FrameToBeFiltered):
    CommunityMarket2=Community2.replace(" ","")+"-"+Market2
    try: 
     if FilterString.find(BrandFilter)!=-1:
-     print(" Brand remove ",BrandFilter," row ",count)
+     #print(" Brand remove ",BrandFilter," row ",count)
      CatchDiscards.append(count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure Brand remove ",BrandFilter)
+    count+0;
+    #print("Failed Erasure Brand remove ",BrandFilter)
    
    try:
     if FilterString.find(CommIDFilter)!=-1:
-     print("Community remove ",CommIDFilter," row ",count)
+     #print("Community remove ",CommIDFilter," row ",count)
      CatchDiscards.append(count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-     print("Failed Erasure Community remove ",CommIDFilter)
+     count+0;
+     #print("Failed Erasure Community remove ",CommIDFilter)
            
    try: 
     if FilterString.find(BuilderNameFilter)!=-1:
-     print("Builder remove ",BuilderNameFilter," row ",count)
+     #print("Builder remove ",BuilderNameFilter," row ",count)
      CatchDiscards.append(count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure BuilderNameFilter ",BuilderNameFilter) 
+     count+0;
+     #print("Failed Erasure BuilderNameFilter ",BuilderNameFilter) 
     
    try: 
     if BrandFilter.find("Clayton")!=-1:
      CatchDiscards.append(count)
-     print('BrandFilter.find("Clayton") ',BrandFilter," row ",count)
+     #print('BrandFilter.find("Clayton") ',BrandFilter," row ",count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure BrandFilter ",BrandFilter) 
+    count+0;
+    #print("Failed Erasure BrandFilter ",BrandFilter) 
    
    try:
     if BrandFilter.find("Freedom")!=-1:
      CatchDiscards.append(count) 
-     print('BrandFilter.find("Freedom") ',BrandFilter," row ",count)
+     #print('BrandFilter.find("Freedom") ',BrandFilter," row ",count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure BrandFilter ",BrandFilter)
+    count+0;
+    #print("Failed Erasure BrandFilter ",BrandFilter)
    
    try:
     if BrandFilter.find("Oakwood")!=-1:
      CatchDiscards.append(count)
      FilteredFrame=FilteredFrame.drop([count])
-     print('BrandFilter.find("Oakwood") ',BrandFilter," row ",count)
+     #print('BrandFilter.find("Oakwood") ',BrandFilter," row ",count)
    except:
-    print("Failed Erasure BrandFilter ",BrandFilter) 
+    count+0;
+    #print("Failed Erasure BrandFilter ",BrandFilter) 
    
    try:
     if BrandFilter.find("Craftmark")!=-1:
      CatchDiscards.append(count) 
-     print('BrandFilter.find("Craftmark") ',BrandFilter," row ",count)
+     #print('BrandFilter.find("Craftmark") ',BrandFilter," row ",count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure BrandFilter ",BrandFilter) 
+    count+0;
+    #print("Failed Erasure BrandFilter ",BrandFilter) 
    
    
    try:
     if BrandFilter.find("G & I")!=-1:
      CatchDiscards.append(count) 
-     print('BrandFilter.find("G & I") ',BrandFilter," row ",count)
+     #print('BrandFilter.find("G & I") ',BrandFilter," row ",count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed ErasureBrandFilter ",BrandFilter) 
+    count+0;
+    #print("Failed ErasureBrandFilter ",BrandFilter) 
     
    try: 
     if BrandFilter.find("Crossland")!=-1:
      CatchDiscards.append(count) 
-     print('BrandFilter.find("Crossland") ',BrandFilter," row ",count) 
+     #print('BrandFilter.find("Crossland") ',BrandFilter," row ",count) 
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure BrandFilter ",BrandFilter) 
+    count+0;
+    #print("Failed Erasure BrandFilter ",BrandFilter) 
     
    
    
    try:
     if CommIDFilter.find("Clayton")!=-1:
      CatchDiscards.append(count)
-     print('CommIDFilter.find("Clayton") ',BrandFilter," row ",count)
+     #print('CommIDFilter.find("Clayton") ',BrandFilter," row ",count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-     print("Failed Erasure CommIDFilter ",CommIDFilter)
+    count+0;
+    #print("Failed Erasure CommIDFilter ",CommIDFilter)
     
    try: 
     if CommIDFilter.find("Freedom")!=-1:
      CatchDiscards.append(count) 
-     print('CommIDFilter.find("Freedom") ',BrandFilter," row ",count)
+     #print('CommIDFilter.find("Freedom") ',BrandFilter," row ",count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure CommIDFilter ",CommIDFilter)
+    count+0;
+    #print("Failed Erasure CommIDFilter ",CommIDFilter)
    
    try:
     if CommIDFilter.find("Oakwood")!=-1:
      CatchDiscards.append(count)
-     print('CommIDFilter.find("Oakwood") ',BrandFilter," row ",count)
+     #print('CommIDFilter.find("Oakwood") ',BrandFilter," row ",count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure CommIDFilter",CommIDFilter) 
+    count+0;
+    #print("Failed Erasure CommIDFilter",CommIDFilter) 
    
    try:
     if CommIDFilter.find("Craftmark")!=-1:
      CatchDiscards.append(count) 
-     print('CommIDFilter.find("Craftmark") ',BrandFilter," row ",count)
+     #print('CommIDFilter.find("Craftmark") ',BrandFilter," row ",count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure CommIDFilter ",CommIDFilter)
+    count+0;
+    #print("Failed Erasure CommIDFilter ",CommIDFilter)
     
    try: 
     if CommIDFilter.find("G & I")!=-1:
      CatchDiscards.append(count) 
-     print('CommIDFilter.find("G & I") ',BrandFilter," row ",count)
+     #print('CommIDFilter.find("G & I") ',BrandFilter," row ",count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure CommIDFilter ",CommIDFilter) 
+    count+0;
+    #print("Failed Erasure CommIDFilter ",CommIDFilter) 
     
     
    try: 
     if CommIDFilter.find("Crossland")!=-1:
      CatchDiscards.append(count) 
-     print('CommIDFilter.find("Crossland") ',BrandFilter," row ",count)
+     #print('CommIDFilter.find("Crossland") ',BrandFilter," row ",count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure CommIDFilter ",CommIDFilter) 
+    count+0;
+    #print("Failed Erasure CommIDFilter ",CommIDFilter) 
     
    try: 
     if BuilderNameFilter.find("Clayton")!=-1:
      CatchDiscards.append(count)
-     print('BuilderNameFilter.find("Clayton") ',BrandFilter," row ",count)
+     #print('BuilderNameFilter.find("Clayton") ',BrandFilter," row ",count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure BuilderNameFilter ",BuilderNameFilter) 
+    count+0;
+    #print("Failed Erasure BuilderNameFilter ",BuilderNameFilter) 
    
    try:
     if BuilderNameFilter.find("Freedom")!=-1:
      CatchDiscards.append(count) 
-     print('BuilderNameFilter.find("Freedom") ',BrandFilter," row ",count)
+     #print('BuilderNameFilter.find("Freedom") ',BrandFilter," row ",count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure BuilderNameFilter ",BuilderNameFilter)
+    count+0;
+    #print("Failed Erasure BuilderNameFilter ",BuilderNameFilter)
    
    try:
     if BuilderNameFilter.find("Oakwood")!=-1:
      CatchDiscards.append(count)
-     print('BuilderNameFilter.find("Oakwood") ',BrandFilter," row ",count)
+     #print('BuilderNameFilter.find("Oakwood") ',BrandFilter," row ",count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure BuilderNameFilter ",BuilderNameFilter)
+    count+0;
+    #print("Failed Erasure BuilderNameFilter ",BuilderNameFilter)
     
    try: 
     if BuilderNameFilter.find("Craftmark")!=-1:
      BuilderNameFilter.append(count) 
-     print('BuilderNameFilter.find("Craftmark") ',BrandFilter," row ",count)
+     #print('BuilderNameFilter.find("Craftmark") ',BrandFilter," row ",count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure ,BuilderNameFilter ",BuilderNameFilter)
+    count+0;
+    #print("Failed Erasure ,BuilderNameFilter ",BuilderNameFilter)
     
    try: 
     if BuilderNameFilter.find("G & I")!=-1:
      CatchDiscards.append(count) 
-     print('BuilderNameFilter.find("G & I") ',BrandFilter," row ",count)
+     #print('BuilderNameFilter.find("G & I") ',BrandFilter," row ",count)
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure BuilderNameFilter ",BuilderNameFilter)
+    count+0;
+    #print("Failed Erasure BuilderNameFilter ",BuilderNameFilter)
     
     
    try: 
     if BuilderNameFilter.find("Crossland")!=-1:
      CatchDiscards.append(count) 
-     print('BuilderNameFilter.find("Crossland") ',BrandFilter," row ",count) 
+     #print('BuilderNameFilter.find("Crossland") ',BrandFilter," row ",count) 
      FilteredFrame=FilteredFrame.drop([count])
    except:
-    print("Failed Erasure BuilderNameFilter ",BuilderNameFilter)
+    count+0;
+    #print("Failed Erasure BuilderNameFilter ",BuilderNameFilter)
     
     
-   #print("CommunityMarketADF.count(CommunityMarket2) ",CommunityMarketADF.count(CommunityMarket2))
-   #print("CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
-   #if CommunityMarketADF.count(CommunityMarket2)!=CommunityMarketArray.count(CommunityMarket2):
-   #print(CommunityMarket2, " Mismatch ","CommunityMarketADF.count(CommunityMarket2)=",CommunityMarketADF.count(CommunityMarket2)," CommunityMarketArray.count(CommunityMarket2)=",CommunityMarketArray.count(CommunityMarket2))
-   #if CommunityMarketADF.count(CommunityMarket2) > CommunityMarketArray.count(CommunityMarket2):
-   #print(CommunityMarket2," Alerts more for CommunityMarketADF total=",CommunityMarketADF.count(CommunityMarket2)," vs CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray.count(CommunityMarket2))
+ 
+   #print(CommunityMarket2," Alerts more for CommunityMarketADF total=",CommunityMarketADF.\
+  #count(CommunityMarket2)," vs CommunityMarketArray.count(CommunityMarket2) ",CommunityMarketArray\
+  #.count(CommunityMarket2))
    if CommunityMarketArray.count(CommunityMarket2)>1:
     print("CommunityMarketArray remove ",CommunityMarket2," times occurs= ",\
           CommunityMarketArray.count(CommunityMarket2)," row ",count)
@@ -329,25 +348,19 @@ def filterNonParticipators(FrameToBeFiltered):
     #print("occurs ",CommunityMarketArray.count(CommunityMarket2)," Times : ",BuilderNameFilter,"> ",CommunityMarket2)
    #print("CommunityMarket2 ",CommunityMarket2)
    if CommunityMarketNN.count(Community2+"-"+Market2N)>1:
-    print("CommunityMarketNN  remove ",Community2+"-"+Market2N," times Occurs ",\
-          CommunityMarketNN.count(Community2+"-"+Market2N)," row ",count)
+    #print("CommunityMarketNN  remove ",Community2+"-"+Market2N," times Occurs ",\
+          #CommunityMarketNN.count(Community2+"-"+Market2N)," row ",count)
     FilteredFrame.drop([count])
-    
-    
-    #print("_______________________________________")
-    #print("CommunityMarketNN= ",CommunityMarketNN.count(Community2+"-"+Market2N))
     CatchDiscards.append(count)
-    #print("Community2"-"+Market2N= ",Community2"-"+Market2N)
-    #print("CommunityMarketArray.count(CommunityMarket2)=",CommunityMarketArray.count(CommunityMarket2))      
-    #print("_______________________________________")
+    
   except:
    count+0;
    #print("Failed loop in main filterloop")
   count+=1;
  CatchDiscards=list(dict.fromkeys(CatchDiscards))
- print("size of CatchDiscard Array ",len(CatchDiscards)) 
+ #print("size of CatchDiscard Array ",len(CatchDiscards)) 
  if len(CatchDiscards)!=0:
-  print("Length of Frame Before ",len(FilteredFrame)) 
+  #print("Length of Frame Before ",len(FilteredFrame)) 
   count2=0;
   #print(CatchDiscards)
   while count2<len(CatchDiscards):
@@ -356,19 +369,21 @@ def filterNonParticipators(FrameToBeFiltered):
     try:
      if FilteredFrame['Builder'][count2].find("Clayton")!=-1:
       CatchDiscards.append(count)
-      print('second loop ("Clayton") ',FilteredFrame['Builder'][count2]," row ",count2)
+      #print('second loop ("Clayton") ',FilteredFrame['Builder'][count2]," row ",count2)
       FilteredFrame=FilteredFrame.drop([count2])
     except:
-     print("Failed Erasure 2nd loop") 
+     count+0;
+     #print("Failed Erasure 2nd loop") 
     
     
     try:
      if FilteredFrame['Brand'][count2].find("Clayton")!=-1:
       CatchDiscards.append(count)
-      print('second loop ("Clayton") ',FilteredFrame['Brand'][count2]," row ",count2)
+      #print('second loop ("Clayton") ',FilteredFrame['Brand'][count2]," row ",count2)
       FilteredFrame=FilteredFrame.drop([count2])
     except:
-     print("Failed Erasure 2nd loop") 
+     count+0;
+     #print("Failed Erasure 2nd loop") 
      
      
      """
@@ -380,7 +395,7 @@ def filterNonParticipators(FrameToBeFiltered):
     
     FilteredFrame=FilteredFrame.drop(CatchDiscards[count2])
     CatchDiscards.append(count)
-    print("Drop row ",count2)
+    #print("Drop row ",count2)
    except:
     count+0;
    #print("Frame Length ",len(FilteredFrame['Brand Name']))
@@ -389,12 +404,7 @@ def filterNonParticipators(FrameToBeFiltered):
   FilteredFrame=filterNonParticipators(FilteredFrame)
  LastFilter="" 
  LastCount=0 
- """
- while LastCount<len(FilteredFrame['Community Name']):
-  ZCommunity=FilteredFrame['Community Name'] 
-  ZMarket=FilteredFrame['Market Name']
- """ 
-  
+   
  print(FilteredFrame) 
  print("End Filter") 
  return FilteredFrame 
