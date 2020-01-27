@@ -358,7 +358,17 @@ def filterNonParticipators(FrameToBeFiltered):
       print('second loop ("Clayton") ',FilteredFrame['Builder'][count2]," row ",count2)
       FilteredFrame=FilteredFrame.drop([count2])
     except:
-     print("Failed Erasure") 
+     print("Failed Erasure 2nd loop") 
+    
+    
+    try:
+     if FilteredFrame['Brand'][count2].find("Clayton")!=-1:
+      #CatchDiscards.append(count)
+      print('second loop ("Clayton") ',FilteredFrame['Brand'][count2]," row ",count2)
+      FilteredFrame=FilteredFrame.drop([count2])
+    except:
+     print("Failed Erasure 2nd loop") 
+     
      
      """
      if FilteredFrame['Brand'][count2].find("Clayton")!=-1:
