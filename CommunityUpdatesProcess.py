@@ -126,17 +126,17 @@ def filterNonParticipators(FrameToBeFiltered):
  #print("len(CommunityMarketADF) ",len(CommunityMarketADF))
  while count < len(numpy.array(FrameToBeFiltered['Brand Name'])):
   try:
-   BrandFilter=str(str(numpy.array(FrameToBeFiltered['Brand Name'])[[count]]).replace("']","")).replace("['","")
-   CommIDFilter=str(str(numpy.array(FrameToBeFiltered['Community Id'])[[count]]).replace("']","")).replace("['","")
-   BuilderNameFilter=str(str(numpy.array(FrameToBeFiltered['Builder Name'])[[count]]).replace("']","")).replace("['","")
-   Community2=str(str(numpy.array(FrameToBeFiltered['Community Name'])[[count]]).replace("']","")).\
+   BrandFilter=str(str(numpy.array(FilteredFrame['Brand Name'])[[count]]).replace("']","")).replace("['","")
+   CommIDFilter=str(str(numpy.array(FilteredFrame['Community Id'])[[count]]).replace("']","")).replace("['","")
+   BuilderNameFilter=str(str(numpy.array(FilteredFrame['Builder Name'])[[count]]).replace("']","")).replace("['","")
+   Community2=str(str(numpy.array(FilteredFrame['Community Name'])[[count]]).replace("']","")).\
    replace("['","").replace('"]','').replace('["','').replace("40s","").replace("40","")\
    .replace("45","").replace("45s","").replace("50","").replace("50s","").replace("55","").replace("55s","")\
    .replace("60","").replace("60s","").replace("65","").replace("65s","").replace("70","").replace("70s","")\
    .replace("75","").replace("75s","").replace("80","").replace("80s","").replace("85","").replace("85s","")\
    .replace("90","").replace("90s","").replace("100","").replace("110","")
-   Market2=str(FrameToBeFiltered['Market ID'][count])
-   Market2N=str(str(numpy.array(FrameToBeFiltered['Market Name'])[[count]]).replace("']","")).\
+   Market2=str(FilteredFrame['Market ID'][count])
+   Market2N=str(str(numpy.array(FilteredFrame['Market Name'])[[count]]).replace("']","")).\
    replace("['","").replace('"]','').replace('["','')
   
    CommunityMarket2=Community2.replace(" ","")+"-"+Market2 
