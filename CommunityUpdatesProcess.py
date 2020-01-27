@@ -373,6 +373,7 @@ def filterNonParticipators(FrameToBeFiltered):
       FilteredFrame=FilteredFrame.drop([count2])
     except:
      count+0;
+     CatchDiscards.append(count)
      #print("Failed Erasure 2nd loop") 
     
     
@@ -383,6 +384,7 @@ def filterNonParticipators(FrameToBeFiltered):
       FilteredFrame=FilteredFrame.drop([count2])
     except:
      count+0;
+     CatchDiscards.append(count)
      #print("Failed Erasure 2nd loop") 
      
      
@@ -398,6 +400,7 @@ def filterNonParticipators(FrameToBeFiltered):
     #print("Drop row ",count2)
    except:
     count+0;
+    CatchDiscards.append(count)
    #print("Frame Length ",len(FilteredFrame['Brand Name']))
    count2+=1; 
   print("Length of Frame After ",len(FilteredFrame))
