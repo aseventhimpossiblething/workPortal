@@ -96,6 +96,7 @@ def filterNonParticipators(theFrame):
     found+0;
     #print("try loop failed number ",scount)
    scount+=1;
+   
   if found!=0:
    subfilter(word,theFrame);
    
@@ -113,7 +114,10 @@ def filterNonParticipators(theFrame):
   #return FilterTerms[wlcount]
  
  #wordLoop(theFrame);
- theFrame=subfilter("Clayton",theFrame)
+ theFrame=subfilter("Clayton",theFrame);
+ theFrame=subfilter("Clayton ",theFrame);
+ theFrame=subfilter("Clay",theFrame)
+ 
  print("At end of Filter len(theFrame) ",len(theFrame))
  return theFrame;
  
