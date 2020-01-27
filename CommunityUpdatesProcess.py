@@ -89,6 +89,7 @@ def filterNonParticipators(theFrame):
   wlcount=0;
   while wlcount<len(FilterTerms):
    print(FilterTerms[wlcount]," ",wlcount )
+   wlcount+=1;
   subfilter("Clayton");
   #return FilterTerms[wlcount]
  
