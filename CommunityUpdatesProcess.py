@@ -94,7 +94,7 @@ def filterNonParticipators(theFrame):
       #print("Filter is not finding word count ",scount)
       #print(" filter did not drop theBrand ",theBrand)
    except:
-    found+0;
+    found=found+0;
     #print("try loop failed number ",scount)
    scount+=1;
    
