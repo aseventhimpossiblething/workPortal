@@ -78,7 +78,7 @@ def filterNonParticipators(theFrame):
   theFrame0=numpy.array(theFrame['Brand Name']);
   scount=0;
   theBrand=theFrame0[[scount]];
-  while scount<theBrand:
+  while scount<len(theFrame0):
    if theBrand.find(word)!=-1:
     theFrame0=theFram0.drop([scount]);
     print("theBrand ",theBrand);
