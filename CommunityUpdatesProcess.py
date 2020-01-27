@@ -80,7 +80,7 @@ def filterNonParticipators(theFrame):
   scount=0;
   found=0;
   theBrand=str(theFrame0[[scount]]);
-  print("Running Subfilter recusion Level ",recursion_level)
+  #print("Running Subfilter recusion Level ",recursion_level)
   while scount<len(theFrame0):
    theBrand=str(theFrame0[[scount]]);
    #print("Looping in Subfilter")
