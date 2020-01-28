@@ -175,7 +175,7 @@ def filterNonParticipators(theFrame):
  icount=5;
  while icount<len(theFrame['Community Name']):
   try:
-   print("Start of try before Community String")
+   #print("Start of try before Community String")
    Community=str(theFrame["Community Name"][icount]).replace("40s","").replace("40'","").replace("40","").replace("45s","")\
    .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
    .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
@@ -184,7 +184,7 @@ def filterNonParticipators(theFrame):
    .replace("85'","").replace("85","").replace("90s","").replace("90'","").replace("90","").replace("95s","")\
    .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
    .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
-   print("Community string and replace")
+   #print("Community string and replace")
    Community=theFrame["Community Name"][icount]
    #print("Community=theFrame['Community Name'][icount] ")
    DeDupstring=DeDupstring+" "+Community
@@ -196,8 +196,8 @@ def filterNonParticipators(theFrame):
    failcounter+=1;
   DeDupstring=DeDupstring+" "+Community
   icount+=1;
-  print("Switching Loops") 
-  print("times failed ",failcounter)
+ print("Switching Loops") 
+ print("times failed ",failcounter)
  icount0=0;
  while icount0<len(theFrame['Community Name']):
   try:
@@ -227,47 +227,7 @@ def filterNonParticipators(theFrame):
  
  return theFrame;
 
- """
- theFrame=theFrame;
- print("at start of filter len(theFrame) ",len(theFrame));
- theFrame.reset_index();
- 
- def subfilter(word,theFrame):
-  theFrame0=numpy.array(theFrame['Brand Name']);
-  #recursion_level=0;
-  scount=0;
-  found=0;
-  theBrand=str(theFrame0[[scount]]);
-  #print("Running Subfilter recusion Level ",recursion_level)
-  while scount<len(theFrame0):
-   theBrand=str(theFrame0[[scount]]);
-   #print("Looping in Subfilter")
-   try:
-    if theBrand.find(word)!=-1:
-     theFrame=theFrame.drop([scount]);
-     #print(" filter droped theBrand ",theBrand);
-     found+=1
-    else:
-     if scount<100:
-      scount+0;
-   except:
-     found=found+0;
-    
-   scount+=1;
-   
-  if found!=0:
-   #recursion_level+=1
-   subfilter(word,theFrame);
-   
-  return theFrame;
 
- #theFrame=subfilter("Clayton",theFrame);
- #theFrame=subfilter("Clayton ",theFrame);
- theFrame=subfilter("Clayt",theFrame)
- 
- print("At end of Filter len(theFrame) ",len(theFrame))
- return theFrame;
- """
 
 def MergeURLs(chan,chan2):
  print("MergeURLs() start for ",chan2)
