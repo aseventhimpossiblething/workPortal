@@ -166,7 +166,7 @@ def filterNonParticipators(theFrame):
   print("theFrame['Community Name'][23] Failed ")
   
   
-  
+ failcounter=0 
  DeDupstring=""
  icount=5;
  while icount<len(theFrame['Community Name']):
@@ -188,7 +188,8 @@ def filterNonParticipators(theFrame):
    #print(Community)
    #print("Successfull fire ",icount)
   except:
-   print("Row Skipped ",icount);
+   #print("Row Skipped ",icount);
+   failcounter+=1;
   DeDupstring=DeDupstring+" "+Community
   icount+=1;
   print("Switching Loops")
@@ -208,7 +209,7 @@ def filterNonParticipators(theFrame):
    
    #Community.drop()
    if DeDupstring.count(Community)>0:
-    print("found in string ",DeDupstring.count(Community)," times");
+    #print("found in string ",DeDupstring.count(Community)," times");
     theFrame.drop([icount0])
    
   except:
