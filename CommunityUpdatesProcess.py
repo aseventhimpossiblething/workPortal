@@ -70,7 +70,7 @@ def WorkingBing():
 
 
 def filterNonParticipators(theFrame):
- print(" ",len(theFrame))
+ #print(" ",len(theFrame))
  
  """
  theFrame['Community Name']=theFrame['Community Name'].str.replace("40s"," ").replace("40'"," ").replace("40"," ").replace("45s"," ")\
@@ -199,7 +199,7 @@ def filterNonParticipators(theFrame):
    .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
    .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
    
-   Community=theFrame["Community Name"][icount];
+   Community=theFrame["Community Name"][icount0];
    
    #Community.drop()
    if DeDupstring.count(Community)>0:
@@ -208,6 +208,9 @@ def filterNonParticipators(theFrame):
    
   except:
    icount0+0;
+  if count%10=0:
+   print("Second Loop Count ",icount0)
+   
   print("End of Filter ") 
  return theFrame;
 
