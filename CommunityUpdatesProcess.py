@@ -152,10 +152,10 @@ def filterNonParticipators(theFrame):
  .replace("85'","").replace("85","").replace("90s","").replace("90'","").replace("90","").replace("95s","")\
  .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
  .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
- 
+ """
  theFrame=theFrame.drop_duplicates();
  print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
- """
+ 
                                                             
  
  return theFrame;
