@@ -155,7 +155,8 @@ def filterNonParticipators(theFrame):
  print("theFrame[~theFrame['Builder Name'].str.contains('G & I')] ",len(theFrame))
  
  #print(theFrame['Community Name'])
- 
+ print("theFrame[[23]]",theFrame[[23]])
+ print("theFrame['Community Name'][23]",theFrame['Community Name'][23])
  DeDupstring=""
  icount=5;
  while icount<len(theFrame['Community Name']):
