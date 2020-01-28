@@ -73,7 +73,7 @@ def filterNonParticipators(theFrame):
  print(" ",len(theFrame))
  
  
- theFrame['Community Name']=theFrame['Community Name'].replace("40s","").replace("40'","").replace("40","").replace("45s","")\
+ theFrame=theFrame.str.replace("40s","").replace("40'","").replace("40","").replace("45s","")\
  .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
  .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
  .replace("65'","").replace("65","").replace("70s","").replace("70'","").replace("70","").replace("75s","")\
