@@ -210,8 +210,8 @@ def filterNonParticipators(theFrame):
    icount0+0;
   if icount%100==0:
    print("Second Loop Count ",icount0)
-   
-  print("End of Filter ") 
+  icount+=1; 
+ print("End of Filter ") 
  return theFrame;
 
 
