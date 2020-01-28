@@ -70,11 +70,18 @@ def WorkingBing():
 
 
 def filterNonParticipators(theFrame):
+ print("Length ",len(theFrame))
  theFrame=theFrame.drop_duplicates();
+ print("Length ",len(theFrame))
  theFrame=theFrame.dropna()
+ print("Length ",len(theFrame))
  #print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
  theFrame=theFrame[~theFrame['Brand Name'].str.contains('Clayton')]
- print(theFrame)
+ print("Length ",len(theFrame))
+ theFrame=theFrame[~theFrame['Brand Name'].str.contains('Clayton')]
+ print("Length ",len(theFrame))
+ theFrame=theFrame[~theFrame['Brand Name'].str.contains('Clayton')]
+ print("Length ",len(theFrame))
  return theFrame;
  #theFrame.query('Brand Name'=='Clayton')
  #theFrame[theFrame['Brand Name']=='Clayton']
