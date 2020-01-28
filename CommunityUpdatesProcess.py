@@ -154,8 +154,10 @@ def filterNonParticipators(theFrame):
  theFrame=theFrame[~theFrame['Builder Name'].str.contains('G & I')]
  print("theFrame[~theFrame['Builder Name'].str.contains('G & I')] ",len(theFrame))
  
+ print(theFrame['Community Name'])
+ 
  DeDupstring=""
- icount=0;
+ icount=5;
  while icount<len(theFrame['Community Name']):
   Community=str(theFrame["Community Name"][icount])#.replace("40s","")
   """
