@@ -154,17 +154,18 @@ def filterNonParticipators(theFrame):
  theFrame=theFrame[~theFrame['Builder Name'].str.contains('G & I')]
  print("theFrame[~theFrame['Builder Name'].str.contains('G & I')] ",len(theFrame))
  
+ """
  #print(theFrame['Community Name'])
  try:
-  print("theFrame[[23]] ",theFrame[[23]])
+  #print("theFrame[[23]] ",theFrame[[23]])
  except:
-  print("theFrame[[23]] failed")
+  #print("theFrame[[23]] failed")
  
  try:
   print("theFrame['Community Name'][23] ",theFrame['Community Name'][23])
  except:
   print("theFrame['Community Name'][23] Failed ")
-  
+  """
   
  failcounter=0 
  DeDupstring=""
@@ -182,9 +183,9 @@ def filterNonParticipators(theFrame):
    .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
    print("Community string and replace")
    Community=theFrame["Community Name"][icount]
-   print("Community=theFrame['Community Name'][icount] ")
+   #print("Community=theFrame['Community Name'][icount] ")
    DeDupstring=DeDupstring+" "+Community
-   print("DeDupSting Grew")
+   #print("DeDupSting Grew")
    #print(Community)
    #print("Successfull fire ",icount)
   except:
@@ -210,11 +211,11 @@ def filterNonParticipators(theFrame):
    
    #Community.drop()
    if DeDupstring.count(Community)>0:
-    #print("found in string ",DeDupstring.count(Community)," times");
+    print("found in string ",DeDupstring.count(Community)," times");
     theFrame.drop([icount0])
    
   except:
-   print("Exception on Second Loop ")
+   #print("Exception on Second Loop ")
  
  
  
