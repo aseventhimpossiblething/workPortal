@@ -81,7 +81,7 @@ def filterNonParticipators(theFrame):
  .replace("85'"," ").replace("85"," ").replace("90s"," ").replace("90'"," ").replace("90"," ").replace("95s"," ")\
  .replace("95'"," ").replace("95"," ").replace("100s"," ").replace("100'"," ").replace("100"," ").replace("105s"," ")\
  .replace("105'"," ").replace("105"," ").replace("110s"," ").replace("110'"," ").replace("110"," ")
- """
+ 
  theFrame=theFrame.replace({"40s":"","40's":"","(40s)":"","40s'":"","40'":"","40":"","50s":"","50's":"","(50s)":"",\
                    "50s'":"","50'":"","50":"","55s":"","55's":"","(55s)":"","55s'":"","55'":"","55":""\
                   ,"60s":"","60's":"","(60s)":"","60s'":"","60'":"","60":"","65s":"","65's":"","(65s)":"",\
@@ -90,6 +90,7 @@ def filterNonParticipators(theFrame):
                    "85s'":"","85'":"","85":"","90s":"","90's":"","(90s)":"","90s'":"","90'":"","90":"",\
                    "95s":"","95's":"","(95s)":"","95s'":"","95'":"","95":"","100s":"","100's":"","(100s)":""})
                    #"100s'":"",100":"","100":"","100":"","100'":"","(100)":"","100":"","100":"","100":""})
+ """                  
  
  
  theFrame=theFrame.drop_duplicates();
@@ -220,8 +221,6 @@ def filterNonParticipators(theFrame):
    subfilter(word,theFrame);
    
   return theFrame;
- 
- 
 
  #theFrame=subfilter("Clayton",theFrame);
  #theFrame=subfilter("Clayton ",theFrame);
