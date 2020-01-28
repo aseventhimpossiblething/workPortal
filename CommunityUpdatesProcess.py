@@ -202,6 +202,8 @@ def filterNonParticipators(theFrame):
    .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
    
    Community=theFrame["Community Name"][icount];
+   
+   #Community.drop()
    if DeDupstring.count(Community)>0:
     print("found in string ",DeDupstring.count(Community)," times");
    
