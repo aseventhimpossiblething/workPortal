@@ -106,11 +106,32 @@ def filterNonParticipators(theFrame):
  theFrame=theFrame[~theFrame['Brand Name'].str.contains('Freedom')]
  print("theFrame[~theFrame['Brand Name'].str.contains('Freedom')] ",len(theFrame))
  
- theFrame=theFrame[~theFrame['Brand Name'].str.contains('Freedom')]
- print("theFrame[~theFrame['Brand Name'].str.contains('Freedom')] ",len(theFrame))
+ theFrame=theFrame[~theFrame['Community Name'].str.contains('Freedom')]
+ print("theFrame[~theFrame['Community Name'].str.contains('Freedom')] ",len(theFrame))
  
  theFrame=theFrame[~theFrame['Builder Name'].str.contains('Freedom')]
  print("theFrame[~theFrame['Builder Name'].str.contains('Freedom')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Brand Name'].str.contains('Crossland')]
+ print("theFrame[~theFrame['Brand Name'].str.contains('Crossland')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Community Name'].str.contains('Crossland')]
+ print("theFrame[~theFrame['Community Name'].str.contains('Crossland')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Builder Name'].str.contains('Crossland')]
+ print("theFrame[~theFrame['Builder Name'].str.contains('Crossland')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Brand Name'].str.contains('G & I')]
+ print("theFrame[~theFrame['Brand Name'].str.contains('G & I'')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Community Name'].str.contains('G & I'')]
+ print("theFrame[~theFrame['Community Name'].str.contains('G & I'')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Builder Name'].str.contains('G & I')]
+ print("theFrame[~theFrame['Builder Name'].str.contains('G & I')] ",len(theFrame))
+                                                            
+ 
+ 
  
  
  
