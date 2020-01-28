@@ -173,9 +173,10 @@ def filterNonParticipators(theFrame):
    Community=theFrame["Community Name"][icount]
    DeDupstring=DeDupstring+" "+Community
    print(Community)
+   print("Successfull fire ",icount)
   except:
-   print("Row Skipped ",icount)
-  #.replace("40s","")
+   print("Row Skipped ",icount);
+   #.replace("40s","")
   """
   .replace("40'","").replace("40","").replace("45s","")\
   .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
