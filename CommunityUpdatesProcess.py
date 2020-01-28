@@ -77,23 +77,43 @@ def filterNonParticipators(theFrame):
  print("Length ",len(theFrame))
  #print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
  theFrame=theFrame[~theFrame['Brand Name'].str.contains('Clayton')]
- print("Length ",len(theFrame))
+ print("theFrame[~theFrame['Brand Name'].str.contains('Clayton')] ",len(theFrame))
+ 
  theFrame=theFrame[~theFrame['Brand Name'].str.contains('Oakwood')]
- print("Length ",len(theFrame))
+ print("theFrame[~theFrame['Brand Name'].str.contains('Oakwood')] ",len(theFrame))
+ 
  theFrame=theFrame[~theFrame['Brand Name'].str.contains('Craftmark')]
- print("Length ",len(theFrame))
+ print("theFrame[~theFrame['Brand Name'].str.contains('Craftmark')] ",len(theFrame))
+ 
  theFrame=theFrame[~theFrame['Builder Name'].str.contains('Clayton')]
- print("Length ",len(theFrame))
+ print("theFrame[~theFrame['Builder Name'].str.contains('Clayton')] ",len(theFrame))
+ 
  theFrame=theFrame[~theFrame['Builder Name'].str.contains('Oakwood')]
- print("Length ",len(theFrame))
+ print("theFrame[~theFrame['Builder Name'].str.contains('Oakwood')] ",len(theFrame))
+ 
  theFrame=theFrame[~theFrame['Builder Name'].str.contains('Craftmark')]
- print("Length ",len(theFrame))
+ print("theFrame[~theFrame['Builder Name'].str.contains('Craftmark')] ",len(theFrame))
+ 
  theFrame=theFrame[~theFrame['Community Name'].str.contains('Clayton')]
- print("Length ",len(theFrame))
+ print("theFrame[~theFrame['Community Name'].str.contains('Clayton')] ",len(theFrame))
+ 
  theFrame=theFrame[~theFrame['Community Name'].str.contains('Craftmark')]
- print("Length ",len(theFrame))
+ print("theFrame[~theFrame['Community Name'].str.contains('Craftmark')] ",len(theFrame))
+ 
  theFrame=theFrame[~theFrame['Community Name'].str.contains('Oakwood')]
- print("Length ",len(theFrame))
+ print("theFrame[~theFrame['Community Name'].str.contains('Oakwood')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Brand Name'].str.contains('Freedom')]
+ print("theFrame[~theFrame['Brand Name'].str.contains('Freedom')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Brand Name'].str.contains('Freedom')]
+ print("theFrame[~theFrame['Brand Name'].str.contains('Freedom')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Builder Name'].str.contains('Freedom')]
+ print("theFrame[~theFrame['Builder Name'].str.contains('Freedom')] ",len(theFrame))
+ 
+ 
+ 
  return theFrame;
  #theFrame.query('Brand Name'=='Clayton')
  #theFrame[theFrame['Brand Name']=='Clayton']
