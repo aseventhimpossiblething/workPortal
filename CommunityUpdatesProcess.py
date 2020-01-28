@@ -72,8 +72,8 @@ def WorkingBing():
 def filterNonParticipators(theFrame):
  print(" ",len(theFrame))
  
- """
- theFrame=theFrame['Community Name'].replace("40s","").replace("40'","").replace("40","").replace("45s","")\
+ 
+ theFrame=theFrame.replace("40s","").replace("40'","").replace("40","").replace("45s","")\
  .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
  .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
  .replace("65'","").replace("65","").replace("70s","").replace("70'","").replace("70","").replace("75s","")\
@@ -81,7 +81,7 @@ def filterNonParticipators(theFrame):
  .replace("85'","").replace("85","").replace("90s","").replace("90'","").replace("90","").replace("95s","")\
  .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
  .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
- """
+ 
  
  theFrame=theFrame.drop_duplicates();
  print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
@@ -143,7 +143,7 @@ def filterNonParticipators(theFrame):
  
  theFrame=theFrame[~theFrame['Builder Name'].str.contains('G & I')]
  print("theFrame[~theFrame['Builder Name'].str.contains('G & I')] ",len(theFrame))
- 
+ """
  theFrame=theFrame['Community Name'].replace("40s","").replace("40'","").replace("40","").replace("45s","")\
  .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
  .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
@@ -155,16 +155,11 @@ def filterNonParticipators(theFrame):
  
  theFrame=theFrame.drop_duplicates();
  print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
+ """
                                                             
  
- 
- 
- 
- 
  return theFrame;
- #theFrame.query('Brand Name'=='Clayton')
- #theFrame[theFrame['Brand Name']=='Clayton']
- #theFrame[]
+
  """
  theFrame=theFrame;
  print("at start of filter len(theFrame) ",len(theFrame));
