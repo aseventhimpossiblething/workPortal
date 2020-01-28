@@ -157,7 +157,7 @@ def filterNonParticipators(theFrame):
  DeDupstring=""
  icount=0;
  while icount<len(theFrame['Community Name']):
-  Community=str(theFrame["Community Name"][icount]).replace("40s","")
+  Community=str(theFrame["Community Name"][icount])#.replace("40s","")
   """
   .replace("40'","").replace("40","").replace("45s","")\
  .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
