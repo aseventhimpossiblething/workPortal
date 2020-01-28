@@ -73,6 +73,7 @@ def filterNonParticipators(theFrame):
  theFrame=theFrame.drop_duplicates();
  theFrame=theFrame.dropna()
  print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
+ theFrame[~theFrame['Brand Name'].str.contains('Clayton')]
  return theFrame;
  #theFrame.query('Brand Name'=='Clayton')
  #theFrame[theFrame['Brand Name']=='Clayton']
