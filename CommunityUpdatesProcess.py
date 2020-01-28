@@ -171,6 +171,7 @@ def filterNonParticipators(theFrame):
  icount=5;
  while icount<len(theFrame['Community Name']):
   try:
+   print("Start of try before Community String")
    Community=str(theFrame["Community Name"][icount]).replace("40s","").replace("40'","").replace("40","").replace("45s","")\
    .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
    .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
@@ -179,16 +180,18 @@ def filterNonParticipators(theFrame):
    .replace("85'","").replace("85","").replace("90s","").replace("90'","").replace("90","").replace("95s","")\
    .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
    .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
-   
+   print("Community string and replace")
    Community=theFrame["Community Name"][icount]
+   print("Community=theFrame["Community Name"][icount] ")
    DeDupstring=DeDupstring+" "+Community
+   print("DeDupSting Grew")
    #print(Community)
    #print("Successfull fire ",icount)
   except:
    print("Row Skipped ",icount);
   DeDupstring=DeDupstring+" "+Community
   icount+=1;
-  
+  print("Switching Loops")
  icount0=0;
  while icount0<len(theFrame['Community Name']):
   try:
