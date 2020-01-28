@@ -215,6 +215,7 @@ def filterNonParticipators(theFrame):
     theFrame.drop([icount0])
    
   except:
+   icount0+0;
    #print("Exception on Second Loop ")
  
  
