@@ -166,7 +166,7 @@ def filterNonParticipators(theFrame):
  .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
  .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
   DeDupstring=DeDupstring+" "+Community
-  printCommunity)
+  print(Community)
   icount+=1;
  print(DeDupstring) 
   
