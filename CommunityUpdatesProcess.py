@@ -167,7 +167,7 @@ def filterNonParticipators(theFrame):
  except:
   print("theFrame['Community Name'][23] Failed ")
   """
- theFrame.reset_index() 
+ theFrame=theFrame.reset_index() 
  print(theFrame)
  
  failcounter=0 
@@ -219,12 +219,6 @@ def filterNonParticipators(theFrame):
    
   except:
    icount0+0;
-   #print("Exception on Second Loop ")
- 
- 
- 
-                                                            
- 
  return theFrame;
 
 
