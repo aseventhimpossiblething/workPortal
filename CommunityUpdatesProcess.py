@@ -161,7 +161,7 @@ def filterNonParticipators(theFrame):
  
  failcounter=0 
  DeDupstring=""
- icount=5;
+ icount=0;
  while icount<len(theFrame['Community Name']):
   try:
    #print("Start of try before Community String")
@@ -210,7 +210,7 @@ def filterNonParticipators(theFrame):
    icount0+0;
   if icount%100==0:
    print("Second Loop Count ",icount0)
-  icount+=1; 
+  icount0+=1; 
  print("End of Filter ") 
  return theFrame;
 
