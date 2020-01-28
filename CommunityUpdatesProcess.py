@@ -90,7 +90,7 @@ def filterNonParticipators(theFrame):
  theFrame=theFrame.dropna()
  print("LengththeFrame=theFrame.dropna ",len(theFrame))
  #print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
- 
+ """
  theFrame=theFrame[~theFrame['Brand Name'].str.contains('Clayton')]
  print("theFrame[~theFrame['Brand Name'].str.contains('Clayton')] ",len(theFrame))
  
@@ -144,6 +144,7 @@ def filterNonParticipators(theFrame):
  
  theFrame=theFrame[~theFrame['Builder Name'].str.contains('G & I')]
  print("theFrame[~theFrame['Builder Name'].str.contains('G & I')] ",len(theFrame))
+ """
  """
  theFrame=theFrame['Community Name'].replace("40s","").replace("40'","").replace("40","").replace("45s","")\
  .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
