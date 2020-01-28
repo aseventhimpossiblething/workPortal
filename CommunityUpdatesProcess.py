@@ -98,7 +98,7 @@ def filterNonParticipators(theFrame):
  theFrame=theFrame.dropna()
  print("LengththeFrame=theFrame.dropna ",len(theFrame))
  #print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
- """
+ 
  theFrame=theFrame[~theFrame['Brand Name'].str.contains('Clayton')]
  print("theFrame[~theFrame['Brand Name'].str.contains('Clayton')] ",len(theFrame))
  
@@ -152,7 +152,24 @@ def filterNonParticipators(theFrame):
  
  theFrame=theFrame[~theFrame['Builder Name'].str.contains('G & I')]
  print("theFrame[~theFrame['Builder Name'].str.contains('G & I')] ",len(theFrame))
- """
+ 
+ DeDupstring=""
+ icount=0;
+ while icount<len(theFrame['Brand Name']):
+  Brand=str(theFrame["Brand Name"][icount]).replace({"40s":"","40's":"","(40s)":"","40s'":"","40'":"",\
+                                                     "40":"","50s":"","50's":"","(50s)":"",\
+                   "50s'":"","50'":"","50":"","55s":"","55's":"","(55s)":"","55s'":"","55'":"","55":""\
+                  ,"60s":"","60's":"","(60s)":"","60s'":"","60'":"","60":"","65s":"","65's":"","(65s)":"",\
+                   "65s'":"","65'":"","65":"","70s":"","70's":"","(70s)":"","70s'":"","70'":"","70":""\
+                  ,"75s":"","75's":"","(75s)":"","75s'":"","75'":"","75":"","85s":"","85's":"","(85s)":"",\
+                   "85s'":"","85'":"","85":"","90s":"","90's":"","(90s)":"","90s'":"","90'":"","90":"",\
+                   "95s":"","95's":"","(95s)":"","95s'":"","95'":"","95":"","100s":"","100's":"","(100s)":""})
+                   #"100s'":"",100":"","100":"","100":"","100'":"","(100)":"","100":"","100":"","100":""})
+  DeDupstring=DeDupstring+" "+Brand
+  print(Brand)
+  icount+=1;
+  
+ 
  """
  theFrame=theFrame['Community Name'].replace("40s","").replace("40'","").replace("40","").replace("45s","")\
  .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
