@@ -206,6 +206,7 @@ def filterNonParticipators(theFrame):
    #Community.drop()
    if DeDupstring.count(Community)>0:
     print("found in string ",DeDupstring.count(Community)," times");
+    theFrame.drop([icount0])
    
   except:
    print("Exception on Second Loop ")
