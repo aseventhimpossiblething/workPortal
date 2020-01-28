@@ -155,20 +155,9 @@ def filterNonParticipators(theFrame):
  print("theFrame[~theFrame['Builder Name'].str.contains('G & I')] ",len(theFrame))
  
  
- """
- #print(theFrame['Community Name'])
- try:
-  #print("theFrame[[23]] ",theFrame[[23]])
- except:
-  #print("theFrame[[23]] failed")
  
- try:
-  print("theFrame['Community Name'][23] ",theFrame['Community Name'][23])
- except:
-  print("theFrame['Community Name'][23] Failed ")
-  """
  theFrame=theFrame.reset_index() 
- print(theFrame)
+ #print(theFrame)
  
  failcounter=0 
  DeDupstring=""
@@ -219,6 +208,7 @@ def filterNonParticipators(theFrame):
    
   except:
    icount0+0;
+  print("End of Filter ") 
  return theFrame;
 
 
