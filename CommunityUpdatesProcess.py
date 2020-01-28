@@ -159,8 +159,8 @@ def filterNonParticipators(theFrame):
  theFrame=theFrame.reset_index() 
  #print(theFrame)
  
- failcounter=0 
- DeDupstring=""
+ failcounter=0 ;
+ DeDupArray=[];
  icount=0;
  while icount<len(theFrame['Community Name']):
   try:
@@ -183,7 +183,7 @@ def filterNonParticipators(theFrame):
   except:
    #print("Row Skipped ",icount);
    failcounter+=1;
-  DeDupstring=DeDupstring+" "+Community
+  DeDupArray.append(Community)
   icount+=1;
  print("Switching Loops") 
  print("times failed ",failcounter)
@@ -202,7 +202,7 @@ def filterNonParticipators(theFrame):
    Community=theFrame["Community Name"][icount0];
    
    #Community.drop()
-   if DeDupstring.count(Community)>0:
+   if DeDupArray.count(Community)>0:
     print("found in string ",DeDupstring.count(Community)," times");
     theFrame.drop([icount0])
    
