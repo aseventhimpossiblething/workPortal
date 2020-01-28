@@ -192,7 +192,8 @@ def filterNonParticipators(theFrame):
    failcounter+=1;
   DeDupstring=DeDupstring+" "+Community
   icount+=1;
-  print("Switching Loops")
+  print("Switching Loops") 
+  print("times failed ",failcounter)
  icount0=0;
  while icount0<len(theFrame['Community Name']):
   try:
