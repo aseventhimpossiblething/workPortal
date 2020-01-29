@@ -156,7 +156,7 @@ def filterNonParticipators(theFrame):
  
  
  
- theFrame=theFrame.reset_index() 
+ theFrame=theFrame.reset_index(drop=True) 
  #print(theFrame)
  
  failcounter=0 ;
@@ -211,6 +211,7 @@ def filterNonParticipators(theFrame):
   if icount%100==0:
    print("Second Loop Count ",icount0)
   icount0+=1; 
+ 
  print("End of Filter ")
  print(" Frame size ",len(theFrame))
  return theFrame;
@@ -250,7 +251,7 @@ def communityCheck(checkby,checkin,Name):
     print("count ",count)
     #print("Community check set for testing lower throttle check Merge also ",Name)
   count+=1;
- checkby=checkby.reset_index()
+ checkby=checkby.reset_index(drop=True)
  print("End Community Check for ",Name)
  #print("DropRows")
  #print(len(DropRows))
