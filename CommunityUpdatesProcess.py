@@ -169,13 +169,16 @@ def filterNonParticipators(theFrame):
  
  theFrame=theFrame[~theFrame['Builder Name'].str.contains('G & I')]
  print("theFrame[~theFrame['Builder Name'].str.contains('G & I')] ",len(theFrame))
+
+ theFrame=theFrame.drop_duplicates(subset=['Community Name']);
+ print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
+ 
  
  
  
  theFrame=theFrame.reset_index(drop=True) 
  #print(theFrame)
- 
- failcounter=0 ;
+failcounter=0 ;
  DeDupArray=[];
  icount=0;
  while icount<len(theFrame['Community Name']):
@@ -201,6 +204,7 @@ def filterNonParticipators(theFrame):
   DeDupArray.append(Community)
   icount+=1;
  print("Switching Loops") 
+ theFrame['Community Name']=DeDupArray
  print("times failed ",failcounter)
  icount0=0;
  print("Size of Community Name ",len(theFrame['Community Name']))
@@ -218,18 +222,24 @@ def filterNonParticipators(theFrame):
    .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
    .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
    #Community=theFrame["Community Name"][icount0];
-   print("Community declared second loop")
-   print(" Community is define as ",Community)
+   #print("Community declared second loop")
+   #print(" Community is define as ",Community)
    
    #Community.drop()
    #print("DeDupArray length in second loop before if",len(DeDupArray));
-   print("DeDupArray count of Community in second loop (before if statement) ",DeDupArray.count(Community));
-   print("if statment starting for community ",Community);
+   #print("DeDupArray count of Community in second loop (before if statement) ",DeDupArray.count(Community));
+   #print("if statment starting for community ",Community);
    
-   if DeDupArray.count(Community)>0:
-    print("Inside second loop (if) predicted fail")
+   if DeDupArray.count(Community)>1:
+    #print("Inside second loop (if) predicted fail")
     print("found in string ",DeDupArray.count(Community)," times");
-    #theFrame.drop([icount0])
+    print("____________________________________________________")
+    print("icount0 ",icount0)
+    print("theFrame size before drop ",len(theFrame))
+    theFrame=theFrame.drop([icount0])
+    print("theFrame size after drop ",len(theFrame))
+    print("____________________________________________________")
+    
    
   except:
    print("Second Loop failed Count ",icount0)
@@ -237,7 +247,11 @@ def filterNonParticipators(theFrame):
   if icount0%100==0:
    print("Second Loop Count ",icount0)
   icount0+=1; 
- 
+  
+ theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name'])
+ print("Length theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name']) ",len(theFrame))
+ #theFrame.duplicated(subset='Market ID','Community Name')
+  
  print("End of Filter ")
  print(" Frame size ",len(theFrame))
  return theFrame;
