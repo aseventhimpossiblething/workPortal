@@ -217,7 +217,7 @@ def filterNonParticipators(theFrame):
   except:
    #print("Second Loop failed Count ",icount0)
    icount0+0;
-  if icount0%100==0:
+ #if icount0%100==0:
    #print("Second Loop Count ",icount0)
   icount0+=1; 
  
