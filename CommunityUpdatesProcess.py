@@ -221,14 +221,7 @@ def filterNonParticipators(theFrame):
    .replace("85'","").replace("85","").replace("90s","").replace("90'","").replace("90","").replace("95s","")\
    .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
    .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
-   #Community=theFrame["Community Name"][icount0];
-   #print("Community declared second loop")
-   #print(" Community is define as ",Community)
    
-   #Community.drop()
-   #print("DeDupArray length in second loop before if",len(DeDupArray));
-   #print("DeDupArray count of Community in second loop (before if statement) ",DeDupArray.count(Community));
-   #print("if statment starting for community ",Community);
    
    if DeDupArray.count(Community)>1:
     #print("Inside second loop (if) predicted fail")
@@ -437,7 +430,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("and","&")
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
-   Final_URL.append("https://www.newhomesource.com/community/"+NewDataFrame['State'][count].lower()+NewDataFrame['City'][count].replace(" ","-").lower())
+   Final_URL.append("https://www.newhomesource.com/community/"+NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count].replace(" ","-")+"/"+NewDataFrame['Community Id'][count]+"?")
         
   except:
    NewDataFrame=NewDataFrame.drop([count])
