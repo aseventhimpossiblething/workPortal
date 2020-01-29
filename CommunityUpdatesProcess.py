@@ -187,8 +187,9 @@ def filterNonParticipators(theFrame):
  icount0=0;
  print("Size of Community Name ",len(theFrame['Community Name']))
  while icount0<len(theFrame['Community Name']):
-  print(" just before failing try icount0= ",icount0)
+  #print(" just before failing try icount0= ",icount0)
   try:
+   print("inside try ",icount)
    Community=str(theFrame["Community Name"][icount]).replace("40s","").replace("40'","").replace("40","").replace("45s","")\
    .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
    .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
