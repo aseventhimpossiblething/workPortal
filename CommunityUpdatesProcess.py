@@ -185,6 +185,7 @@ def filterNonParticipators(theFrame):
   DeDupArray.append(Community)
   icount+=1;
  print("Switching Loops") 
+ theFrame['Community Name']=DeDupArray
  print("times failed ",failcounter)
  icount0=0;
  print("Size of Community Name ",len(theFrame['Community Name']))
