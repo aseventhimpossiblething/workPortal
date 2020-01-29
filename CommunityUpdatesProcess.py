@@ -174,7 +174,7 @@ def filterNonParticipators(theFrame):
    .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
    .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
   
-   Community=theFrame["Community Name"][icount]
+    #Community=theFrame["Community Name"][icount]
    
   except:
    Community="  !!!  "
@@ -198,7 +198,8 @@ def filterNonParticipators(theFrame):
    .replace("85'","").replace("85","").replace("90s","").replace("90'","").replace("90","").replace("95s","")\
    .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
    .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
-   Community=theFrame["Community Name"][icount0];
+   #Community=theFrame["Community Name"][icount0];
+   print(" Community is define as ",Community)
    
    #Community.drop()
    print("DeDupArray length in second loop before if",len(DeDupArray));
