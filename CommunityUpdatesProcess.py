@@ -213,9 +213,12 @@ def filterNonParticipators(theFrame):
    if DeDupArray.count(Community)>1:
     #print("Inside second loop (if) predicted fail")
     print("found in string ",DeDupArray.count(Community)," times");
+    print("____________________________________________________")
+    print("icount0 ",icount0)
     print("theFrame size before drop ",len(theFrame))
-    theFrame.drop([icount0])
+    theFrame=theFrame.drop([icount0])
     print("theFrame size after drop ",len(theFrame))
+    print("____________________________________________________")
     
    
   except:
