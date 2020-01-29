@@ -175,12 +175,15 @@ def filterNonParticipators(theFrame):
    .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
    #print("Community string and replace")
    Community=theFrame["Community Name"][icount]
+   #DeDupArray.append(Community)
+   
    #print("Community=theFrame['Community Name'][icount] ")
-   DeDupstring=DeDupstring+" "+Community
+   #DeDupstring=DeDupstring+" "+Community
    #print("DeDupSting Grew")
    #print(Community)
    #print("Successfull fire ",icount)
   except:
+   Community="  !!!  "
    #print("Row Skipped ",icount);
    failcounter+=1;
   DeDupArray.append(Community)
@@ -188,6 +191,7 @@ def filterNonParticipators(theFrame):
  print("Switching Loops") 
  print("times failed ",failcounter)
  icount0=0;
+ print("Size of DeDupArray ",len(DeDupArray))
  while icount0<len(theFrame['Community Name']):
   try:
    Community=str(theFrame["Community Name"][icount]).replace("40s","").replace("40'","").replace("40","").replace("45s","")\
