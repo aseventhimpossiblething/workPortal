@@ -191,7 +191,7 @@ def filterNonParticipators(theFrame):
  while icount0<len(theFrame['Community Name']):
   #print(" just before failing try icount0= ",icount0)
   try:
-   print("inside try ",icount)
+   #print("inside try of second loop",icount)
    Community=str(theFrame["Community Name"][icount]).replace("40s","").replace("40'","").replace("40","").replace("45s","")\
    .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
    .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
@@ -214,9 +214,10 @@ def filterNonParticipators(theFrame):
     theFrame.drop([icount0])
    
   except:
+   print("Second Loop failed Count ",icount0)
    icount0+0;
   if icount%100==0:
-   print("Second Loop Count ",icount0)
+  print("Second Loop Count ",icount0)
   icount0+=1; 
  
  print("End of Filter ")
