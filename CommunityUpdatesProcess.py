@@ -432,7 +432,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path2A.append("New Homes")
    Final_URL.append("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
-            [count].replace(" ","-"))#+"/"+NewDataFrame['Community Id'][count]+"?")
+            [count].replace(" ","-")+"/"+NewDataFrame['Community Id'][count]+"?"))
         
   except:
    NewDataFrame=NewDataFrame.drop([count])
