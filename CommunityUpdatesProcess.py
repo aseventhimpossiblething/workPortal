@@ -164,7 +164,7 @@ def filterNonParticipators(theFrame):
  icount=0;
  while icount<len(theFrame['Community Name']):
   try:
-   #print("Start of try before Community String")
+   print("Start of try before Community String first loop")
    Community=str(theFrame["Community Name"][icount]).replace("40s","").replace("40'","").replace("40","").replace("45s","")\
    .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
    .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
@@ -175,10 +175,11 @@ def filterNonParticipators(theFrame):
    .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
   
     #Community=theFrame["Community Name"][icount]
+   print("Community Declared first loop")
    
   except:
    Community="  !!!  "
-   #print("Row Skipped ",icount);
+   print("first loop try failed ",icount);
    failcounter+=1;
   DeDupArray.append(Community)
   icount+=1;
@@ -200,6 +201,7 @@ def filterNonParticipators(theFrame):
    .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
    .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
    #Community=theFrame["Community Name"][icount0];
+   print("Community declared second loop")
    print(" Community is define as ",Community)
    
    #Community.drop()
