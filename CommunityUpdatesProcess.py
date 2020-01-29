@@ -210,10 +210,10 @@ def filterNonParticipators(theFrame):
    print("DeDupArray count of Community in second loop (before if statement) ",DeDupArray.count(Community));
    print("if statment starting for community ",Community);
    
-   if DeDupArray.count(Community)>0:
+   if DeDupArray.count(Community)>1:
     print("Inside second loop (if) predicted fail")
     print("found in string ",DeDupArray.count(Community)," times");
-    #theFrame.drop([icount0])
+    theFrame.drop([icount0])
    
   except:
    print("Second Loop failed Count ",icount0)
