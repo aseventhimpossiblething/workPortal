@@ -207,12 +207,12 @@ def filterNonParticipators(theFrame):
    
    #Community.drop()
    print("DeDupArray length in second loop before if",len(DeDupArray));
-   print("DeDupArray count of community in second loop before if ",DeDupArray.count(Community));
-   print("Community before if ",Cummunity);
+   print("DeDupArray count of Community in second loop (before if statement) ",DeDupArray.count(Community));
+   print("Community before if ",Community);
    
    if DeDupArray.count(Community)>0:
     print("found in string ",DeDupstring.count(Community)," times");
-    theFrame.drop([icount0])
+    #theFrame.drop([icount0])
    
   except:
    print("Second Loop failed Count ",icount0)
