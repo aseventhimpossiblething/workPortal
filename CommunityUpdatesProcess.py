@@ -202,18 +202,21 @@ def filterNonParticipators(theFrame):
    .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
    .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
    #Community=theFrame["Community Name"][icount0];
-   print("Community declared second loop")
-   print(" Community is define as ",Community)
+   #print("Community declared second loop")
+   #print(" Community is define as ",Community)
    
    #Community.drop()
    #print("DeDupArray length in second loop before if",len(DeDupArray));
-   print("DeDupArray count of Community in second loop (before if statement) ",DeDupArray.count(Community));
-   print("if statment starting for community ",Community);
+   #print("DeDupArray count of Community in second loop (before if statement) ",DeDupArray.count(Community));
+   #print("if statment starting for community ",Community);
    
    if DeDupArray.count(Community)>1:
-    print("Inside second loop (if) predicted fail")
+    #print("Inside second loop (if) predicted fail")
     print("found in string ",DeDupArray.count(Community)," times");
+    print("theFrame size before drop ",len(theFrame))
     theFrame.drop([icount0])
+    print("theFrame size after drop ",len(theFrame))
+    
    
   except:
    print("Second Loop failed Count ",icount0)
