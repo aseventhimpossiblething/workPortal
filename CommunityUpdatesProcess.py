@@ -430,7 +430,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("and","&")
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
-   Final_URL.append("https://www.newhomesource.com/community/"+NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count].replace(" ","-"))#+"/"+NewDataFrame['Community Id'][count]+"?")
+   Final_URL.append("https://www.newhomesource.com/community/"\
+            +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
+            [count].replace(" ","-"))#+"/"+NewDataFrame['Community Id'][count]+"?")
         
   except:
    NewDataFrame=NewDataFrame.drop([count])
