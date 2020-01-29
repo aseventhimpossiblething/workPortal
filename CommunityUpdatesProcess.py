@@ -1,4 +1,4 @@
- """
+"""
   
   Final_URL.append("https://www.newhomesource.com/community/"\
                     +NewDataFrame['State'][count]+"/"+\
@@ -11,7 +11,7 @@
               community/"+NewDataFrame['State'][count].lower()+/+\
               NewDataFrame['City'][count]+"/"+NewDataFrame['Community Name'][count]+\
               +"/"+NewDataFrame['Community Id'][count]+"/"+"?").lower())
-  """            
+"""            
 
 
 
