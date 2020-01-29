@@ -178,7 +178,7 @@ def filterNonParticipators(theFrame):
  
  theFrame=theFrame.reset_index(drop=True) 
  #print(theFrame)
-failcounter=0 ;
+ failcounter=0 ;
  DeDupArray=[];
  icount=0;
  while icount<len(theFrame['Community Name']):
