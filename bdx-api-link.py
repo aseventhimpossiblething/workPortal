@@ -14,12 +14,14 @@ from flask import send_file
 from datetime import datetime
 
 
-         
+
 
 
 import psycopg2
 from sklearn.ensemble import RandomForestRegressor
 app = Flask(__name__)
+
+print("FOO: " + os.environ.get("FOO", "NON EXISTENT"))
 
 
 #DATABASE_URL = os.environ['DATABASE_URL']
