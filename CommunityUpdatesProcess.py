@@ -100,6 +100,9 @@ def filterNonParticipators(theFrame):
  print("LengththeFrame=theFrame.dropna ",len(theFrame))
  #print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
  
+ theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name'])
+ print("Length theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name']) ",len(theFrame))
+ 
  theFrame=theFrame[~theFrame['Brand Name'].str.contains('Clayton')]
  print("theFrame[~theFrame['Brand Name'].str.contains('Clayton')] ",len(theFrame))
  
@@ -228,7 +231,10 @@ def filterNonParticipators(theFrame):
   if icount0%100==0:
    print("Second Loop Count ",icount0)
   icount0+=1; 
- 
+  
+ theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name'])
+ print("Length theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name']) ",len(theFrame))
+ #theFrame.duplicated(subset='Market ID','Community Name')
  print("End of Filter ")
  print(" Frame size ",len(theFrame))
  return theFrame;
