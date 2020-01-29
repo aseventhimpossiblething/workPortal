@@ -185,8 +185,9 @@ def filterNonParticipators(theFrame):
  print("Switching Loops") 
  print("times failed ",failcounter)
  icount0=0;
- print("Size of DeDupArray ",len(DeDupArray))
+ print("Size of Community Name ",len(theFrame['Community Name']))
  while icount0<len(theFrame['Community Name']):
+  print(" just before failing try icount0= ",icount0)
   try:
    Community=str(theFrame["Community Name"][icount]).replace("40s","").replace("40'","").replace("40","").replace("45s","")\
    .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
