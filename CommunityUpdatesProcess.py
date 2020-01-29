@@ -176,6 +176,7 @@ def filterNonParticipators(theFrame):
   
     #Community=theFrame["Community Name"][icount]
    print("Community Declared first loop")
+   print("Community is ",Community)
    
   except:
    Community="  !!!  "
@@ -214,10 +215,10 @@ def filterNonParticipators(theFrame):
     theFrame.drop([icount0])
    
   except:
-   print("Second Loop failed Count ",icount0)
+   #print("Second Loop failed Count ",icount0)
    icount0+0;
   if icount0%100==0:
-   print("Second Loop Count ",icount0)
+   #print("Second Loop Count ",icount0)
   icount0+=1; 
  
  print("End of Filter ")
