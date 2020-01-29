@@ -332,9 +332,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  if type(MaintatanceVar)=="<class 'int'>":
   hilecount=MaintatanceVar;
  while count < hilecount:
-  URL_Struct=str("https://www.newhomesource.com/community/"\
+  URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
             [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?").lower()
+  URL_Struct2=str("https://www.newhomesource.com/communities/"\
+            +"market-"+NewDataFrame['Market ID'][count]+"/?communityname="+"%20"+NewDataFrame['Community Name'][count].replace(" ",%20)+"%20"+"refer=").lower()
+            
   try:
    if SearchChan=="google":
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
@@ -433,7 +436,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("and","&")
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
-   Final_URL.append(URL_Struct) 
+   Final_URL.append(URL_Struct2) 
     
    """ 
    Final_URL.append("https://www.newhomesource.com/community/"\
