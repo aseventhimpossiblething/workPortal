@@ -192,7 +192,7 @@ def filterNonParticipators(theFrame):
  while icount0<len(theFrame['Community Name']):
   #print(" just before failing try icount0= ",icount0)
   try:
-   print("inside try of second loop",icount0)
+   #print("inside try of second loop",icount0)
    Community=str(theFrame["Community Name"][icount0]).replace("40s","").replace("40'","").replace("40","").replace("45s","")\
    .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
    .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
@@ -206,12 +206,13 @@ def filterNonParticipators(theFrame):
    print(" Community is define as ",Community)
    
    #Community.drop()
-   print("DeDupArray length in second loop before if",len(DeDupArray));
+   #print("DeDupArray length in second loop before if",len(DeDupArray));
    print("DeDupArray count of Community in second loop (before if statement) ",DeDupArray.count(Community));
-   print("Community before if ",Community);
+   print("if statment starting ",Community);
    
    if DeDupArray.count(Community)>0:
-    print("found in string ",DeDupstring.count(Community)," times");
+    print("Inside second loop (if) predicted fail")
+    print("found in string ",DeDupArray.count(Community)," times");
     #theFrame.drop([icount0])
    
   except:
