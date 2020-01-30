@@ -131,6 +131,16 @@ def filterNonParticipators(theFrame):
  
  theFrame=theFrame[~theFrame['Builder Name'].str.contains('G & I')]
  print("theFrame[~theFrame['Builder Name'].str.contains('G & I')] ",len(theFrame))
+ 
+  theFrame=theFrame[~theFrame['Brand Name'].str.contains('Build on Your Lot')]
+ print("theFrame[~theFrame['Brand Name'].str.contains('Build on Your Lot)] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Community Name'].str.contains('Build on Your Lot')]
+ print("theFrame[~theFrame['Community Name'].str.contains('Build on Your Lot')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Builder Name'].str.contains('Build on Your Lot')]
+ print("theFrame[~theFrame['Builder Name'].str.contains('Build on Your Lot')] ",len(theFrame))
+
 
  theFrame=theFrame.drop_duplicates(subset=['Community Name']);
  print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
