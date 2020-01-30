@@ -372,16 +372,16 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    PreTextA="Find your family a perfect New Home at \
     "+str(NewDataFrame['Community Name'][count])+" in "+str(NewDataFrame['City']\
     [count])+", "+str(NewDataFrame['State'][count])
-    print("---Alert PreTextA ---",PreTextA)
+    #print("---Alert PreTextA ---",PreTextA)
    
    if len(PreTextA)>89:
     PreTextA="Find your family a perfect New Home at \
     "+str(NewDataFrame['Community Name'][count])+" in "+str(NewDataFrame['City']\
-    [count])+", "+str(NewDataFrame['State'][count])
+    [count]))
     
     
    
-   TextA.append("Find your family a perfect New Home at "+str(NewDataFrame['Community Name'][count])+" in "+str(NewDataFrame['City'][count])+", "+str(NewDataFrame['State'][count]))
+   TextA.append(PreTextA)
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
    if len(Path1A_conv)>15:
