@@ -331,7 +331,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  while count < hilecount:
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
-            [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?").lower()
+            [count].replace(" ","-")+"/"+NewDataFrame['Community Name'][count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?").lower()
   URL_Struct2="https://www.newhomesource.com/communities/"+"market-"+str(NewDataFrame['Market ID'][count])+"/?communityname="+NewDataFrame['Community Name'][count].replace(" ","%20")+"%20community&refer="
             
   try:
