@@ -296,7 +296,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             [count].replace(" ","-")+"/"+NewDataFrame['Community Name']\
             [count].replace(" ","-")+"-by-"+NewDataFrame['Brand Name']\
             [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?").lower()
-  URL_Struct2="https://www.newhomesource.com/communities/"+"market-"+str(NewDataFrame['Market ID'][count])+"/?communityname="+NewDataFrame['Community Name'][count].replace(" ","%20")+"%20community&refer="
+  #URL_Struct2="https://www.newhomesource.com/communities/"+"market-"+str(NewDataFrame['Market ID'][count])+"/?communityname="+NewDataFrame['Community Name'][count].replace(" ","%20")+"%20community&refer="
             
   try:
    if SearchChan=="google":
@@ -369,8 +369,18 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Title2A.append(Title2A_conv)
         
    Title3A.append("Schedule a New Home Tour Today")
-   PreTextA="Find your family a perfect New Home at "+str(NewDataFrame['Community Name'][count])+" in "+str(NewDataFrame['City'][count])+", "+str(NewDataFrame['State'][count])
-   print("---Alert PreTextA ---",PreTextA)
+   PreTextA="Find your family a perfect New Home at \
+    "+str(NewDataFrame['Community Name'][count])+" in "+str(NewDataFrame['City']\
+    [count])+", "+str(NewDataFrame['State'][count])
+    print("---Alert PreTextA ---",PreTextA)
+   
+   if len(PreTextA)>89:
+    PreTextA="Find your family a perfect New Home at \
+    "+str(NewDataFrame['Community Name'][count])+" in "+str(NewDataFrame['City']\
+    [count])+", "+str(NewDataFrame['State'][count])
+    
+    
+   
    TextA.append("Find your family a perfect New Home at "+str(NewDataFrame['Community Name'][count])+" in "+str(NewDataFrame['City'][count])+", "+str(NewDataFrame['State'][count]))
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
