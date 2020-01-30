@@ -434,7 +434,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("and","&")
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
-   Final_URL.append(URL_Struct2) 
+   Final_URL.append(URL_Struct1) 
     
    """ 
    Final_URL.append("https://www.newhomesource.com/community/"\
