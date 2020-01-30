@@ -373,11 +373,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     PreTextA="Find your family a perfect New Home at "+str(NewDataFrame['Community Name']\
                                                            [count])+" in "+str(NewDataFrame['City'][count])
     
-   """
+   
    if len(PreTextA)>89:
     PreTextA.find("at")
-    print("Subset of PreText - ",PreText[:PreTextA.find("at")])
-   """ 
+    print("Subset of PreText - ",PreTextA[:PreTextA.find("at")])
+   
    
    TextA.append(PreTextA)
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
