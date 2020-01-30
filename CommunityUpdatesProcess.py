@@ -1,19 +1,3 @@
-"""
-  
-  Final_URL.append("https://www.newhomesource.com/community/"\
-                    +NewDataFrame['State'][count]+"/"+\
-                    NewDataFrame['City'][count]+"/"+NewDataFrame\
-                    ['Community Name'][count]+"/"+NewDataFrame\
-                    ['Community Id'][count]+"/"+"?")
-   
-   
-  Final_URL.append(str("https://www.newhomesource.com/\
-              community/"+NewDataFrame['State'][count].lower()+/+\
-              NewDataFrame['City'][count]+"/"+NewDataFrame['Community Name'][count]+\
-              +"/"+NewDataFrame['Community Id'][count]+"/"+"?").lower())
-"""            
-
-
 MaintatanceVar="Off";
 import glob
 import numpy
@@ -86,28 +70,6 @@ def WorkingBing():
 
 
 def filterNonParticipators(theFrame):
- #print(" ",len(theFrame))
- 
- """
- theFrame['Community Name']=theFrame['Community Name'].str.replace("40s"," ").replace("40'"," ").replace("40"," ").replace("45s"," ")\
- .replace("45'"," ").replace("45"," ").replace("50s"," ").replace("50'"," ").replace("50"," ").replace("55s"," ")\
- .replace("55'"," ").replace("55"," ").replace("60s"," ").replace("60'"," ").replace("60"," ").replace("65s"," ")\
- .replace("65'"," ").replace("65"," ").replace("70s"," ").replace("70'"," ").replace("70"," ").replace("75s"," ")\
- .replace("75'"," ").replace("75"," ").replace("80s"," ").replace("80'"," ").replace("80"," ").replace("85s"," ")\
- .replace("85'"," ").replace("85"," ").replace("90s"," ").replace("90'"," ").replace("90"," ").replace("95s"," ")\
- .replace("95'"," ").replace("95"," ").replace("100s"," ").replace("100'"," ").replace("100"," ").replace("105s"," ")\
- .replace("105'"," ").replace("105"," ").replace("110s"," ").replace("110'"," ").replace("110"," ")
- 
- theFrame=theFrame.replace({"40s":"","40's":"","(40s)":"","40s'":"","40'":"","40":"","50s":"","50's":"","(50s)":"",\
-                   "50s'":"","50'":"","50":"","55s":"","55's":"","(55s)":"","55s'":"","55'":"","55":""\
-                  ,"60s":"","60's":"","(60s)":"","60s'":"","60'":"","60":"","65s":"","65's":"","(65s)":"",\
-                   "65s'":"","65'":"","65":"","70s":"","70's":"","(70s)":"","70s'":"","70'":"","70":""\
-                  ,"75s":"","75's":"","(75s)":"","75s'":"","75'":"","75":"","85s":"","85's":"","(85s)":"",\
-                   "85s'":"","85'":"","85":"","90s":"","90's":"","(90s)":"","90s'":"","90'":"","90":"",\
-                   "95s":"","95's":"","(95s)":"","95s'":"","95'":"","95":"","100s":"","100's":"","(100s)":""})
-                   #"100s'":"",100":"","100":"","100":"","100'":"","(100)":"","100":"","100":"","100":""})
- """                  
- 
  
  theFrame=theFrame.drop_duplicates();
  print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
@@ -279,7 +241,7 @@ def communityCheck(checkby,checkin,Name):
    checkby=checkby.drop([count]);
    if count % 4000==0:
     print("count ",count)
-    #print("Community check set for testing lower throttle check Merge also ",Name)
+    
   count+=1;
  checkby=checkby.reset_index(drop=True)
  print("End Community Check for ",Name)
@@ -347,8 +309,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=Keyword_conv.replace("+-","-")
      Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
      Keyword_conv="+"+Keyword_conv
-     #URL_Struct1
-     #URL_Struct2=URL_Struct2+Keyword_conv.replace('',"%20") 
+     
      if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
      MatchType_Conv="Broad"
