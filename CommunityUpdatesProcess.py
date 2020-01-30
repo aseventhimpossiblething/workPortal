@@ -408,7 +408,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Title2A.append(Title2A_conv)
         
    Title3A.append("Schedule a New Home Tour Today")
-   TextA.append("Find your family a perfect New Home at "+str(NewDataFrame['Community Name']))
+   TextA.append("Find your family a perfect New Home at "+str(NewDataFrame['Community Name'][count])+" in "+str(NewDataFrame['City'][count])+", "+str(NewDataFrame['State'][count]))
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
    if len(Path1A_conv)>15:
