@@ -376,7 +376,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
    if len(PreTextA)>89:
     PreTextA.find("at")
-    print("Subset of PreText - ",PreTextA[:PreTextA.find("at")])
+    PreTextA=PreTextA[:PreTextA.find("at")]
    
    
    TextA.append(PreTextA)
