@@ -333,7 +333,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
             [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?").lower()
   URL_Struct2="https://www.newhomesource.com/communities/"+"market-"+str(NewDataFrame['Market ID'][count])\
-              +"/?communityname="#+NewDataFrame['Community Name'][count])#.replace(" ",%20)#.lower()+"%20community&refer="
+              +"/?communityname="+NewDataFrame['Community Id'][count])#.replace(" ",%20)#.lower()+"%20community&refer="
             
   try:
    if SearchChan=="google":
