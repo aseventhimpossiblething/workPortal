@@ -408,6 +408,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Title2A.append(Title2A_conv)
         
    Title3A.append("Schedule a New Home Tour Today")
+   PreTextA="Find your family a perfect New Home at "+str(NewDataFrame['Community Name'][count])+" in "+str(NewDataFrame['City'][count])+", "+str(NewDataFrame['State'][count])
+   print("---Alert PreTextA ---",PreTextA)
    TextA.append("Find your family a perfect New Home at "+str(NewDataFrame['Community Name'][count])+" in "+str(NewDataFrame['City'][count])+", "+str(NewDataFrame['State'][count]))
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
@@ -438,11 +440,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path2A.append("New Homes")
    Final_URL.append(URL_Struct1) 
     
-   """ 
-   Final_URL.append("https://www.newhomesource.com/community/"\
-            +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
-            [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?")
-   """          
+          
         
   except:
    NewDataFrame=NewDataFrame.drop([count])
