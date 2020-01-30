@@ -332,7 +332,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
             [count].replace(" ","-")+"/"+NewDataFrame['Community Name']\
-            [count].replace(" ","-")+"-by-"+NewDataFrame['Brand Name'][count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?").lower()
+            [count].replace(" ","-")+"-by-"+NewDataFrame['Brand Name']\
+            [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?").lower()
   URL_Struct2="https://www.newhomesource.com/communities/"+"market-"+str(NewDataFrame['Market ID'][count])+"/?communityname="+NewDataFrame['Community Name'][count].replace(" ","%20")+"%20community&refer="
             
   try:
@@ -407,7 +408,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Title2A.append(Title2A_conv)
         
    Title3A.append("Schedule a New Home Tour Today")
-   TextA.append("Find your family a perfect new home at Legacy at East Greenwich 55+ in Clarksboro, NJ!")
+   TextA.append("Find your family a perfect New Home at "+str(NewDataFrame['Community Name']))
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
    if len(Path1A_conv)>15:
