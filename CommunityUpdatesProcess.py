@@ -375,8 +375,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     #print("---Alert PreTextA ---",PreTextA)
    
    if len(PreTextA)>89:
-    PreTextA="Find your family a perfect New Home at "+str(NewDataFrame['Community Name']\
-                                                           [count])+" in "+str(NewDataFrame['City'][count]))
+    PreTextA="Find your family a perfect New Home at "+str(NewDataFrame['Community Name'][count])+" in "+str(NewDataFrame['City'][count]))
+                                                           #[count])+" in "+str(NewDataFrame['City'][count]))
     
     
    
