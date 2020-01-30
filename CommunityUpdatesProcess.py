@@ -295,10 +295,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?").lower()
   try:
    if SearchChan=="google":
+    URL_Struct1=URL_Struct1+"gppc"
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     if MatchType=="SBMM":
+     URL_Struct1=URL_Struct1+"403"
      Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=Keyword_conv.replace("&"," ")
      Keyword_conv=Keyword_conv.replace(" "," +")
      Keyword_conv=Keyword_conv.replace("+55+","55+")
      Keyword_conv=Keyword_conv.replace("+-","-")
@@ -309,28 +312,35 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       Keyword_conv=Keyword_conv+" Community"
      MatchType_Conv="Broad"
     if MatchType=="SB":
+     URL_Struct1=URL_Struct1+"402"
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
      Keyword_conv=NewDataFrame['Community Name'][count]
      MatchType_Conv="Broad"
     if MatchType=="SX":
+     URL_Struct1=URL_Struct1+"401"
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
      Keyword_conv=NewDataFrame['Community Name'][count]
      MatchType_Conv="Exact"
      set_bid=.35;
    if SearchChan=="bing":
+    URL_Struct1=URL_Struct1+"msm"
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     if MatchType=="SB":
+     URL_Struct1=URL_Struct1+"202"
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
      Keyword_conv=NewDataFrame['Community Name'][count]
      MatchType_Conv="Broad"
     if MatchType=="SX":
+     URL_Struct1=URL_Struct1+"201"
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201")
      Keyword_conv=NewDataFrame['Community Name'][count]
      MatchType_Conv="Exact"
      set_bid=.35;
     if MatchType=="SBMM":
+     URL_Struct1=URL_Struct1+"202"
      Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=Keyword_conv.replace("&"," ")
      Keyword_conv=Keyword_conv.replace(" "," +")
      Keyword_conv=Keyword_conv.replace("+55+","55+")
      Keyword_conv=Keyword_conv.replace("+-","-")
