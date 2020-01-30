@@ -202,7 +202,7 @@ def filterNonParticipators(theFrame):
   
  theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name'])
  print("Length theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name']) ",len(theFrame))
- #theFrame.duplicated(subset='Market ID','Community Name')
+
   
  print("End of Filter ")
  print(" Frame size ",len(theFrame))
@@ -223,7 +223,7 @@ def MergeURLs(chan,chan2):
   URLS=URLS+chan[count]
   if count % 50000 == 0:
    print(chan2," _ ",count)
-   #print("Low count setting in MergeURLS nonfunctional")
+   
   count+=1
  return URLS
  
@@ -245,9 +245,6 @@ def communityCheck(checkby,checkin,Name):
   count+=1;
  checkby=checkby.reset_index(drop=True)
  print("End Community Check for ",Name)
- #print("DropRows")
- #print(len(DropRows))
- #print("DropRows")
  return checkby
  
  
@@ -296,8 +293,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             [count].replace(" ","-")+"/"+NewDataFrame['Community Name']\
             [count].replace(" ","-")+"-by-"+NewDataFrame['Brand Name']\
             [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?").lower()
-  #URL_Struct2="https://www.newhomesource.com/communities/"+"market-"+str(NewDataFrame['Market ID'][count])+"/?communityname="+NewDataFrame['Community Name'][count].replace(" ","%20")+"%20community&refer="
-            
   try:
    if SearchChan=="google":
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
@@ -378,11 +373,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     PreTextA="Find your family a perfect New Home at "+str(NewDataFrame['Community Name']\
                                                            [count])+" in "+str(NewDataFrame['City'][count])
     
-    
+   """
    if len(PreTextA)>89:
     PreTextA.find("at")
     print("Subset of PreText - ",PreText[:PreTextA.find("at")])
-    
+   """ 
    
    TextA.append(PreTextA)
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
@@ -577,7 +572,6 @@ def initialCommUpdatProcess():
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
- #WorkingCommunities=filterNonParticipators(filterNonParticipators(filterNonParticipators(WorkingCommunities)));
  
  
  
