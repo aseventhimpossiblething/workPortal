@@ -332,7 +332,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
             [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?").lower()
-  URL_Struct2="https://www.newhomesource.com/communities/"+"market-"+str(NewDataFrame['Market ID'][count])+"/?communityname="#+NewDataFrame['Community Id'][count])#.replace(" ",%20)#.lower()+"%20community&refer="
+  URL_Struct2="https://www.newhomesource.com/communities/"+"market-"+str(NewDataFrame['Market ID'][count])+"/?communityname="+NewDataFrame['Community Id'][count]#.replace(" ",%20)#.lower()+"%20community&refer="
             
   try:
    if SearchChan=="google":
@@ -345,6 +345,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=Keyword_conv.replace("+-","-")
      Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
      Keyword_conv="+"+Keyword_conv
+     #URL_Struct1
+     #URL_Struct2=URL_Struct2+Keyword_conv.replace('',"%20") 
      if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
      MatchType_Conv="Broad"
