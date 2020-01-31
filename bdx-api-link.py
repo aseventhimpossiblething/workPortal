@@ -10,6 +10,7 @@ import os
 from flask import Flask, Markup, render_template, request
 from celery import Celery
 from flask import send_file
+from flask import send_from_directory
 #import taskque
 from datetime import datetime
 
@@ -61,6 +62,11 @@ app = Flask(__name__)
 
 
 CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
+
+@app.route('/favicon.png')
+def favicon():
+    return send_from_directory(/app/workPortal/Sheets/)     
+
 
 @app.route('/test')
 def testtextfile():
