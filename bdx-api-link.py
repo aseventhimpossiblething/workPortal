@@ -19,7 +19,9 @@ from flask import Flask, request, redirect
 from werkzeug.serving import make_ssl_devcert
 """
 
-from flask import SSLify
+from flask_sslify import SSLify
+
+#from flask import SSLify
 
 
          
@@ -29,7 +31,7 @@ import psycopg2
 from sklearn.ensemble import RandomForestRegressor
 app = Flask(__name__)
 
-sslify = SSLify(app)
+#sslify = SSLify(app)
 
 
 #DATABASE_URL = os.environ['DATABASE_URL']
