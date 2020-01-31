@@ -113,7 +113,7 @@ def filterNonParticipators(theFrame):
  
  
  
- 
+ """
  theFrame=theFrame.drop_duplicates();
  print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
  
@@ -187,7 +187,7 @@ def filterNonParticipators(theFrame):
 
  theFrame=theFrame.drop_duplicates(subset=['Community Name']);
  print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
- 
+ """
  
  
  
