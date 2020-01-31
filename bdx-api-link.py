@@ -88,7 +88,8 @@ def index():
     indexContent=Markup('<a href="https://www.google.com">"Google"</a><br>\
                  <a href="BidOps">"Bid Ops"</a><br>\
                  <a href="CommunityUpdates">Community Updates</a>')
-    return render_template('DefaultTemplate.html',content=indexContent,pagetitle="Paid Search Portal",CommonTag=CommonTagAll)
+    #return render_template('DefaultTemplate.html',content=indexContent,pagetitle="Paid Search Portal",CommonTag=CommonTagAll)
+    return render_template('DefaultTemplate.html')
 
 @app.route('/BidOps')
 def BidOpInput():
