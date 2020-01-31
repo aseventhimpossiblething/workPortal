@@ -70,28 +70,6 @@ def WorkingBing():
 
 
 def filterNonParticipators(theFrame):
- #print(" ",len(theFrame))
- 
- """
- theFrame['Community Name']=theFrame['Community Name'].str.replace("40s"," ").replace("40'"," ").replace("40"," ").replace("45s"," ")\
- .replace("45'"," ").replace("45"," ").replace("50s"," ").replace("50'"," ").replace("50"," ").replace("55s"," ")\
- .replace("55'"," ").replace("55"," ").replace("60s"," ").replace("60'"," ").replace("60"," ").replace("65s"," ")\
- .replace("65'"," ").replace("65"," ").replace("70s"," ").replace("70'"," ").replace("70"," ").replace("75s"," ")\
- .replace("75'"," ").replace("75"," ").replace("80s"," ").replace("80'"," ").replace("80"," ").replace("85s"," ")\
- .replace("85'"," ").replace("85"," ").replace("90s"," ").replace("90'"," ").replace("90"," ").replace("95s"," ")\
- .replace("95'"," ").replace("95"," ").replace("100s"," ").replace("100'"," ").replace("100"," ").replace("105s"," ")\
- .replace("105'"," ").replace("105"," ").replace("110s"," ").replace("110'"," ").replace("110"," ")
- 
- theFrame=theFrame.replace({"40s":"","40's":"","(40s)":"","40s'":"","40'":"","40":"","50s":"","50's":"","(50s)":"",\
-                   "50s'":"","50'":"","50":"","55s":"","55's":"","(55s)":"","55s'":"","55'":"","55":""\
-                  ,"60s":"","60's":"","(60s)":"","60s'":"","60'":"","60":"","65s":"","65's":"","(65s)":"",\
-                   "65s'":"","65'":"","65":"","70s":"","70's":"","(70s)":"","70s'":"","70'":"","70":""\
-                  ,"75s":"","75's":"","(75s)":"","75s'":"","75'":"","75":"","85s":"","85's":"","(85s)":"",\
-                   "85s'":"","85'":"","85":"","90s":"","90's":"","(90s)":"","90s'":"","90'":"","90":"",\
-                   "95s":"","95's":"","(95s)":"","95s'":"","95'":"","95":"","100s":"","100's":"","(100s)":""})
-                   #"100s'":"",100":"","100":"","100":"","100'":"","(100)":"","100":"","100":"","100":""})
- """                  
- 
  
  theFrame=theFrame.drop_duplicates();
  print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
@@ -99,9 +77,6 @@ def filterNonParticipators(theFrame):
  theFrame=theFrame.dropna()
  print("LengththeFrame=theFrame.dropna ",len(theFrame))
  #print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
- 
- theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name'])
- print("Length theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name']) ",len(theFrame))
  
  theFrame=theFrame[~theFrame['Brand Name'].str.contains('Clayton')]
  print("theFrame[~theFrame['Brand Name'].str.contains('Clayton')] ",len(theFrame))
@@ -157,14 +132,24 @@ def filterNonParticipators(theFrame):
  theFrame=theFrame[~theFrame['Builder Name'].str.contains('G & I')]
  print("theFrame[~theFrame['Builder Name'].str.contains('G & I')] ",len(theFrame))
  
+ theFrame=theFrame[~theFrame['Brand Name'].str.contains('Build on Your Lot')]
+ print("theFrame[~theFrame['Brand Name'].str.contains('Build on Your Lot)] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Community Name'].str.contains('Build on Your Lot')]
+ print("theFrame[~theFrame['Community Name'].str.contains('Build on Your Lot')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Builder Name'].str.contains('Build on Your Lot')]
+ print("theFrame[~theFrame['Builder Name'].str.contains('Build on Your Lot')] ",len(theFrame))
+
+
  theFrame=theFrame.drop_duplicates(subset=['Community Name']);
  print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
  
  
  
+ 
  theFrame=theFrame.reset_index(drop=True) 
  #print(theFrame)
- 
  failcounter=0 ;
  DeDupArray=[];
  icount=0;
@@ -180,10 +165,7 @@ def filterNonParticipators(theFrame):
    .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
    .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
   
-   #Community=theFrame["Community Name"][icount]
-   #print("Community Declared first loop")
-   #print("Community is ",Community)
-   
+      
   except:
    Community="  !!!  "
    print("first loop try failed ",icount);
@@ -208,14 +190,7 @@ def filterNonParticipators(theFrame):
    .replace("85'","").replace("85","").replace("90s","").replace("90'","").replace("90","").replace("95s","")\
    .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
    .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","")
-   #Community=theFrame["Community Name"][icount0];
-   #print("Community declared second loop")
-   #print(" Community is define as ",Community)
    
-   #Community.drop()
-   #print("DeDupArray length in second loop before if",len(DeDupArray));
-   #print("DeDupArray count of Community in second loop (before if statement) ",DeDupArray.count(Community));
-   #print("if statment starting for community ",Community);
    
    if DeDupArray.count(Community)>1:
     #print("Inside second loop (if) predicted fail")
@@ -237,7 +212,8 @@ def filterNonParticipators(theFrame):
   
  theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name'])
  print("Length theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name']) ",len(theFrame))
- #theFrame.duplicated(subset='Market ID','Community Name')
+
+  
  print("End of Filter ")
  print(" Frame size ",len(theFrame))
  return theFrame;
@@ -257,7 +233,7 @@ def MergeURLs(chan,chan2):
   URLS=URLS+chan[count]
   if count % 50000 == 0:
    print(chan2," _ ",count)
-   #print("Low count setting in MergeURLS nonfunctional")
+   
   count+=1
  return URLS
  
@@ -275,13 +251,10 @@ def communityCheck(checkby,checkin,Name):
    checkby=checkby.drop([count]);
    if count % 4000==0:
     print("count ",count)
-    #print("Community check set for testing lower throttle check Merge also ",Name)
+    
   count+=1;
  checkby=checkby.reset_index(drop=True)
  print("End Community Check for ",Name)
- #print("DropRows")
- #print(len(DropRows))
- #print("DropRows")
  return checkby
  
  
@@ -325,52 +298,67 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  if type(MaintatanceVar)=="<class 'int'>":
   hilecount=MaintatanceVar;
  while count < hilecount:
-  """
-  Final_URL.append(str("https://www.newhomesource.com/\
-              community/"+NewDataFrame['State'][count].lower()+/+\
-              NewDataFrame['City'][count]+"/"+NewDataFrame['Community Name'][count]+\
-              +"/"+NewDataFrame['Community Id'][count]+"/"+"?").lower())
-  """            
+  URL_Struct1=str("https://www.newhomesource.com/community/"\
+            +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
+            [count].replace(" ","-")+"/"+NewDataFrame['Community Name']\
+            [count].replace(" ","-")+"-by-"+NewDataFrame['Brand Name']\
+            [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?").lower()
+  URL_Struct1=URL_Struct1.replace("'","")
   try:
    if SearchChan=="google":
+    URL_Struct1=URL_Struct1+"gppc"
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     if MatchType=="SBMM":
+     URL_Struct1=URL_Struct1+"403"
      Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=Keyword_conv.replace("&"," ")
      Keyword_conv=Keyword_conv.replace(" "," +")
      Keyword_conv=Keyword_conv.replace("+55+","55+")
      Keyword_conv=Keyword_conv.replace("+-","-")
+     Keyword_conv=Keyword_conv.replace("-"," ")
+     Keyword_conv=Keyword_conv.replace("'","")
      Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
      Keyword_conv="+"+Keyword_conv
+     
      if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
      MatchType_Conv="Broad"
     if MatchType=="SB":
+     URL_Struct1=URL_Struct1+"402"
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
      Keyword_conv=NewDataFrame['Community Name'][count]
      MatchType_Conv="Broad"
     if MatchType=="SX":
+     URL_Struct1=URL_Struct1+"401"
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
      Keyword_conv=NewDataFrame['Community Name'][count]
      MatchType_Conv="Exact"
      set_bid=.35;
    if SearchChan=="bing":
+    URL_Struct1=URL_Struct1+"msm"
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     if MatchType=="SB":
+     URL_Struct1=URL_Struct1+"202"
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
      Keyword_conv=NewDataFrame['Community Name'][count]
      MatchType_Conv="Broad"
     if MatchType=="SX":
+     URL_Struct1=URL_Struct1+"201"
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201")
      Keyword_conv=NewDataFrame['Community Name'][count]
      MatchType_Conv="Exact"
      set_bid=.35;
     if MatchType=="SBMM":
+     URL_Struct1=URL_Struct1+"202"
      Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=Keyword_conv.replace("&"," ")
      Keyword_conv=Keyword_conv.replace(" "," +")
      Keyword_conv=Keyword_conv.replace("+55+","55+")
-     Keyword_conv=Keyword_conv.replace("+-","-")
+     Keyword_conv=Keyword_conv.replace("+-"," ")
+     Keyword_conv=Keyword_conv.replace("-"," ")
+     Keyword_conv=Keyword_conv.replace("'","")
      Keyword_conv=Keyword_conv.replace("+G +& +I","G&I ")
      Keyword_conv="+"+Keyword_conv
      if len(Keyword_conv)<12:
@@ -401,7 +389,22 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Title2A.append(Title2A_conv)
         
    Title3A.append("Schedule a New Home Tour Today")
-   TextA.append("Find your family a perfect new home at Legacy at East Greenwich 55+ in Clarksboro, NJ!")
+   PreTextA="Find your family a perfect New Home at \
+    "+str(NewDataFrame['Community Name'][count])+" in "+str(NewDataFrame['City']\
+    [count])+", "+str(NewDataFrame['State'][count])
+    #print("---Alert PreTextA ---",PreTextA)
+   
+   if len(PreTextA)>89:
+    PreTextA="Find your family a perfect New Home at "+str(NewDataFrame['Community Name']\
+                                                           [count])+" in "+str(NewDataFrame['City'][count])
+    
+   
+   if len(PreTextA)>89:
+    PreTextA.find("at")
+    PreTextA=PreTextA[:PreTextA.find("at")]
+   
+   
+   TextA.append(PreTextA)
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
    if len(Path1A_conv)>15:
@@ -429,10 +432,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("and","&")
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
-   Final_URL.append("https://www.newhomesource.com/community/"+NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]+"/"+NewDataFrame['Community Name'][count]+"/"+NewDataFrame['Community Id'][count]+"/"+"?")
-   
-                    
-                 
+   Final_URL.append(URL_Struct1) 
+    
+          
         
   except:
    NewDataFrame=NewDataFrame.drop([count])
@@ -595,7 +597,6 @@ def initialCommUpdatProcess():
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
- #WorkingCommunities=filterNonParticipators(filterNonParticipators(filterNonParticipators(WorkingCommunities)));
  
  
  

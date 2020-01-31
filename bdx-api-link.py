@@ -215,7 +215,7 @@ def BingASBMM():
 
 @app.route('/BingAdSBMMB')
 def BingBSBMM():
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsBtypeBMM/DefaultSheet.xlsx",\
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeBMM/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSBMMB.xlsx")
               
          
@@ -235,7 +235,7 @@ def BingASB():
 
 @app.route('/BingAdSBB')
 def BingBSB():
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsBtypeBroad/DefaultSheet.xlsx",\
+ return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeBroad/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSBB.xlsx")
                       
                   
