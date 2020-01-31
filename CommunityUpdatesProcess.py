@@ -75,7 +75,7 @@ def filterNonParticipators(theFrame):
   DropRowsContaining=['Clayton','Oakwood','Craftmark','Freedom','Crossland','G & I','Build on Your Lot'];
   
   DropLoopCount=0;
-  while DropLoopCount<len(Drop-rows-containing):
+  while DropLoopCount<len(DropRowsContaining):
    print("Drop while")
    
    theFrame=theFrame.drop_duplicates();
