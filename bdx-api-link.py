@@ -14,6 +14,13 @@ from flask import send_from_directory
 #import taskque
 from datetime import datetime
 
+"""
+from flask import Flask, request, redirect
+from werkzeug.serving import make_ssl_devcert
+"""
+
+from flask_sslify import SSLify
+
 
          
 
@@ -21,6 +28,8 @@ from datetime import datetime
 import psycopg2
 from sklearn.ensemble import RandomForestRegressor
 app = Flask(__name__)
+
+sslify = SSLify(app)
 
 
 #DATABASE_URL = os.environ['DATABASE_URL']
