@@ -71,6 +71,47 @@ def WorkingBing():
 
 def filterNonParticipators(theFrame):
  
+ def firstDropLoop():
+  Drop-rows-containing=['Clayton','Oakwood','Craftmark','Freedom','Crossland','G & I','Build on Your Lot'];
+  
+  DropLoopCount=0;
+  while DropLoopCount<len(Drop-rows-containing):
+   print("Drop while")
+   
+   theFrame=theFrame.drop_duplicates();
+   print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
+   theFrame=theFrame.dropna()
+   print("LengththeFrame=theFrame.dropna ",len(theFrame))
+   #print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
+   
+   print("Drop while")
+   
+   theFrame=theFrame[~theFrame['Brand Name'].str.contains(Drop-rows-containing[DropLoopCount])]
+   print("theFrame[~theFrame['Brand Name'].str.contains ",Drop-rows-containing[DropLoopCount]," ",len(theFrame))
+   
+   print("Drop while")
+   
+   theFrame=theFrame[~theFrame['Builder Name'].str.contains(Drop-rows-containing[DropLoopCount])]
+   print("theFrame[~theFrame['Builder Name'].str.contains ",Drop-rows-containing[DropLoopCount]," ",len(theFrame))
+   
+   print("Drop while")
+   
+   theFrame=theFrame[~theFrame['Community Name'].str.contains(Drop-rows-containing[DropLoopCount])]
+   print("theFrame[~theFrame['Community Name'].str.contains ",Drop-rows-containing[DropLoopCount]," ",len(theFrame))
+   
+   print("Drop while")
+   
+   theFrame=theFrame.drop_duplicates(subset=['Community Name']);
+   print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
+ 
+   print("end Drop while") 
+ firstDropLoop()  
+ 
+ 
+ 
+ 
+ 
+ 
  theFrame=theFrame.drop_duplicates();
  print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
  
