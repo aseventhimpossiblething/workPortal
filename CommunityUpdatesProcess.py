@@ -103,7 +103,7 @@ def filterNonParticipators(theFrame):
    
    theFrame=theFrame.drop_duplicates(subset=['Community Name']);
    print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
-   DropLoopCount++1;
+   DropLoopCount+=1;
    print("end Drop while") 
    
   return theFrame
