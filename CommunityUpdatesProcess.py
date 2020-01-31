@@ -106,7 +106,7 @@ def filterNonParticipators(theFrame):
  
    print("end Drop while") 
    return theFrame
- the Frame=firstDropLoop()  
+ theFrame=firstDropLoop()  
  
  
  
