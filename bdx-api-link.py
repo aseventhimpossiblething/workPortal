@@ -65,7 +65,7 @@ CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Sear
 
 @app.route('/favicon.png')
 def favicon():
-    return send_from_directory('/app/workPortal/Sheets/')     
+    return send_from_directory('/app/workPortal/Sheets/','favicon.png')     
 
 
 @app.route('/test')
