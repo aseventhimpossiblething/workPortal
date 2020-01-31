@@ -303,6 +303,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             [count].replace(" ","-")+"/"+NewDataFrame['Community Name']\
             [count].replace(" ","-")+"-by-"+NewDataFrame['Brand Name']\
             [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?").lower()
+  URL_Struct1=URL_Struct1.replace("'","")
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc"
