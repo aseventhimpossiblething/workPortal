@@ -19,7 +19,7 @@ from flask import Flask, request, redirect
 from werkzeug.serving import make_ssl_devcert
 """
 
-from flask_sslify import SSLify
+from flask import SSLify
 
 
          
