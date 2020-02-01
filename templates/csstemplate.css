@@ -26,7 +26,7 @@ a {color:white;}
     color:white;
     position:relative
     /*float:left;*/
-    min-height:10px;
+    height:10%;
     background-color:#00aaff;
     width:100%;
     /*margin-bottom:30px;*/
@@ -63,7 +63,7 @@ a {color:white;}
 {
 position:float;
 float:left;
-width:30%; 
+width:15%; 
 background-color:#000000;
 height:80%;    
 }
@@ -81,7 +81,7 @@ height:80%;
     color:white;
     background-color:#00ccc0;
     /*float:center;*/
-    width:60%;
+    width:55%;
     height:80%;
     
         
