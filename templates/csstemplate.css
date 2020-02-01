@@ -4,9 +4,12 @@
 
 #form {
 static:center;
-margin-left:20px;    
+margin-left:20px;  
+    
 
 }
+
+
 
 #input[type='file']
 {
@@ -38,6 +41,7 @@ a {color:white;}
     height:1000px;
     margin:auto;
     padding-top:10px
+    text-align:center    
    
 }
 body {background-color:#ffffff;}
