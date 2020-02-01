@@ -303,7 +303,8 @@ def index():
     #indexContent=Markup('<a href="https://www.google.com">"Google"</a><br>\
                  #<a href="BidOps">"Bid Ops"</a><br>\
                  #<a href="CommunityUpdates">Community Updates</a>')
-    return render_template('LandingTemplate.html')
+     domainName="https://bdxapilink.com"             
+    return render_template('LandingTemplate.html',domain=domanName)
 
 @app.route('/BidOps')
 def BidOpInput():
