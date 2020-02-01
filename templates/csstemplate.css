@@ -76,7 +76,7 @@ background-color:#ffffff;
 {
 position:float;
 float:left;
-width:25%; 
+width:30%; 
 background-color:ffffff;
 height:80%;    
 }
@@ -87,7 +87,7 @@ height:80%;
 
 .containerMain
 {   
-    opacity:60%;
+    opacity:50%;
     position:float;
     float:left;
     border-radius:85%;
@@ -95,7 +95,7 @@ height:80%;
     color:white;
     background-color:#00ccc0;
     /*float:center;*/
-    width:55%;
+    width:50%;
     height:80%;
     
         
