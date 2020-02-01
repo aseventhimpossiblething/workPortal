@@ -301,8 +301,9 @@ def Scripts():
 @app.route('/')
 def index():
     domainName="https://bdxapilink.com"
+    domainCSS0="https://bdxapilink.com/css"
     domainFavi="https://bdxapilink.com/favicon.png"
-    return render_template('LandingTemplate.html',domain=domainName,domainFav=domainFavi)
+    return render_template('LandingTemplate.html',domain=domainName,domainFav=domainFavi,domainCSS=domainCSS0)
 
 @app.route('/BidOps')
 def BidOpInput():
