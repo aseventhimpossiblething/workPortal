@@ -136,7 +136,7 @@ def CommUpdateDisplay():
     if read_storeRequest1==read_storeRequest2:
      return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=https://bdxapilink.com/CommUpdateExcel?'><html>This Message indicates an error in URL Forward</html>"
     if read_storeRequest1!=read_storeRequest2:
-     return '<meta http-equiv="refresh" content="120"><html>{% extends'DefaultTemplate.html' %}{% block content %}LOADING..... This can Take up to 10 minuites{% endblock %}</html>'
+     return '<meta http-equiv="refresh" content="120"><html>LOADING..... This can Take up to 10 minuites</html>'
 
 
 
