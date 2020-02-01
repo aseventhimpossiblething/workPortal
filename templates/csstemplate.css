@@ -27,7 +27,7 @@ a {color:white;}
     float:left;
     min-height:10px;
     background-color:#00aaff;
-    width:50%;
+    width:100%;
     /*margin-bottom:30px;*/
     padding-top:10px;
     padding-left;4px
@@ -45,11 +45,11 @@ a {color:white;}
     text-align:right;
     color:white;
     float:right;
-    min-height:10px;
+    /*min-height:10px;*/
     background-color:#00aaff;
-    width:50%;
+    /*width:50%;*/
     /*margin-bottom:30px;*/
-    padding-top:10px;
+    /*padding-top:10px;*/
     padding-right:4px;   
         
    }
@@ -64,8 +64,8 @@ a {color:white;}
     color:white;
     background-color:#00aaff;
     float:center;
-    width:500px;
-    height:1000px;
+    width:50%;
+    height:90%;
     margin:auto;
     padding-top:10px
         
