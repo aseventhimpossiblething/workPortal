@@ -300,10 +300,7 @@ def Scripts():
 
 @app.route('/')
 def index():
-    #indexContent=Markup('<a href="https://www.google.com">"Google"</a><br>\
-                 #<a href="BidOps">"Bid Ops"</a><br>\
-                 #<a href="CommunityUpdates">Community Updates</a>')
-     domainName="https://bdxapilink.com"             
+    domainName="https://bdxapilink.com"             
     return render_template('LandingTemplate.html',domain=domanName)
 
 @app.route('/BidOps')
