@@ -10,8 +10,18 @@ import os
 from flask import Flask, Markup, render_template, request
 from celery import Celery
 from flask import send_file
+from flask import send_from_directory
 #import taskque
 from datetime import datetime
+
+"""
+from flask import Flask, request, redirect
+from werkzeug.serving import make_ssl_devcert
+"""
+
+from flask_sslify import SSLify
+
+#from flask import SSLify
 
 
          
@@ -19,7 +29,9 @@ from datetime import datetime
 
 import psycopg2
 from sklearn.ensemble import RandomForestRegressor
-app = Flask(__name__)
+app = Flask(__name__,"/static/")
+
+sslify = SSLify(app)
 
 
 #DATABASE_URL = os.environ['DATABASE_URL']
@@ -61,6 +73,21 @@ app = Flask(__name__)
 
 
 CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
+
+"""
+@app.route('/BDXlogo')
+def BDXlg():
+    return 
+"""    
+         
+         
+         
+         
+
+@app.route('/favicon.png')
+def favicon():
+    return send_from_directory('/app/favicon.png','favicon')     
+
 
 @app.route('/test')
 def testtextfile():
@@ -107,9 +134,9 @@ def CommUpdateDisplay():
     print("read_storeRequest ",read_storeRequest)     
     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
     if read_storeRequest1==read_storeRequest2:
-     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=https://bdx-api-link.herokuapp.com/CommUpdateExcel?'><html>This Message indicates an error in URL Forward</html>"
+     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=https://bdxapilink.com/CommUpdateExcel?'><html>This Message indicates an error in URL Forward</html>"
     if read_storeRequest1!=read_storeRequest2:
-     return '<meta http-equiv="refresh" content="120"><html>LOADING..... This can Take up to 10 minuites </html>'
+     return '<meta http-equiv="refresh" content="120"><html>LOADING..... This can Take up to 10 minuites</html>'
 
 
 
@@ -283,10 +310,10 @@ def Scripts():
 
 @app.route('/')
 def index():
-    #indexContent=Markup('<a href="https://www.google.com">"Google"</a><br>\
-                 #<a href="BidOps">"Bid Ops"</a><br>\
-                 #<a href="CommunityUpdates">Community Updates</a>')
-    return render_template('LandingTemplate.html')
+    domainName="https://bdxapilink.com"
+    domainCSS0="https://bdxapilink.com/css"
+    domainFavi="https://bdxapilink.com/favicon.png"
+    return render_template('LandingTemplate.html',domain=domainName,domainFav=domainFavi,domainCSS=domainCSS0)
 
 @app.route('/BidOps')
 def BidOpInput():

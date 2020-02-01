@@ -1,14 +1,31 @@
 <HTML>
 <head>
+  
+<link rel="stylesheet" href='{{domainCSS}}'>
+<!---<link rel="shortcut icon" type="image/x-icon" href='{{url_for('static',filename='favicon.png') }}'>---->
+<link rel="shortcut icon" type="image/x-icon" href=https://bdxapilink.com/static/favicon.png'>  
+  
+  
 
-<link rel="stylesheet" href="https://bdx-api-link.herokuapp.com/css">
+  
+
+
 
 </head>
 
 <body>
-<div class="littletop"><a href='https://bdx-api-link.herokuapp.com'>BDX Paid Search Portal</a></div>  
 
-<div class="containerMain">{% block content %}{% endblock %}{{content}}</div>
+<div class="littletop"><a href='{{domain}}'>  BDX Paid Search Portal</a>  
+<div class="littletop2"><a href="https://www.newhomesource.com/userprivacy">Privacy Policy and Cookies </a></div></div> 
+  
+  
+<div class=leftWing><img src="https://bdxapilink.com/static/BDX-logo-large-transparent.png"></div>
+
+<div class="containerMain">
+<div class="sm2"></div>  
+{% block content %}{% endblock %}
+{{content}}
+</div>
 
 </body>
 </HTML>
