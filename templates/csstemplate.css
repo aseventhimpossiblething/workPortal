@@ -24,6 +24,7 @@ a {color:white;}
     
     
     color:white;
+    position:relative
     /*float:left;*/
     min-height:10px;
     background-color:#00aaff;
