@@ -21,6 +21,8 @@ margin-left:20px;
 a {color:white;}
 
 .littletop {
+    
+    text-align:center;
     color:white;
     Absolute:center;
     min-height:5px;
@@ -28,7 +30,8 @@ a {color:white;}
     width:auto;
     margin-bottom:30px;
     padding-top:10px
-    padding-bottom:10px    
+    padding-bottom:10px   
+        
    }
 
 
@@ -41,7 +44,7 @@ a {color:white;}
     height:1000px;
     margin:auto;
     padding-top:10px
-    text-align:center    
+        
    
 }
 body {background-color:#ffffff;}
