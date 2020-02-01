@@ -87,9 +87,10 @@ height:80%;
 
 .containerMain
 {   
+    opacity:60%;
     position:float;
     float:left;
-    border-radius=40%;
+    border-radius:40%;
     text-align:center;
     color:white;
     background-color:#00ccc0;
