@@ -301,7 +301,7 @@ def Scripts():
 @app.route('/')
 def index():
     domainName="https://bdxapilink.com"             
-    return render_template('LandingTemplate.html',domain=domanName)
+    return render_template('LandingTemplate.html',domain=domainName)
 
 @app.route('/BidOps')
 def BidOpInput():
