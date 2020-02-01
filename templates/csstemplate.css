@@ -25,9 +25,9 @@ a {color:white;}
     
     color:white;
     Absolute:left;
-    min-height:5px;
+    min-height:10px;
     background-color:#00aaff;
-    width:auto;
+    width:50%;
     margin-bottom:30px;
     padding-top:10px
     padding-bottom:10px   
@@ -39,12 +39,12 @@ a {color:white;}
 
 .littletop2 {
     
-    
+    text-align:right;
     color:white;
     Absolute:right;
-    min-height:5px;
+    min-height:10px;
     background-color:#00aaff;
-    width:auto;
+    width:50%;
     margin-bottom:30px;
     padding-top:10px
     padding-bottom:10px   
