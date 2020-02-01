@@ -24,7 +24,7 @@ a {color:white;}
     
     
     color:white;
-    float:left;
+    /*float:left;*/
     min-height:10px;
     background-color:#00aaff;
     width:100%;
@@ -44,7 +44,7 @@ a {color:white;}
     
     text-align:right;
     color:white;
-    float:right;
+    /*float:right;*/
     /*min-height:10px;*/
     background-color:#00aaff;
     /*width:50%;*/
@@ -63,7 +63,7 @@ a {color:white;}
 {   text-align:center;
     color:white;
     background-color:#00aaff;
-    float:center;
+    /*float:center;*/
     width:50%;
     height:80%;
     /*margin:auto;*/
