@@ -24,7 +24,7 @@ a {color:white;}
     
     
     color:white;
-    Absolute:left;
+    float:left;
     min-height:10px;
     background-color:#00aaff;
     width:50%;
