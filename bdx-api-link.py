@@ -29,7 +29,7 @@ from flask_sslify import SSLify
 
 import psycopg2
 from sklearn.ensemble import RandomForestRegressor
-app = Flask(__name__)
+app = Flask(__name__,"/static/")
 
 sslify = SSLify(app)
 
