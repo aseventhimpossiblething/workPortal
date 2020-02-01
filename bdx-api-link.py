@@ -74,6 +74,16 @@ sslify = SSLify(app)
 
 CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
 
+"""
+@app.route('/BDXlogo')
+def BDXlg():
+    return 
+"""    
+         
+         
+         
+         
+
 @app.route('/favicon.png')
 def favicon():
     return send_from_directory('/app/favicon.png','favicon')     
