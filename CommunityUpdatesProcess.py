@@ -335,7 +335,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  Text2B=[];
  Path1B=[];
  Path2B=[];
- Label=[];
+ Labels=[];
  
  count=0;
  hilecount=len(NewDataFrame['Market ID']);
