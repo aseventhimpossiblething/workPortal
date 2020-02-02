@@ -3,6 +3,8 @@
 .topOfForm{relative:center;}
 
 #form {
+  position:relative;
+  margin-top:30%;
 
   
     
