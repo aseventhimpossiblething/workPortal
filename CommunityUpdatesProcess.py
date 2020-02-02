@@ -195,6 +195,7 @@ def filterNonParticipators(theFrame):
  #print(theFrame)
  failcounter=0 ;
  DeDupArray=[];
+ Labels=[];
  icount=0;
  while icount<len(theFrame['Community Name']):
   try:
@@ -214,6 +215,7 @@ def filterNonParticipators(theFrame):
    print("first loop try failed ",icount);
    failcounter+=1;
   DeDupArray.append(Community)
+  Labels.append("Created by Community Update Portal")
   icount+=1;
  print("Switching Loops") 
  theFrame['Community Name']=DeDupArray
