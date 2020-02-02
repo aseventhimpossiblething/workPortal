@@ -195,7 +195,7 @@ def filterNonParticipators(theFrame):
  #print(theFrame)
  failcounter=0 ;
  DeDupArray=[];
- Labels=[];
+ #Labels=[];
  icount=0;
  while icount<len(theFrame['Community Name']):
   try:
@@ -215,11 +215,11 @@ def filterNonParticipators(theFrame):
    print("first loop try failed ",icount);
    failcounter+=1;
   DeDupArray.append(Community)
-  Labels.append("Created by Community Update Portal")
+  #Labels.append("Created by Community Update Portal")
   icount+=1;
  print("Switching Loops") 
  theFrame['Community Name']=DeDupArray
- theFrame['Labels']=Labels
+ #theFrame['Labels']=Labels
  print("times failed ",failcounter)
  icount0=0;
  print("Size of Community Name ",len(theFrame['Community Name']))
@@ -335,6 +335,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  Text2B=[];
  Path1B=[];
  Path2B=[];
+ Label=[];
  
  count=0;
  hilecount=len(NewDataFrame['Market ID']);
@@ -479,13 +480,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
    Final_URL.append(URL_Struct1) 
-    
+   Labels.append("Created by WebApp") 
           
         
   except:
    NewDataFrame=NewDataFrame.drop([count])
   count+=1;
   
+ print(Labels) 
  GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid} 
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
  GoogleAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
