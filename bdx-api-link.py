@@ -336,6 +336,11 @@ def CommunitiesUploads():
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
     return fileHandler.CommListFileHandler()
+
+@app.route('/Campaigns')
+def campslist():
+    return "<html> hopefully some campaigns </html>"     
+
     
    
    
