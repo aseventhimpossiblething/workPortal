@@ -336,6 +336,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  Path1B=[];
  Path2B=[];
  Labels=[];
+ SecondLabel=[];
  
  count=0;
  hilecount=len(NewDataFrame['Market ID']);
@@ -483,7 +484,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path2A.append("New Homes")
    Final_URL.append(URL_Struct1) 
    Labels.append("Created by WebApp") 
-          
+   if Final_URL.find('-by-/'):
+    SecondLabel.append(count)
+    print('Url of row ',count,' contains -by-/ ',URL_Struct1)
         
   except:
    NewDataFrame=NewDataFrame.drop([count])
