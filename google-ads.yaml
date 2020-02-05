@@ -10,11 +10,11 @@
 
 -###############################################################################
 
-developer_token: INSERT_DEVELOPER_TOKEN_HERE
+developer_token: uK0ObUtXfoUFX-8TfjSrAQ
 
-client_id: INSERT_OAUTH2_CLIENT_ID_HERE
+client_id: 50100556830-gdmcf56sf67kj8epiqebnmhful771h39.apps.googleusercontent.com
 
-client_secret: INSERT_OAUTH2_CLIENT_SECRET_HERE
+client_secret: 9rlwx5iQtUO3Vl4UaLoUjHv8
 
 refresh_token: INSERT_REFRESH_TOKEN_HERE
 
