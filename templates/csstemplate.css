@@ -2,9 +2,9 @@
 
 .topOfForm{static:center;}
 
-#form {
-static:center;
-margin-left:20px;    
+#frmID{
+position:relative;
+margin-top:50px;    
 
 }
 
