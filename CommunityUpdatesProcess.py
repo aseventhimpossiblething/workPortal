@@ -240,7 +240,7 @@ def filterNonParticipators(theFrame):
    
    if DeDupArray.count(Community)>1:
     #print("Inside second loop (if) predicted fail")
-    print("found in string ",DeDupArray.count(Community)," times");
+    #print("found in string ",DeDupArray.count(Community)," times");
     print("____________________________________________________")
     print("icount0 ",icount0)
     print("theFrame size before drop ",len(theFrame))
@@ -520,11 +520,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   #frame=[];
    while CountSecondLabel<len(SecondLabel):
     if SearchChan=="google":
+     print(SearchChan," for Url Known Issue")
      frame.append(GoogleAdFrameA.iloc(SecondLabel[CountSecondLabel]))
      print(GoogleAdFrameA.iloc(SecondLabel[CountSecondLabel]))
      frame.append(GoogleAdFrameB.iloc(SecondLabel[CountSecondLabel]))
      print(GoogleAdFrameB.iloc(SecondLabel[CountSecondLabel]))
     if SearchChan=="bing": 
+     print(SearchChan," for Url Known Issue")
      frame.append(BingAdFrameA.iloc(SecondLabel[CountSecondLabel]))
      print(BingAdFrameA.iloc(SecondLabel[CountSecondLabel]))
      frame.append(BingAdFrameB.iloc(SecondLabel[CountSecondLabel]))
