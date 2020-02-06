@@ -1,1 +1,2 @@
 adwords_client = adwords.AdWordsClient.LoadFromStorage()
+print('adwords client inish')
