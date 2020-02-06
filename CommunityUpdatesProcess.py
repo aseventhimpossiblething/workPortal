@@ -76,33 +76,33 @@ def filterNonParticipators(theFrame):
   
   DropLoopCount=0;
   while DropLoopCount<len(DropRowsContaining):
-   print("Drop while")
+   #print("Drop while")
    
    theFrame=theFrame.drop_duplicates();
-   print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
+   #print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
    theFrame=theFrame.dropna()
-   print("LengththeFrame=theFrame.dropna ",len(theFrame))
+   #print("LengththeFrame=theFrame.dropna ",len(theFrame))
    #print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
    
-   print("Drop while")
+   #print("Drop while")
    
    theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount])]
-   print("theFrame[~theFrame['Brand Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
+   #print("theFrame[~theFrame['Brand Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
    
-   print("Drop while")
+   #print("Drop while")
    
    theFrame=theFrame[~theFrame['Builder Name'].str.contains(DropRowsContaining[DropLoopCount])]
-   print("theFrame[~theFrame['Builder Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
+   #print("theFrame[~theFrame['Builder Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
    
-   print("Drop while")
+   #print("Drop while")
    
    theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount])]
-   print("theFrame[~theFrame['Community Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
+   #print("theFrame[~theFrame['Community Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
    
-   print("Drop while")
+   #print("Drop while")
    
    theFrame=theFrame.drop_duplicates(subset=['Community Name']);
-   print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
+   #print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
    DropLoopCount+=1;
    print("end Drop while") 
    
@@ -521,10 +521,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    while CountSecondLabel<len(SecondLabel):
     if SearchChan=="google":
      frame.append(GoogleAdFrameA.iloc(SecondLabel[CountSecondLabel]))
+     print(GoogleAdFrameA.iloc(SecondLabel[CountSecondLabel]))
      frame.append(GoogleAdFrameB.iloc(SecondLabel[CountSecondLabel]))
+     print(GoogleAdFrameB.iloc(SecondLabel[CountSecondLabel]))
     if SearchChan=="bing": 
      frame.append(BingAdFrameA.iloc(SecondLabel[CountSecondLabel]))
+     print(BingAdFrameA.iloc(SecondLabel[CountSecondLabel]))
      frame.append(BingAdFrameB.iloc(SecondLabel[CountSecondLabel]))
+     print(BingAdFrameA.iloc(SecondLabel[CountSecondLabel]))
     CountSecondLabel+=1;
   print(frame)
   print(" end of known Url issue check")
