@@ -528,7 +528,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      frame.append(BingAdFrameA.iloc(SecondLabel[CountSecondLabel]))
      print(BingAdFrameA.iloc(SecondLabel[CountSecondLabel]))
      frame.append(BingAdFrameB.iloc(SecondLabel[CountSecondLabel]))
-     print(BingAdFrameA.iloc(SecondLabel[CountSecondLabel]))
+     print(BingAdFrameB.iloc(SecondLabel[CountSecondLabel]))
     CountSecondLabel+=1;
   print(frame)
   print(" end of known Url issue check")
