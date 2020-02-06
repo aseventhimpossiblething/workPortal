@@ -484,7 +484,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path2A.append("New Homes")
    Final_URL.append(URL_Struct1) 
    Labels.append("Created by WebApp") 
-   if Final_URL.find('-by-/'):
+   if Final_URL.find('www'):
     SecondLabel.append(count)
     print('Url of row ',count,' contains -by-/ ',URL_Struct1)
         
