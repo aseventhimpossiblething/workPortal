@@ -512,19 +512,22 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  
  
  def knownSheetUrlDefectby(SearchChan,SecondLabel):
-  print("Checkin for URLs with by-/ error ")
-  if len(SecondLabel)!=0:
+  print("Checkin for URLs with by-/ error ");
   CountSecondLabel=0;
   frame=[];
-  while CountSecondLabel<len(SecondLabel):
-   if SearchChan=="google":
-    frame.append(GoogleAdFrameA.iloc(SecondLabel[CountSecondLabel]))
-    frame.append(GoogleAdFrameB.iloc(SecondLabel[CountSecondLabel]))
-   if SearchChan=="bing": 
-    frame.append(BingAdFrameA.iloc(SecondLabel[CountSecondLabel]))
-    frame.append(BingAdFrameB.iloc(SecondLabel[CountSecondLabel]))
-   CountSecondLabel+=1;
+  if len(SecondLabel)!=0:
+  #CountSecondLabel=0;
+  #frame=[];
+   while CountSecondLabel<len(SecondLabel):
+    if SearchChan=="google":
+     frame.append(GoogleAdFrameA.iloc(SecondLabel[CountSecondLabel]))
+     frame.append(GoogleAdFrameB.iloc(SecondLabel[CountSecondLabel]))
+    if SearchChan=="bing": 
+     frame.append(BingAdFrameA.iloc(SecondLabel[CountSecondLabel]))
+     frame.append(BingAdFrameB.iloc(SecondLabel[CountSecondLabel]))
+    CountSecondLabel+=1;
   print(frame)
+  print(" end of known Url issue check")
   return frame
  knownSheetUrlDefectby(SearchChan,SecondLabel);
     
