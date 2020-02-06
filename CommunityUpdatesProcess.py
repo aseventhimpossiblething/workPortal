@@ -484,6 +484,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path2A.append("New Homes")
    Final_URL.append(URL_Struct1) 
    Labels.append("Created by WebApp") 
+   """
    print("!!!!!!!!!!!! LOCATION OF INTERVENTION FOR NEW SCRIPT ELEMENT 1 !!!!!!!!!!!!!!")
    print(URL_Struct1)
    print("!!!!!!!!!!!! LOCATION OF INTERVENTION FOR NEW SCRIPT ELEMENT 2 !!!!!!!!!!!!!!")
@@ -493,7 +494,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("!!!!!!!!!!!! LOCATION OF INTERVENTION FOR NEW SCRIPT ELEMENT 4 !!!!!!!!!!!!!!")
    print(URL_Struct1.lower().find('www'))
    print("!!!!!!!!!!!! LOCATION OF INTERVENTION FOR NEW SCRIPT ELEMENT 5 !!!!!!!!!!!!!!")
+   """
    if URL_struct1.lower().find('www')>-1:
+    print(URL_Struct1.lower().find('www'),"-Greater than 1")
     print(URL_Struct1)
     SecondLabel.append(count)
     print('Url of row ',count,' contains -by-/ ',URL_Struct1)
