@@ -14,6 +14,8 @@ from flask import send_from_directory
 #import taskque
 from datetime import datetime
 from flask_sslify import SSLify
+import uuid
+from googleads import adwords
 
 
 
