@@ -484,6 +484,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path2A.append("New Homes")
    Final_URL.append(URL_Struct1) 
    Labels.append("Created by WebApp") 
+   print(Final_URL)
    if Final_URL.find('www'):
     SecondLabel.append(count)
     print('Url of row ',count,' contains -by-/ ',URL_Struct1)
@@ -514,10 +515,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  def knownSheetUrlDefectby(SearchChan,SecondLabel):
   print("Checkin for URLs with by-/ error ");
   print(SearchChan,'-Known URL Issue');
-  print('after SearchChan should print')
+  #print('after SearchChan should print')
   CountSecondLabel=0;
   frame=[];
-  print(SecondLabel,"-count of second label")
+  print(len(SecondLabel),"-count of second label")
   if len(SecondLabel)!=0:
   #CountSecondLabel=0;
   #frame=[];
