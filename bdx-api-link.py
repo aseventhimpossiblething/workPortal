@@ -15,6 +15,9 @@ from flask import send_from_directory
 from datetime import datetime
 from flask_sslify import SSLify
 import uuid
+
+from google.ads.google_ads.client import GoogleAdsClient
+client = GoogleAdsClient.load_from_storage()
 from googleads import adwords
 
 
