@@ -18,7 +18,7 @@ import uuid
 
 from google.ads.google_ads.client import GoogleAdsClient
 #client = GoogleAdsClient.load_from_storage()
-from googleads import adwords
+#from googleads import adwords
 
 
 
