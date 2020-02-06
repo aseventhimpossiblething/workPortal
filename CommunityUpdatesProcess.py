@@ -484,8 +484,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path2A.append("New Homes")
    Final_URL.append(URL_Struct1) 
    Labels.append("Created by WebApp") 
-   
-   print(Final_URL.find('WWW'))
+   print("!!!!!!!!!!!! LOCATION OF INTERVENTION FOR NEW SCRIPT ELEMENT!!!!!!!!!!!!!!")
+   print(URL_Struct.find('WWW'))
+   print(URL_Struct.find('www'))
+   print("!!!!!!!!!!!! LOCATION OF INTERVENTION FOR NEW SCRIPT ELEMENT!!!!!!!!!!!!!!")
    if Final_URL.find('WWW')>-1:
     print(URL_Struct1)
     SecondLabel.append(count)
