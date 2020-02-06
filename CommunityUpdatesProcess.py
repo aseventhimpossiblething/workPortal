@@ -511,7 +511,23 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  BingAdFrameB=pandas.DataFrame(BingAdFrameB)
  
  
-
+ def knownSheetUrlDefectby(SearchChan,SecondLabel):
+  print("Checkin for URLs with by-/ error ")
+  if len(SecondLabel)!=0;
+  CountSecondLabel=0;
+  frame=[];
+  while CountSecondLabel<len(SecondLabel):
+   if SearchChan=="google":
+    frame.append(GoogleAdFrameA.iloc(SecondLabel[CountSecondLabel]))
+    frame.append(GoogleAdFrameB.iloc(SecondLabel[CountSecondLabel]))
+   if SearchChan=="bing": 
+    frame.append(BingAdFrameA.iloc(SecondLabel[CountSecondLabel]))
+    frame.append(BingAdFrameB.iloc(SecondLabel[CountSecondLabel]))
+   CountSecondLabel+=1;
+  print(frame)
+  return frame
+ knownSheetUrlDefectby(SearchChan,SecondLabel);
+    
  if SearchChan=="google":
   if MatchType=='SBMM':
    print("In KeywordGen google SBMM ")
