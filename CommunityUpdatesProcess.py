@@ -513,7 +513,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  
  def knownSheetUrlDefectby(SearchChan,SecondLabel):
   print("Checkin for URLs with by-/ error ");
-  print(SearchChan,'-Known URL Issue')
+  print(SearchChan,'-Known URL Issue');
+  print('after SearchChan should print')
   CountSecondLabel=0;
   frame=[];
   print(SecondLabel,"-count of second label")
