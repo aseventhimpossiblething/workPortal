@@ -485,7 +485,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Final_URL.append(URL_Struct1) 
    Labels.append("Created by WebApp") 
   
-   if Final_URL.find('WWW'):
+   if Final_URL.find('www')>0:
     print(URL_Struct1)
     SecondLabel.append(count)
     print('Url of row ',count,' contains -by-/ ',URL_Struct1)
