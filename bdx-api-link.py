@@ -13,24 +13,21 @@ from flask import send_file
 from flask import send_from_directory
 #import taskque
 from datetime import datetime
-
-"""
-from flask import Flask, request, redirect
-from werkzeug.serving import make_ssl_devcert
-"""
-
 from flask_sslify import SSLify
 
-#from flask import SSLify
 
 
+
+
+adwords_client = adwords.AdWordsClient.LoadFromStorage()
+
+print('adwords client inish')
          
 
 
 import psycopg2
 from sklearn.ensemble import RandomForestRegressor
 app = Flask(__name__,"/static/")
-
 sslify = SSLify(app)
 
 
