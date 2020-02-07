@@ -533,27 +533,32 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       if frame1['Final URL'].lower().find('www')!=-1:
        frame1=frame1.drop(CountSecondLabel);
        frame2=frame2.drop(CountSecondLabel);
+     except:
+      print("Skip-",CountSecondLabel)
      CountSecondLabel+=1;  
    if SearchChan=="bing":
     frame1=BingAdFrameA;
-    frame2=BingAdFrameA;
+    frame2=BingAdFrameB;
     CountSecondLabel=0;
     while CountSecondLabel<len(SecondLabel):
      print("Loop Number ",CountSecondLabel);
-      try:
-       print(CountSecondLabel);
-       frame1['Final URL'].lower().find('www')
-       print(frame1['Final URL'].lower().find('www'),"-find www ")
-       frame2['Final URL'].lower().find('www')
-       print(frame2['Final URL'].lower().find('www'),"-find www ")
-       if frame1['Final URL'].lower().find('www')!=-1:
-        frame1=frame1.drop(CountSecondLabel);
-        frame2=frame2.drop(CountSecondLabel);
+     try:
+      print(CountSecondLabel);
+      frame1['Final URL'].lower().find('www')
+      print(frame1['Final URL'].lower().find('www'),"-find www ")
+      frame2['Final URL'].lower().find('www')
+      print(frame2['Final URL'].lower().find('www'),"-find www ")
+      if frame1['Final URL'].lower().find('www')!=-1:
+       frame1=frame1.drop(CountSecondLabel);
+       frame2=frame2.drop(CountSecondLabel);
+     except:
+       print("Skip-",CountSecondLabel)  
      CountSecondLabel+=1;  
     
    print(len(SecondLabel),"-count")
    SecondLabel=list(dict.fromkeys(SecondLabel))
    print(len(SecondLabel),"-count")
+   
    
    """
     if SearchChan=="google":
@@ -594,6 +599,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      print(CountSecondLabel,"-skipped")
     CountSecondLabel+=1;   
    """ 
+   
   print(frame1)
   print(" end of known Url issue check")
   return frame1,frame2
