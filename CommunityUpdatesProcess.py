@@ -537,20 +537,23 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   #CountSecondLabel=0;
   #frame=[];
    while CountSecondLabel<len(SecondLabel):
-    print(CountSecondLabel);
-    if SearchChan=="google":
-     print(SearchChan," for Url Known Issue")
-     print(SecondLabel[CountSecondLabel])
-     frame.append(GoogleAdFrameA.iloc[SecondLabel[CountSecondLabel]])
-     print(GoogleAdFrameA.iloc[SecondLabel[CountSecondLabel]])
-     frame.append(GoogleAdFrameB.iloc[SecondLabel[CountSecondLabel]])
-     print(GoogleAdFrameB.iloc[SecondLabel[CountSecondLabel]])
-    if SearchChan=="bing": 
-     print(SearchChan," for Url Known Issue")
-     frame.append(BingAdFrameA.iloc[SecondLabel[CountSecondLabel]])
-     print(BingAdFrameA.iloc[SecondLabel[CountSecondLabel]])
-     frame.append(BingAdFrameB.iloc[SecondLabel[CountSecondLabel]])
-     print(BingAdFrameB.iloc[SecondLabel[CountSecondLabel]])
+    try:
+     print(CountSecondLabel);
+     if SearchChan=="google":
+      print(SearchChan," for Url Known Issue")
+      print(SecondLabel[CountSecondLabel])
+      frame.append(GoogleAdFrameA.iloc[SecondLabel[CountSecondLabel]])
+      print(GoogleAdFrameA.iloc[SecondLabel[CountSecondLabel]])
+      frame.append(GoogleAdFrameB.iloc[SecondLabel[CountSecondLabel]])
+      print(GoogleAdFrameB.iloc[SecondLabel[CountSecondLabel]])
+     if SearchChan=="bing": 
+      print(SearchChan," for Url Known Issue")
+      frame.append(BingAdFrameA.iloc[SecondLabel[CountSecondLabel]])
+      print(BingAdFrameA.iloc[SecondLabel[CountSecondLabel]])
+      frame.append(BingAdFrameB.iloc[SecondLabel[CountSecondLabel]])
+      print(BingAdFrameB.iloc[SecondLabel[CountSecondLabel]])
+    except:
+     print(CountSecondLabel,"-skipped")
     CountSecondLabel+=1;
   print(frame)
   print(" end of known Url issue check")
