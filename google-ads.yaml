@@ -6,9 +6,9 @@
 
 #-# recommended OAuth2 flow. For more information on authenticating with OAuth2 #
 
--# see: https://developers.google.com/google-ads/api/docs/oauth/overview       #
+#-# see: https://developers.google.com/google-ads/api/docs/oauth/overview       #
 
--###############################################################################
+#-###############################################################################
 
 developer_token: uK0ObUtXfoUFX-8TfjSrAQ
 
