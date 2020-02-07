@@ -441,8 +441,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  def knownSheetUrlDefectby(SearchChan,SecondLabel,ExtraLabel):
   if len(SecondLabel)!=0 and ExtraLabel.lower()=="on":
    print("Checkin for URLs with by-/ error ");
-   #print(SearchChan,'-Known URL Issue');
-   #print('after SearchChan should print')
    CountSecondLabel=0;
    if SearchChan=="google":
     frame1=GoogleAdFrameA;
@@ -452,10 +450,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      print("Loop Number ",CountSecondLabel);
      try:
       print(CountSecondLabel);
-      #frame1['Final URL'].lower().find('www')
-      #print(frame1['Final URL'].lower().find('www'),"-find www ")
-      #frame2['Final URL'].lower().find('www')
-      #print(frame2['Final URL'].lower().find('www'),"-find www ")
       if frame1['Final URL'].lower().find('www')>-1:
        frame1['Labels'][CountSecondLabel]="by-/ bad URL"
        frame2['Labels'][CountSecondLabel]="by-/ bad URL"
@@ -473,10 +467,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      print("Loop Number ",CountSecondLabel);
      try:
       print(CountSecondLabel);
-      #frame1['Final URL'].lower().find('www')
-      #print(frame1['Final URL'].lower().find('www'),"-find www ")
-      #frame2['Final URL'].lower().find('www')
-      #print(frame2['Final URL'].lower().find('www'),"-find www ")
       if frame1['Final URL'].lower().find('www')>-1:
        frame1['Labels'][CountSecondLabel]="by-/ bad URL"
        frame2['Labels'][CountSecondLabel]="by-/ bad URL"
@@ -485,8 +475,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
        frame2=frame2.drop(CountSecondLabel);
      except:
       CountSecondLabel+0;
-      
-       #print("Skip-",CountSecondLabel)  
      CountSecondLabel+=1;  
     
    print(len(SecondLabel),"-count")
