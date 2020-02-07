@@ -527,47 +527,56 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  
  
  def knownSheetUrlDefectby(SearchChan,SecondLabel):
-  print("Checkin for URLs with by-/ error ");
-  #print(SearchChan,'-Known URL Issue');
-  #print('after SearchChan should print')
-  CountSecondLabel=0;
-  frame=[];
-  print(len(SecondLabel),"-count")
-  SecondLabel=list(dict.fromkeys(SecondLabel))
-  print(len(SecondLabel),"-count")
   if len(SecondLabel)!=0:
-    #CountSecondLabel=0;
-    #frame=[];
-    """
+   print("Checkin for URLs with by-/ error ");
+   #print(SearchChan,'-Known URL Issue');
+   #print('after SearchChan should print')
+   CountSecondLabel=0;
+   if SearchChan=="google":
+    frame1=GoogleAdFrameA;
+    frame2=GoogleAdFrameB;
+   if SearchChan=="bing":
+    frame1=BingAdFrameA;
+    frame2=BingAdFrameA;
+   print(len(SecondLabel),"-count")
+   SecondLabel=list(dict.fromkeys(SecondLabel))
+   print(len(SecondLabel),"-count")
+   
+   """
     if SearchChan=="google":
      frame=GoogleAdFrameA.iloc[SecondLabel];
     if SearchChan=="bing": 
      BingAdFrameA.iloc[SecondLabel];
-    """  
+   """  
     
-    while CountSecondLabel<len(SecondLabel):
-     print("Loop Number ",CountSecondLabel);
-     try:
-      print(CountSecondLabel);
-      if SearchChan=="google":
-      
+   while CountSecondLabel<len(SecondLabel):
+    print("Loop Number ",CountSecondLabel);
+    try:
+     print(CountSecondLabel);
+     frame1['Final URL'].lower().find('www')
+     print(frame1['Final URL'].lower().find('www'),"-find www ")
+     frame2['Final URL'].lower().find('www')
+     print(frame2['Final URL'].lower().find('www'),"-find www ")
+       
+     """
        print(SearchChan," for Url Known Issue")
        print(SecondLabel[CountSecondLabel])
       
-       frame.append(GoogleAdFrameA.iloc[[SecondLabel[CountSecondLabel]]])
+       #rame.append(GoogleAdFrameA.iloc[[SecondLabel[CountSecondLabel]]])
        #print(GoogleAdFrameA.iloc[[SecondLabel[CountSecondLabel]]])
-       frame.append(GoogleAdFrameB.iloc[[SecondLabel[CountSecondLabel]]])
+       #frame.append(GoogleAdFrameB.iloc[[SecondLabel[CountSecondLabel]]])
        #print(GoogleAdFrameB.iloc[[SecondLabel[CountSecondLabel]]])
-      if SearchChan=="bing": 
+     if SearchChan=="bing": 
        #print(SearchChan," for Url Known Issue")
-       frame.append(BingAdFrameA.iloc[[SecondLabel[CountSecondLabel]]])
+       #frame.append(BingAdFrameA.iloc[[SecondLabel[CountSecondLabel]]])
        #print(BingAdFrameA.iloc[[SecondLabel[CountSecondLabel]]])
-       frame.append(BingAdFrameB.iloc[[SecondLabel[CountSecondLabel]]])
+       @frame.append(BingAdFrameB.iloc[[SecondLabel[CountSecondLabel]]])
        #print(BingAdFrameB.iloc[[SecondLabel[CountSecondLabel]]])
-     except:
-      print(CountSecondLabel,"-skipped")
-     CountSecondLabel+=1;
-    frame[frame["Final URL"].str.contains("WWW")]
+     """
+       
+    except:
+     print(CountSecondLabel,"-skipped")
+    CountSecondLabel+=1;    
   print(frame)
   print(" end of known Url issue check")
   return frame
