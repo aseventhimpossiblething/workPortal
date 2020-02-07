@@ -538,12 +538,15 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   if len(SecondLabel)!=0:
   #CountSecondLabel=0;
   #frame=[];
+  """"
    if SearchChan=="google":
     frame=GoogleAdFrameA.iloc[SecondLabel];
    if SearchChan=="bing": 
     BingAdFrameA.iloc[SecondLabel];
+  """  
     
     while CountSecondLabel<len(SecondLabel):
+     print("Loop Number ",CountSecondLabel);
      try:
       print(CountSecondLabel);
       if SearchChan=="google":
