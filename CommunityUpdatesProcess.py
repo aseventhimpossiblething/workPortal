@@ -492,16 +492,16 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("!!!!!!!!!!!! LOCATION OF INTERVENTION FOR NEW SCRIPT ELEMENT 3 !!!!!!!!!!!!!!")
    print(URL_Struct1.find('WWW'))
    """
-   print("!!!!!!!!!!!! LOCATION OF INTERVENTION FOR NEW SCRIPT ELEMENT 4 !!!!!!!!!!!!!!")
-   print(URL_Struct1.lower().find('www'))
+   #print("!!!!!!!!!!!! LOCATION OF INTERVENTION FOR NEW SCRIPT ELEMENT 4 !!!!!!!!!!!!!!")
+   #print(URL_Struct1.lower().find('www'))
    """
    print("!!!!!!!!!!!! LOCATION OF INTERVENTION FOR NEW SCRIPT ELEMENT 5 !!!!!!!!!!!!!!")
    """
    if URL_Struct1.lower().find('www')>-1:
-    print(URL_Struct1.lower().find('www'),"-Greater than 1")
-    print(URL_Struct1)
+    #print(URL_Struct1.lower().find('www'),"-Greater than 1")
+    #print(URL_Struct1)
     SecondLabel.append(count)
-    print('Url of row ',count,' contains -by-/ ',URL_Struct1)
+    #print('Url of row ',count,' contains -by-/ ',URL_Struct1)
         
   except:
    NewDataFrame=NewDataFrame.drop([count])
@@ -539,16 +539,17 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    while CountSecondLabel<len(SecondLabel):
     if SearchChan=="google":
      print(SearchChan," for Url Known Issue")
-     frame.append(GoogleAdFrameA.iloc(SecondLabel[CountSecondLabel]))
-     print(GoogleAdFrameA.iloc(SecondLabel[CountSecondLabel]))
-     frame.append(GoogleAdFrameB.iloc(SecondLabel[CountSecondLabel]))
-     print(GoogleAdFrameB.iloc(SecondLabel[CountSecondLabel]))
+     print(SecondLabel[CountSecondLabel])
+     frame.append(GoogleAdFrameA.iloc[SecondLabel[CountSecondLabel]])
+     print(GoogleAdFrameA.iloc[SecondLabel[CountSecondLabel]])
+     frame.append(GoogleAdFrameB.iloc[SecondLabel[CountSecondLabel]])
+     print(GoogleAdFrameB.iloc[SecondLabel[CountSecondLabel]])
     if SearchChan=="bing": 
      print(SearchChan," for Url Known Issue")
-     frame.append(BingAdFrameA.iloc(SecondLabel[CountSecondLabel]))
-     print(BingAdFrameA.iloc(SecondLabel[CountSecondLabel]))
-     frame.append(BingAdFrameB.iloc(SecondLabel[CountSecondLabel]))
-     print(BingAdFrameB.iloc(SecondLabel[CountSecondLabel]))
+     frame.append(BingAdFrameA.iloc[SecondLabel[CountSecondLabel]])
+     print(BingAdFrameA.iloc[SecondLabel[CountSecondLabel]])
+     frame.append(BingAdFrameB.iloc[SecondLabel[CountSecondLabel]])
+     print(BingAdFrameB.iloc[SecondLabel[CountSecondLabel]])
     CountSecondLabel+=1;
   print(frame)
   print(" end of known Url issue check")
