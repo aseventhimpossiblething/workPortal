@@ -4,7 +4,7 @@
 
 -# The below configuration parameters are used to authenticate using the       #
 
--# recommended OAuth2 flow. For more information on authenticating with OAuth2 #
+#-# recommended OAuth2 flow. For more information on authenticating with OAuth2 #
 
 -# see: https://developers.google.com/google-ads/api/docs/oauth/overview       #
 
