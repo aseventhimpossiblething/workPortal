@@ -113,81 +113,7 @@ def filterNonParticipators(theFrame):
  
  
  
- """
- theFrame=theFrame.drop_duplicates();
- print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
- 
- theFrame=theFrame.dropna()
- print("LengththeFrame=theFrame.dropna ",len(theFrame))
- #print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
- 
- theFrame=theFrame[~theFrame['Brand Name'].str.contains('Clayton')]
- print("theFrame[~theFrame['Brand Name'].str.contains('Clayton')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Brand Name'].str.contains('Oakwood')]
- print("theFrame[~theFrame['Brand Name'].str.contains('Oakwood')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Brand Name'].str.contains('Craftmark')]
- print("theFrame[~theFrame['Brand Name'].str.contains('Craftmark')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Builder Name'].str.contains('Clayton')]
- print("theFrame[~theFrame['Builder Name'].str.contains('Clayton')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Builder Name'].str.contains('Oakwood')]
- print("theFrame[~theFrame['Builder Name'].str.contains('Oakwood')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Builder Name'].str.contains('Craftmark')]
- print("theFrame[~theFrame['Builder Name'].str.contains('Craftmark')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Community Name'].str.contains('Clayton')]
- print("theFrame[~theFrame['Community Name'].str.contains('Clayton')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Community Name'].str.contains('Craftmark')]
- print("theFrame[~theFrame['Community Name'].str.contains('Craftmark')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Community Name'].str.contains('Oakwood')]
- print("theFrame[~theFrame['Community Name'].str.contains('Oakwood')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Brand Name'].str.contains('Freedom')]
- print("theFrame[~theFrame['Brand Name'].str.contains('Freedom')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Community Name'].str.contains('Freedom')]
- print("theFrame[~theFrame['Community Name'].str.contains('Freedom')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Builder Name'].str.contains('Freedom')]
- print("theFrame[~theFrame['Builder Name'].str.contains('Freedom')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Brand Name'].str.contains('Crossland')]
- print("theFrame[~theFrame['Brand Name'].str.contains('Crossland')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Community Name'].str.contains('Crossland')]
- print("theFrame[~theFrame['Community Name'].str.contains('Crossland')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Builder Name'].str.contains('Crossland')]
- print("theFrame[~theFrame['Builder Name'].str.contains('Crossland')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Brand Name'].str.contains('G & I')]
- print("theFrame[~theFrame['Brand Name'].str.contains('G & I'')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Community Name'].str.contains('G & I')]
- print("theFrame[~theFrame['Community Name'].str.contains('G & I')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Builder Name'].str.contains('G & I')]
- print("theFrame[~theFrame['Builder Name'].str.contains('G & I')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Brand Name'].str.contains('Build on Your Lot')]
- print("theFrame[~theFrame['Brand Name'].str.contains('Build on Your Lot)] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Community Name'].str.contains('Build on Your Lot')]
- print("theFrame[~theFrame['Community Name'].str.contains('Build on Your Lot')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Builder Name'].str.contains('Build on Your Lot')]
- print("theFrame[~theFrame['Builder Name'].str.contains('Build on Your Lot')] ",len(theFrame))
 
-
- theFrame=theFrame.drop_duplicates(subset=['Community Name']);
- print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
- """
  
  
  
@@ -526,10 +452,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      print("Loop Number ",CountSecondLabel);
      try:
       print(CountSecondLabel);
-      frame1['Final URL'].lower().find('www')
-      print(frame1['Final URL'].lower().find('www'),"-find www ")
-      frame2['Final URL'].lower().find('www')
-      print(frame2['Final URL'].lower().find('www'),"-find www ")
+      #frame1['Final URL'].lower().find('www')
+      #print(frame1['Final URL'].lower().find('www'),"-find www ")
+      #frame2['Final URL'].lower().find('www')
+      #print(frame2['Final URL'].lower().find('www'),"-find www ")
+      if frame1['Final URL'].lower().find('www')>-1:
+       frame1['Labels']="by-/ bad URL"
+       frame2['Labels']="by-/ bad URL"
       if frame1['Final URL'].lower().find('www')!=-1:
        frame1=frame1.drop(CountSecondLabel);
        frame2=frame2.drop(CountSecondLabel);
@@ -547,7 +476,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       #frame1['Final URL'].lower().find('www')
       #print(frame1['Final URL'].lower().find('www'),"-find www ")
       #frame2['Final URL'].lower().find('www')
-      print(frame2['Final URL'].lower().find('www'),"-find www ")
+      #print(frame2['Final URL'].lower().find('www'),"-find www ")
+      if frame1['Final URL'].lower().find('www')>-1:
+       frame1['Labels']="by-/ bad URL"
+       frame2['Labels']="by-/ bad URL"
       if frame1['Final URL'].lower().find('www')!=-1:
        frame1=frame1.drop(CountSecondLabel);
        frame2=frame2.drop(CountSecondLabel);
