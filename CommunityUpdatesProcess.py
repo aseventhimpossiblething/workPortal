@@ -497,7 +497,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    """
    print("!!!!!!!!!!!! LOCATION OF INTERVENTION FOR NEW SCRIPT ELEMENT 5 !!!!!!!!!!!!!!")
    """
-   if URL_struct1.lower().find('www')>-1:
+   if URL_Struct1.lower().find('www')>-1:
     print(URL_Struct1.lower().find('www'),"-Greater than 1")
     print(URL_Struct1)
     SecondLabel.append(count)
