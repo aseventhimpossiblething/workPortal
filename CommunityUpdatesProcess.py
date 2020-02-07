@@ -536,14 +536,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   SecondLabel=list(dict.fromkeys(SecondLabel))
   print(len(SecondLabel),"-count")
   if len(SecondLabel)!=0:
-  #CountSecondLabel=0;
-  #frame=[];
-  """"
-   if SearchChan=="google":
-    frame=GoogleAdFrameA.iloc[SecondLabel];
-   if SearchChan=="bing": 
-    BingAdFrameA.iloc[SecondLabel];
-  """  
+    #CountSecondLabel=0;
+    #frame=[];
+    """
+    if SearchChan=="google":
+     frame=GoogleAdFrameA.iloc[SecondLabel];
+    if SearchChan=="bing": 
+     BingAdFrameA.iloc[SecondLabel];
+    """  
     
     while CountSecondLabel<len(SecondLabel):
      print("Loop Number ",CountSecondLabel);
