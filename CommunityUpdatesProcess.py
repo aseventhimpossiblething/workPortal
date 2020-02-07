@@ -536,14 +536,19 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   if len(SecondLabel)!=0:
   #CountSecondLabel=0;
   #frame=[];
-   while CountSecondLabel<len(SecondLabel):
+   if SearchChan=="google":
+    frame=GoogleAdFrameA.iloc[SecondLabel];
+   if SearchChan=="bing": 
+    BingAdFrameA.iloc[SecondLabel];
+    """
+    while CountSecondLabel<len(SecondLabel):
     try:
      print(CountSecondLabel);
      if SearchChan=="google":
-      """
+      
       print(SearchChan," for Url Known Issue")
       print(SecondLabel[CountSecondLabel])
-      """
+      
       frame.append(GoogleAdFrameA.iloc[[SecondLabel[CountSecondLabel]]])
       #print(GoogleAdFrameA.iloc[[SecondLabel[CountSecondLabel]]])
       frame.append(GoogleAdFrameB.iloc[[SecondLabel[CountSecondLabel]]])
@@ -554,9 +559,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       #print(BingAdFrameA.iloc[[SecondLabel[CountSecondLabel]]])
       frame.append(BingAdFrameB.iloc[[SecondLabel[CountSecondLabel]]])
       #print(BingAdFrameB.iloc[[SecondLabel[CountSecondLabel]]])
-    except:
-     print(CountSecondLabel,"-skipped")
-    CountSecondLabel+=1;
+     except:
+      print(CountSecondLabel,"-skipped")
+     CountSecondLabel+=1;
+    """
   print(frame)
   print(" end of known Url issue check")
   return frame
