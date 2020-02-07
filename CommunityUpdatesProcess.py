@@ -484,30 +484,16 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path2A.append("New Homes")
    Final_URL.append(URL_Struct1) 
    Labels.append("Created by WebApp") 
-   """
-   print("!!!!!!!!!!!! LOCATION OF INTERVENTION FOR NEW SCRIPT ELEMENT 1 !!!!!!!!!!!!!!")
-   print(URL_Struct1)
-   print("!!!!!!!!!!!! LOCATION OF INTERVENTION FOR NEW SCRIPT ELEMENT 2 !!!!!!!!!!!!!!")
-   print(type(URL_Struct1))
-   print("!!!!!!!!!!!! LOCATION OF INTERVENTION FOR NEW SCRIPT ELEMENT 3 !!!!!!!!!!!!!!")
-   print(URL_Struct1.find('WWW'))
-   """
-   #print("!!!!!!!!!!!! LOCATION OF INTERVENTION FOR NEW SCRIPT ELEMENT 4 !!!!!!!!!!!!!!")
-   #print(URL_Struct1.lower().find('www'))
-   """
-   print("!!!!!!!!!!!! LOCATION OF INTERVENTION FOR NEW SCRIPT ELEMENT 5 !!!!!!!!!!!!!!")
-   """
+  
    if URL_Struct1.lower().find('www')>-1:
-    #print(URL_Struct1.lower().find('www'),"-Greater than 1")
-    #print(URL_Struct1)
     SecondLabel.append(count)
-    #print('Url of row ',count,' contains -by-/ ',URL_Struct1)
+    
         
   except:
    NewDataFrame=NewDataFrame.drop([count])
   count+=1;
   
- #print(Labels) 
+  
  GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Labels":Labels} 
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
  GoogleAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
@@ -557,6 +543,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      print(frame1['Final URL'].lower().find('www'),"-find www ")
      frame2['Final URL'].lower().find('www')
      print(frame2['Final URL'].lower().find('www'),"-find www ")
+     if frame1['Final URL'].lower().find('www')!=-1:
+      frame1.drop(CountSecondLabel);
+      frame2.drop(CountSecondLabel);
        
      """
        print(SearchChan," for Url Known Issue")
