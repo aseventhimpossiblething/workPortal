@@ -521,9 +521,36 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if SearchChan=="google":
     frame1=GoogleAdFrameA;
     frame2=GoogleAdFrameB;
+    CountSecondLabel=0;
+    while CountSecondLabel<len(SecondLabel):
+     print("Loop Number ",CountSecondLabel);
+     try:
+      print(CountSecondLabel);
+      frame1['Final URL'].lower().find('www')
+      print(frame1['Final URL'].lower().find('www'),"-find www ")
+      frame2['Final URL'].lower().find('www')
+      print(frame2['Final URL'].lower().find('www'),"-find www ")
+      if frame1['Final URL'].lower().find('www')!=-1:
+       frame1=frame1.drop(CountSecondLabel);
+       frame2=frame2.drop(CountSecondLabel);
+     CountSecondLabel+=1;  
    if SearchChan=="bing":
     frame1=BingAdFrameA;
     frame2=BingAdFrameA;
+    CountSecondLabel=0;
+    while CountSecondLabel<len(SecondLabel):
+     print("Loop Number ",CountSecondLabel);
+      try:
+       print(CountSecondLabel);
+       frame1['Final URL'].lower().find('www')
+       print(frame1['Final URL'].lower().find('www'),"-find www ")
+       frame2['Final URL'].lower().find('www')
+       print(frame2['Final URL'].lower().find('www'),"-find www ")
+       if frame1['Final URL'].lower().find('www')!=-1:
+        frame1=frame1.drop(CountSecondLabel);
+        frame2=frame2.drop(CountSecondLabel);
+     CountSecondLabel+=1;  
+    
    print(len(SecondLabel),"-count")
    SecondLabel=list(dict.fromkeys(SecondLabel))
    print(len(SecondLabel),"-count")
@@ -533,7 +560,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      frame=GoogleAdFrameA.iloc[SecondLabel];
     if SearchChan=="bing": 
      BingAdFrameA.iloc[SecondLabel];
-   """  
+     
     
    while CountSecondLabel<len(SecondLabel):
     print("Loop Number ",CountSecondLabel);
@@ -547,7 +574,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       frame1.drop(CountSecondLabel);
       frame2.drop(CountSecondLabel);
        
-     """
+     
        print(SearchChan," for Url Known Issue")
        print(SecondLabel[CountSecondLabel])
       
@@ -561,14 +588,15 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
        #print(BingAdFrameA.iloc[[SecondLabel[CountSecondLabel]]])
        @frame.append(BingAdFrameB.iloc[[SecondLabel[CountSecondLabel]]])
        #print(BingAdFrameB.iloc[[SecondLabel[CountSecondLabel]]])
-     """
+   
        
     except:
      print(CountSecondLabel,"-skipped")
-    CountSecondLabel+=1;    
-  print(frame)
+    CountSecondLabel+=1;   
+   """ 
+  print(frame1)
   print(" end of known Url issue check")
-  return frame
+  return frame1,frame2
  knownSheetUrlDefectby(SearchChan,SecondLabel);
     
  if SearchChan=="google":
