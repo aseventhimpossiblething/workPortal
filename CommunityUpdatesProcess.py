@@ -537,6 +537,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   #CountSecondLabel=0;
   #frame=[];
    while CountSecondLabel<len(SecondLabel):
+    print(CountSecondLabel);
     if SearchChan=="google":
      print(SearchChan," for Url Known Issue")
      print(SecondLabel[CountSecondLabel])
