@@ -457,8 +457,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       #frame2['Final URL'].lower().find('www')
       #print(frame2['Final URL'].lower().find('www'),"-find www ")
       if frame1['Final URL'].lower().find('www')>-1:
-       frame1['Labels']="by-/ bad URL"
-       frame2['Labels']="by-/ bad URL"
+       frame1['Labels'][CountSecondLabel]="by-/ bad URL"
+       frame2['Labels'][CountSecondLabel]="by-/ bad URL"
       if frame1['Final URL'].lower().find('www')!=-1:
        frame1=frame1.drop(CountSecondLabel);
        frame2=frame2.drop(CountSecondLabel);
@@ -478,8 +478,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       #frame2['Final URL'].lower().find('www')
       #print(frame2['Final URL'].lower().find('www'),"-find www ")
       if frame1['Final URL'].lower().find('www')>-1:
-       frame1['Labels']="by-/ bad URL"
-       frame2['Labels']="by-/ bad URL"
+       frame1['Labels'][CountSecondLabel]="by-/ bad URL"
+       frame2['Labels'][CountSecondLabel]="by-/ bad URL"
       if frame1['Final URL'].lower().find('www')!=-1:
        frame1=frame1.drop(CountSecondLabel);
        frame2=frame2.drop(CountSecondLabel);
