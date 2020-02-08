@@ -1,14 +1,14 @@
--# OAuth2 configuration
+# OAuth2 configuration
 
--###############################################################################
+###############################################################################
 
--# The below configuration parameters are used to authenticate using the       #
+# The below configuration parameters are used to authenticate using the       #
 
-#-# recommended OAuth2 flow. For more information on authenticating with OAuth2 #
+# recommended OAuth2 flow. For more information on authenticating with OAuth2 #
 
-#-# see: https://developers.google.com/google-ads/api/docs/oauth/overview       #
+# see: https://developers.google.com/google-ads/api/docs/oauth/overview       #
 
-#-###############################################################################
+###############################################################################
 
 developer_token: uK0ObUtXfoUFX-8TfjSrAQ
 
