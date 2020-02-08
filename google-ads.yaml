@@ -36,7 +36,7 @@ refresh_token: INSERT_REFRESH_TOKEN_HERE
 
 ###############################################################################
 
-login_customer_id: 150-063-1476
+login_customer_id: "1500631476"
 
 
 
