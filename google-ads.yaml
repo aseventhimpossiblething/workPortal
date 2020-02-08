@@ -22,47 +22,47 @@ refresh_token: INSERT_REFRESH_TOKEN_HERE
 
 -# Login customer ID configuration
 
--###############################################################################
+###############################################################################
 
--# Required for manager accounts only: Specify the login customer ID used to   #
+# Required for manager accounts only: Specify the login customer ID used to   #
 
--# authenticate API calls. This will be the customer ID of the authenticated   #
+# authenticate API calls. This will be the customer ID of the authenticated   #
 
--# manager account. It should be set without dashes, for example: 1234567890   #
+# manager account. It should be set without dashes, for example: 1234567890   #
 
--# instead of 123-456-7890. You can also specify this later in code if your    #
+# instead of 123-456-7890. You can also specify this later in code if your    #
 
--# application uses multiple manager account + OAuth pairs.                    #
+# application uses multiple manager account + OAuth pairs.                    #
 
--###############################################################################
+###############################################################################
 
 login_customer_id: INSERT_LOGIN_CUSTOMER_ID_HERE
 
 
 
--# Service Account configuration
+# Service Account configuration
 
--###############################################################################
+###############################################################################
 
--# To authenticate with a service account add the appropriate values to the    #
+# To authenticate with a service account add the appropriate values to the    #
 
--# below configuration parameters and remove the four OAuth credentials above. #
+# below configuration parameters and remove the four OAuth credentials above. #
 
--# The "path_to_private_key_file" value should be a path to your local private #
+# The "path_to_private_key_file" value should be a path to your local private #
 
--# key json file, and "delegated_account" should be the email address that is  #
+# key json file, and "delegated_account" should be the email address that is  #
 
--# being used to impersonate the credentials making requests. for more         #
+# being used to impersonate the credentials making requests. for more         #
 
--# information on service accounts, see:                                       #
+# information on service accounts, see:                                       #
 
--# https://developers.google.com/google-ads/api/docs/oauth/service-accounts    #
+# https://developers.google.com/google-ads/api/docs/oauth/service-accounts    #
 
--###############################################################################
+###############################################################################
 
--# path_to_private_key_file: INSERT_PATH_TO_JSON_KEY_FILE_HERE
+# path_to_private_key_file: INSERT_PATH_TO_JSON_KEY_FILE_HERE
 
--# delegated_account: INSERT_DOMAIN_WIDE_DELEGATION_ACCOUNT
+# delegated_account: INSERT_DOMAIN_WIDE_DELEGATION_ACCOUNT
 
 
 
