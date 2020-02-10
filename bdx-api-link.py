@@ -18,7 +18,7 @@ import uuid
 
 from google.ads.google_ads.client import GoogleAdsClient
 #print("Current directory=",os.getcwd())
-#client = GoogleAdsClient.load_from_storage()
+client = GoogleAdsClient.load_from_storage()
 #from googleads import adwords
 
 
@@ -26,7 +26,7 @@ from google.ads.google_ads.client import GoogleAdsClient
 
 
 #adwords_client = adwords.AdWordsClient.LoadFromStorage()
-adwords_client = AdWordsClient.LoadFromStorage()
+#adwords_client = AdWordsClient.LoadFromStorage()
 
 
 
