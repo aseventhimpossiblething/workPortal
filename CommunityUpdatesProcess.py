@@ -277,7 +277,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             [count].replace(" ","-")+"/"+NewDataFrame['Community Name']\
             [count].replace(" ","-")+"-by-"+NewDataFrame['Brand Name']\
             [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower()
-  URL_Struct1=URL_Struct1.replace("'","")
+  URL_Struct1=URL_Struct1.replace("-+","-").replace("'","").replace("---","-").replace("--","-")
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc"
@@ -410,6 +410,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path2A.append("New Homes")
    Final_URL.append(URL_Struct1) 
    Labels.append("Created by WebApp") 
+   
   
    if URL_Struct1.lower().find('www')>-1:
     SecondLabel.append(count)
