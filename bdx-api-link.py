@@ -18,14 +18,14 @@ import uuid
 
 from google.ads.google_ads.client import GoogleAdsClient
 print("Current directory=",os.getcwd())
-#client = GoogleAdsClient.load_from_storage()
+client = GoogleAdsClient.load_from_storage()
 #from googleads import adwords
 
 
 
 
 
-#adwords_client = adwords.AdWordsClient.LoadFromStorage()
+adwords_client = adwords.AdWordsClient.LoadFromStorage()
 
 
          
