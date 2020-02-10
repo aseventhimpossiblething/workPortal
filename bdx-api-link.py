@@ -25,7 +25,9 @@ from google.ads.google_ads.client import GoogleAdsClient
 
 
 
-adwords_client = adwords.AdWordsClient.LoadFromStorage()
+#adwords_client = adwords.AdWordsClient.LoadFromStorage()
+adwords_client = AdWordsClient.LoadFromStorage()
+
 
 
          
