@@ -10,13 +10,13 @@
 
 ###############################################################################
 
-developer_token: uK0ObUtXfoUFX-8TfjSrAQ
+developer_token: "uK0ObUtXfoUFX-8TfjSrAQ"
 
-client_id: 50100556830-gdmcf56sf67kj8epiqebnmhful771h39.apps.googleusercontent.com
+client_id: "50100556830-gdmcf56sf67kj8epiqebnmhful771h39.apps.googleusercontent.com"
 
-client_secret: 9rlwx5iQtUO3Vl4UaLoUjHv8
+client_secret: "9rlwx5iQtUO3Vl4UaLoUjHv8"
 
-refresh_token: 1//04keSRnpr89oDCgYIARAAGAQSNwF-L9IrqG_7mohcNXydn9zaUfiTIyTeiR8FA9SFCUafMGZC8nR-eJ5UnMdEBnczPVmSIzYQtIo
+refresh_token: "1//04keSRnpr89oDCgYIARAAGAQSNwF-L9IrqG_7mohcNXydn9zaUfiTIyTeiR8FA9SFCUafMGZC8nR-eJ5UnMdEBnczPVmSIzYQtIo"
 
 
 # Login customer ID configuration
