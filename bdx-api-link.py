@@ -344,9 +344,13 @@ def CommunityFileHandling():
     return fileHandler.CommListFileHandler()
 
 @app.route('/Campaigns')
-#@app.route('/Campaigns',methods=['POST','GET'])
+def campattmpt():
+    return "<html> hopefully some campaigns </html>"
+
+@app.route('/Campaign',methods=['POST','GET'])
 def campslist():
-    return "<html> hopefully some campaigns </html>"     
+    return "<html> Campaign retreival logic </html>"     
+
 
     
    
