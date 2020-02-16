@@ -30,7 +30,8 @@ def main(client):
  more_pages = True;
  print("Begin while for pages");
  while more_pages:
-  page = campaign_service.get(selector)
+  #page = campaign_service.get(selector)
+  page = campaign_service.get_campaign(selector)
     # Display results.
   if 'entries' in page:
     for campaign in page['entries']:
