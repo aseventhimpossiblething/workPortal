@@ -23,18 +23,18 @@ def main(client):
          'numberResults': str(PAGE_SIZE)
      }
   }
-  more_pages = True
- print("Begin while for pages")
+ more_pages = True;
+ print("Begin while for pages");
  while more_pages:
-   page = campaign_service.get(selector)
+  page = campaign_service.get(selector)
     # Display results.
-   if 'entries' in page:
-     for campaign in page['entries']:
+  if 'entries' in page:
+    for campaign in page['entries']:
        print('Campaign with id "%s", name "%s", and status "%s" was '
              'found.' % (campaign['id'], campaign['name'],
                          campaign['status']))
-   else:
-     print('No campaigns were found.')
+  else:
+   print('No campaigns were found.')
    offset += PAGE_SIZE
    selector['paging']['startIndex'] = str(offset)
    more_pages = offset < int(page['totalNumEntries'])
@@ -44,5 +44,5 @@ def main(client):
   main(adwords_client)
   cat="2"
   
-   return "cat"
+ return "cat"
   
