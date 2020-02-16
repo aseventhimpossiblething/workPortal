@@ -18,7 +18,7 @@ from flask_sslify import SSLify
 import uuid
 
 
-
+"""
 #google.ads.google_ads.client 
 from google.ads.google_ads.client import GoogleAdsClient
 clients=GoogleAdsClient.load_from_storage()
@@ -32,7 +32,7 @@ from googleads import adwords
 client2 = GoogleAdsClient.load_from_storage()
 adwords_client1 = adwords.AdWordsClient.LoadFromStorage()
 adwords_client2 = AdWordsClient.LoadFromStorage()
-
+"""
 
 
          
