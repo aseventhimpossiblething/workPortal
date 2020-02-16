@@ -48,9 +48,10 @@ def main(client):
   adwords_client = adwords.AdWordsClient.LoadFromStorage()
   #main(adwords_client)
   cat="2"
-"""
+
   
 main(client)  
+"""
 def CampFunc():
  return "Generic return"
   
