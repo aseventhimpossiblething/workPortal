@@ -178,6 +178,23 @@ if __name__ == '__main__':
 
     main(google_ads_client, args.customer_id)
 
+    
+# GoogleAdsClient will read the google-ads.yaml configuration file in the
+# home directory if none is specified.
+google_ads_client = (google.ads.google_ads.client.GoogleAdsClient
+                         .load_from_storage())
+
+parser = argparse.ArgumentParser(
+       description='Adds a campaign for specified customer.')
+# The following argument(s) should be provided to run the example.
+parser.add_argument('-c', '--customer_id', type=str,
+                       required=True, help='The Google Ads customer ID.')
+args = parser.parse_args()
+
+main(google_ads_client, args.customer_id)
+        
+    
+
 
 
 def CampFunc():
