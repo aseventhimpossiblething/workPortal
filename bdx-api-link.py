@@ -17,25 +17,19 @@ from datetime import datetime
 from flask_sslify import SSLify
 import uuid
 
+
+
 #google.ads.google_ads.client 
 from google.ads.google_ads.client import GoogleAdsClient
 import googleads
 from googleads import adwords
-
 #import GoogleAdsClient
-
 #import GoogleAdsClient
-
-
 client = GoogleAdsClient.load_from_storage()
 from googleads import adwords
-
-
-
-
-
-#adwords_client = adwords.AdWordsClient.LoadFromStorage()
-#adwords_client = AdWordsClient.LoadFromStorage()
+client = GoogleAdsClient.load_from_storage()
+adwords_client1 = adwords.AdWordsClient.LoadFromStorage()
+adwords_client2 = AdWordsClient.LoadFromStorage()
 
 
 
