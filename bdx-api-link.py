@@ -17,8 +17,8 @@ from datetime import datetime
 from flask_sslify import SSLify
 import uuid
 
-
-
+from google.ads.google_ads.client import GoogleAdsClient
+import googleads
 from googleads import adwords
 
 import GoogleAdsClient
@@ -27,7 +27,7 @@ import GoogleAdsClient
 
 
 #client = GoogleAdsClient.load_from_storage()
-from googleads import adwords
+#from googleads import adwords
 
 
 
