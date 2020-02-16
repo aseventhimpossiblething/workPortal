@@ -1,10 +1,13 @@
-#adwords_client = adwords.AdWordsClient.LoadFromStorage()
 from google.ads.google_ads.client import GoogleAdsClient
-
-
 client = GoogleAdsClient.load_from_storage()
+
+#adwords_client = adwords.AdWordsClient.LoadFromStorage()
+#from google.ads.google_ads.client import GoogleAdsClient
+#client = GoogleAdsClient.load_from_storage()
+
+
 print('adwords client inish')
-from googleads import adwords
+#from googleads import adwords
 
 
 PAGE_SIZE = 100
