@@ -19,6 +19,7 @@ import uuid
 
 
 
+from googleads import adwords
 
 import GoogleAdsClient
 #from google.ads.google_ads.client 
