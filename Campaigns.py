@@ -48,7 +48,7 @@ def main(client):
   cat="2"
 
   
-#main(client)  
+main(client)  
 def CampFunc():
  return "Generic return"
   
