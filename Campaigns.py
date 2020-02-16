@@ -2,7 +2,7 @@
 from google.ads.google_ads.client import GoogleAdsClient
 client = GoogleAdsClient.load_from_storage()
 print(dir(client))
-ServiceScan=clients.get_service('CampaignService', version='v2')
+ServiceScan=client.get_service('CampaignService', version='v2')
 print(dir(ServiceScan))
 print('Campaign Module Loaded')
 
