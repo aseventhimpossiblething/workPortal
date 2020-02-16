@@ -1,8 +1,7 @@
 from google.ads.google_ads.client import GoogleAdsClient
 client = GoogleAdsClient.load_from_storage()
 print(client)
-#client.GetService()
-
+clients.get_service()
 print('Campaign Module Loaded')
 
 
@@ -14,7 +13,8 @@ def main(client):
  print("Begin to define main(client)()")
  # Initialize appropriate service.
  print("client.GetService('CampaignService', version='v201809')")
- campaign_service = client.GetService('CampaignService', version='v201809')
+ #campaign_service = client.GetService('CampaignService', version='v201809')
+ campaign_service = client.get_service('CampaignService', version='v201809')
  # Construct selector and get all campaigns.
  offset = 0
  selector = {
