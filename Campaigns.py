@@ -14,7 +14,6 @@ def CampFunc():
   # Initialize appropriate service.
   print("client.GetService('CampaignService', version='v201809')")
   campaign_service = client.GetService('CampaignService', version='v201809')
-
   # Construct selector and get all campaigns.
   offset = 0
   selector = {
@@ -48,5 +47,5 @@ def CampFunc():
   main(adwords_client)
   cat="2"
    
-  return "cat"
+  #return "cat"
   
