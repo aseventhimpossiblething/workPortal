@@ -49,5 +49,5 @@ def CampFunc():
   
   
 #def CampFunc():
- return "Camps To Screen"
+ return main(adwords_client)
   
