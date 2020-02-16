@@ -1,19 +1,16 @@
 from google.ads.google_ads.client import GoogleAdsClient
 client = GoogleAdsClient.load_from_storage()
 
-#adwords_client = adwords.AdWordsClient.LoadFromStorage()
-#from google.ads.google_ads.client import GoogleAdsClient
-#client = GoogleAdsClient.load_from_storage()
+
+#print('adwords client inish')
 
 
-print('adwords client inish')
-#from googleads import adwords
+
+def CampFunc():
+ PAGE_SIZE = 100
 
 
-PAGE_SIZE = 100
-
-
-def main(client):
+ def main(client):
   # Initialize appropriate service.
   campaign_service = client.GetService('CampaignService', version='v201809')
 
@@ -25,7 +22,7 @@ def main(client):
           'startIndex': str(offset),
           'numberResults': str(PAGE_SIZE)
       }
-  }
+   }
 
   more_pages = True
   while more_pages:
@@ -44,13 +41,13 @@ def main(client):
     more_pages = offset < int(page['totalNumEntries'])
 
 
-if __name__ == '__main__':
+  if __name__ == '__main__':
   adwords_client = adwords.AdWordsClient.LoadFromStorage()
   main(adwords_client)
   
   
   
   
-def CampFunc():
-  return "Camps To Screen"
+#def CampFunc():
+ return "Camps To Screen"
   
