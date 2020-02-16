@@ -1,6 +1,7 @@
 from google.ads.google_ads.client import GoogleAdsClient
 client = GoogleAdsClient.load_from_storage()
-client.GetService()
+print(client)
+#client.GetService()
 
 print('Campaign Module Loaded')
 
