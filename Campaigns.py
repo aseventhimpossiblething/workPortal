@@ -191,7 +191,7 @@ parser.add_argument('-c', '--customer_id', type=str,
                        required=True, help='The Google Ads customer ID.')
 args = parser.parse_args()
 
-main(google_ads_client,150-063-1476)
+main(google_ads_client,1500631476)
         
     
 
