@@ -42,10 +42,10 @@ def CampFunc():
     more_pages = offset < int(page['totalNumEntries'])
 
 
-  #if __name__ == '__main__':
-  adwords_client = adwords.AdWordsClient.LoadFromStorage()
-  main(adwords_client)
-  cat="2"
+  if __name__ == '__main__':
+   adwords_client = adwords.AdWordsClient.LoadFromStorage()
+   main(adwords_client)
+   cat="2"
    
-  #return "cat"
+  return "cat"
   
