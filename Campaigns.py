@@ -7,11 +7,12 @@ client = GoogleAdsClient.load_from_storage()
 
 
 def CampFunc():
+ print("Begin CampFunc()")
  PAGE_SIZE = 100
-
-
  def main(client):
+  print("Begin to define main(client)()")
   # Initialize appropriate service.
+  print("client.GetService('CampaignService', version='v201809')")
   campaign_service = client.GetService('CampaignService', version='v201809')
 
   # Construct selector and get all campaigns.
@@ -25,6 +26,7 @@ def CampFunc():
    }
 
   more_pages = True
+  print("Begin while for pages")
   while more_pages:
     page = campaign_service.get(selector)
 
