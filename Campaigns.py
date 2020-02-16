@@ -47,3 +47,10 @@ def main(client):
 if __name__ == '__main__':
   adwords_client = adwords.AdWordsClient.LoadFromStorage()
   main(adwords_client)
+  
+  
+  
+  
+def CampFunc():
+  return "Camps To Screen"
+  
