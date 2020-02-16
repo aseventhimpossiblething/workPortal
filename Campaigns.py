@@ -2,12 +2,12 @@ from google.ads.google_ads.client import GoogleAdsClient
 client = GoogleAdsClient.load_from_storage()
 
 
-#print('adwords client inish')
+#print('Campaign Module Loaded')
 
 
 
 #def CampFunc():
-print("Begin CampFunc()")
+#print("Begin CampFunc()")
 PAGE_SIZE = 100
 def main(client):
  print("Begin to define main(client)()")
@@ -44,5 +44,6 @@ def main(client):
   main(adwords_client)
   cat="2"
   
- return "cat"
+def CampFunc():
+ return "Generic return"
   
