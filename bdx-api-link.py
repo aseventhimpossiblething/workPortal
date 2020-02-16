@@ -18,16 +18,16 @@ from flask_sslify import SSLify
 import uuid
 
 from google.ads.google_ads.client import GoogleAdsClient
-#import googleads
-#from googleads import adwords
+import googleads
+from googleads import adwords
 
-#import GoogleAdsClient
-#from google.ads.google_ads.client 
-#import GoogleAdsClient
+import GoogleAdsClient
+from google.ads.google_ads.client 
+import GoogleAdsClient
 
 
-#client = GoogleAdsClient.load_from_storage()
-#from googleads import adwords
+client = GoogleAdsClient.load_from_storage()
+from googleads import adwords
 
 
 
