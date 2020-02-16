@@ -2,7 +2,7 @@ from google.ads.google_ads.client import GoogleAdsClient
 client = GoogleAdsClient.load_from_storage()
 
 
-#print('Campaign Module Loaded')
+print('Campaign Module Loaded')
 
 
 
@@ -43,7 +43,9 @@ def main(client):
   adwords_client = adwords.AdWordsClient.LoadFromStorage()
   main(adwords_client)
   cat="2"
+
   
+main(adwords_client)  
 def CampFunc():
  return "Generic return"
   
