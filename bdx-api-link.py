@@ -21,13 +21,14 @@ import uuid
 
 #google.ads.google_ads.client 
 from google.ads.google_ads.client import GoogleAdsClient
+clients=GoogleAdsClient.load_from_storage()
 import googleads
 from googleads import adwords
 #import GoogleAdsClient
 #import GoogleAdsClient
 #client = GoogleAdsClient.load_from_storage()
-from googleads import adwords
-client = GoogleAdsClient.load_from_storage()
+#from googleads import adwords
+client2 = GoogleAdsClient.load_from_storage()
 client.GetService()
 adwords_client1 = adwords.AdWordsClient.LoadFromStorage()
 adwords_client2 = AdWordsClient.LoadFromStorage()
