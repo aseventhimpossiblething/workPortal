@@ -25,10 +25,10 @@ import googleads
 from googleads import adwords
 #import GoogleAdsClient
 #import GoogleAdsClient
-client = GoogleAdsClient.load_from_storage()
+#client = GoogleAdsClient.load_from_storage()
 from googleads import adwords
 client = GoogleAdsClient.load_from_storage()
-adwords_client1 = adwords.AdWordsClient.LoadFromStorage()
+#adwords_client1 = adwords.AdWordsClient.LoadFromStorage()
 adwords_client2 = AdWordsClient.LoadFromStorage()
 
 
