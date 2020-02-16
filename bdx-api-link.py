@@ -339,13 +339,16 @@ def DataFrameCss():
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
     return render_template('CommunitiesForm.html',pagetitle="Community Updates",CommonTag=CommonTagAll)
+
+
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
     return fileHandler.CommListFileHandler()
 
 @app.route('/Campaigns')
 def campattmpt():
-    return "<html> hopefully some campaigns </html>"
+    return Campaigns
+    #return "<html> hopefully some campaigns </html>"
 
 
 
