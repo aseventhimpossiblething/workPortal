@@ -1,8 +1,10 @@
+
 from google.ads.google_ads.client import GoogleAdsClient
 client = GoogleAdsClient.load_from_storage()
 print(client)
 clients.get_service()
 print('Campaign Module Loaded')
+
 
 
 
