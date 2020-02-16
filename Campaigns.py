@@ -45,7 +45,7 @@ def main(client):
   cat="2"
 
   
-main(adwords_client)  
+main(client)  
 def CampFunc():
  return "Generic return"
   
