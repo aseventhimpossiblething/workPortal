@@ -6,7 +6,7 @@ client = GoogleAdsClient.load_from_storage()
 
 
 
-def CampFunc():
+#def CampFunc():
  print("Begin CampFunc()")
  PAGE_SIZE = 100
  def main(client):
@@ -47,5 +47,5 @@ def CampFunc():
    main(adwords_client)
    cat="2"
    
-  return "cat"
+   return "cat"
   
