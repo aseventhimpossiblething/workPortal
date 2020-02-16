@@ -43,11 +43,7 @@ def CampFunc():
 
   if __name__ == '__main__':
    adwords_client = adwords.AdWordsClient.LoadFromStorage()
-   out=main(adwords_client)
-  
-  
-  
-  
-#def CampFunc():
- return out
+   main(adwords_client)
+   cat="2"
+   return cat
   
