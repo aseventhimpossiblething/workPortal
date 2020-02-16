@@ -14,7 +14,7 @@ PAGE_SIZE = 100
 def main(client):
  print("Begin to define main(client)()")
  # Initialize appropriate service.
- print("client.GetService('CampaignService', version='v2')
+ print("client.GetService('CampaignService', version='v2'")
  #campaign_service = client.GetService('CampaignService', version='v2')
  campaign_service = client.get_service('CampaignService', version='v2')
  # Construct selector and get all campaigns.
