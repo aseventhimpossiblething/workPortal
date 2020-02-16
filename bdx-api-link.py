@@ -21,7 +21,7 @@ from google.ads.google_ads.client import GoogleAdsClient
 #import googleads
 #from googleads import adwords
 
-import GoogleAdsClient
+#import GoogleAdsClient
 #from google.ads.google_ads.client 
 #import GoogleAdsClient
 
