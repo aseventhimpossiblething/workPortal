@@ -2,20 +2,20 @@
 from google.ads.google_ads.client import GoogleAdsClient
 client = GoogleAdsClient.load_from_storage()
 #print(dir(client))
-ServiceScan=client.get_service('CampaignService', version='v2')
+ServiceScan=client.get_service('GoogleAdsService', version='v2')
 print(dir(ServiceScan))
 print('Campaign Module Loaded')
 
 
 
-
+"""
 #def CampFunc():
 #print("Begin CampFunc()")
 PAGE_SIZE = 100
 def main(client):
  print("Begin to define main(client)()")
  # Initialize appropriate service.
- print("client.GetService('CampaignService', version='v2'")
+ print("client.GetService('GoogleAdsService', version='v2'")
  #campaign_service = client.GetService('CampaignService', version='v2')
  campaign_service = client.get_service('CampaignService', version='v2')
  # Construct selector and get all campaigns.
@@ -48,7 +48,7 @@ def main(client):
   adwords_client = adwords.AdWordsClient.LoadFromStorage()
   #main(adwords_client)
   cat="2"
-
+"""
   
 main(client)  
 def CampFunc():
