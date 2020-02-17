@@ -16,6 +16,7 @@ import sys
 from openpyxl import Workbook
 from openpyxl import load_workbook
 import xlsxwriter
+import gc
 
 
 
@@ -79,7 +80,6 @@ def filterNonParticipators(theFrame):
    #print("Drop while")
    
    theFrame=theFrame.drop_duplicates();
-   #print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
    theFrame=theFrame.dropna()
    #print("LengththeFrame=theFrame.dropna ",len(theFrame))
    #print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
@@ -180,7 +180,8 @@ def filterNonParticipators(theFrame):
    icount0+0;
   if icount0%100==0:
    print("Second Loop Count ",icount0)
-  icount0+=1; 
+  icount0+=1;
+  gc.collect() 
   
  theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name'])
  print("Length theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name']) ",len(theFrame))
