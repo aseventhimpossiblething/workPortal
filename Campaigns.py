@@ -209,7 +209,10 @@ args = parser.parse_args()
         
 #__________________________________________________________________________________
 
-
+customer_id=150-06-31476
+customer_id=1500631476
+customer_id="150-06-31476"
+customer_id="1500631476"
 print("Does main in camps self fire......") 
 campaign_budget_service = client.get_service('CampaignBudgetService',
                                                  version='v2')
