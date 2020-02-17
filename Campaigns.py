@@ -209,7 +209,7 @@ args = parser.parse_args()
         
 #__________________________________________________________________________________
 customer_id=9662896891
-customer_id=966-289-6891
+# epected bytes unicode customer_id=966-289-6891
 # permission error customer_id="9662896891"
 #customer_id="966-289-6891"
 #customer_id=9662896891
