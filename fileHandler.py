@@ -1,15 +1,12 @@
-import BidOpAssist
 import CommunityUpdatesProcess
 from datetime import datetime
 from flask import Flask, Markup, render_template, request
 import glob
 import os
-#import psycopg2
 import pandas
 import time
 import xlrd
 import io
-#import taskque
 import threading
 from flask import send_file
 import gc
