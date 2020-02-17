@@ -4,7 +4,7 @@ from datetime import datetime
 from flask import Flask, Markup, render_template, request
 import glob
 import os
-import psycopg2
+#import psycopg2
 import pandas
 import time
 import xlrd
