@@ -1,5 +1,4 @@
 import CommunityUpdatesProcess
-import glob
 import fileHandler
 import os
 from flask import Flask, Markup, render_template, request
@@ -11,7 +10,7 @@ from flask_sslify import SSLify
 
 from flask_sslify import SSLify
 
-from sklearn.ensemble import RandomForestRegressor
+
 app = Flask(__name__,"/static/")
 
 sslify = SSLify(app)
