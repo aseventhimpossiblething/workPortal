@@ -208,10 +208,10 @@ args = parser.parse_args()
 #main(google_ads_client, args.customer_id)
         
 #__________________________________________________________________________________
-customer_id=9662896891
+# int but byte expected customer_id=9662896891
 # epected bytes unicode customer_id=966-289-6891
 # permission error customer_id="9662896891"
-#customer_id="966-289-6891"
+customer_id="966-289-6891"
 #customer_id=9662896891
 """
 #customer_id=150-06-31476
