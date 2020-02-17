@@ -1,22 +1,13 @@
 import CommunityUpdatesProcess
 import glob
-import numpy
-import scipy
-import pandas
-import BidOpAssist
 import fileHandler
-import redis
 import os
 from flask import Flask, Markup, render_template, request
-from celery import Celery
 from flask import send_file
 from flask import send_from_directory
-import Campaigns
-#import taskque
 from datetime import datetime
 from flask_sslify import SSLify
-import Campaigns   
-import uuid
+
 
 from flask_sslify import SSLify
 
@@ -26,24 +17,6 @@ app = Flask(__name__,"/static/")
 sslify = SSLify(app)
 
 
-
-
-
-
-
-
-
-
-
-
-
-CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
-
-
-         
-         
-         
-         
 
 @app.route('/favicon.png')
 def favicon():
@@ -245,16 +218,6 @@ def index():
     domainFavi="https://bdxapilink.com/favicon.png"
     return render_template('LandingTemplate.html',domain=domainName,domainFav=domainFavi,domainCSS=domainCSS0)
 
-"""
-@app.route('/BidOps')
-def BidOpInput():
-    return render_template('BidOpForm.html',pagetitle="Bid Optimisation",CommonTag=CommonTagAll)
-    
-
-@app.route('/BidOPUpload', methods=['POST','GET'])
-def BidOPUpload():
-    return fileHandler.BidOpFileHandler()
-"""    
 
 @app.route('/CommunityDataFrame')
 def CommunityDataFrame():
