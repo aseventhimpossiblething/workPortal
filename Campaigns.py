@@ -222,9 +222,9 @@ campaign_budget = campaign_budget_operation.create
 campaign_budget.name.value = 'Interplanetary Budget %s' % uuid.uuid4()
 campaign_budget.delivery_method = client.get_type(
         'BudgetDeliveryMethodEnum').STANDARD
-    campaign_budget.amount_micros.value = 500000
+campaign_budget.amount_micros.value = 500000
 
-    # Add budget.
+# Add budget.
 try:
   campaign_budget_response = (
            campaign_budget_service.mutate_campaign_budgets(
