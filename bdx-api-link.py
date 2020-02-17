@@ -36,7 +36,7 @@ def CommUpdateDisplay():
     print("read_storeRequest ",read_storeRequest)     
     print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
     if read_storeRequest1==read_storeRequest2:
-     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=https://bdxapilink.com/CommUpdateExcel?'><html>This Message indicates an error in URL Forward</html>"
+     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=https://communityupdates.herokuapp.com/CommUpdateExcel?'><html>This Message indicates an error in URL Forward</html>"
     if read_storeRequest1!=read_storeRequest2:
      return '<meta http-equiv="refresh" content="120"><html>LOADING..... This can Take up to 10 minuites</html>'
 
