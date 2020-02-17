@@ -21,52 +21,17 @@ import uuid
 
 
 
-"""
-from flask import Flask, request, redirect
-from werkzeug.serving import make_ssl_devcert
-"""
+
 
 from flask_sslify import SSLify
 
-#from flask import SSLify
+
 
 
          
 
 
-import psycopg2
-from sklearn.ensemble import RandomForestRegressor
-app = Flask(__name__,"/static/")
 
-sslify = SSLify(app)
-
-
-#DATABASE_URL = os.environ['DATABASE_URL']
-
-
-#application = Flask(__name__)   # Flask constructor
-#app.config['MAX_CONTENT_LENGTH'] = 1000 * 1024 * 1024
-
-
-
-#conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-#conn = psycopg2.connect("dbname='dcect276ul8asc' user='ffsezxsqjvacnw' host='ec2-54-83-9-36.compute-1.amazonaws.com' password='657c149f7aac22520e75d72bddb9a16c76e60ac324fb4358f9f579ac1c2619d4'")
-
-#conn.cursor().execute("SELECT * FROM information_schema.tables ")
-#conn.cursor().execute("CREATE TABLE newTable (id int,Data text)")
-
-#print("run __: ",conn.cursor().execute("SELECT * FROM dcect276ul8asc"))
-#print('run conn.cursor().execute("SELECT * FROM information_schema.tables")___:', conn.cursor().execute("SELECT * FROM information_schema.tables"))
-#print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
-
-#print("attempting to create tables")
-#conn.cursor().execute("CREATE TABLE DocumentSubmissions("Documents")")
-#conn.cursor().execute("CREATE TABLE storage (user_id serial PRIMARY KEY, username VARCHAR (50) UNIQUE NOT NULL, password VARCHAR (50) NOT NULL, email VARCHAR (355) UNIQUE NOT NULL, created_on TIMESTAMP NOT NULL, last_login TIMESTAMP)")
-
-#conn.cursor().close()
-#conn.commit()
-#print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
-#conn.close
 
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 #{{CommonTag}}-{{pagetitle}}
@@ -79,14 +44,7 @@ sslify = SSLify(app)
 
 
 
-CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
-
-"""
-@app.route('/BDXlogo')
-def BDXlg():
-    return 
-"""    
-         
+   
          
          
          
@@ -96,34 +54,6 @@ def favicon():
     return send_from_directory('/app/favicon.png','favicon')     
 
 
-@app.route('/test')
-def testtextfile():
-    print("initial directory---------",os.getcwd())
-    print("contents of current directory-------------",os.listdir())
-    #os.chdir("/app/Sheets/CommunityUpdates")
-    os.chdir("/app/Sheets/CommunityUpdates/Bing/currentBing")
-    print("current directory-------------",os.getcwd())
-    print("contents of current directory--------------",os.listdir())
-    TheSamplefile=open('TheSampleText.txt','r')
-    #TheSamplefile=open('TheSampleText.txt','w+') 
-    #print(TheSamplefile.read())     
-    #print(os.getcwd())
-     
-    j=2+2
-    j=str(j)
-    return TheSamplefile.read()
-
-@app.route('/test2')
-def freetodelete2():
-    j=2+2
-    j=str(j)     
-    return "<html><head><script></script><head></html> "
-
-@app.route('/test3')
-def freetodelete():
-    j=2+2
-    j=str(j)     
-    return "on a tuesday "+j      
 
 
 
@@ -322,13 +252,9 @@ def index():
     domainFavi="https://bdxapilink.com/favicon.png"
     return render_template('LandingTemplate.html',domain=domainName,domainFav=domainFavi,domainCSS=domainCSS0)
 
-@app.route('/BidOps')
-def BidOpInput():
-    return render_template('BidOpForm.html',pagetitle="Bid Optimisation",CommonTag=CommonTagAll)
 
-@app.route('/BidOPUpload', methods=['POST','GET'])
-def BidOPUpload():
-    return fileHandler.BidOpFileHandler()
+
+
 
 @app.route('/CommunityDataFrame')
 def CommunityDataFrame():
