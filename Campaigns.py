@@ -84,8 +84,8 @@ import google.ads.google_ads.client
 
 _DATE_FORMAT = '%Y%m%d'
 
-
-def main(client""",customer_id"""):
+def main(client):
+#def main(client,customer_id):
     campaign_budget_service = client.get_service('CampaignBudgetService',
                                                  version='v2')
     campaign_service = client.get_service('CampaignService', version='v2')
