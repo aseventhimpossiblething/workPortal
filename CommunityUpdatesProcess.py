@@ -150,6 +150,7 @@ def filterNonParticipators(theFrame):
  icount0=0;
  print("Size of Community Name ",len(theFrame['Community Name']))
  print("Size of DeDupArray ",len(DeDupArray))
+ ExceptCount=0;
  while icount0<len(theFrame['Community Name']):
   #print(" just before failing try icount0= ",icount0)
   try:
@@ -176,6 +177,8 @@ def filterNonParticipators(theFrame):
     
    
   except:
+   ExceptCount+=1;
+   print("ExceptCount ",ExceptCount)
    print("Second Loop failed Count ",icount0)
    icount0+0;
   if icount0%100==0:
