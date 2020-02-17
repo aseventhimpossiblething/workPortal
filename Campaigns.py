@@ -284,7 +284,7 @@ except google.ads.google_ads.errors.GoogleAdsException as ex:
                 for field_path_element in error.location.field_path_elements:
                     print('\t\tOn field: %s' % field_path_element.field_name)
         sys.exit(1)
- print('Created campaign %s.' % campaign_response.results[0].resource_name)
+print('Created campaign %s.' % campaign_response.results[0].resource_name)
 
 
 
