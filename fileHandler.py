@@ -110,7 +110,7 @@ def CommListFileHandler():
     if emptyObj==str(request.files['Communities']):
         return "Active Community slot is empty"
     
-    print("Check That FIles Slots are FIlled")    
+    print("Check That File Slots are Filled")    
 
     if request.files['Communities'].filename.find("xlsx")<1:
                 return "The Community Sheet is not XLSX file type";
@@ -129,24 +129,11 @@ def CommListFileHandler():
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     request.files['currentBing'].save('WorkingBing')
      
-    print("saved FIles") 
+    print("saved Files") 
   
     
    
-    #print('WRITE REQUEST SEQUENCE!')
-    """
-    print("os.getcwd() ",os.getcwd())
-    print("os.listdir() ",os.listdir()) 
-    print("os.chdir('/app/Sheets/') ",os.chdir('/app/Sheets/'))
-    #print("os.getcwd() ",os.getcwd())
-    
-    """
-    """    
-    os.chdir('/app/Sheets/') 
-    storeRequest=open('RequestsVsResponses.txt','w')    
-    storeRequest.write("Request, ")
-    storeRequest.close()
-    """
+   
        
     def async_fileloader():
      os.chdir('/app/Sheets/') 
