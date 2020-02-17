@@ -211,13 +211,14 @@ args = parser.parse_args()
 # int but byte expected customer_id=9662896891
 # epected bytes unicode customer_id=966-289-6891
 # permission error customer_id="9662896891"
-customer_id="966-289-6891"
+# invalid cust id customer_id="966-289-6891"
 #customer_id=9662896891
 """
 #customer_id=150-06-31476
 customer_id=1500631476
 customer_id="150-06-31476"
 customer_id="1500631476"
+"""
 """
 print("Does main in camps self fire......") 
 campaign_budget_service = client.get_service('CampaignBudgetService',
@@ -294,7 +295,7 @@ except google.ads.google_ads.errors.GoogleAdsException as ex:
                     print('\t\tOn field: %s' % field_path_element.field_name)
         sys.exit(1)
 print('Created campaign %s.' % campaign_response.results[0].resource_name)
-
+"""
 
 
 def CampFunc():
