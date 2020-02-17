@@ -84,8 +84,9 @@ import google.ads.google_ads.client
 
 _DATE_FORMAT = '%Y%m%d'
 
-def main(client):
-#def main(client,customer_id):
+#def main(client):
+def main(client,customer_id):
+    print("Does main in camps self fire......") 
     campaign_budget_service = client.get_service('CampaignBudgetService',
                                                  version='v2')
     campaign_service = client.get_service('CampaignService', version='v2')
@@ -162,7 +163,7 @@ def main(client):
 
     print('Created campaign %s.' % campaign_response.results[0].resource_name)
 
-"""
+    
 if __name__ == '__main__':
     # GoogleAdsClient will read the google-ads.yaml configuration file in the
     # home directory if none is specified.
@@ -178,7 +179,7 @@ if __name__ == '__main__':
     
 
     main(google_ads_client, args.customer_id)
-"""    
+   
 
 """    
 # GoogleAdsClient will read the google-ads.yaml configuration file in the
@@ -195,7 +196,7 @@ parser.add_argument('-c', '--customer_id', type=str,
 args = parser.parse_args()
 
 """
-main(google_ads_client)
+#main(google_ads_client)
 #main(google_ads_client,"1500631476")
 #main(google_ads_client, args.customer_id)
         
