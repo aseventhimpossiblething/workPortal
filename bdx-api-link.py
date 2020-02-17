@@ -351,7 +351,7 @@ def CommunityFileHandling():
 
 @app.route('/Campaigns')
 def campattmpt():
-    import Campaigns     
+    #import Campaigns     
     return Campaigns.CampFunc()
     #return "<html> hopefully some campaigns </html>"
 
