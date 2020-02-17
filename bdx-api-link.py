@@ -15,6 +15,7 @@ import Campaigns
 #import taskque
 from datetime import datetime
 from flask_sslify import SSLify
+import Campaigns   
 import uuid
 
 
@@ -351,7 +352,7 @@ def CommunityFileHandling():
 
 @app.route('/Campaigns')
 def campattmpt():
-    import Campaigns     
+    #import Campaigns     
     return Campaigns.CampFunc()
     return "<html> hopefully some campaigns </html>"
 
