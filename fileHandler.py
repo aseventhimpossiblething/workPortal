@@ -112,15 +112,16 @@ def CommListFileHandler():
         return "Active Community slot is empty"
     """    
     
-    print("Check That File Slots are Filled")    
-
+    print("did not Check That File Slots are Filled")    
+    """
     if request.files['Communities'].filename.find("xlsx")<1:
                 return "The Community Sheet is not XLSX file type";
     if request.files['currentGoogle'].filename.find("xlsx")<1:
                 return "The Google Sheet is not XLSX file type";
     if request.files['currentBing'].filename.find("xlsx")<1:
-                return "The Bing Sheet is not XLSX file type";  
-    print("Checked that FIlles are XlSX")    
+                return "The Bing Sheet is not XLSX file type"; 
+    """            
+    print("did not Check that Filles are XlSX")    
    
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')          
     request.files['Communities'].save('WorkingCommunities')
