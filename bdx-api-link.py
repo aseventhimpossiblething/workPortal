@@ -349,10 +349,10 @@ def CommunitiesUploads():
 def CommunityFileHandling():
     return fileHandler.CommListFileHandler()
 
-@app.route('/Campaigns')
-def campattmpt():
+#@app.route('/Campaigns')
+#def campattmpt():
     #import Campaigns     
-    return Campaigns.CampFunc()
+    #return Campaigns.CampFunc()
     #return "<html> hopefully some campaigns </html>"
 
 
