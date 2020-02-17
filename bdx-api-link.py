@@ -18,116 +18,16 @@ from flask_sslify import SSLify
 import uuid
 
 
-"""
-#google.ads.google_ads.client 
-from google.ads.google_ads.client import GoogleAdsClient
-clients=GoogleAdsClient.load_from_storage()
-clients.get_service()
-import googleads
-from googleads import adwords
-#import GoogleAdsClient
-#import GoogleAdsClient
-#client = GoogleAdsClient.load_from_storage()
-#from googleads import adwords
-client2 = GoogleAdsClient.load_from_storage()
-adwords_client1 = adwords.AdWordsClient.LoadFromStorage()
-adwords_client2 = AdWordsClient.LoadFromStorage()
-"""
 
 
-         
-
-
-import psycopg2
-from sklearn.ensemble import RandomForestRegressor
-app = Flask(__name__,"/static/")
-sslify = SSLify(app)
-
-
-#DATABASE_URL = os.environ['DATABASE_URL']
-
-
-#application = Flask(__name__)   # Flask constructor
-#app.config['MAX_CONTENT_LENGTH'] = 1000 * 1024 * 1024
-
-
-
-#conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-#conn = psycopg2.connect("dbname='dcect276ul8asc' user='ffsezxsqjvacnw' host='ec2-54-83-9-36.compute-1.amazonaws.com' password='657c149f7aac22520e75d72bddb9a16c76e60ac324fb4358f9f579ac1c2619d4'")
-
-#conn.cursor().execute("SELECT * FROM information_schema.tables ")
-#conn.cursor().execute("CREATE TABLE newTable (id int,Data text)")
-
-#print("run __: ",conn.cursor().execute("SELECT * FROM dcect276ul8asc"))
-#print('run conn.cursor().execute("SELECT * FROM information_schema.tables")___:', conn.cursor().execute("SELECT * FROM information_schema.tables"))
-#print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
-
-#print("attempting to create tables")
-#conn.cursor().execute("CREATE TABLE DocumentSubmissions("Documents")")
-#conn.cursor().execute("CREATE TABLE storage (user_id serial PRIMARY KEY, username VARCHAR (50) UNIQUE NOT NULL, password VARCHAR (50) NOT NULL, email VARCHAR (355) UNIQUE NOT NULL, created_on TIMESTAMP NOT NULL, last_login TIMESTAMP)")
-
-#conn.cursor().close()
-#conn.commit()
-#print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
-#conn.close
-
-#print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
-#{{CommonTag}}-{{pagetitle}}
-
-
-
-
-
-
-
-
-
-CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
-
-"""
-@app.route('/BDXlogo')
-def BDXlg():
-    return 
-"""    
-         
-         
-         
+@app.route('/')
+def campslist():
+    return "<html>Front Logic </html>"
          
 
 @app.route('/favicon.png')
 def favicon():
     return send_from_directory('/app/favicon.png','favicon')     
-
-
-@app.route('/test')
-def testtextfile():
-    print("initial directory---------",os.getcwd())
-    print("contents of current directory-------------",os.listdir())
-    #os.chdir("/app/Sheets/CommunityUpdates")
-    os.chdir("/app/Sheets/CommunityUpdates/Bing/currentBing")
-    print("current directory-------------",os.getcwd())
-    print("contents of current directory--------------",os.listdir())
-    TheSamplefile=open('TheSampleText.txt','r')
-    #TheSamplefile=open('TheSampleText.txt','w+') 
-    #print(TheSamplefile.read())     
-    #print(os.getcwd())
-     
-    j=2+2
-    j=str(j)
-    return TheSamplefile.read()
-
-@app.route('/test2')
-def freetodelete2():
-    j=2+2
-    j=str(j)     
-    return "<html><head><script></script><head></html> "
-
-@app.route('/test3')
-def freetodelete():
-    j=2+2
-    j=str(j)     
-    return "on a tuesday "+j      
-
 
 
 
@@ -215,10 +115,8 @@ def GoogleBSX():
                  attachment_filename="GoogleAdBSX.xlsx")
                
 
-         
-
-         
-         
+      
+ 
          
 
 @app.route('/BingKWSBMM')
@@ -325,17 +223,14 @@ def index():
     domainFavi="https://bdxapilink.com/favicon.png"
     return render_template('LandingTemplate.html',domain=domainName,domainFav=domainFavi,domainCSS=domainCSS0)
 
-@app.route('/BidOps')
-def BidOpInput():
-    return render_template('BidOpForm.html',pagetitle="Bid Optimisation",CommonTag=CommonTagAll)
 
-@app.route('/BidOPUpload', methods=['POST','GET'])
-def BidOPUpload():
-    return fileHandler.BidOpFileHandler()
+
+
 
 @app.route('/CommunityDataFrame')
 def CommunityDataFrame():
     return render_template('CommunityDataframe.html',pagetitle='Community',CommonTag=CommonTagAll,col1="holding")
+
 @app.route('/DataFrameCss')
 def DataFrameCss():
     return render_template('DataFrameCss.css')
@@ -357,11 +252,7 @@ def campattmpt():
 
 
 
-"""
-@app.route('/getCampaign')
-def campslist():
-    return "<html> Campaign retreival logic </html>"
-"""    
+
 
 
     
