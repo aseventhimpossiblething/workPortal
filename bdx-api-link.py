@@ -1,43 +1,20 @@
 import CommunityUpdatesProcess
 import glob
-import numpy
-import scipy
-import pandas
+#import numpy
+#import scipy
+#import pandas
 import BidOpAssist
 import fileHandler
-import redis
 import os
 from flask import Flask, Markup, render_template, request
-from celery import Celery
 from flask import send_file
 from flask import send_from_directory
 import Campaigns
-#import taskque
 from datetime import datetime
 from flask_sslify import SSLify
-import Campaigns   
-import uuid
 
-
-
-
-"""
-from flask import Flask, request, redirect
-from werkzeug.serving import make_ssl_devcert
-"""
-
-from flask_sslify import SSLify
-
-#from flask import SSLify
-
-
-         
-
-
-import psycopg2
-from sklearn.ensemble import RandomForestRegressor
+#import psycopg2
 app = Flask(__name__,"/static/")
-
 sslify = SSLify(app)
 
 
@@ -81,11 +58,7 @@ sslify = SSLify(app)
 
 CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
 
-"""
-@app.route('/BDXlogo')
-def BDXlg():
-    return 
-"""    
+
          
          
          
