@@ -86,6 +86,7 @@ def testtextfile():
     j=str(j)
     return TheSamplefile.read()
 
+"""
 @app.route('/test2')
 def freetodelete2():
     j=2+2
@@ -96,7 +97,8 @@ def freetodelete2():
 def freetodelete():
     j=2+2
     j=str(j)     
-    return "on a tuesday "+j      
+    return "on a tuesday "+j  
+"""    
 
 
 
@@ -184,12 +186,7 @@ def GoogleBSX():
  return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBExact/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdBSX.xlsx")
                
-
-         
-
-         
-         
-         
+        
 
 @app.route('/BingKWSBMM')
 def BingSBMMKW():
@@ -209,7 +206,6 @@ def BingSXKW():
  return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact/DefaultSheet.xlsx",\
                   attachment_filename="BingSXKW.xlsx")
          
-         
 
          
        
@@ -225,10 +221,7 @@ def BingBSBMM():
  return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeBMM/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSBMMB.xlsx")
               
-         
-         
-         
-         
+ 
          
          
 @app.route('/BingAdSBA')
