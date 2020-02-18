@@ -297,7 +297,11 @@ def CommunitiesUploads():
 def CommunityFileHandling():
     return fileHandler.CommListFileHandler()
     
-   
+
+@app.route('/account)
+def acc():
+    return render_template('account.html')
+    
    
 
 
