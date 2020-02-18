@@ -56,7 +56,7 @@ sslify = SSLify(app)
 
 
 
-CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
+#CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
 
 
          
@@ -86,19 +86,6 @@ def testtextfile():
     j=str(j)
     return TheSamplefile.read()
 
-"""
-@app.route('/test2')
-def freetodelete2():
-    j=2+2
-    j=str(j)     
-    return "<html><head><script></script><head></html> "
-
-@app.route('/test3')
-def freetodelete():
-    j=2+2
-    j=str(j)     
-    return "on a tuesday "+j  
-"""    
 
 
 
@@ -290,7 +277,7 @@ def index():
 
 @app.route('/BidOps')
 def BidOpInput():
-    return render_template('BidOpForm.html',pagetitle="Bid Optimisation",CommonTag=CommonTagAll)
+    return render_template('BidOpForm.html')
 
 @app.route('/BidOPUpload', methods=['POST','GET'])
 def BidOPUpload():
@@ -298,14 +285,14 @@ def BidOPUpload():
 
 @app.route('/CommunityDataFrame')
 def CommunityDataFrame():
-    return render_template('CommunityDataframe.html',pagetitle='Community',CommonTag=CommonTagAll,col1="holding")
+    return render_template('CommunityDataframe.html')
 @app.route('/DataFrameCss')
 def DataFrameCss():
     return render_template('DataFrameCss.css')
 
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
-    return render_template('CommunitiesForm.html',pagetitle="Community Updates",CommonTag=CommonTagAll)
+    return render_template('CommunitiesForm.html')
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
     return fileHandler.CommListFileHandler()
