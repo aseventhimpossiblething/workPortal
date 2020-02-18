@@ -10,7 +10,7 @@ import io
 import threading
 from flask import send_file
 import gc
-
+gc.collect()
 
 
 
