@@ -7,7 +7,6 @@ click
 Jinja2
 MarkUpSafe
 Wheel
-psycopg2-binary
 chardet
 xlrd
 numpy
@@ -16,4 +15,4 @@ pandas
 glob2
 openpyxl
 XlsxWriter
-Flask-SSLify
+
