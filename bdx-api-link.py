@@ -8,8 +8,6 @@ from datetime import datetime
 from flask_sslify import SSLify
 
 
-from flask_sslify import SSLify
-
 
 app = Flask(__name__,"/static/")
 
