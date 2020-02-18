@@ -78,11 +78,7 @@ def filterNonParticipators(theFrame):
    
    theFrame=theFrame.drop_duplicates();
    theFrame=theFrame.dropna()
-   #print("LengththeFrame=theFrame.dropna ",len(theFrame))
-   #print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
-   
-   #print("Drop while")
-   
+      
    theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount])]
    #print("theFrame[~theFrame['Brand Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
    
@@ -195,6 +191,7 @@ def filterNonParticipators(theFrame):
 
 
 def MergeURLs(chan,chan2):
+ gc.collect();
  print("MergeURLs() start for ",chan2)
  URLS="A";
  count=0;
