@@ -298,7 +298,7 @@ def CommunityFileHandling():
     return fileHandler.CommListFileHandler()
     
 
-@app.route('/account)
+@app.route('/account')
 def acc():
     return render_template('account.html')
     
