@@ -6,13 +6,12 @@ import pandas
 import fileHandler
 from flask import Flask, Markup, render_template, request
 import os
-import psycopg2
 import re
 import threading
 import numpy
 import Market_LookUp
 import sys
-from openpyxl import Workbook
+#from openpyxl import Workbook
 from openpyxl import load_workbook
 import xlsxwriter
 import gc
