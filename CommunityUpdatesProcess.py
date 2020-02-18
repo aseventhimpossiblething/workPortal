@@ -662,7 +662,7 @@ def initialCommUpdatProcess():
   
   
  
- 
+ gc.collect()
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
  return "finished"
