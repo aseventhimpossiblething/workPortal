@@ -4,12 +4,10 @@ from datetime import datetime
 from flask import Flask, Markup, render_template, request
 import glob
 import os
-#import psycopg2
 import pandas
 import time
 import xlrd
 import io
-#import taskque
 import threading
 from flask import send_file
 import gc
@@ -147,16 +145,6 @@ def CommListFileHandler():
     LoadAllCommunityFiles=threading.Thread(target=async_fileloader)
     LoadAllCommunityFiles.start()    
     print("Should respond now!!! ")
-    
-    #print(" end of filehandler CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
-        
-    #HTMLoutput="This will be 3 modules  Modules as follows  Module 1: 3 links to the Community, Google, and Bing upload outputs Module 2:Google Outputs link1, Google KWs all match types. Link 2 google Adds Ad Types A+b and all Match types "    
-    #toscrn = HTMLoutput
-    #return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/911cor.xlsx", attachment_filename="911cor.xlsx")
-    
-    #return "<html> <a href='https://bdx-api-link.herokuapp.com/DisplayCommUpdate'>NEW TEST BUT STILL WAIT FOR CLEARANCE BEFORE LINK CLICK! OTHERWISE EPIC FAILURE</a></html>" 
-   
-    #return "<html> <a href='https://bdx-api-link.herokuapp.com/test'>WAIT FOR CLEARANCE BEFORE LINK CLICK! OTHERWISE EPIC FAILURE</a></html>" 
     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=https://bdx-api-link.herokuapp.com/DisplayCommUpdate'><html>did not forward</html>"
          
 
