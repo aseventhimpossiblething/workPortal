@@ -122,6 +122,7 @@ def CommListFileHandler():
     
 
     print(dir(simplereq))
+    simplereq.save()
      
     #print("simplereq.files['communities']")
     #print(simplereq.files['communities'])     
