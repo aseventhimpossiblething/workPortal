@@ -118,15 +118,15 @@ def CommListFileHandler():
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
         print("This is from the Community Sheet")
     else:
-    print("simplereq.files['communities']")
-    print(simplereq.files['communities'])     
-    print("simplereq.files")
-    print(simplereq.files)
-    print("simplereq['Communities']")     
-    #print(simplereq['Communities'])     
-    print(simplereq['Communities'])
-    print("simplereq['Communities'].filename")
-    print(simplereq['Communities'].filename)
+     print("simplereq.files['communities']")
+     print(simplereq.files['communities'])     
+     print("simplereq.files")
+     print(simplereq.files)
+     print("simplereq['Communities']")     
+     #print(simplereq['Communities'])     
+     print(simplereq['Communities'])
+     print("simplereq['Communities'].filename")
+     print(simplereq['Communities'].filename)
     
        
     """
@@ -155,8 +155,7 @@ def CommListFileHandler():
     request.files['currentBing'].save('WorkingBing')
      
     print("saved Files") 
-    #print("Process intentionally stopped here") 
-    #return "Stop for Testing "
+    
         
   
     
