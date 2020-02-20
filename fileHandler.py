@@ -119,6 +119,9 @@ def CommListFileHandler():
         print("This is from the Community Sheet")
     else:
         print("Not a communities sheet")
+    
+
+    print(dir(simplereq))
      
     #print("simplereq.files['communities']")
     #print(simplereq.files['communities'])     
