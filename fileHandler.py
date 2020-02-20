@@ -113,14 +113,20 @@ def CommListFileHandler():
     #print("simplereq is =  ",simplereq)
     #print("ImmutableMultiDict([('Communities', = ",str(simplereq).find("ImmutableMultiDict([('Communities',"))
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
+        floc='/app/Sheets/CommunityUpdates/currentCommunities'
         fnm='Communities'
-         print("simplereq['Communities'].filename = ",simplereq['Communities'].filename)
+        savenam='WorkingCommunities'
+    if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
+        fnm='Google?'
+    if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
+        fnm='Bing?'    
+         print("simplereq[fnm].filename = ",simplereq[fnm].filename)
          #if  str(simplereq).find("ImmutableMultiDict([(lower('xlsx'))!=-1:
          #print(" trying to save?")
-         os.chdir('/app/Sheets/CommunityUpdates/currentCommunities') 
-         print(simplereq['Communities'])
-         simplereq['Communities'].save('WorkingCommunities') 
-         print(pandas.read_excel('WorkingCommunities'))
+         os.chdir(floc) 
+         print(simplereq[fnm])
+         simplereq[fnm].save(savenam) 
+         print(pandas.read_excel(savenam))
     else:
         print("Not a communities sheet")
     
