@@ -116,10 +116,10 @@ def CommListFileHandler():
     simplereq=request.files
     print("Simplereq= request.files ")
     print("dir(Simplereq)")    
-    print(dir(Simplereq))
-    print("Simplereq['Communities']= ", Simplereq['Communities'])
-    print(dir(Simplereq['Communities']))
-    print(dir(Simplereq['Communities']))    
+    print(dir(simplereq))
+    print("Simplereq['Communities']= ", simplereq['Communities'])
+    print(dir(simplereq['Communities']))
+    print(dir(simplereq['Communities']))    
     print("simplereq is =  ",simplereq)
     print("ImmutableMultiDict([('Communities', = ",str(simplereq).find("ImmutableMultiDict([('Communities',"))
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
