@@ -127,9 +127,13 @@ def CommListFileHandler():
         nxtStop="The run wait while we process page and async function"
         
     print("simplereq[fnm].filename = ",simplereq[fnm].filename)
+    if simplereq[fnm].filename.find(lower('xlsx'))==-1:
+     print("File Format Needs to be XLSX")
+     return "File format needs to be XLSX" 
     os.chdir(floc) 
     print(simplereq[fnm])
-    simplereq[fnm].save(savenam) 
+    simplereq[fnm].save(savenam)
+    pandas.read_excel(savenam)    
     print(pandas.read_excel(savenam))
     print(nxtStop) 
     if fnm=='currentBing':
