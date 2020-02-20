@@ -114,7 +114,7 @@ def CommListFileHandler():
     simplereq=request.files
     print("Simple request accepted ")
     print("simplereq is =  ",simplereq)
-    print("ImmutableMultiDict([('Communities', = ",simplereq.find("ImmutableMultiDict([('Communities',"))
+    print("ImmutableMultiDict([('Communities', = ",str(simplereq).find("ImmutableMultiDict([('Communities',"))
     #print("simplereq.filename ",simplereq.filename) 
     """    
     if request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']:
