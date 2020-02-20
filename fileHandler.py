@@ -136,8 +136,9 @@ def CommListFileHandler():
     request.files['currentBing'].save('WorkingBing')
      
     print("saved Files") 
-    print("Process intentionall stopped here") 
-    return "Stop for Testing "
+    #print("Process intentionally stopped here") 
+    #return "Stop for Testing "
+        
   
     
    
