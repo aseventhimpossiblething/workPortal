@@ -127,7 +127,7 @@ def CommListFileHandler():
     Sheet_Looks=pandas.read_excel(savenam)
     #pandas.read_excel(savenam)
     print(Sheet_Looks)
-    print(Sheet_looks[1][1])
+    print(Sheet_Looks[1][1])
         
         
     print(nxtStop) 
