@@ -111,7 +111,8 @@ def CommListFileHandler():
         print(" asks is arandomthing is present seems to be no ");
     """    
         
-  
+    simplereq=request.files
+    print("Simple request accepted ")
     reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']  
     print("Files were accepted as rqs")    
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
