@@ -19,9 +19,9 @@ def ValidatXLSXtime(arr):
         Error=arr+" Generated an error check that filetype is xlsx"
         Valid=arr+" is valid"
         if time.time()-os.path.getctime(arr)>600000:
-            print(Error)
+            print(Error);
         else:
-            print(Valid)
+            print(Valid);
 
 def BidOpFileHandler():
     print("********************************BidOpFileHandler() flag 1************************************************")
@@ -97,7 +97,21 @@ def BidOpFileHandler():
     return toscrn
 
 def CommListFileHandler():
-    print("Starting to Handle Files") 
+    print("Starting to Handle Files")
+    if request.files['Communities']:
+        print(" asks is comm is present seems to be yes ");
+    else:
+        print(" asks is comm is present seems to be yes ");
+      
+    if request.files['arandomthing']:
+        print(" asks is arandomthing is present seems to be yes ");
+    else:
+        print(" asks is arandomthing is present seems to be yes ");
+        
+        
+        
+
+                
     
     reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']   
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
@@ -112,7 +126,7 @@ def CommListFileHandler():
         return "Active Community slot is empty"
        
     
-    print("did not Check That File Slots are Filled")    
+    print(" Check That File Slots are Filled")    
     
     if request.files['Communities'].filename.find("xlsx")<1:
                 print("Communities sheet is not XLSX")
@@ -145,6 +159,7 @@ def CommListFileHandler():
    
        
     def async_fileloader():
+     print("async started")           
      os.chdir('/app/Sheets/') 
      storeRequest=open('RequestsVsResponses.txt','w')    
      storeRequest.write("Request, ")
