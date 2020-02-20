@@ -115,16 +115,11 @@ def CommListFileHandler():
     print("Simple request accepted ")
     print("simplereq is =  ",simplereq)
     print("ImmutableMultiDict([('Communities', = ",str(simplereq).find("ImmutableMultiDict([('Communities',"))
-    #print("simplereq.filename ",simplereq.filename) 
-    """    
-    if request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']:
-        print("Its willing to check if yes ")
-    else:
-        print("Its willing to check if no ")
-    """    
-    #reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']  
-    #print("Files were accepted as rqs") 
-    #print("Checking emptyObj=<FileStorage: '' ('application/octet-stream')>")    
+    if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
+        print("This is from the Community Sheet")
+    else: 
+        print("This is not from the Community Sheet")
+   
     """
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
     if emptyObj==str(request.files['currentBing']):
