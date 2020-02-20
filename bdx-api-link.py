@@ -226,7 +226,7 @@ def DataFrameCss():
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
     #return render_template('CommunitiesForm.html')
-    return render_template('/ComFlow1')
+    return render_template('CommflowForm1.html')
 #/ComFlow1
 
 @app.route('/CommunityFileHander', methods=['POST','GET'])
