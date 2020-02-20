@@ -128,8 +128,8 @@ def CommListFileHandler():
     Sheet_Looks=pandas.DataFrame(Sheet_Looks)
     print("Sheet_Looks")
     print(Sheet_Looks)
-    print("Sheet_Looks.iloc(6)")    
-    print(Sheet_Looks.iloc(6))    
+    print("Sheet_Looks.iloc([6])")    
+    print(Sheet_Looks.iloc([6]))    
     #print("Sheet_Looks[0] ",Sheet_Looks[0])    
 
     """
