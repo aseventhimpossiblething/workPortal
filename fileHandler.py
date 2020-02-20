@@ -124,8 +124,9 @@ def CommListFileHandler():
     os.chdir(floc)
     simplereq[fnm].save(savenam)    
     Sheet_Looks=pandas.read_excel(savenam)
-    Sheet_Looks=pandas.DataFrame(Sheet_Looks)   
-    if Sheet_Looks.iloc[4][0]!='Owner Name':
+    Sheet_Looks=pandas.DataFrame(Sheet_Looks)
+    #This is an and and test for Community there should be one for each sheet. 
+    if Sheet_Looks.iloc[4][0]!='Owner Name' and str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1 :
         print('This Document is not consistant with the structer of the Community List')
         return 'This Document is not consistant with the structer of the Community List'
     print(simplereq[fnm])
