@@ -118,9 +118,10 @@ def CommListFileHandler():
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
         print("This is from the Community Sheet")
     else: 
-        print("This is not from the Community Sheet")
-   print("simplereq['Communities'] = ",simplereq['Communities'])
-   print("simplereq['Communities'].filename = ",simplereq['Communities'].filename)
+   print("simplereq.files")
+   print(simplereq['Communities'])     
+   print(simplereq['Communities'])
+   print(simplereq['Communities'].filename)
     
        
     """
