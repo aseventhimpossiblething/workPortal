@@ -110,13 +110,14 @@ def CommListFileHandler():
     else:
         print(" asks is arandomthing is present seems to be no ");
     """    
-        
+    print("request ",request)     
     simplereq=request.files
     print("Simple request accepted ")
     print("simplereq is =  ",simplereq)
     print("ImmutableMultiDict([('Communities', = ",str(simplereq).find("ImmutableMultiDict([('Communities',"))
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
         print(" trying to save?")
+        print(simplereq['communities'])
         simplereq['communities'].save('WorkingCommunities') 
         print("seems to have saved maybe ?")
         print("This is from the Community Sheet")
