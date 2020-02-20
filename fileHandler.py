@@ -120,10 +120,10 @@ def CommListFileHandler():
     else:
         print("Not a communities sheet")
      
-    print("simplereq.files['communities']")
-    print(simplereq.files['communities'])     
-    print("simplereq.files")
-    print(simplereq.files)
+    #print("simplereq.files['communities']")
+    #print(simplereq.files['communities'])     
+    print("simplereq.file['communities']")
+    print(simplereq.file['communities'])
     print("simplereq['Communities']")     
     #print(simplereq['Communities'])     
     print(simplereq['Communities'])
@@ -145,8 +145,8 @@ def CommListFileHandler():
                 return "The Bing Sheet is not XLSX file type"; 
     """            
             
-    #print("did not Check that Filles are XlSX")    
    
+
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')          
     request.files['Communities'].save('WorkingCommunities')
        
