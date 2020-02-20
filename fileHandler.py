@@ -124,10 +124,12 @@ def CommListFileHandler():
     print("ImmutableMultiDict([('Communities', = ",str(simplereq).find("ImmutableMultiDict([('Communities',"))
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
         print(" trying to save?")
+        os.chdir('/app/Sheets/CommunityUpdates/currentCommunities') 
         print(simplereq['Communities'])
         simplereq['Communities'].save('WorkingCommunities') 
-        print("seems to have saved maybe ?")
-        print("This is from the Community Sheet")
+        print(pandas.read_excel('WorkingCommunities'))
+        
+        
     else:
         print("Not a communities sheet")
     
