@@ -233,6 +233,7 @@ def communityCheck(checkby,checkin,Name):
  
 
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
+ gc.collect()
  MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
  print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
@@ -484,7 +485,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   print(frame1)
   print(" end of known Url issue check")
   return frame1,frame2
- knownSheetUrlDefectby(SearchChan,SecondLabel,"on");
+ #knownSheetUrlDefectby(SearchChan,SecondLabel,"on");
     
  if SearchChan=="google":
   if MatchType=='SBMM':
@@ -631,25 +632,22 @@ def initialCommUpdatProcess():
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
 
- 
+ gc.collect()
  KeywordGen(NewGoogle,"sbmm","google")
  KeywordGen(NewGoogle,"sb","google")
  KeywordGen(NewGoogle,"sx","google")
  KeywordGen(NewBing,"sbmm","bing")
  KeywordGen(NewBing,"sb","bing")
  KeywordGen(NewBing,"sx","bing")
+ gc.collect()
  
  
                        
    
  print("Main ")
- os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
+ #os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
   
  
- TheSampleText=WorkingBingEOF
- TheSamplefile=open('TheSampleText.txt','w+') 
- TheSamplefile.write(TheSampleText.to_string())
- TheSamplefile.close()
  
  
  os.chdir('/app/Sheets/')
