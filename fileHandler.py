@@ -133,8 +133,12 @@ def CommListFileHandler():
     os.chdir(floc) 
     print(simplereq[fnm])
     simplereq[fnm].save(savenam)
-    pandas.read_excel(savenam)    
-    print(pandas.read_excel(savenam))
+    Sheet_Looks=pandas.read_excel(savenam)
+    #pandas.read_excel(savenam)
+    print(Sheet_Looks)
+    print(Sheet_looks[1][1])
+        
+        
     print(nxtStop) 
     if fnm=='currentBing':
         print(nxtStop)
