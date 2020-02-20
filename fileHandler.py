@@ -102,23 +102,29 @@ def CommListFileHandler():
     reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']   
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
     if emptyObj==str(request.files['currentBing']):
-         return "Bing slot is empty"
+        print("Bing Slot Empty")
+        return "Bing slot is empty"
     if emptyObj==str(request.files['currentGoogle']):
+        print("Google Slot Empty")        
         return "Google slot is empty"
     if emptyObj==str(request.files['Communities']):
+        print("Communities Slot Empty")        
         return "Active Community slot is empty"
        
     
     print("did not Check That File Slots are Filled")    
     
     if request.files['Communities'].filename.find("xlsx")<1:
+                print("Communities sheet is not XLSX")
                 return "The Community Sheet is not XLSX file type";
     if request.files['currentGoogle'].filename.find("xlsx")<1:
+                print("Google Sheet is not XLSX")
                 return "The Google Sheet is not XLSX file type";
     if request.files['currentBing'].filename.find("xlsx")<1:
+                print("Bing Sheet is not XLSX") 
                 return "The Bing Sheet is not XLSX file type"; 
             
-    print("did not Check that Filles are XlSX")    
+    #print("did not Check that Filles are XlSX")    
    
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')          
     request.files['Communities'].save('WorkingCommunities')
@@ -130,6 +136,8 @@ def CommListFileHandler():
     request.files['currentBing'].save('WorkingBing')
      
     print("saved Files") 
+    print("Process intentionall stopped here") 
+    return "Stop for Testing "
   
     
    
