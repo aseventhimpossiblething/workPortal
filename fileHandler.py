@@ -116,10 +116,14 @@ def CommListFileHandler():
         floc='/app/Sheets/CommunityUpdates/currentCommunities'
         fnm='Communities'
         savenam='WorkingCommunities'
-    if  str(simplereq).find("ImmutableMultiDict([('goog',")!=-1:
-        fnm='Google?'
-    if  str(simplereq).find("ImmutableMultiDict([('bing',")!=-1:
-        fnm='Bing?'    
+    if  str(simplereq).find("ImmutableMultiDict([('currentGoogle',")!=-1:
+        floc='/app/Sheets/CommunityUpdates/Google/currentGoogle'
+        fnm='currentGoogle'
+        savenam='WorkingGoogle'
+    if  str(simplereq).find("ImmutableMultiDict([('currentBing',")!=-1:
+        floc='/app/Sheets/CommunityUpdates/Bing/currentBing'
+        fnm='currentBing' 
+        savenam='WorkingBing'
     print("simplereq[fnm].filename = ",simplereq[fnm].filename)
     #if  str(simplereq).find("ImmutableMultiDict([(lower('xlsx'))!=-1:
     #print(" trying to save?")
