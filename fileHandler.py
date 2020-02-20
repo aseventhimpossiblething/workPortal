@@ -116,11 +116,14 @@ def CommListFileHandler():
     print("simplereq is =  ",simplereq)
     print("ImmutableMultiDict([('Communities', = ",str(simplereq).find("ImmutableMultiDict([('Communities',"))
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
+        print(" trying to save?")
+        simplereq['communities'].save('WorkingCommunities') 
+        print("seems to have saved maybe ?")
         print("This is from the Community Sheet")
     else:
         print("Not a communities sheet")
     
-    simplereq['communities'].save('WorkingCommunities') 
+    #simplereq['communities'].save('WorkingCommunities') 
     print(dir(simplereq))
     #simplereq.save()
      
