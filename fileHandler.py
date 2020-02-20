@@ -119,8 +119,6 @@ def CommListFileHandler():
          print(simplereq['Communities'])
          simplereq['Communities'].save('WorkingCommunities') 
          print(pandas.read_excel('WorkingCommunities'))
-        
-        
     else:
         print("Not a communities sheet")
     
