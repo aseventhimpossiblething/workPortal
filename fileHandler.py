@@ -106,15 +106,6 @@ def CommListFileHandler():
         fnm='Communities'
         savenam='WorkingCommunities'
         nxtStop="The form Load Page"
-        """
-        print("simplereq[fnm].filename = ",simplereq[fnm].filename)
-        os.chdir(floc) 
-        print(simplereq[fnm])
-        simplereq[fnm].save(savenam) 
-        print(pandas.read_excel(savenam))
-        print(" Communities Loaded ")
-        return "Communities Loaded"
-        """
     if  str(simplereq).find("ImmutableMultiDict([('currentGoogle',")!=-1:
         floc='/app/Sheets/CommunityUpdates/Google/currentGoogle'
         fnm='currentGoogle'
@@ -142,7 +133,23 @@ def CommListFileHandler():
     print(nxtStop) 
     if fnm=='currentBing':
         print(nxtStop)
-        return(nxtStop)
+        #return(nxtStop)
+        def async_fileloader():
+          print("async started")           
+          os.chdir('/app/Sheets/') 
+          storeRequest=open('RequestsVsResponses.txt','w')    
+          storeRequest.write("Request, ")
+          storeRequest.close()           
+          CommunityUpdatesProcess.initialCommUpdatProcess()
+        LoadAllCommunityFiles=threading.Thread(target=async_fileloader)
+        LoadAllCommunityFiles.start() 
+        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=https://communityupdates.herokuapp.com/DisplayCommUpdate'><html>did not forward</html>"
+         
+
+
+
+
+
         
         
     
@@ -194,7 +201,7 @@ def CommListFileHandler():
     
    
    
-       
+    """   
     def async_fileloader():
      print("async started")           
      os.chdir('/app/Sheets/') 
@@ -209,7 +216,7 @@ def CommListFileHandler():
    
     #return "<html> <a href='https://bdx-api-link.herokuapp.com/test'>WAIT FOR CLEARANCE BEFORE LINK CLICK! OTHERWISE EPIC FAILURE</a></html>" 
     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=https://communityupdates.herokuapp.com/DisplayCommUpdate'><html>did not forward</html>"
-         
+    """    
 
 
 
