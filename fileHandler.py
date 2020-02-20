@@ -119,21 +119,11 @@ def CommListFileHandler():
         print("This is from the Community Sheet")
     else: 
         print("This is not from the Community Sheet")
-   
-    """
-    emptyObj="<FileStorage: '' ('application/octet-stream')>" 
-    if emptyObj==str(request.files['currentBing']):
-        print("Bing Slot Empty")
-        #return "Bing slot is empty"
-    if emptyObj==str(request.files['currentGoogle']):
-        print("Google Slot Empty")        
-        #return "Google slot is empty"
-    if emptyObj==str(request.files['Communities']):
-        print("Communities Slot Empty")        
-        #return "Active Community slot is empty"
-    """    
-       
+   print("simplereq['Communities'] = ",simplereq['Communities'])
+   print("simplereq['Communities'].filename = ",simplereq['Communities'].filename)
     
+       
+    """
     print(" Check That File Slots are Filled")    
     
     if request.files['Communities'].filename.find("xlsx")<1:
@@ -145,6 +135,7 @@ def CommListFileHandler():
     if request.files['currentBing'].filename.find("xlsx")<1:
                 print("Bing Sheet is not XLSX") 
                 return "The Bing Sheet is not XLSX file type"; 
+    """            
             
     #print("did not Check that Filles are XlSX")    
    
