@@ -98,6 +98,7 @@ def BidOpFileHandler():
 
 def CommListFileHandler():
     print("Starting to Handle Files")
+    """
     if request.files['Communities']:
         print(" asks is comm is present seems to be yes ");
     else:
@@ -107,19 +108,20 @@ def CommListFileHandler():
         print(" asks is arandomthing is present seems to be yes ");
     else:
         print(" asks is arandomthing is present seems to be no ");
+    """    
         
   
     reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']   
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
     if emptyObj==str(request.files['currentBing']):
         print("Bing Slot Empty")
-        return "Bing slot is empty"
+        #return "Bing slot is empty"
     if emptyObj==str(request.files['currentGoogle']):
         print("Google Slot Empty")        
-        return "Google slot is empty"
+        #return "Google slot is empty"
     if emptyObj==str(request.files['Communities']):
         print("Communities Slot Empty")        
-        return "Active Community slot is empty"
+        #return "Active Community slot is empty"
        
     
     print(" Check That File Slots are Filled")    
