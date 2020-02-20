@@ -98,6 +98,7 @@ def BidOpFileHandler():
 
 def CommListFileHandler():
     print("Starting to Handle Files")
+    
     """
     if request.files['Communities']:
         print(" asks is comm is present seems to be yes ");
