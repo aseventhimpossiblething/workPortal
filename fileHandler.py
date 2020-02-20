@@ -98,24 +98,22 @@ def BidOpFileHandler():
 
 def CommListFileHandler():
     print("Starting to Handle Files")
+         
     
-        
-    print("request ",request)
-    #print("dir(request)")    
-    #print(dir(request))    
     simplereq=request.files
-    #print("simplereq= request.files ")
-    #print("dir(Simplereq)")    
-    #print(dir(simplereq))
-    #print("Simplereq['Communities']= ", simplereq['Communities'])
-    #print(dir(simplereq['Communities']))
-    #print(dir(simplereq['Communities']))    
-    #print("simplereq is =  ",simplereq)
-    #print("ImmutableMultiDict([('Communities', = ",str(simplereq).find("ImmutableMultiDict([('Communities',"))
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
         floc='/app/Sheets/CommunityUpdates/currentCommunities'
         fnm='Communities'
         savenam='WorkingCommunities'
+        """
+        print("simplereq[fnm].filename = ",simplereq[fnm].filename)
+        os.chdir(floc) 
+        print(simplereq[fnm])
+        simplereq[fnm].save(savenam) 
+        print(pandas.read_excel(savenam))
+        print(" Communities Loaded ")
+        return "Communities Loaded"
+        """
     if  str(simplereq).find("ImmutableMultiDict([('currentGoogle',")!=-1:
         floc='/app/Sheets/CommunityUpdates/Google/currentGoogle'
         fnm='currentGoogle'
@@ -124,6 +122,7 @@ def CommListFileHandler():
         floc='/app/Sheets/CommunityUpdates/Bing/currentBing'
         fnm='currentBing' 
         savenam='WorkingBing'
+        
     print("simplereq[fnm].filename = ",simplereq[fnm].filename)
     #if  str(simplereq).find("ImmutableMultiDict([(lower('xlsx'))!=-1:
     #print(" trying to save?")
@@ -131,6 +130,11 @@ def CommListFileHandler():
     print(simplereq[fnm])
     simplereq[fnm].save(savenam) 
     print(pandas.read_excel(savenam))
+
+    if fnm=='currentBing':
+        print("All files loaded")
+        
+        
     
     #else:
     #print("Not a communities sheet")
