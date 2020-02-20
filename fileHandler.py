@@ -118,15 +118,17 @@ def CommListFileHandler():
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
         print("This is from the Community Sheet")
     else:
-     print("simplereq.files['communities']")
-     print(simplereq.files['communities'])     
-     print("simplereq.files")
-     print(simplereq.files)
-     print("simplereq['Communities']")     
-     #print(simplereq['Communities'])     
-     print(simplereq['Communities'])
-     print("simplereq['Communities'].filename")
-     print(simplereq['Communities'].filename)
+        print("Not a communities sheet")
+     
+    print("simplereq.files['communities']")
+    print(simplereq.files['communities'])     
+    print("simplereq.files")
+    print(simplereq.files)
+    print("simplereq['Communities']")     
+    #print(simplereq['Communities'])     
+    print(simplereq['Communities'])
+    print("simplereq['Communities'].filename")
+    print(simplereq['Communities'].filename)
     
        
     """
