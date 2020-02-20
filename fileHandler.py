@@ -105,6 +105,7 @@ def CommListFileHandler():
         floc='/app/Sheets/CommunityUpdates/currentCommunities'
         fnm='Communities'
         savenam='WorkingCommunities'
+        nxtStop="The form Load Page"
         """
         print("simplereq[fnm].filename = ",simplereq[fnm].filename)
         os.chdir(floc) 
@@ -118,21 +119,22 @@ def CommListFileHandler():
         floc='/app/Sheets/CommunityUpdates/Google/currentGoogle'
         fnm='currentGoogle'
         savenam='WorkingGoogle'
+        nxtStop="The bing form Page"
     if  str(simplereq).find("ImmutableMultiDict([('currentBing',")!=-1:
         floc='/app/Sheets/CommunityUpdates/Bing/currentBing'
         fnm='currentBing' 
         savenam='WorkingBing'
+        nxtStop="The run wait while we process page and async function"
         
     print("simplereq[fnm].filename = ",simplereq[fnm].filename)
-    #if  str(simplereq).find("ImmutableMultiDict([(lower('xlsx'))!=-1:
-    #print(" trying to save?")
     os.chdir(floc) 
     print(simplereq[fnm])
     simplereq[fnm].save(savenam) 
     print(pandas.read_excel(savenam))
-
+    print(nxtStop) 
     if fnm=='currentBing':
-        print("All files loaded")
+        print(nxtStop)
+        return(nxtStop)
         
         
     
