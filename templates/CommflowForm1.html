@@ -1,0 +1,19 @@
+<html>
+{% extends 'DefaultTemplate.html'%}
+
+{% block content %}
+
+
+
+<p>BDX V1 Simple Portal Community Update</p>
+<hr>  
+
+
+
+<form  id="frmID" name="CommForm" method=POST  onsubmit="return ValidateForm()" action="/CommunityFileHander">
+<input type="file" accept=".xlsx" name="Communities" id="Communities" Value="Select Community List" size=30 >Community List<br>
+<input type="submit" name="submit" >  
+</form> 
+
+{%endblock%}
+</html>
