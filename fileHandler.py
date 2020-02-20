@@ -113,8 +113,13 @@ def CommListFileHandler():
         
     simplereq=request.files
     print("Simple request accepted ")
-    reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']  
-    print("Files were accepted as rqs")    
+    if reqs:
+        print("Its willing to check if yes ")
+    else:
+        print("Its willing to check if no ")
+    #reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']  
+    print("Files were accepted as rqs") 
+    print("Checking emptyObj=<FileStorage: '' ('application/octet-stream')>")    
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
     if emptyObj==str(request.files['currentBing']):
         print("Bing Slot Empty")
