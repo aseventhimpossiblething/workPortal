@@ -99,22 +99,12 @@ def BidOpFileHandler():
 def CommListFileHandler():
     print("Starting to Handle Files")
     
-    """
-    if request.files['Communities']:
-        print(" asks is comm is present seems to be yes ");
-    else:
-        print(" asks is comm is present seems to be no ");
-      
-    if request.files['arandomthing']:
-        print(" asks is arandomthing is present seems to be yes ");
-    else:
-        print(" asks is arandomthing is present seems to be no ");
-    """    
+        
     print("request ",request)
     print("dir(request)")    
     print(dir(request))    
     simplereq=request.files
-    print("Simplereq= request.files ")
+    print("implereq= request.files ")
     print("dir(Simplereq)")    
     print(dir(simplereq))
     print("Simplereq['Communities']= ", simplereq['Communities'])
@@ -123,11 +113,12 @@ def CommListFileHandler():
     print("simplereq is =  ",simplereq)
     print("ImmutableMultiDict([('Communities', = ",str(simplereq).find("ImmutableMultiDict([('Communities',"))
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
-        print(" trying to save?")
-        os.chdir('/app/Sheets/CommunityUpdates/currentCommunities') 
-        print(simplereq['Communities'])
-        simplereq['Communities'].save('WorkingCommunities') 
-        print(pandas.read_excel('WorkingCommunities'))
+        if  str(simplereq).find("ImmutableMultiDict([(lower('xlsx'))!=-1:
+         print(" trying to save?")
+         os.chdir('/app/Sheets/CommunityUpdates/currentCommunities') 
+         print(simplereq['Communities'])
+         simplereq['Communities'].save('WorkingCommunities') 
+         print(pandas.read_excel('WorkingCommunities'))
         
         
     else:
