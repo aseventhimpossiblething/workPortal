@@ -230,6 +230,14 @@ def CommunitiesUploads():
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
     return fileHandler.CommListFileHandler()
+
+
+
+
+@app.route('/ComFlow1')
+def Commumflow1():
+    return render_template('CommflowForm1.html')
+CommflowForm1.html
     
    
    
