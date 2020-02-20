@@ -121,7 +121,10 @@ def CommListFileHandler():
     if simplereq[fnm].filename.lower().find('xlsx')==-1:
      print("File Format Needs to be XLSX")
      return "File format needs to be XLSX" 
-    os.chdir(floc) 
+    os.chdir(floc)
+    if Sheet_Looks.iloc[4][0]!='Owner Name':
+        print('This Document is not consistant with the structer of the Community List')
+        return 'This Document is not consistant with the structer of the Community List'
     print(simplereq[fnm])
     simplereq[fnm].save(savenam)
     Sheet_Looks=pandas.read_excel(savenam)
