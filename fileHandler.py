@@ -113,6 +113,7 @@ def CommListFileHandler():
     #print("simplereq is =  ",simplereq)
     #print("ImmutableMultiDict([('Communities', = ",str(simplereq).find("ImmutableMultiDict([('Communities',"))
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
+        fnm='Communities'
          print("simplereq['Communities'].filename = ",simplereq['Communities'].filename)
          #if  str(simplereq).find("ImmutableMultiDict([(lower('xlsx'))!=-1:
          #print(" trying to save?")
