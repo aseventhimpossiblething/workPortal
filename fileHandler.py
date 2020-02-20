@@ -101,21 +101,21 @@ def CommListFileHandler():
     
         
     print("request ",request)
-    print("dir(request)")    
-    print(dir(request))    
+    #print("dir(request)")    
+    #print(dir(request))    
     simplereq=request.files
-    print("implereq= request.files ")
-    print("dir(Simplereq)")    
-    print(dir(simplereq))
-    print("Simplereq['Communities']= ", simplereq['Communities'])
-    print(dir(simplereq['Communities']))
-    print(dir(simplereq['Communities']))    
-    print("simplereq is =  ",simplereq)
-    print("ImmutableMultiDict([('Communities', = ",str(simplereq).find("ImmutableMultiDict([('Communities',"))
+    #print("simplereq= request.files ")
+    #print("dir(Simplereq)")    
+    #print(dir(simplereq))
+    #print("Simplereq['Communities']= ", simplereq['Communities'])
+    #print(dir(simplereq['Communities']))
+    #print(dir(simplereq['Communities']))    
+    #print("simplereq is =  ",simplereq)
+    #print("ImmutableMultiDict([('Communities', = ",str(simplereq).find("ImmutableMultiDict([('Communities',"))
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
-         print(simplereq['Communities'].filename())
+         print("simplereq['Communities'].filename() = ",simplereq['Communities'].filename())
          #if  str(simplereq).find("ImmutableMultiDict([(lower('xlsx'))!=-1:
-         print(" trying to save?")
+         #print(" trying to save?")
          os.chdir('/app/Sheets/CommunityUpdates/currentCommunities') 
          print(simplereq['Communities'])
          simplereq['Communities'].save('WorkingCommunities') 
