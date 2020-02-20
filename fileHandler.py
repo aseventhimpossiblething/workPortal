@@ -166,7 +166,7 @@ def CommListFileHandler():
     """            
             
    
-
+    """ 
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')          
     request.files['Communities'].save('WorkingCommunities')
        
@@ -175,6 +175,7 @@ def CommListFileHandler():
     
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     request.files['currentBing'].save('WorkingBing')
+    """
      
     print("saved Files") 
     
