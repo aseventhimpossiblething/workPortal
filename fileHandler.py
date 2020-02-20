@@ -127,7 +127,7 @@ def CommListFileHandler():
         nxtStop="The run wait while we process page and async function"
         
     print("simplereq[fnm].filename = ",simplereq[fnm].filename)
-    if simplereq[fnm].filename.find(lower('xlsx'))==-1:
+    if simplereq[fnm].filename.lower().find('xlsx')==-1:
      print("File Format Needs to be XLSX")
      return "File format needs to be XLSX" 
     os.chdir(floc) 
