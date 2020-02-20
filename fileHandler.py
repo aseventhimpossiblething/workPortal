@@ -120,7 +120,7 @@ def CommListFileHandler():
     else:
         print("Not a communities sheet")
     
-    simplereq['communities'].save() 
+    simplereq['communities'].save('WorkingCommunities') 
     print(dir(simplereq))
     #simplereq.save()
      
