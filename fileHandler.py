@@ -101,18 +101,14 @@ def CommListFileHandler():
     if request.files['Communities']:
         print(" asks is comm is present seems to be yes ");
     else:
-        print(" asks is comm is present seems to be yes ");
+        print(" asks is comm is present seems to be no ");
       
     if request.files['arandomthing']:
         print(" asks is arandomthing is present seems to be yes ");
     else:
-        print(" asks is arandomthing is present seems to be yes ");
+        print(" asks is arandomthing is present seems to be no ");
         
-        
-        
-
-                
-    
+  
     reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']   
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
     if emptyObj==str(request.files['currentBing']):
@@ -169,13 +165,6 @@ def CommListFileHandler():
     LoadAllCommunityFiles.start()    
     print("Should respond now!!! ")
     
-    #print(" end of filehandler CommunityUpdatesProcess.IsCommUpdateRunning ",CommunityUpdatesProcess.IsCommUpdateRunning)
-        
-    #HTMLoutput="This will be 3 modules  Modules as follows  Module 1: 3 links to the Community, Google, and Bing upload outputs Module 2:Google Outputs link1, Google KWs all match types. Link 2 google Adds Ad Types A+b and all Match types "    
-    #toscrn = HTMLoutput
-    #return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/911cor.xlsx", attachment_filename="911cor.xlsx")
-    
-    #return "<html> <a href='https://bdx-api-link.herokuapp.com/DisplayCommUpdate'>NEW TEST BUT STILL WAIT FOR CLEARANCE BEFORE LINK CLICK! OTHERWISE EPIC FAILURE</a></html>" 
    
     #return "<html> <a href='https://bdx-api-link.herokuapp.com/test'>WAIT FOR CLEARANCE BEFORE LINK CLICK! OTHERWISE EPIC FAILURE</a></html>" 
     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=https://communityupdates.herokuapp.com/DisplayCommUpdate'><html>did not forward</html>"
