@@ -125,6 +125,7 @@ def CommListFileHandler():
     print(simplereq[fnm])
     simplereq[fnm].save(savenam)
     Sheet_Looks=pandas.read_excel(savenam)
+    pandas.df(Sheet_Looks)
     #pandas.read_excel(savenam)
     print(Sheet_Looks)
 
