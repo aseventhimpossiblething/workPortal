@@ -122,7 +122,8 @@ def CommListFileHandler():
     """    
     #reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']  
     #print("Files were accepted as rqs") 
-    print("Checking emptyObj=<FileStorage: '' ('application/octet-stream')>")    
+    #print("Checking emptyObj=<FileStorage: '' ('application/octet-stream')>")    
+    """
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
     if emptyObj==str(request.files['currentBing']):
         print("Bing Slot Empty")
@@ -133,6 +134,7 @@ def CommListFileHandler():
     if emptyObj==str(request.files['Communities']):
         print("Communities Slot Empty")        
         #return "Active Community slot is empty"
+    """    
        
     
     print(" Check That File Slots are Filled")    
