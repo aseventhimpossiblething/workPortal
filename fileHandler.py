@@ -149,7 +149,7 @@ def CommListFileHandler():
     print(Sheet_Looks[[5]])
     print(Sheet_Looks[[6]])
     """
-        
+    """    
     print(Sheet_Looks[[6]])
     print(Sheet_Looks[[5]])
     print(Sheet_Looks[[4]])
@@ -157,7 +157,7 @@ def CommListFileHandler():
     print(Sheet_Looks[[2]])
     print(Sheet_Looks[[1]])
     print(Sheet_Looks[[0]])
-        
+    """    
         
     print(nxtStop) 
     if fnm=='currentBing':
