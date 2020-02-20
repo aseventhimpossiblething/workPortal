@@ -97,13 +97,17 @@ def BidOpFileHandler():
 
 def CommListFileHandler():
         
+    print(" CommListFileHandler()  fired ")    
+        
     """
     reqs=request.files,request.files['Communities']   
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
     if emptyObj==str(request.files['Communities']):
         return "Active Community slot is empty"
+        
     """   
- 
+   
+    print("1) requests pulled 1st eval as not empty ")
      
     reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']   
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
@@ -113,13 +117,15 @@ def CommListFileHandler():
         return "Google slot is empty"
     if emptyObj==str(request.files['Communities']):
         return "Active Community slot is empty"
+    print("2) requests 2nd eval as not empty ")
 
     if request.files['Communities'].filename.find("xlsx")<1:
                 return "The Community Sheet is not XLSX file type";
     if request.files['currentGoogle'].filename.find("xlsx")<1:
                 return "The Google Sheet is not XLSX file type";
     if request.files['currentBing'].filename.find("xlsx")<1:
-                return "The Bing Sheet is not XLSX file type";       
+                return "The Bing Sheet is not XLSX file type"; 
+    print("3) requests checked as XLSX ")    
    
     os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')          
     request.files['Communities'].save('WorkingCommunities')
@@ -130,7 +136,7 @@ def CommListFileHandler():
     os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
     request.files['currentBing'].save('WorkingBing')
   
-     
+     print("4) saved in as .XLSX File ") 
    
     
     print("**********************file search in file handler 1**********************************")
