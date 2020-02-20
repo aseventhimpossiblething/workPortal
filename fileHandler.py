@@ -113,6 +113,7 @@ def CommListFileHandler():
         
     simplereq=request.files
     print("Simple request accepted ")
+    print("simplereq is =  ",simplereq)    
     """    
     if request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']:
         print("Its willing to check if yes ")
