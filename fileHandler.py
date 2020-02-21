@@ -117,23 +117,29 @@ def CommListFileHandler():
         savenam='WorkingBing'
         nxtStop="The run wait while we process page and async function"
         
-    print("simplereq[fnm].filename = ",simplereq[fnm].filename);
-    print("sizeof(simplereq[fnm]) ",sizeof(simplereq[fnm])
-    #print("sizeof(simplereq) ",sizeof(simplereq))    
+    print("simplereq[fnm].filename = ",simplereq[fnm].filename)
+    print("simplereq[fnm].filename.lower() = ",simplereq[fnm].filename.lower()) 
+    print("simplereq[fnm].filename.lower().find('xlsx') = ",simplereq[fnm].filename.lower().find("xlsx"))  
+    print(simplereq[fnm].filename.lower().find('xlsx'))
+    """
     if simplereq[fnm].filename.lower().find('xlsx')==-1:
-     print("File Format Needs to be XLSX")
-     return "File format needs to be XLSX" 
+      print("File Format Needs to be XLSX")
+      return "File format needs to be XLSX"
+    """  
     os.chdir(floc)
     simplereq[fnm].save(savenam)    
     Sheet_Looks=pandas.read_excel(savenam)
     Sheet_Looks=pandas.DataFrame(Sheet_Looks)
     #This is an and and test for Community there should be one for each sheet. 
-    print("Sheet_Looks.iloc[4][0] = ",Sheet_Looks.iloc[4][0])  
+    """    
     if Sheet_Looks.iloc[4][0]!='Owner Name' and str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1 :
         print('This Document is not consistant with the structer of the Community List')
-        return 'This Document is not consistant with the structure of the Community List You May have entered the wrong excel file'
-      
-   
+        return 'This Document is not consistant with the structer of the Community List'
+    """    
+    #print(simplereq[fnm])
+    #simplereq[fnm].save(savenam)
+    #Sheet_Looks=pandas.read_excel(savenam)
+    #Sheet_Looks=pandas.DataFrame(Sheet_Looks)
     print("0") 
     print("Sheet_Looks")
     print("1") 
