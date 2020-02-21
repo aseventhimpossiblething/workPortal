@@ -120,28 +120,26 @@ def CommListFileHandler():
     print("simplereq[fnm].filename = ",simplereq[fnm].filename)
     print("simplereq[fnm].filename.lower() = ",simplereq[fnm].filename.lower()) 
     print("simplereq[fnm].filename.lower().find('xlsx') = ",simplereq[fnm].filename.lower().find("xlsx"))  
-    if simplereq[fnm].filename.lower().find('xlsx')==-1:
-                print("File Format Needs to be XLSX");
-                return "File format needs to be XLSX";
-    """
+    print(simplereq[fnm].filename.lower().find('xlsx')==-1)
+    
     if simplereq[fnm].filename.lower().find('xlsx')==-1:
       print("File Format Needs to be XLSX")
       return "File format needs to be XLSX"
-    """  
+    
     os.chdir(floc)
     simplereq[fnm].save(savenam)    
     Sheet_Looks=pandas.read_excel(savenam)
     Sheet_Looks=pandas.DataFrame(Sheet_Looks)
+    print("Sheet_Looks.iloc[4][1] = ",Sheet_Looks.iloc[4][1])
+    print("Sheet_Looks.iloc[4][2] = ",Sheet_Looks.iloc[4][2]) 
+    print("Sheet_Looks.iloc[4][3] = ",Sheet_Looks.iloc[4][3])     
     #This is an and and test for Community there should be one for each sheet. 
     """    
     if Sheet_Looks.iloc[4][0]!='Owner Name' and str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1 :
         print('This Document is not consistant with the structer of the Community List')
         return 'This Document is not consistant with the structer of the Community List'
     """    
-    #print(simplereq[fnm])
-    #simplereq[fnm].save(savenam)
-    #Sheet_Looks=pandas.read_excel(savenam)
-    #Sheet_Looks=pandas.DataFrame(Sheet_Looks)
+   
     print("0") 
     print("Sheet_Looks")
     print("1") 
