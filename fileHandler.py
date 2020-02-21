@@ -120,7 +120,9 @@ def CommListFileHandler():
     print("simplereq[fnm].filename = ",simplereq[fnm].filename)
     print("simplereq[fnm].filename.lower() = ",simplereq[fnm].filename.lower()) 
     print("simplereq[fnm].filename.lower().find('xlsx') = ",simplereq[fnm].filename.lower().find("xlsx"))  
-    print(simplereq[fnm].filename.lower().find('xlsx'))
+    if simplereq[fnm].filename.lower().find('xlsx')==-1:
+                print("File Format Needs to be XLSX");
+                return "File format needs to be XLSX";
     """
     if simplereq[fnm].filename.lower().find('xlsx')==-1:
       print("File Format Needs to be XLSX")
