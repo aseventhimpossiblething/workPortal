@@ -137,7 +137,7 @@ def CommListFileHandler():
       
     if Sheet_Looks.iloc[4][3]!='Brand Name' and str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1 and Sheet_Looks.iloc[4][1]!='Builder Name':
         print('This Document is not consistant with the structer of the Community List')
-        return 'This Document is not consistant with the structer of the Community List'
+        return 'This Document is not consistant with the structure of the Community List'
        
    
     print("0") 
