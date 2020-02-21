@@ -126,41 +126,34 @@ def CommListFileHandler():
     Sheet_Looks=pandas.read_excel(savenam)
     Sheet_Looks=pandas.DataFrame(Sheet_Looks)
     #This is an and and test for Community there should be one for each sheet. 
+    """    
     if Sheet_Looks.iloc[4][0]!='Owner Name' and str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1 :
         print('This Document is not consistant with the structer of the Community List')
         return 'This Document is not consistant with the structer of the Community List'
-    print(simplereq[fnm])
+    """    
+    #print(simplereq[fnm])
     #simplereq[fnm].save(savenam)
     #Sheet_Looks=pandas.read_excel(savenam)
     #Sheet_Looks=pandas.DataFrame(Sheet_Looks)
+    print("0") 
     print("Sheet_Looks")
+    print("1") 
     print(Sheet_Looks)
-    print("Sheet_Looks.iloc[4]")    
-    print(Sheet_Looks.iloc[4])  
-    print("Sheet_Looks.iloc[4][0]")    
-    print(Sheet_Looks.iloc[4][0])    
+    print("2")  
+    print("Sheet_Looks.iloc[4]")  
+    print("3") 
+    print(Sheet_Looks.iloc[4]) 
+    print("4") 
+    print("Sheet_Looks.iloc[4][0]") 
+    print("5") 
+    print(Sheet_Looks.iloc[4][0])  
+    print("6") 
     #print("Sheet_Looks[0] ",Sheet_Looks[0])    
 
-    """
-    print(Sheet_Looks[[0]])
-    print(Sheet_Looks[[1]])
-    print(Sheet_Looks[[2]])
-    print(Sheet_Looks[[3]])
-    print(Sheet_Looks[[4]])
-    print(Sheet_Looks[[5]])
-    print(Sheet_Looks[[6]])
-    """
-    """    
-    print(Sheet_Looks[[6]])
-    print(Sheet_Looks[[5]])
-    print(Sheet_Looks[[4]])
-    print(Sheet_Looks[[3]])
-    print(Sheet_Looks[[2]])
-    print(Sheet_Looks[[1]])
-    print(Sheet_Looks[[0]])
-    """    
-        
+   
+    print("7")     
     print(nxtStop) 
+    print("8")     
     if fnm=='currentBing':
         print(nxtStop)
         #return(nxtStop)
@@ -175,7 +168,8 @@ def CommListFileHandler():
         LoadAllCommunityFiles.start() 
         return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=https://communityupdates.herokuapp.com/DisplayCommUpdate'><html>did not forward</html>"
          
-
+    print("9") 
+    return "10"
 
 
 
