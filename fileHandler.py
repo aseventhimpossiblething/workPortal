@@ -131,12 +131,9 @@ def CommListFileHandler():
     print("Sheet_Looks.iloc[4][0] = ",Sheet_Looks.iloc[4][0])  
     if Sheet_Looks.iloc[4][0]!='Owner Name' and str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1 :
         print('This Document is not consistant with the structer of the Community List')
-        return 'This Document is not consistant with the structer of the Community List'
+        return 'This Document is not consistant with the structure of the Community List You May have entered the wrong excel file'
       
-    #print(simplereq[fnm])
-    #simplereq[fnm].save(savenam)
-    #Sheet_Looks=pandas.read_excel(savenam)
-    #Sheet_Looks=pandas.DataFrame(Sheet_Looks)
+   
     print("0") 
     print("Sheet_Looks")
     print("1") 
