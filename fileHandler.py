@@ -134,11 +134,11 @@ def CommListFileHandler():
     print("Sheet_Looks.iloc[4][2] = ",Sheet_Looks.iloc[4][2]) 
     print("Sheet_Looks.iloc[4][3] = ",Sheet_Looks.iloc[4][3])     
     #This is an and and test for Community there should be one for each sheet. 
-    """    
-    if Sheet_Looks.iloc[4][0]!='Owner Name' and str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1 :
+      
+    if Sheet_Looks.iloc[4][3]!='Brand Name' and str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1 and Sheet_Looks.iloc[4][1]!='Builder Name':
         print('This Document is not consistant with the structer of the Community List')
         return 'This Document is not consistant with the structer of the Community List'
-    """    
+       
    
     print("0") 
     print("Sheet_Looks")
