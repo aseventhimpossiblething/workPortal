@@ -97,7 +97,8 @@ def BidOpFileHandler():
     return toscrn
 
 def CommListFileHandler():
-    print(" Started ")     
+    FileSize=request.content_length;    
+    print(" Started ");     
          
     simplereq=request.files
     print(" request.files declared as simplereq ") 
