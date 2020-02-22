@@ -12,6 +12,12 @@ from datetime import datetime
 app = Flask(__name__,"/static/")
 
 
+@app.route('/testofjs')
+def tstfjs():
+ return render_template('testofjs.html')
+
+
+
 
 
 
