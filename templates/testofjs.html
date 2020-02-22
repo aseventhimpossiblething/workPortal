@@ -2,9 +2,10 @@
 <form id="tfrm">  
 <input type="file" method=POST enctype="multipart/form-data" onsubmit="Valid()" action="/CommunityFileHander"></input>
 <input type="submit"></input>  
-</form>  
+</form>
+<p id="thID"></p>
 <script>
-function Valid(){afile=document.getElementById("file"); afile=afile.size();document.innerHTML=afile}    
+function Valid(){afile=document.getElementById("file"); afile=afile.size();document.getElementById("thID").innerHTML=afile}    
   
   
   
