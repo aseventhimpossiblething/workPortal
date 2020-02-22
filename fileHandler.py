@@ -98,7 +98,7 @@ def BidOpFileHandler():
 
 def CommListFileHandler():
     FileSize=request.content_length; 
-    if FileSize_length > 6000000:
+    if FileSize > 6000000:
                 print(" File is over 4000kb This is the upload limit a")
                 return " Cannot Upload as file is over 4000KB a "  
     print(" Started ");     
