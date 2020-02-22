@@ -122,7 +122,7 @@ def CommListFileHandler():
     print("simplereq[fnm].filename.lower().find('xlsx') = ",simplereq[fnm].filename.lower().find("xlsx"))  
     print(simplereq[fnm].filename.lower().find('xlsx')==-1)
     print("___________________________________________________________________________________________________________")    
-    print("sizeof(simplereq[fnm]) = " ,sizeof(simplereq[fnm]))    
+    print("simplereq[fnm].size() = " ,simplereq[fnm].size())    
     
           
     print(simplereq[fnm].filename.lower())
@@ -165,7 +165,7 @@ def CommListFileHandler():
    
     print("7")     
     print(nxtStop) 
-    print("8")     
+    'print("8")     
     if fnm=='currentBing':
         print(nxtStop)
         #return(nxtStop)
