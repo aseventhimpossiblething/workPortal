@@ -17,3 +17,4 @@ alert("")
 }
 
 //window.onload=ValidateForm();
+function ButtonFire(){document.getElementByType("button").addEventListener("click",window.alert("Yeah!"))}
