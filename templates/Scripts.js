@@ -13,9 +13,9 @@ return false;}
 }
 
 function testing(){
-alert("")
+alert("testing")
 }
-
+testing();
 //window.onload=ValidateForm();
 function ButtonFire(){document.getElementByClass("form").addEventListener("click",window.alert("Yeah!"))};
 ButtonFire();
