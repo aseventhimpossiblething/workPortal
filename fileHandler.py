@@ -99,7 +99,7 @@ def BidOpFileHandler():
 def CommListFileHandler():
     print("Starting to Handle Files")
          
-    
+     
     simplereq=request.files
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
         floc='/app/Sheets/CommunityUpdates/currentCommunities'
@@ -122,8 +122,9 @@ def CommListFileHandler():
     print("simplereq[fnm].filename.lower().find('xlsx') = ",simplereq[fnm].filename.lower().find("xlsx"))  
     print(simplereq[fnm].filename.lower().find('xlsx')==-1)
     print("___________________________________________________________________________________________________________")
-    print(dir(simplereq)) 
-    print("len(simplereq) = " ,len(simplereq))    
+    
+    print(dir(request)) 
+    print("len(simplereq[fnm]) = " ,len(simplereq[fnm]))    
     
           
     print(simplereq[fnm].filename.lower())
