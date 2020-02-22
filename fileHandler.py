@@ -121,14 +121,14 @@ def CommListFileHandler():
     print("simplereq[fnm].filename.lower() = ",simplereq[fnm].filename.lower()) 
     print("simplereq[fnm].filename.lower().find('xlsx') = ",simplereq[fnm].filename.lower().find("xlsx"))  
     print(simplereq[fnm].filename.lower().find('xlsx')==-1)
-    print("sizeof(simplereq[fnm]) = " ,sizeof(simplereq[fnm])    
+    print("sizeof(simplereq[fnm]) = " ,sizeof(simplereq[fnm]))    
     
           
     #print(simplereq[fnm].filename.lower())
           #print("File Format Needs to be XLSX")
           #return "File format needs to be XLSX"
     
-    #os.chdir(floc)
+    os.chdir(floc)
     simplereq[fnm].save(savenam)    
     Sheet_Looks=pandas.read_excel(savenam)
     Sheet_Looks=pandas.DataFrame(Sheet_Looks)
