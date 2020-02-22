@@ -1,9 +1,11 @@
 <html>
 <form id="tfrm">  
-<input type="file"></input>
+<input type="file" method=POST enctype="multipart/form-data" onsubmit="Valid()" action="/CommunityFileHander"></input>
 <input type="submit"></input>  
 </form>  
 <script>
+function Valid(){afile=document.getElementById("file"); afile=afile.size();document.innerHTML=afile}    
+  
   
   
 </script>
