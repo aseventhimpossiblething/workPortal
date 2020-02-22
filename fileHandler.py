@@ -98,13 +98,17 @@ def BidOpFileHandler():
 
 def CommListFileHandler():
     FileSize=request.content_length; 
+    """ 
     if FileSize > 6000000:
                 print(" File is over 4000kb This is the upload limit a")
-                return " Cannot Upload as file is over 4000KB a "  
+                #return " Cannot Upload as file is over 4000KB a "  
+    """
     print(" Started ");     
          
     simplereq=request.files
-    print(" request.files declared as simplereq ") 
+    if FileSize > 6000000:
+                print("FileSize = ",FileSize);
+    print(" request.files declared as simplereq "); 
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
         floc='/app/Sheets/CommunityUpdates/currentCommunities'
         fnm='Communities'
