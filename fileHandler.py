@@ -97,21 +97,7 @@ def BidOpFileHandler():
     return toscrn
 
 def CommListFileHandler():
-    """    
-    FileSize=request.content_length;    
-    if FileSize > 6000000:
-                print(" File is over 4000kb This is the upload limit -1");
-                #return " Cannot Upload as file is over 4000KB -1 "; 
-    """            
-    print("Starting to Handle Files");
-    
-    """
-    if request.content_length > 6000000:
-                print(" File is over 4000kb This is the upload limit-2");
-                #return " Cannot Upload as file is over 4000KB -2 ";
-              
-    """     
-     
+         
     simplereq=request.files
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
         floc='/app/Sheets/CommunityUpdates/currentCommunities'
@@ -129,6 +115,11 @@ def CommListFileHandler():
         savenam='WorkingBing'
         nxtStop="The run wait while we process page and async function"
         
+        
+    if request.content_length > 6000000:
+                print(" File is over 4000kb This is the upload limit -1")
+                return " Cannot Upload as file is over 4000KB -1 "  
+        
     print("simplereq[fnm].filename = ",simplereq[fnm].filename)
     print("simplereq[fnm].filename.lower() = ",simplereq[fnm].filename.lower()) 
     print("simplereq[fnm].filename.lower().find('xlsx') = ",simplereq[fnm].filename.lower().find("xlsx"))  
@@ -137,8 +128,8 @@ def CommListFileHandler():
     print("request.content_length = ",request.content_length) 
     #5585833
     if request.content_length > 6000000:
-                print(" File is over 4000kb This is the upload limit -3")
-                return " Cannot Upload as file is over 4000KB -3 "
+                print(" File is over 4000kb This is the upload limit -2")
+                return " Cannot Upload as file is over 4000KB -2 "
     
     #print("len(request.files[fnm].read()) = ",len(request.files[fnm].read())) 
     #print(dir(request)) 
