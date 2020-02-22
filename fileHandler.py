@@ -97,6 +97,7 @@ def BidOpFileHandler():
     return toscrn
 
 def CommListFileHandler():
+    print(" Started ")     
          
     simplereq=request.files
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
@@ -114,12 +115,14 @@ def CommListFileHandler():
         fnm='currentBing' 
         savenam='WorkingBing'
         nxtStop="The run wait while we process page and async function"
+    print(" past channel check ")     
         
         
     if request.content_length > 6000000:
                 print(" File is over 4000kb This is the upload limit -1")
                 return " Cannot Upload as file is over 4000KB -1 "  
         
+    print(" should have returned ")     
     print("simplereq[fnm].filename = ",simplereq[fnm].filename)
     print("simplereq[fnm].filename.lower() = ",simplereq[fnm].filename.lower()) 
     print("simplereq[fnm].filename.lower().find('xlsx') = ",simplereq[fnm].filename.lower().find("xlsx"))  
