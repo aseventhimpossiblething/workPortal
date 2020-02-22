@@ -100,14 +100,14 @@ def CommListFileHandler():
     FileSize=request.content_length;    
     if FileSize > 6000000:
                 print(" File is over 4000kb This is the upload limit -1");
-                return " Cannot Upload as file is over 4000KB -1";    
-    print("Starting to Handle Files")
+                #return " Cannot Upload as file is over 4000KB -1 ";    
+    print("Starting to Handle Files");
     
-    """
+    
     if request.content_length > 6000000:
                 print(" File is over 4000kb This is the upload limit-2");
-                #return " Cannot Upload as file is over 4000KB-1 ";
-    """            
+                return " Cannot Upload as file is over 4000KB -2 ";
+              
          
      
     simplereq=request.files
