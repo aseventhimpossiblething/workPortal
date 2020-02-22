@@ -123,7 +123,7 @@ def CommListFileHandler():
     print(simplereq[fnm].filename.lower().find('xlsx')==-1)
     print("___________________________________________________________________________________________________________")
     print(dir(simplereq)) 
-    print("sizeof(simplereq) = " ,sizeof(simplereq))    
+    print("len(simplereq) = " ,len(simplereq))    
     
           
     print(simplereq[fnm].filename.lower())
