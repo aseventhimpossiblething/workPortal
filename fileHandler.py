@@ -122,7 +122,9 @@ def CommListFileHandler():
     print("simplereq[fnm].filename.lower().find('xlsx') = ",simplereq[fnm].filename.lower().find("xlsx"))  
     print(simplereq[fnm].filename.lower().find('xlsx')==-1)
     print("___________________________________________________________________________________________________________")
-    print("len(request.files[fnm].read()) = ",len(request.files[fnm].read())) 
+    print("request.content_length = ",request.content_length) 
+    print("request.content_length() = ",request.content_length())
+    #print("len(request.files[fnm].read()) = ",len(request.files[fnm].read())) 
     #print(dir(request)) 
     #print("len(simplereq[fnm]) = " ,len(simplereq[fnm]))    
     
