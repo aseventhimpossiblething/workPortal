@@ -117,14 +117,14 @@ def CommListFileHandler():
         savenam='WorkingBing'
         nxtStop="The run wait while we process page and async function"
         
-    #print("simplereq[fnm].filename = ",simplereq[fnm].filename)
-    #print("simplereq[fnm].filename.lower() = ",simplereq[fnm].filename.lower()) 
-    #print("simplereq[fnm].filename.lower().find('xlsx') = ",simplereq[fnm].filename.lower().find("xlsx"))  
-    #print(simplereq[fnm].filename.lower().find('xlsx')==-1)
-    #print("sizeof(simplereq[fnm]) = " ,sizeof(simplereq[fnm]))    
+    print("simplereq[fnm].filename = ",simplereq[fnm].filename)
+    print("simplereq[fnm].filename.lower() = ",simplereq[fnm].filename.lower()) 
+    print("simplereq[fnm].filename.lower().find('xlsx') = ",simplereq[fnm].filename.lower().find("xlsx"))  
+    print(simplereq[fnm].filename.lower().find('xlsx')==-1)
+    print("sizeof(simplereq[fnm]) = " ,sizeof(simplereq[fnm]))    
     
           
-    #print(simplereq[fnm].filename.lower())
+    print(simplereq[fnm].filename.lower())
           #print("File Format Needs to be XLSX")
           #return "File format needs to be XLSX"
     
