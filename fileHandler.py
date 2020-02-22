@@ -124,9 +124,9 @@ def CommListFileHandler():
     print("sizeof(simplereq[fnm]) = " ,sizeof(simplereq[fnm])    
     
           
-    if simplereq[fnm].filename.lower().find('xlsx')==-1:
-          print("File Format Needs to be XLSX")
-          return "File format needs to be XLSX"
+    print(simplereq[fnm].filename.lower().find('xlsx'))
+          #print("File Format Needs to be XLSX")
+          #return "File format needs to be XLSX"
     
     os.chdir(floc)
     simplereq[fnm].save(savenam)    
