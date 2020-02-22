@@ -99,11 +99,11 @@ def BidOpFileHandler():
 def CommListFileHandler():
     if request.content_length > 6000000:
                 print(" File is over 4000kb This is the upload limit");
-                return " Cannot Upload as file is over 4000KB ";    
+                #return " Cannot Upload as file is over 4000KB ";    
     print("Starting to Handle Files")
     if request.content_length > 6000000:
                 print(" File is over 4000kb This is the upload limit");
-                return " Cannot Upload as file is over 4000KB ";
+                #return " Cannot Upload as file is over 4000KB ";
          
      
     simplereq=request.files
