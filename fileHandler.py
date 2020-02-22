@@ -123,6 +123,10 @@ def CommListFileHandler():
     print(simplereq[fnm].filename.lower().find('xlsx')==-1)
     print("___________________________________________________________________________________________________________")
     print("request.content_length = ",request.content_length) 
+    #5585833
+    if request.content_length > 6000000:
+                print(" File is over 4000kb This is the upload limit")
+                return " Cannot Upload as file is over 4000KB "
     
     #print("len(request.files[fnm].read()) = ",len(request.files[fnm].read())) 
     #print(dir(request)) 
