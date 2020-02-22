@@ -1,8 +1,10 @@
 <html>
 <script>
-function newbutton(){document.getElementsByTagName("button").innerHTML("New Button text after click")}  
-function pop(){document.getElementsByTagName("button").addEventListener("click",newbutton());}
-pop(); 
+function newbutton(){document.getElementByID("pi").innerHTML("New Button text after click")}  
+//function pop(){document.getElementsByTagName("button").addEventListener("click",newbutton());}
+//pop(); 
+newbutton();  
 </script>
+<p id="pi"></p>  
 <button type="button"> button </button>  
 </html>
