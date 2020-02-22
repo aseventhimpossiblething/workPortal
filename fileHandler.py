@@ -165,7 +165,7 @@ def CommListFileHandler():
    
     print("7")     
     print(nxtStop) 
-    'print("8")     
+    print("8")     
     if fnm=='currentBing':
         print(nxtStop)
         #return(nxtStop)
