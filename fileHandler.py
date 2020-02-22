@@ -105,12 +105,12 @@ def CommListFileHandler():
     """            
     print("Starting to Handle Files");
     
-    
+    """
     if request.content_length > 6000000:
                 print(" File is over 4000kb This is the upload limit-2");
                 #return " Cannot Upload as file is over 4000KB -2 ";
               
-         
+    """     
      
     simplereq=request.files
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
