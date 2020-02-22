@@ -124,7 +124,7 @@ def CommListFileHandler():
     print("sizeof(simplereq[fnm]) = " ,sizeof(simplereq[fnm])    
     
           
-    print(simplereq[fnm].filename.lower())
+    #print(simplereq[fnm].filename.lower())
           #print("File Format Needs to be XLSX")
           #return "File format needs to be XLSX"
     
