@@ -17,6 +17,6 @@ alert("")
 }
 
 //window.onload=ValidateForm();
-function ButtonFire(){document.getElementByType("button").addEventListener("click",window.alert("Yeah!"))};
+function ButtonFire(){document.getElementByClass("form").addEventListener("click",window.alert("Yeah!"))};
 ButtonFire();
 
