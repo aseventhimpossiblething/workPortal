@@ -100,16 +100,19 @@ def CommListFileHandler():
     print(" Started ")     
          
     simplereq=request.files
+    print(" request.files declared as simplereq ") 
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
         floc='/app/Sheets/CommunityUpdates/currentCommunities'
         fnm='Communities'
         savenam='WorkingCommunities'
         nxtStop="The form Load Page"
+    print(" past if 1 ")     
     if  str(simplereq).find("ImmutableMultiDict([('currentGoogle',")!=-1:
         floc='/app/Sheets/CommunityUpdates/Google/currentGoogle'
         fnm='currentGoogle'
         savenam='WorkingGoogle'
         nxtStop="The bing form Page"
+    print(" past if 2 ")     
     if  str(simplereq).find("ImmutableMultiDict([('currentBing',")!=-1:
         floc='/app/Sheets/CommunityUpdates/Bing/currentBing'
         fnm='currentBing' 
