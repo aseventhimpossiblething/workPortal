@@ -128,7 +128,7 @@ def CommListFileHandler():
           #print("File Format Needs to be XLSX")
           #return "File format needs to be XLSX"
     
-    os.chdir(floc)
+    os.chdir("floc")
     simplereq[fnm].save(savenam)    
     Sheet_Looks=pandas.read_excel(savenam)
     Sheet_Looks=pandas.DataFrame(Sheet_Looks)
