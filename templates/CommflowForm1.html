@@ -10,11 +10,20 @@
 
 
 
-<form  id="frmID" name="CommForm" method=POST enctype="multipart/form-data" onsubmit="return ValidateForm()" action="/CommunityFileHander">
-<input type="file" accept=".xlsx" name="Communities" id="Communities" Value="Select Community List" size=30 >Community List<br>
-<input type="submit" name="submit" >  
 
-</form> 
+<p id="1">Javascript is Dissabled Please Enable Or Use Javascript enabled Browser</p>
+<p id="2"></p>
+<script>
+function primcomForm(){var pce="<form id=theFRM method=POST enctype='multipart/form-data' action='/CommunityFileHander'><p>\
+<input type='file' name='Communities' onchange=fileout(this)></input></p>\
+<p id=pts></p>\
+</form>";
+document.getElementById("1").innerHTML=pce}
+primcomForm()
+function fileout(fileIn){var permitSubmit="<input type='submit'></input>"; var sentFile=(fileIn.files[0].size/1024)/1024; document.getElementById("2").innerHTML= "File Size = "+sentFile+"MB"; if (sentFile > 4){permitSubmit="File is Too Large Must Be Less Than 4000kb <p>This is usually around 50,000 rows but varies by document. Divide into multiple sheets and reupload in segments</p>Please Make Sure That Each Upload Sheet has Appropriate Column Titles.<p></p> "}; document.getElementById("pts").innerHTML=permitSubmit; }
+
+
+</script>
 
 {%endblock%}
 </html>
