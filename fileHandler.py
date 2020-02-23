@@ -137,7 +137,7 @@ def CommListFileHandler():
     print("___________________________________________________________________________________________________________")
     print("request.content_length = ",request.content_length) 
     #5585833
-    if request.content_length > 7000000:
+    if request.content_length > 9000000:
                 print(" File is over 4000kb This is the upload limit -2")
                 return " Cannot Upload as file is over 4000KB -2 "
     
