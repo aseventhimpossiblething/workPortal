@@ -98,15 +98,11 @@ def BidOpFileHandler():
 
 def CommListFileHandler():
     FileSize=request.content_length; 
-    """ 
-    if FileSize > 6000000:
-                print(" File is over 4000kb This is the upload limit a")
-                #return " Cannot Upload as file is over 4000KB a "  
-    """
+   
     print(" Started ");     
          
     simplereq=request.files
-    if FileSize > 6000000:
+    if FileSize > 7000000:
                 print("FileSize = ",FileSize);
     print(" request.files declared as simplereq "); 
     if  str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1:
@@ -129,7 +125,7 @@ def CommListFileHandler():
     print(" past channel check ")     
         
         
-    if request.content_length > 6000000:
+    if request.content_length > 7000000:
                 print(" File is over 4000kb This is the upload limit -1")
                 return " Cannot Upload as file is over 4000KB -1 "  
         
@@ -141,13 +137,11 @@ def CommListFileHandler():
     print("___________________________________________________________________________________________________________")
     print("request.content_length = ",request.content_length) 
     #5585833
-    if request.content_length > 6000000:
+    if request.content_length > 7000000:
                 print(" File is over 4000kb This is the upload limit -2")
                 return " Cannot Upload as file is over 4000KB -2 "
     
-    #print("len(request.files[fnm].read()) = ",len(request.files[fnm].read())) 
-    #print(dir(request)) 
-    #print("len(simplereq[fnm]) = " ,len(simplereq[fnm]))    
+     
     
           
     print(simplereq[fnm].filename.lower())
