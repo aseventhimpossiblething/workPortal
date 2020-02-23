@@ -152,9 +152,9 @@ def CommListFileHandler():
     simplereq[fnm].save(savenam)    
     Sheet_Looks=pandas.read_excel(savenam)
     Sheet_Looks=pandas.DataFrame(Sheet_Looks)
-    print("Sheet_Looks.iloc[4][1] = ",Sheet_Looks.iloc[4][1])
-    print("Sheet_Looks.iloc[4][2] = ",Sheet_Looks.iloc[4][2]) 
-    print("Sheet_Looks.iloc[4][3] = ",Sheet_Looks.iloc[4][3])     
+    print("Sheet_Looks.iloc[0][1] = ",Sheet_Looks.iloc[2][1])
+    print("Sheet_Looks.iloc[0][2] = ",Sheet_Looks.iloc[2][2]) 
+    print("Sheet_Looks.iloc[0][3] = ",Sheet_Looks.iloc[2][3])     
     #This is an and and test for Community there should be one for each sheet. 
         
     #str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1    
@@ -162,6 +162,11 @@ def CommListFileHandler():
     if Sheet_Looks.iloc[4][3]!='Brand Name' and str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1 and Sheet_Looks.iloc[4][1]!='Builder Name':
         print('This Document is not consistant with the structer of the Community List')
         return 'This Document is not consistant with the structure of the Community List'
+    """
+    if Sheet_Looks.iloc[0][1]!='Campaign' and str(simplereq).find("ImmutableMultiDict([('currentGoogle',")!=-1 and Sheet_Looks.iloc[0][2]!='Ad Group':
+        print('This Document is not consistant with the structer of the Community List')
+        return 'This Document is not consistant with the structure of the Community List'
+    """
     
     #str(simplereq).find("ImmutableMultiDict([('currentGoogle',")!=-1 
        
@@ -171,13 +176,13 @@ def CommListFileHandler():
     print("1") 
     print(Sheet_Looks)
     print("2")  
-    print("Sheet_Looks.iloc[4]")  
+    print("Sheet_Looks.iloc[0]")  
     print("3") 
-    print(Sheet_Looks.iloc[4]) 
+    print(Sheet_Looks.iloc[0]) 
     print("4") 
-    print("Sheet_Looks.iloc[4][0]") 
+    print("Sheet_Looks.iloc[0][0]") 
     print("5") 
-    print(Sheet_Looks.iloc[4][0])  
+    print(Sheet_Looks.iloc[0][0])  
     print("6") 
     #print("Sheet_Looks[0] ",Sheet_Looks[0])    
 
