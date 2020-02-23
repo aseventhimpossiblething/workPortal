@@ -206,7 +206,7 @@ def CommListFileHandler():
         return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=https://communityupdates.herokuapp.com/DisplayCommUpdate'><html>did not forward</html>"
          
     print("9") 
-    return render_template("testofja.html")
+    return render_template("testofjs.html")
 
 
 
