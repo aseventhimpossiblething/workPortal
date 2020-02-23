@@ -186,7 +186,9 @@ def CommListFileHandler():
     print("6") 
     #print("Sheet_Looks[0] ",Sheet_Looks[0])    
 
-   
+    if fnm=='Communities':
+        return render_template("CommflowForm2.html");
+
     print("7")     
     print(nxtStop) 
     print("8")     
