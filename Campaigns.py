@@ -285,7 +285,7 @@ campaign.network_settings.target_partner_search_network.value = False
 
 # Optional: Set the end date.
 #end_time = start_time + datetime.timedelta(weeks=4)
-campaign.end_date.value = datetime.date.strftime(end_time, _DATE_FORMAT)
+#campaign.end_date.value = datetime.date.strftime(end_time, _DATE_FORMAT)
 
 # Add the campaign.
 try:
