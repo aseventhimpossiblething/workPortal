@@ -219,7 +219,7 @@ customer_id=1500631476
 customer_id="150-06-31476"
 customer_id="1500631476"
 """
-"""
+
 print("Does main in camps self fire......") 
 campaign_budget_service = client.get_service('CampaignBudgetService',
                                                  version='v2')
@@ -295,10 +295,10 @@ except google.ads.google_ads.errors.GoogleAdsException as ex:
                     print('\t\tOn field: %s' % field_path_element.field_name)
         sys.exit(1)
 print('Created campaign %s.' % campaign_response.results[0].resource_name)
-"""
+
 
 
 def CampFunc():
  return "Generic return"
-print(CampFunc())
+#print(CampFunc())
   
