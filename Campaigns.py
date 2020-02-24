@@ -256,7 +256,9 @@ except google.ads.google_ads.errors.GoogleAdsException as ex:
 """
 # Create campaign.
 campaign_operation = client.get_type('CampaignOperation', version='v2')
+print("Does it fail just before acmpaign create")
 campaign = campaign_operation.create
+print("Or just after ")
 campaign.name.value = 'Interplanetary Cruise %s' % uuid.uuid4()
 campaign.advertising_channel_type = client.get_type(
         'AdvertisingChannelTypeEnum').SEARCH
