@@ -152,7 +152,8 @@ def CommListFileHandler():
     simplereq[fnm].save(savenam)    
     Sheet_Looks=pandas.read_excel(savenam)
     Sheet_Looks=pandas.DataFrame(Sheet_Looks)
-    print("Sheet_Looks.iloc[0][1] = ",Sheet_Looks.iloc[0][0])
+    print("sheet_Looks.columns = ",sheet_Looks.columns) 
+    print("Sheet_Looks.iloc[0][0] = ",Sheet_Looks.iloc[0][0])
     print("Sheet_Looks.iloc[0][2] = ",Sheet_Looks.iloc[0][1]) 
     print("Sheet_Looks.iloc[0][3] = ",Sheet_Looks.iloc[0][11])     
     #This is an and and test for Community there should be one for each sheet. 
@@ -170,7 +171,7 @@ def CommListFileHandler():
     
     #str(simplereq).find("ImmutableMultiDict([('currentGoogle',")!=-1 
        
-   
+    """
     print("0") 
     print("Sheet_Looks")
     print("1") 
@@ -184,7 +185,8 @@ def CommListFileHandler():
     print("5") 
     print(Sheet_Looks.iloc[0][0])  
     print("6") 
-    #print("Sheet_Looks[0] ",Sheet_Looks[0])    
+    #print("Sheet_Looks[0] ",Sheet_Looks[0]) 
+    """ 
 
     if fnm=='Communities':
         return render_template("CommflowForm2.html");
