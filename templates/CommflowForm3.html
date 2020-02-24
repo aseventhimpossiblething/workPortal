@@ -1,1 +1,46 @@
+<html>
+{% extends 'DefaultTemplate.html'%}
+
+{% block content %}
+
+
+
+<p>BDX V1 Simple Portal Community Update</p>
+<hr>  
+
+
+
+<p id="0">Javascript is Dissabled Please Enable Or Use Javascript enabled Browser</p>
+<p id="1"></p>
+<p id="2"></p>
+
+
+
+<script>
+var choice;
+function ContinueOrProceed0(){document.getElementById("0").innerHTML="Will you Continue \
+To Load Sheets For All Communities Or Proceeed to Load active Google Communites <p><input id=cont type='button'value='Continue Loading Active Community Sheets'; onclick=primcomForm();></input></p><p><input type='button' value=' Begin Active Google Community Uploads'; onclick=primcomForm0()></input></p>";}
+ContinueOrProceed0()
+//document.getElementById("cont").addEventListener("click", choice=Comm2)
+function primcomForm(){var pce="<form Name='Continue Loading All Google ' id=theFRM method=POST enctype='multipart/form-data' action='https://communityupdates.herokuapp.com/CommunityFileHander'><p>\
+Continue Loading All Communities<p>\
+<p><input type='file' name='Comm2' onchange=fileout(this)></input></p>\
+<p id=pts></p>\
+</form>";
+document.getElementById("1").innerHTML=pce}
+//primcomForm()
+function primcomForm0(){var pce="<form id=theFRM method=POST enctype='multipart/form-data' action='/CommunityFileHander'><p>\
+Proceed to Loading Active Bing Communities<p>\
+<p><input type='file' name='currentBing' onchange=fileout(this)></input></p>\
+<p id=pts></p>\
+</form>";
+document.getElementById("1").innerHTML=pce}
+function fileout(fileIn){var permitSubmit="<input type='submit'></input>"; var sentFile=(fileIn.files[0].size/1024)/1024; document.getElementById("2").innerHTML= "File Size = "+sentFile+"MB"; if (sentFile > 10){permitSubmit="File is Too Large Must Be Less Than 4000kb <p>This is usually around 50,000 rows but varies by document. Divide into multiple sheets and reupload in segments</p>Please Make Sure That Each Upload Sheet has Appropriate Column Titles.<p></p> "}; document.getElementById("pts").innerHTML=permitSubmit; }
+
+
+</script>
+
+{%endblock%}
+</html>
+
 
