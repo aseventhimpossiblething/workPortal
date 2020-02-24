@@ -153,11 +153,12 @@ def CommListFileHandler():
     Sheet_Looks=pandas.read_excel(savenam)
     Sheet_Looks=pandas.DataFrame(Sheet_Looks)
     print("Sheet_Looks.columns ",Sheet_Looks.columns)
-    print("sheet_Looks.columns = ",Sheet_Looks.columns[1]) 
-    print("sheet_Looks.columns = ",Sheet_Looks.columns[2])     
-    print("Sheet_Looks.iloc[0][0] = ",Sheet_Looks.iloc[0][0])
-    print("Sheet_Looks.iloc[0][2] = ",Sheet_Looks.iloc[0][1]) 
-    print("Sheet_Looks.iloc[0][3] = ",Sheet_Looks.iloc[0][11])     
+    print("sheet_Looks.columns[0] = ",Sheet_Looks.columns[0])      
+    print("sheet_Looks.columns[1] = ",Sheet_Looks.columns[1]) 
+    print("sheet_Looks.columns[2] = ",Sheet_Looks.columns[2])     
+    #print("Sheet_Looks.iloc[0][0] = ",Sheet_Looks.iloc[0][0])
+    #print("Sheet_Looks.iloc[0][2] = ",Sheet_Looks.iloc[0][1]) 
+    #print("Sheet_Looks.iloc[0][3] = ",Sheet_Looks.iloc[0][11])     
     #This is an and and test for Community there should be one for each sheet. 
         
     #str(simplereq).find("ImmutableMultiDict([('Communities',")!=-1    
@@ -169,32 +170,22 @@ def CommListFileHandler():
     if Sheet_Looks.columns[0]!='Campaign' and str(simplereq).find("ImmutableMultiDict([('currentGoogle',")!=-1 and Sheet_Looks.iloc[0][2]!='Ad Group':
         print('This Document is not consistant with the structer of the Community List')
         return 'This Document is not consistant with the structure of the Community List'
+     
+    if Sheet_Looks.columns[0]!='Campaign' and str(simplereq).find("ImmutableMultiDict([('currentBing',")!=-1 and Sheet_Looks.iloc[0][2]!='Ad Group':
+        print('This Document is not consistant with the structer of the Community List')
+        return 'This Document is not consistant with the structure of the Community List'
     """
     
-    #str(simplereq).find("ImmutableMultiDict([('currentGoogle',")!=-1 
-       
-    """
-    print("0") 
-    print("Sheet_Looks")
-    print("1") 
-    print(Sheet_Looks)
-    print("2")  
-    print("Sheet_Looks.iloc[0]")  
-    print("3") 
-    print(Sheet_Looks.iloc[0]) 
-    print("4") 
-    print("Sheet_Looks.iloc[0][0]") 
-    print("5") 
-    print(Sheet_Looks.iloc[0][0])  
-    print("6") 
-    #print("Sheet_Looks[0] ",Sheet_Looks[0]) 
-    """ 
+      
+   
 
     if fnm=='Communities':
         return render_template("CommflowForm2.html");
+
     if fnm=='currentGoogle':
         return render_template("CommflowForm3.html");
-
+    
+    
     print("7")     
     print(nxtStop) 
     print("8")     
