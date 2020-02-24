@@ -90,7 +90,7 @@ To get campaigns, run get_campaigns.py.
 
 
 _DATE_FORMAT = '%Y%m%d'
-
+"""
 #def main(client):
 def main(client,customer_id):
     print("Does main in camps self fire......") 
@@ -169,7 +169,7 @@ def main(client,customer_id):
         sys.exit(1)
 
     print('Created campaign %s.' % campaign_response.results[0].resource_name)
-
+"""
     
 if __name__ == '__main__':
     # GoogleAdsClient will read the google-ads.yaml configuration file in the
