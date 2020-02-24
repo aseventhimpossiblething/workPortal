@@ -304,8 +304,10 @@ except google.ads.google_ads.errors.GoogleAdsException as ex:
 print('Created campaign %s.' % campaign_response.results[0].resource_name)
 
 
-"""
+
+
 def CampFunc():
  return "Generic return"
-#print(CampFunc())
+
+
   
