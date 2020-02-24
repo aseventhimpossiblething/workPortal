@@ -260,8 +260,7 @@ print("Does it fail just before acmpaign create")
 campaign = campaign_operation.create
 print("Or just after ")
 campaign.name.value = 'Interplanetary Cruise %s' % uuid.uuid4()
-campaign.advertising_channel_type = client.get_type(
-        'AdvertisingChannelTypeEnum').SEARCH
+campaign.advertising_channel_type = client.get_type('AdvertisingChannelTypeEnum').SEARCH
 
 # Recommendation: Set the campaign to PAUSED when creating it to prevent
 # the ads from immediately serving. Set to ENABLED once you've added
@@ -270,7 +269,7 @@ campaign.status = client.get_type('CampaignStatusEnum', version='v2').PAUSED
 
 # Set the bidding strategy and budget.
 campaign.manual_cpc.enhanced_cpc_enabled.value = True
-campaign.campaign_budget.value = (
+#campaign.campaign_budget.value = (
 #campaign_budget_response.results[0].resource_name)
 """
 # Set the campaign network options.
@@ -282,8 +281,7 @@ campaign.network_settings.target_partner_search_network.value = False
 # Optional: Set the start date.
 #start_time = datetime.date.today() + datetime.timedelta(days=1)
 
-campaign.start_date.value = datetime.date.strftime(start_time,
-                                                       _DATE_FORMAT)
+campaign.start_date.value = datetime.date.strftime(start_time,_DATE_FORMAT)
 
 # Optional: Set the end date.
 end_time = start_time + datetime.timedelta(weeks=4)
