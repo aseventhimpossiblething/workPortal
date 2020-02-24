@@ -271,7 +271,7 @@ campaign.status = client.get_type('CampaignStatusEnum', version='v2').PAUSED
 # Set the bidding strategy and budget.
 campaign.manual_cpc.enhanced_cpc_enabled.value = True
 campaign.campaign_budget.value = (
-campaign_budget_response.results[0].resource_name)
+#campaign_budget_response.results[0].resource_name)
 
 # Set the campaign network options.
 campaign.network_settings.target_google_search.value = True
