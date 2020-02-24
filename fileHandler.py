@@ -152,7 +152,8 @@ def CommListFileHandler():
     simplereq[fnm].save(savenam)    
     Sheet_Looks=pandas.read_excel(savenam)
     Sheet_Looks=pandas.DataFrame(Sheet_Looks)
-    print("sheet_Looks.columns = ",Sheet_Looks.columns) 
+    print("sheet_Looks.columns = ",Sheet_Looks.columns[0]) 
+    print("sheet_Looks.columns = ",Sheet_Looks.columns[0])     
     print("Sheet_Looks.iloc[0][0] = ",Sheet_Looks.iloc[0][0])
     print("Sheet_Looks.iloc[0][2] = ",Sheet_Looks.iloc[0][1]) 
     print("Sheet_Looks.iloc[0][3] = ",Sheet_Looks.iloc[0][11])     
@@ -164,7 +165,7 @@ def CommListFileHandler():
         print('This Document is not consistant with the structer of the Community List')
         return 'This Document is not consistant with the structure of the Community List'
     """
-    if Sheet_Looks.iloc[0][1]!='Campaign' and str(simplereq).find("ImmutableMultiDict([('currentGoogle',")!=-1 and Sheet_Looks.iloc[0][2]!='Ad Group':
+    if Sheet_Looks.columns[0]!='Campaign' and str(simplereq).find("ImmutableMultiDict([('currentGoogle',")!=-1 and Sheet_Looks.iloc[0][2]!='Ad Group':
         print('This Document is not consistant with the structer of the Community List')
         return 'This Document is not consistant with the structure of the Community List'
     """
