@@ -300,4 +300,5 @@ print('Created campaign %s.' % campaign_response.results[0].resource_name)
 
 def CampFunc():
  return "Generic return"
+CampFunc()
   
