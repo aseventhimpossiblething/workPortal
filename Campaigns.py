@@ -253,7 +253,7 @@ except google.ads.google_ads.errors.GoogleAdsException as ex:
                 for field_path_element in error.location.field_path_elements:
                     print('\t\tOn field: %s' % field_path_element.field_name)
         sys.exit(1)
-
+"""
 # Create campaign.
 campaign_operation = client.get_type('CampaignOperation', version='v2')
 campaign = campaign_operation.create
