@@ -223,6 +223,7 @@ customer_id="1500631476"
 print("Cust Id seems valid but permssion denied") 
 campaign_budget_service = client.get_service('CampaignBudgetService',
                                                  version='v2')
+"""
 print("Can we get Campaign budget service 1 ?"); 
 campaign_service = client.get_service('CampaignService', version='v2')
 print("Can we get Campaign budget service 2 ?");       
@@ -301,7 +302,7 @@ except google.ads.google_ads.errors.GoogleAdsException as ex:
 print('Created campaign %s.' % campaign_response.results[0].resource_name)
 
 
-
+"""
 def CampFunc():
  return "Generic return"
 #print(CampFunc())
