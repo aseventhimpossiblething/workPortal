@@ -223,15 +223,16 @@ customer_id="1500631476"
 print("Cust Id seems valid but permssion denied") 
 campaign_budget_service = client.get_service('CampaignBudgetService',
                                                  version='v2')
-print("Can we get Campaign budget service 1 ?) 
+print("Can we get Campaign budget service 1 ?"); 
 campaign_service = client.get_service('CampaignService', version='v2')
-print("Can we get Campaign budget service 2 ?)       
+print("Can we get Campaign budget service 2 ?");       
 
 # Create a budget, which can be shared by multiple campaigns.
 campaign_budget_operation = client.get_type('CampaignBudgetOperation',
                                                 version='v2')
-print("Can we get Client type ?)       
+print("Can we get Client type ?");       
 campaign_budget = campaign_budget_operation.create
+print("Can we get create a campaign budget ?"); 
 campaign_budget.name.value = 'Interplanetary Budget %s' % uuid.uuid4()
 campaign_budget.delivery_method = client.get_type(
         'BudgetDeliveryMethodEnum').STANDARD
