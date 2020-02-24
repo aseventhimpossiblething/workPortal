@@ -272,13 +272,13 @@ campaign.status = client.get_type('CampaignStatusEnum', version='v2').PAUSED
 campaign.manual_cpc.enhanced_cpc_enabled.value = True
 campaign.campaign_budget.value = (
 #campaign_budget_response.results[0].resource_name)
-
+"""
 # Set the campaign network options.
 campaign.network_settings.target_google_search.value = True
 campaign.network_settings.target_search_network.value = True
 campaign.network_settings.target_content_network.value = False
 campaign.network_settings.target_partner_search_network.value = False
-
+"""
 # Optional: Set the start date.
 start_time = datetime.date.today() + datetime.timedelta(days=1)
 campaign.start_date.value = datetime.date.strftime(start_time,
