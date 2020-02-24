@@ -281,7 +281,7 @@ campaign.network_settings.target_partner_search_network.value = False
 # Optional: Set the start date.
 #start_time = datetime.date.today() + datetime.timedelta(days=1)
 
-campaign.start_date.value = datetime.date.strftime(start_time,_DATE_FORMAT)
+#campaign.start_date.value = datetime.date.strftime(start_time,_DATE_FORMAT)
 
 # Optional: Set the end date.
 end_time = start_time + datetime.timedelta(weeks=4)
