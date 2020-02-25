@@ -1,28 +1,21 @@
-import CommunityUpdatesProcess
 import glob
 import numpy
 import scipy
 import pandas
-import BidOpAssist
-import fileHandler
 import redis
 import os
+import CommunityUpdatesProcess
+import BidOpAssist
+import fileHandler
 from flask import Flask, Markup, render_template, request
 from celery import Celery
 from flask import send_file
 from flask import send_from_directory
-#import taskque
 from datetime import datetime
 
-"""
-from flask import Flask, request, redirect
-from werkzeug.serving import make_ssl_devcert
-"""
+
 
 from flask_sslify import SSLify
-
-#from flask import SSLify
-
 
          
 
