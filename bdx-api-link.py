@@ -1,9 +1,9 @@
-import glob
 import numpy
 import scipy
 import pandas
 import redis
 import os
+import glob
 import CommunityUpdatesProcess
 import BidOpAssist
 import fileHandler
