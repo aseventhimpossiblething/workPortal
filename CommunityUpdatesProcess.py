@@ -73,7 +73,7 @@ def WorkingBing():
 def filterNonParticipators(theFrame):
  
  def firstDropLoop(theFrame):
-  DropRowsContaining=['Clayton','Oakwood','Craftmark','Freedom','Crossland','G & I','Build on Your Lot'];
+  DropRowsContaining=['Mcbride','McBride','Westhaven','Clayton','Oakwood','Craftmark','Freedom','Crossland','G & I','Build on Your Lot'];
   
   DropLoopCount=0;
   while DropLoopCount<len(DropRowsContaining):
