@@ -256,10 +256,12 @@ except google.ads.google_ads.errors.GoogleAdsException as ex:
 """
 # Create campaign.
 campaign_operation = client.get_type('CampaignOperation', version='v2')
-print("Does it fail just before acmpaign create")
+print("Does it fail just before campaign create")
 campaign = campaign_operation.create
-print("Or just after ")
+print("Or just after create")
+print("Attempting----campaign.name.value = 'Interplanetary Cruise %s' % uuid.uuid4()")
 campaign.name.value = 'Interplanetary Cruise %s' % uuid.uuid4()
+print("Attempting-----campaign.advertising_channel_type = client.get_type('AdvertisingChannelTypeEnum').SEARCH")
 campaign.advertising_channel_type = client.get_type('AdvertisingChannelTypeEnum').SEARCH
 
 # Recommendation: Set the campaign to PAUSED when creating it to prevent
