@@ -12,6 +12,17 @@ ServiceScan=client.get_service('GoogleAdsService', version='v2')
 print(dir(ServiceScan))
 client2=google.ads.google_ads.client.GoogleAdsClient.load_from_storage()
 print('Campaign Module Loaded')
+print("Campaign service")
+campaign_service = client.get_service('CampaignService', version='v2')
+print("Get Ads Client")
+google_ads_client = (google.ads.google_ads.client.GoogleAdsClient
+                         .load_from_storage())
+
+print("Budget Service")
+campaign_budget_service = client.get_service('CampaignBudgetService',
+                                                 version='v2')
+
+
 
 
 
@@ -257,12 +268,12 @@ except google.ads.google_ads.errors.GoogleAdsException as ex:
 # Create campaign.
 campaign_operation = client.get_type('CampaignOperation', version='v2')
 print("Does it fail just before campaign create")
-campaign = campaign_operation.create
+#campaign = campaign_operation.create
 print("Or just after create")
 print("Attempting----campaign.name.value = 'Interplanetary Cruise %s' % uuid.uuid4()")
-campaign.name.value = 'Interplanetary Cruise %s' % uuid.uuid4()
+#campaign.name.value = 'Interplanetary Cruise %s' % uuid.uuid4()
 print("Attempting-----campaign.advertising_channel_type = client.get_type('AdvertisingChannelTypeEnum').SEARCH")
-campaign.advertising_channel_type = client.get_type('AdvertisingChannelTypeEnum').SEARCH
+#campaign.advertising_channel_type = client.get_type('AdvertisingChannelTypeEnum').SEARCH
 
 # Recommendation: Set the campaign to PAUSED when creating it to prevent
 # the ads from immediately serving. Set to ENABLED once you've added
@@ -273,7 +284,7 @@ campaign.status = client.get_type('CampaignStatusEnum', version='v2').PAUSED
 # Set the bidding strategy and budget.
 
 print("campaign.manual_cpc.enhanced_cpc_enabled.value = True")
-campaign.manual_cpc.enhanced_cpc_enabled.value = True
+#campaign.manual_cpc.enhanced_cpc_enabled.value = True
 #campaign.campaign_budget.value = (
 #campaign_budget_response.results[0].resource_name)
 """
