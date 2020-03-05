@@ -20,6 +20,17 @@ google_ads_client = (google.ads.google_ads.client.GoogleAdsClient.load_from_stor
 print("Budget Service")
 campaign_budget_service = client.get_service('CampaignBudgetService',version='v2')
 
+print("get report downloader")
+client.GetReportDownloader(version='v201809')
+
+adwords.ReportQueryBuilder()
+                  .Select('CampaignId', 'AdGroupId', 'Id', 'Criteria',
+                          'CriteriaType', 'FinalUrls', 'Impressions', 'Clicks',
+                          'Cost')
+                  .From('CRITERIA_PERFORMANCE_REPORT')
+                  .Where('Status').In('ENABLED', 'PAUSED')
+                  .During('LAST_7_DAYS')
+                  .Build()
 
 
 
