@@ -293,6 +293,7 @@ campaign.network_settings.target_partner_search_network.value = False
 #campaign.end_date.value = datetime.date.strftime(end_time, _DATE_FORMAT)
 
 # Add the campaign.
+"""
 try:
    print("in try block")
    campaign_response = campaign_service.mutate_campaigns(
@@ -308,6 +309,8 @@ except google.ads.google_ads.errors.GoogleAdsException as ex:
                     print('\t\tOn field: %s' % field_path_element.field_name)
         sys.exit(1)
 print('Created campaign %s.' % campaign_response.results[0].resource_name)
+"""
+print("Bottom")
 
 
 
