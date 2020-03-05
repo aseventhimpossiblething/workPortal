@@ -279,7 +279,7 @@ print("Attempting-----campaign.advertising_channel_type = client.get_type('Adver
 # the ads from immediately serving. Set to ENABLED once you've added
 # targeting and the ads are ready to serve.
 print("Attempting---campaign.status = client.get_type('CampaignStatusEnum', version='v2').PAUSED")
-campaign.status = client.get_type('CampaignStatusEnum', version='v2').PAUSED
+#campaign.status = client.get_type('CampaignStatusEnum', version='v2').PAUSED
 
 # Set the bidding strategy and budget.
 
