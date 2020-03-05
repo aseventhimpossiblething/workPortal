@@ -5,22 +5,20 @@ import uuid
 
 from google.ads.google_ads.client import GoogleAdsClient
 client = GoogleAdsClient.load_from_storage()
-print(dir(client))
+#print(dir(client))
 #below is new
 import google.ads.google_ads.client
 ServiceScan=client.get_service('GoogleAdsService', version='v2')
-print(dir(ServiceScan))
+#print(dir(ServiceScan))
 client2=google.ads.google_ads.client.GoogleAdsClient.load_from_storage()
 print('Campaign Module Loaded')
 print("Campaign service")
 campaign_service = client.get_service('CampaignService', version='v2')
 print("Get Ads Client")
-google_ads_client = (google.ads.google_ads.client.GoogleAdsClient
-                         .load_from_storage())
+google_ads_client = (google.ads.google_ads.client.GoogleAdsClient.load_from_storage())
 
 print("Budget Service")
-campaign_budget_service = client.get_service('CampaignBudgetService',
-                                                 version='v2')
+campaign_budget_service = client.get_service('CampaignBudgetService',version='v2')
 
 
 
