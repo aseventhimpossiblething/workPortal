@@ -294,9 +294,11 @@ campaign.network_settings.target_partner_search_network.value = False
 
 # Add the campaign.
 try:
+   print("in try block")
    campaign_response = campaign_service.mutate_campaigns(
             customer_id, [campaign_operation])
 except google.ads.google_ads.errors.GoogleAdsException as ex:
+        print("in except block")
         print('Request with ID "%s" failed with status "%s" and includes the '
               'following errors:' % (ex.request_id, ex.error.code().name))
         for error in ex.failure.errors:
