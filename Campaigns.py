@@ -9,23 +9,31 @@ client = GoogleAdsClient.load_from_storage()
 #print(dir(client))
 #below is new
 import google.ads.google_ads.client
+
+print(ServiceScan)
 ServiceScan=client.get_service('GoogleAdsService', version='v2')
-#print(dir(ServiceScan))
+print(ServiceScan)
+
 client2=google.ads.google_ads.client.GoogleAdsClient.load_from_storage()
 print('Campaign Module Loaded')
+
 print("Campaign service")
 campaign_service = client.get_service('CampaignService', version='v2')
+print()
+
 print("Get Ads Client")
 google_ads_client = (google.ads.google_ads.client.GoogleAdsClient.load_from_storage())
+print(google_ads_client)
 
 print("Budget Service")
 campaign_budget_service = client.get_service('CampaignBudgetService',version='v2')
+print(campaign_budget_service)
 
 print("get report downloader")
 #client.GetReportDownloader(version='v201809')
 
 Returned_Query=adwords.ReportQueryBuilder().Select('CampaignId', 'AdGroupId', 'Id', 'Criteria', 'CriteriaType', 'FinalUrls', 'Impressions', 'Clicks', 'Cost').From('CRITERIA_PERFORMANCE_REPORT').Where('Status').In('ENABLED', 'PAUSED').During('LAST_7_DAYS').Build()
-print(" the query comes bask as ")
+#print("")
 print(Returned_Query)
 
 
