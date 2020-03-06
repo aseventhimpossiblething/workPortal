@@ -10,7 +10,7 @@ client = GoogleAdsClient.load_from_storage()
 #below is new
 import google.ads.google_ads.client
 
-print(ServiceScan)
+#print(ServiceScan)
 ServiceScan=client.get_service('GoogleAdsService', version='v2')
 print(ServiceScan)
 
