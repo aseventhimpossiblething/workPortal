@@ -23,15 +23,15 @@ selector = {
 
 more_pages = True
 while more_pages:
-page = campaign_service.get(selector)
+ page = campaign_service.get(selector)
 
 # Display results.
-if 'entries' in page:
- for campaign in page['entries']:
+ if 'entries' in page:
+  for campaign in page['entries']:
         print('Campaign with id "%s", name "%s", and status "%s" was '
               'found.' % (campaign['id'], campaign['name'],
                           campaign['status']))
-else:
+ else:
    print('No campaigns were found.')
    offset += PAGE_SIZE
    selector['paging']['startIndex'] = str(offset)
