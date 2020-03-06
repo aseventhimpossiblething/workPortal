@@ -19,7 +19,7 @@ print('Campaign Module Loaded')
 
 print("Campaign service")
 campaign_service = client.get_service('CampaignService', version='v2')
-print()
+print(campaign_service)
 
 print("Get Ads Client")
 google_ads_client = (google.ads.google_ads.client.GoogleAdsClient.load_from_storage())
@@ -245,23 +245,21 @@ customer_id="1500631476"
 """
 
 
-campaign_budget_service = client.get_service('CampaignBudgetService',
-                                                 version='v2')
-print("Can we get Campaign budget service 1 ?"); 
-campaign_service = client.get_service('CampaignService', version='v2')
-print("Can we get Campaign budget service 2 ?");       
+#campaign_budget_service = client.get_service('CampaignBudgetService', version='v2')
+#print("Can we get Campaign budget service 1 ?"); 
+#campaign_service = client.get_service('CampaignService', version='v2')
+#print("Can we get Campaign budget service 2 ?");       
 
 # Create a budget, which can be shared by multiple campaigns.
-campaign_budget_operation = client.get_type('CampaignBudgetOperation',
-                                                version='v2')
-print("Can we get Client type ?");  
+#campaign_budget_operation = client.get_type('CampaignBudgetOperation', version='v2')
+#print("Can we get Client type ?");  
 """
-campaign_budget = campaign_budget_operation.create
-print("Can we get create a campaign budget ?"); 
-campaign_budget.name.value = 'Interplanetary Budget %s' % uuid.uuid4()
-campaign_budget.delivery_method = client.get_type(
+#campaign_budget = campaign_budget_operation.create
+#print("Can we get create a campaign budget ?"); 
+#campaign_budget.name.value = 'Interplanetary Budget %s' % uuid.uuid4()
+#campaign_budget.delivery_method = client.get_type(
         'BudgetDeliveryMethodEnum').STANDARD
-campaign_budget.amount_micros.value = 500000
+#campaign_budget.amount_micros.value = 500000
 
 # Add budget.
 try:
@@ -279,13 +277,13 @@ except google.ads.google_ads.errors.GoogleAdsException as ex:
         sys.exit(1)
 """
 # Create campaign.
-campaign_operation = client.get_type('CampaignOperation', version='v2')
-print("Does it fail just before campaign create")
+#campaign_operation = client.get_type('CampaignOperation', version='v2')
+#print("Does it fail just before campaign create")
 #campaign = campaign_operation.create
-print("Or just after create")
-print("Attempting----campaign.name.value = 'Interplanetary Cruise %s' % uuid.uuid4()")
+#print("Or just after create")
+#print("Attempting----campaign.name.value = 'Interplanetary Cruise %s' % uuid.uuid4()")
 #campaign.name.value = 'Interplanetary Cruise %s' % uuid.uuid4()
-print("Attempting-----campaign.advertising_channel_type = client.get_type('AdvertisingChannelTypeEnum').SEARCH")
+#print("Attempting-----campaign.advertising_channel_type = client.get_type('AdvertisingChannelTypeEnum').SEARCH")
 #campaign.advertising_channel_type = client.get_type('AdvertisingChannelTypeEnum').SEARCH
 
 # Recommendation: Set the campaign to PAUSED when creating it to prevent
