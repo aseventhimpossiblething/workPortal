@@ -8,6 +8,8 @@ print("Experiment module Loaded")
 
 
 campaign_service = client.get_service('CampaignService', version='v2')
+PAGE_SIZE = 100
+
 
 
 
