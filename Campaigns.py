@@ -2,6 +2,7 @@ import argparse
 import datetime
 import sys
 import uuid
+from googleads import adwords
 
 from google.ads.google_ads.client import GoogleAdsClient
 client = GoogleAdsClient.load_from_storage()
