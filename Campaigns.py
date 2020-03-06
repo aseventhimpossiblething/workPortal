@@ -20,9 +20,9 @@ print(dir(client2))
 print("_______________________________________________________________________")
 
 print("Campaign service")
-campaign_service = client.get_service('CampaignService', version='v2')
-print(dir(campaign_service))
-campaign_service.get_campaign()
+#campaign_service = client.get_service('CampaignService', version='v2')
+#print(dir(campaign_service))
+#campaign_service.get_campaign()
 print("_______________________________________________________________________")
 
 print("Get Ads Client")
