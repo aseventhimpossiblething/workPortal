@@ -1,39 +1,40 @@
 # OAuth2 configuration
-
-###############################################################################
-
-# The below configuration parameters are used to authenticate using the       #
-
-# recommended OAuth2 flow. For more information on authenticating with OAuth2 #
-
-# see: https://developers.google.com/google-ads/api/docs/oauth/overview       #
-
-###############################################################################
 adowrds:
-developer_token: uK0ObUtXfoUFX-8TfjSrAQ
 
-client_id: 50100556830-6rabgdmbrq4tp1d963hi7nmhmd32e6l4.apps.googleusercontent.com
+ ###############################################################################
 
-client_secret: Qr9B26PaPIfGxeUFXc8MUqVo
+ # The below configuration parameters are used to authenticate using the       #
 
-refresh_token: 1//04SG1Vdu9U8JmCgYIARAAGAQSNwF-L9IrYPiioW733SXsUWnQ7Lw-h_xVpfekHwb2ggQ4TT_pJVcAuBviSX40-FI1rPvSW9iBInU 
-# Login customer ID configuration
+ # recommended OAuth2 flow. For more information on authenticating with OAuth2 #
 
-###############################################################################
+ # see: https://developers.google.com/google-ads/api/docs/oauth/overview       #
 
-# Required for manager accounts only: Specify the login customer ID used to   #
+ ###############################################################################
 
-# authenticate API calls. This will be the customer ID of the authenticated   #
+ developer_token: uK0ObUtXfoUFX-8TfjSrAQ
 
-# manager account. It should be set without dashes, for example: 1234567890   #
+ client_id: 50100556830-6rabgdmbrq4tp1d963hi7nmhmd32e6l4.apps.googleusercontent.com
 
-# instead of 123-456-7890. You can also specify this later in code if your    #
+ client_secret: Qr9B26PaPIfGxeUFXc8MUqVo
 
-# application uses multiple manager account + OAuth pairs.                    #
+ refresh_token: 1//04SG1Vdu9U8JmCgYIARAAGAQSNwF-L9IrYPiioW733SXsUWnQ7Lw-h_xVpfekHwb2ggQ4TT_pJVcAuBviSX40-FI1rPvSW9iBInU 
+ # Login customer ID configuration
 
-###############################################################################
+ ###############################################################################
 
-login_customer_id: "9662896891"
+ # Required for manager accounts only: Specify the login customer ID used to   #
+
+ # authenticate API calls. This will be the customer ID of the authenticated   #
+
+ # manager account. It should be set without dashes, for example: 1234567890   #
+
+ # instead of 123-456-7890. You can also specify this later in code if your    #
+
+ # application uses multiple manager account + OAuth pairs.                    #
+
+ ###############################################################################
+
+ login_customer_id: "9662896891"
 
 
 
