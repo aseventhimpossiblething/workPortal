@@ -12,35 +12,35 @@ import google.ads.google_ads.client
 print("_______________________________________________________________________")
 #print(ServiceScan)
 ServiceScan=client.get_service('GoogleAdsService', version='v2')
-print(dir(ServiceScan))
+#print(dir(ServiceScan))
 print("_______________________________________________________________________")
 
 client2=google.ads.google_ads.client.GoogleAdsClient.load_from_storage()
-print(dir(client2))
+#print(dir(client2))
 print("_______________________________________________________________________")
 
-print("Campaign service")
+#print("Campaign service")
 #campaign_service = client.get_service('CampaignService', version='v2')
 #print(dir(campaign_service))
 #campaign_service.get_campaign()
 print("_______________________________________________________________________")
 
-print("Get Ads Client")
+#print("Get Ads Client")
 google_ads_client = (google.ads.google_ads.client.GoogleAdsClient.load_from_storage())
-print(dir(google_ads_client))
+#print(dir(google_ads_client))
 
-print("Budget Service")
+#print("Budget Service")
 campaign_budget_service = client.get_service('CampaignBudgetService',version='v2')
-print(dir(campaign_budget_service))
+#print(dir(campaign_budget_service))
 print("_______________________________________________________________________")
 
-print("get report downloader")
+#print("get report downloader")
 #client.GetReportDownloader(version='v201809')
 
 Returned_Query=adwords.ReportQueryBuilder().Select('CampaignId', 'AdGroupId', 'Id', 'Criteria', 'CriteriaType', 'FinalUrls', 'Impressions', 'Clicks', 'Cost').From('CRITERIA_PERFORMANCE_REPORT').Where('Status').In('ENABLED', 'PAUSED').During('LAST_7_DAYS').Build()
 #print("")
 print(Returned_Query)
-print("_______________________________________________________________________")
+#print("_______________________________________________________________________")
 
 
 
