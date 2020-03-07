@@ -31,18 +31,15 @@ selector = {
 
 more_pages = True
 while more_pages:
- print("loop")     
- page = campaign_service.get(selector)
+ print("loop") 
+ page = campaign_service.get()
+ #page = campaign_service.get(selector)
  print("1")     
  print(page)  
  print("2")
  print("3")
  print("4")
  
- for campaign in page['entries']:
-        print('Campaign with id "%s", name "%s", and status "%s" was '
-              'found.' % (campaign['id'], campaign['name'],
-                          campaign['status']))
 
       
 
