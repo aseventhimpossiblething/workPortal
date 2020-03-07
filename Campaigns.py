@@ -22,7 +22,7 @@ print("_______________________________________________________________________")
 print("Campaign service")
 campaign_service = client.get_service('CampaignService', version='v2')
 #print(dir(campaign_service))
-campaign_service.get_campaign()
+#campaign_service.get_campaign()
 print("_______________________________________________________________________")
 
 print("Get Ads Client")
@@ -41,9 +41,11 @@ Returned_Query=adwords.ReportQueryBuilder().Select('CampaignId', 'AdGroupId', 'I
 #print("")
 print(Returned_Query)
 #print("_______________________________________________________________________")
+query = ('SELECT campaign.id, campaign.name FROM campaign '
+             'ORDER BY campaign.id')
 
-
-
+customer_id="9662896891" #PERMISSION ERROR
+response = ga_service.search_stream(customer_id, query)
 
 """
 #def CampFunc():
