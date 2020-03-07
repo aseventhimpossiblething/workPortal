@@ -1,3 +1,4 @@
+import os
 import uuid
 from googleads import adwords
 #from google.ads.google_ads.client import GoogleAdsClient
@@ -6,7 +7,10 @@ from googleads import adwords
 client=adwords.AdWordsClient.LoadFromStorage()
 
 print("Experiment module Loaded")
-
+os.chdir("/app/.heroku/python/lib/python3.6/site-packages/googleads")
+trace=open("common.py","r+")
+print(trace.read())
+print(/app/.heroku/python/lib/python3.6/site-packages/googleads/common.py)
 
 #campaign_service = client.get_service('CampaignService', version='v2')
 campaign_service = client.GetService('CampaignService', version='v201809')
