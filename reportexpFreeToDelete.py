@@ -35,9 +35,9 @@ while more_pages:
  page = campaign_service.get(selector)
  print("1")     
  print(page)  
- print("1")
  print("2")
  print("3")
+ print("4")
  
  for campaign in page['entries']:
         print('Campaign with id "%s", name "%s", and status "%s" was '
