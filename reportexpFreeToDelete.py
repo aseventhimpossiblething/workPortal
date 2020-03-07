@@ -33,6 +33,7 @@ more_pages = True
 while more_pages:
  print("loop")     
  page = campaign_service.get(selector)
+ print("1")     
  print(page)  
  print("1")
  print("2")
