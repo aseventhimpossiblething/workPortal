@@ -7,7 +7,7 @@ from googleads import adwords
 from google.ads.google_ads.client import GoogleAdsClient
 #client = GoogleAdsClient.load_from_storage()
 client=adwords.AdWordsClient.LoadFromStorage()
-
+PAGE_SIZE=100
 #print(dir(client))
 #below is new
 import google.ads.google_ads.client
