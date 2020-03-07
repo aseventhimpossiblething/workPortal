@@ -1,8 +1,9 @@
 import uuid
 from googleads import adwords
-from google.ads.google_ads.client import GoogleAdsClient
-import google.ads.google_ads.client
-client = GoogleAdsClient.load_from_storage()
+#from google.ads.google_ads.client import GoogleAdsClient
+#import google.ads.google_ads.client
+#client = GoogleAdsClient.load_from_storage()
+client=adwords.load_from_storage()
 
 print("Experiment module Loaded")
 
