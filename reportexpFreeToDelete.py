@@ -33,6 +33,13 @@ more_pages = True
 while more_pages:
  print("loop")     
  page = campaign_service.get(selector)
+ 
+ for campaign in page['entries']:
+        print('Campaign with id "%s", name "%s", and status "%s" was '
+              'found.' % (campaign['id'], campaign['name'],
+                          campaign['status']))
+
+      
 
 # Display results.
  if 'entries' in page:
