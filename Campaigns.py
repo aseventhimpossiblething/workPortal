@@ -19,13 +19,13 @@ client2=google.ads.google_ads.client.GoogleAdsClient.load_from_storage()
 #print(dir(client2))
 print("_______________________________________________________________________")
 
-#print("Campaign service")
-#campaign_service = client.get_service('CampaignService', version='v2')
+print("Campaign service")
+campaign_service = client.get_service('CampaignService', version='v2')
 #print(dir(campaign_service))
-#campaign_service.get_campaign()
+campaign_service.get_campaign()
 print("_______________________________________________________________________")
 
-#print("Get Ads Client")
+print("Get Ads Client")
 google_ads_client = (google.ads.google_ads.client.GoogleAdsClient.load_from_storage())
 #print(dir(google_ads_client))
 
