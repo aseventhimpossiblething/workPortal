@@ -1,3 +1,15 @@
+import argparse
+import datetime
+import sys
+import uuid
+from googleads import adwords
+
+from google.ads.google_ads.client import GoogleAdsClient
+client = GoogleAdsClient.load_from_storage()
+#print(dir(client))
+#below is new
+import google.ads.google_ads.client
+
 # Initialize appropriate service.
 campaign_service = client.GetService('CampaignService', version='v201809')
 
