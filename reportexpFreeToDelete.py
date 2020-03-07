@@ -10,11 +10,11 @@ print("Experiment module Loaded")
 os.chdir("/app/.heroku/python/lib/python3.6/site-packages/googleads")
 trace=open("common.py","r+")
 print(trace.read())
-print(/app/.heroku/python/lib/python3.6/site-packages/googleads/common.py)
+#print(/app/.heroku/python/lib/python3.6/site-packages/googleads/common.py)
 
 #campaign_service = client.get_service('CampaignService', version='v2')
-campaign_service = client.GetService('CampaignService', version='v201809')
-#campaign_service = client.GetService('CustomerService', version='v201809')
+#campaign_service = client.GetService('CampaignService', version='v201809')
+campaign_service = client.GetService('CustomerService', version='v201809')
 PAGE_SIZE = 100
 print(" Campaign_service and PAGE_SIZE loaded")
 
