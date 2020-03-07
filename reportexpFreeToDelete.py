@@ -11,7 +11,7 @@ print("Experiment module Loaded")
 #campaign_service = client.get_service('CampaignService', version='v2')
 campaign_service = client.GetService('CampaignService', version='v201809')
 PAGE_SIZE = 100
-
+print(" Campaign_service and PAGE_SIZE loaded")
 
 
 
@@ -20,6 +20,7 @@ PAGE_SIZE = 100
 
 # Construct selector and get all campaigns.
 offset = 0
+print("offset")
 selector = {
       'fields': ['Id', 'Name', 'Status'],
       'paging': {
@@ -30,6 +31,7 @@ selector = {
 
 more_pages = True
 while more_pages:
+ print("loop")     
  page = campaign_service.get(selector)
 
 # Display results.
