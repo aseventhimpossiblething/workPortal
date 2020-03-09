@@ -141,7 +141,7 @@ def CommListFileHandler():
      storeRequest=open('RequestsVsResponses.txt','w')    
      storeRequest.write("Request, ")
      storeRequest.close()           
-     CommunityUpdatesProcess.initialCommUpdatProcess()
+     CommunityUpdatesProcess2.initialCommUpdatProcess()
     LoadAllCommunityFiles=threading.Thread(target=async_fileloader)
     LoadAllCommunityFiles.start()    
     print("Should respond now!!! ")
