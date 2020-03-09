@@ -207,6 +207,7 @@ def filterNonParticipators(theFrame):
 def MergeURLs(chan,chan2):
  print("MergeURLs() start for ",chan2)
  URLS="A";
+ return URLS;
  count=0;
  if chan2=="Bing":
   count=1;
@@ -217,7 +218,6 @@ def MergeURLs(chan,chan2):
   URLS=URLS+chan[count]
   if count % 50000 == 0:
    print(chan2," _ ",count)
-   
   count+=1
  return URLS
  
