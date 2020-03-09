@@ -27,22 +27,23 @@ IsBingValid=None;
 
 
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
- if str(sheet.iloc[1]):
-  titlestring=str(sheet.iloc[1])
-  print("********************************************************************************************************************")
-  print("********************************************************************************************************************")
-  print("********************************************************************************************************************")
-  print(titlestring)
-  print("********************************************************************************************************************")
-  print("********************************************************************************************************************")
-  print("********************************************************************************************************************")
-  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
-   titlestring.find(checkword3)!=-1 and titlestring.find(checkword4)!=-1:
-   return "Valid"
-  else:
-   Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
-   return Invalid
-    
+ #if str(sheet.iloc[1]):
+ titlestring=str(sheet.iloc[1])
+ print("********************************************************************************************************************")
+ print("********************************************************************************************************************")
+ print("********************************************************************************************************************")
+ print(titlestring)
+ print("********************************************************************************************************************")
+ print("********************************************************************************************************************")
+ print("********************************************************************************************************************")
+ if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
+  titlestring.find(checkword3)!=-1 and titlestring.find(checkword4)!=-1:
+  return "Valid"
+ else:
+  Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
+  return Invalid
+
+  
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkword4):
  WorkingCommunitiesname="WorkingCommunities" 
  global IsCommValid
@@ -624,12 +625,14 @@ def initialCommUpdatProcess():
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
  if IsCommValid!="Valid":
   return IsCommValid
+ """
  WorkingGoogleEOF=WorkingGoogle()    
  WorkingBingEOF=WorkingBing()
  
  WorkingCommunities['Community Id']
  WorkingGoogleEOF['Final URL']  
  WorkingBingEOF['Final Url']
+ """
  
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
