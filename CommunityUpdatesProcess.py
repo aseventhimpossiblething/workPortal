@@ -43,7 +43,7 @@ def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
    Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
    return Invalid
  else:
-  return "Valid" 
+  return "inValid" 
   
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkword4):
  WorkingCommunitiesname="WorkingCommunities" 
