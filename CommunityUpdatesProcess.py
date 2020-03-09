@@ -625,14 +625,14 @@ def initialCommUpdatProcess():
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
  if IsCommValid!="Valid":
   return IsCommValid
- """
+ 
  WorkingGoogleEOF=WorkingGoogle()    
  WorkingBingEOF=WorkingBing()
  
- WorkingCommunities['Community Id']
- WorkingGoogleEOF['Final URL']  
- WorkingBingEOF['Final Url']
- """
+ #WorkingCommunities['Community Id']
+ #WorkingGoogleEOF['Final URL']  
+ #WorkingBingEOF['Final Url']
+ 
  
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
