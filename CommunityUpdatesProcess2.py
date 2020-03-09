@@ -204,8 +204,8 @@ def filterNonParticipators(theFrame):
 
 
 
-def MergeURLs(chan,chan2):
- print("MergeURLs() start for ",chan2)
+def MergeURLs():
+ print("MergeURLs() start")
  URLS="A";
  return URLS;
  count=0;
@@ -637,8 +637,8 @@ def initialCommUpdatProcess():
  
  
 
- googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
- bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
+ googleURLS=MergeURLs();
+ bingURLS=MergeURLs();
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
  
  
