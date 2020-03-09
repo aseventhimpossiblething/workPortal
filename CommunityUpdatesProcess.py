@@ -27,22 +27,23 @@ IsBingValid=None;
 
 
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
- #if str(sheet.iloc[1]):
- titlestring=str(sheet.iloc[1])
- print("********************************************************************************************************************")
- print("********************************************************************************************************************")
- print("********************************************************************************************************************")
- print(titlestring)
- print("********************************************************************************************************************")
- print("********************************************************************************************************************")
- print("********************************************************************************************************************")
- if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
-  titlestring.find(checkword3)!=-1 and titlestring.find(checkword4)!=-1:
-  return "Valid"
+ if str(sheet.iloc[1]):
+  titlestring=str(sheet.iloc[1])
+  print("********************************************************************************************************************")
+  print("********************************************************************************************************************")
+  print("********************************************************************************************************************")
+  print(titlestring)
+  print("********************************************************************************************************************")
+  print("********************************************************************************************************************")
+  print("********************************************************************************************************************")
+  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
+   titlestring.find(checkword3)!=-1 and titlestring.find(checkword4)!=-1:
+   return "Valid"
+  else:
+   Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
+   return Invalid
  else:
-  Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
-  return Invalid
-
+  return "Valid" 
   
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkword4):
  WorkingCommunitiesname="WorkingCommunities" 
