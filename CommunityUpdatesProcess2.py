@@ -637,8 +637,8 @@ def initialCommUpdatProcess():
  
  
 
- #googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
- #bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
+ googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
+ bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
  
  
