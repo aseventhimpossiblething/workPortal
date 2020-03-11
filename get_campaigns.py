@@ -66,5 +66,4 @@ if __name__ == '__main__':
     print(main(google_ads_client, args.customer_id))
     
     
-    
-return "."
+
