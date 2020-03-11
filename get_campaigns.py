@@ -75,10 +75,11 @@ google_ads_client = GoogleAdsClient.load_from_storage()
 parser = argparse.ArgumentParser(
 description='Lists all campaigns for specified customer.')
 # The following argument(s) should be provided to run the example.
-parser.add_argument('-c', '--customer_id', type=str,
-                     required=False, help='The Google Ads customer ID.')
+#parser.add_argument('-c', '--customer_id', type=str,
+#                     required=True, help='The Google Ads customer ID.')
+#"9662896891"
 args = parser.parse_args()
-main(google_ads_client, args.customer_id)
+main(google_ads_client, "9662896891")
 #print(main(google_ads_client, args.customer_id))
         
 
