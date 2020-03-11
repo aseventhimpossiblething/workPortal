@@ -82,6 +82,7 @@ google_ads_client = GoogleAdsClient.load_from_storage()
 #main(google_ads_client, "9662896891")
 #print(main(google_ads_client, args.customer_id))
 ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')
-print("END!")
+print(ga_service)
+print("ga_service")
         
 
