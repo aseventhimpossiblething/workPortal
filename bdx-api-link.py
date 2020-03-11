@@ -1,5 +1,6 @@
 import CommunityUpdatesProcess
 import CommunityUpdatesProcess2
+import GetCampaigns
 import glob
 #import numpy
 #import scipy
@@ -69,6 +70,10 @@ def official():
     get_campaigns     
     return "."      
 
+@app.route('/getcampaigns')
+def official():
+    Getcampaigns     
+    return "."      
    
 
 
