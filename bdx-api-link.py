@@ -69,11 +69,12 @@ sslify = SSLify(app)
 def official():
     get_campaigns     
     return "."      
-
+"""
 @app.route('/getcampaigns')
 def official():
     Getcampaigns     
-    return "."      
+    return '.'
+"""    
    
 
 
