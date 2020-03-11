@@ -64,7 +64,13 @@ sslify = SSLify(app)
 
 
          
-         
+@app.route('/get_campaigns')
+def official():
+    return render_template('get_campaign.py')     
+
+   
+
+
          
          
 
