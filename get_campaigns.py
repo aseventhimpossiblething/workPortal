@@ -71,16 +71,14 @@ if __name__ == '__main__':
     
     
     
- google_ads_client = GoogleAdsClient.load_from_storage()
-
- parser = argparse.ArgumentParser(
- description='Lists all campaigns for specified customer.')
- # The following argument(s) should be provided to run the example.
- parser.add_argument('-c', '--customer_id', type=str,
+google_ads_client = GoogleAdsClient.load_from_storage()
+parser = argparse.ArgumentParser(
+description='Lists all campaigns for specified customer.')
+# The following argument(s) should be provided to run the example.
+parser.add_argument('-c', '--customer_id', type=str,
                      required=True, help='The Google Ads customer ID.')
- args = parser.parse_args()
-
- main(google_ads_client, args.customer_id)
- #print(main(google_ads_client, args.customer_id))
+args = parser.parse_args()
+main(google_ads_client, args.customer_id)
+#print(main(google_ads_client, args.customer_id))
         
 
