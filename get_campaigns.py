@@ -26,7 +26,7 @@ from google.ads.google_ads.errors import GoogleAdsException
 
 
 def main(client, customer_id):
-    print("is main eve running")
+    print("is main even running")
     ga_service = client.get_service('GoogleAdsService', version='v3')
 
     query = ('SELECT campaign.id, campaign.name FROM campaign '
