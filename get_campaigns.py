@@ -35,6 +35,7 @@ def main(client, customer_id):
     response = ga_service.search_stream(customer_id, query=query)
 
     try:
+        print("try")
         for batch in response:
             for row in batch.results:
                 print(f'Campaign with ID {row.campaign.id.value} and name '
