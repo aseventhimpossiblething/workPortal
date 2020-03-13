@@ -87,10 +87,10 @@ google_ads_client = GoogleAdsClient.load_from_storage()
 ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')
 theDataOBj=ga_service.search("9662896891",query)
 print(dir(theDataOBj))
-theDataOBj[0]
+#theDataOBj[0]
 theDataOBj.num_results()
 theDataOBj.client()
-theDataOBj[1]
+#theDataOBj[1]
 #print(ga_service.search("9662896891",query))
 #print(dir(ga_service.search("9662896891",query)))
 #print("ga_service.search()")
