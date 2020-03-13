@@ -84,11 +84,13 @@ google_ads_client = GoogleAdsClient.load_from_storage()
 #args = parser.parse_args()
 #main(google_ads_client, "9662896891")
 #print(main(google_ads_client, args.customer_id))
-theDataOBj=ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')
+ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')
+theDataOBj=ga_service.search("9662896891",query)
 print(dir(theDataOBj))
+theDataOBj[0]
 theDataOBj.num_results()
 theDataOBj.client()
-theDataOBj[0]
+theDataOBj[1]
 #print(ga_service.search("9662896891",query))
 #print(dir(ga_service.search("9662896891",query)))
 #print("ga_service.search()")
