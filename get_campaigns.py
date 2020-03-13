@@ -88,7 +88,7 @@ theDataOBj=ga_service.search("9662896891",query)
 print(dir(theDataOBj))
 #theDataOBj[0]
 #theDataOBj.num_results()
-theDataOBj.client()
+#theDataOBj.client()
 #theDataOBj[1]
 #print(ga_service.search("9662896891",query))
 #print(dir(ga_service.search("9662896891",query)))
