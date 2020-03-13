@@ -71,8 +71,7 @@ if __name__ == '__main__':
     
     
     
-query = ('SELECT campaign.id, campaign.name FROM campaign '
-             'ORDER BY campaign.id')
+query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
     
 google_ads_client = GoogleAdsClient.load_from_storage()
 #parser = argparse.ArgumentParser(
