@@ -71,6 +71,8 @@ if __name__ == '__main__':
     
     
     
+query = ('SELECT campaign.id, campaign.name FROM campaign '
+             'ORDER BY campaign.id')
     
 google_ads_client = GoogleAdsClient.load_from_storage()
 #parser = argparse.ArgumentParser(
@@ -83,7 +85,7 @@ google_ads_client = GoogleAdsClient.load_from_storage()
 #main(google_ads_client, "9662896891")
 #print(main(google_ads_client, args.customer_id))
 ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')
-print(ga_service.search())
+print(ga_service.search(9662896891,query))
 print(dir(ga_service.search()))
 print("ga_service.search()")
         
