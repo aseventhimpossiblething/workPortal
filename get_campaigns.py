@@ -90,6 +90,7 @@ print('dir ',dir(theDataOBj))
 print('dict ',dict(theDataOBj))
 print('num_results ',theDataOBj.num_results)
 print('client ',theDataOBj.client)
+print('_has_next_page ',theDataOBj._has_next_page)
 #theDataOBj[1]
 #print(ga_service.search("9662896891",query))
 #print(dir(ga_service.search("9662896891",query)))
