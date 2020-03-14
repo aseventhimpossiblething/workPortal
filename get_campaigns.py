@@ -86,6 +86,7 @@ google_ads_client = GoogleAdsClient.load_from_storage()
 ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')
 CustomerService = google_ads_client.get_service('CustomerService', version='v2')
 theDataOBj=ga_service.search("9662896891",query)
+GAserviceTestClient=ga_service.search("1500631476",query)
 #print(theDataOBj)
 #print('dir ',dir(theDataOBj))
 #print('dict ',dict(theDataOBj))
@@ -97,10 +98,13 @@ theDataOBj=ga_service.search("9662896891",query)
 #print(dir(CustomerService))
 #print(CustomerService.get_customer)
 print(dir(CustomerService.get_customer))
-CustomerService.GetCampaign
+#CustomerService.GetCampaign
 #theDataOBj[1]
 #print(ga_service.search("9662896891",query))
 #print(dir(ga_service.search("9662896891",query)))
 #print("ga_service.search()")
+#1500631476
         
-
+print(GAserviceTestClient.client)
+print(GAserviceTestClient.num_results)
+print(GAserviceTestClient._has_next_page)
