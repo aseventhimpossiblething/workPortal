@@ -95,6 +95,7 @@ print('_has_next_page ',theDataOBj._has_next_page)
 
 print(CustomerService)
 print(dir(CustomerService))
+CustomerService.get_customer
 #theDataOBj[1]
 #print(ga_service.search("9662896891",query))
 #print(dir(ga_service.search("9662896891",query)))
