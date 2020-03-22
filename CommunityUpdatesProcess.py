@@ -16,7 +16,6 @@ import sys
 from openpyxl import Workbook
 from openpyxl import load_workbook
 import xlsxwriter
-import gc
 
 
 
@@ -27,24 +26,14 @@ IsBingValid=None;
 
 
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
- if str(sheet.iloc[1]):
-  titlestring=str(sheet.iloc[1])
-  print("********************************************************************************************************************")
-  print("********************************************************************************************************************")
-  print("********************************************************************************************************************")
-  print(titlestring)
-  print("********************************************************************************************************************")
-  print("********************************************************************************************************************")
-  print("********************************************************************************************************************")
-  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
-   titlestring.find(checkword3)!=-1 and titlestring.find(checkword4)!=-1:
-   return "Valid"
-  else:
-   Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
-   return Invalid
+ titlestring=str(sheet.iloc[1])
+ if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
+  titlestring.find(checkword3)!=-1 and titlestring.find(checkword4)!=-1:
+  return "Valid"
  else:
-  return "inValid" 
-  
+  Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
+  return Invalid
+    
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkword4):
  WorkingCommunitiesname="WorkingCommunities" 
  global IsCommValid
@@ -83,36 +72,37 @@ def WorkingBing():
 def filterNonParticipators(theFrame):
  
  def firstDropLoop(theFrame):
-  DropRowsContaining=['Mcbride','McBride','Westhaven','Clayton','Oakwood','Craftmark','Freedom','Crossland','G & I','Build on Your Lot'];
+  DropRowsContaining=['Clayton','Oakwood','Craftmark','Freedom','Crossland','G & I','Build on Your Lot'];
   
   DropLoopCount=0;
   while DropLoopCount<len(DropRowsContaining):
-   #print("Drop while")
+   print("Drop while")
    
    theFrame=theFrame.drop_duplicates();
+   print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
    theFrame=theFrame.dropna()
-   #print("LengththeFrame=theFrame.dropna ",len(theFrame))
+   print("LengththeFrame=theFrame.dropna ",len(theFrame))
    #print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
    
-   #print("Drop while")
+   print("Drop while")
    
    theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount])]
-   #print("theFrame[~theFrame['Brand Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
+   print("theFrame[~theFrame['Brand Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
    
-   #print("Drop while")
+   print("Drop while")
    
    theFrame=theFrame[~theFrame['Builder Name'].str.contains(DropRowsContaining[DropLoopCount])]
-   #print("theFrame[~theFrame['Builder Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
+   print("theFrame[~theFrame['Builder Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
    
-   #print("Drop while")
+   print("Drop while")
    
    theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount])]
-   #print("theFrame[~theFrame['Community Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
+   print("theFrame[~theFrame['Community Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
    
-   #print("Drop while")
+   print("Drop while")
    
    theFrame=theFrame.drop_duplicates(subset=['Community Name']);
-   #print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
+   print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
    DropLoopCount+=1;
    print("end Drop while") 
    
@@ -123,7 +113,81 @@ def filterNonParticipators(theFrame):
  
  
  
+ """
+ theFrame=theFrame.drop_duplicates();
+ print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
+ 
+ theFrame=theFrame.dropna()
+ print("LengththeFrame=theFrame.dropna ",len(theFrame))
+ #print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
+ 
+ theFrame=theFrame[~theFrame['Brand Name'].str.contains('Clayton')]
+ print("theFrame[~theFrame['Brand Name'].str.contains('Clayton')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Brand Name'].str.contains('Oakwood')]
+ print("theFrame[~theFrame['Brand Name'].str.contains('Oakwood')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Brand Name'].str.contains('Craftmark')]
+ print("theFrame[~theFrame['Brand Name'].str.contains('Craftmark')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Builder Name'].str.contains('Clayton')]
+ print("theFrame[~theFrame['Builder Name'].str.contains('Clayton')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Builder Name'].str.contains('Oakwood')]
+ print("theFrame[~theFrame['Builder Name'].str.contains('Oakwood')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Builder Name'].str.contains('Craftmark')]
+ print("theFrame[~theFrame['Builder Name'].str.contains('Craftmark')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Community Name'].str.contains('Clayton')]
+ print("theFrame[~theFrame['Community Name'].str.contains('Clayton')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Community Name'].str.contains('Craftmark')]
+ print("theFrame[~theFrame['Community Name'].str.contains('Craftmark')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Community Name'].str.contains('Oakwood')]
+ print("theFrame[~theFrame['Community Name'].str.contains('Oakwood')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Brand Name'].str.contains('Freedom')]
+ print("theFrame[~theFrame['Brand Name'].str.contains('Freedom')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Community Name'].str.contains('Freedom')]
+ print("theFrame[~theFrame['Community Name'].str.contains('Freedom')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Builder Name'].str.contains('Freedom')]
+ print("theFrame[~theFrame['Builder Name'].str.contains('Freedom')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Brand Name'].str.contains('Crossland')]
+ print("theFrame[~theFrame['Brand Name'].str.contains('Crossland')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Community Name'].str.contains('Crossland')]
+ print("theFrame[~theFrame['Community Name'].str.contains('Crossland')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Builder Name'].str.contains('Crossland')]
+ print("theFrame[~theFrame['Builder Name'].str.contains('Crossland')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Brand Name'].str.contains('G & I')]
+ print("theFrame[~theFrame['Brand Name'].str.contains('G & I'')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Community Name'].str.contains('G & I')]
+ print("theFrame[~theFrame['Community Name'].str.contains('G & I')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Builder Name'].str.contains('G & I')]
+ print("theFrame[~theFrame['Builder Name'].str.contains('G & I')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Brand Name'].str.contains('Build on Your Lot')]
+ print("theFrame[~theFrame['Brand Name'].str.contains('Build on Your Lot)] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Community Name'].str.contains('Build on Your Lot')]
+ print("theFrame[~theFrame['Community Name'].str.contains('Build on Your Lot')] ",len(theFrame))
+ 
+ theFrame=theFrame[~theFrame['Builder Name'].str.contains('Build on Your Lot')]
+ print("theFrame[~theFrame['Builder Name'].str.contains('Build on Your Lot')] ",len(theFrame))
 
+
+ theFrame=theFrame.drop_duplicates(subset=['Community Name']);
+ print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
+ """
  
  
  
@@ -131,7 +195,6 @@ def filterNonParticipators(theFrame):
  #print(theFrame)
  failcounter=0 ;
  DeDupArray=[];
- #Labels=[];
  icount=0;
  while icount<len(theFrame['Community Name']):
   try:
@@ -151,11 +214,9 @@ def filterNonParticipators(theFrame):
    print("first loop try failed ",icount);
    failcounter+=1;
   DeDupArray.append(Community)
-  #Labels.append("Created by Community Update Portal")
   icount+=1;
  print("Switching Loops") 
  theFrame['Community Name']=DeDupArray
- #theFrame['Labels']=Labels
  print("times failed ",failcounter)
  icount0=0;
  print("Size of Community Name ",len(theFrame['Community Name']))
@@ -176,7 +237,7 @@ def filterNonParticipators(theFrame):
    
    if DeDupArray.count(Community)>1:
     #print("Inside second loop (if) predicted fail")
-    #print("found in string ",DeDupArray.count(Community)," times");
+    print("found in string ",DeDupArray.count(Community)," times");
     print("____________________________________________________")
     print("icount0 ",icount0)
     print("theFrame size before drop ",len(theFrame))
@@ -190,8 +251,7 @@ def filterNonParticipators(theFrame):
    icount0+0;
   if icount0%100==0:
    print("Second Loop Count ",icount0)
-  icount0+=1;
-  gc.collect() 
+  icount0+=1; 
   
  theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name'])
  print("Length theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name']) ",len(theFrame))
@@ -272,8 +332,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  Text2B=[];
  Path1B=[];
  Path2B=[];
- Labels=[];
- SecondLabel=[];
  
  count=0;
  hilecount=len(NewDataFrame['Market ID']);
@@ -287,8 +345,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
             [count].replace(" ","-")+"/"+NewDataFrame['Community Name']\
             [count].replace(" ","-")+"-by-"+NewDataFrame['Brand Name']\
-            [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower()
-  URL_Struct1=URL_Struct1.replace("-+","-").replace("'","").replace("---","-").replace("--","-")
+            [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?").lower()
+  URL_Struct1=URL_Struct1.replace("'","")
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc"
@@ -336,7 +394,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      MatchType_Conv="Exact"
      set_bid=.35;
     if MatchType=="SBMM":
-     URL_Struct1=URL_Struct1+"203"
+     URL_Struct1=URL_Struct1+"202"
      Keyword_conv=NewDataFrame['Community Name'][count]
      Keyword_conv=Keyword_conv.replace("&"," ")
      Keyword_conv=Keyword_conv.replace(" "," +")
@@ -415,89 +473,35 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("Vistoso","")
     Path1A_conv=Path1A_conv.replace("Station","STA")
     Path1A_conv=Path1A_conv.replace("and","&")
-   if len(Path1A_conv)>15:
-     Path1A_conv=Path1A_conv[:11]
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
    Final_URL.append(URL_Struct1) 
-   Labels.append("Created by WebApp") 
-   
-  
-   if URL_Struct1.lower().find('www')>-1:
-    SecondLabel.append(count)
     
+          
         
   except:
    NewDataFrame=NewDataFrame.drop([count])
   count+=1;
   
-  
- GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Labels":Labels} 
+ GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid} 
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
  GoogleAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
-                "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Labels}
+                "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}
  GoogleAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
-                "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Labels}
+                "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}
  GoogleAdFrameA=pandas.DataFrame(GoogleAdFrameA)
  GoogleAdFrameB=pandas.DataFrame(GoogleAdFrameB)
- BingKWFrame={"Campaign":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Bid":Bid,"Labels":Labels} 
- BingAdFrameA={"Campaign":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
-                "Text":TextA,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Labels}
- BingAdFrameB={"Campaign":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
-                "Text":TextA,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Labels}
+ BingKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Bid":Bid} 
+ BingAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
+                "Text":TextA,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}
+ BingAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
+                "Text":TextA,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}
  BingKWFrame=pandas.DataFrame(BingKWFrame)
  BingAdFrameA=pandas.DataFrame(BingAdFrameA)
  BingAdFrameB=pandas.DataFrame(BingAdFrameB)
  
  
- def knownSheetUrlDefectby(SearchChan,SecondLabel,ExtraLabel):
-  if len(SecondLabel)!=0 and ExtraLabel.lower()=="on":
-   print("Checkin for URLs with by-/ error ");
-   CountSecondLabel=0;
-   if SearchChan=="google":
-    frame1=GoogleAdFrameA;
-    frame2=GoogleAdFrameB;
-    CountSecondLabel=0;
-    while CountSecondLabel<len(SecondLabel):
-     print("Loop Number ",CountSecondLabel);
-     try:
-      print(CountSecondLabel);
-      if frame1['Final URL'].lower().find('www')>-1:
-       frame1['Labels'][CountSecondLabel]="by-/ bad URL"
-       frame2['Labels'][CountSecondLabel]="by-/ bad URL"
-      if frame1['Final URL'].lower().find('www')!=-1:
-       frame1=frame1.drop(CountSecondLabel);
-       frame2=frame2.drop(CountSecondLabel);
-     except:
-      CountSecondLabel+0;
-     CountSecondLabel+=1;  
-   if SearchChan=="bing":
-    frame1=BingAdFrameA;
-    frame2=BingAdFrameB;
-    CountSecondLabel=0;
-    while CountSecondLabel<len(SecondLabel):
-     print("Loop Number ",CountSecondLabel);
-     try:
-      print(CountSecondLabel);
-      if frame1['Final URL'].lower().find('www')>-1:
-       frame1['Labels'][CountSecondLabel]="by-/ bad URL"
-       frame2['Labels'][CountSecondLabel]="by-/ bad URL"
-      if frame1['Final URL'].lower().find('www')!=-1:
-       frame1=frame1.drop(CountSecondLabel);
-       frame2=frame2.drop(CountSecondLabel);
-     except:
-      CountSecondLabel+0;
-     CountSecondLabel+=1;  
-    
-   print(len(SecondLabel),"-count")
-   SecondLabel=list(dict.fromkeys(SecondLabel))
-   print(len(SecondLabel),"-count")
-    
-  print(frame1)
-  print(" end of known Url issue check")
-  return frame1,frame2
- knownSheetUrlDefectby(SearchChan,SecondLabel,"on");
-    
+
  if SearchChan=="google":
   if MatchType=='SBMM':
    print("In KeywordGen google SBMM ")
@@ -555,8 +559,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    GoogleAdFrameB.to_excel(writer)
    writer.save()
    
-   
-      
+     
  if SearchChan=="bing":
   if MatchType=='SBMM':
    print("In KeywordGen bing SBMM ")
@@ -626,14 +629,12 @@ def initialCommUpdatProcess():
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
  if IsCommValid!="Valid":
   return IsCommValid
- 
  WorkingGoogleEOF=WorkingGoogle()    
  WorkingBingEOF=WorkingBing()
  
- #WorkingCommunities['Community Id']
- #WorkingGoogleEOF['Final URL']  
- #WorkingBingEOF['Final Url']
- 
+ WorkingCommunities['Community Id']
+ WorkingGoogleEOF['Final URL']  
+ WorkingBingEOF['Final Url']
  
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
@@ -652,7 +653,6 @@ def initialCommUpdatProcess():
  KeywordGen(NewBing,"sbmm","bing")
  KeywordGen(NewBing,"sb","bing")
  KeywordGen(NewBing,"sx","bing")
- 
  
                        
    
