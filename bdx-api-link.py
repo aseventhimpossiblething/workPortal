@@ -22,7 +22,7 @@ from flask_sslify import SSLify
 app = Flask(__name__,"/static/")
 #sslify = SSLify(app)
 print("Loaded into Gunicorn and Log runs Correctly")
-print("current directory - ",os.getcwd)
+print("current directory - ",os.getcwd())
 
 #DATABASE_URL = os.environ['DATABASE_URL']
 
