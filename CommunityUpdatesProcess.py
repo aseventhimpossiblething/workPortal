@@ -17,6 +17,11 @@ from openpyxl import Workbook
 from openpyxl import load_workbook
 import xlsxwriter
 
+fileHandler.SheetsFileLocation
+fileHandler.currentCommunitiesLocation
+fileHandler.currentGoogleLocation
+fileHandler.currentBingLocation
+
 
 
 SheetsAreLoaded=None; 
@@ -621,8 +626,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     
 def initialCommUpdatProcess():
  global IsCommUpdateRunning
+ print("fileHandler.currentCommunitiesLocation - ",fileHandler.currentCommunitiesLocation)
   
- os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')
+ os.chdir(fileHandler.currentCommunitiesLocation)
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
  WorkingCommunities=WorkingCommunities.drop([4])
