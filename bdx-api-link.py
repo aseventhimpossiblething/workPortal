@@ -133,23 +133,23 @@ def CommUpdateExcel():
 
 @app.route('/GoogleKWSBMM')
 def GoogleKWSBMMKW():
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/DefaultSheet.xlsx",\
                   attachment_filename="GoogleBMMKW.xlsx")
          
 @app.route('/GoogleKWSB')
 def GoogleKWSBKW():
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW/DefaultSheet.xlsx",\
                   attachment_filename="GoogleKWSB.xlsx")
 
 @app.route('/GoogleKWSX')
 def GoogleKWSX():
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW/DefaultSheet.xlsx",\
                   attachment_filename="GoogleKWSX.xlsx")
 
 
 @app.route('/GoogleAdSBMMA')
 def GoogleASBMM():
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdSBMMA.xlsx")
                  
          
@@ -157,14 +157,14 @@ def GoogleASBMM():
 
 @app.route('/GoogleAdSBMMB')
 def GoogleBSBMM():
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBMM/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBMM/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdSBMMB.xlsx")
                  
          
   
 @app.route('/GoogleAdSBMA')
 def GoogleASBM():
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABroad/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABroad/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdSBMA.xlsx")
                 
          
@@ -172,7 +172,7 @@ def GoogleASBM():
 
 @app.route('/GoogleAdSBMB')
 def GoogleBSBM():
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBroad/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBroad/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdSBMB.xlsx")
                  
 
@@ -180,7 +180,7 @@ def GoogleBSBM():
 
 @app.route('/GoogleAdSXA')
 def GoogleASX():
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionAExact/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionAExact/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdASX.xlsx")
               
          
@@ -188,27 +188,27 @@ def GoogleASX():
 
 @app.route('/GoogleAdSXB')
 def GoogleBSX():
- return send_file("/app/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBExact/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBExact/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdBSX.xlsx")
                
         
 
 @app.route('/BingKWSBMM')
 def BingSBMMKW():
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM/DefaultSheet.xlsx",\
                   attachment_filename="BingBMMKW.xlsx")
  
          
 @app.route('/BingKWSB')
 def BingSBKW():
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad/DefaultSheet.xlsx",\
                   attachment_filename="BingSBKW.xlsx")
 
 
 
 @app.route('/BingKWSX')
 def BingSXKW():
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact/DefaultSheet.xlsx",\
                   attachment_filename="BingSXKW.xlsx")
          
 
@@ -216,14 +216,14 @@ def BingSXKW():
        
 @app.route('/BingAdSBMMA')
 def BingASBMM():
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBMM/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBMM/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSBMMA.xlsx")
                 
 
 
 @app.route('/BingAdSBMMB')
 def BingBSBMM():
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeBMM/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeBMM/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSBMMB.xlsx")
               
  
@@ -231,7 +231,7 @@ def BingBSBMM():
          
 @app.route('/BingAdSBA')
 def BingASB():
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBroad/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBroad/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSBA.xlsx")
               
          
@@ -240,7 +240,7 @@ def BingASB():
 
 @app.route('/BingAdSBB')
 def BingBSB():
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeBroad/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeBroad/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSBB.xlsx")
                       
                   
@@ -250,7 +250,7 @@ def BingBSB():
 
 @app.route('/BingAdSXA')
 def BingASX():
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeExact/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeExact/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSXA.xlsx")
                   
          
@@ -259,7 +259,7 @@ def BingASX():
 
 @app.route('/BingAdSXB')
 def BingBSX():
- return send_file("/app/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeExact/DefaultSheet.xlsx",\
+ return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeExact/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSXB.xlsx")
                  
 
