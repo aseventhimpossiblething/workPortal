@@ -54,7 +54,7 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkwor
   return IsCommValid  
 
 def WorkingGoogle():  
- os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
+ os.chdir('/Sheets/CommunityUpdates/Google/currentGoogle')
  WorkingGoogle=pandas.read_excel('WorkingGoogle')
  global IsGoogleValid 
  IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Headline 1','Final URL')
@@ -65,7 +65,7 @@ def WorkingGoogle():
   return  WorkingGoogle
   
 def WorkingBing():
- os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
+ os.chdir('/Sheets/CommunityUpdates/Bing/currentBing')
  WorkingBing=pandas.read_excel('WorkingBing')
  IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1','Final Url')
  if IsBingValid!='Valid':
@@ -630,6 +630,7 @@ def initialCommUpdatProcess():
   
  os.chdir(fileHandler.currentCommunitiesLocation)
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
+ print(WorkingCommunities)
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
  WorkingCommunities=WorkingCommunities.drop([4])
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
@@ -663,7 +664,7 @@ def initialCommUpdatProcess():
                        
    
  print("Main ")
- os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
+ os.chdir('/Sheets/CommunityUpdates/Bing/currentBing')
   
  
  TheSampleText=WorkingBingEOF
