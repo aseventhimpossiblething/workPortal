@@ -127,7 +127,7 @@ def CommListFileHandler():
    
     os.chdir(currentCommunitiesLocation)
     SHcommand="sudo chmod -R 777 "+currentCommunitiesLocation
-    os.system(SHcommand)
+    os.system(SHcommand+"/WorkingCommunities")
     request.files['Communities'].save('WorkingCommunities')
        
     os.chdir(currentGoogleLocation)
