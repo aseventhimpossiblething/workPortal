@@ -21,9 +21,9 @@ from flask_sslify import SSLify
 #import psycopg2
 app = Flask(__name__,"/static/")
 #sslify = SSLify(app)
-print("Loaded into Gunicorn and Log runs Correctly")
-print("current directory - ",os.getcwd())
-print("list contents",os.listdir())
+#print("Loaded into Gunicorn and Log runs Correctly")
+#print("current directory - ",os.getcwd())
+#print("list contents",os.listdir())
 #DATABASE_URL = os.environ['DATABASE_URL']
 
 
@@ -129,7 +129,7 @@ def CommUpdateDisplay():
 
 @app.route('/CommUpdateExcel')
 def CommUpdateExcel():
- return render_template('CommUpdateExcel.html',CacheBreakStamp=datetime.now())
+ return render_template('var/www/workPortal/templates/CommUpdateExcel.html',CacheBreakStamp=datetime.now())
 
 @app.route('/GoogleKWSBMM')
 def GoogleKWSBMMKW():
