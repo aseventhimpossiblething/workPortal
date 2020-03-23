@@ -1,5 +1,5 @@
 domain="http://bhiapilink.com"
-mport CommunityUpdatesProcess
+import CommunityUpdatesProcess
 import CommunityUpdatesProcess2
 import GetCampaigns
 import glob
