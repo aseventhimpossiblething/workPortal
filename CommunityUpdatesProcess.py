@@ -704,7 +704,7 @@ def initialCommUpdatProcess():
  TheSamplefile.close()
  
  
- os.chdir('/app/Sheets/')
+ os.chdir(fileHandler.SheetsFileLocation)
  storeRequest=open('RequestsVsResponses.txt','a+')
  storeRequest.write("Response , ")
  storeRequest.close() 
