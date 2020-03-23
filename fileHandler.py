@@ -16,7 +16,7 @@ import gc
 
 
 SheetsFileLocation="/var/www/workPortal/Sheets"
-currentCommunitiesLocation="/var/www/workPortal/Sheets/currentCommunities"
+currentCommunitiesLocation="/var/www/workPortal/Sheets//CommunityUpdates/currentCommunities"
 currentGoogleLocation="/var/www/workPortal/Sheets/CommunityUpdates/Google/currentGoogle"
 currentBingLocation="/var/www/workPortal/Sheets/CommunityUpdates/Bing/currentBing"
 
