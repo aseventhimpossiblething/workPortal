@@ -40,6 +40,13 @@ def BidOpFileHandler():
     print("********************************BidOpFileHandler() flag 3*************************************************")
 
     print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
+    if lower(request.files['sheet'].filename).find("train")!=-1:
+         toscrn="Sheet is Labelled as a Training Data Set and will be included as Training Data"
+    if lower(request.files['sheet'].filename).find("train")==-1:  
+         toscrn="Sheet is not Labelled as a Training Data Set optimisation is being attempted"   
+                
+        
+        
 
    
     print("*********************************BidOpFileHandler() flag 4***********************************************")
@@ -48,13 +55,13 @@ def BidOpFileHandler():
 
     print("********************************BidOpFileHandler() flag 5************************************************")
 
-    print("os.listdir()____:",os.listdir())
+  
 
     print("********************************BidOpFileHandler() flag 6************************************************")
 
     os.chdir('/var/www/workPortal/Sheets')
 
-    print("os.chdir(/Sheets)____:")
+    #print("os.chdir(/Sheets)____:")
 
     print("********************************BidOpFileHandler() flag 7************************************************")
 
@@ -65,8 +72,10 @@ def BidOpFileHandler():
     print("os.listdir()____:",os.listdir())
 
     print("********************************BidOpFileHandler() flag 9************************************************")
-
+    
+    #Decision Must be Made Here Before Save Training or BidOp 
     request.files['sheet'].save(request.files['sheet'].filename)
+        
 
     print("********************************BidOpFileHandler() flag 10************************************************")
 
@@ -94,7 +103,7 @@ def BidOpFileHandler():
 
     print("**************************BidOpFileHandler() flag 16******************************************************")
     
-    toscrn = "done"
+    #toscrn = "done"
     print("**************************BidOpFileHandler() flag 17******************************************************")
     
 
