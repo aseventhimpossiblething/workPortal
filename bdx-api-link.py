@@ -131,7 +131,7 @@ def CommUpdateDisplay():
 @app.route('/CommUpdateExcel')
 def CommUpdateExcel():
  domain="http://bhiapilink.com"        
- return render_template('var/www/workPortal/templates/CommUpdateExcel.html',CacheBreakStamp=datetime.now(),thedomain=domain)
+ return render_template('/CommUpdateExcel.html',CacheBreakStamp=datetime.now(),thedomain=domain)
 
 @app.route('/GoogleKWSBMM')
 def GoogleKWSBMMKW():
