@@ -52,7 +52,7 @@ def BidOpFileHandler():
 
     print("********************************BidOpFileHandler() flag 6************************************************")
 
-    os.chdir('var/www/workPortal/Sheets')
+    os.chdir('/var/www/workPortal/Sheets')
 
     print("os.chdir(/Sheets)____:")
 
