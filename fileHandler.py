@@ -40,10 +40,9 @@ def BidOpFileHandler():
     print("********************************BidOpFileHandler() flag 3*************************************************")
 
     print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
-    if request.files['sheet'].lower().filename.find("train")!=-1:
-         toscrn="Sheet is Labelled as a Training Data Set and will be included as Training Data"
-    if request.files['sheet'].filename.lower().find("train")==-1:  
-         toscrn="Sheet is not Labelled as a Training Data Set optimisation is being attempted"   
+    isTrainSet=request.files['sheet'].filename.lower().find("train") 
+    
+    print(isTrainSet)
                 
         
         
