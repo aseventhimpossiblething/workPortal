@@ -109,7 +109,7 @@ def testtextfile():
 
 @app.route('/DisplayCommUpdate')
 def CommUpdateDisplay():
-    os.chdir('var/www/Sheets/')     
+    os.chdir('/app/Sheets/')     
     storeRequest=open('RequestsVsResponses.txt','r+')
     read_storeRequest=storeRequest.read()
     storeRequest.close()
