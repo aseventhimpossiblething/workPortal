@@ -46,7 +46,7 @@ def BidOpFileHandler():
     if isTrainSet==-1:
                 toscrn="Data Set has not Been Labelled as Training. Bid Optimisation will be attempted"
                 request.files['sheet'].save(BidOpTemp)
-    if isTrainSet!=-1  
+    if isTrainSet!=-1:  
                 toscrn="Dataset is labelled Training. It will Be used as Training Data"
                 request.files['sheet'].save(TrainingTemp)
                 
