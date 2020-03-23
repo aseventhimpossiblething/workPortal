@@ -510,18 +510,24 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  if SearchChan=="google":
   if MatchType=='SBMM':
    print("In KeywordGen google SBMM ")
-   os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW')
+   SaveSegment=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW')
+   os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleKWFrame.to_excel(writer)
    writer.save()
    
-  
-   os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM')
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM')
+   os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameA.to_excel(writer)
    writer.save()
    
-   os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBMM/')
+   
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBMM/'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBMM/')
+   os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameB.to_excel(writer)
    writer.save()
@@ -529,17 +535,23 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     
   if MatchType=='SB':
    print("In KeywordGen google SB ")
-   os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW')
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW')
+   os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleKWFrame.to_excel(writer)
    writer.save()
    
-   os.chdir('/var/www/workPortal/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABroad')
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABroad'
+   #os.chdir('/var/www/workPortal/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABroad')
+   os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameA.to_excel(writer)
    writer.save()
      
-   os.chdir('/var/www/workPortal/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBroad')
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBroad'
+   #os.chdir('/var/www/workPortal/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBroad')
+   os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameB.to_excel(writer)
    writer.save()
@@ -547,19 +559,23 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      
   if MatchType=='SX':
    print("In KeywordGen google SX ")
-   os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW')
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW')
+   os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleKWFrame.to_excel(writer)
    writer.save() 
    
- 
-   os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionAExact')
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionAExact' 
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionAExact')
+   os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameA.to_excel(writer)
    writer.save()
    
-      
-   os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBExact')
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBExact'   
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBExact')
+   os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameB.to_excel(writer)
    writer.save()
