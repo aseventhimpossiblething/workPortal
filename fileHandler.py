@@ -15,7 +15,10 @@ import gc
 
 
 
-
+SheetsFileLocation="/var/www/workPortal/Sheets"
+currentCommunitiesLocation="/var/www/workPortal/Sheets/currentCommunities"
+currentGoogleLocation="/var/www/workPortal/Sheets/CommunityUpdates/Google/currentGoogle"
+currentBingLocation="/var/www/workPortal/Sheets/CommunityUpdates/Bing/currentBing"
 
 def ValidatXLSXtime(arr):
         Error=arr+" Generated an error check that filetype is xlsx"
@@ -122,13 +125,13 @@ def CommListFileHandler():
             
     print("did not Check that Filles are XlSX")    
    
-    os.chdir('/app/Sheets/CommunityUpdates/currentCommunities')          
+    os.chdir('currentCommunitiesLocation')          
     request.files['Communities'].save('WorkingCommunities')
        
-    os.chdir('/app/Sheets/CommunityUpdates/Google/currentGoogle')
+    os.chdir(currentGoogleLocation)
     request.files['currentGoogle'].save('WorkingGoogle')
     
-    os.chdir('/app/Sheets/CommunityUpdates/Bing/currentBing')
+    os.chdir(currentBingLocation)
     request.files['currentBing'].save('WorkingBing')
      
     print("saved Files") 
@@ -138,7 +141,7 @@ def CommListFileHandler():
    
        
     def async_fileloader():
-     os.chdir('/app/Sheets/') 
+     os.chdir(SheetsFileLocation) 
      storeRequest=open('RequestsVsResponses.txt','w')    
      storeRequest.write("Request, ")
      storeRequest.close()           
