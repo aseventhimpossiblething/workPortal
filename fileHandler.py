@@ -125,7 +125,8 @@ def CommListFileHandler():
             
     print("did not Check that Filles are XlSX")    
    
-    os.chdir(currentCommunitiesLocation)          
+    os.chdir(currentCommunitiesLocation)
+    os.system(sudo chmod -R 777 currentCommunitiesLocation)
     request.files['Communities'].save('WorkingCommunities')
        
     os.chdir(currentGoogleLocation)
