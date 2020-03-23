@@ -41,14 +41,18 @@ def BidOpFileHandler():
     #print("********************************BidOpFileHandler() flag 3*************************************************")
 
     print("filename    ",request.files['sheet'].filename)
-    os.chdir('/var/www/workPortal/Sheets')  
+    #os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')  
     isTrainSet=request.files['sheet'].filename.lower().find("train") 
     if isTrainSet==-1:
-                toscrn="Data Set has not Been Labelled as Training. Bid Optimisation will be attempted"
+                os.chdir('/var/www/workPortal/Sheets/BidOpData/BidOpIncommingSheets/)
                 request.files['sheet'].save("BidOpTemp")
+                toscrn="Data Set has not Been Labelled as Training. Bid Optimisation will be attempted"
+                
     if isTrainSet!=-1:  
-                toscrn="Dataset is labelled Training. It will Be used as Training Data"
+                os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
                 request.files['sheet'].save("TrainingTemp")
+                toscrn="Dataset is labelled Training. It will Be used as Training Data"
+                
                 
     #toscrn=isTrainSet
     print(isTrainSet)
