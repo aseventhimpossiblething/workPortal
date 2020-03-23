@@ -510,7 +510,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  if SearchChan=="google":
   if MatchType=='SBMM':
    print("In KeywordGen google SBMM ")
-   SaveSegment=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'
    #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW')
    os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
