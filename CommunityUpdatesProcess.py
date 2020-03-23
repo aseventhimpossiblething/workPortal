@@ -695,7 +695,7 @@ def initialCommUpdatProcess():
                        
    
  print("Main ")
- os.chdir('/Sheets/CommunityUpdates/Bing/currentBing')
+ os.chdir(fileHandler.currentBingLocation)
   
  
  TheSampleText=WorkingBingEOF
