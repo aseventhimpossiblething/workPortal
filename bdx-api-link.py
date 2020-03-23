@@ -1,4 +1,4 @@
-domain=bhiapilink.com
+domain=http://bhiapilink.com
 mport CommunityUpdatesProcess
 import CommunityUpdatesProcess2
 import GetCampaigns
@@ -130,8 +130,8 @@ def CommUpdateDisplay():
 
 @app.route('/CommUpdateExcel')
 def CommUpdateExcel():
- domain0=bhiapilink.com        
- return render_template('var/www/workPortal/templates/CommUpdateExcel.html',CacheBreakStamp=datetime.now(),domain=domain0)
+ domain=http://bhiapilink.com        
+ return render_template('var/www/workPortal/templates/CommUpdateExcel.html',CacheBreakStamp=datetime.now(),thedomain=domain)
 
 @app.route('/GoogleKWSBMM')
 def GoogleKWSBMMKW():
