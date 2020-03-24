@@ -29,17 +29,7 @@ def ValidatXLSXtime(arr):
             print(Valid)
 
 def BidOpFileHandler():
-    #os.chdir('/var/www/workPortal/Sheets')    
-    print("********************************BidOpFileHandler() flag 1************************************************")
-
-    #print("request.files______:   ",request.files)
-
-    print("********************************BidOpFileHandler() flag 2************************************************")
-
-    #print("request.files['sheet']______:    ",request.files['sheet'])
-
-    #print("********************************BidOpFileHandler() flag 3*************************************************")
-
+    
     print("filename    ",request.files['sheet'].filename)
     #os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')  
     isTrainSet=request.files['sheet'].filename.lower().find("train") 
@@ -53,75 +43,10 @@ def BidOpFileHandler():
                 request.files['sheet'].save("TrainingTemp")
                 toscrn="Dataset is labelled Training. It will Be used as Training Data"
                 
-                
-    #toscrn=isTrainSet
     print(isTrainSet)
-    #os.chdir('/var/www/workPortal/Sheets')   
-    #request.files['sheet'].save(TrainingTemp)
-        
-        
-
-   
-    print("*********************************BidOpFileHandler() flag 3***********************************************")
-
-    print("os.getcwd()_____: ",os.getcwd())
-
-    #rint("********************************BidOpFileHandler() flag 5************************************************")
-
-  
-
-    #print("********************************BidOpFileHandler() flag 6************************************************")
-
-    #os.chdir('/var/www/workPortal/Sheets')
-
-    #print("os.chdir(/Sheets)____:")
-
-    #print("********************************BidOpFileHandler() flag 7************************************************")
-
-    #print("os.getcwd()_____: ",os.getcwd())
-
-    #print("********************************BidOpFileHandler() flag 8************************************************")
-
-    #print("os.listdir()____:",os.listdir())
-
-    #print("********************************BidOpFileHandler() flag 9************************************************")
-    
-    #Decision Must be Made Here Before Save Training or BidOp 
-    #request.files['sheet'].save(request.files['sheet'].filename)
-        
-
-    #print("********************************BidOpFileHandler() flag 10************************************************")
-
-    #print("os.getcwd()____:",os.getcwd)
-
-    #print("********************************BidOpFileHandler() flag 11************************************************")
-
     print("os.listdir()____:",os.listdir())
 
-    print("********************************BidOpFileHandler() flag 12************************************************")
-    
-    # print("os.path.join('/app/Sheets',request.files['sheet'].filename))_____:",os.path.join('/app/Sheets',request.files['sheet'].filename))
-
-    #print("********************************BidOpFileHandler() flag 13************************************************")
-
-    #print("request.files['sheet'].filename_______:     ",request.files['sheet'].filename)
-
-    #print("********************************BidOpFileHandler() flag 14************************************************")
-
-    #print("request.files['sheet']______:    ",request.files['sheet'])
-
-    #print("********************************BidOpFileHandler() flag 15************************************************")
-
-    #print("request.files______:    ",request.files)
-
-    #print("**************************BidOpFileHandler() flag 16******************************************************")
-    
-    #toscrn = "done"
-    #print("**************************BidOpFileHandler() flag 17******************************************************")
-    
-
-    
-    return toscrn
+   return toscrn
 
 def CommListFileHandler():
     print("Starting to Handle Files") 
