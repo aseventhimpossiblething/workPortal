@@ -34,7 +34,7 @@ def BidOpFileHandler():
     #os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')  
     isTrainSet=request.files['sheet'].filename.lower().find("train") 
     if isTrainSet==-1:
-                os.chdir('/var/www/workPortal/Sheets/BidOpData/BidOpIncommingSheets/)
+                os.chdir('/var/www/workPortal/Sheets/BidOpData/BidOpIncommingSheets/')
                 request.files['sheet'].save("BidOpTemp")
                 toscrn="Data Set has not Been Labelled as Training. Bid Optimisation will be attempted"
                 
@@ -46,7 +46,7 @@ def BidOpFileHandler():
     print(isTrainSet)
     print("os.listdir()____:",os.listdir())
 
-   return toscrn
+    return toscrn
 
 def CommListFileHandler():
     print("Starting to Handle Files") 
