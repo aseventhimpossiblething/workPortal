@@ -14,12 +14,12 @@ from flask import send_file
 import gc
 
 
-
+os.system('echo his is Echoed by system os number 1')
 SheetsFileLocation="/var/www/workPortal/Sheets"
 currentCommunitiesLocation="/var/www/workPortal/Sheets/CommunityUpdates/currentCommunities"
 currentGoogleLocation="/var/www/workPortal/Sheets/CommunityUpdates/Google/currentGoogle"
 currentBingLocation="/var/www/workPortal/Sheets/CommunityUpdates/Bing/currentBing"
-
+os.system('echo his is Echoed by system os number 2')
 def ValidatXLSXtime(arr):
         Error=arr+" Generated an error check that filetype is xlsx"
         Valid=arr+" is valid"
@@ -98,6 +98,7 @@ def CommListFileHandler():
     LoadAllCommunityFiles=threading.Thread(target=async_fileloader)
     LoadAllCommunityFiles.start()    
     print("Should respond now!!! ")
+    os.system('echo his is Echoed by system os number 3')    
     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=http://bhiapilink.com/DisplayCommUpdate'><html>did not forward</html>"
          
 
