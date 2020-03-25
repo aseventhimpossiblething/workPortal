@@ -285,14 +285,7 @@ def BidOpInput():
 def BidOPUpload():
     return fileHandler.BidOpFileHandler()
 
-"""
-@app.route('/CommunityDataFrame')
-def CommunityDataFrame():
-    return render_template('CommunityDataframe.html')
-@app.route('/DataFrameCss')
-def DataFrameCss():
-    return render_template('DataFrameCss.css')
-"""    
+
 
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
