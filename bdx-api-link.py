@@ -17,8 +17,10 @@ from flask import send_from_directory
 #import Campaigns
 #import reportexpFreeToDelete
 from datetime import datetime
-os.system('echo sudo chmod -R 777 Sheets')
-os.system('echo sudo chmod -R 777 templates')
+print('sudo chmod -R 777 Sheets')
+print('sudo chmod -R 777 templates')
+os.system('sudo chmod -R 777 Sheets')
+os.system('sudo chmod -R 777 templates')
 #from flask_sslify import SSLify
 
 #import psycopg2
