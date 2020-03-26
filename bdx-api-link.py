@@ -291,6 +291,7 @@ def BidOpTrainingDatas():
 
 @app.route('/BidOPUpload', methods=['POST','GET'])
 def BidOPUpload():
+    print("Bid Route Fired Page not yet Loaded")     
     return fileHandler.BidOpFileHandler()
 
 
