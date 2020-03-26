@@ -457,6 +457,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
    if len(Path1A_conv)>15:
     Path1A_conv=Path1A_conv.replace("-","")
+    Path1A_conv=Path1A_conv.replace("Village","Villa")
     Path1A_conv=Path1A_conv.replace("North","N")
     Path1A_conv=Path1A_conv.replace("South","S")
     Path1A_conv=Path1A_conv.replace("West","W")
