@@ -47,7 +47,7 @@ def BidOpFileHandler():
     Temp=pandas.read_excel('Temp')
     cols=str(Temp.columns).find('New Bid')    
     print(cols)    
-    toscrn=cols  
+    toscrn="cols" 
     #toscrn="Dataset is labelled Training. It will Be used as Training Data"
                 
     #print(isTrainSet)
