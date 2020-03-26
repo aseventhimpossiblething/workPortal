@@ -12,6 +12,9 @@ import io
 import threading
 from flask import send_file
 import gc
+from openpyxl import Workbook
+from openpyxl import load_workbook
+import xlsxwriter
 
 
 #os.system('echo his is Echoed by system os number 1')
@@ -49,7 +52,8 @@ def BidOpFileHandler():
     if isTrainingSheet!=-1:
        os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
        Temp=Pandas.DataFrame(Temp,columns='Campaign','Ad group','Keyword','Changes','New Bid','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top','Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget','Match type')
-       
+       #writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+       #.to_excel(writer)
        isTrainingSheet='This is Training Sheet will be added to the body of training Data'
     else:
         isTrainingSheet="This is Not Training Data Attempt will be made to Optimise bids"         
