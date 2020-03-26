@@ -17,8 +17,6 @@ from flask import send_from_directory
 #import Campaigns
 #import reportexpFreeToDelete
 from datetime import datetime
-print('sudo chmod -R 777 Sheets')
-print('sudo chmod -R 777 templates')
 os.system('sudo chmod -R 777 Sheets')
 os.system('sudo chmod -R 777 templates')
 #from flask_sslify import SSLify
@@ -26,10 +24,6 @@ os.system('sudo chmod -R 777 templates')
 #import psycopg2
 app = Flask(__name__,"/static/")
 #sslify = SSLify(app)
-#print("Loaded into Gunicorn and Log runs Correctly")
-#print("current directory - ",os.getcwd())
-#print("list contents",os.listdir())
-#DATABASE_URL = os.environ['DATABASE_URL']
 
 
 #application = Flask(__name__)   # Flask constructor
@@ -56,8 +50,6 @@ app = Flask(__name__,"/static/")
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 #conn.close
 
-#print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
-#{{CommonTag}}-{{pagetitle}}
 
 
 
@@ -66,8 +58,6 @@ app = Flask(__name__,"/static/")
 
 
 
-
-#CommonTagAll=Markup('<a href="https://bdx-api-link.herokuapp.com/">BDX Paid Search Portal</a>')
 
 
          
@@ -75,16 +65,7 @@ app = Flask(__name__,"/static/")
 def official():
     get_campaigns     
     return "."      
-"""
-@app.route('/getcampaigns')
-def official():
-    Getcampaigns     
-    return '.'
-"""    
-   
-
-
-         
+       
          
 
 @app.route('/favicon.png')
@@ -96,15 +77,11 @@ def favicon():
 def testtextfile():
     print("initial directory---------",os.getcwd())
     print("contents of current directory-------------",os.listdir())
-    #os.chdir("/app/Sheets/CommunityUpdates")
     os.chdir("/app/Sheets/CommunityUpdates/Bing/currentBing")
     print("current directory-------------",os.getcwd())
     print("contents of current directory--------------",os.listdir())
     TheSamplefile=open('TheSampleText.txt','r')
-    #TheSamplefile=open('TheSampleText.txt','w+') 
-    #print(TheSamplefile.read())     
-    #print(os.getcwd())
-     
+   
     j=2+2
     j=str(j)
     return TheSamplefile.read()
@@ -136,7 +113,6 @@ def CommUpdateDisplay():
 def CommUpdateExcel():
  global domain
  domain=domain
- #domain="http://bhiapilink.com"        
  return render_template('/CommUpdateExcel.html',CacheBreakStamp=datetime.now(),domain=domain)
 
 @app.route('/GoogleKWSBMM')
@@ -297,7 +273,6 @@ def Scripts():
 @app.route('/')
 def index():
     global domain     
-    #domain="https://bdxapilink.com"
     domainCSS0=domain+"/css"
     domainFavi=domain+"/favicon.png"
     return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi,domainCSS=domainCSS0)
@@ -310,16 +285,12 @@ def BidOpInput():
 def BidOPUpload():
     return fileHandler.BidOpFileHandler()
 
-@app.route('/CommunityDataFrame')
-def CommunityDataFrame():
-    return render_template('CommunityDataframe.html')
-@app.route('/DataFrameCss')
-def DataFrameCss():
-    return render_template('DataFrameCss.css')
+
 
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
     return render_template('CommunitiesForm.html')
+
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
     return fileHandler.CommListFileHandler()
