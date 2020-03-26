@@ -30,6 +30,7 @@ def ValidatXLSXtime(arr):
 
 def BidOpFileHandler():
     
+    """
     print("filename    ",request.files['sheet'].filename)
     #os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')  
     isTrainSet=request.files['sheet'].filename.lower().find("train") 
@@ -37,13 +38,17 @@ def BidOpFileHandler():
                 os.chdir('/var/www/workPortal/Sheets/BidOpData/BidOpIncommingSheets/')
                 request.files['sheet'].save("BidOpTemp")
                 toscrn="Data Set has not Been Labelled as Training. Bid Optimisation will be attempted"
+    """
+    """    
+    if isTrainSet!=-1: 
+    """
+    os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+    request.files['sheet'].save("Temp")
+    Temp=pandas.read_excel('Temp')
+    toscrn=Temp    
+    #toscrn="Dataset is labelled Training. It will Be used as Training Data"
                 
-    if isTrainSet!=-1:  
-                os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
-                request.files['sheet'].save("TrainingTemp")
-                toscrn="Dataset is labelled Training. It will Be used as Training Data"
-                
-    print(isTrainSet)
+    #print(isTrainSet)
     print("os.listdir()____:",os.listdir())
 
     return toscrn
