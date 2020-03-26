@@ -281,6 +281,14 @@ def index():
 def BidOpInput():
     return render_template('BidOpForm.html')
 
+"""
+@app.route('/BidOpTrainingData', methods=['POST','GET'] )
+def BidOpTrainingDatas():
+    return fileHandler.BidOpFileHandler() 
+"""    
+
+
+
 @app.route('/BidOPUpload', methods=['POST','GET'])
 def BidOPUpload():
     return fileHandler.BidOpFileHandler()
