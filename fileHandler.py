@@ -47,6 +47,9 @@ def BidOpFileHandler():
     Temp=pandas.read_excel('Temp')
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
+       os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+       Temp=Pandas.Dataframe(Temp,columns='Campaign','Ad group','Keyword','Changes','New Bid','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top','Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget','Match type')
+       
        isTrainingSheet='This is Training Sheet will be added to the body of training Data'
     else:
         isTrainingSheet="This is Not Training Data Attempt will be made to Optimise bids"         
