@@ -45,7 +45,7 @@ def BidOpFileHandler():
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     request.files['sheet'].save("Temp")
     Temp=pandas.read_excel('Temp')
-    Temp.columns.find('New Bids')    
+    print(Temp.columns)    
     toscrn=Temp    
     #toscrn="Dataset is labelled Training. It will Be used as Training Data"
                 
