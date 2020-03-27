@@ -57,7 +57,7 @@ def BidOpFileHandler():
        #writer=pandas.excelWriter('DefaultSheet.xlsx').to_excel()
        CoreTrainingData.to_excel('BidOpSeed.xlsx')
        #.to_excel(writer)
-       isTrainingSheet='This Training Sheet will be added to the body of training Data'
+       isTrainingSheet="<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
     else:
         isTrainingSheet="This is Not Training Data, Attempt will be made to Optimise bids"         
                 
