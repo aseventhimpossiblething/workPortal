@@ -52,7 +52,8 @@ def BidOpFileHandler():
     if isTrainingSheet!=-1:
        os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
        #Temp=Pandas.DataFrame(Temp,columns='Campaign','Ad group','Keyword','Changes','New Bid','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top','Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget','Match type')
-       Temp=Pandas.DataFrame(Temp)
+       Temp=Pandas.DataFrame(Temp, columns=Campaign)
+       print(Temp)
        pandas.DataFrame('BidOpSeed.xlsx')
        #writer=pandas.ExcelWriter('DefaultSheet.xlsx')
        #.to_excel(writer)
@@ -83,7 +84,7 @@ def CommListFileHandler():
         return "Active Community slot is empty"
        
     
-    print("did not Check That File Slots are Filled")    
+    #print("did not Check That File Slots are Filled")    
     
     if request.files['Communities'].filename.find("xlsx")<1:
                 return "The Community Sheet is not XLSX file type";
@@ -92,7 +93,7 @@ def CommListFileHandler():
     if request.files['currentBing'].filename.find("xlsx")<1:
                 return "The Bing Sheet is not XLSX file type"; 
             
-    print("did not Check that Filles are XlSX")    
+    #print("did not Check that Filles are XlSX")    
    
     os.chdir(currentCommunitiesLocation)
     SHcommand="sudo chmod -R 777 "+currentCommunitiesLocation
@@ -105,7 +106,7 @@ def CommListFileHandler():
     os.chdir(currentBingLocation)
     request.files['currentBing'].save('WorkingBing')
      
-    print("saved Files") 
+    #print("saved Files") 
   
     
    
@@ -119,7 +120,7 @@ def CommListFileHandler():
      CommunityUpdatesProcess.initialCommUpdatProcess()
     LoadAllCommunityFiles=threading.Thread(target=async_fileloader)
     LoadAllCommunityFiles.start()    
-    print("Should respond now!!! ")
+    #print("Should respond now!!! ")
     #os.system('echo his is Echoed by system os number 3')    
     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=http://bhiapilink.com/DisplayCommUpdate'><html>did not forward</html>"
          
