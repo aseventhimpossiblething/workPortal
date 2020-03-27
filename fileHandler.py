@@ -57,9 +57,17 @@ def BidOpFileHandler():
        #writer=pandas.excelWriter('DefaultSheet.xlsx').to_excel()
        #CoreTrainingData.to_excel('BidOpSeed.xlsx')
        CoreTrainingData.to_excel('BidOpSeedViewable.xlsx')
-       print(CoreTrainingData)
-       print("['Match type']",CoreTrainingData['Match type'])
-       print("[['Match type']]",CoreTrainingData[['Match type']])
+       #print(CoreTrainingData)
+       #print("['Match type']",CoreTrainingData['Match type'])
+       #print("[['Match type']]",CoreTrainingData[['Match type']])
+       for kw in CoreTrainingData['Match type']:
+        if kw='Exact':
+                kw=1;
+        if kw='Broad':
+                kw=2;
+        else:
+                kw=0;
+       print('CoreTrainingData['Match type']',CoreTrainingData['Match type'])         
        CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Changes','Campaign','Ad group','Match type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
        
        CoreTrainingData.to_excel('BidOpSeed.xlsx')
