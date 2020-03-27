@@ -245,7 +245,12 @@ def BingASX():
 def BingBSX():
  return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeExact/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSXB.xlsx")
-                 
+
+
+
+@app.route('/BasisOfBids')
+def Basis():
+ return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/BidOpSeed.xlsx', attachment_filename='BidOpSeed.xlsx')
 
          
 
