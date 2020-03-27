@@ -69,8 +69,8 @@ def BidOpFileHandler():
     #print(isTrainSet)
     print("os.listdir()____:",os.listdir())
 
-    #return toscrn
-    return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/BidOpSeed.xlsx', attachment_filename='BidOpSeed.xlsx')
+    return toscrn
+    #return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/BidOpSeed.xlsx', attachment_filename='BidOpSeed.xlsx')
 
 def CommListFileHandler():
     print("Starting to Handle Files") 
