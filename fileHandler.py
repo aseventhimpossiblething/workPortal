@@ -54,7 +54,7 @@ def BidOpFileHandler():
        Temp=pandas.DataFrame(Temp,columns=['Campaign','Ad group','Keyword','Changes','New Bid','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top','Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget','Match type'])
        #Temp=pandas.DataFrame(Temp, columns='Campaign')
        #print(Temp)
-       CoreTrainingData=pandas.DataFrame.read_excel('BidOpSeed.xlsx')
+       CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
        print(CoreTrainingData)
        #writer=pandas.ExcelWriter('DefaultSheet.xlsx')
        #.to_excel(writer)
