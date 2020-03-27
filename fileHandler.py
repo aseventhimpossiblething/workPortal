@@ -61,9 +61,9 @@ def BidOpFileHandler():
        #print("['Match type']",CoreTrainingData['Match type'])
        #print("[['Match type']]",CoreTrainingData[['Match type']])
        for kw in CoreTrainingData['Match type']:
-        if kw='Exact':
+        if kw=='Exact':
                 kw=1;
-        if kw='Broad':
+        if kw=='Broad':
                 kw=2;
         else:
                 kw=0;
