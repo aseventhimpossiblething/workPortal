@@ -60,6 +60,7 @@ def BidOpFileHandler():
        print(CoreTrainingData)
        print("[]",CoreTrainingData[0])
        print("[[]]",CoreTrainingData[[0]])
+       CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Changes','Campaign','Ad group','Match type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
        
        CoreTrainingData.to_excel('BidOpSeed.xlsx')
        
