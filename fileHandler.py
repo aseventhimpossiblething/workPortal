@@ -32,19 +32,7 @@ def ValidatXLSXtime(arr):
             print(Valid)
 
 def BidOpFileHandler():
-    
-    """
-    print("filename    ",request.files['sheet'].filename)
-    #os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')  
-    isTrainSet=request.files['sheet'].filename.lower().find("train") 
-    if isTrainSet==-1:
-                os.chdir('/var/www/workPortal/Sheets/BidOpData/BidOpIncommingSheets/')
-                request.files['sheet'].save("BidOpTemp")
-                toscrn="Data Set has not Been Labelled as Training. Bid Optimisation will be attempted"
-    """
-    """    
-    if isTrainSet!=-1: 
-    """
+        
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     request.files['sheet'].save("Temp")
     Temp=pandas.read_excel('Temp')
@@ -52,12 +40,14 @@ def BidOpFileHandler():
     if isTrainingSheet!=-1:
        os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
        Temp=pandas.DataFrame(Temp,columns=['Campaign','Ad group','Keyword','Changes','New Bid','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top','Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget','Match type'])
-       #Temp=pandas.DataFrame(Temp, columns='Campaign')
-       #print(Temp)
        CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
        print(CoreTrainingData)
+       print("_________________________________________________________________________________________") 
+       print("_________________________________________________________________________________________") 
        CoreTrainingData=CoreTrainingData.append(Temp, sort='False')
-       
+       print("_________________________________________________________________________________________") 
+       print("_________________________________________________________________________________________") 
+       print(CoreTrainingData)
        #writer=pandas.ExcelWriter('DefaultSheet.xlsx')
        #.to_excel(writer)
        isTrainingSheet='This Training Sheet will be added to the body of training Data'
