@@ -42,10 +42,10 @@ def BidOpFileHandler():
        
        Temp=pandas.DataFrame(Temp,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
        CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
-       print("----------------------------------Temp------------------------")
-       print(Temp)
-       print('--------------------------Core Training Data------------------')
-       print(CoreTrainingData)
+       #print("----------------------------------Temp------------------------")
+       #print(Temp)
+       #print('--------------------------Core Training Data------------------')
+       #print(CoreTrainingData)
        print("_________________________________________________________________________________________") 
        print("_________________________________________________________________________________________") 
        CoreTrainingData=CoreTrainingData.append(Temp, sort='False')
@@ -53,10 +53,16 @@ def BidOpFileHandler():
        print("_________________________________________________________________________________________") 
        print("_________________________________________________________________________________________") 
        print("--------------------------Merged New Core Data-------------------------") 
-       print(CoreTrainingData)
+       #print(CoreTrainingData)
        #writer=pandas.excelWriter('DefaultSheet.xlsx').to_excel()
+       #CoreTrainingData.to_excel('BidOpSeed.xlsx')
+       CoreTrainingData.to_excel('BidOpSeedViewable.xlsx')
+       print(CoreTrainingData)
+       print("[]",CoreTrainingData[0])
+       print("[[]]",CoreTrainingData[[0]])
+       
        CoreTrainingData.to_excel('BidOpSeed.xlsx')
-       CoreTrainingData.to_excel('BidOpSeedViewable.xlsx') 
+       
        #.to_excel(writer)
        isTrainingSheet="<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
     else:
