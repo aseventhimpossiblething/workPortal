@@ -56,6 +56,8 @@ def BidOpFileHandler():
        #print(Temp)
        CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
        print(CoreTrainingData)
+       CoreTrainingData=CoreTrainingData.append(Temp)
+       
        #writer=pandas.ExcelWriter('DefaultSheet.xlsx')
        #.to_excel(writer)
        isTrainingSheet='This is Training Sheet will be added to the body of training Data'
