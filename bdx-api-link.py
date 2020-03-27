@@ -250,7 +250,7 @@ def BingBSX():
 
 @app.route('/BasisOfBids')
 def Basis():
- return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/BidOpSeed.xlsx', attachment_filename='BidOpSeed.xlsx')
+ return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/BidOpSeed.xlsx', attachment_filename='BidOpSeedViewable.xlsx')
 
          
 
