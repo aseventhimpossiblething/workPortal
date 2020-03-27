@@ -60,11 +60,13 @@ def BidOpFileHandler():
        #print(CoreTrainingData)
        #print("['Match type']",CoreTrainingData['Match type'])
        #print("[['Match type']]",CoreTrainingData[['Match type']])
+       """ 
        CountOfCore=0;
        while CountOfCore<len(CoreTrainingData['Match type']):
              MTNum=CoreTrainingData['Match type'][CountOfCore];
              print("From While total len ",len(CoreTrainingData['Match type']," current count ",CountOfCore," Match",MTNum)
-             CountOfCore+=1;   
+             CountOfCore+=1; 
+       """      
 
        
        for kw in CoreTrainingData['Match type']:
