@@ -64,7 +64,7 @@ def BidOpFileHandler():
 
        cc=0;
        for kw in CoreTrainingData['Match type']:
-       cc+=1; 
+        cc+=1; 
         
         if kw=='Exact':
                 kx=1;
