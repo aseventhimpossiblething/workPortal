@@ -49,6 +49,7 @@ def BidOpFileHandler():
        print("_________________________________________________________________________________________") 
        print("_________________________________________________________________________________________") 
        CoreTrainingData=CoreTrainingData.append(Temp, sort='False')
+       CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
        print("_________________________________________________________________________________________") 
        print("_________________________________________________________________________________________") 
        print("--------------------------Merged New Core Data-------------------------") 
