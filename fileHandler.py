@@ -52,8 +52,8 @@ def BidOpFileHandler():
        print("_________________________________________________________________________________________") 
        print("--------------------------Merged New Core Data-------------------------") 
        print(CoreTrainingData)
-       #writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-       
+       #writer=pandas.excelWriter('DefaultSheet.xlsx').to_excel()
+       CoreTrainingData.to_excel('BidOpSeed.xlsx')
        #.to_excel(writer)
        isTrainingSheet='This Training Sheet will be added to the body of training Data'
     else:
