@@ -63,7 +63,7 @@ def BidOpFileHandler():
        CountOfCore=0;
        while CountOfCore<len(CoreTrainingData['Match type']):
              MTNum=CoreTrainingData['Match type'][CountOfCore];
-             print("From While",MTBNum)
+             print("From While",MTNum)
              CountOfCore+=1;   
 
        
