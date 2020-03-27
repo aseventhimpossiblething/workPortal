@@ -41,14 +41,17 @@ def BidOpFileHandler():
        os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
        Temp=pandas.DataFrame(Temp,columns=['Campaign','Ad group','Keyword','Changes','New Bid','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top','Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget','Match type'])
        CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
+       print(Temp)
+       """
        print(CoreTrainingData)
        print("_________________________________________________________________________________________") 
        print("_________________________________________________________________________________________") 
-       CoreTrainingData=CoreTrainingData.append(Temp, sort='False')
+       #CoreTrainingData=CoreTrainingData.append(Temp, sort='False')
        print("_________________________________________________________________________________________") 
        print("_________________________________________________________________________________________") 
        print(CoreTrainingData)
        #writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+       """
        #.to_excel(writer)
        isTrainingSheet='This Training Sheet will be added to the body of training Data'
     else:
