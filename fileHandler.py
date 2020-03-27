@@ -60,23 +60,19 @@ def BidOpFileHandler():
        #print(CoreTrainingData)
        #print("['Match type']",CoreTrainingData['Match type'])
        #print("[['Match type']]",CoreTrainingData[['Match type']])
-       """ 
-       CountOfCore=0;
-       while CountOfCore<len(CoreTrainingData['Match type']):
-             MTNum=CoreTrainingData['Match type'][CountOfCore];
-             print("From While total len ",len(CoreTrainingData['Match type']," current count ",CountOfCore," Match",MTNum)
-             CountOfCore+=1; 
-       """      
-
        
+
+       cc=0;
        for kw in CoreTrainingData['Match type']:
+       cc+=1; 
+        
         if kw=='Exact':
-                kw=1;
+                kx=1;
         if kw=='Broad':
-                kw=2;
+                kx=2;
         else:
-                kw=0;
-        print("from for in ",kw)  
+                kx=0;
+        print(cc,"-",kw,'-',kx)  
         
        print("CoreTrainingData['Match type']",CoreTrainingData['Match type'])         
        CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Changes','Campaign','Ad group','Match type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
