@@ -273,9 +273,8 @@ def Scripts():
 @app.route('/')
 def index():
     global domain     
-    domainCSS0=domain+"/css"
     domainFavi=domain+"/favicon.png"
-    return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi,domainCSS=domainCSS0)
+    return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi)
 
 @app.route('/BidOps')
 def BidOpInput():
@@ -291,7 +290,6 @@ def BidOpTrainingDatas():
 
 @app.route('/BidOPUpload', methods=['POST','GET'])
 def BidOPUpload():
-    print("Bid Route Fired Page not yet Loaded")     
     return fileHandler.BidOpFileHandler()
 
 
