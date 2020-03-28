@@ -323,11 +323,13 @@ def acd():
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     readiness=open("ForestLoadingQueue.txt","r")
     readiness=readiness.read()
+    if readiness=="100%";
+         BPD="render_template('BidOpPending.html')"
     #print(readiness)
-    BPD1="Completed File"  
-    BPD2='<meta http-equiv="refresh" content="120"><html>Loading Training File - '+readiness+"</html>"
-    BPD=str(BPD2) 
-    print(BPD)
+    #BPD1="Completed File"  
+    BPD='<meta http-equiv="refresh" content="120"><html>Loading Training File - '+readiness+"</html>"
+    #BPD=str(BPD2) 
+    #print(BPD)
     readiness.close()     
     return BPD
     #return render_template('BidOpPending.html',BPD=BPD)
