@@ -76,6 +76,9 @@ def BidOpFileHandler():
                print("2-",kw) 
                kw=str(re.search('>\d+',kw))
                print("3- target str ",kw)
+               targLoc=kw.find('match='>1')
+               #match='>1
+               print(kw) 
                Adgroup.append(kw)
                #CoreTrainingData.to_excel('BidOpSeed.xlsx')
        
