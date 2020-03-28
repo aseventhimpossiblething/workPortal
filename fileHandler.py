@@ -53,22 +53,22 @@ def BidOpFileHandler():
            ccountr=0;   
            Match_Type=[];
            for kw in Temp['Match type']:
-               ccountr+=1;
+               #ccountr+=1;
                if kw=='Exact':
                 kw=1;
                if kw=='Broad':
                 kw=2;
                else:
                 kw=0;
-               print("Timeout on second pass count ",ccountr)        
+               #print("Timeout on second pass count ",ccountr)        
                Match_Type.append(kw)
                #print(len(Match_Type))  
                
            Temp['Match type']=Match_Type;
         
-           print("Temp['Match type']",Temp['Match type'])         
+           #print("Temp['Match type']",Temp['Match type'])         
            Temp=pandas.DataFrame(Temp,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
-           
+           print(Temp['Match Type'])
            count=0;      
            Adgroup=[];
            for kw in Temp['Ad group']:
