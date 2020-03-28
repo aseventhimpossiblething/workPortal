@@ -248,12 +248,17 @@ def BingBSX():
 
 
 
-@app.route('/BasisOfBids')
-def Basis():
+@app.route('/BasisOfBidsHuman')
+def BasisH():
  return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/BidOpSeed.xlsx', attachment_filename='BidOpSeedViewable.xlsx')
 
          
 
+@app.route('/BasisOfBidsMachine')
+def BasisM():
+ return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/BidOpSeed.xlsx', attachment_filename='BidOpSeed.xlsx')
+
+         
 
 
     
