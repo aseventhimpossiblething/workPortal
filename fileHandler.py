@@ -69,6 +69,9 @@ def BidOpFileHandler():
                
                Match_Type.append(kw)
                #print(len(Match_Type))  
+           record_async_start=open("ForestLoadingQueue.txt","w")
+           record_async_start.write("25%")
+           record_async_start.close()     
                
            Temp['Match Type']=Match_Type;
            #print("-------------------Immediatly following Number conversion below-----")   
