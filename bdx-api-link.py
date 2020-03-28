@@ -318,6 +318,16 @@ def acc():
     return render_template('account.html')
     
    
+@app.route('/BidOpPending')
+def acd():
+    BPD1="Completed File"  
+    BPD2="File Not Finished"
+    BPD=BPD1     
+    return render_template('BidOpPending.html',BPD)
+
+
+
+
 
 
 
