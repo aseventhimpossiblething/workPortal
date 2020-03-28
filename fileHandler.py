@@ -40,7 +40,7 @@ def BidOpFileHandler():
     record_async_start=open("ForestLoadingQueue.txt","w")
     record_async_start.write("1%")
     record_async_start.close()
-    print("1%")
+    #print("1%")
     #record_async_start.close()    
     #Temp.fillna(0) 
     isTrainingSheet=str(Temp.columns).find('New Bid') 
@@ -55,7 +55,10 @@ def BidOpFileHandler():
            CoreTrainingData=CoreTrainingData.append(Temp, sort='False')
            CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
            CoreTrainingData.to_excel('BidOpSeedViewable.xlsx')
-           ccountr=0;   
+           ccountr=0; 
+           record_async_start=open("ForestLoadingQueue.txt","w")
+           record_async_start.write("15%")
+           record_async_start.close()     
            Match_Type=[];
            for kw in Temp['Match type']:
                #ccountr+=1;
