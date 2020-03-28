@@ -65,10 +65,13 @@ def BidOpFileHandler():
                #print(len(Match_Type))  
                
            Temp['Match type']=Match_Type;
-        
-           #print("Temp['Match type']",Temp['Match type'])         
+           print("-------------------Immediatly following Number conversion below-----")   
+           print("Temp['Match type']",Temp['Match type'])     
+           print("-------------------Immediatly following Number conversion above-----") 
            Temp=pandas.DataFrame(Temp,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
+           print("-------------------Immediatly following Number Reframe Below-----") 
            print(Temp['Match Type'])
+           print("-------------------Immediatly following reframe above-----") 
            count=0;      
            Adgroup=[];
            for kw in Temp['Ad group']:
@@ -85,10 +88,12 @@ def BidOpFileHandler():
            core=pandas.DataFrame(core,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
            core.to_excel("BidOpSeed.xlsx")
            print("--------seed/core and Temp Merged-----------")
-           print(core)              
+           #print(core)              
            #.to_excel(writer)
            #print("cooked")
-           print(Temp['Match Type'])     
+           print("-------------------Immediatly following Number Merge with core below-----")      
+           print(Temp['Match Type'])   
+           print("-------------------Immediatly following Number Merge with core above-----")      
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
        #TrainBehavior(Temp);
        TrainLoad=threading.Thread(target=TrainBehavior);
