@@ -72,9 +72,10 @@ def BidOpFileHandler():
            Adgroup=[];
            for kw in CoreTrainingData['Ad group']:
                count+=1;
-               print("Regex Numbers in ad group for Market ",count)
+               print("1- Regex Numbers in ad group for Market ",count)
+               print("2-",kw) 
                kw=str(re.search('>\d+>',kw))
-               print("location of target str",kw)
+               print("3 location of target str ",kw)
                Adgroup.append(kw)
                #CoreTrainingData.to_excel('BidOpSeed.xlsx')
        
