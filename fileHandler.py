@@ -88,6 +88,7 @@ def BidOpFileHandler():
            print(core)              
            #.to_excel(writer)
            #print("cooked")
+           print(Temp['Match Type'])     
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
        #TrainBehavior(Temp);
        TrainLoad=threading.Thread(target=TrainBehavior);
