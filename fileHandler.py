@@ -60,10 +60,11 @@ def BidOpFileHandler():
                 kw=0;
                print("Timeout on second pass count ",ccountr)        
                Match_Type.append(kw)
-               print(len(Match_Type))  
-               CoreTrainingData['Match type']=Match_Type;
+               #print(len(Match_Type))  
+               
+           CoreTrainingData['Match type']=Match_Type;
         
-           #print("CoreTrainingData['Match type']",CoreTrainingData['Match type'])         
+           print("CoreTrainingData['Match type']",CoreTrainingData['Match type'])         
            CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
        
            AdGroup=[];
