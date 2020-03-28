@@ -38,7 +38,8 @@ def BidOpFileHandler():
     request.files['sheet'].save("Temp.xlsx")
     Temp=pandas.read_excel('Temp.xlsx')
     record_async_start=open("ForestLoadingQueue.txt","w")
-    record_async_start.write("1%") 
+    record_async_start.write("1%")
+    record_async_start.close()
     print("1%")
     #record_async_start.close()    
     #Temp.fillna(0) 
@@ -77,7 +78,8 @@ def BidOpFileHandler():
            #print("-------------------Immediatly following Number Reframe Below-----") 
            #print(Temp['Match Type'])
            #print("-------------------Immediatly following reframe above-----") 
-           record_async_start=open("ForestLoadingQueue.txt","w").write("50%").close()      
+           record_async_start=open("ForestLoadingQueue.txt","w").write("50%")
+           record_async_start.close()     
            Market=[];
            for kw in Temp['Ad group']:
                if str(re.search('>\d+',kw)).find("None")!=-1:
