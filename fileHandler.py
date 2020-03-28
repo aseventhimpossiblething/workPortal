@@ -49,20 +49,20 @@ def BidOpFileHandler():
            ccountr=0;   
            Match_Type=[];
            for kw in CoreTrainingData['Match type']:
-           ccountr+=1;
-           if kw=='Exact':
+               ccountr+=1;
+               if kw=='Exact':
                 kw=1;
-           if kw=='Broad':
+               if kw=='Broad':
                 kw=2;
-           else:
+               else:
                 kw=0;
-           print("Timeout on second pass count ",ccountr)        
-           Match_Type.append(kw)
-           print(len(Match_Type))  
-           CoreTrainingData['Match type']=Match_Type;
+               print("Timeout on second pass count ",ccountr)        
+               Match_Type.append(kw)
+               print(len(Match_Type))  
+               CoreTrainingData['Match type']=Match_Type;
         
-           print("CoreTrainingData['Match type']",CoreTrainingData['Match type'])         
-           CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Changes','Campaign','Ad group','Match type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
+           #print("CoreTrainingData['Match type']",CoreTrainingData['Match type'])         
+           CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Changes','Campaign','Ad group','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
        
            AdGroup=[];
            for kw in CoreTrainingData['Ad Group']:
@@ -74,7 +74,7 @@ def BidOpFileHandler():
        
            #.to_excel(writer)
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
-      TrainBehavior()
+      TrainBehavior();
         
         
     else:
