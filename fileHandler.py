@@ -83,7 +83,7 @@ def BidOpFileHandler():
            core=pandas.read_excel('BiOpSeed.xlsx')
            core=core.append(Temp, sort='False')
            core=pandas.DataFrame(core,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
-           core.to_excel("BidOpSeed.xlsx')
+           core.to_excel("BidOpSeed.xlsx")
            print("--------seed/core and Temp Merged-----------")
            print(core)              
            #.to_excel(writer)
