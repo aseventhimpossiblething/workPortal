@@ -73,11 +73,14 @@ def BidOpFileHandler():
                kw=str(re.search('>\d+>',kw)).find(">")
                print("location of target str",kw)
                Adgroup.append(kw)
-               CoreTrainingData.to_excel('BidOpSeed.xlsx')
+               #CoreTrainingData.to_excel('BidOpSeed.xlsx')
        
            #.to_excel(writer)
+           print("cooked")
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
-       TrainBehavior(Temp);
+       #TrainBehavior(Temp);
+       TrainLoad=threading.Thread(target=TrainBehavior);
+       TrainLoad.start(); 
        return "Sheet has Been Identified as Training Data it is being formatted and Loaded as such... please wait.. do not press back button"  
         
     else:
