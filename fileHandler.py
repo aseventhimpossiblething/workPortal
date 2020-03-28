@@ -37,6 +37,7 @@ def BidOpFileHandler():
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     request.files['sheet'].save("Temp")
     Temp=pandas.read_excel('Temp')
+    fillna(Temp); 
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
        def TrainBehavior(TempSheet): 
