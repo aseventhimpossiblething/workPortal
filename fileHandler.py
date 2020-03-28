@@ -58,7 +58,7 @@ def BidOpFileHandler():
                 kw=1;
                if kw=='Broad':
                 kw=2;
-               if str(Temp[Campaign][ccountr]).lower().find("gppc")>-1:
+               if str(Temp['Campaign'][ccountr]).lower().find("gppc")>-1:
                 kw=(kw)(1000);
                #print("Timeout on second pass count ",ccountr)
                
