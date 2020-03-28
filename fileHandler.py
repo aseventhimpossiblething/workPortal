@@ -73,7 +73,7 @@ def BidOpFileHandler():
            #print(Temp['Match Type'])
            #print("-------------------Immediatly following reframe above-----") 
                  
-           Adgroup=[];
+           Market=[];
            for kw in Temp['Ad group']:
                if str(re.search('>\d+',kw)).find("None")!=-1:
                       kw="match='>0"
@@ -82,15 +82,15 @@ def BidOpFileHandler():
                kw=kw[targLoc:].replace("match='>","").replace("'>","")
                print("Find Broken int w/o int ",kw)
                print("Find Broken int w/ int",int(kw))
-               Adgroup.append(kw)
+               Market.append(kw)
                #print(len(Adgroup))  
                #CoreTrainingData.to_excel('BidOpSeed.xlsx')
-           Temp['Ad group']=Adgroup
+           Temp['Market Number']=Market
            #print("-------------Temp Ready to Merge")     
            #print(Temp)
            core=pandas.read_excel('BidOpSeed.xlsx')
            core=core.append(Temp, sort='False')
-           core=pandas.DataFrame(core,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
+           core=pandas.DataFrame(core,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget','Market Number']) 
            core.to_excel("BidOpSeed.xlsx")
            print(core)
            #print("--------seed/core and Temp Merged-----------")
