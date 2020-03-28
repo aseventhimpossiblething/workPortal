@@ -75,13 +75,13 @@ def BidOpFileHandler():
                print("1- Regex Numbers in ad group for Market ",count)
                print("2-",kw) 
                kw=str(re.search('>\d+',kw))
-               print("3- target str ",kw)
+               #print("3- target str ",kw)
                targLoc=kw.find("match='>")
-               targLoc=kw[targLoc:]
-               targLoc=targLoc.replace("match='>","")
-               print("4- ",targLoc)
+               kw=kw[targLoc:]replace("match='>","").replace("'>",)
+               #kw=kw.replace("match='>","").replace("'>",)
+               print("3- ",kw)
                #match='>1
-               print("5- ",kw) 
+               print("4- kw= ",kw) 
                Adgroup.append(kw)
                #CoreTrainingData.to_excel('BidOpSeed.xlsx')
        
