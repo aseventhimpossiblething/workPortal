@@ -64,9 +64,9 @@ def BidOpFileHandler():
                Match_Type.append(kw)
                #print(len(Match_Type))  
                
-           Temp['Match type']=Match_Type;
+           Temp['Match Type']=Match_Type;
            print("-------------------Immediatly following Number conversion below-----")   
-           print("Temp['Match type']",Temp['Match type'])     
+           print("Temp['Match Type']",Temp['Match Type'])     
            print("-------------------Immediatly following Number conversion above-----") 
            Temp=pandas.DataFrame(Temp,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
            print("-------------------Immediatly following Number Reframe Below-----") 
