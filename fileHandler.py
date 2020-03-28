@@ -79,7 +79,7 @@ def BidOpFileHandler():
            print("cooked")
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
        #TrainBehavior(Temp);
-       TrainLoad=threading.Thread(target=TrainBehavior);
+       TrainLoad=threading.Thread(target=TrainBehavior(Temp));
        TrainLoad.start(); 
        return "Sheet has Been Identified as Training Data it is being formatted and Loaded as such... please wait.. do not press back button"  
         
