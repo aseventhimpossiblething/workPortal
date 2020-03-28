@@ -78,7 +78,8 @@ def BidOpFileHandler():
            #print("-------------------Immediatly following Number Reframe Below-----") 
            #print(Temp['Match Type'])
            #print("-------------------Immediatly following reframe above-----") 
-           record_async_start=open("ForestLoadingQueue.txt","w").write("50%")
+           record_async_start=open("ForestLoadingQueue.txt","w")
+           record_async_start.write("50%")
            record_async_start.close()     
            Market=[];
            for kw in Temp['Ad group']:
