@@ -77,10 +77,11 @@ def BidOpFileHandler():
            for kw in Temp['Ad group']:
                if re.search('>\d+',kw)==-1:
                       kw="match='>0"
+               preserv=str(re.search('>\d+',kw))
                kw=str(re.search('>\d+',kw))
                targLoc=kw.find("match='>")
                kw=kw[targLoc:].replace("match='>","").replace("'>","")
-               print("Find Broken int w/o int ",kw)
+               print("Find Broken int w/o int ",preserv," - ",kw)
                print("Find Broken int w/ int",int(kw))
                Adgroup.append(kw)
                #CoreTrainingData.to_excel('BidOpSeed.xlsx')
