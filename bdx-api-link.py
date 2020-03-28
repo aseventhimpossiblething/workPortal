@@ -320,10 +320,15 @@ def acc():
    
 @app.route('/BidOpPending')
 def acd():
+    os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+    readiness=open("ForestLoadingQueue.txt","r")
+    readiness=rediness.read()
+    #print(readiness)
     BPD1="Completed File"  
-    BPD2="File Not Finished"
-    BPD=BPD1 
-    return '<meta http-equiv="refresh" content="120"><html>LOADING..... This can Take some time</html>'
+    BPD2='<meta http-equiv="refresh" content="120"><html>Loading Training File - '+readiness+"</html>"
+    BPD=str(BPD2) 
+    print(BPD)
+    return BPD
     #return render_template('BidOpPending.html',BPD=BPD)
 
 
