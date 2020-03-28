@@ -329,8 +329,8 @@ def acd():
     #BPD1="Completed File"  
     BPD='<meta http-equiv="refresh" content="120"><html>Loading Training File - '+ready+"</html>"
     #BPD=str(BPD2) 
-    #print(BPD)
-    readiness.close()     
+    print(BPD)
+    #readiness.close()     
     return BPD
     #return render_template('BidOpPending.html',BPD=BPD)
 
