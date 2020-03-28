@@ -40,7 +40,7 @@ def BidOpFileHandler():
     Temp.fillna(0) 
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
-       def TrainBehavior(TempSheet):
+       def TrainBehavior():
            print('async started') 
            Temp=TempSheet 
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
@@ -81,7 +81,7 @@ def BidOpFileHandler():
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
        #TrainBehavior(Temp);
        TrainLoad=threading.Thread(target=TrainBehavior(Temp));
-       TrainLoad.start(); 
+       TrainLoad.start(Temp); 
        return "Sheet has Been Identified as Training Data it is being formatted and Loaded as such... please wait.. do not press back button"  
         
     else:
