@@ -323,7 +323,7 @@ def acd():
     BPD1="Completed File"  
     BPD2="File Not Finished"
     BPD=BPD1     
-    return render_template('BidOpPending.html',BPD)
+    return render_template('BidOpPending.html',BPD=BPD)
 
 
 
