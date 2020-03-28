@@ -39,7 +39,7 @@ def BidOpFileHandler():
     Temp=pandas.read_excel('Temp')
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
-       def TrainBehavior: 
+       def TrainBehavior(): 
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
            Temp=pandas.DataFrame(Temp,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
            CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
