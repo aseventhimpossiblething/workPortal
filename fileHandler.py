@@ -67,11 +67,13 @@ def BidOpFileHandler():
         
            print("CoreTrainingData['Match type']",CoreTrainingData['Match type'])         
            CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
-       
+           
+           count=0;      
            Adgroup=[];
            for kw in CoreTrainingData['Ad group']:
-               print("Regex Numbers in ad group for Market")
-               kw=str(re.search('>\d+>',kw)).find(">")
+               count+=1;
+               print("Regex Numbers in ad group for Market ",count)
+               kw=str(re.search('>\d+>',kw))
                print("location of target str",kw)
                Adgroup.append(kw)
                #CoreTrainingData.to_excel('BidOpSeed.xlsx')
