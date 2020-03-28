@@ -90,7 +90,7 @@ def BidOpFileHandler():
            core=pandas.DataFrame(core,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget','Market Number']) 
            core.to_excel("BidOpSeed.xlsx")
            print(core)
-            record_async_start=open("ForestLoadingQueue.txt","w").write("100%").save(     
+           record_async_start=open("ForestLoadingQueue.txt","w").write("100%").save();     
            
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
        #TrainBehavior(Temp);
