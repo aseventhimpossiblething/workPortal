@@ -78,7 +78,7 @@ def BidOpFileHandler():
                kw=str(re.search('>\d+',kw))
                targLoc=kw.find("match='>")
                kw=kw[targLoc:].replace("match='>","").replace("'>","")
-               Adgroup.append(kw)
+               Adgroup.append(int(kw))
                #CoreTrainingData.to_excel('BidOpSeed.xlsx')
            Temp['Ad group']=Adgroup
            print("-------------Temp Ready to Merge")     
