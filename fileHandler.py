@@ -65,13 +65,13 @@ def BidOpFileHandler():
                #print(len(Match_Type))  
                
            Temp['Match Type']=Match_Type;
-           print("-------------------Immediatly following Number conversion below-----")   
-           print("Temp['Match Type']",Temp['Match Type'])     
-           print("-------------------Immediatly following Number conversion above-----") 
+           #print("-------------------Immediatly following Number conversion below-----")   
+           #print("Temp['Match Type']",Temp['Match Type'])     
+           #print("-------------------Immediatly following Number conversion above-----") 
            Temp=pandas.DataFrame(Temp,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
-           print("-------------------Immediatly following Number Reframe Below-----") 
-           print(Temp['Match Type'])
-           print("-------------------Immediatly following reframe above-----") 
+           #print("-------------------Immediatly following Number Reframe Below-----") 
+           #print(Temp['Match Type'])
+           #print("-------------------Immediatly following reframe above-----") 
            count=0;      
            Adgroup=[];
            for kw in Temp['Ad group']:
@@ -80,22 +80,23 @@ def BidOpFileHandler():
                kw=str(re.search('>\d+',kw))
                targLoc=kw.find("match='>")
                kw=kw[targLoc:].replace("match='>","").replace("'>","")
-               Adgroup.append(int(kw))
+               print("Find Broken int ",int(kw))
+               Adgroup.append(kw)
                #CoreTrainingData.to_excel('BidOpSeed.xlsx')
            Temp['Ad group']=Adgroup
-           print("-------------Temp Ready to Merge")     
-           print(Temp)
+           #print("-------------Temp Ready to Merge")     
+           #print(Temp)
            core=pandas.read_excel('BidOpSeed.xlsx')
            core=core.append(Temp, sort='False')
            core=pandas.DataFrame(core,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
            core.to_excel("BidOpSeed.xlsx")
-           print("--------seed/core and Temp Merged-----------")
+           #print("--------seed/core and Temp Merged-----------")
            #print(core)              
            #.to_excel(writer)
            #print("cooked")
-           print("-------------------Immediatly following Number Merge with core below-----")      
-           print(Temp['Match Type'])   
-           print("-------------------Immediatly following Number Merge with core above-----")      
+           #print("-------------------Immediatly following Number Merge with core below-----")      
+           #print(Temp['Match Type'])   
+           #print("-------------------Immediatly following Number Merge with core above-----")      
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
        #TrainBehavior(Temp);
        TrainLoad=threading.Thread(target=TrainBehavior);
