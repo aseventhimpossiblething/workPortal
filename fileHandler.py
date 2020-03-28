@@ -68,7 +68,7 @@ def BidOpFileHandler():
            CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
        
            AdGroup=[];
-           for kw in CoreTrainingData['Ad Group']:
+           for kw in CoreTrainingData['Ad group']:
                print("Regex Numbers in ad group for Market")
                kw=re.search('>\d+>',kw).find(">")
                print("location of target str",kw)
