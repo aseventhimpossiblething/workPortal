@@ -322,8 +322,9 @@ def acc():
 def acd():
     BPD1="Completed File"  
     BPD2="File Not Finished"
-    BPD=BPD1     
-    return render_template('BidOpPending.html',BPD=BPD)
+    BPD=BPD1 
+    return '<meta http-equiv="refresh" content="120"><html>LOADING..... This can Take some time</html>'
+    #return render_template('BidOpPending.html',BPD=BPD)
 
 
 
