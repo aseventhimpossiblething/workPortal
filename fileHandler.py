@@ -51,7 +51,7 @@ def BidOpFileHandler():
        print("_________________________________________________________________________________________") 
        CoreTrainingData.to_excel('BidOpSeedViewable.xlsx')
          
-       ccountr   
+       ccountr=0;   
        Match_Type=[];
        ccountr+=1; 
        for kw in CoreTrainingData['Match type']:
