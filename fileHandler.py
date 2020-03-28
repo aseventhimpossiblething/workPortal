@@ -39,51 +39,44 @@ def BidOpFileHandler():
     Temp=pandas.read_excel('Temp')
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
-       os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
-       
-       Temp=pandas.DataFrame(Temp,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
-       CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
-       print("_________________________________________________________________________________________") 
-       print("_________________________________________________________________________________________") 
-       CoreTrainingData=CoreTrainingData.append(Temp, sort='False')
-       CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
-       print("_________________________________________________________________________________________") 
-       print("_________________________________________________________________________________________") 
-       CoreTrainingData.to_excel('BidOpSeedViewable.xlsx')
-         
-       ccountr=0;   
-       Match_Type=[];
-       for kw in CoreTrainingData['Match type']:
-        ccountr+=1;
-        if kw=='Exact':
+       def TrainBehavior: 
+           os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+           Temp=pandas.DataFrame(Temp,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
+           CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
+           CoreTrainingData=CoreTrainingData.append(Temp, sort='False')
+           CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
+           CoreTrainingData.to_excel('BidOpSeedViewable.xlsx')
+           ccountr=0;   
+           Match_Type=[];
+           for kw in CoreTrainingData['Match type']:
+           ccountr+=1;
+           if kw=='Exact':
                 kw=1;
-        if kw=='Broad':
+           if kw=='Broad':
                 kw=2;
-        else:
+           else:
                 kw=0;
-        print("Timeout on second pass count ",ccountr)        
-        Match_Type.append(kw)
+           print("Timeout on second pass count ",ccountr)        
+           Match_Type.append(kw)
+           print(len(Match_Type))  
+           CoreTrainingData['Match type']=Match_Type;
+        
+           print("CoreTrainingData['Match type']",CoreTrainingData['Match type'])         
+           CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Changes','Campaign','Ad group','Match type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
+       
+           AdGroup=[];
+           for kw in CoreTrainingData['Ad Group']:
+               print("Regex Numbers in ad group for Market")
+               kw=re.search('>\d+>',kw).find(">")
+               print("location of target str",kw)
+               Adgroup.append(kw)
+               CoreTrainingData.to_excel('BidOpSeed.xlsx')
+       
+           #.to_excel(writer)
+           return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
+      TrainBehavior()
         
         
-       print(len(Match_Type))  
-       CoreTrainingData['Match type']=Match_Type;
-        
-       print("CoreTrainingData['Match type']",CoreTrainingData['Match type'])         
-       CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Changes','Campaign','Ad group','Match type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
-       
-       AdGroup=[];
-       for kw in CoreTrainingData['Ad Group']:
-        print("Regex Numbers in ad group for Market")
-        kw=re.search('>\d+>',kw).find(">")
-        print("location of target str",kw)
-        Adgroup.append(kw)
-       
-
-
-       CoreTrainingData.to_excel('BidOpSeed.xlsx')
-       
-       #.to_excel(writer)
-       isTrainingSheet="<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
     else:
         isTrainingSheet="This is Not Training Data, Attempt will be made to Optimise bids"         
                 
