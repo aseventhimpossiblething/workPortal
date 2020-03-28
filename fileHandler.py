@@ -99,7 +99,8 @@ def BidOpFileHandler():
        TrainLoad=threading.Thread(target=TrainBehavior);
        TrainLoad.start(); 
        #return "Sheet has Been Identified as Training Data it is being formatted and Loaded as such... please wait.. do not press back button"  
-       return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL='><html>did not forward</html>"
+        print("is there an attempt to return")
+        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL='><html>did not forward</html>"
        
     else:
         isTrainingSheet="This is Not Training Data, Attempt will be made to Optimise bids"         
