@@ -72,7 +72,7 @@ def BidOpFileHandler():
            #print("-------------------Immediatly following Number Reframe Below-----") 
            #print(Temp['Match Type'])
            #print("-------------------Immediatly following reframe above-----") 
-           count=0;      
+                 
            Adgroup=[];
            for kw in Temp['Ad group']:
                if str(re.search('>\d+',kw)).find("None")!=-1:
@@ -83,7 +83,7 @@ def BidOpFileHandler():
                print("Find Broken int w/o int ",kw)
                print("Find Broken int w/ int",int(kw))
                Adgroup.append(kw)
-               print(len(Adgroup))  
+               #print(len(Adgroup))  
                #CoreTrainingData.to_excel('BidOpSeed.xlsx')
            Temp['Ad group']=Adgroup
            #print("-------------Temp Ready to Merge")     
@@ -92,6 +92,7 @@ def BidOpFileHandler():
            core=core.append(Temp, sort='False')
            core=pandas.DataFrame(core,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
            core.to_excel("BidOpSeed.xlsx")
+           print(core)
            #print("--------seed/core and Temp Merged-----------")
            #print(core)              
            #.to_excel(writer)
