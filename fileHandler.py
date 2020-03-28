@@ -35,15 +35,15 @@ def ValidatXLSXtime(arr):
 def BidOpFileHandler():
         
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
-    request.files['sheet'].save("Temp")
-    Temp=pandas.read_excel('Temp')
-    Temp.fillna(0) 
+    request.files['sheet'].save("Temp.xlsx")
+    Temp=pandas.read_excel('Temp.xlsx')
+    #Temp.fillna(0) 
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
        def TrainBehavior():
            print('async started') 
-           Temp=TempSheet 
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+           Temp=pandas.read_excel('Temp.xlsx')
            Temp=pandas.DataFrame(Temp,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
            CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
            CoreTrainingData=CoreTrainingData.append(Temp, sort='False')
@@ -80,8 +80,8 @@ def BidOpFileHandler():
            print("cooked")
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
        #TrainBehavior(Temp);
-       TrainLoad=threading.Thread(target=TrainBehavior(Temp));
-       TrainLoad.start(Temp); 
+       TrainLoad=threading.Thread(target=TrainBehavior);
+       TrainLoad.start(); 
        return "Sheet has Been Identified as Training Data it is being formatted and Loaded as such... please wait.. do not press back button"  
         
     else:
