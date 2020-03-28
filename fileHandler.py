@@ -37,7 +37,7 @@ def BidOpFileHandler():
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     request.files['sheet'].save("Temp.xlsx")
     Temp=pandas.read_excel('Temp.xlsx')
-    record_async_start=open("ForestLoadingQueue.txt","w").write("1%").save()
+    record_async_start=open("ForestLoadingQueue.txt","w").write("1%").close()
         
     #Temp.fillna(0) 
     isTrainingSheet=str(Temp.columns).find('New Bid') 
@@ -75,7 +75,7 @@ def BidOpFileHandler():
            #print("-------------------Immediatly following Number Reframe Below-----") 
            #print(Temp['Match Type'])
            #print("-------------------Immediatly following reframe above-----") 
-           record_async_start=open("ForestLoadingQueue.txt","w").write("50%").save()      
+           record_async_start=open("ForestLoadingQueue.txt","w").write("50%").close()      
            Market=[];
            for kw in Temp['Ad group']:
                if str(re.search('>\d+',kw)).find("None")!=-1:
@@ -90,7 +90,7 @@ def BidOpFileHandler():
            core=pandas.DataFrame(core,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget','Market Number']) 
            core.to_excel("BidOpSeed.xlsx")
            print(core)
-           record_async_start=open("ForestLoadingQueue.txt","w").write("100%").save();     
+           record_async_start=open("ForestLoadingQueue.txt","w").write("100%").close();     
            
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
        #TrainBehavior(Temp);
