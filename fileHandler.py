@@ -41,17 +41,18 @@ def BidOpFileHandler():
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
        def TrainBehavior():
-           print('async started') 
+           #print('async started') 
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
            Temp=pandas.read_excel('Temp.xlsx')
            Temp=pandas.DataFrame(Temp,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
+           Temp.fillna(0)
            CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
            CoreTrainingData=CoreTrainingData.append(Temp, sort='False')
            CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
            CoreTrainingData.to_excel('BidOpSeedViewable.xlsx')
            ccountr=0;   
            Match_Type=[];
-           for kw in CoreTrainingData['Match type']:
+           for kw in Temp['Match type']:
                ccountr+=1;
                if kw=='Exact':
                 kw=1;
@@ -63,30 +64,30 @@ def BidOpFileHandler():
                Match_Type.append(kw)
                #print(len(Match_Type))  
                
-           CoreTrainingData['Match type']=Match_Type;
+           Temp['Match type']=Match_Type;
         
-           print("CoreTrainingData['Match type']",CoreTrainingData['Match type'])         
-           CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
+           print("Temp['Match type']",Temp['Match type'])         
+           Temp=pandas.DataFrame(Temp,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
            
            count=0;      
            Adgroup=[];
-           for kw in CoreTrainingData['Ad group']:
-               count+=1;
-               print("1- Regex Numbers in ad group for Market ",count)
-               print("2-",kw) 
+           for kw in Temp['Ad group']:
                kw=str(re.search('>\d+',kw))
-               #print("3- target str ",kw)
                targLoc=kw.find("match='>")
                kw=kw[targLoc:].replace("match='>","").replace("'>","")
-               #kw=kw.replace("match='>","").replace("'>",)
-               print("3- ",kw)
-               #match='>1
-               print("4- kw= ",kw) 
                Adgroup.append(kw)
                #CoreTrainingData.to_excel('BidOpSeed.xlsx')
-       
+           Temp['Ad group']=Adgroup
+           print("-------------Temp Ready to Merge")     
+           print(Temp)
+           core=pandas.read_excel('BiOpSeed.xlsx')
+           core=core.append(Temp, sort='False')
+           core=pandas.DataFrame(core,columns=[Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
+           core.to_excel("BidOpSeed.xlsx')
+           print("--------seed/core and Temp Merged-----------")
+           print(core)              
            #.to_excel(writer)
-           print("cooked")
+           #print("cooked")
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
        #TrainBehavior(Temp);
        TrainLoad=threading.Thread(target=TrainBehavior);
