@@ -75,7 +75,7 @@ def BidOpFileHandler():
            count=0;      
            Adgroup=[];
            for kw in Temp['Ad group']:
-               if re.search('>\d+',kw)==-1:
+               if str(re.search('>\d+',kw)).find("None")!=-1:
                       kw="match='>0"
                preserv=str(re.search('>\d+',kw))
                kw=str(re.search('>\d+',kw))
