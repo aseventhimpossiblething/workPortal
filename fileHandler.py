@@ -75,7 +75,7 @@ def BidOpFileHandler():
            #print("-------------------Immediatly following Number Reframe Below-----") 
            #print(Temp['Match Type'])
            #print("-------------------Immediatly following reframe above-----") 
-           record_async_start=open("ForestLoadingQueue.txt","w").write("50%").save(      
+           record_async_start=open("ForestLoadingQueue.txt","w").write("50%").save()      
            Market=[];
            for kw in Temp['Ad group']:
                if str(re.search('>\d+',kw)).find("None")!=-1:
