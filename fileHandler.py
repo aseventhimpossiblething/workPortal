@@ -39,7 +39,8 @@ def BidOpFileHandler():
     Temp=pandas.read_excel('Temp')
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
-       def TrainBehavior(): 
+       def TrainBehavior(TempSheet): 
+           Temp=TempSheet 
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
            Temp=pandas.DataFrame(Temp,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
            CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
@@ -74,7 +75,7 @@ def BidOpFileHandler():
        
            #.to_excel(writer)
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
-       TrainBehavior();
+       TrainBehavior(Temp);
        return "Sheet has Been Identified as Training Data it is being formatted and Loaded as such... please wait.. do not press back button"  
         
     else:
