@@ -74,8 +74,8 @@ def BidOpFileHandler():
        
            #.to_excel(writer)
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
-      TrainBehavior();
-      return "Sheet has Been Identified as Training Data it is being formatted and Loaded as such... please wait.. do not press back button"  
+       TrainBehavior();
+       return "Sheet has Been Identified as Training Data it is being formatted and Loaded as such... please wait.. do not press back button"  
         
     else:
         isTrainingSheet="This is Not Training Data, Attempt will be made to Optimise bids"         
