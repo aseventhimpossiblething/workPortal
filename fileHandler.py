@@ -77,7 +77,7 @@ def BidOpFileHandler():
                kw=str(re.search('>\d+',kw))
                #print("3- target str ",kw)
                targLoc=kw.find("match='>")
-               kw=kw[targLoc:].replace("match='>","").replace("'>",)
+               kw=kw[targLoc:].replace("match='>","").replace("'>","")
                #kw=kw.replace("match='>","").replace("'>",)
                print("3- ",kw)
                #match='>1
