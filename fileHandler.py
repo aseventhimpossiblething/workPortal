@@ -53,8 +53,8 @@ def BidOpFileHandler():
          
        ccountr=0;   
        Match_Type=[];
-       ccountr+=1; 
        for kw in CoreTrainingData['Match type']:
+        ccountr+=1;
         if kw=='Exact':
                 kw=1;
         if kw=='Broad':
