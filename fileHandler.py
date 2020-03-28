@@ -42,27 +42,17 @@ def BidOpFileHandler():
        
        Temp=pandas.DataFrame(Temp,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
        CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
-       #print("----------------------------------Temp------------------------")
-       #print(Temp)
-       #print('--------------------------Core Training Data------------------')
-       #print(CoreTrainingData)
        print("_________________________________________________________________________________________") 
        print("_________________________________________________________________________________________") 
        CoreTrainingData=CoreTrainingData.append(Temp, sort='False')
        CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
        print("_________________________________________________________________________________________") 
        print("_________________________________________________________________________________________") 
-       print("--------------------------Merged New Core Data-------------------------") 
-       #print(CoreTrainingData)
-       #writer=pandas.excelWriter('DefaultSheet.xlsx').to_excel()
-       #CoreTrainingData.to_excel('BidOpSeed.xlsx')
        CoreTrainingData.to_excel('BidOpSeedViewable.xlsx')
-       #print(CoreTrainingData)
-       #print("['Match type']",CoreTrainingData['Match type'])
-       #print("[['Match type']]",CoreTrainingData[['Match type']])
-       
-
+         
+       ccountr   
        Match_Type=[];
+       ccountr+=1; 
        for kw in CoreTrainingData['Match type']:
         if kw=='Exact':
                 kw=1;
@@ -70,7 +60,9 @@ def BidOpFileHandler():
                 kw=2;
         else:
                 kw=0;
+        print("Timeout on second pass count ",ccountr)        
         Match_Type.append(kw)
+        
         
        print(len(Match_Type))  
        CoreTrainingData['Match type']=Match_Type;
