@@ -322,7 +322,7 @@ def acc():
 def acd():
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     readiness=open("ForestLoadingQueue.txt","r")
-    readiness=rediness.read()
+    readiness=readiness.read()
     #print(readiness)
     BPD1="Completed File"  
     BPD2='<meta http-equiv="refresh" content="120"><html>Loading Training File - '+readiness+"</html>"
