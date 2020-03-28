@@ -12,6 +12,7 @@ import io
 import threading
 from flask import send_file
 import gc
+import re
 from openpyxl import Workbook
 from openpyxl import load_workbook
 import xlsxwriter
@@ -73,6 +74,8 @@ def BidOpFileHandler():
        AdGroup=[];
        for kw in CoreTrainingData['Ad Group']:
         print("Regex Numbers in ad group for Market")
+        kw=re.search('>\d+>',kw).find(">")
+        print("location of target str",kw)
         Adgroup.append(kw)
        
 
