@@ -333,8 +333,9 @@ def acd():
     #BPD=str(BPD2) 
     print(BPD)
     readiness.close()     
+    if ready=="100%":
+       return render_template('BidOpPending.html');
     return BPD
-    #return render_template('BidOpPending.html',BPD=BPD)
 
 
 
