@@ -60,6 +60,7 @@ def BidOpFileHandler():
            record_async_start.write("15%")
            record_async_start.close()     
            Match_Type=[];
+           print("Match Type Loop start") 
            for kw in Temp['Match type']:
                #ccountr+=1;
                if kw=='Exact':
@@ -72,6 +73,7 @@ def BidOpFileHandler():
                
                Match_Type.append(kw)
                #print(len(Match_Type))  
+           print("Match Type Loop end")
            record_async_start=open("ForestLoadingQueue.txt","w")
            record_async_start.write("25%")
            record_async_start.close()     
@@ -98,6 +100,7 @@ def BidOpFileHandler():
                Market.append(kw)
            """    
            TempMarketCount=0;
+           print("Newer While Loop Market")     
            while TempMarketCount< len(Temp['Ad group']):
                 kw=Temp['Ad group'][TempMarketCount]
                 if str(re.search('>\d+',kw)).find("None")!=-1:
@@ -108,7 +111,7 @@ def BidOpFileHandler():
                 targLoc=kw.find("match='>")
                 kw=kw[targLoc:].replace("match='>","").replace("'>","")
                 Market.append(kw)
-                
+           print("Newer While Loop end")      
            Temp['Market Number']=Market
            core=pandas.read_excel('BidOpSeed.xlsx')
            core=core.append(Temp, sort='False')
