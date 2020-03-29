@@ -88,6 +88,7 @@ def BidOpFileHandler():
            record_async_start.write("50%")
            record_async_start.close()     
            Market=[];
+           """     
            for kw in Temp['Ad group']:
                if str(re.search('>\d+',kw)).find("None")!=-1:
                       kw="match='>0"
@@ -95,6 +96,19 @@ def BidOpFileHandler():
                targLoc=kw.find("match='>")
                kw=kw[targLoc:].replace("match='>","").replace("'>","")
                Market.append(kw)
+           """    
+           TempMarketCount=0;
+           while TempMarketCount< len(Temp['Ad group']):
+                kw=Temp['Ad group'][TempMarketCount]
+                if str(re.search('>\d+',kw)).find("None")!=-1:
+                      kw=Temp['Campaign'][TempMarketCount]
+                      if str(re.search('>\d+',kw)).find("None")!=-1:  
+                         kw="match='>0";
+                kw=str(re.search('>\d+',kw))
+                targLoc=kw.find("match='>")
+                kw=kw[targLoc:].replace("match='>","").replace("'>","")
+                Market.append(kw)
+                
            Temp['Market Number']=Market
            core=pandas.read_excel('BidOpSeed.xlsx')
            core=core.append(Temp, sort='False')
