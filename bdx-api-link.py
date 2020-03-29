@@ -334,7 +334,7 @@ def acd():
     print(BPD)
     readiness.close()     
     if ready=="100%":
-       return render_template('BidOpPending.html');
+       return render_template('BidOpPending.html',CacheBreakStamp=datetime.now());
     return BPD
 
 
