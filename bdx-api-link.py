@@ -1,6 +1,6 @@
 domain="http://bhiapilink.com"
 import CommunityUpdatesProcess
-import CommunityUpdatesProcess2
+#import CommunityUpdatesProcess2
 import GetCampaigns
 import glob
 #import numpy
