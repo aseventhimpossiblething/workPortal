@@ -111,6 +111,8 @@ def BidOpFileHandler():
                 targLoc=kw.find("match='>")
                 kw=kw[targLoc:].replace("match='>","").replace("'>","")
                 Market.append(kw)
+                TempMarketCount+=1;
+                print(kw)
            print("Newer While Loop end")      
            Temp['Market Number']=Market
            core=pandas.read_excel('BidOpSeed.xlsx')
