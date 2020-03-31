@@ -45,7 +45,7 @@ def BidOpFileHandler():
     #Temp.fillna(0) 
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
-       print(Temp['Campaign']) 
+       print(Temp['Campaign'].find('MSM')) 
        def TrainBehavior():
            print('async started')
            designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
