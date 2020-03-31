@@ -86,7 +86,7 @@ def BidOpFileHandler():
                 print(type(kw))
                 print(int(kw))
                 print(type(kw)
-                print((kw)      
+                print(kw)      
                 kw=((kw))(1000);
                #print("Timeout on second pass count ",ccountr)
                print(kw)
