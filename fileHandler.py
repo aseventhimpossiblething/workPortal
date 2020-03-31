@@ -45,6 +45,7 @@ def BidOpFileHandler():
     #Temp.fillna(0) 
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
+       print(Temp['Campaign']) 
        def TrainBehavior():
            print('async started')
            designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
@@ -120,7 +121,7 @@ def BidOpFileHandler():
            core=core.append(Temp, sort='False')
            core=pandas.DataFrame(core,columns=designated_Columns) 
            core.to_excel("BidOpSeed.xlsx")
-           print(core)
+           #print(core)
            record_async_start=open("ForestLoadingQueue.txt","w")
            record_async_start.write("100%")
            record_async_start.close();     
