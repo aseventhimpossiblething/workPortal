@@ -93,11 +93,13 @@ def BidOpFileHandler():
            record_async_start.write("25%")
            record_async_start.close()     
                
-           Temp['Match type']=Match_Type;
+           Temp['Match Number']=Match_Type;
            #print("-------------------Immediatly following Number conversion below-----")   
            #print("Temp['Match Type']",Temp['Match Type'])     
-           #print("-------------------Immediatly following Number conversion above-----") 
-           Temp=pandas.DataFrame(Temp,columns=designated_Columns) 
+           #print("-------------------Immediatly following Number conversion above-----")
+           #refined_columns='Campaign','Ad group','Match Number','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
+           #if (str(Temp['Campaign']).find('MSM')==-1:
+           #Temp=pandas.DataFrame(Temp,columns=designated_Columns) 
            #print("-------------------Immediatly following Number Reframe Below-----") 
            #print(Temp['Match Type'])
            #print("-------------------Immediatly following reframe above-----") 
@@ -105,15 +107,7 @@ def BidOpFileHandler():
            record_async_start.write("50%")
            record_async_start.close()     
            Market=[];
-           """     
-           for kw in Temp['Ad group']:
-               if str(re.search('>\d+',kw)).find("None")!=-1:
-                      kw="match='>0"
-               kw=str(re.search('>\d+',kw))
-               targLoc=kw.find("match='>")
-               kw=kw[targLoc:].replace("match='>","").replace("'>","")
-               Market.append(kw)
-           """    
+          
            TempMarketCount=0;
            print("Newer While Loop Market")     
            while TempMarketCount< len(Temp['Ad group']):
@@ -132,7 +126,8 @@ def BidOpFileHandler():
            Temp['Market Number']=Market
            core=pandas.read_excel('BidOpSeed.xlsx')
            core=core.append(Temp, sort='False')
-           core=pandas.DataFrame(core,columns=designated_Columns) 
+           core=pandas.DataFrame(core,columns=['Campaign','Ad group','Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
+           #if (str(Temp['Campaign']).find('MSM')==-1:) 
            core.to_excel("BidOpSeed.xlsx")
            #print(core)
            record_async_start=open("ForestLoadingQueue.txt","w")
