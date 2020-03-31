@@ -77,7 +77,7 @@ def BidOpFileHandler():
                #kw.lower().find("broad")==>-1:
                if kw.lower().find("exact")>-1:
                 kw=1;
-               if kw.lower().find('broad')>-1::
+               if kw.lower().find('broad')>-1:
                 kw=2;
                if str(Temp['Campaign'][ccountr]).lower().find("gppc")>-1:
                 print(kw)
