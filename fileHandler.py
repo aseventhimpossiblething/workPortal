@@ -83,6 +83,7 @@ def BidOpFileHandler():
                 kw="2";
                if str(Temp['Campaign'][ccountr]).lower().find("gppc")>-1:
                 print(kw)
+                print(type(kw))
                 kw=(int(kw))(1000);
                #print("Timeout on second pass count ",ccountr)
                print(kw)
