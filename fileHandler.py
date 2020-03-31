@@ -50,7 +50,7 @@ def BidOpFileHandler():
            print('async started')
            designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
            if (str(Temp['Campaign']).find('MSM')==-1:
-               designated_Columns=[]     
+               designated_Columns=['Campaign','Ad group','Match type','Changes','Max. CPC','Clicks','CTR','Avg. CPC','Cost','Conversions','Cost / conv.','Conv. rate','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Quality Score','Search lost IS (rank)',]     
           
                
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
