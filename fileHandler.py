@@ -76,6 +76,7 @@ def BidOpFileHandler():
                kw=kw.lower() 
                #ccountr+=1;
                #kw.lower().find("broad")==>-1:
+               print(kw)
                if kw.find("exact")>-1:
                 kw="1";
                if kw.find('broad')>-1:
