@@ -74,9 +74,10 @@ def BidOpFileHandler():
            print("Match Type Loop start") 
            for kw in Temp['Match type']:
                #ccountr+=1;
-               if kw=='Exact':
+               #kw.lower().find("broad")==>-1:
+               if kw.lower().find("exact")>-1:
                 kw=1;
-               if kw=='Broad':
+               if kw.lower().find('broad')>-1::
                 kw=2;
                if str(Temp['Campaign'][ccountr]).lower().find("gppc")>-1:
                 print(kw)
