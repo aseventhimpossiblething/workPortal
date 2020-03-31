@@ -46,10 +46,11 @@ def BidOpFileHandler():
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
        def TrainBehavior():
-           print('async started') 
+           print('async started')
+           designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
            Temp=pandas.read_excel('Temp.xlsx')
-           Temp=pandas.DataFrame(Temp,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
+           Temp=pandas.DataFrame(Temp,columns=designated_Columns)
            Temp.fillna(0)
            #CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
            #CoreTrainingData=CoreTrainingData.append(Temp, sort='False')
@@ -82,7 +83,7 @@ def BidOpFileHandler():
            #print("-------------------Immediatly following Number conversion below-----")   
            #print("Temp['Match Type']",Temp['Match Type'])     
            #print("-------------------Immediatly following Number conversion above-----") 
-           Temp=pandas.DataFrame(Temp,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
+           Temp=pandas.DataFrame(Temp,columns=designated_Columns) 
            #print("-------------------Immediatly following Number Reframe Below-----") 
            #print(Temp['Match Type'])
            #print("-------------------Immediatly following reframe above-----") 
@@ -117,7 +118,7 @@ def BidOpFileHandler():
            Temp['Market Number']=Market
            core=pandas.read_excel('BidOpSeed.xlsx')
            core=core.append(Temp, sort='False')
-           core=pandas.DataFrame(core,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget','Market Number']) 
+           core=pandas.DataFrame(core,columns=designated_Columns) 
            core.to_excel("BidOpSeed.xlsx")
            print(core)
            record_async_start=open("ForestLoadingQueue.txt","w")
