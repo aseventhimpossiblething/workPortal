@@ -35,6 +35,7 @@ def ValidatXLSXtime(arr):
 def BidOpFileHandler():
         
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+    print('BidOpSeed.xlsx')
     request.files['sheet'].save("Temp.xlsx")
     Temp=pandas.read_excel('Temp.xlsx')
     record_async_start=open("ForestLoadingQueue.txt","w")
