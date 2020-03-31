@@ -1,6 +1,5 @@
 import BidOpAssist
 import CommunityUpdatesProcess
-import CommunityUpdatesProcess2
 from datetime import datetime
 from flask import Flask, Markup, render_template, request
 import glob
