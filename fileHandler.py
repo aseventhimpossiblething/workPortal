@@ -76,12 +76,12 @@ def BidOpFileHandler():
                #ccountr+=1;
                #kw.lower().find("broad")==>-1:
                if kw.lower().find("exact")>-1:
-                kw=1;
+                kw=str(1);
                if kw.lower().find('broad')>-1:
                 kw=2;
                if str(Temp['Campaign'][ccountr]).lower().find("gppc")>-1:
                 print(kw)
-                kw=kw(1000);
+                kw=int(kw)(1000);
                #print("Timeout on second pass count ",ccountr)
                
                Match_Type.append(int(kw))
