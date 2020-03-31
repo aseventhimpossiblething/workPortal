@@ -84,7 +84,7 @@ def BidOpFileHandler():
                if str(Temp['Campaign'][ccountr]).lower().find("gppc")>-1:
                 print(kw)
                 print(type(kw))
-                print(int(kw))
+                kw=int(kw)
                 print(type(kw))
                 print(kw)      
                 kw=((kw))(1000);
