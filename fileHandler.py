@@ -45,16 +45,20 @@ def BidOpFileHandler():
     #Temp.fillna(0) 
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
-       print(str(Temp['Campaign']).find('MSM')) 
+       #print(str(Temp['Campaign']).find('MSM')) 
        def TrainBehavior():
            print('async started')
            designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
-           if (str(Temp['Campaign']).find('MSM')==-1:
-               designated_Columns=['Campaign','Ad group','Match type','Changes','Max. CPC','Clicks','CTR','Avg. CPC','Cost','Conversions','Cost / conv.','Conv. rate','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Quality Score','Search lost IS (rank)',]     
-          
+           #if (str(Temp['Campaign']).find('MSM')==-1:
+           #    conv_Columns=['Campaign','Ad group','Match type','Changes','Max. CPC','Clicks','CTR','Avg. CPC','Cost','Conversions','Cost / conv.','Conv. rate','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Quality Score','Search lost IS (rank)',]     
+           #    Temp.columns=designated_Columns
                
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
            Temp=pandas.read_excel('Temp.xlsx')
+           if (str(Temp['Campaign']).find('MSM')==-1:
+               conv_Columns=['Campaign','Ad group','Match type','Changes','Max. CPC','Clicks','CTR','Avg. CPC','Cost','Conversions','Cost / conv.','Conv. rate','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Quality Score','Search lost IS (rank)',]     
+               Temp=pandas.DataFrame(Temp,columns=conv_Columns)
+               Temp.columns=designated_Columns    
            Temp=pandas.DataFrame(Temp,columns=designated_Columns)
            Temp.fillna(0)
            #CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
