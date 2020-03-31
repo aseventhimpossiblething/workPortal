@@ -79,10 +79,10 @@ def BidOpFileHandler():
                if kw=='Broad':
                 kw=2;
                if str(Temp['Campaign'][ccountr]).lower().find("gppc")>-1:
-                kw=(kw)(1000);
+                kw=int(kw)(1000);
                #print("Timeout on second pass count ",ccountr)
                
-               Match_Type.append(kw)
+               Match_Type.append(int(kw))
                #print(len(Match_Type))  
            print("Match Type Loop end")
            record_async_start=open("ForestLoadingQueue.txt","w")
