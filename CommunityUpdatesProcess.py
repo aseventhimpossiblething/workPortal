@@ -342,7 +342,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  hilecount=len(NewDataFrame['Market ID']);
  Keyword_conv="none"; 
  MatchType_Conv=0;
- set_bid=.30;
+ set_bid=.45;
  if type(MaintatanceVar)=="<class 'int'>":
   hilecount=MaintatanceVar;
  while count < hilecount:
@@ -368,6 +368,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=Keyword_conv.replace("'","")
      Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
      Keyword_conv="+"+Keyword_conv
+     set_bid=.45;
      
      if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
@@ -377,12 +378,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
      Keyword_conv=NewDataFrame['Community Name'][count]
      MatchType_Conv="Broad"
+     set_bid=.30;
     if MatchType=="SX":
      URL_Struct1=URL_Struct1+"401"
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
      Keyword_conv=NewDataFrame['Community Name'][count]
      MatchType_Conv="Exact"
-     set_bid=.35;
+     set_bid=.65;
    if SearchChan=="bing":
     URL_Struct1=URL_Struct1+"msm"
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
@@ -392,12 +394,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
      Keyword_conv=NewDataFrame['Community Name'][count]
      MatchType_Conv="Broad"
+     set_bid=.40;
     if MatchType=="SX":
      URL_Struct1=URL_Struct1+"201"
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201")
      Keyword_conv=NewDataFrame['Community Name'][count]
      MatchType_Conv="Exact"
-     set_bid=.35;
+     set_bid=.52;
     if MatchType=="SBMM":
      URL_Struct1=URL_Struct1+"202"
      Keyword_conv=NewDataFrame['Community Name'][count]
@@ -409,6 +412,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=Keyword_conv.replace("'","")
      Keyword_conv=Keyword_conv.replace("+G +& +I","G&I ")
      Keyword_conv="+"+Keyword_conv
+     set_bid=.45;
      if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
      MatchType_Conv="Broad"

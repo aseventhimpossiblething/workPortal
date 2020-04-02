@@ -1,6 +1,5 @@
 import BidOpAssist
 import CommunityUpdatesProcess
-import CommunityUpdatesProcess2
 from datetime import datetime
 from flask import Flask, Markup, render_template, request
 import glob
@@ -35,6 +34,7 @@ def ValidatXLSXtime(arr):
 def BidOpFileHandler():
         
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+    print('BidOpSeed.xlsx')
     request.files['sheet'].save("Temp.xlsx")
     Temp=pandas.read_excel('Temp.xlsx')
     record_async_start=open("ForestLoadingQueue.txt","w")
@@ -45,11 +45,22 @@ def BidOpFileHandler():
     #Temp.fillna(0) 
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
+       #print(str(Temp['Campaign']).find('MSM')) 
        def TrainBehavior():
-           print('async started') 
+           print('async started')
+           designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
+           #if (str(Temp['Campaign']).find('MSM')==-1:
+           #    conv_Columns=['Campaign','Ad group','Match type','Changes','Max. CPC','Clicks','CTR','Avg. CPC','Cost','Conversions','Cost / conv.','Conv. rate','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Quality Score','Search lost IS (rank)',]     
+           #    Temp.columns=designated_Columns
+               
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
            Temp=pandas.read_excel('Temp.xlsx')
-           Temp=pandas.DataFrame(Temp,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
+           if (str(Temp['Campaign']).find('MSM'))==-1:
+               conv_Columns=['Campaign','Ad group','Match type','Changes','Max. CPC','Clicks','CTR','Avg. CPC','Cost','Conversions','Cost / conv.','Conv. rate','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Quality Score','Search lost IS (rank)',]     
+               Temp=pandas.DataFrame(Temp,columns=conv_Columns)
+               Temp.columns=designated_Columns 
+               print(Temp)
+           Temp=pandas.DataFrame(Temp,columns=designated_Columns)
            Temp.fillna(0)
            #CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
            #CoreTrainingData=CoreTrainingData.append(Temp, sort='False')
@@ -62,27 +73,37 @@ def BidOpFileHandler():
            Match_Type=[];
            print("Match Type Loop start") 
            for kw in Temp['Match type']:
+               kw=kw.lower() 
                #ccountr+=1;
-               if kw=='Exact':
-                kw=1;
-               if kw=='Broad':
-                kw=2;
+               #kw.lower().find("broad")==>-1:
+               print(kw)
+               if kw.find("exact")>-1:
+                kw="1";
+               if kw.find('broad')>-1:
+                kw="2";
                if str(Temp['Campaign'][ccountr]).lower().find("gppc")>-1:
-                kw=(kw)(1000);
+                print(kw)
+                print(type(kw))
+                kw=int(kw)
+                print(type(kw))
+                print(kw)      
+                kw=kw*1000;
                #print("Timeout on second pass count ",ccountr)
-               
-               Match_Type.append(kw)
+               print(kw)
+               Match_Type.append(int(kw))
                #print(len(Match_Type))  
-           print("Match Type Loop end")
+           print("Match type Loop end")
            record_async_start=open("ForestLoadingQueue.txt","w")
            record_async_start.write("25%")
            record_async_start.close()     
                
-           Temp['Match Type']=Match_Type;
+           Temp['Match Number']=Match_Type;
            #print("-------------------Immediatly following Number conversion below-----")   
            #print("Temp['Match Type']",Temp['Match Type'])     
-           #print("-------------------Immediatly following Number conversion above-----") 
-           Temp=pandas.DataFrame(Temp,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget']) 
+           #print("-------------------Immediatly following Number conversion above-----")
+           #refined_columns='Campaign','Ad group','Match Number','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
+           #if (str(Temp['Campaign']).find('MSM')==-1:
+           #Temp=pandas.DataFrame(Temp,columns=designated_Columns) 
            #print("-------------------Immediatly following Number Reframe Below-----") 
            #print(Temp['Match Type'])
            #print("-------------------Immediatly following reframe above-----") 
@@ -90,15 +111,7 @@ def BidOpFileHandler():
            record_async_start.write("50%")
            record_async_start.close()     
            Market=[];
-           """     
-           for kw in Temp['Ad group']:
-               if str(re.search('>\d+',kw)).find("None")!=-1:
-                      kw="match='>0"
-               kw=str(re.search('>\d+',kw))
-               targLoc=kw.find("match='>")
-               kw=kw[targLoc:].replace("match='>","").replace("'>","")
-               Market.append(kw)
-           """    
+          
            TempMarketCount=0;
            print("Newer While Loop Market")     
            while TempMarketCount< len(Temp['Ad group']):
@@ -117,7 +130,8 @@ def BidOpFileHandler():
            Temp['Market Number']=Market
            core=pandas.read_excel('BidOpSeed.xlsx')
            core=core.append(Temp, sort='False')
-           core=pandas.DataFrame(core,columns=['Changes','Campaign','Ad group','Match Type','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget','Market Number']) 
+           core=pandas.DataFrame(core,columns=['Campaign','Ad group','Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank'])     
+           #if (str(Temp['Campaign']).find('MSM')==-1:) 
            core.to_excel("BidOpSeed.xlsx")
            print(core)
            record_async_start=open("ForestLoadingQueue.txt","w")
