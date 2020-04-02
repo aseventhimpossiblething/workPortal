@@ -394,6 +394,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
      Keyword_conv=NewDataFrame['Community Name'][count]
      MatchType_Conv="Broad"
+     set_bid=.30;
     if MatchType=="SX":
      URL_Struct1=URL_Struct1+"201"
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201")
