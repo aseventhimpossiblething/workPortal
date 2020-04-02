@@ -412,7 +412,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=Keyword_conv.replace("'","")
      Keyword_conv=Keyword_conv.replace("+G +& +I","G&I ")
      Keyword_conv="+"+Keyword_conv
-     set_bid=.52;
+     set_bid=.45;
      if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
      MatchType_Conv="Broad"
