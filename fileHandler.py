@@ -37,7 +37,8 @@ def BidOpFileHandler():
     print('BidOpSeed.xlsx')
     request.files['sheet'].save("Temp.xlsx")
     Temp=pandas.read_excel('Temp.xlsx')
-    record_async_start=open("ForestLoadingQueue.txt","w")
+    record_async_start=open("ForestLoadingQueue.txt","w+")
+    print(record_async_start.read())
     record_async_start.write("5%")
     record_async_start.close()
 
