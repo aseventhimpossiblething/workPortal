@@ -43,6 +43,7 @@ def BidOpFileHandler():
     print("async open and read")    
     print(record_async_start.read())
     record_async_start.write("5%")
+    record_async_start.close()    
     print(record_async_start.read())    
     record_async_start.close()
     print(record_async_start.read())     
