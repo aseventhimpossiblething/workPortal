@@ -39,7 +39,8 @@ def BidOpFileHandler():
     Temp=pandas.read_excel('Temp.xlsx')
      
     record_async_start=open("ForestLoadingQueue.txt","w+")
-    #print(record_async_start.read())
+    print("async open and read")    
+    print(record_async_start.read())
     record_async_start.write("5%")
     record_async_start.close()
     
@@ -60,7 +61,7 @@ def BidOpFileHandler():
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
        #print(str(Temp['Campaign']).find('MSM')) 
-       Temp.close();
+       #Temp.close();
        def TrainBehavior():
            print('async started')
            designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
