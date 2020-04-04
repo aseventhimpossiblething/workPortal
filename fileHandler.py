@@ -39,10 +39,10 @@ def BidOpFileHandler():
     Temp=pandas.read_excel('Temp.xlsx')
     print("os.listdir()")
     print(os.listdir())
-    record_async_start=open("ForestLoadingQueue.txt","w+")
+    record_async_start=open("ForestLoadingQueue.txt","r+")
     print("async open and read")    
     print(record_async_start.read())
-    record_async_start.write("5%")
+    #record_async_start.write("5%")
     record_async_start.close()
     
 
