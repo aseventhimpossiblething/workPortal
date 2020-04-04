@@ -42,9 +42,10 @@ def BidOpFileHandler():
     record_async_start.close()
 
     designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
-    designated_Columns=str(designated_Columns)
+    #designated_Columns=str(designated_Columns)
     for cols in designated_Columns:
-                       colPresent=Temp.find(cols);
+                       colPresent=Temp.columns.find(cols)
+                       #colPresent=Temp.find(cols);
                        print(colPresent)
                        print("colPresent")
                         
