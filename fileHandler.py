@@ -38,19 +38,20 @@ def BidOpFileHandler():
     request.files['sheet'].save("Temp.xlsx")
     Temp=pandas.read_excel('Temp.xlsx')
     record_async_start=open("ForestLoadingQueue.txt","w+")
-    print(record_async_start.read())
+    #print(record_async_start.read())
     record_async_start.write("5%")
     record_async_start.close()
 
     designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
     #designated_Columns=str(designated_Columns)
+    """    
     for cols in designated_Columns:
                        colPresent=str(Temp.columns);
                        colPresent=colPresent.find(cols); 
                        #colPresent=Temp.find(cols);
                        print(colPresent)
                        print("colPresent")
-                        
+    """                    
     #print("1%")
     #record_async_start.close()    
     #Temp.fillna(0) 
