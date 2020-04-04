@@ -37,12 +37,12 @@ def BidOpFileHandler():
     print('BidOpSeed.xlsx')
     request.files['sheet'].save("Temp.xlsx")
     Temp=pandas.read_excel('Temp.xlsx')
-    """    
+     
     record_async_start=open("ForestLoadingQueue.txt","w+")
     #print(record_async_start.read())
     record_async_start.write("5%")
     record_async_start.close()
-    """
+    
 
     #designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
     #designated_Columns=str(designated_Columns)
@@ -86,7 +86,7 @@ def BidOpFileHandler():
            #CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
            #CoreTrainingData.to_excel('BidOpSeedViewable.xlsx')
            ccountr=0; 
-           record_async_start=open("ForestLoadingQueue.txt","w")
+           record_async_start=open("ForestLoadingQueue.txt","w+")
            record_async_start.write("15%")
            record_async_start.close()     
            Match_Type=[];
