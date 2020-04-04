@@ -37,8 +37,8 @@ def BidOpFileHandler():
     print('BidOpSeed.xlsx')
     request.files['sheet'].save("Temp.xlsx")
     Temp=pandas.read_excel('Temp.xlsx')
-    print("os.listdir()")
-    print(os.listdir())
+    #print("os.listdir()")
+    #print(os.listdir())
     record_async_start=open("ForestLoadingQueue.txt","w")
     #print("async open and read")    
     #print(record_async_start.read())
@@ -73,12 +73,15 @@ def BidOpFileHandler():
            #if (str(Temp['Campaign']).find('MSM')==-1:
            #    conv_Columns=['Campaign','Ad group','Match type','Changes','Max. CPC','Clicks','CTR','Avg. CPC','Cost','Conversions','Cost / conv.','Conv. rate','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Quality Score','Search lost IS (rank)',]     
            #    Temp.columns=designated_Columns
-           """
+           """     
+           rowCheck=[];
            for cols in designated_Columns:
                        colPresent=Temp.find(cols);
                        print(colPresent)
-                       print("colPresent")  
-           """            
+                       print("colPresent") 
+                       if colPresent==-1:
+           """"                     
+                      
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
            Temp=pandas.read_excel('Temp.xlsx')
            if (str(Temp['Campaign']).find('MSM'))==-1:
@@ -86,6 +89,16 @@ def BidOpFileHandler():
                Temp=pandas.DataFrame(Temp,columns=conv_Columns)
                Temp.columns=designated_Columns 
                print(Temp)
+           
+           rowCheck=[];
+           for cols in designated_Columns:
+                       colPresent=Temp.find(cols);
+                       print(colPresent)
+                       print("colPresent") 
+                       if colPresent==-1: 
+                          rowCheck.append(cols); 
+           print(rowCheck);                     
+           
            Temp=pandas.DataFrame(Temp,columns=designated_Columns)
            Temp.fillna(0)
            #CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
