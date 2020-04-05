@@ -74,11 +74,11 @@ def BidOpFileHandler():
            #    conv_Columns=['Campaign','Ad group','Match type','Changes','Max. CPC','Clicks','CTR','Avg. CPC','Cost','Conversions','Cost / conv.','Conv. rate','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Quality Score','Search lost IS (rank)',]     
            #    Temp.columns=designated_Columns
            """     
-           rowCheck=[];
-           for cols in designated_Columns:
-                       colPresent=Temp.find(cols);
-                       print(colPresent)
-                       print("colPresent") 
+           #rowCheck=[];
+           #for cols in designated_Columns:
+                      #colPresent=Temp.find(cols);
+                      #print(colPresent)
+                      #print("colPresent") 
                       #if colPresent==-1:
            """"                     
                       
