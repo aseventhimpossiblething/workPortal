@@ -17,7 +17,7 @@ def BidOpOverview():
     #Seed=SeedOpen.read()
     print(Seed)
     print(Seed['Keyword'])
-    Seed.drop(['Keyword']);
+    Seed.drop([['Keyword']]);
     #SeedOpen.close();
     print('end overview')
 
