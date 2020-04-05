@@ -105,7 +105,7 @@ def BidOpFileHandler():
                 record_async_start=open("ForestLoadingQueue.txt","w+")
                 record_async_start.write(rowCheck)
                 record_async_start.close()
-                rowCheck=" The following Columns are missing "+rowCheck+" please resubmit sheet "
+                rowCheck=" The following Columns are missing "+str(rowCheck)+" please resubmit sheet "
                 return rowCheck
                 
            
