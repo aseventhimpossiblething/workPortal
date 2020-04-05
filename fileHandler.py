@@ -79,7 +79,7 @@ def BidOpFileHandler():
                        colPresent=Temp.find(cols);
                        print(colPresent)
                        print("colPresent") 
-                       if colPresent==-1:
+                      #if colPresent==-1:
            """"                     
                       
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
