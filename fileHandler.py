@@ -100,7 +100,8 @@ def BidOpFileHandler():
            #rowCheck=str(rowCheck)                     
            len(rowCheck);
            print(len(rowCheck)," ",rowCheck); 
-           return rowCheck
+           if len(rowCheck)>0:
+                return rowCheck;
                 
            
            Temp=pandas.DataFrame(Temp,columns=designated_Columns)
