@@ -13,11 +13,11 @@ def BidOpOverview():
     print(os.listdir())
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     print(os.listdir())
-    SeedOpen=open('BidOpSeed.xlsx');
-    Seed=SeedOpen.read()
+    Seed=pandas.read_excel('BidOpSeed.xlsx');
+    #Seed=SeedOpen.read()
     print(Seed)
     Seed.drop(['Campaign']);
-    SeedOpen.close();
+    #SeedOpen.close();
     print('end overview')
 
 
