@@ -96,8 +96,12 @@ def BidOpFileHandler():
                        print(colPresent)
                        print("colPresent") 
                        if colPresent==-1: 
-                          rowCheck.append(cols); 
-           print(rowCheck);                     
+                          rowCheck.append(cols);
+           #rowCheck=str(rowCheck)                     
+           len(rowCheck);
+           print(len(rowCheck)," ",rowCheck); 
+           return rowCheck
+                
            
            Temp=pandas.DataFrame(Temp,columns=designated_Columns)
            Temp.fillna(0)
