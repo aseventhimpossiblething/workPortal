@@ -329,6 +329,8 @@ def acd():
     BPD='<meta http-equiv="refresh" content="180"><html>This Training Sheet will be added to the body of training Data  - '+ready+"</html>"
     if ready=="100%":
        BPD="render_template('BidOpPending.html')";
+    if readiness.find("]")>-1:
+       BPD='<meta http-equiv="refresh" content="180"><html>The following columns are missing from the Data set - '+ready+"</html>"           
     #BPD=str(BPD2) 
     print(BPD)
     readiness.close()     
