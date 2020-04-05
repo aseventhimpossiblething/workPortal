@@ -80,7 +80,7 @@ def BidOpFileHandler():
                       #print(colPresent)
                       #print("colPresent") 
                       #if colPresent==-1:
-           """"                     
+           """                     
                       
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
            Temp=pandas.read_excel('Temp.xlsx')
