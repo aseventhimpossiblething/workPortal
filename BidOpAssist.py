@@ -15,7 +15,7 @@ def BidOpOverview():
     print(os.listdir())
     Seed=open('BidOpSeed.xlsx');
     print(Seed)
-    Seed.drop(['Campaign']);
+    #Seed.drop(['Campaign']);
     print('end overview')
 
 
