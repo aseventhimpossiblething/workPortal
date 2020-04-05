@@ -324,7 +324,7 @@ def acd():
     ready=readiness.read()
     #if ready=="100%":
     #     BPD="render_template('BidOpPending.html')";
-    #print(readiness)
+    print(readiness)
     #BPD1="Completed File"  
     BPD='<meta http-equiv="refresh" content="180"><html>This Training Sheet will be added to the body of training Data  - '+ready+"</html>"
     if ready=="100%":
