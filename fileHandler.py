@@ -92,7 +92,7 @@ def BidOpFileHandler():
            
            rowCheck=[];
            for cols in designated_Columns:
-                       colPresent=Temp.find(cols);
+                       colPresent=str(Temp.columns).find(cols);
                        print(colPresent)
                        print("colPresent") 
                        if colPresent==-1: 
