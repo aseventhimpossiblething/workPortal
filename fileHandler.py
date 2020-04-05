@@ -101,7 +101,12 @@ def BidOpFileHandler():
            len(rowCheck);
            print(len(rowCheck)," ",rowCheck); 
            if len(rowCheck)>0:
-                return rowCheck;
+                os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/') 
+                record_async_start=open("ForestLoadingQueue.txt","w+")
+                record_async_start.write(rowCheck)
+                record_async_start.close()
+                rowCheck=" The following Columns are missing "+rowCheck+" please resubmit sheet "
+                return rowCheck
                 
            
            Temp=pandas.DataFrame(Temp,columns=designated_Columns)
