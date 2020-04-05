@@ -101,11 +101,12 @@ def BidOpFileHandler():
            len(rowCheck);
            print(len(rowCheck)," ",rowCheck); 
            if len(rowCheck)>0:
-                os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/') 
+                os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+                rowCheck=str(rowCheck)
                 record_async_start=open("ForestLoadingQueue.txt","w+")
                 record_async_start.write(rowCheck)
                 record_async_start.close()
-                rowCheck=" The following Columns are missing "+str(rowCheck)+" please resubmit sheet "
+                rowCheck=" The following Columns are missing "+rowCheck+" please resubmit sheet "
                 return rowCheck
                 
            
