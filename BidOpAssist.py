@@ -16,7 +16,8 @@ def BidOpOverview():
     Seed=pandas.read_excel('BidOpSeed.xlsx');
     #Seed=SeedOpen.read()
     print(Seed)
-    Seed.drop(['Campaign']);
+    print(Seed['Keyword'])
+    Seed.drop(['Keyword']);
     #SeedOpen.close();
     print('end overview')
 
