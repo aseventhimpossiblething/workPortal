@@ -7,8 +7,21 @@ import scipy
 import pandas
 from sklearn.ensemble import RandomForestRegressor
 #os.chdir('Sheets')
-#print(os.listdir())
+print(os.getcwd())
+print(os.listdir())
+os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+print(os.listdir())
+Seed=open('BidOpSeed.xlsx');
+print(Seed)
+Seed.drop(['Campaign'])
+
+
 #print(max(glob.glob('*.xlsx'),key=os.path.getctime))
+
+
+
+
+
 
 
 #important Variables
@@ -116,6 +129,6 @@ print(numpy.reshape(BidOpAssist(),(-1,1)))
 """
 
 #eol
-#print("Comment")
+print("end of doc")
 
 
