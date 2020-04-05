@@ -7,13 +7,16 @@ import scipy
 import pandas
 from sklearn.ensemble import RandomForestRegressor
 #os.chdir('Sheets')
-print(os.getcwd())
-print(os.listdir())
-os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
-print(os.listdir())
-Seed=open('BidOpSeed.xlsx');
-print(Seed)
-Seed.drop(['Campaign'])
+
+def BidOpOverview():
+    print(os.getcwd())
+    print(os.listdir())
+    os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+    print(os.listdir())
+    Seed=open('BidOpSeed.xlsx');
+    print(Seed)
+    Seed.drop(['Campaign']);
+    print('end overview')
 
 
 #print(max(glob.glob('*.xlsx'),key=os.path.getctime))
