@@ -197,6 +197,7 @@ def BidOpFileHandler():
        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOpPending'><html>did not forward</html>"
        
     else:
+       #BidOpAssist 
        isTrainingSheet="This is Not Training Data, Attempt will be made to Optimise bids"         
                 
         
