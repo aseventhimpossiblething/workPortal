@@ -7,18 +7,23 @@ import scipy
 import pandas
 from sklearn.ensemble import RandomForestRegressor
 #os.chdir('Sheets')
-
+#PredictorCols=['Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank'])     
+            
 def BidOpOverview():
+    #PredictorCols=['Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank'])     
     print(os.getcwd())
     print(os.listdir())
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     print(os.listdir())
     Seed=pandas.read_excel('BidOpSeed.xlsx');
     #Seed=SeedOpen.read()
-    print(Seed)
-    print(Seed['Keyword'])
-    Seed.drop(['Keyword'],axis=1);
+    #print(Seed)
+    #print(Seed['Keyword'])
+    XofSeed=Seed.drop(['Campaign','Ad group','Changes'],axis=1);
+    YofSeed=Seed['Changes']
     #SeedOpen.close();
+    print('end overview')
+    return RandomForestRegressor.fit(XofSeed,YofSeed))
     print('end overview')
 
 
@@ -43,7 +48,7 @@ else print("MostRecent-Empty-Or-filemoved")
 """
 #print("type MostRecentFile ",type(MostRecentFile))
 
-
+#designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
 ModelCol1=['Campaign','Ad group','Keyword','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','CTR','Changes']
 ModelCol2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score','Match type']
 ModelCol3=['Campaign','Ad group','Keyword','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','CTR']
