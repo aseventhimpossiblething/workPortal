@@ -11,6 +11,7 @@ from sklearn.ensemble import RandomForestRegressor
             
 def BidOpOverview(x):
     designated_Columns=x
+    """
     print("before string")
     print("designated_Columns ",designated_Columns)  
     print("designated_Columns[0] ",designated_Columns[0]) 
@@ -26,8 +27,9 @@ def BidOpOverview(x):
     print('locas - str [40] ',str(designated_Columns)[40]) 
     onlyChanges=designated_Columns[loc]    
     print('onlyChange ',onlyChange)
+    """
             
-    predict_cols=designated_Columns
+    predict_cols=designated_Columns.remove('Changes')
     print('predict_cols ',predict_cols)        
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     print(os.listdir())
