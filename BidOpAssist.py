@@ -12,7 +12,7 @@ from sklearn.ensemble import RandomForestRegressor
 def BidOpOverview(x):
     designated_Columns=x
 
-    loc=designated_Columns.find('Changes')
+    loc=str(designated_Columns).find('Changes')
     onlyChanges=designated_Columns[loc]    
     print('onlyChange ',onlyChange)
             
