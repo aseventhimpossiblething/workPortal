@@ -12,15 +12,19 @@ from sklearn.ensemble import RandomForestRegressor
 def BidOpOverview(x):
     designated_Columns=x
     print("before string")
+    print("designated_Columns ",designated_Columns)  
+    print("designated_Columns[0] ",designated_Columns[0]) 
+    print("designated_Columns[1] ",designated_Columns[1])  
+    print("designated_Columns[2] ",designated_Columns[3])
     loc=designated_Columns.count('Changes')
     loca=designated_Columns.count('Changos')
             
     print("after string")
-    print('loc - ',loc) 
-    print('loca - ',loc)
-    print('locas - [40:50]-',str(designated_Columns)[40:50]) 
-    print('locas - [40] ',str(designated_Columns)[40]) 
-    onlyChanges=designated_Columns[[loc]]    
+    print('loc - Changes ',loc) 
+    print('loca - Changos ',loca)
+    print('locas - str [40:50]-',str(designated_Columns)[40:50]) 
+    print('locas - str [40] ',str(designated_Columns)[40]) 
+    onlyChanges=designated_Columns[loc]    
     print('onlyChange ',onlyChange)
             
     predict_cols=designated_Columns
