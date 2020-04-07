@@ -70,17 +70,7 @@ def BidOpFileHandler():
        def TrainBehavior():
            print('async started')
            designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
-           #if (str(Temp['Campaign']).find('MSM')==-1:
-           #    conv_Columns=['Campaign','Ad group','Match type','Changes','Max. CPC','Clicks','CTR','Avg. CPC','Cost','Conversions','Cost / conv.','Conv. rate','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Quality Score','Search lost IS (rank)',]     
-           #    Temp.columns=designated_Columns
-           """     
-           #rowCheck=[];
-           #for cols in designated_Columns:
-                      #colPresent=Temp.find(cols);
-                      #print(colPresent)
-                      #print("colPresent") 
-                      #if colPresent==-1:
-           """                     
+           
                       
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
            Temp=pandas.read_excel('Temp.xlsx')
@@ -97,7 +87,7 @@ def BidOpFileHandler():
                        print("colPresent") 
                        if colPresent==-1: 
                           rowCheck.append(cols);
-           #rowCheck=str(rowCheck)                     
+                                
            len(rowCheck);
            print(len(rowCheck)," ",rowCheck); 
            if len(rowCheck)>0:
@@ -112,10 +102,7 @@ def BidOpFileHandler():
            
            Temp=pandas.DataFrame(Temp,columns=designated_Columns)
            Temp.fillna(0)
-           #CoreTrainingData=pandas.read_excel('BidOpSeed.xlsx')
-           #CoreTrainingData=CoreTrainingData.append(Temp, sort='False')
-           #CoreTrainingData=pandas.DataFrame(CoreTrainingData,columns=['Keyword','New Bid','Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank','IS lost to budget'])
-           #CoreTrainingData.to_excel('BidOpSeedViewable.xlsx')
+           
            ccountr=0; 
            record_async_start=open("ForestLoadingQueue.txt","w+")
            record_async_start.write("15%")
@@ -124,15 +111,12 @@ def BidOpFileHandler():
            print("Match Type Loop start") 
            for kw in Temp['Match type']:
                kw=kw.lower() 
-               #ccountr+=1;
-               #kw.lower().find("broad")==>-1:
-               #print(kw)
+              
                if kw.find("exact")>-1:
                 kw="1";
                if kw.find('broad')>-1:
                 kw="2";
                if str(Temp['Campaign'][ccountr]).lower().find("gppc")>-1:
-                #print(kw)
                 print(type(kw))
                 kw=int(kw)
                 print(type(kw))
@@ -148,15 +132,7 @@ def BidOpFileHandler():
            record_async_start.close()     
                
            Temp['Match Number']=Match_Type;
-           #print("-------------------Immediatly following Number conversion below-----")   
-           #print("Temp['Match Type']",Temp['Match Type'])     
-           #print("-------------------Immediatly following Number conversion above-----")
-           #refined_columns='Campaign','Ad group','Match Number','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
-           #if (str(Temp['Campaign']).find('MSM')==-1:
-           #Temp=pandas.DataFrame(Temp,columns=designated_Columns) 
-           #print("-------------------Immediatly following Number Reframe Below-----") 
-           #print(Temp['Match Type'])
-           #print("-------------------Immediatly following reframe above-----") 
+          
            record_async_start=open("ForestLoadingQueue.txt","w")
            record_async_start.write("50%")
            record_async_start.close()     
@@ -197,6 +173,7 @@ def BidOpFileHandler():
        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOpPending'><html>did not forward</html>"
        
     else:
+       print(Temp) 
        BidOpAssist.BidOpOverview(); 
        isTrainingSheet="This is Not Training Data, Attempt will be made to Optimise bids"         
                 
