@@ -28,8 +28,9 @@ def BidOpOverview(x):
     onlyChanges=designated_Columns[loc]    
     print('onlyChange ',onlyChange)
     """
-    print('designated_Columns ',designated_Columns)         
-    predict_cols=x.remove('Changes')
+    print('designated_Columns ',designated_Columns) 
+    predict_cols=x[:]
+    predict_cols=predict_cols.remove('Changes')
     print('predict_cols ',predict_cols)
     print('designated_Columns ',designated_Columns)        
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
