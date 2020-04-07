@@ -24,7 +24,7 @@ def BidOpOverview():
     #SeedOpen.close();
     print(XofSeed)        
     print(YofSeed)
-    return RandomForestRegressor.fit()
+    return RandomForestRegressor.fit(self)
     print('end overview')
 
 
