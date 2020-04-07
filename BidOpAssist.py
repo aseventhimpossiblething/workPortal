@@ -10,11 +10,9 @@ from sklearn.ensemble import RandomForestRegressor
 #PredictorCols=['Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank'])     
             
 def BidOpOverview(x):
-    designated_Columns=x        
-    print(x)        
-    #PredictorCols=['Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank'])     
-    print(os.getcwd())
-    print(os.listdir())
+    designated_Columns=x
+    predict_cols= designated_Columns.drop(['Changes'],axis=1)
+    print('predict_cols',predict_cols)        
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     print(os.listdir())
     Seed=pandas.read_excel('BidOpSeed.xlsx');
@@ -26,6 +24,8 @@ def BidOpOverview(x):
     print(YofSeed)
     Model=RandomForestRegressor()
     Model.fit(XofSeed,YofSeed)
+    Temp=pandas.read_excel('Temp.xlsx')
+    Temp=pandas.DataFrame(Temp,columns=predict_cols)        
     
             
     
