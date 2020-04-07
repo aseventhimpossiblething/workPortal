@@ -9,7 +9,8 @@ from sklearn.ensemble import RandomForestRegressor
 #os.chdir('Sheets')
 #PredictorCols=['Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank'])     
             
-def BidOpOverview():
+def BidOpOverview(x):
+    print(x)        
     #PredictorCols=['Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank'])     
     print(os.getcwd())
     print(os.listdir())
@@ -23,6 +24,8 @@ def BidOpOverview():
     print(YofSeed)
     Model=RandomForestRegressor()
     Model.fit(XofSeed,YofSeed)
+    
+            
     
     print('end overview')
 
