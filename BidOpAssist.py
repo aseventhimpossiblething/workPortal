@@ -14,7 +14,8 @@ def BidOpOverview(x):
     print("before string")
     loc=str(designated_Columns).find('Changes')
     print("after string")
-    onlyChanges=designated_Columns[loc]    
+    print('loc - ',loc)        
+    onlyChanges=designated_Columns[[loc]]    
     print('onlyChange ',onlyChange)
             
     predict_cols=designated_Columns
