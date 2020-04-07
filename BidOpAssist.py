@@ -11,8 +11,13 @@ from sklearn.ensemble import RandomForestRegressor
             
 def BidOpOverview(x):
     designated_Columns=x
-    predict_cols= designated_Columns.drop(['Changes'],axis=1)
-    print('predict_cols',predict_cols)        
+
+    loc=designated_Columns.find('Changes')
+    onlyChanges=designated_Columns[loc]    
+    print('onlyChange ',onlyChange)
+            
+    predict_cols=designated_Columns
+    print('predict_cols ',predict_cols)        
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     print(os.listdir())
     Seed=pandas.read_excel('BidOpSeed.xlsx');
