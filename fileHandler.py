@@ -52,6 +52,7 @@ def BidOpFileHandler():
 
     #designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
     #designated_Columns=str(designated_Columns)
+    designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']         
     """    
     for cols in designated_Columns:
                        colPresent=str(Temp.columns);
@@ -69,8 +70,9 @@ def BidOpFileHandler():
        #Temp.close();
        def TrainBehavior(x):
            print('async started')
-           print(x)     
-           designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
+           print(x)
+           designated_Columns=x
+           #designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
            
                       
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
