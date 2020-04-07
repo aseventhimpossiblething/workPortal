@@ -177,7 +177,7 @@ def BidOpFileHandler():
        
     else:
        print(Temp) 
-       BidOpAssist.BidOpOverview(); 
+       BidOpAssist.BidOpOverview(designated_Columns); 
        isTrainingSheet="This is Not Training Data, Attempt will be made to Optimise bids"         
                 
         
