@@ -12,9 +12,11 @@ from sklearn.ensemble import RandomForestRegressor
 def BidOpOverview(x):
     designated_Columns=x
     print("before string")
-    loc=str(designated_Columns).find('Changes')
+    loc=designated_Columns.count('Changes')
+    loca=designated_Columns.count('Changos')
     print("after string")
-    print('loc - ',loc)        
+    print('loc - ',loc) 
+    print('loca - ',loc)         
     onlyChanges=designated_Columns[[loc]]    
     print('onlyChange ',onlyChange)
             
