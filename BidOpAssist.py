@@ -28,9 +28,10 @@ def BidOpOverview(x):
     onlyChanges=designated_Columns[loc]    
     print('onlyChange ',onlyChange)
     """
-            
-    predict_cols=designated_Columns.remove('Changes')
-    print('predict_cols ',predict_cols)        
+    print('designated_Columns ',designated_Columns)         
+    predict_cols=x.remove('Changes')
+    print('predict_cols ',predict_cols)
+    print('designated_Columns ',designated_Columns)        
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     print(os.listdir())
     Seed=pandas.read_excel('BidOpSeed.xlsx');
