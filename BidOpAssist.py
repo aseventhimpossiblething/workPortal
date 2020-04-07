@@ -16,12 +16,9 @@ def BidOpOverview():
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     print(os.listdir())
     Seed=pandas.read_excel('BidOpSeed.xlsx');
-    #Seed=SeedOpen.read()
-    #print(Seed)
-    #print(Seed['Keyword'])
+    Seed=Seed.replace("-",0)        
     XofSeed=Seed.drop(['Campaign','Ad group','Changes'],axis=1);
     YofSeed=Seed['Changes']
-    #SeedOpen.close();
     print(XofSeed)        
     print(YofSeed)
     Model=RandomForestRegressor()
