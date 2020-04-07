@@ -14,9 +14,12 @@ def BidOpOverview(x):
     print("before string")
     loc=designated_Columns.count('Changes')
     loca=designated_Columns.count('Changos')
+            
     print("after string")
     print('loc - ',loc) 
-    print('loca - ',loc)         
+    print('loca - ',loc)
+    print('locas - [40:50]-',str(designated_Columns)[40:50]) 
+    print('locas - [40] ',str(designated_Columns)[40]) 
     onlyChanges=designated_Columns[[loc]]    
     print('onlyChange ',onlyChange)
             
