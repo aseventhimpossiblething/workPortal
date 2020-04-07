@@ -16,7 +16,7 @@ def BidOpOverview():
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     print(os.listdir())
     Seed=pandas.read_excel('BidOpSeed.xlsx');
-    Seed=Seed.replace("-",0)        
+    Seed=Seed.replace("-",0).fillna(0)        
     XofSeed=Seed.drop(['Campaign','Ad group','Changes'],axis=1);
     YofSeed=Seed['Changes']
     print(XofSeed)        
