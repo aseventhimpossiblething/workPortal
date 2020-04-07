@@ -67,8 +67,9 @@ def BidOpFileHandler():
     if isTrainingSheet!=-1:
        #print(str(Temp['Campaign']).find('MSM')) 
        #Temp.close();
-       def TrainBehavior():
+       def TrainBehavior(x):
            print('async started')
+           print(x)     
            designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
            
                       
@@ -167,7 +168,7 @@ def BidOpFileHandler():
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
        #TrainBehavior(Temp);
        TrainLoad=threading.Thread(target=TrainBehavior);
-       TrainLoad.start(); 
+       TrainLoad.start("x"); 
        #return "Sheet has Been Identified as Training Data it is being formatted and Loaded as such... please wait.. do not press back button"  
        print("is there an attempt to return")
        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOpPending'><html>did not forward</html>"
