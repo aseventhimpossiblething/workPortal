@@ -22,8 +22,9 @@ def BidOpOverview():
     XofSeed=Seed.drop(['Campaign','Ad group','Changes'],axis=1);
     YofSeed=Seed['Changes']
     #SeedOpen.close();
+    print(XofSeed)        
     print(YofSeed)
-    return RandomForestRegressor.fit(XofSeed)
+    return RandomForestRegressor.fit()
     print('end overview')
 
 
