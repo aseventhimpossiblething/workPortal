@@ -94,12 +94,13 @@ def BidOpOverview(desiCols,corecols):
     Model.fit(XofSeed,YofSeed)
             
     Temp=pandas.read_excel('Temp.xlsx')
-    Temp.replace('-',0).fillna(0) 
+    Temp=Temp.replace('-',0).fillna(0) 
     Temp['Match Number']=Match_num(Temp);
     Temp['Market Number']=MarketNumberGen(Temp)
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols)
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1)
     #print(Temp)
+    #TempForOutPut.replace('-',0).fillna(0)
     print(Model.predict(TempForOutPut))
             
     
