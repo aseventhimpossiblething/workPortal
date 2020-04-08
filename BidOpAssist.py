@@ -8,6 +8,38 @@ import pandas
 from sklearn.ensemble import RandomForestRegressor
 #os.chdir('Sheets')
 #PredictorCols=['Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank'])     
+def Match_num(x):
+        Temp=x
+        ccountr=0;
+        Match_Type=[];
+        for kw in Temp['Match type']:
+               kw=kw.lower() 
+              
+               if kw.find("exact")>-1:
+                kw="1";
+               if kw.find('broad')>-1:
+                kw="2";
+               if str(Temp['Campaign'][ccountr]).lower().find("gppc")>-1:
+                #print(type(kw))
+                kw=int(kw)
+                #print(type(kw))
+                #print(kw)      
+                kw=kw*1000;
+               #print("Timeout on second pass count ",ccountr)
+               #print(kw)
+               Match_Type.append(int(kw))
+               ccountr+=1;
+        return Match_Type   
+               #print(len(Match_Type))  
+           #print("Match type Loop end")
+ 
+            
+            
+            
+            
+            
+            
+            
             
 def BidOpOverview(x):
     designated_Columns=x
