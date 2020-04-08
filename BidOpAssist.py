@@ -62,6 +62,8 @@ def BidOpOverview(desiCols,corecols):
     designated_Columns=desiCols;
     core_cols=corecols;
     loc=corecols.count('Changes')
+    print(core_cols)
+    print(predict_cols)
             
     #print("x.count('Changes - 1') ",x.count('Changes') ) 
     if loc<1:
@@ -79,7 +81,7 @@ def BidOpOverview(desiCols,corecols):
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     #print(os.listdir())
     Seed=pandas.read_excel('BidOpSeed.xlsx');
-    Seed=pandas.DataFrame(Seed,columns=designated_Columns)        
+    Seed=pandas.DataFrame(Seed,columns=core_cols)        
     Seed=Seed.replace("-",0).fillna(0)        
     XofSeed=Seed.drop(['Campaign','Ad group','Changes'],axis=1);
     YofSeed=Seed['Changes']
@@ -89,12 +91,14 @@ def BidOpOverview(desiCols,corecols):
     Model.fit(XofSeed,YofSeed)
             
     Temp=pandas.read_excel('Temp.xlsx')
-    Temp=pandas.DataFrame(Temp) 
+     
     Temp['Match Number']=Match_num(Temp);
-    print(Temp)
-    print(Temp['Match Number'])
+    Temp['Market Number']=MarketNumberGen(_Temp_)
+    Temp=pandas.DataFrame(Temp,columns=predict_cols)
+    #print(Temp)
+    #print(Temp['Match Number'])
     #MNcount=0;
-    
+    #Temp=
     Temp=Temp.drop(['Campaign','Ad group','Match type'],axis=1)
     #print(Temp)
     print(Model.predict(Temp))
