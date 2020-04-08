@@ -78,8 +78,8 @@ def BidOpOverview(desiCols,corecols):
     predict_colsP2=corecols[loc+1:]
     predict_cols=predict_colsP1+predict_colsP2
         
-    print(core_cols)
-    print(predict_cols)    
+    print("core ",core_cols)
+    print("predict col ",predict_cols)    
           
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     #print(os.listdir())
@@ -97,14 +97,10 @@ def BidOpOverview(desiCols,corecols):
      
     Temp['Match Number']=Match_num(Temp);
     Temp['Market Number']=MarketNumberGen(Temp)
-    Temp=pandas.DataFrame(Temp,columns=predict_cols)
+    TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols)
+    TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1)
     #print(Temp)
-    #print(Temp['Match Number'])
-    #MNcount=0;
-    #Temp=
-    Temp=Temp.drop(['Campaign','Ad group','Match type'],axis=1)
-    #print(Temp)
-    print(Model.predict(Temp))
+    print(Model.predict(TempForOutPut))
             
     
     print('end overview')
