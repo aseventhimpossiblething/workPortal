@@ -123,11 +123,7 @@ def BidOpFileHandler():
            
            Temp=pandas.DataFrame(Temp,columns=designated_Columns)
            Temp.fillna(0)
-           
-                
-           #print(Match_num(Temp))
-           
-           #ccountr=0; 
+                                       
            record_async_start=open("ForestLoadingQueue.txt","w+")
            record_async_start.write("15%")
            record_async_start.close() 
@@ -164,8 +160,8 @@ def BidOpFileHandler():
            record_async_start=open("ForestLoadingQueue.txt","w")
            record_async_start.write("50%")
            record_async_start.close()     
+           """
            Market=[];
-          
            TempMarketCount=0;
            #print("Newer While Loop Market")     
            while TempMarketCount< len(Temp['Ad group']):
@@ -180,14 +176,16 @@ def BidOpFileHandler():
                 Market.append(kw)
                 TempMarketCount+=1;
                 #print(kw)
-           #print("Newer While Loop end")      
-           Temp['Market Number']=Market
+           #print("Newer While Loop end") 
+           """
+           Temp['Market Number']=BidOpAssist.MarketNumberGen(Temp)
            core=pandas.read_excel('BidOpSeed.xlsx')
            core=core.append(Temp, sort='False')
            core=pandas.DataFrame(core,columns=core_cols)     
            #if (str(Temp['Campaign']).find('MSM')==-1:) 
            core.to_excel("BidOpSeed.xlsx")
            #print(core)
+                
            record_async_start=open("ForestLoadingQueue.txt","w")
            record_async_start.write("100%")
            record_async_start.close();     
