@@ -61,7 +61,7 @@ def MkNewBid(x):
     Changes=Temp['Changes'];
     New_Bid=[];
     count=0;
-    while count<len(Spend):
+    while count<len(Bid):
           thebid=(Bid[count]*Changes[count])
           New_Bid.append(thebid)
           #print(bid)
