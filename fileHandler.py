@@ -32,32 +32,7 @@ def ValidatXLSXtime(arr):
         else:
             print(Valid)
         
-"""        
-def Match_num(x):
-        Temp=x
-        ccountr=0;
-        Match_Type=[];
-        for kw in Temp['Match type']:
-               kw=kw.lower() 
-              
-               if kw.find("exact")>-1:
-                kw="1";
-               if kw.find('broad')>-1:
-                kw="2";
-               if str(Temp['Campaign'][ccountr]).lower().find("gppc")>-1:
-                #print(type(kw))
-                kw=int(kw)
-                #print(type(kw))
-                #print(kw)      
-                kw=kw*1000;
-               #print("Timeout on second pass count ",ccountr)
-               #print(kw)
-               Match_Type.append(int(kw))
-               ccountr+=1;
-        return Match_Type   
-               #print(len(Match_Type))  
-           #print("Match type Loop end")
-"""
+
 
 def BidOpFileHandler():
         
@@ -127,32 +102,7 @@ def BidOpFileHandler():
            record_async_start=open("ForestLoadingQueue.txt","w+")
            record_async_start.write("15%")
            record_async_start.close() 
-           """     
-           Match_Type=[];
-           for kw in Temp['Match type']:
-               kw=kw.lower() 
-              
-               if kw.find("exact")>-1:
-                kw="1";
-               if kw.find('broad')>-1:
-                kw="2";
-               if str(Temp['Campaign'][ccountr]).lower().find("gppc")>-1:
-                #print(type(kw))
-                kw=int(kw)
-                #print(type(kw))
-                #print(kw)      
-                kw=kw*1000;
-               #print("Timeout on second pass count ",ccountr)
-               #print(kw)
-               Match_Type.append(int(kw))
-               #print(len(Match_Type))  
-           #print("Match type Loop end")
-           
-           Temp['Match Number']=Match_num(Temp)
-           record_async_start=open("ForestLoadingQueue.txt","w")
-           record_async_start.write("25%")
-           record_async_start.close() 
-           """
+          
            Temp['Match Number']=BidOpAssist.Match_num(Temp);
                
            #Temp['Match Number']=Match_Type;
@@ -160,24 +110,7 @@ def BidOpFileHandler():
            record_async_start=open("ForestLoadingQueue.txt","w")
            record_async_start.write("50%")
            record_async_start.close()     
-           """
-           Market=[];
-           TempMarketCount=0;
-           #print("Newer While Loop Market")     
-           while TempMarketCount< len(Temp['Ad group']):
-                kw=Temp['Ad group'][TempMarketCount]
-                if str(re.search('>\d+',kw)).find("None")!=-1:
-                      kw=Temp['Campaign'][TempMarketCount]
-                      if str(re.search('>\d+',kw)).find("None")!=-1:  
-                         kw="match='>0";
-                kw=str(re.search('>\d+',kw))
-                targLoc=kw.find("match='>")
-                kw=kw[targLoc:].replace("match='>","").replace("'>","")
-                Market.append(kw)
-                TempMarketCount+=1;
-                #print(kw)
-           #print("Newer While Loop end") 
-           """
+           
            Temp['Market Number']=BidOpAssist.MarketNumberGen(Temp)
            core=pandas.read_excel('BidOpSeed.xlsx')
            core=core.append(Temp, sort='False')
