@@ -120,16 +120,16 @@ def BidOpFileHandler():
                if kw.find('broad')>-1:
                 kw="2";
                if str(Temp['Campaign'][ccountr]).lower().find("gppc")>-1:
-                print(type(kw))
+                #print(type(kw))
                 kw=int(kw)
-                print(type(kw))
+                #print(type(kw))
                 #print(kw)      
                 kw=kw*1000;
                #print("Timeout on second pass count ",ccountr)
                #print(kw)
                Match_Type.append(int(kw))
                #print(len(Match_Type))  
-           print("Match type Loop end")
+           #print("Match type Loop end")
            record_async_start=open("ForestLoadingQueue.txt","w")
            record_async_start.write("25%")
            record_async_start.close()     
@@ -142,7 +142,7 @@ def BidOpFileHandler():
            Market=[];
           
            TempMarketCount=0;
-           print("Newer While Loop Market")     
+           #print("Newer While Loop Market")     
            while TempMarketCount< len(Temp['Ad group']):
                 kw=Temp['Ad group'][TempMarketCount]
                 if str(re.search('>\d+',kw)).find("None")!=-1:
@@ -155,14 +155,14 @@ def BidOpFileHandler():
                 Market.append(kw)
                 TempMarketCount+=1;
                 #print(kw)
-           print("Newer While Loop end")      
+           #print("Newer While Loop end")      
            Temp['Market Number']=Market
            core=pandas.read_excel('BidOpSeed.xlsx')
            core=core.append(Temp, sort='False')
            core=pandas.DataFrame(core,columns=['Campaign','Ad group','Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank'])     
            #if (str(Temp['Campaign']).find('MSM')==-1:) 
            core.to_excel("BidOpSeed.xlsx")
-           print(core)
+           #print(core)
            record_async_start=open("ForestLoadingQueue.txt","w")
            record_async_start.write("100%")
            record_async_start.close();     
