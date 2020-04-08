@@ -182,7 +182,7 @@ def BidOpFileHandler():
            Temp['Market Number']=Market
            core=pandas.read_excel('BidOpSeed.xlsx')
            core=core.append(Temp, sort='False')
-           core=pandas.DataFrame(core,columns=['Campaign','Ad group','Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank'])     
+           core=pandas.DataFrame(core,columns=core_cols"""['Campaign','Ad group','Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']""")     
            #if (str(Temp['Campaign']).find('MSM')==-1:) 
            core.to_excel("BidOpSeed.xlsx")
            #print(core)
@@ -192,7 +192,7 @@ def BidOpFileHandler():
            
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
        #TrainBehavior(Temp);
-       TrainLoad=threading.Thread(target=TrainBehavior, args=[designated_Columns]);
+       TrainLoad=threading.Thread(target=TrainBehavior, args=[designated_Columns, core_cols]);
        TrainLoad.start(); 
        #return "Sheet has Been Identified as Training Data it is being formatted and Loaded as such... please wait.. do not press back button"  
        print("is there an attempt to return")
