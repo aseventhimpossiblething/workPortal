@@ -200,7 +200,7 @@ def BidOpFileHandler():
        
     else:
        print("else path") 
-       print(Temp) 
+       #print(Temp) 
        #BidOpAssist.BidOpOverview(designated_Columns,core_cols);
        BidOpAssistAsync=threading.Thread(target=BidOpAssist.BidOpOverview,args=[designated_Columns,core_cols])
        BidOpAssistAsync.start(); 
