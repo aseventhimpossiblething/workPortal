@@ -29,7 +29,7 @@ def BidOpOverview(x):
     print('onlyChange ',onlyChange)
     """
     print('designated_Columns ',designated_Columns) 
-    predict_cols=x[:]
+    predict_cols=x[0:3]
     print('predict_cols1 ',predict_cols)        
     predict_cols=predict_cols.remove('Changes')
     print('predict_cols2 ',predict_cols)
