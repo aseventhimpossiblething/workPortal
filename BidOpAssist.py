@@ -39,7 +39,8 @@ def BidOpOverview(x):
     Model.fit(XofSeed,YofSeed)
     Temp=pandas.read_excel('Temp.xlsx')
     Temp=pandas.DataFrame(Temp,columns=predict_cols) 
-    Temp=Temp.drop(['Campaign','Ad group'],axis=1),        
+    Temp=Temp.drop(['Campaign','Ad group'],axis=1)
+    print(Temp)
     print(Model.predict(Temp))
             
     
