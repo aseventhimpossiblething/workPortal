@@ -99,9 +99,9 @@ def BidOpOverview(desiCols,corecols):
     Temp['Market Number']=MarketNumberGen(Temp)
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols)
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1)
-    OuputBid=Model.predict(TempForOutPut)    
-    print(len(OuputBid))
-    print(Model.predict(TempForOutPut))
+    OutputBid=Model.predict(TempForOutPut)    
+    print(len(OutputBid))
+    print(OutputBid)
     return OutputBid    
             
     
