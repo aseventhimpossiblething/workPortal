@@ -90,7 +90,7 @@ def BidOpFileHandler():
            print(x)
            designated_Columns=x
           
-                      
+           """           
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
            Temp=pandas.read_excel('Temp.xlsx')
            if (str(Temp['Campaign']).find('MSM'))==-1:
@@ -98,7 +98,7 @@ def BidOpFileHandler():
                Temp=pandas.DataFrame(Temp,columns=conv_Columns)
                Temp.columns=designated_Columns 
                print(Temp)
-           
+           """
            rowCheck=[];
            for cols in designated_Columns:
                        colPresent=str(Temp.columns).find(cols);
@@ -182,7 +182,7 @@ def BidOpFileHandler():
            Temp['Market Number']=Market
            core=pandas.read_excel('BidOpSeed.xlsx')
            core=core.append(Temp, sort='False')
-           core=pandas.DataFrame(core,columns=core_cols"""['Campaign','Ad group','Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']""")     
+           core=pandas.DataFrame(core,columns=core_cols)     
            #if (str(Temp['Campaign']).find('MSM')==-1:) 
            core.to_excel("BidOpSeed.xlsx")
            #print(core)
