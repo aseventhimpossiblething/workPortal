@@ -55,7 +55,18 @@ def MarketNumberGen(_Temp_):
            #print("Newer While Loop end")      
            #Temp['Market Number']=Market            
             
-            
+def MkNewBid(x):
+    Temp=x;
+    Spend=Temp['Spend'];
+    Changes=Temp['Changes']);
+    New_Bid=[];
+    count=0;
+    while count<len(Spend);
+          bid=(Spend[count]*Changes[count])
+          New_Bid.append(bid)
+          print(bid)
+          count+=1;
+    return New_Bid      
             
             
             
@@ -97,15 +108,22 @@ def BidOpOverview(desiCols,corecols):
     Temp=Temp.replace('-',0).fillna(0) 
     Temp['Match Number']=Match_num(Temp);
     Temp['Market Number']=MarketNumberGen(Temp)
+       
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols)
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1)
-    OutputBid=Model.predict(TempForOutPut)    
+    OutputBid=Model.predict(TempForOutPut)  
+    Temp['Changes']=OutputBid 
+    Temp['New Bid']=MkNewBid(Temp)
+    
     print(len(OutputBid))
     print(OutputBid)
-    return OutputBid    
+    print(Temp)
+   
+    print('end overview')
+    return Temp  
             
     
-    print('end overview')
+   
 
 
 #print(max(glob.glob('*.xlsx'),key=os.path.getctime))
