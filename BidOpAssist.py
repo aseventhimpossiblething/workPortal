@@ -124,7 +124,9 @@ def BidOpOverview(desiCols,corecols):
     print("predict col ",predict_cols) 
     print("_____________________________________")
     
-    #postToSheet=open('')
+    #postToSheet=open('outputsheet.xlsx','w')
+    Temp.to_excel('outputsheet.xlsx')    
+        
     
     print(len(OutputBid))
     print(OutputBid)
