@@ -41,8 +41,9 @@ def Match_num(x):
             
             
             
-def BidOpOverview(x):
-    designated_Columns=x
+def BidOpOverview(desiCols,core-cols):
+    designated_Columns=desiCols;
+    core_cols=core-cols;
     loc=x.count('Changes')
             
     #print("x.count('Changes - 1') ",x.count('Changes') ) 
@@ -54,8 +55,8 @@ def BidOpOverview(x):
     loc=x.index('Changes')        
    
     #print('designated_Columns ',designated_Columns) 
-    predict_colsP1=x[:loc]
-    predict_colsP2=x[loc+1:]
+    predict_colsP1=core-cols[:loc]
+    predict_colsP2=core-cols[loc+1:]
     predict_cols=predict_colsP1+predict_colsP2
           
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
