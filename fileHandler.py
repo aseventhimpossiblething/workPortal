@@ -35,7 +35,7 @@ def ValidatXLSXtime(arr):
 def Match_num(x):
         Temp=x
         Match_Type=[];
-           for kw in Temp['Match type']:
+        for kw in Temp['Match type']:
                kw=kw.lower() 
               
                if kw.find("exact")>-1:
