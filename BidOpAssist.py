@@ -24,9 +24,10 @@ def BidOpOverview(x):
     print('designated_Columns ',designated_Columns) 
     predict_colsP1=x[:loc]
     predict_colsP2=x[loc:]
-    print('predict_cols1 ',predict_cols)        
+    print('predict_colsP1 ',predict_colsP1) 
+    print('predict_colsP2 ',predict_colsP2)          
     #predict_cols=predict_cols.remove('Changes')
-    print('predict_cols2 ',predict_cols)
+    #print('predict_cols2 ',predict_cols)
     print('designated_Columns ',designated_Columns)        
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     print(os.listdir())
