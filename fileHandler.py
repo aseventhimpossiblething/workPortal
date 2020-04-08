@@ -34,6 +34,7 @@ def ValidatXLSXtime(arr):
         
 def Match_num(x):
         Temp=x
+        ccountr=0;
         Match_Type=[];
         for kw in Temp['Match type']:
                kw=kw.lower() 
@@ -51,6 +52,7 @@ def Match_num(x):
                #print("Timeout on second pass count ",ccountr)
                #print(kw)
                Match_Type.append(int(kw))
+               ccountr+=1;
         return Match_Type   
                #print(len(Match_Type))  
            #print("Match type Loop end")
