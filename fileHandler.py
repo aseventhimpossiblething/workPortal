@@ -10,6 +10,7 @@ import xlrd
 import io
 import threading
 from flask import send_file
+
 import gc
 import re
 from openpyxl import Workbook
@@ -30,6 +31,29 @@ def ValidatXLSXtime(arr):
             print(Error)
         else:
             print(Valid)
+        
+def Match_num(x):
+        Temp=x
+        Match_Type=[];
+           for kw in Temp['Match type']:
+               kw=kw.lower() 
+              
+               if kw.find("exact")>-1:
+                kw="1";
+               if kw.find('broad')>-1:
+                kw="2";
+               if str(Temp['Campaign'][ccountr]).lower().find("gppc")>-1:
+                #print(type(kw))
+                kw=int(kw)
+                #print(type(kw))
+                #print(kw)      
+                kw=kw*1000;
+               #print("Timeout on second pass count ",ccountr)
+               #print(kw)
+               Match_Type.append(int(kw))
+        return Match_Type   
+               #print(len(Match_Type))  
+           #print("Match type Loop end")
 
 def BidOpFileHandler():
         
@@ -49,9 +73,7 @@ def BidOpFileHandler():
     record_async_start.close()
     #print(record_async_start.read())     
     
-
-    #designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
-    #designated_Columns=str(designated_Columns)
+   
     designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']         
    
     
@@ -63,8 +85,7 @@ def BidOpFileHandler():
            print('async started')
            print(x)
            designated_Columns=x
-           #designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
-           
+          
                       
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
            Temp=pandas.read_excel('Temp.xlsx')
@@ -97,12 +118,14 @@ def BidOpFileHandler():
            Temp=pandas.DataFrame(Temp,columns=designated_Columns)
            Temp.fillna(0)
            
+                
+           print(Match_num(Temp))
+           
            ccountr=0; 
            record_async_start=open("ForestLoadingQueue.txt","w+")
            record_async_start.write("15%")
            record_async_start.close()     
            Match_Type=[];
-           #print("Match Type Loop start") 
            for kw in Temp['Match type']:
                kw=kw.lower() 
               
