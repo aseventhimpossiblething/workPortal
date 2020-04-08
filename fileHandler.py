@@ -204,7 +204,7 @@ def BidOpFileHandler():
        print("else path") 
        print(Temp) 
        #BidOpAssist.BidOpOverview(designated_Columns,core_cols);
-       BidOpAssistAsync=threading.Thread(BidOpAssist.BidOpOverview,args=[designated_Columns,core_cols])
+       BidOpAssistAsync=threading.Thread(target=BidOpAssist.BidOpOverview,args=[designated_Columns,core_cols])
        BidOpAssistAsync.start(); 
        isTrainingSheet="This is Not Training Data, Attempt will be made to Optimise bids"         
                 
