@@ -25,14 +25,14 @@ def BidOpOverview(x):
     predict_colsP1=x[:loc]
     predict_colsP2=x[loc+1:]
     predict_cols=predict_colsP1+predict_colsP2
-    print('predict_colsP1 ',predict_colsP1) 
-    print('predict_colsP2 ',predict_colsP2) 
-    print('predict_cols ',predict_cols)         
+    #print('predict_colsP1 ',predict_colsP1) 
+    #print('predict_colsP2 ',predict_colsP2) 
+    #print('predict_cols ',predict_cols)         
     #predict_cols=predict_cols.remove('Changes')
     #print('predict_cols2 ',predict_cols)
     #print('designated_Columns ',designated_Columns)        
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
-    print(os.listdir())
+    #print(os.listdir())
     Seed=pandas.read_excel('BidOpSeed.xlsx');
     Seed=pandas.DataFrame(Seed,columns=designated_Columns)        
     Seed=Seed.replace("-",0).fillna(0)        
@@ -44,7 +44,7 @@ def BidOpOverview(x):
     Model.fit(XofSeed,YofSeed)
     Temp=pandas.read_excel('Temp.xlsx')
     Temp=pandas.DataFrame(Temp,columns=predict_cols)        
-    
+    Model.predict(Temp)
             
     
     print('end overview')
