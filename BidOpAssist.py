@@ -5,6 +5,7 @@ import os
 import numpy
 import scipy
 import pandas
+import re
 from sklearn.ensemble import RandomForestRegressor
 #os.chdir('Sheets')
 #PredictorCols=['Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank'])     
