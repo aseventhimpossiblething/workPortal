@@ -91,9 +91,10 @@ def BidOpFileHandler():
            designated_Columns=x
            core_cols=x2     
           
-           """           
+                      
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
            Temp=pandas.read_excel('Temp.xlsx')
+           """     
            if (str(Temp['Campaign']).find('MSM'))==-1:
                conv_Columns=['Campaign','Ad group','Match type','Changes','Max. CPC','Clicks','CTR','Avg. CPC','Cost','Conversions','Cost / conv.','Conv. rate','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Quality Score','Search lost IS (rank)',]     
                Temp=pandas.DataFrame(Temp,columns=conv_Columns)
