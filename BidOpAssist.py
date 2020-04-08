@@ -89,8 +89,8 @@ def BidOpOverview(desiCols,corecols):
     predict_colsP2=corecols[loc+1:]
     predict_cols=predict_colsP1+predict_colsP2
         
-    print("core ",core_cols)
-    print("predict col ",predict_cols)    
+    #print("core ",core_cols)
+    #print("predict col ",predict_cols)    
           
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     #print(os.listdir())
@@ -114,6 +114,17 @@ def BidOpOverview(desiCols,corecols):
     OutputBid=Model.predict(TempForOutPut)  
     Temp['Changes']=OutputBid 
     Temp['New Bid']=MkNewBid(Temp)
+    
+    print(os.listdir())
+        
+    print("_____________________________________")
+    #print("predict col ",predict_cols)        
+    print("core ",core_cols)
+    print("_____________________________________")
+    print("predict col ",predict_cols) 
+    print("_____________________________________")
+    
+    #postToSheet=open('')
     
     print(len(OutputBid))
     print(OutputBid)
