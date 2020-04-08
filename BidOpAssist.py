@@ -96,7 +96,7 @@ def BidOpOverview(desiCols,corecols):
     Temp=pandas.read_excel('Temp.xlsx')
      
     Temp['Match Number']=Match_num(Temp);
-    Temp['Market Number']=MarketNumberGen(_Temp_)
+    Temp['Market Number']=MarketNumberGen(Temp)
     Temp=pandas.DataFrame(Temp,columns=predict_cols)
     #print(Temp)
     #print(Temp['Match Number'])
