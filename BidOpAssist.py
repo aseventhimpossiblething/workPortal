@@ -34,8 +34,25 @@ def Match_num(x):
            #print("Match type Loop end")
  
             
-            
-            
+ def MarketNumberGen(_Temp_):
+        Temp=_Temp_
+        Market=[];
+        TempMarketCount=0;
+        while TempMarketCount< len(Temp['Ad group']):
+                kw=Temp['Ad group'][TempMarketCount]
+                if str(re.search('>\d+',kw)).find("None")!=-1:
+                      kw=Temp['Campaign'][TempMarketCount]
+                      if str(re.search('>\d+',kw)).find("None")!=-1:  
+                         kw="match='>0";
+                kw=str(re.search('>\d+',kw))
+                targLoc=kw.find("match='>")
+                kw=kw[targLoc:].replace("match='>","").replace("'>","")
+                Market.append(kw)
+                TempMarketCount+=1;
+        return Market        
+                #print(kw)
+           #print("Newer While Loop end")      
+           #Temp['Market Number']=Market            
             
             
             
