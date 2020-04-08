@@ -44,13 +44,13 @@ def Match_num(x):
 def BidOpOverview(desiCols,corecols):
     designated_Columns=desiCols;
     core_cols=corecols;
-    loc=x.count('Changes')
+    loc=corecols.count('Changes')
             
     #print("x.count('Changes - 1') ",x.count('Changes') ) 
     if loc<1:
        print("Changes not present")     
        print("x.count('Changes - 2') ",loc )     
-       loc=x.index('Changes')
+       loc=corecols.index('Changes')
     #print("loc - Location of Changes in index - 3 ",loc)
     loc=x.index('Changes')        
    
