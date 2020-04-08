@@ -203,7 +203,7 @@ def BidOpFileHandler():
     else:
        print("else path") 
        print(Temp) 
-       BidOpAssist.BidOpOverview(designated_Columns); 
+       BidOpAssist.BidOpOverview(designated_Columns,core_cols); 
        isTrainingSheet="This is Not Training Data, Attempt will be made to Optimise bids"         
                 
         
