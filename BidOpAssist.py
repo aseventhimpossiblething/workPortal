@@ -57,14 +57,14 @@ def MarketNumberGen(_Temp_):
             
 def MkNewBid(x):
     Temp=x;
-    Spend=Temp['Spend'];
+    Bid=Temp['Bid'];
     Changes=Temp['Changes'];
     New_Bid=[];
     count=0;
     while count<len(Spend):
-          bid=(Spend[count]*Changes[count])
-          New_Bid.append(bid)
-          print(bid)
+          thebid=(Bid[count]*Changes[count])
+          New_Bid.append(thebid)
+          #print(bid)
           count+=1;
     return New_Bid      
             
