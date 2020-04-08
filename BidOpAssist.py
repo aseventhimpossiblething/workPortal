@@ -52,7 +52,7 @@ def BidOpOverview(desiCols,corecols):
        print("x.count('Changes - 2') ",loc )     
        loc=corecols.index('Changes')
     #print("loc - Location of Changes in index - 3 ",loc)
-    loc=x.index('Changes')        
+    loc=corecols.index('Changes')        
    
     #print('designated_Columns ',designated_Columns) 
     predict_colsP1=corecols[:loc]
