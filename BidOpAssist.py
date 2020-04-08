@@ -34,7 +34,7 @@ def Match_num(x):
            #print("Match type Loop end")
  
             
- def MarketNumberGen(_Temp_):
+def MarketNumberGen(_Temp_):
         Temp=_Temp_
         Market=[];
         TempMarketCount=0;
