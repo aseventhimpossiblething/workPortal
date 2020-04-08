@@ -153,6 +153,7 @@ def BidOpFileHandler():
            record_async_start.write("25%")
            record_async_start.close() 
            """
+           Temp['Match Number']=Match_num(Temp);
                
            #Temp['Match Number']=Match_Type;
            #Temp['Match Number']=Match_num(Temp)
