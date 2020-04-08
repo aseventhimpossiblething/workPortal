@@ -72,11 +72,11 @@ def BidOpOverview(desiCols,corecols):
     Model.fit(XofSeed,YofSeed)
             
     Temp=pandas.read_excel('Temp.xlsx')
-    Temp=pandas.DataFrame(Temp,columns=predict_cols) 
+    Temp=pandas.DataFrame(Temp) 
     Temp['Match Number']=Match_num(Temp);
     print(Temp)
     print(Temp['Match Number'])
-    MNcount=0;
+    #MNcount=0;
     
     Temp=Temp.drop(['Campaign','Ad group','Match type'],axis=1)
     #print(Temp)
