@@ -37,10 +37,16 @@ def BidOpOverview(x):
     #print(YofSeed)
     Model=RandomForestRegressor()
     Model.fit(XofSeed,YofSeed)
+            
     Temp=pandas.read_excel('Temp.xlsx')
     Temp=pandas.DataFrame(Temp,columns=predict_cols) 
-    Temp=Temp.drop(['Campaign','Ad group'],axis=1)
+    Temp['Match Number']=Match_num(Temp);
     print(Temp)
+    print(Temp['Match Number'])
+    MNcount=0;
+    
+    Temp=Temp.drop(['Campaign','Ad group','Match type'],axis=1)
+    #print(Temp)
     print(Model.predict(Temp))
             
     
