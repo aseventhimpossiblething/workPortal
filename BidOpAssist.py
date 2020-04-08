@@ -11,9 +11,11 @@ from sklearn.ensemble import RandomForestRegressor
             
 def BidOpOverview(x):
     designated_Columns=x
+    print("x.count('Changes - 1') ",x.count('Changes') ) 
     if x.count('Changes')<0:
+       print("x.count('Changes - 2') ",x.count('Changes') )     
        loc=x.index('Changes')
-    print("loc - Location of Changes in index - ",loc)
+    print("loc - Location of Changes in index - 3 ",loc)
    
     print('designated_Columns ',designated_Columns) 
     predict_colsP1=x[:loc]
