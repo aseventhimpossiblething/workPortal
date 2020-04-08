@@ -63,8 +63,7 @@ def BidOpOverview(desiCols,corecols):
     designated_Columns=desiCols;
     core_cols=corecols;
     loc=corecols.count('Changes')
-    print(core_cols)
-    print(predict_cols)
+   
             
     #print("x.count('Changes - 1') ",x.count('Changes') ) 
     if loc<1:
@@ -78,6 +77,9 @@ def BidOpOverview(desiCols,corecols):
     predict_colsP1=corecols[:loc]
     predict_colsP2=corecols[loc+1:]
     predict_cols=predict_colsP1+predict_colsP2
+        
+    print(core_cols)
+    print(predict_cols)    
           
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     #print(os.listdir())
