@@ -32,6 +32,7 @@ def ValidatXLSXtime(arr):
         else:
             print(Valid)
         
+"""        
 def Match_num(x):
         Temp=x
         ccountr=0;
@@ -56,6 +57,7 @@ def Match_num(x):
         return Match_Type   
                #print(len(Match_Type))  
            #print("Match type Loop end")
+"""
 
 def BidOpFileHandler():
         
@@ -153,7 +155,7 @@ def BidOpFileHandler():
            record_async_start.write("25%")
            record_async_start.close() 
            """
-           Temp['Match Number']=Match_num(Temp);
+           Temp['Match Number']=BidOpAssist.Match_num(Temp);
                
            #Temp['Match Number']=Match_Type;
            #Temp['Match Number']=Match_num(Temp)
