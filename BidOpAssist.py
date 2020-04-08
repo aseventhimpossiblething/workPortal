@@ -13,22 +13,24 @@ def BidOpOverview(x):
     designated_Columns=x
     loc=x.count('Changes')
             
-    print("x.count('Changes - 1') ",x.count('Changes') ) 
+    #print("x.count('Changes - 1') ",x.count('Changes') ) 
     if loc<1:
        print("Changes not present")     
        print("x.count('Changes - 2') ",loc )     
        loc=x.index('Changes')
-    print("loc - Location of Changes in index - 3 ",loc)
+    #print("loc - Location of Changes in index - 3 ",loc)
     loc=x.index('Changes')        
    
-    print('designated_Columns ',designated_Columns) 
+    #print('designated_Columns ',designated_Columns) 
     predict_colsP1=x[:loc]
-    predict_colsP2=x[loc:]
+    predict_colsP2=x[loc+1:]
+    predict_cols=predict_colsP1+predict_colsP2
     print('predict_colsP1 ',predict_colsP1) 
-    print('predict_colsP2 ',predict_colsP2)          
+    print('predict_colsP2 ',predict_colsP2) 
+    print('predict_cols ',predict_cols)         
     #predict_cols=predict_cols.remove('Changes')
     #print('predict_cols2 ',predict_cols)
-    print('designated_Columns ',designated_Columns)        
+    #print('designated_Columns ',designated_Columns)        
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     print(os.listdir())
     Seed=pandas.read_excel('BidOpSeed.xlsx');
@@ -36,8 +38,8 @@ def BidOpOverview(x):
     Seed=Seed.replace("-",0).fillna(0)        
     XofSeed=Seed.drop(['Campaign','Ad group','Changes'],axis=1);
     YofSeed=Seed['Changes']
-    print(XofSeed)        
-    print(YofSeed)
+    #print(XofSeed)        
+    #print(YofSeed)
     Model=RandomForestRegressor()
     Model.fit(XofSeed,YofSeed)
     Temp=pandas.read_excel('Temp.xlsx')
