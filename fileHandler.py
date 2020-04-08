@@ -45,7 +45,7 @@ def BidOpFileHandler():
     record_async_start.write("5%")
     record_async_start.close()
     record_async_start=open("ForestLoadingQueue.txt","r")
-    print(record_async_start.read())    
+    #print(record_async_start.read())    
     record_async_start.close()
     #print(record_async_start.read())     
     
@@ -102,7 +102,7 @@ def BidOpFileHandler():
            record_async_start.write("15%")
            record_async_start.close()     
            Match_Type=[];
-           print("Match Type Loop start") 
+           #print("Match Type Loop start") 
            for kw in Temp['Match type']:
                kw=kw.lower() 
               
