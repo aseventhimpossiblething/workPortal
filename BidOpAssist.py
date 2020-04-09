@@ -79,10 +79,12 @@ def BidOpOverview(desiCols,corecols):
    
             
     #print("x.count('Changes - 1') ",x.count('Changes') ) 
+    
     if loc<1:
-       print("Changes not present")     
+       print(PreVar," not present")     
        print("x.count(",PredVar, "- 2) ",loc )     
        loc=corecols.index(PredVar)
+    
     #print("loc - Location of Changes in index - 3 ",loc)
     loc=corecols.index(PredVar)        
    
