@@ -146,7 +146,7 @@ def BidOpOverview(desiCols,corecols,change):
     Temp.to_excel("outputsheet.xlsx")
     #"putputsheet.xlsx"
 
-    writer=pandas.ExcelWriter("putputsheet.xlsx"")
+    writer=pandas.ExcelWriter("putputsheet.xlsx")
     TempForOutPut.to_excel(writer)
     writer.save()
     #"novExcel.xlsx"    
