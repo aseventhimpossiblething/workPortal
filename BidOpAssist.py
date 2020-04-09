@@ -135,19 +135,19 @@ def BidOpOverview(desiCols,corecols,change):
     print("begin excel test1")
     print(type(Temp))
     print(os.listdir())
-    #sipsheet=pandas.read_excel('outputsheet.xlsx')
-    #print(sipsheet);    
-    Temp.to_excel('outputsheet.xlsx');
+    sipsheet=pandas.read_excel('outputsheet.xlsx')
+    print(sipsheet);    
+    print(Temp.to_excel("outputsheet.xlsx"));
     print(os.listdir())
-    #print(sipsheet); 
+    print(sipsheet); 
     
     print("begin excel test2")    
     
-    writer=pandas.ExcelWriter('outputsheet.xlsx')
+    writer=pandas.ExcelWriter("outputsheet.xlsx")
     Temp.to_excel(writer)
     writer.save()
     print(os.listdir()) 
-    #print(sipsheet); 
+    print(sipsheet); 
     #print(sipsheet); 
     print("end excel test")            
         
