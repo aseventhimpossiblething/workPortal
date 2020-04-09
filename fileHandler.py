@@ -41,7 +41,22 @@ def rowcheck(Sheet,cols):
         colPresent=str(Temp.columns).find(cols);
         if colPresent==-1: 
            rowCheck.append(cols);
-    return rowCheck;    
+    return rowCheck; 
+def googConverter(X):
+    print("GoogConverter Running")    
+    Temp=X;
+    cols=Temp.columns
+    print("initial cols ",cols)
+    New_cols=[];
+    for col in cols:
+        col=str(col).replace("'","").replace('Max.CPC','Bid').replace('Cost','Spend').replace('Conversions','Conv.').replace('Cost / conv.','CPA').replace('Search top IS','Top Impr. Share]').replace('Search abs. top IS','Absolute Top Impression Share').replace('Search impr. share','Impr. share (IS)').replace('Quality Score','Qual. Score').replace('Search lost IS (rank)','IS lost to rank').replace(']','').replace('[','')             
+        New_cols.append(col);
+    print("array ",New_cols) 
+    Temp.columns=Newcols
+    print("GoogConverter end")    
+    return Temp
+      
+        
 
 
 def BidOpFileHandler():
@@ -69,9 +84,10 @@ def BidOpFileHandler():
    
     isGoog1=str(Temp.columns).find('Cost')
     isGoog2=str(Temp.columns).find('Conversions')
+    Temp=googConverter(Temp)
     #if (isGoog1>=-1) or (isGoog2>=1):
-    designated_Columns=str(designated_Columns).replace("'","").replace('Max.CPC','Bid').replace('Cost','Spend').replace('Conversions','Conv.').replace('Cost / conv.','CPA').replace('Search top IS','Top Impr. Share]').replace('Search abs. top IS','Absolute Top Impression Share').replace('Search impr. share','Impr. share (IS)').replace('Quality Score','Qual. Score').replace('Search lost IS (rank)','IS lost to rank').replace(']','').replace('[','')             
-    designated_Columns=designated_Columns.split(',')
+    #designated_Columns=str(designated_Columns).replace("'","").replace('Max.CPC','Bid').replace('Cost','Spend').replace('Conversions','Conv.').replace('Cost / conv.','CPA').replace('Search top IS','Top Impr. Share]').replace('Search abs. top IS','Absolute Top Impression Share').replace('Search impr. share','Impr. share (IS)').replace('Quality Score','Qual. Score').replace('Search lost IS (rank)','IS lost to rank').replace(']','').replace('[','')             
+    #designated_Columns=designated_Columns.split(',')
     print(len(designated_Columns))    
     print(type(designated_Columns))    
     print(designated_Columns)    
