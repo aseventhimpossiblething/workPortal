@@ -121,7 +121,7 @@ def BidOpOverview(desiCols,corecols,change):
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1)
     OutputBid=Model.predict(TempForOutPut)  
     Temp[PredVar]=OutputBid 
-    Temp=pandas.DataFrame(Temp)
+    print(Temp)
     
     
         
@@ -150,7 +150,9 @@ def BidOpOverview(desiCols,corecols,change):
     Temp.to_excel(writer)
     writer.save()
     print(os.listdir()) 
-    print(sipsheet); 
+    print(sipsheet);
+    print(TempForOutPut)    
+    TempForOutPut.to_excel("novExcel.xlsx")    
     #print(sipsheet); 
     print("end excel test")            
         
