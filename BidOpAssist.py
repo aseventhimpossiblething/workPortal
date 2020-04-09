@@ -135,6 +135,7 @@ def BidOpOverview(desiCols,corecols,change):
     sipsheet=pandas.read_excel('outputsheet.xlsx')
     print(sipsheet);    
     Temp.to_excel('outputsheet.xlsx');
+    print(os.listdir())
     print(sipsheet);  
     print("end excel test")            
         
