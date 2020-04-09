@@ -258,13 +258,19 @@ def BasisM():
  return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/BidOpSeed.xlsx', attachment_filename='BidOpSeed.xlsx')
 
          
-@app.route('/OutPutOfBiOp')
-def BasisN():
- return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/outputsheet.xlsx', attachment_filename='BidOp.xlsx')
+@app.route('/OutPutOfBiOp1')
+def BasisN1():
+ return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/outputsheet.xlsx', attachment_filename='Bid0p5heet1.xlsx')
 
          
+@app.route('/OutPutOfBiOp2')
+def BasisN2():
+ return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/putputsheet.xlsx', attachment_filename='Bid0p5heet2.xlsx')
 
     
+@app.route('/OutPutOfBiOp3')
+def BasisN3():
+ return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/novExcel.xlsx', attachment_filename='Bid0p5heet3.xlsx')
 
 
 
