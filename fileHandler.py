@@ -66,7 +66,11 @@ def BidOpFileHandler():
     #target_Variable='Changes'
     designated_Columns=['Campaign','Ad group','Match type',target_Variable,'Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']         
     core_cols=['Campaign','Ad group',target_Variable,'Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
-    
+   
+    isGoog1=str(Temp.columns).find('Cost')
+    isGoog2=str(Temp.columns).find('Conversions')
+    #if (isGoog1>=-1) or (isGoog2>=1):
+    designated_Columns.replace('Max.CPC','Bid').replace('Cost','Spend').replace('Conversions','Conv.').replace('Cost / conv.','CPA').replace('Search top IS','Top Impr. Share]').replace('Search abs. top IS','Absolute Top Impression Share').replace('Search impr. share','Impr. share (IS)').replace('Quality Score','Qual. Score').replace('Search lost IS (rank)','IS lost to rank')             
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
        #print(str(Temp['Campaign']).find('MSM')) 
