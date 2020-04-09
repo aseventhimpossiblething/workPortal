@@ -1,3 +1,4 @@
+imoirt ExcelWriter
 from openpyxl import Workbook
 from openpyxl import load_workbook
 import xlrd
@@ -131,7 +132,9 @@ def BidOpOverview(desiCols,corecols,change):
     print("predict col ",predict_cols) 
     print("_____________________________________")
     
-    #postToSheet=open('outputsheet.xlsx','w')
+    
+    OutputBid.to_excel('outputsheet.xlsx')    
+    
     print("begin excel test1")
     print(type(Temp))
     print(os.listdir())
