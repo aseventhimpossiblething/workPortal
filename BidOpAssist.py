@@ -139,13 +139,17 @@ def BidOpOverview(desiCols,corecols,change):
     #print(type(Temp))
     #print(os.listdir())
     #output=pandas.read_excel('outputsheet.xlsx')
-    XofSeed.to_excel("outputsheet.xlsx")    
-        
-    Temp.to_excel("putputsheet.xlsx")
     
-    writer=pandas.ExcelWriter("novExcel.xlsx")
+    XofSeed.to_excel("novExcel.xlsx")    
+    #"outputsheet.xlsx"    
+    
+    Temp.to_excel("outputsheet.xlsx")
+    #"putputsheet.xlsx"
+
+    writer=pandas.ExcelWriter("putputsheet.xlsx"")
     TempForOutPut.to_excel(writer)
     writer.save()
+    #"novExcel.xlsx"    
 
     
     pandas.read_excel("outputsheet.xlsx")
