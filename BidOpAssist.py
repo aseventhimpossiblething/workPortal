@@ -137,6 +137,9 @@ def BidOpOverview(desiCols,corecols,change):
     print(Temp)
    
     print('end overview')
+    record_async_start=open("ForestLoadingQueue.txt","w")
+    record_async_start.write("100%")
+    record_async_start.close();         
     return Temp  
             
     
