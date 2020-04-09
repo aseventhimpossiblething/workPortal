@@ -342,8 +342,8 @@ def acd():
 
 @app.route('/BidOptimisation')
 def BdOptmstn():
-    return "Building template for bidop output"     
-    #return render_template()     
+    #return "Building template for bidop output"     
+    return render_template("BidOptimisation.html")     
 
 
 
