@@ -56,9 +56,10 @@ def MarketNumberGen(_Temp_):
            #Temp['Market Number']=Market            
             
 def MkNewBid(x):
+    PredVar='Changes'    
     Temp=x;
     Bid=Temp['Bid'];
-    Changes=Temp['Changes'];
+    Changes=Temp[PredVar];
     New_Bid=[];
     count=0;
     while count<len(Bid):
@@ -71,18 +72,19 @@ def MkNewBid(x):
             
             
 def BidOpOverview(desiCols,corecols):
+    PredVar='Changes'    
     designated_Columns=desiCols;
     core_cols=corecols;
-    loc=corecols.count('Changes')
+    loc=corecols.count(PredVar)
    
             
     #print("x.count('Changes - 1') ",x.count('Changes') ) 
     if loc<1:
        print("Changes not present")     
-       print("x.count('Changes - 2') ",loc )     
-       loc=corecols.index('Changes')
+       print("x.count(",PredVar, "- 2) ",loc )     
+       loc=corecols.index(PredVar)
     #print("loc - Location of Changes in index - 3 ",loc)
-    loc=corecols.index('Changes')        
+    loc=corecols.index(PredVar)        
    
     #print('designated_Columns ',designated_Columns) 
     predict_colsP1=corecols[:loc]
@@ -97,8 +99,8 @@ def BidOpOverview(desiCols,corecols):
     Seed=pandas.read_excel('BidOpSeed.xlsx');
     Seed=pandas.DataFrame(Seed,columns=core_cols)        
     Seed=Seed.replace("-",0).fillna(0)        
-    XofSeed=Seed.drop(['Campaign','Ad group','Changes'],axis=1);
-    YofSeed=Seed['Changes']
+    XofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
+    YofSeed=Seed[PredVar]
     #print(XofSeed)        
     #print(YofSeed)
     Model=RandomForestRegressor()
@@ -112,7 +114,7 @@ def BidOpOverview(desiCols,corecols):
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols)
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1)
     OutputBid=Model.predict(TempForOutPut)  
-    Temp['Changes']=OutputBid 
+    Temp[PredVar]=OutputBid 
     Temp['New Bid']=MkNewBid(Temp)
     
     print(os.listdir())
