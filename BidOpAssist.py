@@ -56,7 +56,7 @@ def MarketNumberGen(_Temp_):
            #Temp['Market Number']=Market            
             
 def MkNewBid(x):
-    PredVar='Changes'    
+    PredVar='Changes'
     Temp=x;
     Bid=Temp['Bid'];
     Changes=Temp[PredVar];
@@ -115,7 +115,7 @@ def BidOpOverview(desiCols,corecols):
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1)
     OutputBid=Model.predict(TempForOutPut)  
     Temp[PredVar]=OutputBid 
-    Temp['New Bid']=MkNewBid(Temp)
+    #Temp['New Bid']=MkNewBid(Temp)
     
     print(os.listdir())
         
