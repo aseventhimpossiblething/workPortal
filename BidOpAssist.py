@@ -119,7 +119,7 @@ def BidOpOverview(desiCols,corecols,change):
     Temp[PredVar]=OutputBid 
     #Temp['New Bid']=MkNewBid(Temp)
     
-    print(os.listdir())
+    #print(os.listdir())
         
     print("_____________________________________")
     #print("predict col ",predict_cols)        
