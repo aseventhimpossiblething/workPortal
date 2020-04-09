@@ -32,6 +32,15 @@ def ValidatXLSXtime(arr):
         else:
             print(Valid)
         
+def rowcheck(Sheet,cols):
+    #rowCheck=[];        
+    Temp=Sheet  
+    designated_Columns=cols
+    rowCheck=[];
+    for cols in designated_Columns:
+        colPresent=str(Temp.columns).find(cols);
+        if colPresent==-1: 
+           rowCheck.append(cols);        
 
 
 def BidOpFileHandler():
@@ -77,6 +86,20 @@ def BidOpFileHandler():
                Temp.columns=designated_Columns 
                print(Temp)
            """
+           """
+           def rowcheck(Sheet,cols):
+                rowCheck=[];        
+                Temp=Sheet  
+                designated_Columns=cols
+                rowCheck=[];
+                for cols in designated_Columns:
+                       colPresent=str(Temp.columns).find(cols);
+                       #print(colPresent)
+                       #print("colPresent") 
+                       if colPresent==-1: 
+                          rowCheck.append(cols); 
+           rowcheck(Temp,designated_Columns)             
+                
            rowCheck=[];
            for cols in designated_Columns:
                        colPresent=str(Temp.columns).find(cols);
@@ -86,6 +109,8 @@ def BidOpFileHandler():
                           rowCheck.append(cols);
                                 
            len(rowCheck);
+           """
+           rowCheck=rowcheck(Temp,designated_Columns)     
            print(len(rowCheck)," ",rowCheck); 
            if len(rowCheck)>0:
                 os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
