@@ -350,7 +350,7 @@ def BdOptmstn():
     ready=readiness.read()
     print(ready)
     settleURL='<meta http-equiv="refresh" content="60"><html>Bids are Being Optimised  - '+ready+"</html>"
-    if ready.find("100%")=>-1:
+    if ready.find("100%")>=-1:
        return render_template("BidOptimisation.html")           
     #return "Building template for bidop output"     
     #return render_template("BidOptimisation.html")     
