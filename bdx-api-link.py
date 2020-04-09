@@ -258,7 +258,11 @@ def BasisM():
  return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/BidOpSeed.xlsx', attachment_filename='BidOpSeed.xlsx')
 
          
+@app.route('/OutPutOfBiOp')
+def BasisN():
+ return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/outputsheet.xlsx', attachment_filename='BidOp.xlsx')
 
+         
 
     
 
