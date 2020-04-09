@@ -1,3 +1,4 @@
+import xlrd
 import xlsxwriter
 import glob
 import chardet
