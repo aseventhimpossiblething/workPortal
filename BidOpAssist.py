@@ -132,13 +132,22 @@ def BidOpOverview(desiCols,corecols,change):
     print("_____________________________________")
     
     #postToSheet=open('outputsheet.xlsx','w')
-    print("begin excel test")    
+    print("begin excel test1")    
     print(os.listdir())
     sipsheet=pandas.read_excel('outputsheet.xlsx')
     print(sipsheet);    
     Temp.to_excel('outputsheet.xlsx');
     print(os.listdir())
-    print(sipsheet);  
+    print(sipsheet); 
+    
+    print("begin excel test2")    
+    
+    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+    GoogleKWFrame.to_excel(writer)
+    writer.save()
+    print(os.listdir()) 
+    print(sipsheet); 
+    print(sipsheet); 
     print("end excel test")            
         
     
