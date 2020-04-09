@@ -160,7 +160,7 @@ def BidOpFileHandler():
        
     else:
        print("else path")
-       locOfTarg=designated_Columns.find(target_Variable)
+       locOfTarg=designated_Columns.index(target_Variable)
        newDesignatedColP1=designated_Columns[:locOfTarg] 
        newDesignatedColP2=designated_Columns[:locOfTarg+1]
        newDesignatedColP=newDesignatedColP1+newDesignatedColP1
