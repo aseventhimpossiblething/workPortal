@@ -40,7 +40,8 @@ def rowcheck(Sheet,cols):
     for cols in designated_Columns:
         colPresent=str(Temp.columns).find(cols);
         if colPresent==-1: 
-           rowCheck.append(cols);        
+           rowCheck.append(cols);
+    return rowCheck;    
 
 
 def BidOpFileHandler():
