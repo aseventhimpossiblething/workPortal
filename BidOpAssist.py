@@ -125,11 +125,7 @@ def BidOpOverview(desiCols,corecols,change):
     
     
         
-    print("_____________________________________")
-    #print("predict col ",predict_cols)        
-    #print("core ",core_cols)
-    print("_____________________________________")
-    #print("predict col ",predict_cols) 
+   
     print("_____________________________________")
     
     
@@ -152,7 +148,7 @@ def BidOpOverview(desiCols,corecols,change):
     #"novExcel.xlsx"    
     """
     
-    pandas.read_excel("outputsheet.xlsx")
+    #pandas.read_excel("outputsheet.xlsx")
     """    
     pandas.read_excel("putputsheet.xlsx")
     pandas.read_excel("novExcel.xlsx")
