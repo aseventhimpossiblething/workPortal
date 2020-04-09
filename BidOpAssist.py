@@ -139,20 +139,21 @@ def BidOpOverview(desiCols,corecols,change):
     #print(type(Temp))
     #print(os.listdir())
     #output=pandas.read_excel('outputsheet.xlsx')
-    
+    """
     XofSeed.to_excel("novExcel.xlsx")    
     #"outputsheet.xlsx"    
-    
+    """
     Temp.to_excel("outputsheet.xlsx")
     #"putputsheet.xlsx"
-
+    """
     writer=pandas.ExcelWriter("putputsheet.xlsx")
     TempForOutPut.to_excel(writer)
     writer.save()
     #"novExcel.xlsx"    
-
+    """
     
     pandas.read_excel("outputsheet.xlsx")
+    """    
     pandas.read_excel("putputsheet.xlsx")
     pandas.read_excel("novExcel.xlsx")
 
@@ -193,21 +194,11 @@ def BidOpOverview(desiCols,corecols,change):
     
     #print("begin excel test2")    
     
-    """
-    print(os.listdir()) 
-    print(sipsheet);
-    print(TempForOutPut)    
-    TempForOutPut.to_excel("novExcel.xlsx")
-    sipsheet=pandas.read_excel("novExcel.xlsx")
-    print(os.listdir())     
-    print("novExcel ",sipsheet); 
-    print("end excel test")            
+              
     """    
     
-    #print(len(OutputBid))
-    #print(OutputBid)
-    #print(Temp)
-   
+    
+    print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"))
     print('end overview')
     record_async_start=open("ForestLoadingQueue.txt","w")
     record_async_start.write("100%")
