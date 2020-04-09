@@ -132,13 +132,14 @@ def BidOpOverview(desiCols,corecols,change):
     print("_____________________________________")
     
     #postToSheet=open('outputsheet.xlsx','w')
-    print("begin excel test1")    
+    print("begin excel test1")
+    print(type(Temp))
     print(os.listdir())
-    sipsheet=pandas.read_excel('outputsheet.xlsx')
-    print(sipsheet);    
+    #sipsheet=pandas.read_excel('outputsheet.xlsx')
+    #print(sipsheet);    
     Temp.to_excel('outputsheet.xlsx');
     print(os.listdir())
-    print(sipsheet); 
+    #print(sipsheet); 
     
     print("begin excel test2")    
     
@@ -147,13 +148,13 @@ def BidOpOverview(desiCols,corecols,change):
     writer.save()
     print(os.listdir()) 
     #print(sipsheet); 
-    print(sipsheet); 
+    #print(sipsheet); 
     print("end excel test")            
         
     
-    print(len(OutputBid))
-    print(OutputBid)
-    print(Temp)
+    #print(len(OutputBid))
+    #print(OutputBid)
+    #print(Temp)
    
     print('end overview')
     record_async_start=open("ForestLoadingQueue.txt","w")
