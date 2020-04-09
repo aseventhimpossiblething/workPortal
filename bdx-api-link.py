@@ -333,7 +333,7 @@ def acd():
     readiness=open("ForestLoadingQueue.txt","r")
     ready=readiness.read()
     print(ready)
-    BPD='<meta http-equiv="refresh" content="60"><html>This Training Sheet will be added to the body of training Data  - '+ready+"</html>"
+    BPD='<meta http-equiv="refresh" content="45"><html>This Training Sheet will be added to the body of training Data  - '+ready+"</html>"
     if ready=="100%":
        BPD="render_template('BidOpPending.html')";
     if ready.find("]")>-1:
