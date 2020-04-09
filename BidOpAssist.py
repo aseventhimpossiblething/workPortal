@@ -121,35 +121,51 @@ def BidOpOverview(desiCols,corecols,change):
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1)
     OutputBid=Model.predict(TempForOutPut)  
     Temp[PredVar]=OutputBid 
-    print(Temp)
+    #print(Temp)
     
     
         
     print("_____________________________________")
     #print("predict col ",predict_cols)        
-    print("core ",core_cols)
+    #print("core ",core_cols)
     print("_____________________________________")
-    print("predict col ",predict_cols) 
+    #print("predict col ",predict_cols) 
     print("_____________________________________")
     
     
     #OutputBid.to_excel('outputsheet.xlsx')    
     
-    print("begin excel test1")
-    print(type(Temp))
-    print(os.listdir())
-    sipsheet=pandas.read_excel('outputsheet.xlsx')
-    print(sipsheet);    
-    print(Temp.to_excel("putputsheet.xlsx"));
-    print(os.listdir())
-    sipsheet=pandas.read_excel('putputsheet.xlsx')
-    print("puput ",sipsheet); 
-    
-    print("begin excel test2")    
+    #print("begin excel test1")
+    #print(type(Temp))
+    #print(os.listdir())
+    #output=pandas.read_excel('outputsheet.xlsx')
+    XofSeed.to_excel("outputsheet.xlsx")    
+        
+    Temp.to_excel("putputsheet.xlsx")
     
     writer=pandas.ExcelWriter("novExcel.xlsx")
-    Temp.to_excel(writer)
+    TempForOutPut.to_excel(writer)
     writer.save()
+
+    
+    pandas.read_excel("outputsheet.xlsx")
+    pandas.read_excel("putputsheet.xlsx")
+    pandas.read_excel("novExcel.xlsx")
+
+    print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"))
+    print("putputsheet.xlsx ",pandas.read_excel("putputsheet.xlsx")) 
+    print("novExcel.xlsx ",pandas.read_excel("novExcel.xlsx"))
+
+
+    #print(sipsheet);    
+    #print(Temp.to_excel("putputsheet.xlsx"));
+    #print(os.listdir())
+    #sipsheet=pandas.read_excel('putputsheet.xlsx')
+    #print("puput ",sipsheet); 
+    
+    #print("begin excel test2")    
+    
+    """
     print(os.listdir()) 
     print(sipsheet);
     print(TempForOutPut)    
@@ -158,7 +174,7 @@ def BidOpOverview(desiCols,corecols,change):
     print(os.listdir())     
     print("novExcel ",sipsheet); 
     print("end excel test")            
-        
+    """    
     
     #print(len(OutputBid))
     #print(OutputBid)
