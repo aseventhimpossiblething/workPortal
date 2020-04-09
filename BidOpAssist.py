@@ -159,7 +159,31 @@ def BidOpOverview(desiCols,corecols,change):
     print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"))
     print("putputsheet.xlsx ",pandas.read_excel("putputsheet.xlsx")) 
     print("novExcel.xlsx ",pandas.read_excel("novExcel.xlsx"))
+    
+        
+        
+    print("------------------------------------------------------")   
 
+
+    XofSeed.to_excel("outputsheet.xlsx")    
+    #"outputsheet.xlsx"    
+    
+    Temp.to_excel("putputsheet.xlsx")
+    #"putputsheet.xlsx"
+
+    writer=pandas.ExcelWriter("novExcel.xlsx")
+    TempForOutPut.to_excel(writer)
+    writer.save()
+    #"novExcel.xlsx"    
+
+    
+    pandas.read_excel("outputsheet.xlsx")
+    pandas.read_excel("putputsheet.xlsx")
+    pandas.read_excel("novExcel.xlsx")
+
+    print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"))
+    print("putputsheet.xlsx ",pandas.read_excel("putputsheet.xlsx")) 
+    print("novExcel.xlsx ",pandas.read_excel("novExcel.xlsx"))
 
     #print(sipsheet);    
     #print(Temp.to_excel("putputsheet.xlsx"));
