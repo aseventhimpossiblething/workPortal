@@ -160,7 +160,13 @@ def BidOpFileHandler():
        
     else:
        print("else path")
-       rowCheck=rowcheck(Temp,designated_Columns)     
+       locOfTarg=designated_Columns.find(target_Variable)
+       newDesignatedColP1=designated_Columns[:locOfTarg] 
+       newDesignatedColP2=designated_Columns[:locOfTarg+1]
+       newDesignatedColP=newDesignatedColP1+newDesignatedColP1
+       print(designated_Columns)
+       print(newDesignatedColP) 
+       rowCheck=rowcheck(Temp,newDesignatedColP)     
        print(len(rowCheck)," ",rowCheck); 
        if len(rowCheck)>0:
                 os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
