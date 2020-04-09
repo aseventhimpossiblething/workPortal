@@ -52,9 +52,9 @@ def BidOpFileHandler():
     record_async_start.close()
     #print(record_async_start.read())     
     
-   
-    designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']         
-    core_cols=['Campaign','Ad group','Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
+    target_Variable='Changes'
+    designated_Columns=['Campaign','Ad group','Match type',target_Variable,'Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']         
+    core_cols=['Campaign','Ad group',target_Variable,'Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
     
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
@@ -135,7 +135,7 @@ def BidOpFileHandler():
        print("else path") 
        #print(Temp) 
        #BidOpAssist.BidOpOverview(designated_Columns,core_cols);
-       BidOpAssistAsync=threading.Thread(target=BidOpAssist.BidOpOverview,args=[designated_Columns,core_cols,'Changes'])
+       BidOpAssistAsync=threading.Thread(target=BidOpAssist.BidOpOverview,args=[designated_Columns,core_cols,target_Variable])
        BidOpAssistAsync.start(); 
        isTrainingSheet="This is Not Training Data, Attempt will be made to Optimise bids"         
                 
