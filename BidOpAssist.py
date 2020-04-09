@@ -1,4 +1,4 @@
-imoirt ExcelWriter
+import ExcelWriter
 from openpyxl import Workbook
 from openpyxl import load_workbook
 import xlrd
