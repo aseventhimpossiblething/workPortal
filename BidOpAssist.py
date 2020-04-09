@@ -119,7 +119,7 @@ def BidOpOverview(desiCols,corecols,change):
     Temp[PredVar]=OutputBid 
     #Temp['New Bid']=MkNewBid(Temp)
     
-    #print(os.listdir())
+    
         
     print("_____________________________________")
     #print("predict col ",predict_cols)        
@@ -129,7 +129,13 @@ def BidOpOverview(desiCols,corecols,change):
     print("_____________________________________")
     
     #postToSheet=open('outputsheet.xlsx','w')
-    Temp.to_excel('outputsheet.xlsx')    
+    print("begin excel test")    
+    print(os.listdir())
+    sipsheet=pandas.read_excel('outputsheet.xlsx')
+    print(sipsheet);    
+    Temp.to_excel('outputsheet.xlsx');
+    print(sipsheet);  
+    print("end excel test")            
         
     
     print(len(OutputBid))
