@@ -158,7 +158,19 @@ def BidOpFileHandler():
        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOpPending'><html>did not forward</html>"
        
     else:
-       print("else path") 
+       print("else path")
+       rowCheck=rowcheck(Temp,designated_Columns)     
+       print(len(rowCheck)," ",rowCheck); 
+       if len(rowCheck)>0:
+                os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+                rowCheck=str(rowCheck)
+                record_async_start=open("ForestLoadingQueue.txt","w+")
+                record_async_start.write(rowCheck)
+                record_async_start.close()
+                rowCheck=" The following Columns are missing "+rowCheck+" please resubmit sheet "
+                return rowCheck
+                     
+        
        BidOpAssistAsync=threading.Thread(target=BidOpAssist.BidOpOverview,args=[designated_Columns,core_cols,target_Variable])
        BidOpAssistAsync.start(); 
        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOptimisation'><html>did not forward</html>"         
