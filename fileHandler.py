@@ -138,8 +138,8 @@ def BidOpFileHandler():
        #BidOpAssist.BidOpOverview(designated_Columns,core_cols);
        BidOpAssistAsync=threading.Thread(target=BidOpAssist.BidOpOverview,args=[designated_Columns,core_cols,target_Variable])
        BidOpAssistAsync.start(); 
-       isTrainingSheet="This is Not Training Data, Attempt will be made to Optimise bids"         
-       #return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOpPending'><html>did not forward</html>"         
+       #isTrainingSheet="This is Not Training Data, Attempt will be made to Optimise bids"         
+       return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOptimisation'><html>did not forward</html>"         
         
     
     toscrn=isTrainingSheet
