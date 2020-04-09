@@ -322,7 +322,7 @@ def acd():
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     readiness=open("ForestLoadingQueue.txt","r")
     ready=readiness.read()
-    print(readiness)
+    print(ready)
     BPD='<meta http-equiv="refresh" content="90"><html>This Training Sheet will be added to the body of training Data  - '+ready+"</html>"
     if ready=="100%":
        BPD="render_template('BidOpPending.html')";
@@ -339,10 +339,18 @@ def acd():
 
 @app.route('/BidOptimisation')
 def BdOptmstn():
+    print(os.getcwd())     
+    os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')  
+    print(os.getcwd())
+    readiness=open("ForestLoadingQueue.txt","w")
+    ready=readiness.read()
+    print(ready)
+    settleURL='<meta http-equiv="refresh" content="60"><html>Bids are Being Optimised  - '+ready+"</html>"
+    if ready.find("100%")==>-1:
+       return render_template("BidOptimisation.html")           
     #return "Building template for bidop output"     
-    return render_template("BidOptimisation.html")     
-
-
+    #return render_template("BidOptimisation.html")     
+    return settleURL
 
 
 
