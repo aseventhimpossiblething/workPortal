@@ -71,8 +71,8 @@ def MkNewBid(x):
             
             
             
-def BidOpOverview(desiCols,corecols):
-    PredVar='Changes'    
+def BidOpOverview(desiCols,corecols,change):
+    PredVar=change    
     designated_Columns=desiCols;
     core_cols=corecols;
     loc=corecols.count(PredVar)
