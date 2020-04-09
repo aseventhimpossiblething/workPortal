@@ -52,7 +52,7 @@ def googConverter(X):
         col=str(col).replace("'","").replace('Max.CPC','Bid').replace('Cost','Spend').replace('Conversions','Conv.').replace('Cost / conv.','CPA').replace('Search top IS','Top Impr. Share]').replace('Search abs. top IS','Absolute Top Impression Share').replace('Search impr. share','Impr. share (IS)').replace('Quality Score','Qual. Score').replace('Search lost IS (rank)','IS lost to rank').replace(']','').replace('[','')             
         New_cols.append(col);
     print("array ",New_cols) 
-    Temp.columns=Newcols
+    Temp.columns=New_cols
     print("GoogConverter end")    
     return Temp
       
