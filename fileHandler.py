@@ -49,7 +49,7 @@ def googConverter(X):
     print("initial cols ",cols)
     New_cols=[];
     for col in cols:
-        col=str(col).replace("'","").replace('Max.CPC','Bid').replace('Cost','Spend').replace('Conversions','Conv.').replace('Cost / conv.','CPA').replace('Search top IS','Top Impr. Share]').replace('Search abs. top IS','Absolute Top Impression Share').replace('Search impr. share','Impr. share (IS)').replace('Quality Score','Qual. Score').replace('Search lost IS (rank)','IS lost to rank').replace(']','').replace('[','')             
+        col=str(col).replace('Cost / conv.','CPA').replace("'","").replace('Max.CPC','Bid').replace('Cost','Spend').replace('Conversions','Conv.').replace('Search top IS','Top Impr. Share]').replace('Search abs. top IS','Absolute Top Impression Share').replace('Search impr. share','Impr. share (IS)').replace('Quality Score','Qual. Score').replace('Search lost IS (rank)','IS lost to rank').replace(']','').replace('[','')             
         New_cols.append(col);
     print("array ",New_cols) 
     Temp.columns=New_cols
@@ -137,6 +137,7 @@ def BidOpFileHandler():
                                 
            len(rowCheck);
            """
+           Temp=googConverter(Temp)     
            rowCheck=rowcheck(Temp,designated_Columns)     
            print(len(rowCheck)," ",rowCheck); 
            if len(rowCheck)>0:
