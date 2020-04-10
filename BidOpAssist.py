@@ -15,7 +15,8 @@ from sklearn.ensemble import RandomForestRegressor
 #PredictorCols=['Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank'])     
 
 def googConverterReverse(X):
-    print("GoogConverter Running")    
+    print("_______________________________________________")
+    print("GoogConverterReverse Running")    
     Temp=X;
     cols=Temp.columns
     print("initial cols ",cols)
@@ -26,8 +27,9 @@ def googConverterReverse(X):
         New_cols.append(col);
     print("array ",New_cols) 
     Temp.columns=New_cols
-    print(Temp.columns)    
-    print("GoogConverter end")    
+    print("final cols ",Temp.columns)  
+    print("GoogConverterReverse end") 
+    print("_______________________________________________")
     return Temp
    
 
@@ -142,6 +144,8 @@ def BidOpOverview(desiCols,corecols,change):
     OutputBid=Model.predict(TempForOutPut)  
     Temp[PredVar]=OutputBid 
     #print(Temp)
+    if str(Temp['Campaign']).lower().find('gppc')>-1:
+        Temp=googConverterReverse(X)
     
     
         
