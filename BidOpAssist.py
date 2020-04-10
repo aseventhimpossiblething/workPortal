@@ -13,6 +13,25 @@ import re
 from sklearn.ensemble import RandomForestRegressor
 #os.chdir('Sheets')
 #PredictorCols=['Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank'])     
+"""
+def googConverter(X):
+    print("GoogConverter Running")    
+    Temp=X;
+    cols=Temp.columns
+    print("initial cols ",cols)
+    New_cols=[];
+    for col in cols:
+        col=str(col).replace('Cost / conv.','CPA').replace("'","").replace('Max.CPC','Bid').replace('Cost','Spend').replace('Conversions','Conv.').replace('Search top IS','Top Impr. Share]').replace('Search abs. top IS','Absolute Top Impression Share').replace('Search impr. share','Impr. share (IS)').replace('Quality Score','Qual. Score').replace('Search lost IS (rank)','IS lost to rank').replace(']','').replace('[','')             
+        New_cols.append(col);
+    print("array ",New_cols) 
+    Temp.columns=New_cols
+    print(Temp.columns)    
+    print("GoogConverter end")    
+    return Temp
+"""    
+
+
+
 def Match_num(x):
         Temp=x
         ccountr=0;
