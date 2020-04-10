@@ -45,12 +45,12 @@ margin-top:50px;
 
 
 
-a {color:black;}
+a {color:white;}
 
 .littletop {
     
     
-    color:white;
+    color:black;
     position:relative
     /*float:left;*/
     height:10%;
@@ -114,7 +114,7 @@ height:80%;
 
 .containerMain
 {   
-    opacity:50%;
+    opacity:85%;
     position:float;
     float:left;
     border-radius:85%;
