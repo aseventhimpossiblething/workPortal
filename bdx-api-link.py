@@ -1,7 +1,7 @@
 domain="http://bhiapilink.com"
 import tensorflow
 import CommunityUpdatesProcess
-import GetCampaigns
+#import GetCampaigns
 import glob
 #import numpy
 #import scipy
