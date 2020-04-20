@@ -25,7 +25,10 @@ import sys
 from google.ads.google_ads.client import GoogleAdsClient
 from google.ads.google_ads.errors import GoogleAdsException
 
-
+print(" from google.ads.google_ads.client import GoogleAdsClient
+from google.ads.google_ads.errors import GoogleAdsException-----loaded ")
+      
+      
 def main(client, customer_id):
     print("is main even running")
     ga_service = client.get_service('GoogleAdsService', version='v2')#orginal instructions said v3 but it fails at runtime with error there is no va3
@@ -70,7 +73,7 @@ if __name__ == '__main__':
     
     
     
-    
+print(" query bottom of page ")    
 query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
     
 google_ads_client = GoogleAdsClient.load_from_storage()
