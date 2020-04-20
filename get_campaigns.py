@@ -16,6 +16,7 @@
 
 To add campaigns, run add_campaigns.py.
 """
+
 print("__________get_campaigns loaded________")
 
 
