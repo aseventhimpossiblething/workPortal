@@ -20,7 +20,7 @@ To add campaigns, run add_campaigns.py.
 """
 
 #print("__________get_campaigns loaded________")
-
+"""
 
 import argparse
 import sys
@@ -74,7 +74,7 @@ if __name__ == '__main__':
     main(google_ads_client, args.customer_id)
     #print(main(google_ads_client, args.customer_id))
     
-    
+"""    
 """    
 print(" query bottom of page ")    
 query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
