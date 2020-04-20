@@ -121,9 +121,9 @@ print("3")
 #print(dir(ga_service.search("9662896891",query)))
 #print("ga_service.search()")
 print("1500631476")
-GAserviceTestClient=ga_service.search("1500631476",query) 
+#GAserviceTestClient=ga_service.search("1500631476",query) 
 print("4")
-
+"""
 print(GAserviceTestClient.client)
 print(GAserviceTestClient.num_results)
 print(GAserviceTestClient._has_next_page)
@@ -133,5 +133,6 @@ GAserviceTestClient=ga_service.search("2860884198",query)
 print(GAserviceTestClient.client)
 print(GAserviceTestClient.num_results)
 print(GAserviceTestClient._has_next_page)
+"""
 
 
