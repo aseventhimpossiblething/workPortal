@@ -28,7 +28,7 @@ import sys
 from google.ads.google_ads.client import GoogleAdsClient
 from google.ads.google_ads.errors import GoogleAdsException
 
-print(" from google.ads.google_ads.client import GoogleAdsClient
+print(" from google.ads.google_ads.client import GoogleAdsClient\
 from google.ads.google_ads.errors import GoogleAdsException-----loaded ")
       
 """      
