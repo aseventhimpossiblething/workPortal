@@ -1,8 +1,9 @@
 #domain="http://bhiapilink.com"
-#import tensorflow
+import tensorflow
 import CommunityUpdatesProcess
 import GetCampaigns
 import glob
+print("before numpy")
 #import numpy
 #import scipy
 #import pandas
