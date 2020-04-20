@@ -95,13 +95,13 @@ print("---google_ads_client = GoogleAdsClient.load_from_storage()-")
 print("ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')")
 
 #CustomerService = google_ads_client.get_service('CustomerService', version='v2')
-print("")
+print("1")
 
 theDataOBj=ga_service.search("9662896891",query)
-print("")
+print("2")
 
 GAserviceTestClient=ga_service.search("1500631476",query)
-print("")
+print("3")
 
 #print(theDataOBj)
 #print('dir ',dir(theDataOBj))
@@ -121,7 +121,7 @@ print("")
 #print("ga_service.search()")
 print("1500631476")
 GAserviceTestClient=ga_service.search("1500631476",query) 
-print("")
+print("4")
 
 print(GAserviceTestClient.client)
 print(GAserviceTestClient.num_results)
