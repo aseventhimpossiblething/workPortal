@@ -81,6 +81,7 @@ query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
 print("Free Query Loaded")
     
 google_ads_client = GoogleAdsClient.load_from_storage()
+print("google_ads_client = GoogleAdsClient.load_from_storage()")
 #parser = argparse.ArgumentParser(
 #description='Lists all campaigns for specified customer.')
 # The following argument(s) should be provided to run the example.
@@ -91,9 +92,17 @@ google_ads_client = GoogleAdsClient.load_from_storage()
 #main(google_ads_client, "9662896891")
 #print(main(google_ads_client, args.customer_id))
 ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')
+print("ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')")
+
 CustomerService = google_ads_client.get_service('CustomerService', version='v2')
+print("")
+
 theDataOBj=ga_service.search("9662896891",query)
+print("")
+
 GAserviceTestClient=ga_service.search("1500631476",query)
+print("")
+
 #print(theDataOBj)
 #print('dir ',dir(theDataOBj))
 #print('dict ',dict(theDataOBj))
@@ -111,7 +120,9 @@ GAserviceTestClient=ga_service.search("1500631476",query)
 #print(dir(ga_service.search("9662896891",query)))
 #print("ga_service.search()")
 print("1500631476")
-GAserviceTestClient=ga_service.search("1500631476",query)        
+GAserviceTestClient=ga_service.search("1500631476",query) 
+print("")
+
 print(GAserviceTestClient.client)
 print(GAserviceTestClient.num_results)
 print(GAserviceTestClient._has_next_page)
