@@ -1,4 +1,4 @@
-#domain="http://bhiapilink.com"
+domain="http://bhiapilink.com"
 #import tensorflow
 import CommunityUpdatesProcess
 import GetCampaigns
@@ -298,9 +298,9 @@ def Scripts():
 
 @app.route('/')
 def index():
-    #global domain     
-    #domainFavi=domain+"/favicon.png"
-    domainFavi="/favicon.png"     
+    global domain     
+    domainFavi=domain+"/favicon.png"
+    #domainFavi="/favicon.png"     
     return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi)
 
 @app.route('/BidOps')
