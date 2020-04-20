@@ -80,7 +80,7 @@ print(" query bottom of page ")
 query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
 print("Free Query Loaded")
     
-#google_ads_client = GoogleAdsClient.load_from_storage()
+google_ads_client = GoogleAdsClient.load_from_storage()
 print("---google_ads_client = GoogleAdsClient.load_from_storage()-")
 #parser = argparse.ArgumentParser(
 #description='Lists all campaigns for specified customer.')
@@ -91,10 +91,10 @@ print("---google_ads_client = GoogleAdsClient.load_from_storage()-")
 #args = parser.parse_args()
 #main(google_ads_client, "9662896891")
 #print(main(google_ads_client, args.customer_id))
-#ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')
+ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')
 print("ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')")
 
-#CustomerService = google_ads_client.get_service('CustomerService', version='v2')
+CustomerService = google_ads_client.get_service('CustomerService', version='v2')
 print("1")
 
 theDataOBj=ga_service.search("9662896891",query)
