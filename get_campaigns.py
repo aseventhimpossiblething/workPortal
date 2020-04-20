@@ -78,6 +78,7 @@ if __name__ == '__main__':
     
 print(" query bottom of page ")    
 query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
+print("Free Query Loaded")
     
 google_ads_client = GoogleAdsClient.load_from_storage()
 #parser = argparse.ArgumentParser(
