@@ -1,4 +1,4 @@
-print("get_loaded")
+print("get_loaded line 1")
 #!/usr/bin/env python
 # Copyright 2020 Google LLC
 #
@@ -19,8 +19,8 @@ This example illustrates how to get all campaigns.
 To add campaigns, run add_campaigns.py.
 """
 
-#print("__________get_campaigns loaded________")
-"""
+print("__________get_campaigns loaded________line 22")
+
 
 import argparse
 import sys
@@ -31,7 +31,7 @@ from google.ads.google_ads.errors import GoogleAdsException
 print(" from google.ads.google_ads.client import GoogleAdsClient
 from google.ads.google_ads.errors import GoogleAdsException-----loaded ")
       
-      
+"""      
 def main(client, customer_id):
     print("is main even running")
     ga_service = client.get_service('GoogleAdsService', version='v2')#orginal instructions said v3 but it fails at runtime with error there is no va3
@@ -74,8 +74,8 @@ if __name__ == '__main__':
     main(google_ads_client, args.customer_id)
     #print(main(google_ads_client, args.customer_id))
     
-"""    
-"""    
+"""  
+    
 print(" query bottom of page ")    
 query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
     
@@ -120,4 +120,4 @@ GAserviceTestClient=ga_service.search("2860884198",query)
 print(GAserviceTestClient.client)
 print(GAserviceTestClient.num_results)
 print(GAserviceTestClient._has_next_page)
-"""
+
