@@ -18,7 +18,7 @@ print("Before get_campaigns")
 print("Before expermientCampLabels")
 #import expermientCampLabels
 print("After expermientCampLabels")
-import Campaigns
+#import Campaigns
 #import reportexpFreeToDelete
 from datetime import datetime
 os.system('sudo chmod -R 777 Sheets')
