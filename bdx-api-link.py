@@ -14,12 +14,12 @@ from flask import Flask, Markup, render_template, request
 from flask import send_file
 from flask import send_from_directory
 print("Before get_campaigns")
-#import get_campaigns
+import get_campaigns
 print("Before expermientCampLabels")
-#import expermientCampLabels
+import expermientCampLabels
 print("After expermientCampLabels")
-#import Campaigns
-#import reportexpFreeToDelete
+import Campaigns
+import reportexpFreeToDelete
 from datetime import datetime
 os.system('sudo chmod -R 777 Sheets')
 os.system('sudo chmod -R 777 templates')
@@ -296,8 +296,9 @@ def Scripts():
 
 @app.route('/')
 def index():
-    global domain     
-    domainFavi=domain+"/favicon.png"
+    #global domain     
+    #domainFavi=domain+"/favicon.png"
+    domainFavi="/favicon.png"     
     return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi)
 
 @app.route('/BidOps')
