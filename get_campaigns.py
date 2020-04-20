@@ -75,7 +75,7 @@ if __name__ == '__main__':
     #print(main(google_ads_client, args.customer_id))
     
     
-    
+"""    
 print(" query bottom of page ")    
 query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
     
@@ -120,3 +120,4 @@ GAserviceTestClient=ga_service.search("2860884198",query)
 print(GAserviceTestClient.client)
 print(GAserviceTestClient.num_results)
 print(GAserviceTestClient._has_next_page)
+"""
