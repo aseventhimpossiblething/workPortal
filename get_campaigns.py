@@ -94,7 +94,7 @@ print("---google_ads_client = GoogleAdsClient.load_from_storage()-")
 #ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')
 print("ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')")
 
-CustomerService = google_ads_client.get_service('CustomerService', version='v2')
+#CustomerService = google_ads_client.get_service('CustomerService', version='v2')
 print("")
 
 theDataOBj=ga_service.search("9662896891",query)
