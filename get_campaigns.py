@@ -101,7 +101,7 @@ print("1")
 #theDataOBj=ga_service.search("9662896891",query)
 print("2")
 
-GAserviceTestClient=ga_service.search("1500631476",query)
+#GAserviceTestClient=ga_service.search("1500631476",query)
 print("3")
 
 #print(theDataOBj)
