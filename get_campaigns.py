@@ -82,6 +82,7 @@ print("Free Query Loaded")
     
 google_ads_client = GoogleAdsClient.load_from_storage()
 print("---google_ads_client = GoogleAdsClient.load_from_storage()-")
+print("google_ads_client - ",google_ads_client)
 #parser = argparse.ArgumentParser(
 #description='Lists all campaigns for specified customer.')
 # The following argument(s) should be provided to run the example.
