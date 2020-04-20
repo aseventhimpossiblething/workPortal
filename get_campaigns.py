@@ -98,7 +98,7 @@ print("ga_service = google_ads_client.get_service('GoogleAdsService', version='v
 #CustomerService = google_ads_client.get_service('CustomerService', version='v2')
 print("1")
 
-theDataOBj=ga_service.search("9662896891",query)
+#theDataOBj=ga_service.search("9662896891",query)
 print("2")
 
 GAserviceTestClient=ga_service.search("1500631476",query)
