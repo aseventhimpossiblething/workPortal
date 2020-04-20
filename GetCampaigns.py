@@ -67,4 +67,4 @@ if __name__ == '__main__':
   adwords_client = adwords.AdWordsClient.LoadFromStorage()
   main(adwords_client)
   
-adwords_client = adwords.AdWordsClient.LoadFromStorage()
+#adwords_client = adwords.AdWordsClient.LoadFromStorage()
