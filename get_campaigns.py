@@ -1,3 +1,4 @@
+print("get_loaded")
 #!/usr/bin/env python
 # Copyright 2020 Google LLC
 #
