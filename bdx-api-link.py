@@ -64,12 +64,12 @@ app = Flask(__name__,"/static/")
 
 
 
-"""
+
 @app.route('/apiresponse')
 def off1():
     print("api response called")    
     return "api response called"      
-"""       
+     
 
 
          
