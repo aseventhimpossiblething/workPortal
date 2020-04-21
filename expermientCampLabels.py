@@ -3,7 +3,7 @@ import datetime
 import sys
 import uuid
 from googleads import adwords
-
+print("_exp Loaded_")
 from google.ads.google_ads.client import GoogleAdsClient
 #client = GoogleAdsClient.load_from_storage()
 client=adwords.AdWordsClient.LoadFromStorage()
