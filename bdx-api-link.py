@@ -16,7 +16,7 @@ from flask import send_from_directory
 print("Before get_campaigns")
 import get_campaigns
 print("Before expermientCampLabels")
-#import expermientCampLabels
+import expermientCampLabels
 print("After expermientCampLabels")
 #import Campaigns
 print("After Campaigns")
