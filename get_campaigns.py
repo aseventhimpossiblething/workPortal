@@ -83,14 +83,14 @@ print("Free Query Loaded")
 google_ads_client = GoogleAdsClient.load_from_storage()
 print("---google_ads_client = GoogleAdsClient.load_from_storage()-")
 print("google_ads_client - ",google_ads_client)
-parser = argparse.ArgumentParser(
+#parser = argparse.ArgumentParser()
 #escription='Lists all campaigns for specified customer.')
 # The following argument(s) should be provided to run the example.
-parser.add_argument('-c', '--customer_id', type=str,
+#parser.add_argument('-c', '--customer_id', type=str,
 #                     required=True, help='The Google Ads customer ID.')
 #"9662896891"
 args = parser.parse_args()
-#main(google_ads_client, "9662896891")
+main(google_ads_client, "9662896891")
 #print(main(google_ads_client, args.customer_id))
 ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')
 #print("ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')")
