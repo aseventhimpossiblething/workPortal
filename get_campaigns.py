@@ -80,50 +80,50 @@ print(" query bottom of page ")
 query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
 print("Free Query Loaded")
     
-#google_ads_client = GoogleAdsClient.load_from_storage()
+google_ads_client = GoogleAdsClient.load_from_storage()
 print("---google_ads_client = GoogleAdsClient.load_from_storage()-")
-#print("google_ads_client - ",google_ads_client)
-#parser = argparse.ArgumentParser(
-#description='Lists all campaigns for specified customer.')
+print("google_ads_client - ",google_ads_client)
+parser = argparse.ArgumentParser(
+#escription='Lists all campaigns for specified customer.')
 # The following argument(s) should be provided to run the example.
-#parser.add_argument('-c', '--customer_id', type=str,
+parser.add_argument('-c', '--customer_id', type=str,
 #                     required=True, help='The Google Ads customer ID.')
 #"9662896891"
-#args = parser.parse_args()
-#main(google_ads_client, "9662896891")
-#print(main(google_ads_client, args.customer_id))
-#ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')
+args = parser.parse_args()
+main(google_ads_client, "9662896891")
+print(main(google_ads_client, args.customer_id))
+ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')
 print("ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')")
 
-#CustomerService = google_ads_client.get_service('CustomerService', version='v2')
+CustomerService = google_ads_client.get_service('CustomerService', version='v2')
 print("1")
 
-#theDataOBj=ga_service.search("9662896891",query)
+theDataOBj=ga_service.search("9662896891",query)
 print("2")
 
-#GAserviceTestClient=ga_service.search("1500631476",query)
+GAserviceTestClient=ga_service.search("1500631476",query)
 print("3")
 
-#print(theDataOBj)
-#print('dir ',dir(theDataOBj))
-#print('dict ',dict(theDataOBj))
-#print('num_results ',theDataOBj.num_results)
-#print('client ',theDataOBj.client)
-#print('_has_next_page ',theDataOBj._has_next_page)
+print(theDataOBj)
+print('dir ',dir(theDataOBj))
+print('dict ',dict(theDataOBj))
+print('num_results ',theDataOBj.num_results)
+print('client ',theDataOBj.client)
+print('_has_next_page ',theDataOBj._has_next_page)
 
-#print(CustomerService)
-#print(dir(CustomerService))
-#print(CustomerService.get_customer)
-#print(dir(CustomerService.get_customer))
-#CustomerService.GetCampaign
-#theDataOBj[1]
-#print(ga_service.search("9662896891",query))
-#print(dir(ga_service.search("9662896891",query)))
+print(CustomerService)
+print(dir(CustomerService))
+print(CustomerService.get_customer)
+print(dir(CustomerService.get_customer))
+CustomerService.GetCampaign
+theDataOBj[1]
+print(ga_service.search("9662896891",query))
+print(dir(ga_service.search("9662896891",query)))
 #print("ga_service.search()")
 print("1500631476")
 #GAserviceTestClient=ga_service.search("1500631476",query) 
 print("4")
-"""
+
 print(GAserviceTestClient.client)
 print(GAserviceTestClient.num_results)
 print(GAserviceTestClient._has_next_page)
@@ -133,6 +133,6 @@ GAserviceTestClient=ga_service.search("2860884198",query)
 print(GAserviceTestClient.client)
 print(GAserviceTestClient.num_results)
 print(GAserviceTestClient._has_next_page)
-"""
+
 
 
