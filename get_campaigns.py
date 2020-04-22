@@ -91,9 +91,9 @@ parser.add_argument('-c', '--customer_id', type=str,
 #"9662896891"
 args = parser.parse_args()
 #main(google_ads_client, "9662896891")
-print(main(google_ads_client, args.customer_id))
+#print(main(google_ads_client, args.customer_id))
 ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')
-print("ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')")
+#print("ga_service = google_ads_client.get_service('GoogleAdsService', version='v2')")
 
 CustomerService = google_ads_client.get_service('CustomerService', version='v2')
 print("1")
