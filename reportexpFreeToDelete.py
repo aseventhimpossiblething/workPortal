@@ -49,6 +49,7 @@ while more_pages:
       
 
 # Display results.
+"""
  if 'entries' in page:
   for campaign in page['entries']:
         print('Campaign with id "%s", name "%s", and status "%s" was '
@@ -59,7 +60,7 @@ while more_pages:
    offset += PAGE_SIZE
    selector['paging']['startIndex'] = str(offset)
    more_pages = offset < int(page['totalNumEntries'])
-
+"""
 
 
 
