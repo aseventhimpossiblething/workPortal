@@ -40,7 +40,7 @@ while more_pages:
  #page = campaign_service.get()
  #page = campaign_service.get(selector)
  print("1")     
- print(page)  
+ #print(page)  
  print("2")
  print("3")
  print("4")
