@@ -33,7 +33,7 @@ selector = {
           'numberResults': str(PAGE_SIZE)
       }
   }
-
+"""
 more_pages = True
 while more_pages:
  print("loop") 
@@ -49,7 +49,7 @@ while more_pages:
       
 
 # Display results.
-"""
+
  if 'entries' in page:
   for campaign in page['entries']:
         print('Campaign with id "%s", name "%s", and status "%s" was '
