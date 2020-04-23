@@ -15,7 +15,7 @@ ServiceScan=client.get_service('GoogleAdsService', version='v2')
 #print(dir(ServiceScan))
 print("_______________________________________________________________________")
 
-client2=google.ads.google_ads.client.GoogleAdsClient.load_from_storage()
+client2=google.ads.google_ads.client.GoogleAdsClient.load_from_storage("google-ads.yaml")
 #print(dir(client2))
 print("_______________________________________________________________________")
 
