@@ -26,7 +26,7 @@ campaign_service = client.get_service('CampaignService', version='v2')
 print("_______________________________________________________________________")
 
 print("Get Ads Client")
-google_ads_client = (google.ads.google_ads.client.GoogleAdsClient.load_from_storage())
+google_ads_client = (google.ads.google_ads.client.GoogleAdsClient.load_from_storage('google-ads.yaml'))
 #print(dir(google_ads_client))
 
 #print("Budget Service")
