@@ -117,7 +117,7 @@ print(dir(CustomerService))
 print(CustomerService.get_customer)
 print(dir(CustomerService.get_customer))
 #CustomerService.GetCampaign
-theDataOBj[1]
+#theDataOBj[1]
 print(ga_service.search("9662896891",query))
 print(dir(ga_service.search("9662896891",query)))
 #print("ga_service.search()")
