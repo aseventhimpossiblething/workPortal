@@ -80,7 +80,7 @@ print(" query bottom of page ")
 query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
 print("Free Query Loaded")
     
-google_ads_client = GoogleAdsClient.load_from_storage()
+google_ads_client = GoogleAdsClient.load_from_storage('google-ads.yaml')
 print("---google_ads_client = GoogleAdsClient.load_from_storage()-")
 print("google_ads_client - ",google_ads_client)
 #parser = argparse.ArgumentParser()
