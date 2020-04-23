@@ -27,8 +27,8 @@ selector = {
 
 more_pages = True
 while more_pages:
-  page = campaign_service.get(selector)
-
+  #page = campaign_service.get(selector)
+  #while is not incomplete 
   # Display results.
   if 'entries' in page:
     for campaign in page['entries']:
