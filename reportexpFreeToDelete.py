@@ -4,7 +4,7 @@ from googleads import adwords
 #from google.ads.google_ads.client import GoogleAdsClient
 #import google.ads.google_ads.client
 #client = GoogleAdsClient.load_from_storage()
-client=adwords.AdWordsClient.LoadFromStorage()
+client=adwords.AdWordsClient.LoadFromStorage('googleads.yaml')
 
 print("Experiment module Loaded")
 #os.chdir("/app/.heroku/python/lib/python3.6/site-packages/googleads")
