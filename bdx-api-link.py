@@ -1,9 +1,9 @@
-domain="http://bhiapilink.com"
+domain="http://bdxapilink.com"
 import tensorflow
 import CommunityUpdatesProcess
 import GetCampaigns
 import glob
-print("before numpy")
+#print("before numpy")
 import numpy
 import scipy
 import pandas
@@ -13,11 +13,11 @@ import os
 from flask import Flask, Markup, render_template, request
 from flask import send_file
 from flask import send_from_directory
-print("Before get_campaigns")
+#print("Before get_campaigns")
 import get_campaigns
-print("Before expermientCampLabels")
-import expermientCampLabels
-print("After expermientCampLabels")
+#print("Before expermientCampLabels")
+#import expermientCampLabels
+#print("After expermientCampLabels")
 import Campaigns
 print("After Campaigns")
 import reportexpFreeToDelete
