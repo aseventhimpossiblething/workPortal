@@ -37,7 +37,7 @@ selector = {
 more_pages = True
 while more_pages:
  print("loop") 
- page = campaign_service.get()
+ #page = campaign_service.get()
  #page = campaign_service.get(selector)
  print("1")     
  print(page)  
