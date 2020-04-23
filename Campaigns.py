@@ -46,7 +46,7 @@ query = ('SELECT campaign.id, campaign.name FROM campaign '
 
 customer_id="9662896891" #PERMISSION ERROR
 ga_service = client.get_service('GoogleAdsService', version='v2')
-response = ga_service.search_stream(customer_id, query)
+#response = ga_service.search_stream(customer_id, query)
 #response=campaign_service.search_stream(customer_id, query)
 """
 #def CampFunc():
