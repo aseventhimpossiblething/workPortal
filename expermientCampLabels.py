@@ -6,7 +6,7 @@ from googleads import adwords
 print("_exp Loaded_")
 from google.ads.google_ads.client import GoogleAdsClient
 #client = GoogleAdsClient.load_from_storage()
-client=adwords.AdWordsClient.LoadFromStorage()
+client=adwords.AdWordsClient.LoadFromStorage('googleads.yaml')
 PAGE_SIZE=100
 #print(dir(client))
 #below is new
