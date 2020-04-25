@@ -95,6 +95,14 @@ print("google_ads_client - ",google_ads_client)
 google_ads_client.get_service('GoogleAdsService', version='v3')
 ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')
 #print("ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')")
+#--------------------------------
+query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
+customer_id
+# Issues a search request using streaming.
+response = ga_service.search_stream(customer_id, query=query)
+
+
+#---------------------------------
 
 CustomerService = google_ads_client.get_service('CustomerService', version='v3')
 print("1")
