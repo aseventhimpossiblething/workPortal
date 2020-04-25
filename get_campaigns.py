@@ -98,8 +98,8 @@ ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')
 #--------------------------------
 query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
 #966-289-6891
-
-customer_id="9662896891"
+testcamp="1500631476"
+customer_id=testcamp
 # Issues a search request using streaming.
 response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
