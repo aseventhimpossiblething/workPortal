@@ -107,6 +107,7 @@ print('response',response)
 #print('response[0] ',response[0])
 for subset in response:
       print('subset ',subset)
+customer_service = google_ads_client.get_service('CustomerService', version='v3')      
 accessible_customers = customer_service.list_accessible_customers()
 print("accessible_customers ",accessible_customers)
 print("end active experiment block------------------------------------------------------------")      
