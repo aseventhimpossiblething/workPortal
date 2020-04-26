@@ -96,6 +96,7 @@ google_ads_client.get_service('GoogleAdsService', version='v3')
 ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')
 #print("ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')")
 #--------------------------------
+print("active experiment block------------------------------------------------------------")
 query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
 #966-289-6891
 testcamp="1500631476"
@@ -103,12 +104,15 @@ customer_id=testcamp
 # Issues a search request using streaming.
 response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
-#print('response[0] ',response[0])
+print('response[0] ',response[0])
 for subset in response:
       print('subset ',subset)
+accessible_customers = customer_service.list_accessible_customers()
+print("accessible_customers ",accessible_customers)
+print("end active experiment block------------------------------------------------------------")      
 
 #---------------------------------
-
+"""
 CustomerService = google_ads_client.get_service('CustomerService', version='v3')
 print("1")
 print("CustomerService ",CustomerService)
@@ -150,5 +154,5 @@ print(GAserviceTestClient.client)
 print(GAserviceTestClient.num_results)
 print(GAserviceTestClient._has_next_page)
 
-
+"""
 
