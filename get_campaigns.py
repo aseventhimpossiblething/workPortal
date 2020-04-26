@@ -104,7 +104,7 @@ customer_id=testcamp
 # Issues a search request using streaming.
 response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
-print('response[0] ',response[0])
+#print('response[0] ',response[0])
 for subset in response:
       print('subset ',subset)
 accessible_customers = customer_service.list_accessible_customers()
