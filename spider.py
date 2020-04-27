@@ -6,6 +6,7 @@ def spider():
     retrieveNmbr="echo spiderfile|grep ' 200' "
     os.system(spiderCmmnd)
     os.system(retrieveNmbr)
+    os.system("echo 'bash2'")
 #launchSpider=threading.Thread(target=spider)
 #launchSpider.start()
 spider()
