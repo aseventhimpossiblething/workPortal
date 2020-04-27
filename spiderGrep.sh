@@ -1,4 +1,4 @@
 #!/bin/bash
-echo running grep
 touch brokenLines
-cat spiderfile|grep " broken" >brokenLines
+echo running grep
+cat spiderfile | grep " broken" >brokenLines
