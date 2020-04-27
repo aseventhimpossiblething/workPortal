@@ -6,5 +6,6 @@ def spider():
     retrieveNmbr="echo spiderfile|grep ' 200' "
     os.system(spiderCmmnd)
     os.system(retrieveNmbr)
-launchSpider=threading.Thread(target=spider)
-launchSpider.start()
+#launchSpider=threading.Thread(target=spider)
+#launchSpider.start()
+spider()
