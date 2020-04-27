@@ -3,7 +3,7 @@ import threading
 def spider():
     os.system("echo 'bash'")
     spiderCmmnd="wget -r -b -nd https://www.newhomesource.com --spider -o spiderfile"
-    retrieveNmbr="cat spiderfile"
+    retrieveNmbr="echo cat spiderfile"
     os.system(spiderCmmnd)
     print("_____________")
     os.system(retrieveNmbr)
