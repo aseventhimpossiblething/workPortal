@@ -12,13 +12,15 @@ import os
 from flask import Flask, Markup, render_template, request
 from flask import send_file
 from flask import send_from_directory
-import spider
+#import spider
 import get_campaigns
 #print("Before expermientCampLabels")
 #import expermientCampLabels
 #print("After expermientCampLabels")
-import Campaigns
-import reportexpFreeToDelete
+#import Campaigns
+
+#import reportexpFreeToDelete
+import spider
 from datetime import datetime
 os.system('sudo chmod -R 777 Sheets')
 os.system('sudo chmod -R 777 templates')
