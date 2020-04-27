@@ -110,6 +110,14 @@ for subset in response:
 customer_service = google_ads_client.get_service('CustomerService', version='v3')      
 accessible_customers = customer_service.list_accessible_customers()
 print("accessible_customers ",accessible_customers)
+print("attempt to access 2860884198 BDX MCC")
+customer_id="2860884198"
+# Issues a search request using streaming.
+response = ga_service.search_stream(customer_id, query=query)
+print('response',response)
+#print('response[0] ',response[0])
+for subset in response:
+      print('subset ',subset)
 print("end active experiment block------------------------------------------------------------")      
 
 #---------------------------------
