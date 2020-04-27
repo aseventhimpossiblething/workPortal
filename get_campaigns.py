@@ -118,6 +118,13 @@ print('response',response)
 #print('response[0] ',response[0])
 for subset in response:
       print('subset ',subset)
+print("attempt to access city")      
+customer_id="2104897739" 
+response = ga_service.search_stream(customer_id, query=query)
+print('response',response)
+#print('response[0] ',response[0])
+for subset in response:
+      print('subset ',subset)
 print("end active experiment block------------------------------------------------------------")      
 
 #---------------------------------
