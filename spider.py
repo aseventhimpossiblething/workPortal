@@ -1,15 +1,16 @@
+#clear associated file spiderGrep and midnighhowl
 import os
 import threading
 import time
 target_Site="https://www.newhomesource.com"
-def spider(targetSite):
+def sendSpider(targetSite):
     os.system("echo 'bash'")
     targetSite=targetSite
     spiderCmmnd="wget -r -b -nd "+targetSite+" --spider -o spiderfile"
     retrieveNmbr="bash spiderGrep.sh"
     os.system(spiderCmmnd)
     
-    os.system("bash midnighthowl.sh")
+    #os.system("bash midnighthowl.sh")
     
     spiderfile=open('spiderfile','r')
     spiderlines=spiderfile.readlines()
@@ -26,6 +27,6 @@ def spider(targetSite):
     #os.system("bash spiderGrep.sh")
     #os.system("cat spiderfile | grep -a ' broken' >brokenLines")
     os.system("echo 'bash2'")
-#launchSpider=threading.Thread(target=spider, args=(target_Site,))
+#launchSpider=threading.Thread(target=sendSpider, args=(target_Site,))
 #launchSpider.start()
-spider(target_Site)
+sendSpider(target_Site)
