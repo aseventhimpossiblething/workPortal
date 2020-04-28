@@ -1,4 +1,4 @@
 #!/bin/bash
 
-spiderGrep.sh
+bash spiderGrep.sh
 echo MidnightHowl
