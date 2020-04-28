@@ -6,7 +6,7 @@ def spider():
     spiderCmmnd="wget -r -b -nd https://www.newhomesource.com --spider -o spiderfile"
     retrieveNmbr="bash spiderGrep.sh"
     os.system(spiderCmmnd)
-    #print("30 sec pause")
+    print("30 sec pause")
     #time.sleep(10)
     #print("_____________")
     #os.system(retrieveNmbr)
