@@ -14,7 +14,8 @@ def spider():
     #os.system(retrieveNmbr)    
     #os.system("touch brokenLines")
     #os.system("cat spiderfile | grep -a ' broken' >brokenLines")
-    os.system("bash midnighthowl.sh")
+    #os.system("bash midnighthowl.sh")
+    """
     spiderfile=open('spiderfile','r')
     spiderlines=spiderfile.readlines()
     #print(spiderlines)
@@ -24,7 +25,9 @@ def spider():
     spiderlines=spiderfile.readlines()
     #print(spiderlines)
     spiderfile.close()
-    os.system("cat spiderfile | grep -a ' broken' >brokenLines")
+    """
+    os.system("bash spiderGrep.sh")
+    #os.system("cat spiderfile | grep -a ' broken' >brokenLines")
     os.system("echo 'bash2'")
 launchSpider=threading.Thread(target=spider)
 launchSpider.start()
