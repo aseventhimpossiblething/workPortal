@@ -15,7 +15,7 @@ def spider():
     #os.system("touch brokenLines")
     #os.system("cat spiderfile | grep -a ' broken' >brokenLines")
     os.system("bash midnighthowl.sh")
-    time.sleep(10s)
+    time.sleep(10)
     os.system("bash midnighthowl.sh")
     
     spiderfile=open('spiderfile','r')
