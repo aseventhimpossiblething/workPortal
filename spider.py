@@ -1,7 +1,7 @@
 import os
 import threading
 import time
-target_Site="https://bdxapilink.com"
+target_Site="https://www.newhomesource.com"
 def spider(targetSite):
     os.system("echo 'bash'")
     #targetSite="https://bdxapilink.com"
