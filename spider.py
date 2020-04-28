@@ -27,6 +27,8 @@ def spider(targetSite):
     spiderlines=spiderfile.readlines()
     print(spiderlines)
     spiderfile.close()
+    
+    print("=",spiderlines)
     """
     time.sleep(20)
     spiderfile=open('spiderfile','r')
