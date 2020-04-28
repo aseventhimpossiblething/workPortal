@@ -6,10 +6,10 @@ def spider():
     spiderCmmnd="wget -r -b -nd https://www.newhomesource.com --spider -o spiderfile"
     retrieveNmbr="bash spiderGrep.sh"
     os.system(spiderCmmnd)
-    #print("10 sec pause")
+    print("30 sec pause")
     #time.sleep(10)
     print("_____________")
-    #os.system(retrieveNmbr)
+    os.system(retrieveNmbr)
     #time.sleep(10)
     #os.system(retrieveNmbr)    
     #os.system("touch brokenLines")
@@ -26,7 +26,7 @@ def spider():
     #print(spiderlines)
     spiderfile.close()
     """
-    os.system("bash spiderGrep.sh")
+    #os.system("bash spiderGrep.sh")
     #os.system("cat spiderfile | grep -a ' broken' >brokenLines")
     os.system("echo 'bash2'")
 launchSpider=threading.Thread(target=spider)
