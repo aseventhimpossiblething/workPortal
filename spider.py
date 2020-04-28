@@ -3,7 +3,9 @@ import threading
 import time
 def spider():
     os.system("echo 'bash'")
-    spiderCmmnd="wget -r -b -nd https://www.newhomesource.com --spider -o spiderfile"
+    targetSite=$("https://www.newhomesource.com")
+    spiderCmmnd="wget -r -b -nd $(targetSite) --spider -o spiderfile"
+    #spiderCmmnd="wget -r -b -nd https://www.newhomesource.com --spider -o spiderfile"
     retrieveNmbr="bash spiderGrep.sh"
     os.system(spiderCmmnd)
     #print("30 sec pause")
