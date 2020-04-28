@@ -17,7 +17,7 @@ def spider():
     os.system("bash midnighthowl.sh")
     spiderfile=open('spiderfile','r')
     spiderfile.readlines()
-    spiderfiles.close()
+    spiderfile.close()
     os.system("echo 'bash2'")
 launchSpider=threading.Thread(target=spider)
 launchSpider.start()
