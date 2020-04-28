@@ -38,5 +38,5 @@ def spider(targetSite):
     #os.system("cat spiderfile | grep -a ' broken' >brokenLines")
     os.system("echo 'bash2'")
 #launchSpider=threading.Thread(target=spider)
-launchSpider.start()
+#launchSpider.start()
 spider(targetSite)
