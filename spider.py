@@ -1,10 +1,12 @@
 import os
 import threading
 import time
-def spider():
+targetSite="https://bdxapilink.com"
+def spider(targetSite):
     os.system("echo 'bash'")
-    targetSite="https://bdxapilink.com"
+    #targetSite="https://bdxapilink.com"
     #targetSite="https://www.newhomesource.com"
+    targetSite=targetSite
     spiderCmmnd="wget -r -b -nd "+targetSite+" --spider -o spiderfile"
     #spiderCmmnd="wget -r -b -nd https://www.newhomesource.com --spider -o spiderfile"
     retrieveNmbr="bash spiderGrep.sh"
@@ -35,6 +37,6 @@ def spider():
     #os.system("bash spiderGrep.sh")
     #os.system("cat spiderfile | grep -a ' broken' >brokenLines")
     os.system("echo 'bash2'")
-launchSpider=threading.Thread(target=spider)
+#launchSpider=threading.Thread(target=spider)
 launchSpider.start()
-#spider()
+spider(targetSite)
