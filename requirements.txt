@@ -23,4 +23,4 @@ huey
 openpyxl
 XlsxWriter
 Flask-SSLify
-tensorflow
+tensorFlow
