@@ -18,12 +18,12 @@ from openpyxl import load_workbook
 import xlsxwriter
 
 
-#os.system('echo his is Echoed by system os number 1')
+
 SheetsFileLocation="/var/www/workPortal/Sheets"
 currentCommunitiesLocation="/var/www/workPortal/Sheets/CommunityUpdates/currentCommunities"
 currentGoogleLocation="/var/www/workPortal/Sheets/CommunityUpdates/Google/currentGoogle"
 currentBingLocation="/var/www/workPortal/Sheets/CommunityUpdates/Bing/currentBing"
-#os.system('echo his is Echoed by system os number 2')
+
 def ValidatXLSXtime(arr):
         Error=arr+" Generated an error check that filetype is xlsx"
         Valid=arr+" is valid"
@@ -33,7 +33,7 @@ def ValidatXLSXtime(arr):
             print(Valid)
         
 def rowcheck(Sheet,cols):
-    #rowCheck=[];        
+     
     Temp=Sheet  
     designated_Columns=cols
     rowCheck=[];
@@ -71,12 +71,11 @@ def BidOpFileHandler():
     record_async_start=open("ForestLoadingQueue.txt","w")
     #print("async open and read")    
     #print(record_async_start.read())
-    record_async_start.write("5%")
+    record_async_start.write("This should take no more than 5 min.. else resubmit form")
     record_async_start.close()
     record_async_start=open("ForestLoadingQueue.txt","r")
-    #print(record_async_start.read())    
     record_async_start.close()
-    #print(record_async_start.read())     
+  
     
     target_Variable='New Bid'    
     #target_Variable='Changes'
@@ -87,16 +86,10 @@ def BidOpFileHandler():
     isGoog2=str(Temp.columns).find('Conversions')
     Temp=googConverter(Temp)
     print(Temp.columns)      
-    #if (isGoog1>=-1) or (isGoog2>=1):
-    #designated_Columns=str(designated_Columns).replace("'","").replace('Max.CPC','Bid').replace('Cost','Spend').replace('Conversions','Conv.').replace('Cost / conv.','CPA').replace('Search top IS','Top Impr. Share]').replace('Search abs. top IS','Absolute Top Impression Share').replace('Search impr. share','Impr. share (IS)').replace('Quality Score','Qual. Score').replace('Search lost IS (rank)','IS lost to rank').replace(']','').replace('[','')             
-    #designated_Columns=designated_Columns.split(',')
-    #print(len(designated_Columns))    
-    #print(type(designated_Columns))    
-    #print(designated_Columns)    
+     
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
-       #print(str(Temp['Campaign']).find('MSM')) 
-       #Temp.close();
+      
        def TrainingSheetBehavior(x,x2):
            print('async started')
            print(x)
@@ -106,37 +99,8 @@ def BidOpFileHandler():
                       
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
            Temp=pandas.read_excel('Temp.xlsx')
-           """     
-           if (str(Temp['Campaign']).find('MSM'))==-1:
-               conv_Columns=['Campaign','Ad group','Match type','Changes','Max. CPC','Clicks','CTR','Avg. CPC','Cost','Conversions','Cost / conv.','Conv. rate','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Quality Score','Search lost IS (rank)',]     
-               Temp=pandas.DataFrame(Temp,columns=conv_Columns)
-               Temp.columns=designated_Columns 
-               print(Temp)
-           """
-           """
-           def rowcheck(Sheet,cols):
-                rowCheck=[];        
-                Temp=Sheet  
-                designated_Columns=cols
-                rowCheck=[];
-                for cols in designated_Columns:
-                       colPresent=str(Temp.columns).find(cols);
-                       #print(colPresent)
-                       #print("colPresent") 
-                       if colPresent==-1: 
-                          rowCheck.append(cols); 
-           rowcheck(Temp,designated_Columns)             
-                
-           rowCheck=[];
-           for cols in designated_Columns:
-                       colPresent=str(Temp.columns).find(cols);
-                       #print(colPresent)
-                       #print("colPresent") 
-                       if colPresent==-1: 
-                          rowCheck.append(cols);
-                                
-           len(rowCheck);
-           """
+          
+         
            Temp=googConverter(Temp)     
            rowCheck=rowcheck(Temp,designated_Columns)     
            print(len(rowCheck)," ",rowCheck); 
@@ -211,11 +175,7 @@ def BidOpFileHandler():
         
     
     toscrn=isTrainingSheet
-    #toscrn="Dataset is labelled Training. It will Be used as Training Data"
-                
-    #print(isTrainSet)
-    print("os.listdir()____:",os.listdir())
-
+    
     return toscrn
     #return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/BidOpSeed.xlsx', attachment_filename='BidOpSeed.xlsx')
 
