@@ -11,8 +11,6 @@ import scipy
 import pandas
 import re
 from sklearn.ensemble import RandomForestRegressor
-#os.chdir('Sheets')
-#PredictorCols=['Changes','Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank'])     
 
 def googConverterReverse(X):
     print("_______________________________________________")
@@ -22,8 +20,9 @@ def googConverterReverse(X):
     print("initial cols ",cols)
     New_cols=[];
     for col in cols:
-        #col=str(col).replace('Cost / conv.','CPA').replace("'","").replace('Max.CPC','Bid').replace('Cost','Spend').replace('Conversions','Conv.').replace('Search top IS','Top Impr. Share').replace('Search abs. top IS','Absolute Top Impression Share').replace('Search impr. share','Impr. share (IS)').replace('Quality Score','Qual. Score').replace('Search lost IS (rank)','IS lost to rank').replace(']','').replace('[','')             
-        col=str(col).replace('CPA','Cost / conv.').replace("'","").replace('Bid','Max.CPC').replace('Spend','Cost').replace('Conv.','Conversions').replace('Top Impr. Share','Search top IS').replace('Absolute Top Impression Share','Search abs. top IS').replace('Impr. share (IS)','Search impr. share').replace('Qual. Score','Quality Score').replace('IS lost to rank','Search lost IS (rank)').replace(']','').replace('[','')
+        col=str(col).replace('CPA','Cost / conv.').replace("'","").replace('Bid','Max.CPC').\
+          replace('Spend','Cost').replace('Conv.','Conversions').replace('Top Impr. Share','Search top IS').replace('Absolute Top Impression Share','Search abs. top IS').replace('Impr. share (IS)','Search impr. share').replace('Qual. Score','Quality Score').replace('IS lost to rank','Search lost IS (rank)').replace(']','').replace('[','')
+        
         New_cols.append(col);
     print("array ",New_cols) 
     Temp.columns=New_cols
@@ -152,73 +151,10 @@ def BidOpOverview(desiCols,corecols,change):
    
     print("_____________________________________")
     
+   
     
-    
-    #OutputBid.to_excel('outputsheet.xlsx')    
-    
-    #print("begin excel test1")
-    #print(type(Temp))
-    #print(os.listdir())
-    #output=pandas.read_excel('outputsheet.xlsx')
-    """
-    XofSeed.to_excel("novExcel.xlsx")    
-    #"outputsheet.xlsx"    
-    """
+   
     Temp.to_excel("outputsheet.xlsx")
-    #"putputsheet.xlsx"
-    """
-    writer=pandas.ExcelWriter("putputsheet.xlsx")
-    TempForOutPut.to_excel(writer)
-    writer.save()
-    #"novExcel.xlsx"    
-    """
-    
-    #pandas.read_excel("outputsheet.xlsx")
-    """    
-    pandas.read_excel("putputsheet.xlsx")
-    pandas.read_excel("novExcel.xlsx")
-
-    print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"))
-    print("putputsheet.xlsx ",pandas.read_excel("putputsheet.xlsx")) 
-    print("novExcel.xlsx ",pandas.read_excel("novExcel.xlsx"))
-    
-        
-        
-    print("------------------------------------------------------")   
-
-
-    XofSeed.to_excel("outputsheet.xlsx")    
-    #"outputsheet.xlsx"    
-    
-    Temp.to_excel("putputsheet.xlsx")
-    #"putputsheet.xlsx"
-
-    writer=pandas.ExcelWriter("novExcel.xlsx")
-    TempForOutPut.to_excel(writer)
-    writer.save()
-    #"novExcel.xlsx"    
-
-    
-    pandas.read_excel("outputsheet.xlsx")
-    pandas.read_excel("putputsheet.xlsx")
-    pandas.read_excel("novExcel.xlsx")
-
-    print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"))
-    print("putputsheet.xlsx ",pandas.read_excel("putputsheet.xlsx")) 
-    print("novExcel.xlsx ",pandas.read_excel("novExcel.xlsx"))
-
-    #print(sipsheet);    
-    #print(Temp.to_excel("putputsheet.xlsx"));
-    #print(os.listdir())
-    #sipsheet=pandas.read_excel('putputsheet.xlsx')
-    #print("puput ",sipsheet); 
-    
-    #print("begin excel test2")    
-    
-              
-    """    
-    
-    
     print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"))
     print('end overview')
     record_async_start=open("ForestLoadingQueue.txt","w")
@@ -226,30 +162,10 @@ def BidOpOverview(desiCols,corecols,change):
     record_async_start.close();         
     return Temp  
             
-    
-   
-
-
-#print(max(glob.glob('*.xlsx'),key=os.path.getctime))
-
-
-
-
-
-
-
-#important Variables
-#Sheet_to_Analyse=
 Sheet_To_Be_analysed="None"
 Dimension_Predicted='Changes'
 ExampleSheetName='Machine.xlsx'
-"""
-try max(glob.glob('*xlsx'),key=os.path.getctime):
- 
-   MostRecentFile=max(glob.glob('*xlsx'),key=os.path.getctime)
-else print("MostRecent-Empty-Or-filemoved")
-"""
-#print("type MostRecentFile ",type(MostRecentFile))
+
 
 #designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
 ModelCol1=['Campaign','Ad group','Keyword','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','CTR','Changes']
@@ -266,7 +182,6 @@ X_Sheet_Analysis="Empty"
 
 def PrepModel():      
     PatternSheet=open(ExampleSheetName, 'rb')
-    #print("PatternSheet_____",PatternSheet)
     Pattern_no_Frame=pandas.read_excel(PatternSheet)
     #print("Pattern_no_Frame_____",Pattern_no_Frame)
     PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
@@ -281,11 +196,9 @@ def Analysis():
     
     print("*******from inside analysis max ctime file***",max(glob.glob('*xlsx'),key=os.path.getctime))
     global MostRecentFile
-    #MostRecentFile=str(max(glob.glob('*xlsx'),key=os.path.getctime))
     MostRecentFile=newFileSyntax2
     
-    #print("os.join.path__",os.join.path('To_Test_Machine_Goog.xlsx'))
-    
+       
     global Sheet_To_Be_analysed
     Sheet_To_Be_analysed=open(newFileSyntax2,'rb')
     print("type Sheet_To_Be_analysed",type(Sheet_To_Be_analysed))
@@ -293,15 +206,7 @@ def Analysis():
     #print("pandas.read_excel(Sheet_To_Be_analysed)",pandas.read_excel(Sheet_To_Be_analysed))
     print("pandas.read_excel(newFileSyntax2)",pandas.read_excel(newFileSyntax2))
     
-    """
-    FramedSheetToBeAnalysed=pandas.DataFrame(pandas.read_excel('Test_Machine_Goog.xlsx'), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
-    #the below are for testing only
-    #FramedSheet_To_Be_Analysed=pandas.DataFrame(pandas.read_excel(Sheet_To_Be_analysed), columns=ModelColumns_for_Analysed_Sheet).fillna(0)
-    #the below are for testing only
-    global X_Sheet_Analysis
-    X_Sheet_Analysis=FramedSheetToBeAnalysed.drop(ColumnsToClear_for_Analysis2, axis=1)
-    #Y_Sheet_Analysis=FramedSheet_To_Be_Analysed[Dimension_Predicted]
-    """
+
     
  
 def Predict():
@@ -316,33 +221,9 @@ def BidOpAssist():
 
     #print("sheet to be analysed",Sheet_To_Be_analysed)
     return list(numpy.array(Predict()))
-#print("sheet to be analysed",Sheet_To_Be_analysed)
 
 
-#print(glob.glob('*.xlsx'), key=os.path.getctime)
-#max(glob.glob('*.xlsx'), key=os.path.getctime)
 
-#print(min(glob.glob('*.xlsx'), key=os.path.getctime))
-#min(glob.glob('*.xlsx'), key=os.path.getctime)
-
-
-"""
-print("******shape*************")
-newArr=numpy.array(BidOpAssist())
-print(newArr.shape)
-
-print(list(numpy.reshape(newArr,(-1,1))))
-
-print("__ Bid OP______")
-#print(BidOpAssist())
-return Predict()
-
-print("******shape*************")
-print(BidOpAssist().shape)
-print(numpy.reshape(BidOpAssist(),(-1,1)))
-"""
-
-#eol
 print("end of doc")
 
 
