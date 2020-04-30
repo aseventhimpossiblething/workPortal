@@ -144,6 +144,7 @@ def BidOpOverview(desiCols,corecols,change):
 
     print("_____________________________________")
     Temp['Change']=percentChangeColumn(Temp); 
+    #print(Temp.head())
     Temp.to_excel("outputsheet.xlsx")
     print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"))
     print('end overview')
