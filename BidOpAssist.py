@@ -150,7 +150,7 @@ def BidOpOverview(desiCols,corecols,change):
     record_async_start.close();         
     return Temp  
 
-print(percentChangeColumn(frame))
+print(percentChangeColumn(Temp))
 
 
 
