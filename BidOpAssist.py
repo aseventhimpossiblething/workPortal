@@ -94,7 +94,7 @@ def percentIncrease(OldBid,NewBid):
 
 def percentChangeColumn(frame):
     percentChangeCol=[];
-    Obinds=[];
+    Obids=[];
     frame=frame;
     OldBid=frame['Bid'];
     NewBid=frame['New Bid'];
