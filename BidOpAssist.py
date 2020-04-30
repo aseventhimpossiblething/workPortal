@@ -85,11 +85,17 @@ def MkNewBid(x):
           count+=1;
     return New_Bid
 
-def changeColumnGenerator(OldBid,NewBid):
-    OldBid=OldBid;
-    NewBid=NewBid;
-    
-    change=(NewBid/IldBid)-1;
+def percentIncrease(OldBid,NewBid):
+    OldBid=float(OldBid);
+    NewBid=float(NewBid);
+    change=((NewBid/OldBid)-1);
+    change=change
+    return change;
+
+def percentChangeColumn(frame):
+    frame=frame;
+    OldBid=frame['Bid']
+    NewBid=frame['New Bid']
 
 
 def BidOpOverview(desiCols,corecols,change):
