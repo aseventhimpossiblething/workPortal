@@ -12,7 +12,6 @@ import os
 from flask import Flask, Markup, render_template, request
 from flask import send_file
 from flask import send_from_directory
-#import spider
 import get_campaigns
 
 
@@ -78,22 +77,6 @@ def official():
 @app.route('/favicon.png')
 def favicon():
     return send_from_directory('/app/favicon.png','favicon')     
-
-
-@app.route('/test')
-def testtextfile():
-    print("initial directory---------",os.getcwd())
-    print("contents of current directory-------------",os.listdir())
-    os.chdir("/app/Sheets/CommunityUpdates/Bing/currentBing")
-    print("current directory-------------",os.getcwd())
-    print("contents of current directory--------------",os.listdir())
-    TheSamplefile=open('TheSampleText.txt','r')
-   
-    j=2+2
-    j=str(j)
-    return TheSamplefile.read()
-
-
 
 
 
@@ -297,12 +280,6 @@ def index():
 @app.route('/BidOps')
 def BidOpInput():
     return render_template('BidOpForm.html')
-
-"""
-@app.route('/BidOpTrainingData', methods=['POST','GET'] )
-def BidOpTrainingDatas():
-    return fileHandler.BidOpFileHandler() 
-"""    
 
 
 
