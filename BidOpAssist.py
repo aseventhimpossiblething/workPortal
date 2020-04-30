@@ -93,9 +93,13 @@ def percentIncrease(OldBid,NewBid):
     return change;
 
 def percentChangeColumn(frame):
+    percentChangeCol=[];
     frame=frame;
-    OldBid=frame['Bid']
-    NewBid=frame['New Bid']
+    OldBid=frame['Bid'];
+    NewBid=frame['New Bid'];
+    for i in OldBid:
+        percentChangeCol.append(percentIncrease(OldBid[i],NewBid[i]));
+    return percentChangeCol;
 
 
 def BidOpOverview(desiCols,corecols,change):
@@ -145,6 +149,8 @@ def BidOpOverview(desiCols,corecols,change):
     record_async_start.write("100%")
     record_async_start.close();         
     return Temp  
+
+print(percentChangeColumn(frame))
 
 
 
