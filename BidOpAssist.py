@@ -1,4 +1,3 @@
-#import ExcelWriter
 from openpyxl import Workbook
 from openpyxl import load_workbook
 import xlrd
@@ -84,7 +83,13 @@ def MkNewBid(x):
           thebid=(Bid[count]*Changes[count])
           New_Bid.append(thebid)
           count+=1;
-    return New_Bid   
+    return New_Bid
+
+def changeColumnGenerator(OldBid,NewBid):
+    OldBid=OldBid;
+    NewBid=NewBid;
+    
+    change=(NewBid/IldBid)-1;
 
 
 def BidOpOverview(desiCols,corecols,change):
@@ -134,7 +139,10 @@ def BidOpOverview(desiCols,corecols,change):
     record_async_start.write("100%")
     record_async_start.close();         
     return Temp  
-            
+
+
+
+"""            
 Sheet_To_Be_analysed="None"
 Dimension_Predicted='Changes'
 ExampleSheetName='Machine.xlsx'
@@ -150,6 +158,8 @@ ColumnsToClear_for_Analysis2=['Campaign','Ad group','Keyword','Match type']
 Pattern_inputModel="Empty"
 Pattern_New_CPC="Empty"
 X_Sheet_Analysis="Empty"
+
+
 
 def PrepModel():      
     PatternSheet=open(ExampleSheetName, 'rb')
@@ -184,11 +194,9 @@ def Predict():
 def BidOpAssist():
     PrepModel()
     Analysis()
-
-    #print("sheet to be analysed",Sheet_To_Be_analysed)
     return list(numpy.array(Predict()))
 
-
+"""
 
 print("end of doc")
 
