@@ -94,14 +94,11 @@ def percentIncrease(OldBid,NewBid):
 
 def percentChangeColumn(frame):
     percentChangeCol=[];
-    Obids=[];
     frame=frame;
     OldBid=frame['Bid'];
     NewBid=frame['New Bid'];
     count=0;
     for i in OldBid:
-        Obids.append(i)
-        #print()
         percentChangeCol.append(percentIncrease(OldBid[count],NewBid[count]));
         count+=1;
     return percentChangeCol;
@@ -146,7 +143,7 @@ def BidOpOverview(desiCols,corecols,change):
         Temp=googConverterReverse(X)
 
     print("_____________________________________")
- 
+    Temp['Change']=percentChangeColumn(Temp); 
     Temp.to_excel("outputsheet.xlsx")
     print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"))
     print('end overview')
@@ -154,7 +151,7 @@ def BidOpOverview(desiCols,corecols,change):
     record_async_start=open("ForestLoadingQueue.txt","w")
     record_async_start.write("100%")
     record_async_start.close(); 
-    print(percentChangeColumn(Temp))
+    
     return Temp  
 
 #print(percentChangeColumn(Temp))
