@@ -1,7 +1,7 @@
 domain="http://bdxapilink.com"
 import tensorflow
 import CommunityUpdatesProcess
-import GetCampaigns
+
 import glob
 import numpy
 import scipy
@@ -14,12 +14,8 @@ from flask import send_file
 from flask import send_from_directory
 #import spider
 import get_campaigns
-#print("Before expermientCampLabels")
-#import expermientCampLabels
-#print("After expermientCampLabels")
-#import Campaigns
 
-#import reportexpFreeToDelete
+
 import spider
 from datetime import datetime
 os.system('sudo chmod -R 777 Sheets')
