@@ -145,12 +145,14 @@ def BidOpOverview(desiCols,corecols,change):
     Temp.to_excel("outputsheet.xlsx")
     print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"))
     print('end overview')
+    
     record_async_start=open("ForestLoadingQueue.txt","w")
     record_async_start.write("100%")
-    record_async_start.close();         
+    record_async_start.close(); 
+    print(percentChangeColumn(Temp))
     return Temp  
 
-print(percentChangeColumn(Temp))
+#print(percentChangeColumn(Temp))
 
 
 
