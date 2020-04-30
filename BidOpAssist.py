@@ -98,7 +98,9 @@ def percentChangeColumn(frame):
     OldBid=frame['Bid'];
     NewBid=frame['New Bid'];
     for i in OldBid:
-        percentChangeCol.append(percentIncrease(OldBid[i],NewBid[i]));
+        percentChangeCol.append(OldBid[i])
+        #print()
+        #percentChangeCol.append(percentIncrease(OldBid[i],NewBid[i]));
     return percentChangeCol;
 
 
