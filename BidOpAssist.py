@@ -87,9 +87,6 @@ def MkNewBid(x):
     return New_Bid   
 
 
-            
-            
-            
 def BidOpOverview(desiCols,corecols,change):
     PredVar=change    
     designated_Columns=desiCols;
@@ -127,15 +124,9 @@ def BidOpOverview(desiCols,corecols,change):
     Temp[PredVar]=OutputBid 
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(X)
-    
-    
-        
-   
+
     print("_____________________________________")
-    
-   
-    
-   
+ 
     Temp.to_excel("outputsheet.xlsx")
     print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"))
     print('end overview')
@@ -179,7 +170,6 @@ def Analysis():
     Sheet_To_Be_analysed=open(newFileSyntax2,'rb')
     print("type Sheet_To_Be_analysed",type(Sheet_To_Be_analysed))
     print("Sheet_To_Be_analysed",Sheet_To_Be_analysed)
-    #print("pandas.read_excel(Sheet_To_Be_analysed)",pandas.read_excel(Sheet_To_Be_analysed))
     print("pandas.read_excel(newFileSyntax2)",pandas.read_excel(newFileSyntax2))
     
 
