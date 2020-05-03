@@ -2,6 +2,8 @@ domain="http://bdxapilink.com"
 import tensorflow
 import CommunityUpdatesProcess
 
+cookie=make_respnse('')
+cookie.set_cookie("BDXPPC","BDXPPCAPP")
 
 from google.oauth2.service_account import Credentials as ServiceAccountCreds
 from google.oauth2.credentials import Credentials as InstalledAppCredentials
