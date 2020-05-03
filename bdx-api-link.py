@@ -6,11 +6,11 @@ import CommunityUpdatesProcess
 from google.oauth2.service_account import Credentials as ServiceAccountCreds
 from google.oauth2.credentials import Credentials as InstalledAppCredentials
 from google.auth.transport.requests import Request
-import google-auth-oauthlib 0.3.0
-import google-api-core 1.14.0
-import googleapis-common-protos 1.5.8
-import grpcio 1.25.0
-import PyYAML 5.1
+import google-auth-oauthlib
+import google-api-core
+import googleapis-common-protos
+import grpcio
+import PyYAML
 
 
 
