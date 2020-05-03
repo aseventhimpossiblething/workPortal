@@ -4,7 +4,6 @@ import threading
 import time
 target_Site="https://www.newhomesource.com"
 def sendSpider(targetSite):
-    os.system("touch spiderfile")
     os.system("echo 'bash'")
     targetSite=targetSite
     spiderCmmnd="wget -r -b -nd "+targetSite+" --spider -o spiderfile"
