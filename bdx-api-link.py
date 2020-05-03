@@ -2,8 +2,7 @@ domain="http://bdxapilink.com"
 import tensorflow
 import CommunityUpdatesProcess
 
-cookie=make_respnse('')
-cookie.set_cookie("BDXPPC","BDXPPCAPP")
+
 
 from google.oauth2.service_account import Credentials as ServiceAccountCreds
 from google.oauth2.credentials import Credentials as InstalledAppCredentials
@@ -24,11 +23,13 @@ import pandas
 import BidOpAssist
 import fileHandler
 import os
-from flask import Flask, Markup, render_template, request
+from flask import Flask, Markup, render_template, request, make_response
 from flask import send_file
 from flask import send_from_directory
 import get_campaigns
 
+cookie=make_response('')
+cookie.set_cookie("BDXPPC","BDXPPCAPP")
 
 import spider
 from datetime import datetime
