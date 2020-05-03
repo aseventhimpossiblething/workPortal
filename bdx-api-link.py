@@ -2,6 +2,19 @@ domain="http://bdxapilink.com"
 import tensorflow
 import CommunityUpdatesProcess
 
+
+from google.oauth2.service_account import Credentials as ServiceAccountCreds
+from google.oauth2.credentials import Credentials as InstalledAppCredentials
+from google.auth.transport.requests import Request
+google-auth-oauthlib 0.3.0
+google-api-core 1.14.0
+googleapis-common-protos 1.5.8
+grpcio 1.25.0
+PyYAML 5.1
+
+
+
+
 import glob
 import numpy
 import scipy
