@@ -28,8 +28,10 @@ from flask import send_file
 from flask import send_from_directory
 import get_campaigns
 
+"""
 cookie=make_response('')
 cookie.set_cookie("BDXPPC","BDXPPCAPP")
+"""
 
 import spider
 from datetime import datetime
@@ -288,6 +290,8 @@ def Scripts():
 
 @app.route('/')
 def index():
+    cookie=make_response('')
+    cookie.set_cookie("BDXPPC","BDXPPCAPP")
     global domain     
     domainFavi=domain+"/favicon.png"
     #domainFavi="/favicon.png"     
