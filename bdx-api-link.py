@@ -67,6 +67,8 @@ app = Flask(__name__,"/static/")
 #conn.commit()
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 #conn.close
+
+login_page="/login"
 def setCnam():
     return "hyo123"
 
@@ -94,7 +96,7 @@ def chckbdxcred():
     
 
 
-@app.route('/login')
+@app.route(login_page)
 def mlgn():
     gencook=make_response('pass granted');
     gencook.set_cookie(setCnam(),bdxcred());
