@@ -72,7 +72,7 @@ def bdxcred():
     credential="sancho1001"
     return credential
 def chckbdxcred():
-    credential=request.cookies.get()
+    credential=request.cookies.get('vps4')
     if credential==bdxcred():
         return "cred true"
     else:
