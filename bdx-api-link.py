@@ -82,7 +82,7 @@ def logonfalse():
 
 def chckbdxcred():
     x=request.cookies.get(setCnam());
-    #print("get cookie ",x)
+    print("get cookie ",x)
     if x==bdxcred():
        a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
        b=login_page
