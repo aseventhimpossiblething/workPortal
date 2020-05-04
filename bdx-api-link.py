@@ -68,8 +68,23 @@ app = Flask(__name__,"/static/")
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 #conn.close
 
+def bdxcred():
+    credential="sancho1001"
+    return credential
+def chckbdxcred(x):
+    if x !=bdxcred():
+        return "deny"
+    else return "pass"
+    
+    
+    
 
 
+@app.route('/login')
+def mlgn():
+    gencook=make_response('pyld + chkcookk');
+    gencook.setcookie('vps4',bdxcred())
+    return gencook
 
 
 
