@@ -16,12 +16,12 @@ import sys
 from openpyxl import Workbook
 from openpyxl import load_workbook
 import xlsxwriter
-
+"""
 fileHandler.SheetsFileLocation
 fileHandler.currentCommunitiesLocation
 fileHandler.currentGoogleLocation
 fileHandler.currentBingLocation
-
+"""
 
 
 SheetsAreLoaded=None; 
