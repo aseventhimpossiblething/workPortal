@@ -290,8 +290,8 @@ def Scripts():
 
 @app.route('/')
 def index():
-    cookie=make_response('')
-    cookie.set_cookie("BDXPPC","BDXPPCAPP")
+    cookie=make_response('llbdx')
+    cookie.set_cookie("BDXPPC","BDXPPCAPP-441")
     global domain     
     domainFavi=domain+"/favicon.png"
     #domainFavi="/favicon.png"     
