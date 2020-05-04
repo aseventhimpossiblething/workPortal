@@ -665,7 +665,7 @@ def initialCommUpdatProcess():
  print("fileHandler.currentCommunitiesLocation - ",fileHandler.currentCommunitiesLocation)
   
  os.chdir(fileHandler.currentCommunitiesLocation)
- print(os.listdir())
+ print(os.listdir(os.getcwd()))
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
  print(WorkingCommunities)
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
