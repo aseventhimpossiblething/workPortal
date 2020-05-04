@@ -88,7 +88,8 @@ def chckbdxcred():
        b=login_page
        c="'><html>did not forward</html>"
        abc=a+b+c
-       return logontrue();
+       return abc 
+       #return logontrue();
     else:
        return "NULL"
  
@@ -335,12 +336,15 @@ def Scripts():
 
 @app.route('/')
 def index():
+    print(str(chckbdxcred()).index("NULL"))
+    
     if chckbdxcred() != logontrue():
        a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
        b=login_page
        c="'><html>did not forward</html>"
        abc=a+b+c
        return abc
+      
        #return "Please log in"; 
     global domain;     
     domainFavi=domain+"/favicon.png";
