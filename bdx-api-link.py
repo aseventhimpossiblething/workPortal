@@ -74,7 +74,7 @@ def bdxcred():
     credential="sancho1001"
     return credential
 def chckbdxcred():
-    request.cookies.get(setCnam())
+    x=request.cookies.get(setCnam())
     if x==bdxcred():
         return "cred true"
     else:
