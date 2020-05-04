@@ -71,8 +71,9 @@ app = Flask(__name__,"/static/")
 def bdxcred():
     credential="sancho1001"
     return credential
-def chckbdxcred(x):
-    if x==bdxcred():
+def chckbdxcred():
+    credential=request.cookies.get()
+    if credential==bdxcred():
         return "cred true"
     else:
         return "cred false"
@@ -309,11 +310,11 @@ def Scripts():
 def index():
     #cook=make_response("llbdx")
     #cook.set_cookie('BDXPPC','BDXPPCAPP-441')
-    chckbdxcred("sancho1001")
+    chckbdxcred()
     global domain     
     domainFavi=domain+"/favicon.png"
     #return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi)
-    return chckbdxcred("sanch01001")
+    return chckbdxcred()
 
 @app.route('/BidOps')
 def BidOpInput():
