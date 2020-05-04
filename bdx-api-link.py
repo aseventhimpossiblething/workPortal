@@ -65,7 +65,6 @@ app = Flask(__name__,"/static/")
 #conn.close
 
 login_page="/login"
-#login_page2="/lgnCred"
 def setCnam():
     return "hyo123"
 
@@ -85,9 +84,22 @@ def chckbdxcred():
     x=request.cookies.get(setCnam());
     #print("get cookie ",x)
     if x==bdxcred():
-        return logontrue();
-    else:
-        return logonfalse()
+       a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
+       b=login_page
+       c="'><html>did not forward</html>"
+       abc=a+b+c
+       return logontrue();
+   else:
+        return "NULL"
+ 
+
+def lockbox():
+if chckbdxcred() != logontrue():
+       a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
+       b=login_page
+       c="'><html>did not forward</html>"
+       abc=a+b+c
+       return abc    
     
     
     
@@ -323,9 +335,6 @@ def Scripts():
 
 @app.route('/')
 def index():
-    #cook=make_response("llbdx")
-    #cook.set_cookie('BDXPPC','BDXPPCAPP-441')
-    print(chckbdxcred(),logontrue());
     if chckbdxcred() != logontrue():
        a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
        b=login_page
