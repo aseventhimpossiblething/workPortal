@@ -337,7 +337,8 @@ def Scripts():
 @app.route('/')
 def index():
     #print(str(chckbdxcred()).find("NULL"))
-    if chckbdxcred().find("NULL")>-1:
+    if chckbdxcred().find("NULL")==-1:
+        print(str(chckbdxcred()))
         return str(chckbdxcred())
     
     if chckbdxcred() != logontrue():
