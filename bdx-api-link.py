@@ -72,10 +72,10 @@ def bdxcred():
     credential="sancho1001"
     return credential
 def chckbdxcred(x):
-    if x !=bdxcred():
-        return "deny"
+    if x==bdxcred():
+        return "cred true"
     else:
-        return "pass"
+        return "cred false"
     
     
     
@@ -306,12 +306,13 @@ def Scripts():
 
 @app.route('/')
 def index():
-    cook=make_response("llbdx")
-    cook.set_cookie('BDXPPC','BDXPPCAPP-441')
+    #cook=make_response("llbdx")
+    #cook.set_cookie('BDXPPC','BDXPPCAPP-441')
+    chckbdxcred("sancho1001")
     global domain     
     domainFavi=domain+"/favicon.png"
     #return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi)
-    return cook
+    return chckbdxcred("sanch01001")
 
 @app.route('/BidOps')
 def BidOpInput():
