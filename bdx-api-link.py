@@ -87,7 +87,7 @@ def logonfalse():
 def chckbdxcred():
     x=request.cookies.get(setCnam())
     if x==bdxcred():
-        return logontrue()
+        return logontrue();
     else:
         return logonfalse()
     
@@ -324,6 +324,9 @@ def index():
     #cook=make_response("llbdx")
     #cook.set_cookie('BDXPPC','BDXPPCAPP-441')
     if chckbdxcred()!=logontrue():
+       chckbdxcred="chckbdxcred= "+str(chckbdxcred());
+       logontrue="logontrue= "+str(logontrue())
+       true=logontrue+" | "+chckbdxcred 
        return "Please log in"; 
     global domain;     
     domainFavi=domain+"/favicon.png";
