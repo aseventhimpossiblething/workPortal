@@ -65,7 +65,7 @@ app = Flask(__name__,"/static/")
 #conn.close
 
 login_page="/login"
-login_page2="/lgnCred"
+#login_page2="/lgnCred"
 def setCnam():
     return "hyo123"
 
@@ -96,11 +96,11 @@ def chckbdxcred():
 
 @app.route(login_page)
 def mlgn():
-    gencook=make_response("form");
+    gencook=make_response("<a href='/l2'>form</a>");
     gencook.set_cookie(setCnam(),bdxcred());
     return gencook
 
-@app.route(login_page2)
+@app.route('/l2')
 def mlgne():
     gencook=make_response("<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/'><html>did not forward</html>");
     gencook.set_cookie(setCnam(),bdxcred());
