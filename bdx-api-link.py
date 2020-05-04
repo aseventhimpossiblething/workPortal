@@ -96,7 +96,7 @@ def chckbdxcred():
 
 @app.route(login_page)
 def mlgn():
-    gencook="<a href='/l2'>form</a>");
+    gencook="<a href='/l2'>form</a>";
     #gencook.set_cookie(setCnam(),bdxcred());
     return gencook
 
