@@ -67,11 +67,14 @@ app = Flask(__name__,"/static/")
 #conn.commit()
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 #conn.close
+def setCnam():
+    return "hyo123"
 
 def bdxcred():
     credential="sancho1001"
     return credential
-def chckbdxcred(x):
+def chckbdxcred():
+    request.cookies.get(setCnam())
     if x==bdxcred():
         return "cred true"
     else:
@@ -84,9 +87,8 @@ def chckbdxcred(x):
 
 @app.route('/login')
 def mlgn():
-    bdxcred=bdxcred();
-    gencook=make_response('pyld + chkcookk');
-    #gencook.set_cookie('vps4',bdxcred);
+    gencook=make_response('pass granted');
+    gencook.set_cookie(setCnam(),bdxcred());
     return gencook
 
 
@@ -310,11 +312,11 @@ def Scripts():
 def index():
     #cook=make_response("llbdx")
     #cook.set_cookie('BDXPPC','BDXPPCAPP-441')
-    chckbdxcred("sancho1001")
+    chckbdxcred()
     global domain     
     domainFavi=domain+"/favicon.png"
     #return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi)
-    return chckbdxcred("sanch01001")
+    return chckbdxcred()
 
 @app.route('/BidOps')
 def BidOpInput():
