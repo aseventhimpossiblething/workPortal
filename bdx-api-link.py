@@ -96,8 +96,8 @@ def chckbdxcred():
 
 @app.route(login_page)
 def mlgn():
-    gencook=make_response("<a href='/l2'>form</a>");
-    gencook.set_cookie(setCnam(),bdxcred());
+    gencook="<a href='/l2'>form</a>");
+    #gencook.set_cookie(setCnam(),bdxcred());
     return gencook
 
 @app.route('/l2')
@@ -340,6 +340,12 @@ def index():
 
 @app.route('/BidOps')
 def BidOpInput():
+    if chckbdxcred() != logontrue():
+       a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
+       b=login_page
+       c="'><html>did not forward</html>"
+       abc=a+b+c
+       return abc
     return render_template('BidOpForm.html')
 
 
@@ -352,6 +358,12 @@ def BidOPUpload():
 
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
+    if chckbdxcred() != logontrue():
+       a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
+       b=login_page
+       c="'><html>did not forward</html>"
+       abc=a+b+c
+       return abc
     return render_template('CommunitiesForm.html')
 
 @app.route('/CommunityFileHander', methods=['POST','GET'])
