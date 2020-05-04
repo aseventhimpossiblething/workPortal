@@ -85,7 +85,7 @@ def chckbdxcred():
     #print("get cookie ",x)
     if x==bdxcred():
        a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
-       b="/"
+       b="/l2"
        c="'><html>did not forward</html>"
        abc=a+b+c
        return abc 
