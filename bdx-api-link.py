@@ -73,12 +73,21 @@ def setCnam():
 def bdxcred():
     credential="sancho1001"
     return credential
+
+
+
+def logontrue():
+    return "true"
+def logonfalse():
+    return "false"
+
+
 def chckbdxcred():
     x=request.cookies.get(setCnam())
     if x==bdxcred():
-        return "cred true"
+        return logontrue()
     else:
-        return "cred false"
+        return logonfalse()
     
     
     
@@ -312,11 +321,12 @@ def Scripts():
 def index():
     #cook=make_response("llbdx")
     #cook.set_cookie('BDXPPC','BDXPPCAPP-441')
-    chckbdxcred()
-    global domain     
-    domainFavi=domain+"/favicon.png"
-    #return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi)
-    return chckbdxcred()
+    if chckbdxcred()!=logontrue();
+       return "Please log in"; 
+    global domain;     
+    domainFavi=domain+"/favicon.png";
+    return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi);
+    #return chckbdxcred();
 
 @app.route('/BidOps')
 def BidOpInput():
