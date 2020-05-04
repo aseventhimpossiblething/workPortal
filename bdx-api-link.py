@@ -84,7 +84,7 @@ def chckbdxcred():
     x=request.cookies.get(setCnam());
     print("get cookie = ",x," bdxcred = ",bdxcred());
     print("x==bdxcred() = ",x==bdxcred());
-    y=x.find(bdxcred());
+    y=str(x).find(bdxcred());
     print(y);
     if bdxcred():
        print(x==bdxcred(),"*") 
