@@ -85,7 +85,8 @@ def chckbdxcred(x):
 def mlgn():
     gencook=make_response('pyld + chkcookk');
     gencook.set_cookie('vps4',bdxcred())
-    return gencook
+    reveal=request.cookies.get('vps4')
+    return reveal
 
 
 
