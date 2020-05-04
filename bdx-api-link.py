@@ -94,16 +94,6 @@ def chckbdxcred():
     else:
        return "NULL"
  
-"""
-def lockbox():
-    if chckbdxcred() != logontrue():
-       a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
-       b=login_page
-       c="'><html>did not forward</html>"
-       abc=a+b+c
-       return abc 
-"""       
-    
     
     
     
@@ -118,10 +108,13 @@ def mlgn():
 
 @app.route('/l2', methods=['POST'])
 def mlgne():
-    print(request.form['username'])
-    print(request.form['password'])
     gencook=make_response("<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/'><html>did not forward</html>");
-    gencook.set_cookie(setCnam(),bdxcred());
+    x=request.form['username'];
+    y=request.form['password'];
+    if x=="BDXPPC" and y=="11900ranch";
+       print("pass"); 
+       #gencook=make_response("<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/'><html>did not forward</html>");
+       gencook.set_cookie(setCnam(),bdxcred());
     #gencook="stop"
     return gencook
 
