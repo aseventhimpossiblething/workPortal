@@ -71,12 +71,12 @@ app = Flask(__name__,"/static/")
 def bdxcred():
     credential="sancho1001"
     return credential
-def chckbdxcred():
-    credential=request.cookies.get('vps4')
-    if credential==bdxcred():
+def chckbdxcred(x):
+    if x==bdxcred():
         return "cred true"
     else:
         return "cred false"
+    
     
     
     
@@ -84,10 +84,10 @@ def chckbdxcred():
 
 @app.route('/login')
 def mlgn():
+    bdxcred=bdxcred();
     gencook=make_response('pyld + chkcookk');
-    gencook.set_cookie('vps4',bdxcred())
-    reveal=request.cookies.get('vps4')
-    return reveal
+    #gencook.set_cookie('vps4',bdxcred);
+    return gencook
 
 
 
@@ -310,11 +310,11 @@ def Scripts():
 def index():
     #cook=make_response("llbdx")
     #cook.set_cookie('BDXPPC','BDXPPCAPP-441')
-    chckbdxcred()
+    chckbdxcred("sancho1001")
     global domain     
     domainFavi=domain+"/favicon.png"
     #return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi)
-    return chckbdxcred()
+    return chckbdxcred("sanch01001")
 
 @app.route('/BidOps')
 def BidOpInput():
