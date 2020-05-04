@@ -28,10 +28,6 @@ from flask import send_file
 from flask import send_from_directory
 #import get_campaigns
 
-"""
-cookie=make_response('')
-cookie.set_cookie("BDXPPC","BDXPPCAPP")
-"""
 
 #import spider
 from datetime import datetime
@@ -86,7 +82,7 @@ def logonfalse():
 
 def chckbdxcred():
     x=request.cookies.get(setCnam());
-    print("get cookie ",x)
+    #print("get cookie ",x)
     if x==bdxcred():
         return logontrue();
     else:
@@ -326,9 +322,6 @@ def index():
     #cook.set_cookie('BDXPPC','BDXPPCAPP-441')
     print(chckbdxcred(),logontrue());
     if chckbdxcred() != logontrue():
-       #Chckbdxcred="chckbdxcred= "+str(chckbdxcred());
-       #Logontrue="logontrue= "+str(logontrue())
-       #true=Logontrue+" | "+Chckbdxcred 
        return "Please log in"; 
     global domain;     
     domainFavi=domain+"/favicon.png";
