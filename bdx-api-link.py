@@ -82,10 +82,7 @@ def logonfalse():
 
 def chckbdxcred():
     x=request.cookies.get(setCnam());
-    print("get cookie = ",x," bdxcred = ",bdxcred());
-    print("x==bdxcred() = ",x==bdxcred());
     y=str(x).find(bdxcred());
-    print(y);
     if y==-1:
        print(x==bdxcred(),"*") 
        a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
@@ -341,19 +338,9 @@ def Scripts():
 
 @app.route('/')
 def index():
-    #print(str(chckbdxcred()).find("NULL"))
     if chckbdxcred().find("NULL")==-1:
-        print(str(chckbdxcred()))
-        return str(chckbdxcred())
-    """
-    if chckbdxcred() != logontrue():
-       a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
-       b=login_page
-       c="'><html>did not forward</html>"
-       abc=a+b+c
-       return abc
-    """  
-       #return "Please log in"; 
+        print(str(chckbdxcred()));
+        return str(chckbdxcred());
     global domain;     
     domainFavi=domain+"/favicon.png";
     return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi);
@@ -361,30 +348,27 @@ def index():
 
 @app.route('/BidOps')
 def BidOpInput():
-    if chckbdxcred() != logontrue():
-       a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
-       b=login_page
-       c="'><html>did not forward</html>"
-       abc=a+b+c
-       return abc
+    if chckbdxcred().find("NULL")==-1:
+        print(str(chckbdxcred()));
+        return str(chckbdxcred());
     return render_template('BidOpForm.html')
 
 
 
 @app.route('/BidOPUpload', methods=['POST','GET'])
 def BidOPUpload():
+    if chckbdxcred().find("NULL")==-1:
+        print(str(chckbdxcred()));
+        return str(chckbdxcred());
     return fileHandler.BidOpFileHandler()
 
 
 
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
-    if chckbdxcred() != logontrue():
-       a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
-       b=login_page
-       c="'><html>did not forward</html>"
-       abc=a+b+c
-       return abc
+    if chckbdxcred().find("NULL")==-1:
+        print(str(chckbdxcred()));
+        return str(chckbdxcred());
     return render_template('CommunitiesForm.html')
 
 @app.route('/CommunityFileHander', methods=['POST','GET'])
