@@ -273,9 +273,7 @@ def BingASX():
  return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeExact/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSXA.xlsx")
                   
-         
-         
-  
+
 
 @app.route('/BingAdSXB')
 def BingBSX():
@@ -322,7 +320,12 @@ def index():
     #cook.set_cookie('BDXPPC','BDXPPCAPP-441')
     print(chckbdxcred(),logontrue());
     if chckbdxcred() != logontrue():
-       return "Please log in"; 
+       a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
+       b=login_page
+       c="'><html>did not forward</html>"
+       abc=a+b+c
+       return abc
+       #return "Please log in"; 
     global domain;     
     domainFavi=domain+"/favicon.png";
     return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi);
