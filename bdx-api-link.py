@@ -85,7 +85,8 @@ def logonfalse():
 
 
 def chckbdxcred():
-    x=request.cookies.get(setCnam())
+    x=request.cookies.get(setCnam());
+    print("get cookie ",x)
     if x==bdxcred():
         return logontrue();
     else:
