@@ -294,7 +294,8 @@ def index():
     cook.set_cookie('BDXPPC','BDXPPCAPP-441')
     global domain     
     domainFavi=domain+"/favicon.png"
-    return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi)
+    #return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi)
+    return cook
 
 @app.route('/BidOps')
 def BidOpInput():
