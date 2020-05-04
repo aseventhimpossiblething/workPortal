@@ -84,7 +84,7 @@ def chckbdxcred(x):
 @app.route('/login')
 def mlgn():
     gencook=make_response('pyld + chkcookk');
-    gencook.setcookie('vps4',bdxcred())
+    gencook.set_cookie('vps4',bdxcred())
     return gencook
 
 
