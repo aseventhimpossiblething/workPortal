@@ -323,7 +323,7 @@ def Scripts():
 def index():
     #cook=make_response("llbdx")
     #cook.set_cookie('BDXPPC','BDXPPCAPP-441')
-    if chckbdxcred()!=logontrue();
+    if chckbdxcred()!=logontrue():
        return "Please log in"; 
     global domain;     
     domainFavi=domain+"/favicon.png";
