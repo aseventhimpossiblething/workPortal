@@ -1,6 +1,6 @@
 domain="http://bdxapilink.com"
-import tensorflow
-import CommunityUpdatesProcess
+#import tensorflow
+#import CommunityUpdatesProcess
 
 
 
@@ -21,19 +21,19 @@ import numpy
 import scipy
 import pandas
 import BidOpAssist
-import fileHandler
+#import fileHandler
 import os
 from flask import Flask, Markup, render_template, request, make_response
 from flask import send_file
 from flask import send_from_directory
-import get_campaigns
+#import get_campaigns
 
 """
 cookie=make_response('')
 cookie.set_cookie("BDXPPC","BDXPPCAPP")
 """
 
-import spider
+#import spider
 from datetime import datetime
 os.system('sudo chmod -R 777 Sheets')
 os.system('sudo chmod -R 777 templates')
@@ -323,10 +323,11 @@ def Scripts():
 def index():
     #cook=make_response("llbdx")
     #cook.set_cookie('BDXPPC','BDXPPCAPP-441')
+    print(chckbdxcred(),logontrue());
     if chckbdxcred() != logontrue():
-       Chckbdxcred="chckbdxcred= "+str(chckbdxcred());
-       Logontrue="logontrue= "+str(logontrue())
-       true=Logontrue+" | "+Chckbdxcred 
+       #Chckbdxcred="chckbdxcred= "+str(chckbdxcred());
+       #Logontrue="logontrue= "+str(logontrue())
+       #true=Logontrue+" | "+Chckbdxcred 
        return "Please log in"; 
     global domain;     
     domainFavi=domain+"/favicon.png";
