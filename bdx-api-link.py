@@ -336,7 +336,7 @@ def Scripts():
 
 @app.route('/')
 def index():
-    print(str(chckbdxcred()).index("NULL"))
+    print(str(chckbdxcred()).find("NULL"))
     
     if chckbdxcred() != logontrue():
        a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
