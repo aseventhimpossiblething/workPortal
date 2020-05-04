@@ -290,11 +290,10 @@ def Scripts():
 
 @app.route('/')
 def index():
-    cookie=make_response('llbdx')
-    cookie.set_cookie("BDXPPC","BDXPPCAPP-441")
+    cook=make_response("llbdx")
+    cook.set_cookie('BDXPPC','BDXPPCAPP-441')
     global domain     
     domainFavi=domain+"/favicon.png"
-    #domainFavi="/favicon.png"     
     return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi)
 
 @app.route('/BidOps')
