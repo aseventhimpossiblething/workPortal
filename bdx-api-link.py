@@ -117,7 +117,7 @@ def mlgn():
 def mlgne():
     #gencook=make_response("<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/'><html>did not forward</html>");
     #gencook.set_cookie(setCnam(),bdxcred());
-    gencook"stop"
+    gencook="stop"
     return gencook
 
 
