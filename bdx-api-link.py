@@ -79,9 +79,9 @@ def bdxcred():
 
 
 def logontrue():
-    return "true"
+    return "pass"
 def logonfalse():
-    return "false"
+    return "no pass"
 
 
 def chckbdxcred():
@@ -323,10 +323,10 @@ def Scripts():
 def index():
     #cook=make_response("llbdx")
     #cook.set_cookie('BDXPPC','BDXPPCAPP-441')
-    if chckbdxcred()!=logontrue():
-       chckbdxcred="chckbdxcred= "+str(chckbdxcred());
-       logontrue="logontrue= "+str(logontrue())
-       true=logontrue+" | "+chckbdxcred 
+    if chckbdxcred() != logontrue():
+       Chckbdxcred="chckbdxcred= "+str(chckbdxcred());
+       Logontrue="logontrue= "+str(logontrue())
+       true=Logontrue+" | "+Chckbdxcred 
        return "Please log in"; 
     global domain;     
     domainFavi=domain+"/favicon.png";
