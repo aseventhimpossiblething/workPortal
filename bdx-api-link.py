@@ -94,14 +94,15 @@ def chckbdxcred():
     else:
        return "NULL"
  
-
+"""
 def lockbox():
     if chckbdxcred() != logontrue():
        a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
        b=login_page
        c="'><html>did not forward</html>"
        abc=a+b+c
-       return abc    
+       return abc 
+"""       
     
     
     
@@ -111,6 +112,7 @@ def lockbox():
 @app.route(login_page)
 def mlgn():
     gencook="<a href='/l2'>form</a>";
+    gencook=render_template("loginPage.html")
     #gencook.set_cookie(setCnam(),bdxcred());
     return gencook
 
