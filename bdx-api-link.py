@@ -101,7 +101,7 @@ def mlgn():
     return gencook
 
 @app.route(login_page2)
-def mlgn():
+def mlgne():
     gencook=make_response("form2");
     gencook.set_cookie(setCnam(),bdxcred());
     return gencook
