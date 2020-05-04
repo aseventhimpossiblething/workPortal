@@ -86,7 +86,7 @@ def chckbdxcred():
     print("x==bdxcred() = ",x==bdxcred());
     y=str(x).find(bdxcred());
     print(y);
-    if y!=-1:
+    if y==-1:
        print(x==bdxcred(),"*") 
        a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
        b=login_page
