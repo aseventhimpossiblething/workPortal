@@ -74,7 +74,8 @@ def bdxcred():
 def chckbdxcred(x):
     if x !=bdxcred():
         return "deny"
-    else return "pass"
+    else:
+        return "pass"
     
     
     
