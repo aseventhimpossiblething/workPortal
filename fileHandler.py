@@ -121,11 +121,7 @@ def BidOpFileHandler():
            record_async_start.close() 
           
            Temp['Match Number']=BidOpAssist.Match_num(Temp);
-           """    
-           record_async_start=open("ForestLoadingQueue.txt","w")
-           record_async_start.write("50%")
-           record_async_start.close() 
-           """
+         
            
            Temp['Market Number']=BidOpAssist.MarketNumberGen(Temp)
            core=pandas.read_excel('BidOpSeed.xlsx')
