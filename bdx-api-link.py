@@ -1,5 +1,5 @@
 domain="http://bdxapilink.com"
-#import tensorflow
+import tensorflow
 import CommunityUpdatesProcess
 
 
@@ -26,16 +26,16 @@ import os
 from flask import Flask, Markup, render_template, request, make_response
 from flask import send_file
 from flask import send_from_directory
-#import get_campaigns
+import get_campaigns
 
 
-#import spider
+import spider
 from datetime import datetime
 os.system('sudo chmod -R 777 Sheets')
 os.system('sudo chmod -R 777 templates')
 #from flask_sslify import SSLify
 
-#import psycopg2
+import psycopg2
 app = Flask(__name__,"/static/")
 #sslify = SSLify(app)
 
