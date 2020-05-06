@@ -29,7 +29,7 @@ from flask import send_from_directory
 #import get_campaigns
 
 
-import spider
+#import spider
 from datetime import datetime
 os.system('sudo chmod -R 777 Sheets')
 os.system('sudo chmod -R 777 templates')
