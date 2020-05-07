@@ -1,5 +1,5 @@
 domain="http://bdxapilink.com"
-import tensorflow
+#import tensorflow
 import CommunityUpdatesProcess
 
 
