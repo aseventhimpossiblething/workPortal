@@ -1,7 +1,7 @@
 NUM_WOKERS=6
 TIMEOUT=120
-accesslog="/var/log/gunicorn/access.log"
-errorlog="/var/log/gunicorn/error.log"
+#accesslog="/var/log/gunicorn/access.log"
+#errorlog="/var/log/gunicorn/error.log"
 
 
 
