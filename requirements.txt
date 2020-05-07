@@ -1,4 +1,3 @@
-celery
 kombu
 gunicorn
 Flask
@@ -23,4 +22,3 @@ huey
 openpyxl
 XlsxWriter
 Flask-SSLify
-tensorFlow
