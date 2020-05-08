@@ -1,4 +1,3 @@
-#import ExcelWriter
 from openpyxl import Workbook
 from openpyxl import load_workbook
 import xlrd
@@ -48,16 +47,11 @@ def Match_num(x):
                if str(Temp['Campaign'][ccountr]).lower().find("gppc")>-1:
                 #print(type(kw))
                 kw=int(kw)
-                #print(type(kw))
-                #print(kw)      
                 kw=kw*1000;
-               #print("Timeout on second pass count ",ccountr)
-               #print(kw)
                Match_Type.append(int(kw))
                ccountr+=1;
         return Match_Type   
-               #print(len(Match_Type))  
-           #print("Match type Loop end")
+               
  
             
 def MarketNumberGen(_Temp_):
@@ -76,9 +70,7 @@ def MarketNumberGen(_Temp_):
                 Market.append(kw)
                 TempMarketCount+=1;
         return Market        
-                #print(kw)
-           #print("Newer While Loop end")      
-           #Temp['Market Number']=Market            
+                        
             
 def MkNewBid(x):
     PredVar='Changes'
@@ -90,46 +82,51 @@ def MkNewBid(x):
     while count<len(Bid):
           thebid=(Bid[count]*Changes[count])
           New_Bid.append(thebid)
-          #print(bid)
           count+=1;
-    return New_Bid      
-            
-            
-            
+    return New_Bid
+
+def percentIncrease(OldBid,NewBid):
+    OldBid=float(OldBid);
+    NewBid=float(NewBid);
+    change=((NewBid/OldBid)-1);
+    change=change
+    return change;
+
+def percentChangeColumn(frame):
+    percentChangeCol=[];
+    frame=frame;
+    OldBid=frame['Bid'];
+    NewBid=frame['New Bid'];
+    count=0;
+    for i in OldBid:
+        percentChangeCol.append(percentIncrease(OldBid[count],NewBid[count]));
+        count+=1;
+    return percentChangeCol;
+
+
 def BidOpOverview(desiCols,corecols,change):
     PredVar=change    
     designated_Columns=desiCols;
     core_cols=corecols;
     loc=corecols.count(PredVar)
-   
-            
-    #print("x.count('Changes - 1') ",x.count('Changes') ) 
-    
+       
     if loc<1:
        print(PreVar," not present")     
        print("x.count(",PredVar, "- 2) ",loc )     
        loc=corecols.index(PredVar)
     
-    #print("loc - Location of Changes in index - 3 ",loc)
     loc=corecols.index(PredVar)        
-   
-    #print('designated_Columns ',designated_Columns) 
     predict_colsP1=corecols[:loc]
     predict_colsP2=corecols[loc+1:]
     predict_cols=predict_colsP1+predict_colsP2
         
-    #print("core ",core_cols)
-    #print("predict col ",predict_cols)    
-          
+
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
-    #print(os.listdir())
     Seed=pandas.read_excel('BidOpSeed.xlsx');
     Seed=pandas.DataFrame(Seed,columns=core_cols)        
     Seed=Seed.replace("-",0).fillna(0)        
     XofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
     YofSeed=Seed[PredVar]
-    #print(XofSeed)        
-    #print(YofSeed)
     Model=RandomForestRegressor()
     Model.fit(XofSeed,YofSeed)
             
@@ -142,23 +139,36 @@ def BidOpOverview(desiCols,corecols,change):
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1)
     OutputBid=Model.predict(TempForOutPut)  
     Temp[PredVar]=OutputBid 
-    #print(Temp)
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(X)
-    
-    
-        
-   
+
     print("_____________________________________")
+
+    Temp['Change']=percentChangeColumn(Temp); 
+    #print(Temp.head())
+
     
-   
-    
-   
+
     Temp.to_excel("outputsheet.xlsx")
     print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"))
     print('end overview')
+    
     record_async_start=open("ForestLoadingQueue.txt","w")
     record_async_start.write("100%")
+
+    record_async_start.close(); 
+    
+    return Temp  
+
+#print(percentChangeColumn(Temp))
+
+
+
+"""            
+Sheet_To_Be_analysed="None"
+Dimension_Predicted='Changes'
+ExampleSheetName='Machine.xlsx'
+
     record_async_start.close();         
     return Temp  
             
@@ -167,7 +177,7 @@ Dimension_Predicted='Changes'
 ExampleSheetName='Machine.xlsx'
 
 
-#designated_Columns=['Campaign','Ad group','Match type','Changes','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
+
 ModelCol1=['Campaign','Ad group','Keyword','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','CTR','Changes']
 ModelCol2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score','Match type']
 ModelCol3=['Campaign','Ad group','Keyword','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','CTR']
@@ -180,10 +190,11 @@ Pattern_inputModel="Empty"
 Pattern_New_CPC="Empty"
 X_Sheet_Analysis="Empty"
 
+
+
 def PrepModel():      
     PatternSheet=open(ExampleSheetName, 'rb')
     Pattern_no_Frame=pandas.read_excel(PatternSheet)
-    #print("Pattern_no_Frame_____",Pattern_no_Frame)
     PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
     global Pattern_New_CPC
     Pattern_New_CPC=PatternSheetFramed[Dimension_Predicted]
@@ -192,18 +203,15 @@ def PrepModel():
     
     
 def Analysis():
-        
-    
     print("*******from inside analysis max ctime file***",max(glob.glob('*xlsx'),key=os.path.getctime))
     global MostRecentFile
     MostRecentFile=newFileSyntax2
-    
-       
+
+      
     global Sheet_To_Be_analysed
     Sheet_To_Be_analysed=open(newFileSyntax2,'rb')
     print("type Sheet_To_Be_analysed",type(Sheet_To_Be_analysed))
     print("Sheet_To_Be_analysed",Sheet_To_Be_analysed)
-    #print("pandas.read_excel(Sheet_To_Be_analysed)",pandas.read_excel(Sheet_To_Be_analysed))
     print("pandas.read_excel(newFileSyntax2)",pandas.read_excel(newFileSyntax2))
     
 
@@ -218,9 +226,10 @@ def Predict():
 def BidOpAssist():
     PrepModel()
     Analysis()
-
-    #print("sheet to be analysed",Sheet_To_Be_analysed)
     return list(numpy.array(Predict()))
+
+
+"""
 
 
 

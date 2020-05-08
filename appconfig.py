@@ -1,5 +1,8 @@
-accesslog="/var/log/gunicorn/access.log"
-errorlog="/var/log/gunicorn/error.log"
+NUM_WOKERS=6
+timeout=120
+#accesslog="/var/log/gunicorn/access.log"
+#errorlog="/var/log/gunicorn/error.log"
+
 
 
 #--access-logfile /var/log/gunicorn/access.log --error-logfile /var/log/gunicorn/error.log

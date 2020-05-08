@@ -78,7 +78,6 @@ def BidOpFileHandler():
   
     
     target_Variable='New Bid'    
-    #target_Variable='Changes'
     designated_Columns=['Campaign','Ad group','Match type',target_Variable,'Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']         
     core_cols=['Campaign','Ad group',target_Variable,'Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
    
@@ -122,30 +121,23 @@ def BidOpFileHandler():
            record_async_start.close() 
           
            Temp['Match Number']=BidOpAssist.Match_num(Temp);
-               
-           #Temp['Match Number']=Match_Type;
-           #Temp['Match Number']=Match_num(Temp)
-           record_async_start=open("ForestLoadingQueue.txt","w")
-           record_async_start.write("50%")
-           record_async_start.close()     
+         
            
            Temp['Market Number']=BidOpAssist.MarketNumberGen(Temp)
            core=pandas.read_excel('BidOpSeed.xlsx')
            core=core.append(Temp, sort='False')
            core=pandas.DataFrame(core,columns=core_cols)     
-           #if (str(Temp['Campaign']).find('MSM')==-1:) 
            core.to_excel("BidOpSeed.xlsx")
-           #print(core)
+       
                 
            record_async_start=open("ForestLoadingQueue.txt","w")
            record_async_start.write("100%")
            record_async_start.close();     
            
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
-       #TrainBehavior(Temp);
+      
        TrainLoad=threading.Thread(target=TrainingSheetBehavior, args=[designated_Columns, core_cols]);
        TrainLoad.start(); 
-       #return "Sheet has Been Identified as Training Data it is being formatted and Loaded as such... please wait.. do not press back button"  
        print("is there an attempt to return")
        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOpPending'><html>did not forward</html>"
        
@@ -177,8 +169,7 @@ def BidOpFileHandler():
     toscrn=isTrainingSheet
     
     return toscrn
-    #return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/BidOpSeed.xlsx', attachment_filename='BidOpSeed.xlsx')
-
+  
 def CommListFileHandler():
     print("Starting to Handle Files") 
     
@@ -206,7 +197,9 @@ def CommListFileHandler():
     os.chdir(currentCommunitiesLocation)
     SHcommand="sudo chmod -R 777 "+currentCommunitiesLocation
     os.system(SHcommand+"/WorkingCommunities")
+    #os.system(SHcommand)
     request.files['Communities'].save('WorkingCommunities')
+    #os.system(SHcommand+"/WorkingCommunities")
        
     os.chdir(currentGoogleLocation)
     request.files['currentGoogle'].save('WorkingGoogle')

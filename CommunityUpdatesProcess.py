@@ -77,7 +77,7 @@ def WorkingBing():
 def filterNonParticipators(theFrame):
  
  def firstDropLoop(theFrame):
-  DropRowsContaining=['Clayton','Oakwood','Craftmark','Freedom','Crossland','G & I','Build on Your Lot'];
+  DropRowsContaining=['Clayton','Oakwood','Craftmark','Freedom','Crossland','del Webb','Webb','webb','G & I','Build on Your Lot'];
   
   DropLoopCount=0;
   while DropLoopCount<len(DropRowsContaining):
@@ -665,6 +665,7 @@ def initialCommUpdatProcess():
  print("fileHandler.currentCommunitiesLocation - ",fileHandler.currentCommunitiesLocation)
   
  os.chdir(fileHandler.currentCommunitiesLocation)
+ print(os.listdir(os.getcwd()))
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
  print(WorkingCommunities)
  WorkingCommunities.columns=WorkingCommunities.iloc[0]

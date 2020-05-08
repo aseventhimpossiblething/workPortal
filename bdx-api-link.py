@@ -1,6 +1,17 @@
 domain="http://bdxapilink.com"
-import tensorflow
+#import tensorflow
 import CommunityUpdatesProcess
+
+
+
+
+from google.oauth2.service_account import Credentials as ServiceAccountCreds
+from google.oauth2.credentials import Credentials as InstalledAppCredentials
+from google.auth.transport.requests import Request
+
+
+
+
 
 import glob
 import numpy
@@ -9,20 +20,23 @@ import pandas
 import BidOpAssist
 import fileHandler
 import os
-from flask import Flask, Markup, render_template, request
+from flask import Flask, Markup, render_template, request, make_response
 from flask import send_file
 from flask import send_from_directory
-#import spider
 import get_campaigns
 
 
+
+#import spider
+
 import spider
+
 from datetime import datetime
 os.system('sudo chmod -R 777 Sheets')
 os.system('sudo chmod -R 777 templates')
 #from flask_sslify import SSLify
 
-#import psycopg2
+import psycopg2
 app = Flask(__name__,"/static/")
 #sslify = SSLify(app)
 
@@ -51,8 +65,59 @@ app = Flask(__name__,"/static/")
 #print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
 #conn.close
 
+login_page="/login"
+def setCnam():
+    return "hyo123"
+
+def bdxcred():
+    credential="sancho1001"
+    return credential
 
 
+
+def logontrue():
+    return "pass"
+def logonfalse():
+    return "no pass"
+
+
+def chckbdxcred():
+    x=request.cookies.get(setCnam());
+    y=str(x).find(bdxcred());
+    if y==-1:
+       print(x==bdxcred(),"*") 
+       a="<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL="
+       b=login_page
+       c="'><html>did not forward</html>"
+       abc=a+b+c
+       return abc 
+       #return logontrue();
+    else:
+       return "NULL"
+ 
+    
+    
+    
+
+
+@app.route(login_page)
+def mlgn():
+    gencook="<a href='/l2'>form</a>";
+    gencook=render_template("loginPage.html")
+    #gencook.set_cookie(setCnam(),bdxcred());
+    return gencook
+
+@app.route('/l2', methods=['POST'])
+def mlgne():
+    gencook=make_response("<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/'><html>did not forward</html>");
+    x=request.form['username'];
+    y=request.form['password'];
+    if x=="BDXPPC" and y=="11900ranch":
+       print("pass"); 
+       #gencook=make_response("<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/'><html>did not forward</html>");
+       gencook.set_cookie(setCnam(),bdxcred());
+    #gencook="stop"
+    return gencook
 
 
 
@@ -78,22 +143,6 @@ def official():
 @app.route('/favicon.png')
 def favicon():
     return send_from_directory('/app/favicon.png','favicon')     
-
-
-@app.route('/test')
-def testtextfile():
-    print("initial directory---------",os.getcwd())
-    print("contents of current directory-------------",os.listdir())
-    os.chdir("/app/Sheets/CommunityUpdates/Bing/currentBing")
-    print("current directory-------------",os.getcwd())
-    print("contents of current directory--------------",os.listdir())
-    TheSamplefile=open('TheSampleText.txt','r')
-   
-    j=2+2
-    j=str(j)
-    return TheSamplefile.read()
-
-
 
 
 
@@ -244,9 +293,7 @@ def BingASX():
  return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeExact/DefaultSheet.xlsx",\
                  attachment_filename="BingAdSXA.xlsx")
                   
-         
-         
-  
+
 
 @app.route('/BingAdSXB')
 def BingBSX():
@@ -270,16 +317,6 @@ def BasisM():
 def BasisN1():
  return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/outputsheet.xlsx', attachment_filename='Bid0p5heet1.xlsx')
 
-"""         
-@app.route('/OutPutOfBiOp2')
-def BasisN2():
- return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/putputsheet.xlsx', attachment_filename='Bid0p5heet2.xlsx')
-
-    
-@app.route('/OutPutOfBiOp3')
-def BasisN3():
- return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/novExcel.xlsx', attachment_filename='Bid0p5heet3.xlsx')
-"""
 
 
 
@@ -299,31 +336,37 @@ def Scripts():
 
 @app.route('/')
 def index():
-    global domain     
-    domainFavi=domain+"/favicon.png"
-    #domainFavi="/favicon.png"     
-    return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi)
+    if chckbdxcred().find("NULL")==-1:
+        print(str(chckbdxcred()));
+        return str(chckbdxcred());
+    global domain;     
+    domainFavi=domain+"/favicon.png";
+    return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi);
+    #return chckbdxcred();
 
 @app.route('/BidOps')
 def BidOpInput():
+    if chckbdxcred().find("NULL")==-1:
+        print(str(chckbdxcred()));
+        return str(chckbdxcred());
     return render_template('BidOpForm.html')
-
-"""
-@app.route('/BidOpTrainingData', methods=['POST','GET'] )
-def BidOpTrainingDatas():
-    return fileHandler.BidOpFileHandler() 
-"""    
 
 
 
 @app.route('/BidOPUpload', methods=['POST','GET'])
 def BidOPUpload():
+    if chckbdxcred().find("NULL")==-1:
+        print(str(chckbdxcred()));
+        return str(chckbdxcred());
     return fileHandler.BidOpFileHandler()
 
 
 
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
+    if chckbdxcred().find("NULL")==-1:
+        print(str(chckbdxcred()));
+        return str(chckbdxcred());
     return render_template('CommunitiesForm.html')
 
 @app.route('/CommunityFileHander', methods=['POST','GET'])
