@@ -143,14 +143,19 @@ def BidOpOverview(desiCols,corecols,change):
         Temp=googConverterReverse(X)
 
     print("_____________________________________")
+
     Temp['Change']=percentChangeColumn(Temp); 
     #print(Temp.head())
+
+    
+
     Temp.to_excel("outputsheet.xlsx")
     print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"))
     print('end overview')
     
     record_async_start=open("ForestLoadingQueue.txt","w")
     record_async_start.write("100%")
+
     record_async_start.close(); 
     
     return Temp  
@@ -163,6 +168,15 @@ def BidOpOverview(desiCols,corecols,change):
 Sheet_To_Be_analysed="None"
 Dimension_Predicted='Changes'
 ExampleSheetName='Machine.xlsx'
+
+    record_async_start.close();         
+    return Temp  
+            
+Sheet_To_Be_analysed="None"
+Dimension_Predicted='Changes'
+ExampleSheetName='Machine.xlsx'
+
+
 
 ModelCol1=['Campaign','Ad group','Keyword','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','CTR','Changes']
 ModelCol2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score','Match type']
@@ -192,7 +206,8 @@ def Analysis():
     print("*******from inside analysis max ctime file***",max(glob.glob('*xlsx'),key=os.path.getctime))
     global MostRecentFile
     MostRecentFile=newFileSyntax2
-           
+
+      
     global Sheet_To_Be_analysed
     Sheet_To_Be_analysed=open(newFileSyntax2,'rb')
     print("type Sheet_To_Be_analysed",type(Sheet_To_Be_analysed))
@@ -213,7 +228,10 @@ def BidOpAssist():
     Analysis()
     return list(numpy.array(Predict()))
 
+
 """
+
+
 
 print("end of doc")
 
