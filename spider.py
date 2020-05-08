@@ -5,9 +5,9 @@ import time
 target_Site="https://www.newhomesource.com"
 def sendSpider(targetSite):
     os.system("echo 'bash'")
-    os.system("touch spiderfile")
+    os.system("sudo touch spiderfile -!!900Ranch")
     targetSite=targetSite
-    spiderCmmnd="wget -r -b -nd "+targetSite+" --spider -o spiderfile"
+    spiderCmmnd="sudo wget -r -b -nd "+targetSite+" --spider -o spiderfile -!!900Ranch"
     retrieveNmbr="bash spiderGrep.sh"
     os.system(spiderCmmnd)
     
