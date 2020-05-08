@@ -1,7 +1,10 @@
 NUM_WOKERS=6
 timeout=120
-accesslog="/var/log/gunicorn/access.log"
-errorlog="/var/log/gunicorn/error.log"
+#accesslog="/var/log/gunicorn/access.log"
+#errorlog="/var/log/gunicorn/error.log"
+accesslog="/var/www/workPortal/Sheets/access.log"
+errorlog="/var/www/workPortal//Sheetserror.log"
+
 
 
 
