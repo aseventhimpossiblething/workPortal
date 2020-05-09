@@ -44,7 +44,9 @@ input{
     Border-radius:15px
 }
 
-
+input['submit']{
+    Border-radius:15px
+}
 
 a {color:black;}
 
