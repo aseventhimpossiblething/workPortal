@@ -109,19 +109,15 @@ import sys
 
 from google.ads.google_ads.client import GoogleAdsClient
 from google.ads.google_ads.errors import GoogleAdsException
-print(" query bottom of page ")    
-query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
-print("Free Query Loaded")
-query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
-print("Free Query Loaded")
+#query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
     
 google_ads_client = GoogleAdsClient.load_from_storage('google-ads.yaml')
 ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')
 query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
+
 #966-289-6891
 testcamp="1500631476"
 customer_id=testcamp
-# Issues a search request using streaming.
 response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
 for subset in response:
@@ -131,21 +127,20 @@ customer_service = google_ads_client.get_service('CustomerService', version='v3'
 accessible_customers = customer_service.list_accessible_customers()
 print("accessible_customers ",accessible_customers)
 print("attempt to access 2860884198 BDX MCC")
+"""
 customer_id="2860884198"
-# Issues a search request using streaming.
 response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
-#print('response[0] ',response[0])
 for subset in response:
       print('subset ',subset)
+      
 print("attempt to access city")      
 customer_id="2104897739" 
 response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
-#print('response[0] ',response[0])
 for subset in response:
       print('subset ',subset)
-"""      
+   
 print("end active experiment block------------------------------------------------------------")      
 
 #---------------------------------
