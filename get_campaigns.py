@@ -128,11 +128,13 @@ accessible_customers = customer_service.list_accessible_customers()
 print("accessible_customers ",accessible_customers)
 print("attempt to access 2860884198 BDX MCC")
 """
+"""
 customer_id="2860884198"
 response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
 for subset in response:
       print('subset ',subset)
+"""      
       
 print("attempt to access city")      
 customer_id="2104897739" 
