@@ -17,7 +17,7 @@ print("get_loaded line 1")
 This example illustrates how to get all campaigns.
 
 To add campaigns, run add_campaigns.py.
-"""
+
 
 print("__________get_campaigns loaded________line 22")
 
@@ -31,7 +31,7 @@ from google.ads.google_ads.errors import GoogleAdsException
 print(" from google.ads.google_ads.client import GoogleAdsClient\
 from google.ads.google_ads.errors import GoogleAdsException-----loaded ")
       
-"""   
+  
 def main(client, customer_id):
     print("is main even running")
     ga_service = client.get_service('GoogleAdsService', version='v2')#orginal instructions said v3 but it fails at runtime with error there is no va3
@@ -75,7 +75,13 @@ if __name__ == '__main__':
     #print(main(google_ads_client, args.customer_id))
       
    
-"""    
+"""
+"""
+import argparse
+import sys
+
+from google.ads.google_ads.client import GoogleAdsClient
+from google.ads.google_ads.errors import GoogleAdsException
 print(" query bottom of page ")    
 query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
 print("Free Query Loaded")
@@ -93,10 +99,24 @@ print("google_ads_client - ",google_ads_client)
 #main(google_ads_client, "9662896891")
 #print(main(google_ads_client, args.customer_id))
 #google_ads_client.get_service('GoogleAdsService', version='v3')
-ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')
+#ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')
 #print("ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')")
 #--------------------------------
+"""
 print("active experiment block------------------------------------------------------------")
+import argparse
+import sys
+
+from google.ads.google_ads.client import GoogleAdsClient
+from google.ads.google_ads.errors import GoogleAdsException
+print(" query bottom of page ")    
+query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
+print("Free Query Loaded")
+query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
+print("Free Query Loaded")
+    
+google_ads_client = GoogleAdsClient.load_from_storage('google-ads.yaml')
+ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')
 query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
 #966-289-6891
 testcamp="1500631476"
@@ -104,9 +124,9 @@ customer_id=testcamp
 # Issues a search request using streaming.
 response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
-#print('response[0] ',response[0])
 for subset in response:
       print('subset ',subset)
+"""      
 customer_service = google_ads_client.get_service('CustomerService', version='v3')      
 accessible_customers = customer_service.list_accessible_customers()
 print("accessible_customers ",accessible_customers)
@@ -125,6 +145,7 @@ print('response',response)
 #print('response[0] ',response[0])
 for subset in response:
       print('subset ',subset)
+"""      
 print("end active experiment block------------------------------------------------------------")      
 
 #---------------------------------
