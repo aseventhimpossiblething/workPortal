@@ -113,7 +113,7 @@ from google.ads.google_ads.errors import GoogleAdsException
     
 google_ads_client = GoogleAdsClient.load_from_storage('google-ads.yaml')
 ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')
-query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
+query = ('SELECT campaign.id, campaign.name, campaign.status, metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign ORDER BY campaign.id')
 
 #966-289-6891
 testcamp="1500631476"
