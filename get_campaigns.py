@@ -142,6 +142,12 @@ response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
 for subset in response:
       print('subset ',subset)
+      
+ga_service = google_ads_client.get_service('GoogleAdsService.search', version='v3');
+response = ga_service.search_stream(customer_id, query=query)
+print('response',response)
+for subset in response:
+      print('subset ',subset)
    
 print("end active experiment block------------------------------------------------------------")      
 
