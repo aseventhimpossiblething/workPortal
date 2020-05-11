@@ -124,7 +124,9 @@ def BidOpOverview(desiCols,corecols,change):
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     Seed=pandas.read_excel('BidOpSeed.xlsx');
     Seed=pandas.DataFrame(Seed,columns=core_cols)        
-    Seed=Seed.replace("-",0).fillna(0)        
+    Seed=Seed.replace("-",0).fillna(0);
+    Seed=Seed.replace("--",0).fillna(0); 
+    Seed=Seed.replace(" --",0).fillna(0); 
     XofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
     YofSeed=Seed[PredVar]
     Model=RandomForestRegressor()
