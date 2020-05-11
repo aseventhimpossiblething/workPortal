@@ -138,7 +138,7 @@ def BidOpOverview(desiCols,corecols,change):
     Temp=pandas.read_excel('Temp.xlsx');
     Temp=Temp.replace('>','');
     Temp=Temp.replace('<','');
-    Temp=Temp.replace('%,'');
+    Temp=Temp.replace('%','');
     Temp=Temp.replace('-',0).fillna(0); 
     Temp=Temp.replace('--',0).fillna(0); 
     Temp=Temp.replace(' --',0).fillna(0); 
