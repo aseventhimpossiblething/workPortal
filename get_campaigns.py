@@ -106,6 +106,7 @@ print("google_ads_client - ",google_ads_client)
 print("active experiment block------------------------------------------------------------")
 import argparse
 import sys
+import json
 
 from google.ads.google_ads.client import GoogleAdsClient
 from google.ads.google_ads.errors import GoogleAdsException
@@ -122,6 +123,7 @@ response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
 for subset in response:
       print('subset ',subset)
+view=json.load()      
 """      
 customer_service = google_ads_client.get_service('CustomerService', version='v3')      
 accessible_customers = customer_service.list_accessible_customers()
@@ -143,6 +145,8 @@ print('response',response)
 for subset in response:
       print('subset ',subset)
       #print("subset['results'] ",subset['results'])
+view=json.load(response);
+print(response);
       
 
 print("end active experiment block------------------------------------------------------------")      
