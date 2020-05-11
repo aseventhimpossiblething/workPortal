@@ -132,8 +132,10 @@ def BidOpOverview(desiCols,corecols,change):
     Model=RandomForestRegressor()
     Model.fit(XofSeed,YofSeed)
             
-    Temp=pandas.read_excel('Temp.xlsx')
-    Temp=Temp.replace('-',0).fillna(0) 
+    Temp=pandas.read_excel('Temp.xlsx');
+    Temp=Temp.replace('-',0).fillna(0); 
+    Temp=Temp.replace('--',0).fillna(0); 
+    Temp=Temp.replace(' --',0).fillna(0); 
     Temp['Match Number']=Match_num(Temp);
     Temp['Market Number']=MarketNumberGen(Temp)
        
