@@ -142,7 +142,7 @@ response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
 for subset in response:
       print('subset ',subset)
-      print("subset['results'] ",subset['results'])
+      #print("subset['results'] ",subset['results'])
       
 
 print("end active experiment block------------------------------------------------------------")      
