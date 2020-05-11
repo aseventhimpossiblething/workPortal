@@ -144,6 +144,9 @@ def BidOpOverview(desiCols,corecols,change):
     Temp=Temp.replace(' --',0).fillna(0); 
     Temp['Match Number']=Match_num(Temp);
     Temp['Market Number']=MarketNumberGen(Temp)
+    
+    
+    print(Temp.isna())
        
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols)
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1)
