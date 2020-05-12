@@ -256,10 +256,10 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"))
     print('end overview')
     
-    #record_async_start=open("ForestLoadingQueue.txt","w")
-    #record_async_start.write("100%")
+    record_async_start=open("ForestLoadingQueue.txt","w")
+    record_async_start.write("100%")
 
-    #record_async_start.close(); 
+    record_async_start.close(); 
     
     return Temp  
 
