@@ -154,6 +154,8 @@ def BidOpOverview(desiCols,corecols,change):
     print("Seed Columns",Seed.columns.values)
     
     print("Temp columns",Temp.columns.values)
+    
+    
     """
     print(Temp.isna())
     
@@ -214,14 +216,13 @@ def BidOpOverview(desiCols,corecols,change):
                       
     
     
-    
-  
+     
     
     
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols)
-    print(TempForOutPut.columns.values)
+    print("Temp 1 ",TempForOutPut.columns.values)
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1)
-    print(TempForOutPut.columns.values)
+    print("Temp 2 ",TempForOutPut.columns.values)
     OutputBid=Model.predict(TempForOutPut)  
     Temp[PredVar]=OutputBid 
     if str(Temp['Campaign']).lower().find('gppc')>-1:
