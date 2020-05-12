@@ -133,7 +133,8 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     Seed=Seed.replace('%','');
     Seed=Seed.replace("-",0).fillna(0);
     Seed=Seed.replace("--",0).fillna(0); 
-    Seed=Seed.replace(" --",0).fillna(0); 
+    Seed=Seed.replace(" --",0).fillna(0);
+    Seed=Seed.replace("< 10%",10).fillna(0);
     XofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
     YofSeed=Seed[PredVar]
     Model=RandomForestRegressor()
@@ -145,7 +146,8 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     Temp=Temp.replace('%','');
     Temp=Temp.replace('-',0).fillna(0); 
     Temp=Temp.replace('--',0).fillna(0); 
-    Temp=Temp.replace(' --',0).fillna(0); 
+    Temp=Temp.replace(' --',0).fillna(0);
+    Temp=Temp.replace("< 10%",10).fillna(0)
     Temp['Match Number']=Match_num(Temp);
     Temp['Market Number']=MarketNumberGen(Temp)
     
