@@ -64,7 +64,7 @@ def googConverter(X):
 def BidOpFileHandler():
         
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
-    print('BidOpSeed.xlsx')
+    #print('BidOpSeed.xlsx')
     request.files['sheet'].save("Temp.xlsx")
     Temp=pandas.read_excel('Temp.xlsx')
     #print("os.listdir()")
@@ -74,8 +74,8 @@ def BidOpFileHandler():
     #print(record_async_start.read())
     record_async_start.write("This should take no more than 5 min.. else resubmit form")
     record_async_start.close()
-    record_async_start=open("ForestLoadingQueue.txt","r")
-    record_async_start.close()
+    #record_async_start=open("ForestLoadingQueue.txt","r")
+    #record_async_start.close()
   
     
     target_Variable='New Bid'    
@@ -85,7 +85,7 @@ def BidOpFileHandler():
     isGoog1=str(Temp.columns).find('Cost')
     isGoog2=str(Temp.columns).find('Conversions')
     Temp=googConverter(Temp)
-    print(Temp.columns)      
+    #print(Temp.columns)      
      
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
@@ -162,7 +162,7 @@ def BidOpFileHandler():
                 return rowCheck
                      
         
-       BidOpAssistAsync=threading.Thread(target=BidOpAssist.BidOpOverview,args=[designated_Columns,core_cols,target_Variable])
+       BidOpAssistAsync=threading.Thread(target=BidOpAssist.BidOpOverview,args=[designated_Columns,core_cols,target_Variable,Temp])
        BidOpAssistAsync.start(); 
        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOptimisation'><html>did not forward</html>"         
         
