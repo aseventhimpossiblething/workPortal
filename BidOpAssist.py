@@ -144,8 +144,10 @@ def BidOpOverview(desiCols,corecols,change):
     Temp=Temp.replace(' --',0).fillna(0); 
     Temp['Match Number']=Match_num(Temp);
     Temp['Market Number']=MarketNumberGen(Temp)
+    print(Temp.isna())
+    print(Temp.isnan())    
     
-    
+    """
     #print(Temp.isna()[0])
     print(Temp.isna()[1])
     print(Temp.isna()[2])
@@ -163,6 +165,7 @@ def BidOpOverview(desiCols,corecols,change):
     print(Temp.isna()[14])
     print(Temp.isna()[15])
     print(Temp.isna()[17])
+    """
     
     
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols)
