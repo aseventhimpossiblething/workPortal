@@ -127,9 +127,12 @@ def BidOpOverview(desiCols,corecols,change,Temp):
         
     print("2")
     
-    os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+    os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/');
+    print("2.1")
     Seed=pandas.read_excel('BidOpSeed.xlsx');
-    Seed=pandas.DataFrame(Seed,columns=core_cols)
+    print("2.2")
+    Seed=pandas.DataFrame(Seed,columns=core_cols);
+    print("2.3")
     Seed=Seed.replace('>','');
     Seed=Seed.replace('<',''); 
     Seed=Seed.replace('%','');
@@ -143,7 +146,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     Model=RandomForestRegressor()
     Model.fit(XofSeed,YofSeed)
     Temp=Temp        
-    #Temp=pandas.read_excel('Temp.xlsx');
+    Temp=pandas.read_excel('Temp.xlsx');
     Temp=Temp.replace('>','');
     Temp=Temp.replace('<','');
     Temp=Temp.replace('%','');
