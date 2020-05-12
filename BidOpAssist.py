@@ -220,9 +220,10 @@ def BidOpOverview(desiCols,corecols,change):
     
     
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols);
-    print("Temp 1 ",TempForOutPut.columns.values);
+    print("TempOut 1 ",TempForOutPut.columns.values);
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1);
-    print("Temp 2 ",TempForOutPut.columns.values);
+    print("TempOut 2 ",TempForOutPut.columns.values);
+    print("Temp file self  ",Temp.columns.values);
     print("Temp ",Temp['Keyword'])
     print("Temp ",Temp[['Keyword']])
     
