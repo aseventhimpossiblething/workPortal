@@ -107,9 +107,9 @@ def percentChangeColumn(frame):
 
 def BidOpOverview(desiCols,corecols,change,Temp):
     print("Start of Bid OverView..............................")
-    print("desiCols")
-    print(desiCols)
-    
+    #print("desiCols")
+    #print(desiCols)
+    print("1")
     PredVar=change    
     designated_Columns=desiCols;
     core_cols=corecols;
@@ -125,7 +125,8 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     predict_colsP2=corecols[loc+1:]
     predict_cols=predict_colsP1+predict_colsP2
         
-
+    print("2")
+    
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     Seed=pandas.read_excel('BidOpSeed.xlsx');
     Seed=pandas.DataFrame(Seed,columns=core_cols)
@@ -220,7 +221,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     """
                       
     
-    
+    print("3")
      
     
     
@@ -235,23 +236,29 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     #print(TempForOutPut)
     #print(TempForOutPut[[TempForOutPut.columns.values[0],TempForOutPut.columns.values[1],TempForOutPut.columns.values[2],TempForOutPut.columns.values[3],TempForOutPut.columns.values[4],TempForOutPut.columns.values[5],TempForOutPut.columns.values[6],TempForOutPut.columns.values[7],TempForOutPut.columns.values[8],TempForOutPut.columns.values[9],TempForOutPut.columns.values[10]]])
     
+    print("4")
     
     OutputBid=Model.predict(TempForOutPut); 
+    print("5")
     #print('OutputBid ',OutputBid);
     #print("OutputBid['rank'] ",OutputBid[['rank']]);
     Temp[PredVar]=OutputBid;
     Temp['Change']=percentChangeColumn(Temp); 
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(Temp)
+    
+    print("6")    
 
     print(" after predict_____________________________________")
 
     #Temp['Change']=percentChangeColumn(Temp); 
     #print(Temp.head())
+    print("7")
 
     
 
     Temp.to_excel("outputsheet.xlsx");
+    print("8")
     print("Should be after Temp to excel");
     print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"));
     print('end of overview');
@@ -260,7 +267,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     record_async_start.write("100%");
 
     record_async_start.close(); 
-    
+    print("9")
     return Temp  
 
 #print(percentChangeColumn(Temp))
