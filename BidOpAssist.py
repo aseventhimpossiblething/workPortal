@@ -184,14 +184,14 @@ def BidOpOverview(desiCols,corecols,change):
     print(Temp.columns.values[12])
     print(Temp.isna()[[Temp.columns.values[12]]])
     
-    print(Temp.columns.values[12])
+    print(Temp.columns.values[13])
     print(Temp.isna()[[Temp.columns.values[13]]])  
     
     print(Temp.columns.values[14])
-    print(Temp.isna()[[Temp.columns.values[14]])
+    print(Temp.isna()[[Temp.columns.values[14]]])
     
     print(Temp.columns.values[15])
-    print(Temp.isna()[[Temp.columns.values[15]])
+    print(Temp.isna()[[Temp.columns.values[15]]])
               
     print(Temp.columns.values[16])
     print(Temp.isna()[[Temp.columns.values[16]]])  
