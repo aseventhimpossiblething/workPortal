@@ -251,13 +251,13 @@ def BidOpOverview(desiCols,corecols,change,Temp):
 
     
 
-    Temp.to_excel("outputsheet.xlsx")
-    print("Should be fter Temp to excel")
-    print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"))
-    print('end overview')
+    Temp.to_excel("outputsheet.xlsx");
+    print("Should be after Temp to excel");
+    print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"));
+    print('end of overview');
     
-    record_async_start=open("ForestLoadingQueue.txt","w")
-    record_async_start.write("100%")
+    record_async_start=open("ForestLoadingQueue.txt","w");
+    record_async_start.write("100%");
 
     record_async_start.close(); 
     
@@ -336,6 +336,6 @@ def BidOpAssist():
 
 
 
-print("end of doc")
+print("end of doc!")
 
 
