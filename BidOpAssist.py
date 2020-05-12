@@ -145,7 +145,7 @@ def BidOpOverview(desiCols,corecols,change):
     Temp['Match Number']=Match_num(Temp);
     Temp['Market Number']=MarketNumberGen(Temp)
     print(Temp.isna())
-    print(Temp.isnan())    
+    print(Temp.isna()[[0,1,2]])    
     
     """
     #print(Temp.isna()[0])
