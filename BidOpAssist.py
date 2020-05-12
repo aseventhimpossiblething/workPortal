@@ -146,8 +146,25 @@ def BidOpOverview(desiCols,corecols,change):
     Temp['Market Number']=MarketNumberGen(Temp)
     
     
-    print(Temp.isna())
-       
+    print(Temp.isna()[0])
+    print(Temp.isna()[1])
+    print(Temp.isna()[2])
+    print(Temp.isna()[3])
+    print(Temp.isna()[4])
+    print(Temp.isna()[5])
+    print(Temp.isna()[6])
+    print(Temp.isna()[7])
+    print(Temp.isna()[8])
+    print(Temp.isna()[9])
+    print(Temp.isna()[10])
+    print(Temp.isna()[11])
+    print(Temp.isna()[12])
+    print(Temp.isna()[13])
+    print(Temp.isna()[14])
+    print(Temp.isna()[15])
+    print(Temp.isna()[17])
+    
+    
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols)
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1)
     OutputBid=Model.predict(TempForOutPut)  
