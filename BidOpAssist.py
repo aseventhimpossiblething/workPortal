@@ -224,9 +224,10 @@ def BidOpOverview(desiCols,corecols,change):
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1);
     print("Temp 2 ",TempForOutPut.columns.values);
     print(TempForOutPut)
+    print(TempForOutPut[['rank']])
     OutputBid=Model.predict(TempForOutPut); 
-    print('OutputBid ',OutputBid);
-    print("OutputBid[['rank']] ",OutputBid[['rank']]);
+    #print('OutputBid ',OutputBid);
+    #print("OutputBid['rank'] ",OutputBid[['rank']]);
     Temp[PredVar]=OutputBid; 
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(X)
