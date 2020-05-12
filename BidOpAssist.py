@@ -147,8 +147,63 @@ def BidOpOverview(desiCols,corecols,change):
     print('isna test')
     print(Temp.columns.values)
     print(Temp.isna())
+    
     print(Temp.columns.values[0])
-    print(Temp.isna()[[Temp.columns.values[0]]])    
+    print(Temp.isna()[[Temp.columns.values[0]]])  
+    
+    print(Temp.columns.values[1])
+    print(Temp.isna()[[Temp.columns.values[1]]])
+    
+    print(Temp.columns.values[2])
+    print(Temp.isna()[[Temp.columns.values[2]]])
+    
+    print(Temp.columns.values[3])
+    print(Temp.isna()[[Temp.columns.values[3]]])  
+    
+    print(Temp.columns.values[4])
+    print(Temp.isna()[[Temp.columns.values[0]]])
+    
+    print(Temp.columns.values[5])
+    print(Temp.isna()[[Temp.columns.values[5]]])
+    
+    print(Temp.columns.values[6])
+    print(Temp.isna()[[Temp.columns.values[6]]])  
+    
+    print(Temp.columns.values[7])
+    print(Temp.isna()[[Temp.columns.values[7]]])
+    
+    print(Temp.columns.values[8])
+    print(Temp.isna()[[Temp.columns.values[8]]])
+    
+    print(Temp.columns.values[9])
+    print(Temp.isna()[[Temp.columns.values[9]]])  
+    
+    print(Temp.columns.values[10])
+    print(Temp.isna()[[Temp.columns.values[10]]])
+    
+    print(Temp.columns.values[12])
+    print(Temp.isna()[[Temp.columns.values[12]]])
+    
+    print(Temp.columns.values[12])
+    print(Temp.isna()[[Temp.columns.values[13]]])  
+    
+    print(Temp.columns.values[14])
+    print(Temp.isna()[[Temp.columns.values[14]])
+    
+    print(Temp.columns.values[15])
+    print(Temp.isna()[[Temp.columns.values[15]])
+              
+    print(Temp.columns.values[16])
+    print(Temp.isna()[[Temp.columns.values[16]]])  
+    
+    print(Temp.columns.values[17])
+    print(Temp.isna()[[Temp.columns.values[17]]])
+    
+    print(Temp.columns.values[18])
+    print(Temp.isna()[[Temp.columns.values[18]]])
+                      
+    
+    
     
     """
     #print(Temp.isna()[0])
