@@ -106,7 +106,7 @@ def percentChangeColumn(frame):
 
 def BidOpOverview(desiCols,corecols,change):
     print("Start of Bid OverView..............................")
-    print("desoCols")
+    print("desiCols")
     print(desiCols)
     
     PredVar=change    
@@ -219,12 +219,13 @@ def BidOpOverview(desiCols,corecols,change):
      
     
     
-    TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols)
-    print("Temp 1 ",TempForOutPut.columns.values)
-    TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1)
-    print("Temp 2 ",TempForOutPut.columns.values)
-    OutputBid=Model.predict(TempForOutPut)  
-    Temp[PredVar]=OutputBid 
+    TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols);
+    print("Temp 1 ",TempForOutPut.columns.values);
+    TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1);
+    print("Temp 2 ",TempForOutPut.columns.values);
+    OutputBid=Model.predict(TempForOutPut); 
+    print('OutputBid ',OutputBid)
+    Temp[PredVar]=OutputBid; 
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(X)
 
