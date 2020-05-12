@@ -240,7 +240,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     #print("OutputBid['rank'] ",OutputBid[['rank']]);
     Temp[PredVar]=OutputBid; 
     if str(Temp['Campaign']).lower().find('gppc')>-1:
-        Temp=googConverterReverse(X)
+        Temp=googConverterReverse(Temp)
 
     print(" after predict_____________________________________")
 
