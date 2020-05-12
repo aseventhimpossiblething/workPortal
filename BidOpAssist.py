@@ -239,13 +239,14 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     OutputBid=Model.predict(TempForOutPut); 
     #print('OutputBid ',OutputBid);
     #print("OutputBid['rank'] ",OutputBid[['rank']]);
-    Temp[PredVar]=OutputBid; 
+    Temp[PredVar]=OutputBid;
+    Temp['Change']=percentChangeColumn(Temp); 
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(Temp)
 
     print(" after predict_____________________________________")
 
-    Temp['Change']=percentChangeColumn(Temp); 
+    #Temp['Change']=percentChangeColumn(Temp); 
     #print(Temp.head())
 
     
