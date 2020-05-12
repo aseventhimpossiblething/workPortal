@@ -223,7 +223,9 @@ def BidOpOverview(desiCols,corecols,change):
     print("Temp 1 ",TempForOutPut.columns.values);
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1);
     print("Temp 2 ",TempForOutPut.columns.values);
-    print("Temp ",Temp)
+    print("Temp ",Temp['Keyword'])
+    print("Temp ",Temp[['Keyword']])
+    
     print(TempForOutPut)
     print(TempForOutPut[[TempForOutPut.columns.values[0],TempForOutPut.columns.values[1],TempForOutPut.columns.values[2],TempForOutPut.columns.values[3],TempForOutPut.columns.values[4],TempForOutPut.columns.values[5],TempForOutPut.columns.values[6],TempForOutPut.columns.values[7],TempForOutPut.columns.values[8],TempForOutPut.columns.values[9],TempForOutPut.columns.values[10]]])
     
