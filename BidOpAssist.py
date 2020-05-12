@@ -105,6 +105,10 @@ def percentChangeColumn(frame):
 
 
 def BidOpOverview(desiCols,corecols,change):
+    print("Start of Bid OverView..............................")
+    print("desoCols")
+    print(desiCols)
+    
     PredVar=change    
     designated_Columns=desiCols;
     core_cols=corecols;
@@ -144,8 +148,13 @@ def BidOpOverview(desiCols,corecols,change):
     Temp=Temp.replace(' --',0).fillna(0); 
     Temp['Match Number']=Match_num(Temp);
     Temp['Market Number']=MarketNumberGen(Temp)
+    
+    
     print('isna test')
-    print(Temp.columns.values)
+    print("Seed Columns",Seed.columns.values)
+    
+    print("Temp columns",Temp.columns.values)
+    """
     print(Temp.isna())
     
     print(Temp.columns.values[0])
@@ -201,33 +210,18 @@ def BidOpOverview(desiCols,corecols,change):
     
     print(Temp.columns.values[18])
     print(Temp.isna()[[Temp.columns.values[18]]])
+    """
                       
     
     
     
-    """
-    #print(Temp.isna()[0])
-    print(Temp.isna()[1])
-    print(Temp.isna()[2])
-    print(Temp.isna()[3])
-    print(Temp.isna()[4])
-    print(Temp.isna()[5])
-    print(Temp.isna()[6])
-    print(Temp.isna()[7])
-    print(Temp.isna()[8])
-    print(Temp.isna()[9])
-    print(Temp.isna()[10])
-    print(Temp.isna()[11])
-    print(Temp.isna()[12])
-    print(Temp.isna()[13])
-    print(Temp.isna()[14])
-    print(Temp.isna()[15])
-    print(Temp.isna()[17])
-    """
+  
     
     
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols)
+    print(TempForOutPut.columns.values)
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1)
+    print(TempForOutPut.columns.values)
     OutputBid=Model.predict(TempForOutPut)  
     Temp[PredVar]=OutputBid 
     if str(Temp['Campaign']).lower().find('gppc')>-1:
