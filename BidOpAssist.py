@@ -16,14 +16,14 @@ def googConverterReverse(X):
     print("GoogConverterReverse Running")    
     Temp=X;
     cols=Temp.columns
-    print("initial cols ",cols)
+    #print("initial cols ",cols)
     New_cols=[];
     for col in cols:
         col=str(col).replace('CPA','Cost / conv.').replace("'","").replace('Bid','Max.CPC').\
           replace('Spend','Cost').replace('Conv.','Conversions').replace('Top Impr. Share','Search top IS').replace('Absolute Top Impression Share','Search abs. top IS').replace('Impr. share (IS)','Search impr. share').replace('Qual. Score','Quality Score').replace('IS lost to rank','Search lost IS (rank)').replace(']','').replace('[','')
         
         New_cols.append(col);
-    print("array ",New_cols) 
+    #print("array ",New_cols) 
     Temp.columns=New_cols
     print("final cols ",Temp.columns)  
     print("GoogConverterReverse end") 
@@ -95,7 +95,7 @@ def percentIncrease(OldBid,NewBid):
 def percentChangeColumn(frame):
     percentChangeCol=[];
     frame=frame;
-    print('frame',frame)
+    #print('frame',frame)
     OldBid=frame['Bid'];
     NewBid=frame['New Bid'];
     count=0;
@@ -155,10 +155,10 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     Temp['Market Number']=MarketNumberGen(Temp)
     
     
-    print('isna test')
-    print("Seed Columns",Seed.columns.values)
+    #print('isna test')
+    #print("Seed Columns",Seed.columns.values)
     
-    print("Temp columns",Temp.columns.values)
+    #print("Temp columns",Temp.columns.values)
     
     
     """
@@ -225,15 +225,15 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     
     
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols);
-    print("TempOut 1 ",TempForOutPut.columns.values);
+    #print("TempOut 1 ",TempForOutPut.columns.values);
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1);
-    print("TempOut 2 ",TempForOutPut.columns.values);
-    print("Temp file self  ",Temp.columns.values);
-    print("Temp ",Temp['Keyword'])
-    print("Temp ",Temp[['Keyword']])
+    #print("TempOut 2 ",TempForOutPut.columns.values);
+    #print("Temp file self  ",Temp.columns.values);
+    #print("Temp ",Temp['Keyword'])
+    #print("Temp ",Temp[['Keyword']])
     
-    print(TempForOutPut)
-    print(TempForOutPut[[TempForOutPut.columns.values[0],TempForOutPut.columns.values[1],TempForOutPut.columns.values[2],TempForOutPut.columns.values[3],TempForOutPut.columns.values[4],TempForOutPut.columns.values[5],TempForOutPut.columns.values[6],TempForOutPut.columns.values[7],TempForOutPut.columns.values[8],TempForOutPut.columns.values[9],TempForOutPut.columns.values[10]]])
+    #print(TempForOutPut)
+    @print(TempForOutPut[[TempForOutPut.columns.values[0],TempForOutPut.columns.values[1],TempForOutPut.columns.values[2],TempForOutPut.columns.values[3],TempForOutPut.columns.values[4],TempForOutPut.columns.values[5],TempForOutPut.columns.values[6],TempForOutPut.columns.values[7],TempForOutPut.columns.values[8],TempForOutPut.columns.values[9],TempForOutPut.columns.values[10]]])
     
     
     OutputBid=Model.predict(TempForOutPut); 
@@ -252,6 +252,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     
 
     Temp.to_excel("outputsheet.xlsx")
+    print("Should be fter Temp to excel")
     print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"))
     print('end overview')
     
