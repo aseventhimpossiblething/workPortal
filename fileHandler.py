@@ -90,18 +90,19 @@ def BidOpFileHandler():
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
       
-       def TrainingSheetBehavior(x,x2):
+       def TrainingSheetBehavior(x,x2,Temp):
            print('async started')
            print(x)
            designated_Columns=x
-           core_cols=x2     
+           core_cols=x2   
+           Temp=Temp     
           
                       
            os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
-           Temp=pandas.read_excel('Temp.xlsx')
+           #Temp=pandas.read_excel('Temp.xlsx')
           
          
-           Temp=googConverter(Temp)     
+           #Temp=googConverter(Temp)     
            rowCheck=rowcheck(Temp,designated_Columns)     
            print(len(rowCheck)," ",rowCheck); 
            if len(rowCheck)>0:
@@ -137,7 +138,7 @@ def BidOpFileHandler():
            
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
       
-       TrainLoad=threading.Thread(target=TrainingSheetBehavior, args=[designated_Columns, core_cols]);
+       TrainLoad=threading.Thread(target=TrainingSheetBehavior, args=[designated_Columns, core_cols,Temp]);
        TrainLoad.start(); 
        print("is there an attempt to return")
        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOpPending'><html>did not forward</html>"
