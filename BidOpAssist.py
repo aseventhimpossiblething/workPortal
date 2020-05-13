@@ -154,14 +154,13 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     #Temp=Temp.replace("> 90%",90).fillna(0);
     #print("2.8")
     Temp['Match Number']=Match_num(Temp);
-    print("2.1")
     Temp['Market Number']=MarketNumberGen(Temp)
     
     
     print('isna test')
     #print("Seed Columns",Seed.columns.values)
     
-    #print("Temp columns",Temp.columns.values)
+    print("Temp columns",Temp.columns.values)
     
     
     """
@@ -223,7 +222,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     """
                       
     
-    print("3")
+    #print("3")
      
     
     
@@ -235,10 +234,10 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     #print("Temp ",Temp['Keyword'])
     #print("Temp ",Temp[['Keyword']])
     
-    #print(TempForOutPut)
-    #print(TempForOutPut[[TempForOutPut.columns.values[0],TempForOutPut.columns.values[1],TempForOutPut.columns.values[2],TempForOutPut.columns.values[3],TempForOutPut.columns.values[4],TempForOutPut.columns.values[5],TempForOutPut.columns.values[6],TempForOutPut.columns.values[7],TempForOutPut.columns.values[8],TempForOutPut.columns.values[9],TempForOutPut.columns.values[10]]])
+    print(TempForOutPut)
+    print(TempForOutPut[[TempForOutPut.columns.values[0],TempForOutPut.columns.values[1],TempForOutPut.columns.values[2],TempForOutPut.columns.values[3],TempForOutPut.columns.values[4],TempForOutPut.columns.values[5],TempForOutPut.columns.values[6],TempForOutPut.columns.values[7],TempForOutPut.columns.values[8],TempForOutPut.columns.values[9],TempForOutPut.columns.values[10]]])
     
-    print("4")
+    #print("4")
     
     OutputBid=Model.predict(TempForOutPut); 
     print("5")
