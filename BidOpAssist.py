@@ -106,22 +106,16 @@ def percentChangeColumn(frame):
 
 
 def BidOpOverview(desiCols,corecols,change,Temp):
-    print("first Temp in OverView")
-    #print(Temp.columns.values)
-    print("Start of Bid OverView..............................")
     Temp=Temp
-    #print("desiCols")
-    #print(desiCols)
-    print("1")
-    #print(Temp.columns.values)
+    
     PredVar=change    
     designated_Columns=desiCols;
     core_cols=corecols;
     loc=corecols.count(PredVar)
        
     if loc<1:
-       print(PreVar," not present")     
-       print("x.count(",PredVar, "- 2) ",loc )     
+       #print(PreVar," not present")     
+       #print("x.count(",PredVar, "- 2) ",loc )     
        loc=corecols.index(PredVar)
     
     loc=corecols.index(PredVar)        
@@ -142,21 +136,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     #Temp=Temp 
     #Temp=pandas.read_excel('Temp.xlsx');
     Temp=Temp.replace('>','').replace('<','').replace('%','').replace('-',0).fillna(0).replace('--',0).fillna(0).replace(' --',0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
-    #print("2.1")
-    #Temp=Temp.replace('<','');
-    #print("2.2")
-    #Temp=Temp.replace('%','');
-    #print("2.3")
-    #Temp=Temp.replace('-',0).fillna(0); 
-    #print("2.4")
-    #Temp=Temp.replace('--',0).fillna(0);
-    #print("2.5")
-    #Temp=Temp.replace(' --',0).fillna(0);
-    #print("2.6")
-    #Temp=Temp.replace("< 10%",10).fillna(0)
-    #print("2.7")
-    #Temp=Temp.replace("> 90%",90).fillna(0);
-    #print("2.8")
+       
     Temp['Match Number']=Match_num(Temp);
     Temp['Market Number']=MarketNumberGen(Temp)
     
@@ -166,77 +146,15 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     
     print("Temp columns",Temp.columns.values)
     
-    
-    """
-    print(Temp.isna())
-    
-    print(Temp.columns.values[0])
-    print(Temp.isna()[[Temp.columns.values[0]]])  
-    
-    print(Temp.columns.values[1])
-    print(Temp.isna()[[Temp.columns.values[1]]])
-    
-    print(Temp.columns.values[2])
-    print(Temp.isna()[[Temp.columns.values[2]]])
-    
-    print(Temp.columns.values[3])
-    print(Temp.isna()[[Temp.columns.values[3]]])  
-    
-    print(Temp.columns.values[4])
-    print(Temp.isna()[[Temp.columns.values[0]]])
-    
-    print(Temp.columns.values[5])
-    print(Temp.isna()[[Temp.columns.values[5]]])
-    
-    print(Temp.columns.values[6])
-    print(Temp.isna()[[Temp.columns.values[6]]])  
-    
-    print(Temp.columns.values[7])
-    print(Temp.isna()[[Temp.columns.values[7]]])
-    
-    print(Temp.columns.values[8])
-    print(Temp.isna()[[Temp.columns.values[8]]])
-    
-    print(Temp.columns.values[9])
-    print(Temp.isna()[[Temp.columns.values[9]]])  
-    
-    print(Temp.columns.values[10])
-    print(Temp.isna()[[Temp.columns.values[10]]])
-    
-    print(Temp.columns.values[12])
-    print(Temp.isna()[[Temp.columns.values[12]]])
-    
-    print(Temp.columns.values[13])
-    print(Temp.isna()[[Temp.columns.values[13]]])  
-    
-    print(Temp.columns.values[14])
-    print(Temp.isna()[[Temp.columns.values[14]]])
-    
-    print(Temp.columns.values[15])
-    print(Temp.isna()[[Temp.columns.values[15]]])
-              
-    print(Temp.columns.values[16])
-    print(Temp.isna()[[Temp.columns.values[16]]])  
-    
-    print(Temp.columns.values[17])
-    print(Temp.isna()[[Temp.columns.values[17]]])
-    
-    print(Temp.columns.values[18])
-    print(Temp.isna()[[Temp.columns.values[18]]])
-    """
-                      
+          
     
     print("3")
      
     
     
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols);
-    #print("TempOut 1 ",TempForOutPut.columns.values);
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1);
-    #print("TempOut 2 ",TempForOutPut.columns.values);
-    #print("Temp file self  ",Temp.columns.values);
-    #print("Temp ",Temp['Keyword'])
-    #print("Temp ",Temp[['Keyword']])
+    
     
     print(TempForOutPut)
     print(TempForOutPut[[TempForOutPut.columns.values[0],TempForOutPut.columns.values[1],TempForOutPut.columns.values[2],TempForOutPut.columns.values[3],TempForOutPut.columns.values[4],TempForOutPut.columns.values[5],TempForOutPut.columns.values[6],TempForOutPut.columns.values[7],TempForOutPut.columns.values[8],TempForOutPut.columns.values[9],TempForOutPut.columns.values[10]]])
@@ -245,8 +163,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     
     OutputBid=Model.predict(TempForOutPut); 
     print("5")
-    #print('OutputBid ',OutputBid);
-    #print("OutputBid['rank'] ",OutputBid[['rank']]);
+   
     Temp[PredVar]=OutputBid;
     Temp['Change']=percentChangeColumn(Temp); 
     if str(Temp['Campaign']).lower().find('gppc')>-1:
@@ -256,14 +173,10 @@ def BidOpOverview(desiCols,corecols,change,Temp):
 
     print(" after predict_____________________________________")
 
-    #Temp['Change']=percentChangeColumn(Temp); 
-    #print(Temp.head())
-    print("7")
-
-    
+       
 
     Temp.to_excel("outputsheet.xlsx");
-    print("8")
+    print("7")
     print("Should be after Temp to excel");
     print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"));
     print('end of overview');
@@ -275,7 +188,6 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     print("9")
     return Temp  
 
-#print(percentChangeColumn(Temp))
 
 
 
