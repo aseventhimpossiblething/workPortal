@@ -129,7 +129,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     predict_colsP2=corecols[loc+1:]
     predict_cols=predict_colsP1+predict_colsP2
         
-    #print("2")
+    print("2")
     
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/');
     Seed=pandas.read_excel('BidOpSeed.xlsx');
