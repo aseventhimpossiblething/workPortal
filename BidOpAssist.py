@@ -107,11 +107,13 @@ def percentChangeColumn(frame):
 
 def BidOpOverview(desiCols,corecols,change,Temp):
     print("first Temp in OverView")
-    print(Temp.columns.values)
+    #print(Temp.columns.values)
     print("Start of Bid OverView..............................")
+    Temp=Temp
     #print("desiCols")
     #print(desiCols)
-    #print("1")
+    print("1")
+    #print(Temp.columns.values)
     PredVar=change    
     designated_Columns=desiCols;
     core_cols=corecols;
@@ -137,8 +139,8 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     YofSeed=Seed[PredVar];
     Model=RandomForestRegressor()
     Model.fit(XofSeed,YofSeed)
-    Temp=Temp 
-    Temp=pandas.read_excel('Temp.xlsx');
+    #Temp=Temp 
+    #Temp=pandas.read_excel('Temp.xlsx');
     Temp=Temp.replace('>','').replace('<','').replace('%','').replace('-',0).fillna(0).replace('--',0).fillna(0).replace(' --',0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
     #print("2.1")
     #Temp=Temp.replace('<','');
