@@ -162,17 +162,17 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     print("4")
     
     OutputBid=Model.predict(TempForOutPut); 
-    print("5")
+ 
    
     Temp[PredVar]=OutputBid;
     Temp['Change']=percentChangeColumn(Temp); 
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(Temp)
     
-    print("6")    
+     
 
     print(" after predict_____________________________________")
-
+    print(Temp)
        
 
     Temp.to_excel("outputsheet.xlsx");
