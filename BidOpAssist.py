@@ -106,6 +106,8 @@ def percentChangeColumn(frame):
 
 
 def BidOpOverview(desiCols,corecols,change,Temp):
+    print("first Temp in OverView")
+    print(Temp.columns.values)
     print("Start of Bid OverView..............................")
     #print("desiCols")
     #print(desiCols)
