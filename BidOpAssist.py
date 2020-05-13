@@ -123,7 +123,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     predict_colsP2=corecols[loc+1:]
     predict_cols=predict_colsP1+predict_colsP2
         
-    print("2")
+    
     
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/');
     Seed=pandas.read_excel('BidOpSeed.xlsx');
@@ -133,23 +133,19 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     YofSeed=Seed[PredVar];
     Model=RandomForestRegressor()
     Model.fit(XofSeed,YofSeed)
-    #Temp=Temp 
-    #Temp=pandas.read_excel('Temp.xlsx');
+    
     Temp=Temp.replace('>','').replace('<','').replace('%','').replace('-',0).fillna(0).replace('--',0).fillna(0).replace(' --',0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
        
     Temp['Match Number']=Match_num(Temp);
     Temp['Market Number']=MarketNumberGen(Temp)
     
     
-    print('isna test')
-    #print("Seed Columns",Seed.columns.values)
-    
+   
     print("Temp columns",Temp.columns.values)
     
           
     
-    print("3")
-     
+        
     
     
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols);
