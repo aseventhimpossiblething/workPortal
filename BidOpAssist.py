@@ -133,11 +133,11 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     print("2.2")
     Seed=pandas.DataFrame(Seed,columns=core_cols);
     print("2.3")
-    Seed=Seed.replace('>','');
+    Seed=Seed.replace('>','').replace('<','').replace('%','');
     print("2.4")
-    Seed=Seed.replace('<',''); 
+    #Seed=Seed.replace('<',''); 
     print("2.5")
-    Seed=Seed.replace('%','');
+    #Seed=Seed.replace('%','');
     print("2.6")
     Seed=Seed.replace("-",0).fillna(0);
     print("2.7")
