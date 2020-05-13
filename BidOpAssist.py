@@ -109,7 +109,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     print("Start of Bid OverView..............................")
     #print("desiCols")
     #print(desiCols)
-    print("1")
+    #print("1")
     PredVar=change    
     designated_Columns=desiCols;
     core_cols=corecols;
@@ -125,52 +125,36 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     predict_colsP2=corecols[loc+1:]
     predict_cols=predict_colsP1+predict_colsP2
         
-    print("2")
+    #print("2")
     
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/');
-    print("2.1")
     Seed=pandas.read_excel('BidOpSeed.xlsx');
-    print("2.2")
     Seed=pandas.DataFrame(Seed,columns=core_cols);
-    print("2.3")
     Seed=Seed.replace('>','').replace('<','').replace('%','').replace("-",0).fillna(0).replace("--",0).fillna(0).replace(" --",0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
-    #print("2.4")
-    #Seed=Seed.replace('<',''); 
-    #print("2.5")
-    #Seed=Seed.replace('%','');
-    #print("2.6")
-    #Seed=Seed.replace("-",0).fillna(0);
-    #print("2.7")
-    #Seed=Seed.replace("--",0).fillna(0); 
-    #print("2.8")
-    #Seed=Seed.replace(" --",0).fillna(0);
-    #print("2.9")
-    #Seed=Seed.replace("< 10%",10).fillna(0);
-    #print("2.10")
-    #Seed=Seed.replace("> 90%",90).fillna(0);
-    print("2.11")
     XofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
-    print("2.12")
     YofSeed=Seed[PredVar];
-    print("2.13")
     Model=RandomForestRegressor()
-    print("2.14")
     Model.fit(XofSeed,YofSeed)
-    print("2.15")
     Temp=Temp 
-    print("2.16")
     Temp=pandas.read_excel('Temp.xlsx');
-    print("2.17")
-    Temp=Temp.replace('>','');
-    print("2.18")
-    Temp=Temp.replace('<','');
-    Temp=Temp.replace('%','');
-    Temp=Temp.replace('-',0).fillna(0); 
-    Temp=Temp.replace('--',0).fillna(0); 
-    Temp=Temp.replace(' --',0).fillna(0);
-    Temp=Temp.replace("< 10%",10).fillna(0)
-    Temp=Temp.replace("> 90%",90).fillna(0);
+    Temp=Temp.replace('>','').replace('<','').replace('%','').replace('-',0).fillna(0).replace('--',0).fillna(0).replace(' --',0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
+    #print("2.1")
+    #Temp=Temp.replace('<','');
+    #print("2.2")
+    #Temp=Temp.replace('%','');
+    #print("2.3")
+    #Temp=Temp.replace('-',0).fillna(0); 
+    #print("2.4")
+    #Temp=Temp.replace('--',0).fillna(0);
+    #print("2.5")
+    #Temp=Temp.replace(' --',0).fillna(0);
+    #print("2.6")
+    #Temp=Temp.replace("< 10%",10).fillna(0)
+    #print("2.7")
+    #Temp=Temp.replace("> 90%",90).fillna(0);
+    #print("2.8")
     Temp['Match Number']=Match_num(Temp);
+    print("2.1")
     Temp['Market Number']=MarketNumberGen(Temp)
     
     
