@@ -163,7 +163,7 @@ def BidOpFileHandler():
                 return rowCheck
                      
        print("Temp from fileHandler")
-       print(Temp.columnes.values) 
+       print(Temp.columns.values) 
        BidOpAssistAsync=threading.Thread(target=BidOpAssist.BidOpOverview,args=[designated_Columns,core_cols,target_Variable,Temp])
        BidOpAssistAsync.start(); 
        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOptimisation'><html>did not forward</html>"         
