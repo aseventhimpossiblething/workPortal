@@ -87,7 +87,7 @@ def MkNewBid(x):
     return New_Bid
 
 def percentIncrease(OldBid,NewBid):
-    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!percentIncrease is running ")
+    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!percentIncrease is running ")
     OldBid=float(OldBid);
     NewBid=float(NewBid);
     change=((NewBid/OldBid)-1);
@@ -95,7 +95,7 @@ def percentIncrease(OldBid,NewBid):
     return change;
 
 def percentChangeColumn(frame,change):
-    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!percentChangeColumn is running ")
+    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!percentChangeColumn is running ")
     change=change;
     print(change);
     percentChangeCol=[];
@@ -168,6 +168,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
  
    
     Temp[PredVar]=OutputBid;
+    print("-------***************prep for change seq*****************-----------------)
     print(change);
     if change=='Change':
        Temp['Change']=percentChangeColumn(Temp);
