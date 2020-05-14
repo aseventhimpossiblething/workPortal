@@ -168,7 +168,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
  
    
     Temp[PredVar]=OutputBid;
-    print("-------***************prep for change seq*****************-----------------)
+    print("-------***************prep for change seq*****************-----------------")
     print(change);
     if change=='Change':
        Temp['Change']=percentChangeColumn(Temp);
