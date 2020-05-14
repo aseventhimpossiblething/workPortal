@@ -175,10 +175,10 @@ def BidOpFileHandler():
                 rowCheck=" The following Columns are missing "+rowCheck+" please resubmit sheet "
                 return rowCheck
                      
-       print("Temp from fileHandler")
-       print("Temp.columns from fileHandler ",Temp.columns.values) 
-       print("*** Temp['Match type'] in else before BidOp Insert ***",Temp['Match type']) 
-       BidOpAssistAsync=threading.Thread(target=BidOpAssist.BidOpOverview,args=[designated_Columns,core_cols,target_Variable,Temp])
+       print("Temp from fileHandler");
+       print("Temp.columns from fileHandler ",Temp.columns.values);
+       print("*** Temp['Currency code'] in else before BidOp Insert ***",Temp['Currency code']); 
+       BidOpAssistAsync=threading.Thread(target=BidOpAssist.BidOpOverview,args=[designated_Columns,core_cols,target_Variable,Temp]);
        BidOpAssistAsync.start(); 
        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOptimisation'><html>did not forward</html>"         
         
