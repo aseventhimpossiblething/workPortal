@@ -166,6 +166,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
                          TempForOutPut.columns.values[2],TempForOutPut.columns.values[3]]])
     
     print("4")
+    print(Temp[['Change']])
     
     OutputBid=Model.predict(TempForOutPut); 
  
@@ -182,7 +183,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
      
 
     print(" after predict_____________________________________")
-    print(Temp)
+    print(Temp[['Change']])
     print("-------------------WAITING TO WRITE TO EXCEL------------------------")
        
 
