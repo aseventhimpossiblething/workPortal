@@ -169,7 +169,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
    
     Temp[PredVar]=OutputBid;
     print(change);
-    if change='Change':
+    if change=='Change':
        Temp['Change']=percentChangeColumn(Temp);
     
     if str(Temp['Campaign']).lower().find('gppc')>-1:
