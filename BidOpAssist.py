@@ -90,16 +90,17 @@ def MkNewBid(x):
 
 
 def percentIncrease(OldBid,NewBid):
-    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!percentIncrease is running ")
+    #print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!percentIncrease is running ")
     OldBid=float(OldBid);
     NewBid=float(NewBid);
-    change=((NewBid/OldBid)-1);
+    #change=((NewBid/OldBid)-1);
+    change=NewBid-OldBid
     change=change
     return change;
     
 
 def percentChangeColumn(frame):
-    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!percentChangeColumn is running ")
+    #print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!percentChangeColumn is running ")
     #change=change;
     #print(change);
     percentChangeCol=[];
