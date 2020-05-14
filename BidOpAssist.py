@@ -170,8 +170,8 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     Temp[PredVar]=OutputBid;
     print("-------***************prep for change seq*****************-----------------")
     print(change);
-    if change=='Change':
-       Temp['Change']=percentChangeColumn(Temp);
+    #if change=='Change':
+    #   Temp['Change']=percentChangeColumn(Temp);
     
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(Temp)
