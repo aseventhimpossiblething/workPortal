@@ -94,8 +94,8 @@ def percentIncrease(OldBid,NewBid):
     OldBid=float(OldBid);
     NewBid=float(NewBid);
     #change=((NewBid/OldBid)-1);
-    change=NewBid-OldBid
-    change=change
+    change=(NewBid-OldBid)/OldBid;
+    #change=change
     return change;
     
 
@@ -117,8 +117,9 @@ def percentChangeColumn(frame):
 
 
 def BidOpOverview(desiCols,corecols,change,Temp):
-    Temp=Temp
-    print("Temp['Match type'] ",Temp['Match type'])
+    print("in BidOpOverview ");
+    Temp=Temp;
+    print("Temp['Currency code'] ",Temp['Currency code']);
     
     PredVar=change    
     designated_Columns=desiCols;
