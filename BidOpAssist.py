@@ -38,7 +38,9 @@ def Match_num(x):
         ccountr=0;
         Match_Type=[];
         for kw in Temp['Match type']:
-               kw=kw.lower() 
+               print(type(kw));
+               print(kw); 
+               kw=kw.lower(); 
               
                if kw.find("exact")>-1:
                 kw="1";
