@@ -408,7 +408,7 @@ def BdOptmstn():
     ready=readiness.read()
     settleURL='<meta http-equiv="refresh" content="50"><html>Bids are Being Optimised  - '+ready+"</html>"
     if ready.find("100%")>-1:
-       return render_template("BidOptimisation.html",CacheBreakStamp=datetime.now)           
+       return render_template("BidOptimisation.html",CacheBreakStamp=datetime.now())           
     return settleURL
 
 
