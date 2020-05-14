@@ -87,16 +87,20 @@ def MkNewBid(x):
     return New_Bid
 
 def percentIncrease(OldBid,NewBid):
+    print("percentIncrease is running ")
     OldBid=float(OldBid);
     NewBid=float(NewBid);
     change=((NewBid/OldBid)-1);
     change=change
     return change;
 
-def percentChangeColumn(frame):
+def percentChangeColumn(frame,change):
+    print("percentChangeColumn is running ")
+    change=change;
+    print(change);
     percentChangeCol=[];
     frame=frame;
-    #print('frame',frame)
+    #print('frame',frame);
     OldBid=frame['Bid'];
     NewBid=frame['New Bid'];
     count=0;
@@ -164,7 +168,10 @@ def BidOpOverview(desiCols,corecols,change,Temp):
  
    
     Temp[PredVar]=OutputBid;
-    Temp['Change']=percentChangeColumn(Temp); 
+    print(change);
+    if change='Change':
+       Temp['Change']=percentChangeColumn(Temp);
+    
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(Temp)
     
