@@ -194,7 +194,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     print("-------------------WAITING TO WRITE TO EXCEL------------------------")
        
     #Temp=Temp[['Change']]
-    Temp=Temp[['Change']]
+    #Temp=Temp[['Change']]
     Temp.to_excel("outputsheet.xlsx");
     print("7")
     print("Should be after Temp to excel");
