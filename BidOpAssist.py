@@ -10,7 +10,6 @@ import scipy
 import pandas
 import re
 from sklearn.ensemble import RandomForestRegressor
-#from sklearn.ensemble import RandomForestClassifier
 
 def googConverterReverse(X):
     print("_______________________________________________")
@@ -87,7 +86,7 @@ def MkNewBid(x):
     return New_Bid
 """    
 
-"""
+
 def percentIncrease(OldBid,NewBid):
     print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!percentIncrease is running ")
     OldBid=float(OldBid);
@@ -95,6 +94,7 @@ def percentIncrease(OldBid,NewBid):
     change=((NewBid/OldBid)-1);
     change=change
     return change;
+    
 
 def percentChangeColumn(frame,change):
     print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!percentChangeColumn is running ")
@@ -110,7 +110,7 @@ def percentChangeColumn(frame,change):
         percentChangeCol.append(percentIncrease(OldBid[count],NewBid[count]));
         count+=1;
     return percentChangeCol;
-"""    
+    
 
 
 def BidOpOverview(desiCols,corecols,change,Temp):
@@ -174,7 +174,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     #print("-------***************prep for change seq*****************-----------------")
     #print(change);
     #if change=='Change':
-    #   Temp['Change']=percentChangeColumn(Temp);
+    Temp['Change']=percentChangeColumn(Temp);
     
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(Temp)
