@@ -117,9 +117,9 @@ def percentChangeColumn(frame):
 
 
 def BidOpOverview(desiCols,corecols,change,Temp):
-    print("in BidOpOverview ");
+    #print("in BidOpOverview ");
     Temp=Temp;
-    print("Temp['Currency code'] ",Temp['Currency code']);
+    #print("Temp['Currency code'] ",Temp['Currency code']);
     
     PredVar=change    
     designated_Columns=desiCols;
