@@ -78,9 +78,16 @@ def BidOpFileHandler():
     #record_async_start.close()
   
     
-    target_Variable='New Bid'    
-    designated_Columns=['Campaign','Ad group','Match type',target_Variable,'Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']         
-    core_cols=['Campaign','Ad group',target_Variable,'Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
+    target_Variable='New Bid' 
+        
+    designated_Columns=['Campaign','Ad group','Match type',target_Variable,'Bid','Avg. CPC','CPA']         
+    core_cols=['Campaign','Ad group',target_Variable,'Match Number','Bid','Avg. CPC','CPA']     
+       
+        
+        
+        
+    #designated_Columns=['Campaign','Ad group','Match type',target_Variable,'Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']         
+    #core_cols=['Campaign','Ad group',target_Variable,'Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
    
     isGoog1=str(Temp.columns).find('Cost')
     isGoog2=str(Temp.columns).find('Conversions')
