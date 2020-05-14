@@ -93,6 +93,7 @@ def BidOpFileHandler():
     isGoog2=str(Temp.columns).find('Conversions')
     Temp=googConverter(Temp)
     #print(Temp.columns)
+    print("Temp['Match type']",Temp['Match type'])
     Temp=pandas.DataFrame(Temp,designated_Columns);
      
     isTrainingSheet=str(Temp.columns).find('New Bid'); 
@@ -170,7 +171,7 @@ def BidOpFileHandler():
                 rowCheck=" The following Columns are missing "+rowCheck+" please resubmit sheet "
                 return rowCheck
                      
-       #print("Temp from fileHandler")
+       print("Temp from fileHandler")
        print("Temp.columns from fileHandler ",Temp.columns.values) 
        BidOpAssistAsync=threading.Thread(target=BidOpAssist.BidOpOverview,args=[designated_Columns,core_cols,target_Variable,Temp])
        BidOpAssistAsync.start(); 
