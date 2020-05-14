@@ -93,9 +93,9 @@ def BidOpFileHandler():
     isGoog2=str(Temp.columns).find('Conversions')
     Temp=googConverter(Temp)
     #print(Temp.columns)
-    Temp=(Temp,designated_Columns)
+    Temp=pandas.DataFrame(Temp,designated_Columns);
      
-    isTrainingSheet=str(Temp.columns).find('New Bid') 
+    isTrainingSheet=str(Temp.columns).find('New Bid'); 
     if isTrainingSheet!=-1:
       
        def TrainingSheetBehavior(x,x2,Temp):
