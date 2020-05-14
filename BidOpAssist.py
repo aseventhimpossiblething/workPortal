@@ -38,8 +38,8 @@ def Match_num(x):
         ccountr=0;
         Match_Type=[];
         for kw in Temp['Match type']:
-               print(type(kw));
-               print(kw); 
+               #print(type(kw));
+               #print(kw); 
                kw=kw.lower(); 
               
                if kw.find("exact")>-1:
@@ -117,7 +117,7 @@ def percentChangeColumn(frame,change):
 
 def BidOpOverview(desiCols,corecols,change,Temp):
     Temp=Temp
-    print(Temp['Match type'])
+    print("Temp['Match type'] ",Temp['Match type'])
     
     PredVar=change    
     designated_Columns=desiCols;
