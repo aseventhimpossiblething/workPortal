@@ -94,11 +94,11 @@ def BidOpFileHandler():
     Temp=googConverter(Temp)
     #print(Temp.columns)
     
-    """    
+       
     print("Temp['Match type']",Temp['Match type'])
     Temp=pandas.DataFrame(Temp,designated_Columns);
     print("Temp['Match type']",Temp['Match type'])
-    """
+    
      
     isTrainingSheet=str(Temp.columns).find('New Bid'); 
     if isTrainingSheet!=-1:
