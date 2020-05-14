@@ -95,9 +95,9 @@ def BidOpFileHandler():
     #print(Temp.columns)
     
        
-    print("Temp['Match type']",Temp['Match type'])
+    #print("Temp['Match type']",Temp['Match type'])
     Temp=pandas.DataFrame(Temp,columns=designated_Columns);
-    print("Temp['Match type']",Temp['Match type'])
+    #print("Temp['Match type']",Temp['Match type'])
     
      
     isTrainingSheet=str(Temp.columns).find('New Bid'); 
