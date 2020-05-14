@@ -117,6 +117,7 @@ def percentChangeColumn(frame,change):
 
 def BidOpOverview(desiCols,corecols,change,Temp):
     Temp=Temp
+    print(Temp['Match type'])
     
     PredVar=change    
     designated_Columns=desiCols;
@@ -145,7 +146,8 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     Model.fit(XofSeed,YofSeed)
     
     Temp=Temp.replace('>','').replace('<','').replace('%','').replace('-',0).fillna(0).replace('--',0).fillna(0).replace(' --',0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
-       
+     
+        
     Temp['Match Number']=Match_num(Temp);
     Temp['Market Number']=MarketNumberGen(Temp)
     
