@@ -92,7 +92,8 @@ def BidOpFileHandler():
     isGoog1=str(Temp.columns).find('Cost')
     isGoog2=str(Temp.columns).find('Conversions')
     Temp=googConverter(Temp)
-    #print(Temp.columns)      
+    #print(Temp.columns)
+    Temp=(Temp,designated_Columns)
      
     isTrainingSheet=str(Temp.columns).find('New Bid') 
     if isTrainingSheet!=-1:
