@@ -94,7 +94,8 @@ def percentIncrease(OldBid,NewBid):
     OldBid=float(OldBid);
     NewBid=float(NewBid);
     #change=((NewBid/OldBid)-1);
-    change=(NewBid-OldBid)/OldBid;
+    #change=(NewBid-OldBid)/OldBid;
+    change=NewBid/OldBid;
     #change=change
     return change;
     
