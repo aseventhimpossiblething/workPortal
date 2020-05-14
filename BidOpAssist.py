@@ -98,10 +98,10 @@ def percentIncrease(OldBid,NewBid):
     return change;
     
 
-def percentChangeColumn(frame,change):
+def percentChangeColumn(frame):
     print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!percentChangeColumn is running ")
-    change=change;
-    print(change);
+    #change=change;
+    #print(change);
     percentChangeCol=[];
     frame=frame;
     #print('frame',frame);
