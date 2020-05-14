@@ -96,7 +96,7 @@ def BidOpFileHandler():
     
        
     #print("Temp['Match type']",Temp['Match type'])
-    Temp=pandas.DataFrame(Temp,columns=designated_Columns);
+    #Temp=pandas.DataFrame(Temp,columns=designated_Columns);
     #print("Temp['Match type']",Temp['Match type'])
     
      
@@ -158,6 +158,7 @@ def BidOpFileHandler():
        
     else:
        print("else path")
+       Temp=pandas.DataFrame(Temp,columns=designated_Columns);
        locOfTarg=designated_Columns.index(target_Variable)
        newDesignatedColP1=designated_Columns[:locOfTarg] 
        newDesignatedColP2=designated_Columns[locOfTarg+1:]
