@@ -165,7 +165,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
                          TempForOutPut.columns.values[2],TempForOutPut.columns.values[3]]])
     
     print("4")
-    print(Temp[['Change']])
+    print(Temp)
     
     OutputBid=Model.predict(TempForOutPut); 
  
