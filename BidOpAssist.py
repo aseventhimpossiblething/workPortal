@@ -153,7 +153,8 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     
     
     print(TempForOutPut)
-    print(TempForOutPut[[TempForOutPut.columns.values[0],TempForOutPut.columns.values[1],TempForOutPut.columns.values[2],TempForOutPut.columns.values[3],TempForOutPut.columns.values[4],TempForOutPut.columns.values[5],TempForOutPut.columns.values[6],TempForOutPut.columns.values[7],TempForOutPut.columns.values[8],TempForOutPut.columns.values[9],TempForOutPut.columns.values[10]]])
+    print(TempForOutPut[[TempForOutPut.columns.values[0],TempForOutPut.columns.values[1],\
+                         TempForOutPut.columns.values[2],TempForOutPut.columns.values[3]]])
     
     print("4")
     
@@ -169,6 +170,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
 
     print(" after predict_____________________________________")
     print(Temp)
+    print("-------------------WAITING TO WRITE TO EXCEL------------------------")
        
 
     Temp.to_excel("outputsheet.xlsx");
