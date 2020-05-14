@@ -406,13 +406,9 @@ def BdOptmstn():
     #print(os.getcwd())
     readiness=open("ForestLoadingQueue.txt","r")
     ready=readiness.read()
-    #print(ready)
     settleURL='<meta http-equiv="refresh" content="50"><html>Bids are Being Optimised  - '+ready+"</html>"
     if ready.find("100%")>-1:
-       #print("ready.find('100%') ",ready.find("100%"))           
        return render_template("BidOptimisation.html",CacheBreakStamp=datetime.now)           
-    #return "Building template for bidop output"     
-    #return render_template("BidOptimisation.html")     
     return settleURL
 
 
