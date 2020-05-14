@@ -10,6 +10,7 @@ import scipy
 import pandas
 import re
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestClassifier
 
 def googConverterReverse(X):
     print("_______________________________________________")
@@ -131,7 +132,8 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     Seed=Seed.replace('>','').replace('<','').replace('%','').replace("-",0).fillna(0).replace("--",0).fillna(0).replace(" --",0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
     XofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
     YofSeed=Seed[PredVar];
-    Model=RandomForestRegressor()
+    Model=RandomForestClassifier();
+    #Model=RandomForestRegressor();
     Model.fit(XofSeed,YofSeed)
     
     Temp=Temp.replace('>','').replace('<','').replace('%','').replace('-',0).fillna(0).replace('--',0).fillna(0).replace(' --',0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
