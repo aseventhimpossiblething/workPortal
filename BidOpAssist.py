@@ -72,7 +72,7 @@ def MarketNumberGen(_Temp_):
                 TempMarketCount+=1;
         return Market        
                         
-            
+"""           
 def MkNewBid(x):
     PredVar='Changes'
     Temp=x;
@@ -85,7 +85,9 @@ def MkNewBid(x):
           New_Bid.append(thebid)
           count+=1;
     return New_Bid
+"""    
 
+"""
 def percentIncrease(OldBid,NewBid):
     print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!percentIncrease is running ")
     OldBid=float(OldBid);
@@ -108,6 +110,7 @@ def percentChangeColumn(frame,change):
         percentChangeCol.append(percentIncrease(OldBid[count],NewBid[count]));
         count+=1;
     return percentChangeCol;
+"""    
 
 
 def BidOpOverview(desiCols,corecols,change,Temp):
