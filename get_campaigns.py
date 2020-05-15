@@ -123,7 +123,7 @@ response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
 for subset in response:
       print('subset ',subset)
-view=json.load()      
+      view=json.load(subset)      
 """      
 customer_service = google_ads_client.get_service('CustomerService', version='v3')      
 accessible_customers = customer_service.list_accessible_customers()
