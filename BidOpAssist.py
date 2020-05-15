@@ -39,7 +39,7 @@ def Match_num(x):
         Match_Type=[];
         for kw in Temp['Match type']:
                #print(type(kw));
-               #print(kw); 
+               print("Member of Match type - ",kw); 
                kw=kw.lower(); 
               
                if kw.find("exact")>-1:
@@ -118,9 +118,10 @@ def percentChangeColumn(frame):
 
 
 def BidOpOverview(desiCols,corecols,change,Temp):
-    #print("in BidOpOverview ");
+    print("in BidOpOverview ");
     Temp=Temp;
-    #print("Temp['Currency code'] ",Temp['Currency code']);
+    #print("")
+    print("Temp['Match type'] ",Temp['Match type']);
     
     PredVar=change    
     designated_Columns=desiCols;
