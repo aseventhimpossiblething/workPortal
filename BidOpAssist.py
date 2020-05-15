@@ -41,11 +41,12 @@ def Match_num(x):
                #print(type(kw));
                print("Member of Match type - ",kw); 
                kw=kw.lower(); 
-              
                if kw.find("exact")>-1:
                 kw="1";
                if kw.find('broad')>-1:
                 kw="2";
+               if kw.find('phrase')>-1:
+                kw="3";
                if str(Temp['Campaign'][ccountr]).lower().find("gppc")>-1:
                 #print(type(kw))
                 kw=int(kw)
