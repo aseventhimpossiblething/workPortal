@@ -120,6 +120,7 @@ query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.am
 testcamp="1500631476"
 customer_id=testcamp
 response = ga_service.search_stream(customer_id, query=query)
+openJson=json.load(response)
 print('response',response)
 for subset in response:
       print('subset ',subset)
