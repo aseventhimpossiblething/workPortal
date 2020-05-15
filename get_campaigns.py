@@ -145,7 +145,7 @@ print('response',response)
 for subset in response:
       print('subset ',subset)
       #print("subset['results'] ",subset['results'])
-view=json.load(response);
+#view=json.load(response);
 print(response);
       
 
