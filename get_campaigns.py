@@ -145,7 +145,7 @@ response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
 for subset in response:
       print('subset ',subset)
-      print("subset['status'] ",subset['status'])
+      #print("subset['status'] ",subset['status'])
 #view=json.load(response);
 print(response);
       
