@@ -137,7 +137,9 @@ for subset in response:
       print("kooiiiiiiiiiiiiiiiiiiiiiiiiiii0")
       #view1=json.loads(subset);
       #print("view1 ",view1)
-      loadit=json.loads(subset);
+      #loadit=json.loads(subset);
+      json.dumps(subset);
+      json.dump(subset);
       print("intermediary ----------------- ")
 """      
 customer_service = google_ads_client.get_service('CustomerService', version='v3')      
