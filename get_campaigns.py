@@ -122,6 +122,8 @@ customer_id=testcamp
 response = ga_service.search_stream(customer_id, query=query)
 #openJson=response.json()
 print('response',response)
+response.loads()
+json.loads(response)
 for subset in response:
       print("Boundery------------------------------------Boundery------------------------------------Boundery------------------------------------")
       print('type(subset) ',type(subset));
@@ -155,11 +157,11 @@ print("attempt to access city")
 customer_id="2104897739" 
 response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
-for subset in response:
+#for subset in response:
       #print('subset ',subset)
       #print("subset['Campaign'] ",subset['Campaign'])
-#view=json.load(response);
-print(response);
+view=json.load(response);
+#print(response);
       
 
 print("end active experiment block------------------------------------------------------------")      
