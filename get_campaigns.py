@@ -124,18 +124,18 @@ response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
 for subset in response:
       print("Boundery------------------------------------Boundery------------------------------------Boundery------------------------------------")
-      #print('type(subset) ',type(subset));
-      #print('subset ',subset);
-      #print("dir(subset) ",dir(subset))
-      #print('str(subset) ',str(subset));
-      #subsetStr=print('subset ',subset);
-      #print("type(subsetStr) ",type(subsetStr))
-      #view=json.loads(subsetStr) ; 
-      #print("view ",view);
-      print("kooiiiiiiiiiiiiiiiiiiiiiiiiiii0")
-      #view1=json.loads(subset);
-      #print("view1 ",view1)
-      #loadit=json.loads(subset);
+      print('type(subset) ',type(subset));
+      print('subset ',subset);
+      print("dir(subset) ",dir(subset))
+      print('str(subset) ',str(subset));
+      subsetStr=print('subset ',subset);
+      print("type(subsetStr) ",type(subsetStr))
+      view=json.loads(subsetStr) ; 
+      print("view ",view);
+      rint("kooiiiiiiiiiiiiiiiiiiiiiiiiiii0")
+      view1=json.loads(subset);
+      print("view1 ",view1)
+      loadit=json.loads(subset);
       print("intermediary ----------------- ")
 """      
 customer_service = google_ads_client.get_service('CustomerService', version='v3')      
@@ -157,7 +157,7 @@ response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
 for subset in response:
       #print('subset ',subset)
-      print("subset['Campaign'] ",subset['Campaign'])
+      #print("subset['Campaign'] ",subset['Campaign'])
 #view=json.load(response);
 print(response);
       
