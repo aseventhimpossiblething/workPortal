@@ -128,6 +128,8 @@ for subset in response:
       #print('subset ',subset);
       print("dir(subset) ",dir(subset))
       print('str(subset) ',str(subset));
+      subsetStr=print('subset ',subset);
+      print("type(subsetStr) ",type(subsetStr))
       #view=json.load(subset) ;     
 """      
 customer_service = google_ads_client.get_service('CustomerService', version='v3')      
