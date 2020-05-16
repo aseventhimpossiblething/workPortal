@@ -126,6 +126,7 @@ for subset in response:
       print("Boundery------------------------------------Boundery------------------------------------Boundery------------------------------------")
       print('type(subset) ',type(subset));
       #print('subset ',subset);
+      print("dir(subset) ",dir(subset))
       #view=json.load(subset) ;     
 """      
 customer_service = google_ads_client.get_service('CustomerService', version='v3')      
