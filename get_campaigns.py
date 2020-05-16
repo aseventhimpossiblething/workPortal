@@ -161,7 +161,10 @@ print("attempt to access city")
 customer_id="2104897739" 
 response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
+cnt=0;
 for subset in response:
+      print("-------------------------",cnt)
+      cnt+=1;
       print('subset ',subset)
       #print("str(subset)['result'] ",str(subset)['result']);
       #print("str(subset)['Campaign'] ",str(subset)['Campaign']); 
