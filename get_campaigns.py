@@ -130,11 +130,10 @@ for subset in response:
       print('subset ',subset);
       print("dir(subset) ",dir(subset))
       print('str(subset) ',str(subset));
-      subsetStr=print('subset ',subset);
       print("type(subsetStr) ",type(subsetStr))
-      view=json.loads(subsetStr) ; 
+      #view=json.loads(subsetStr) ; 
       print("view ",view);
-      rint("kooiiiiiiiiiiiiiiiiiiiiiiiiiii0")
+      print("kooiiiiiiiiiiiiiiiiiiiiiiiiiii0")
       view1=json.loads(subset);
       print("view1 ",view1)
       loadit=json.loads(subset);
