@@ -162,9 +162,9 @@ customer_id="2104897739"
 response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
 for subset in response:
-      #print('subset ',subset)
+      print('subset ',subset)
       #print("str(subset)['result'] ",str(subset)['result']);
-      print("str(subset)['Campaign'] ",str(subset)['Campaign']); 
+      #print("str(subset)['Campaign'] ",str(subset)['Campaign']); 
       #print("subset['Campaign'] ",subset['Campaign'])
 #view=json.load(response);
 #print(response);
