@@ -124,14 +124,16 @@ response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
 for subset in response:
       print("Boundery------------------------------------Boundery------------------------------------Boundery------------------------------------")
-      print('type(subset) ',type(subset));
+      #print('type(subset) ',type(subset));
       #print('subset ',subset);
       #print("dir(subset) ",dir(subset))
-      #print('str(subset) ',str(subset));
-      #subsetStr=print('subset ',subset);
-      #print("type(subsetStr) ",type(subsetStr))
-      view=json.load(subsetStr) ;  
-      view1=json.load(subset) ;   
+      print('str(subset) ',str(subset));
+      subsetStr=print('subset ',subset);
+      print("type(subsetStr) ",type(subsetStr))
+      view=json.load(subsetStr) ; 
+      print("view ",view);
+      view1=json.load(subset);
+      print("view1 ",view1)
       print("intermediary ----------------- ",view)
 """      
 customer_service = google_ads_client.get_service('CustomerService', version='v3')      
