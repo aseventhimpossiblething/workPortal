@@ -122,7 +122,7 @@ customer_id=testcamp
 response = ga_service.search_stream(customer_id, query=query)
 #openJson=response.json()
 print('response',response)
-response.loads()
+#response.loads()
 json.loads(response)
 for subset in response:
       print("Boundery------------------------------------Boundery------------------------------------Boundery------------------------------------")
