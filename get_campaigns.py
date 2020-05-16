@@ -127,9 +127,9 @@ for subset in response:
       #print('type(subset) ',type(subset));
       #print('subset ',subset);
       #print("dir(subset) ",dir(subset))
-      print('str(subset) ',str(subset));
-      subsetStr=print('subset ',subset);
-      print("type(subsetStr) ",type(subsetStr))
+      #print('str(subset) ',str(subset));
+      #subsetStr=print('subset ',subset);
+      #print("type(subsetStr) ",type(subsetStr))
       view=json.load(subsetStr) ; 
       print("view ",view);
       view1=json.load(subset);
