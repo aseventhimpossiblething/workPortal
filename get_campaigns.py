@@ -123,6 +123,7 @@ response = ga_service.search_stream(customer_id, query=query)
 #openJson=response.json()
 print('response',response)
 for subset in response:
+      print("Boundery------------------------------------Boundery------------------------------------Boundery------------------------------------")
       print('type(subset) ',type(subset));
       print('subset ',subset);
       #view=json.load(subset) ;     
