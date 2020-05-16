@@ -136,7 +136,7 @@ for subset in response:
       #print("view ",view);
       print("kooiiiiiiiiiiiiiiiiiiiiiiiiiii0")
       #view1=json.loads(subset);
-      print("view1 ",view1)
+      #print("view1 ",view1)
       loadit=json.loads(subset);
       print("intermediary ----------------- ")
 """      
