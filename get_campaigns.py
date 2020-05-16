@@ -165,10 +165,16 @@ cnt=0;
 for subset in response:
       print("-------------------------",cnt)
       cnt+=1;
-      print('subset ',subset)
+      #print('subset ',subset)
       #print("str(subset)['result'] ",str(subset)['result']);
       #print("str(subset)['Campaign'] ",str(subset)['Campaign']); 
       #print("subset['Campaign'] ",subset['Campaign'])
+numot=0;
+while numot<1:
+      numot+=1
+      print("response - ",response)
+      print("len(response) - ",len(response))
+      print("response[0] - ",response[0])
 #view=json.load(response);
 #print(response);
       
