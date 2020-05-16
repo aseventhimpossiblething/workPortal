@@ -130,8 +130,9 @@ for subset in response:
       #print('str(subset) ',str(subset));
       #subsetStr=print('subset ',subset);
       #print("type(subsetStr) ",type(subsetStr))
-      view=json.load(subsetStr) ; 
-      print("view ",view);
+      #view=json.load(subsetStr) ; 
+      #print("view ",view);
+      print("kooiiiiiiiiiiiiiiiiiiiiiiiiiii0")
       view1=json.load(subset);
       print("view1 ",view1)
       print("intermediary ----------------- ",view)
