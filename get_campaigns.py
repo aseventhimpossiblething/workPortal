@@ -125,7 +125,7 @@ print('response',response)
 for subset in response:
       print("Boundery------------------------------------Boundery------------------------------------Boundery------------------------------------")
       print('type(subset) ',type(subset));
-      print('subset ',subset);
+      #print('subset ',subset);
       #view=json.load(subset) ;     
 """      
 customer_service = google_ads_client.get_service('CustomerService', version='v3')      
@@ -145,8 +145,8 @@ print("attempt to access city")
 customer_id="2104897739" 
 response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
-for subset in response:
-      print('subset ',subset)
+#for subset in response:
+      #print('subset ',subset)
       #print("subset['status'] ",subset['status'])
 #view=json.load(response);
 print(response);
