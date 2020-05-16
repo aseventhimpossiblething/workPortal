@@ -133,7 +133,7 @@ for subset in response:
       subsetStr=type(subset);
       print("type(subsetStr) ",type(subsetStr))
       #view=json.loads(subsetStr) ; 
-      print("view ",view);
+      #print("view ",view);
       print("kooiiiiiiiiiiiiiiiiiiiiiiiiiii0")
       view1=json.loads(subset);
       print("view1 ",view1)
