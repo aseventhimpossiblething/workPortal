@@ -133,7 +133,7 @@ for subset in response:
       print('str(subset)[0] ',str(subset)[0]);
       #print("str(subset)['result'] ",str(subset)['result']);      
       #subsetStr=type(subset);
-      print("type(subsetStr) ",type(subsetStr));
+      #print("type(subsetStr) ",type(subsetStr));
       #view=json.loads(subsetStr) ; 
       #print("view ",view);
       print("kooiiiiiiiiiiiiiiiiiiiiiiiiiii0");
