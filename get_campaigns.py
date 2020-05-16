@@ -173,7 +173,7 @@ numot=0;
 while numot<1:
       numot+=1
       print("response - ",response)
-      print("len(response) - ",len(response))
+      #print("len(response) - ",len(response))
       print("response[0] - ",response[0])
 #view=json.load(response);
 #print(response);
