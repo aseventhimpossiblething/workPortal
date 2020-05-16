@@ -126,12 +126,13 @@ for subset in response:
       print("Boundery------------------------------------Boundery------------------------------------Boundery------------------------------------")
       print('type(subset) ',type(subset));
       #print('subset ',subset);
-      print("dir(subset) ",dir(subset))
-      print('str(subset) ',str(subset));
-      subsetStr=print('subset ',subset);
-      print("type(subsetStr) ",type(subsetStr))
+      #print("dir(subset) ",dir(subset))
+      #print('str(subset) ',str(subset));
+      #subsetStr=print('subset ',subset);
+      #print("type(subsetStr) ",type(subsetStr))
       view=json.load(subsetStr) ;  
-      view1=json.load(subset) ;     
+      view1=json.load(subset) ;   
+      print("intermediary ----------------- ",view)
 """      
 customer_service = google_ads_client.get_service('CustomerService', version='v3')      
 accessible_customers = customer_service.list_accessible_customers()
