@@ -163,7 +163,7 @@ print('response',response)
 #for subset in response:
       #print('subset ',subset)
       #print("subset['Campaign'] ",subset['Campaign'])
-view=json.load(response);
+#view=json.load(response);
 #print(response);
       
 
