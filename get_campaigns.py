@@ -131,7 +131,7 @@ for subset in response:
       #print('str(subset) ',str(subset));
       print("dir(subset) ",dir(subset))
       print('str(subset)[0] ',str(subset)[0]);
-      print("str(subset)['result'] ",str(subset)['result']);      
+      #print("str(subset)['result'] ",str(subset)['result']);      
       #subsetStr=type(subset);
       print("type(subsetStr) ",type(subsetStr));
       #view=json.loads(subsetStr) ; 
@@ -163,7 +163,7 @@ response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
 for subset in response:
       #print('subset ',subset)
-      print("str(subset)['result'] ",str(subset)['result']);
+      #print("str(subset)['result'] ",str(subset)['result']);
       print("str(subset)['Campaign'] ",str(subset)['Campaign']); 
       #print("subset['Campaign'] ",subset['Campaign'])
 #view=json.load(response);
