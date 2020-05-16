@@ -130,11 +130,12 @@ for subset in response:
       #print('str(subset) ',str(subset));
       #subsetStr=print('subset ',subset);
       #print("type(subsetStr) ",type(subsetStr))
-      #view=json.load(subsetStr) ; 
+      #view=json.loads(subsetStr) ; 
       #print("view ",view);
       print("kooiiiiiiiiiiiiiiiiiiiiiiiiiii0")
-      view1=json.load(subset);
-      print("view1 ",view1)
+      #view1=json.loads(subset);
+      #print("view1 ",view1)
+      loadit=json.loads(subset);
       print("intermediary ----------------- ")
 """      
 customer_service = google_ads_client.get_service('CustomerService', version='v3')      
