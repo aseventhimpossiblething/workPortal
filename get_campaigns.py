@@ -131,17 +131,18 @@ for subset in response:
       #print('str(subset) ',str(subset));
       print("dir(subset) ",dir(subset))
       print('str(subset)[0] ',str(subset)[0]);
-      subsetStr=type(subset);
-      print("type(subsetStr) ",type(subsetStr))
+      print('str(subset)['result'] ',str(subset)['result']);      
+      #subsetStr=type(subset);
+      print("type(subsetStr) ",type(subsetStr));
       #view=json.loads(subsetStr) ; 
       #print("view ",view);
-      print("kooiiiiiiiiiiiiiiiiiiiiiiiiiii0")
+      print("kooiiiiiiiiiiiiiiiiiiiiiiiiiii0");
       #view1=json.loads(subset);
       #print("view1 ",view1)
       #loadit=json.loads(subset);
       #json.dumps(subset);
       #json.dump(subset);
-      print("intermediary ----------------- ")
+      print("intermediary ----------------- ");
 """      
 customer_service = google_ads_client.get_service('CustomerService', version='v3')      
 accessible_customers = customer_service.list_accessible_customers()
