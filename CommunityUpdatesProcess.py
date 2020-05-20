@@ -269,10 +269,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   hilecount=MaintatanceVar;
  while count < hilecount:
   
-  if str(NewDataFrame['City']).find(str(NewDataFrame['Community Name']))>-1:
-  #NewDataFrame['City'].find(NewDataFrame['City']);
-     NewDataFrame['City'].find(NewDataFrame['Community Name'])
-     print("Community Name",NewDataFrame['Community Name'],":::City - ",NewDataFrame['City'])
+  if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1:
+    #NewDataFrame['City'].find(NewDataFrame['City']);
+    #NewDataFrame['City'][count].find(NewDataFrame['Community Name'][count])
+    print("finding Community name error Cycle 1")
+    #print("Cycle 1")
+    print("Community Name",NewDataFrame['Community Name'][count],":::City - ",NewDataFrame['City'][count])
     
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
@@ -281,12 +283,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower()
   URL_Struct1=URL_Struct1.replace("'","");
   
-  print("finding Community name error ")
-  print("NewDataFrame['City'] ",NewDataFrame['City'])
-  if str(NewDataFrame['City']).find(str(NewDataFrame['Community Name']))>-1:
+  print("finding Community name error Cycle 2")
+  #print("NewDataFrame['City'] ",NewDataFrame['City'])
+  if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1:
   #NewDataFrame['City'].find(NewDataFrame['City']);
-     NewDataFrame['City'].find(NewDataFrame['Community Name'])
-     print("Community Name",NewDataFrame['Community Name'],":::City - ",NewDataFrame['City'])
+     #NewDataFrame['City'].find(NewDataFrame['Community Name'])
+     print("Community Name",NewDataFrame['Community Name'][count],":::City - ",NewDataFrame['City'][count])
     
   try:
    if SearchChan=="google":
