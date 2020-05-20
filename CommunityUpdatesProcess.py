@@ -77,7 +77,7 @@ def WorkingBing():
 def filterNonParticipators(theFrame):
  
  def firstDropLoop(theFrame):
-  DropRowsContaining=['Clayton','Oakwood','Craftmark','Freedom','Crossland','del Webb','Webb','webb','G & I','Build on Your Lot'];
+  DropRowsContaining=['Custom','Oak Creek','Clayton','Oakwood','Craftmark','Freedom','Crossland','del Webb','Webb','webb','G & I','Build on Your Lot','BYOL'];
   
   DropLoopCount=0;
   while DropLoopCount<len(DropRowsContaining):
@@ -268,7 +268,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  if type(MaintatanceVar)=="<class 'int'>":
   hilecount=MaintatanceVar;
  while count < hilecount:
-  print("finding Community name error Cycle 1")
+  
+  #print("finding Community name error Cycle 1")
   if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1:
     print("Cycle 1")
     print("Community Name",NewDataFrame['Community Name'][count],":::City - ",NewDataFrame['City'][count])
@@ -280,8 +281,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower()
   URL_Struct1=URL_Struct1.replace("'","");
   
-  print("finding Community name error Cycle 2")
-  #print("NewDataFrame['City'] ",NewDataFrame['City'])
+  #print("finding Community name error Cycle 2")
   if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1:
      print("Cycle 2");
      print("Community Name",NewDataFrame['Community Name'][count],":::City - ",NewDataFrame['City'][count]);
