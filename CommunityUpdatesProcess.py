@@ -275,7 +275,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower()
   URL_Struct1=URL_Struct1.replace("'","");
   print("finding Community name error ")
-  if NewDataFrame['City'].find(NewDataFrame['Community Name'])>-1:
+  print("NewDataFrame['City'] ",NewDataFrame['City'])
+  if str(NewDataFrame['City']).find(str(NewDataFrame['Community Name']))>-1:
   #NewDataFrame['City'].find(NewDataFrame['City']);
      NewDataFrame['City'].find(NewDataFrame['Community Name'])
      print("Community Name",NewDataFrame['Community Name'],":::City - ",NewDataFrame['City'])
