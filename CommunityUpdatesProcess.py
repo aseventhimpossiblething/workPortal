@@ -268,18 +268,26 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  if type(MaintatanceVar)=="<class 'int'>":
   hilecount=MaintatanceVar;
  while count < hilecount:
+  
+  if str(NewDataFrame['City']).find(str(NewDataFrame['Community Name']))>-1:
+  #NewDataFrame['City'].find(NewDataFrame['City']);
+     NewDataFrame['City'].find(NewDataFrame['Community Name'])
+     print("Community Name",NewDataFrame['Community Name'],":::City - ",NewDataFrame['City'])
+    
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
             [count].replace(" ","-")+"/"+NewDataFrame['Community Name']\
             [count].replace(" ","-")+"-by-"+NewDataFrame['Brand Name']\
             [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower()
   URL_Struct1=URL_Struct1.replace("'","");
+  
   print("finding Community name error ")
   print("NewDataFrame['City'] ",NewDataFrame['City'])
   if str(NewDataFrame['City']).find(str(NewDataFrame['Community Name']))>-1:
   #NewDataFrame['City'].find(NewDataFrame['City']);
      NewDataFrame['City'].find(NewDataFrame['Community Name'])
      print("Community Name",NewDataFrame['Community Name'],":::City - ",NewDataFrame['City'])
+    
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc"
