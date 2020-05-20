@@ -351,7 +351,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             [count].replace(" ","-")+"/"+NewDataFrame['Community Name']\
             [count].replace(" ","-")+"-by-"+NewDataFrame['Brand Name']\
             [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower()
-  URL_Struct1=URL_Struct1.replace("'","")
+  URL_Struct1=URL_Struct1.replace("'","");
+  print("finding Community name error ")
+  if NewDataFrame['City'].find(NewDataFrame['Community Name'])>-1:
+  #NewDataFrame['City'].find(NewDataFrame['City']);
+     NewDataFrame['City'].find(NewDataFrame['Community Name'])
+     print("Community Name",NewDataFrame['Community Name'],":::City - ",NewDataFrame['City'])
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc"
