@@ -81,35 +81,35 @@ def filterNonParticipators(theFrame):
   
   DropLoopCount=0;
   while DropLoopCount<len(DropRowsContaining):
-   print("Drop while")
+   #print("Drop while")
    
    theFrame=theFrame.drop_duplicates();
-   print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
+   #print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
    theFrame=theFrame.dropna()
-   print("LengththeFrame=theFrame.dropna ",len(theFrame))
+   #print("LengththeFrame=theFrame.dropna ",len(theFrame))
    #print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
    
-   print("Drop while")
+   #print("Drop while")
    
    theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount])]
-   print("theFrame[~theFrame['Brand Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
+   #print("theFrame[~theFrame['Brand Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
    
-   print("Drop while")
+   #print("Drop while")
    
    theFrame=theFrame[~theFrame['Builder Name'].str.contains(DropRowsContaining[DropLoopCount])]
-   print("theFrame[~theFrame['Builder Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
+   #print("theFrame[~theFrame['Builder Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
    
-   print("Drop while")
+   #print("Drop while")
    
    theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount])]
-   print("theFrame[~theFrame['Community Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
+   #print("theFrame[~theFrame['Community Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
    
-   print("Drop while")
+   #print("Drop while")
    
    theFrame=theFrame.drop_duplicates(subset=['Community Name']);
-   print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
+   #print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
    DropLoopCount+=1;
-   print("end Drop while") 
+   #print("end Drop while") 
    
   return theFrame
  theFrame=firstDropLoop(theFrame)  
@@ -117,85 +117,7 @@ def filterNonParticipators(theFrame):
  
  
  
- 
- """
- theFrame=theFrame.drop_duplicates();
- print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
- 
- theFrame=theFrame.dropna()
- print("LengththeFrame=theFrame.dropna ",len(theFrame))
- #print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
- 
- theFrame=theFrame[~theFrame['Brand Name'].str.contains('Clayton')]
- print("theFrame[~theFrame['Brand Name'].str.contains('Clayton')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Brand Name'].str.contains('Oakwood')]
- print("theFrame[~theFrame['Brand Name'].str.contains('Oakwood')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Brand Name'].str.contains('Craftmark')]
- print("theFrame[~theFrame['Brand Name'].str.contains('Craftmark')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Builder Name'].str.contains('Clayton')]
- print("theFrame[~theFrame['Builder Name'].str.contains('Clayton')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Builder Name'].str.contains('Oakwood')]
- print("theFrame[~theFrame['Builder Name'].str.contains('Oakwood')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Builder Name'].str.contains('Craftmark')]
- print("theFrame[~theFrame['Builder Name'].str.contains('Craftmark')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Community Name'].str.contains('Clayton')]
- print("theFrame[~theFrame['Community Name'].str.contains('Clayton')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Community Name'].str.contains('Craftmark')]
- print("theFrame[~theFrame['Community Name'].str.contains('Craftmark')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Community Name'].str.contains('Oakwood')]
- print("theFrame[~theFrame['Community Name'].str.contains('Oakwood')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Brand Name'].str.contains('Freedom')]
- print("theFrame[~theFrame['Brand Name'].str.contains('Freedom')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Community Name'].str.contains('Freedom')]
- print("theFrame[~theFrame['Community Name'].str.contains('Freedom')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Builder Name'].str.contains('Freedom')]
- print("theFrame[~theFrame['Builder Name'].str.contains('Freedom')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Brand Name'].str.contains('Crossland')]
- print("theFrame[~theFrame['Brand Name'].str.contains('Crossland')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Community Name'].str.contains('Crossland')]
- print("theFrame[~theFrame['Community Name'].str.contains('Crossland')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Builder Name'].str.contains('Crossland')]
- print("theFrame[~theFrame['Builder Name'].str.contains('Crossland')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Brand Name'].str.contains('G & I')]
- print("theFrame[~theFrame['Brand Name'].str.contains('G & I'')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Community Name'].str.contains('G & I')]
- print("theFrame[~theFrame['Community Name'].str.contains('G & I')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Builder Name'].str.contains('G & I')]
- print("theFrame[~theFrame['Builder Name'].str.contains('G & I')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Brand Name'].str.contains('Build on Your Lot')]
- print("theFrame[~theFrame['Brand Name'].str.contains('Build on Your Lot)] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Community Name'].str.contains('Build on Your Lot')]
- print("theFrame[~theFrame['Community Name'].str.contains('Build on Your Lot')] ",len(theFrame))
- 
- theFrame=theFrame[~theFrame['Builder Name'].str.contains('Build on Your Lot')]
- print("theFrame[~theFrame['Builder Name'].str.contains('Build on Your Lot')] ",len(theFrame))
-
-
- theFrame=theFrame.drop_duplicates(subset=['Community Name']);
- print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
- """
- 
- 
- 
+  
  theFrame=theFrame.reset_index(drop=True) 
  #print(theFrame)
  failcounter=0 ;
@@ -245,9 +167,9 @@ def filterNonParticipators(theFrame):
     print("found in string ",DeDupArray.count(Community)," times");
     print("____________________________________________________")
     print("icount0 ",icount0)
-    print("theFrame size before drop ",len(theFrame))
+    #print("theFrame size before drop ",len(theFrame))
     theFrame=theFrame.drop([icount0])
-    print("theFrame size after drop ",len(theFrame))
+    #print("theFrame size after drop ",len(theFrame))
     print("____________________________________________________")
     
    
@@ -259,7 +181,7 @@ def filterNonParticipators(theFrame):
   icount0+=1; 
   
  theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name'])
- print("Length theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name']) ",len(theFrame))
+ #print("Length theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name']) ",len(theFrame))
 
   
  print("End of Filter ")
