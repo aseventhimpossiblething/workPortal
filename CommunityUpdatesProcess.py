@@ -170,8 +170,8 @@ def filterNonParticipators(theFrame):
  theFrame['Community Name']=DeDupArray
  print("times failed ",failcounter)
  icount0=0;
- print("Size of Community Name ",len(theFrame['Community Name']))
- print("Size of DeDupArray ",len(DeDupArray))
+ #print("Size of Community Name ",len(theFrame['Community Name']))
+ #print("Size of DeDupArray ",len(DeDupArray))
  while icount0<len(theFrame['Community Name']):
   #print(" just before failing try icount0= ",icount0)
   try:
@@ -466,14 +466,15 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Final_URL.append(URL_Struct1)
  
   
-    
+   Keyword_conv=Keyword_conv.replace("+++","+").replace("++","+");
    if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"  
-     
+   print("----------running label Check--------")  
    label="Created by WebApp "  
    Label.append(label);
    if str(NewDataFrame['City']).find(str(NewDataFrame['Community Name']))>-1 or str(NewDataFrame['Community Name']).find(str(NewDataFrame['City']))>-1:
       print("City = ",NewDataFrame['City'],"---- Community Name = ",NewDataFrame['Community Name']); 
+   print("----------Done label Check--------") 
    
   except:
    NewDataFrame=NewDataFrame.drop([count])
