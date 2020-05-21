@@ -459,7 +459,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      
    Label.append("Created by WebApp"");
    if str(NewDataFrame['City']).find(str(NewDataFrame['Community Name']))>-1 or str(NewDataFrame['Community Name']).find(str(NewDataFrame['City']))>-1:
-      print("City = ",NewDataFrame['City'],"---- Community Name = ",NewDataFrame['Community Name']) 
+      print("City = ",NewDataFrame['City'],"---- Community Name = ",NewDataFrame['Community Name']); 
    
   except:
    NewDataFrame=NewDataFrame.drop([count])
