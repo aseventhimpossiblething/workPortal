@@ -466,7 +466,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Final_URL.append(URL_Struct1)
  
   
-   Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+");.replace(" + + +","+")\
+   Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+").replace(" + + +","+")\
                   .replace("+ + + ","+").replace("++","+").replace("+ +","+").replace(" ++","+").replace("++ ","+")\
                   .replace(" + +","+").replace("+ + ","+");
    if len(Keyword_conv)<12:
