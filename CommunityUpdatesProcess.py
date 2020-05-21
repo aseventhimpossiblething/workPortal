@@ -279,6 +279,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  Path1B=[];
  Path2B=[];
  
+ Label=[];
+ 
  count=0;
  hilecount=len(NewDataFrame['Market ID']);
  Keyword_conv="none"; 
@@ -447,7 +449,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("and","&")
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
-   Final_URL.append(URL_Struct1) 
+   Final_URL.append(URL_Struct1)
+   Label.append("")
     
    if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"       
