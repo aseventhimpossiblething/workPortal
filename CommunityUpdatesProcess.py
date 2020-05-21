@@ -408,7 +408,15 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find(" ",2)]
    if len(Title1A_Name_Conv)< 20:
     Title1A_Name_Conv=Title1A_Name_Conv+" New Homes" 
-   Title1A.append(Title1A_Name_Conv)
+   Title1A.append(Title1A_Name_Conv);
+   
+   """
+   if Title1A_Name_Conv.find("!")>-1:
+      Title1B_Name_Conv=Title1A_Name_Conv.replace("!",".") 
+   
+   Title1B.append(Title1B_Name_Conv);
+   """
+   
    Title2A_conv=NewDataFrame['City'][count]
    if len(Title2A_conv)<12:
     Title2A_conv=Title2A_conv+" New Homes for sale"   
@@ -434,7 +442,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     PreTextA=PreTextA[:PreTextA.find("at")]
    
    
-   TextA.append(PreTextA)
+   TextA.append(PreTextA);
+   TextB.append(PreTextA+"!");
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
    if len(Path1A_conv)>15:
@@ -491,14 +500,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  GoogleAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
                 "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
  GoogleAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
-                "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
+                "Description":TextB,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
  GoogleAdFrameA=pandas.DataFrame(GoogleAdFrameA)
  GoogleAdFrameB=pandas.DataFrame(GoogleAdFrameB)
  BingKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Bid":Bid,"Labels":Label} 
  BingAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
                 "Text":TextA,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
  BingAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
-                "Text":TextA,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
+                "Text":TextB,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
  BingKWFrame=pandas.DataFrame(BingKWFrame)
  BingAdFrameA=pandas.DataFrame(BingAdFrameA)
  BingAdFrameB=pandas.DataFrame(BingAdFrameB)
