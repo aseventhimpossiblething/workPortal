@@ -456,8 +456,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"  
      
-     
-   Label.append("Created by WebApp"");
+   label="Created by WebApp "  
+   Label.append(label);
    if str(NewDataFrame['City']).find(str(NewDataFrame['Community Name']))>-1 or str(NewDataFrame['Community Name']).find(str(NewDataFrame['City']))>-1:
       print("City = ",NewDataFrame['City'],"---- Community Name = ",NewDataFrame['Community Name']); 
    
