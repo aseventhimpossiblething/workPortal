@@ -450,11 +450,17 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
    Final_URL.append(URL_Struct1)
-   Label.append("")
+ 
+  
     
    if len(Keyword_conv)<12:
-      Keyword_conv=Keyword_conv+" Community"       
-        
+      Keyword_conv=Keyword_conv+" Community"  
+     
+     
+   Label.append("");
+   if str(NewDataFrame['City']).find(str(NewDataFrame['Community Name']))>-1 or str(NewDataFrame['Community Name']).find(str(NewDataFrame['City']))>-1:
+      print("City = ",NewDataFrame['City'],"---- Community Name = ",NewDataFrame['Community Name']) 
+   
   except:
    NewDataFrame=NewDataFrame.drop([count])
   count+=1;
