@@ -468,7 +468,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   
    Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+").replace(" + + +","+")\
                   .replace("+ + + ","+").replace("++","+").replace("+ +","+").replace(" ++","+").replace("++ ","+")\
-                  .replace(" + +","+").replace("+ + ","+");
+                  .replace(" + +","+").replace("+ + ","+").replace("+–","+").replace("+– ","+")\
+                  .replace(" +–","+").replace(" +– ","+").replace(" +– +","+").replace("+– + ","+");
    if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"  
    print("----------running label Check--------")  
