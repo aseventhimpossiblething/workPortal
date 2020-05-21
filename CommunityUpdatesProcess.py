@@ -77,7 +77,8 @@ def WorkingBing():
 def filterNonParticipators(theFrame):
  
  def firstDropLoop(theFrame):
-  DropRowsContaining=['Custom','Oak Creek','Clayton','Oakwood','Craftmark','Freedom','Crossland','del Webb','Webb','webb','G & I','Build on Your Lot','BYOL'];
+  DropRowsContaining=['Oak Creek','Custom','Oak Creek','Clayton','Oakwood','Craftmark','Freedom','Crossland','del Webb','Webb','webb','G & I','Build on Your Lot','BYOL','Build','build'];
+  DropRowsContaining=DropRowsContaining+DropRowsContaining.lower()+DropRowsContaining.upper()
   
   DropLoopCount=0;
   while DropLoopCount<len(DropRowsContaining):
@@ -92,22 +93,31 @@ def filterNonParticipators(theFrame):
    #print("Drop while")
    
    theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount])]
+   theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
+   theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
    #print("theFrame[~theFrame['Brand Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
    
    #print("Drop while")
    
    theFrame=theFrame[~theFrame['Builder Name'].str.contains(DropRowsContaining[DropLoopCount])]
+   theFrame=theFrame[~theFrame['Builder Name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
+   theFrame=theFrame[~theFrame['Builder Name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
    #print("theFrame[~theFrame['Builder Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
    
    #print("Drop while")
    
    theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount])]
+   theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
+   theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
    #print("theFrame[~theFrame['Community Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
    
    #print("Drop while")
    
    theFrame=theFrame.drop_duplicates(subset=['Community Name']);
    #print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
+   
+   
+   
    DropLoopCount+=1;
    #print("end Drop while") 
    
@@ -164,14 +174,14 @@ def filterNonParticipators(theFrame):
    
    if DeDupArray.count(Community)>1:
     #print("Inside second loop (if) predicted fail")
-    print("found in string ",DeDupArray.count(Community)," times");
-    print("____________________________________________________")
-    print("icount0 ",icount0)
+    #print("found in string ",DeDupArray.count(Community)," times");
+    #print("____________________________________________________")
+    #print("icount0 ",icount0)
     #print("theFrame size before drop ",len(theFrame))
     theFrame=theFrame.drop([icount0])
     #print("theFrame size after drop ",len(theFrame))
-    print("____________________________________________________")
-    
+    #print("____________________________________________________")
+   
    
   except:
    print("Second Loop failed Count ",icount0)
@@ -182,6 +192,15 @@ def filterNonParticipators(theFrame):
   
  theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name'])
  #print("Length theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name']) ",len(theFrame))
+ 
+ 
+ """
+ print("New Loop to check Community against city  ");
+ CommunityVsCityCount=0;
+ while CommunityVsCityCount<len(theFrame['City']):
+  str(theFrame['City'][CommunityVsCityCount]).find
+ """ 
+ 
 
   
  print("End of Filter ")
@@ -269,10 +288,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   hilecount=MaintatanceVar;
  while count < hilecount:
   
+  """
   #print("finding Community name error Cycle 1")
   if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1:
     print("Cycle 1")
     print("Community Name",NewDataFrame['Community Name'][count],":::City - ",NewDataFrame['City'][count])
+  """  
     
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
@@ -280,12 +301,17 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             [count].replace(" ","-")+"-by-"+NewDataFrame['Brand Name']\
             [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower()
   URL_Struct1=URL_Struct1.replace("'","");
+  Keyword_conv=Keyword_conv=NewDataFrame['Community Name'][count]
+  if len(Keyword_conv)<12:
+      Keyword_conv=Keyword_conv+" Community"
   
+  """
   #print("finding Community name error Cycle 2")
   if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1:
      print("Cycle 2");
      print("Community Name",NewDataFrame['Community Name'][count],":::City - ",NewDataFrame['City'][count]);
-    
+  """
+  
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc"
@@ -293,7 +319,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     if MatchType=="SBMM":
      URL_Struct1=URL_Struct1+"403"
-     Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=Keyword_conv
+     #Keyword_conv=NewDataFrame['Community Name'][count]
      Keyword_conv=Keyword_conv.replace("&"," ")
      Keyword_conv=Keyword_conv.replace(" "," +")
      Keyword_conv=Keyword_conv.replace("+55+","55+")
@@ -337,7 +364,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      set_bid=.52;
     if MatchType=="SBMM":
      URL_Struct1=URL_Struct1+"202"
-     Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=Keyword_conv
+     #Keyword_conv=NewDataFrame['Community Name'][count]
      Keyword_conv=Keyword_conv.replace("&"," ")
      Keyword_conv=Keyword_conv.replace(" "," +")
      Keyword_conv=Keyword_conv.replace("+55+","55+")
@@ -421,7 +449,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path2A.append("New Homes")
    Final_URL.append(URL_Struct1) 
     
-          
+   if len(Keyword_conv)<12:
+      Keyword_conv=Keyword_conv+" Community"       
         
   except:
    NewDataFrame=NewDataFrame.drop([count])
