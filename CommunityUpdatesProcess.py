@@ -457,7 +457,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       Keyword_conv=Keyword_conv+" Community"  
      
      
-   Label.append("");
+   Label.append("Created by WebApp"");
    if str(NewDataFrame['City']).find(str(NewDataFrame['Community Name']))>-1 or str(NewDataFrame['Community Name']).find(str(NewDataFrame['City']))>-1:
       print("City = ",NewDataFrame['City'],"---- Community Name = ",NewDataFrame['Community Name']) 
    
@@ -465,7 +465,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    NewDataFrame=NewDataFrame.drop([count])
   count+=1;
   
- GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid} 
+ GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Label":Label} 
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
  GoogleAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
                 "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}
