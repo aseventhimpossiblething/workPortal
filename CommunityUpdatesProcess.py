@@ -84,16 +84,20 @@ def filterNonParticipators(theFrame):
       for word in words:
           lowerWords.append(word.lower());
       return lowerWords;
-  #LowDropRowsContaining(DropRowsContaining);
-  DropRowsContaining=DropRowsContaining+LowDropRowsContaining(DropRowsContaining);      
+  
+  def UpperDropRowsContaining(words):
+      upperWords=[]; 
+      words=words;
+      for word in words:
+          upperWords.append(word.upper());
+      return upperWords;
+ 
+  DropRowsContaining=DropRowsContaining+LowDropRowsContaining(DropRowsContaining)+UpperDropRowsContaining(DropRowsContaining);      
       
-  ['oak creek','custom','oak creek','clayton','oakwood','craftmark','freedom','crossland','del webb','webb','webb','g & i','build on your lot','byol','build','build'];
-  DropRowsContaining=DropRowsContaining+DropRowsContaining.lower()+DropRowsContaining.upper()
   
   DropLoopCount=0;
   while DropLoopCount<len(DropRowsContaining):
-   #print("Drop while")
-   
+      
    theFrame=theFrame.drop_duplicates();
    #print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
    theFrame=theFrame.dropna()
