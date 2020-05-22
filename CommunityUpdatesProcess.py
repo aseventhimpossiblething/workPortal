@@ -483,7 +483,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       print("City = ",NewDataFrame['City'],"---- Community Name = ",NewDataFrame['Community Name']); 
    else:
     
-    print("Not marked......City = ",NewDataFrame['City'][:5],":::: Community Name = ",NewDataFrame['Community Name']))
+    print("Not marked......City = ",NewDataFrame['City'][:5],":::: Community Name = ",NewDataFrame['Community Name'])
     print(str(NewDataFrame['City'][:5]).find(str(NewDataFrame['Community Name'])))
     print("---------------------------------------------------------------------------------------------------------")
   except:
