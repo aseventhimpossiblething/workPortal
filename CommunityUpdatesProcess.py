@@ -477,14 +477,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    label="Created by WebApp "  
    Label.append(label);
    
-   if str(NewDataFrame['City'][:5]).find(str(NewDataFrame['Community Name']))>-1:
-     print("City found in community","City = ",NewDataFrame['City'],"::: Community = ",NewDataFrame['Community Name']);
-   if str(NewDataFrame['City']).find(str(NewDataFrame['Community Name']))>-1 or str(NewDataFrame['Community Name']).find(str(NewDataFrame['City']))>-1:
-      print("City = ",NewDataFrame['City'],"---- Community Name = ",NewDataFrame['Community Name']); 
+   if str(NewDataFrame['City'][count][:5]).find(str(NewDataFrame['Community Name'][count]))>-1:
+     print("City found in community","City = ",NewDataFrame['City'][count],"::: Community = ",NewDataFrame['Community Name'][count]);
+   if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1 or str(NewDataFrame['Community Name'][count]).find(str(NewDataFrame['City'][count]))>-1:
+      print("City = ",NewDataFrame['City'][count],"---- Community Name = ",NewDataFrame['Community Name'][count]); 
    else:
     
-    print("Not marked......City = ",NewDataFrame['City'][:5],":::: Community Name = ",NewDataFrame['Community Name'])
-    print(str(NewDataFrame['City'][:5]).find(str(NewDataFrame['Community Name'])))
+    print("Not marked......City = ",NewDataFrame['City'][count][:5],":::: Community Name = ",NewDataFrame['Community Name'][count])
+    print(str(NewDataFrame['City'][count][:5]).find(str(NewDataFrame['Community Name'][count])))
     print("---------------------------------------------------------------------------------------------------------")
   except:
    NewDataFrame=NewDataFrame.drop([count])
