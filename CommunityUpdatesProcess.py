@@ -304,12 +304,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   hilecount=MaintatanceVar;
  while count < hilecount:
   
-  """
-  #print("finding Community name error Cycle 1")
-  if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1:
-    print("Cycle 1")
-    print("Community Name",NewDataFrame['Community Name'][count],":::City - ",NewDataFrame['City'][count])
-  """  
+ 
     
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
@@ -321,13 +316,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
   
-  """
-  #print("finding Community name error Cycle 2")
-  if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1:
-     print("Cycle 2");
-     print("Community Name",NewDataFrame['Community Name'][count],":::City - ",NewDataFrame['City'][count]);
-  """
-  
+
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc"
@@ -493,7 +482,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if str(NewDataFrame['City']).find(str(NewDataFrame['Community Name']))>-1 or str(NewDataFrame['Community Name']).find(str(NewDataFrame['City']))>-1:
       print("City = ",NewDataFrame['City'],"---- Community Name = ",NewDataFrame['Community Name']); 
    else:
+    
     print("Not marked......City = ",NewDataFrame['City'][:5],":::: Community Name = ",NewDataFrame['Community Name']))
+    print(str(NewDataFrame['City'][:5]).find(str(NewDataFrame['Community Name'])))
     print("---------------------------------------------------------------------------------------------------------")
   except:
    NewDataFrame=NewDataFrame.drop([count])
