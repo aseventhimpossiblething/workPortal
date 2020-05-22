@@ -481,16 +481,20 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                   .replace(" +–","+").replace(" +– ","+").replace(" +– +","+").replace("+– + ","+");
    
    if len(Keyword_conv)<12:
-      Keyword_conv=Keyword_conv+" Community"  
+      Keyword_conv=Keyword_conv+" Community"
+      print(Keyword_conv);
+     
    print("----------label Check--------")  
    label="Created by WebApp "  
    Label.append(label);
+   
    if str(NewDataFrame['City'][:5]).find(str(NewDataFrame['Community Name']))>-1:
      print("City found in community","City = ",NewDataFrame['City'],"::: Community = ",NewDataFrame['Community Name']);
    if str(NewDataFrame['City']).find(str(NewDataFrame['Community Name']))>-1 or str(NewDataFrame['Community Name']).find(str(NewDataFrame['City']))>-1:
       print("City = ",NewDataFrame['City'],"---- Community Name = ",NewDataFrame['Community Name']); 
-   
-   
+   else:
+    print("Not marked......City = ",NewDataFrame['City'][:5],":::: Community Name = ",NewDataFrame['Community Name']))
+    print("---------------------------------------------------------------------------------------------------------")
   except:
    NewDataFrame=NewDataFrame.drop([count])
   count+=1;
