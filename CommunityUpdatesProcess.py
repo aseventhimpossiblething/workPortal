@@ -480,7 +480,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    label="Created by WebApp "  
    #Label.append(label);
    
-   city=str(NewDataFrame['City'][count][:5]).lower();
+   city=str(NewDataFrame['City'][count][:3]).lower();
    community=str(NewDataFrame['Community Name'][count]).lower();
    
    #print("One by one City ",city);
