@@ -478,16 +478,17 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Label.append(label);
    
    if str(NewDataFrame['City'][count][:5]).find(str(NewDataFrame['Community Name'][count]))>-1:
+     print("If City is in Community")
      print("City found in community","City = ",NewDataFrame['City'][count],"::: Community = ",NewDataFrame['Community Name'][count]);
      print("----------------------------------------------------------------------------------------------------------------------------")
    if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1 or str(NewDataFrame['Community Name'][count]).find(str(NewDataFrame['City'][count]))>-1:
+     print("If city is in community or community in city")
      print("City = ",NewDataFrame['City'][count],"---- Community Name = ",NewDataFrame['Community Name'][count]); 
      print("----------------------------------------------------------------------------------------------------------------------------")
-   else:
-    
-    print("Not marked......City = ",NewDataFrame['City'][count][:5],":::: Community Name = ",NewDataFrame['Community Name'][count])
-    print(str(NewDataFrame['City'][count][:5]).find(str(NewDataFrame['Community Name'][count])))
-    print("-------------------------")
+   #else:
+    #print("Not marked......City = ",NewDataFrame['City'][count][:5],":::: Community Name = ",NewDataFrame['Community Name'][count])
+    #print(str(NewDataFrame['City'][count][:5]).find(str(NewDataFrame['Community Name'][count])))
+    #print("-------------------------")
   except:
    NewDataFrame=NewDataFrame.drop([count])
   count+=1;
