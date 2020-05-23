@@ -470,7 +470,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                   .replace(" +–","+").replace(" +– ","+").replace(" +– +","+").replace("+– + ","+");
    
    
-   if len(Keyword_conv)<12:
+   if len(Keyword_conv)<10:
       Keyword_conv=Keyword_conv+" Community"
       #print(Keyword_conv);
    Keyword.append(Keyword_conv);   
@@ -482,7 +482,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
    city=str(NewDataFrame['City'][count][:5]).lower();
    community=str(NewDataFrame['Community Name'][count]).lower();
-   #print("every community ",community)
+   print("One by one City ",city);
+   print("One by one Community ",community)
    
    if city.find(community)>-1:
    #if str(NewDataFrame['City'][count][:5]).lower().find(str(NewDataFrame['Community Name'][count]))>-1:
