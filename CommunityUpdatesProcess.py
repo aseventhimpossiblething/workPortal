@@ -484,7 +484,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #if str(NewDataFrame['City'][count][:5]).lower().find(str(NewDataFrame['Community Name'][count]))>-1:
      print("City is in Community")
      #print("City found in community","City = ",NewDataFrame['City'][count],"::: Community = ",NewDataFrame['Community Name'][count]);
-     print("City found in community","City = ",city,"::: Community = ",community;
+     print("City found in community","City = ",city,"::: Community = ",community);
      print("----------------------------------------------------------------------------------------------------------------------------")
    if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1 or str(NewDataFrame['Community Name'][count]).find(str(NewDataFrame['City'][count]))>-1:
      print("If city is in community or community in city")
