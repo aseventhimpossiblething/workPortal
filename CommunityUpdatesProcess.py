@@ -477,7 +477,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      
    
    #print("----------label Check--------")  
-   label="Created by WebApp "  
+   label="Created by WebApp"  
    #Label.append(label);
    
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
