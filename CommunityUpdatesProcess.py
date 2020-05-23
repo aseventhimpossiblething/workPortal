@@ -481,7 +481,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #Label.append(label);
    
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
-   wordBoundry=city.find(" ");
+   wordBoundry=(city.find(" "))+1;
    city=city[:wordBoundry];
    
    
