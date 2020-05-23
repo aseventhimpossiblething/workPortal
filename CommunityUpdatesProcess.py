@@ -478,12 +478,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
    print("----------label Check--------")  
    label="Created by WebApp "  
-   Label.append(label);
+   #Label.append(label);
    
    city=str(NewDataFrame['City'][count][:5]).lower();
    community=str(NewDataFrame['Community Name'][count]).lower();
-   print("One by one City ",city);
-   print("One by one Community ",community)
+   
+   #print("One by one City ",city);
+   #print("One by one Community ",community)
    #print("city.find(community) ",city.find(community))
    
    if community.find(city)>-1:
@@ -491,15 +492,18 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      print("City is in Community")
      #print("City found in community","City = ",NewDataFrame['City'][count],"::: Community = ",NewDataFrame['Community Name'][count]);
      print("City found in community","City = ",city,"::: Community Name = ",community);
+     label=label+";City Name as Part of Community Name "
      print("----------------------------------------------------------------------------------------------------------------------------")
-   if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1 or str(NewDataFrame['Community Name'][count]).find(str(NewDataFrame['City'][count]))>-1:
-     print("If city is in community or community in city")
-     print("City = ",NewDataFrame['City'][count],"---- Community Name = ",NewDataFrame['Community Name'][count]); 
-     print("----------------------------------------------------------------------------------------------------------------------------")
+   #if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1 or str(NewDataFrame['Community Name'][count]).find(str(NewDataFrame['City'][count]))>-1:
+   #  print("If city is in community or community in city")
+   #  print("City = ",NewDataFrame['City'][count],"---- Community Name = ",NewDataFrame['Community Name'][count]); 
+   #  print("----------------------------------------------------------------------------------------------------------------------------")
    #else:
     #print("Not marked......City = ",NewDataFrame['City'][count][:5],":::: Community Name = ",NewDataFrame['Community Name'][count])
     #print(str(NewDataFrame['City'][count][:5]).find(str(NewDataFrame['Community Name'][count])))
     #print("-------------------------")
+   
+   Label.append(label);
   except:
    NewDataFrame=NewDataFrame.drop([count])
   count+=1;
