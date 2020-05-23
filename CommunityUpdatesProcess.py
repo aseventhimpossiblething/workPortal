@@ -477,9 +477,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    label="Created by WebApp "  
    Label.append(label);
    
-   if str(NewDataFrame['City'][count][:5]).find(str(NewDataFrame['Community Name'][count]))>-1:
-     print("If City is in Community")
-     print("City found in community","City = ",NewDataFrame['City'][count],"::: Community = ",NewDataFrame['Community Name'][count]);
+   city=str(NewDataFrame['City'][count][:5]).lower();
+   community=str(NewDataFrame['Community Name'][count]).lower();
+   
+   if city.find(community)>-1:
+   #if str(NewDataFrame['City'][count][:5]).lower().find(str(NewDataFrame['Community Name'][count]))>-1:
+     print("City is in Community")
+     #print("City found in community","City = ",NewDataFrame['City'][count],"::: Community = ",NewDataFrame['Community Name'][count]);
+     print("City found in community","City = ",city,"::: Community = ",community;
      print("----------------------------------------------------------------------------------------------------------------------------")
    if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1 or str(NewDataFrame['Community Name'][count]).find(str(NewDataFrame['City'][count]))>-1:
      print("If city is in community or community in city")
