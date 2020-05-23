@@ -386,7 +386,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Campaign_Name.append(Campaign_Nameing_Conv);
    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
    Adgroup.append(AdgroupNaming_conv)
-   Keyword.append(Keyword_conv)
+   #Keyword.append(Keyword_conv)
    Match_Type.append(MatchType_Conv)
    Status.append("Active")
    Bid.append(set_bid)
@@ -469,22 +469,26 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                   .replace(" + +","+").replace("+ + ","+").replace("+–","+").replace("+– ","+")\
                   .replace(" +–","+").replace(" +– ","+").replace(" +– +","+").replace("+– + ","+");
    
+   
    if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
-      print(Keyword_conv);
+      #print(Keyword_conv);
+   Keyword.append(Keyword_conv);   
      
+   
    print("----------label Check--------")  
    label="Created by WebApp "  
    Label.append(label);
    
    city=str(NewDataFrame['City'][count][:5]).lower();
    community=str(NewDataFrame['Community Name'][count]).lower();
+   #print("every community ",community)
    
    if city.find(community)>-1:
    #if str(NewDataFrame['City'][count][:5]).lower().find(str(NewDataFrame['Community Name'][count]))>-1:
      print("City is in Community")
      #print("City found in community","City = ",NewDataFrame['City'][count],"::: Community = ",NewDataFrame['Community Name'][count]);
-     print("City found in community","City = ",city,"::: Community = ",community);
+     print("City found in community","City = ",city,"::: Community Name = ",community);
      print("----------------------------------------------------------------------------------------------------------------------------")
    if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1 or str(NewDataFrame['Community Name'][count]).find(str(NewDataFrame['City'][count]))>-1:
      print("If city is in community or community in city")
