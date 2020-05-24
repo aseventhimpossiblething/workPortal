@@ -67,8 +67,8 @@ def BidOpFileHandler():
     #print('BidOpSeed.xlsx')
     request.files['sheet'].save("Temp.xlsx")
     Temp=pandas.read_excel('Temp.xlsx')
-    #print("os.listdir()")
-    #print(os.listdir())
+    print("Temp 1")
+    print(Temp)
     record_async_start=open("ForestLoadingQueue.txt","w")
     #print("async open and read")    
     #print(record_async_start.read())
@@ -149,7 +149,11 @@ def BidOpFileHandler():
                 
            record_async_start=open("ForestLoadingQueue.txt","w")
            record_async_start.write("100%")
-           record_async_start.close();     
+           record_async_start.close();  
+           
+           print("Temp 2")
+           print(Temp)
+                
            
            return "<html><a href='/BasisOfBids'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet</a></html>"
       
