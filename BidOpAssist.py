@@ -101,7 +101,9 @@ def percentIncrease(OldBid,NewBid):
     return change;
     
 
-def percentChangeColumn(frame):
+def percentChangeColumn(frame,colName):
+    NewBid=colName;
+    NewBid=frame[colName];
     #print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!percentChangeColumn is running ")
     #change=change;
     #print(change);
@@ -110,6 +112,21 @@ def percentChangeColumn(frame):
     #print('frame',frame);
     OldBid=frame['Bid'];
     NewBid=frame['New Bid'];
+    count=0;
+    for i in OldBid:
+        percentChangeCol.append(percentIncrease(OldBid[count],NewBid[count]));
+        count+=1;
+    return percentChangeCol;
+
+def impressionPercentChangeColumn(frame):
+    #print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!percentChangeColumn is running ")
+    #change=change;
+    #print(change);
+    percentChangeCol=[];
+    frame=frame;
+    #print('frame',frame);
+    OldBid=frame['Bid'];
+    NewBid=frame['Impression Metrics Based Bid'];
     count=0;
     for i in OldBid:
         percentChangeCol.append(percentIncrease(OldBid[count],NewBid[count]));
@@ -147,8 +164,19 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     Seed=Seed.replace('>','').replace('<','').replace('%','').replace("-",0).fillna(0).replace("--",0).fillna(0).replace(" --",0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
     XofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
     YofSeed=Seed[PredVar];
+    
+    #ImpressionMetricXofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
+    #ImpressionMetricYofSeed=Seed[PredVar];
+    
+    ImpressionMetricXofSeed=Seed.drop(['Campaign','Ad group','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate',PredVar],axis=1);
+    ImpressionMetricYofSeed=Seed[PredVar];
+          
+    
     Model=RandomForestRegressor();
-    Model.fit(XofSeed,YofSeed)
+    Model.fit(XofSeed,YofSeed);
+    
+    ImpressionModel=RandomForestRegressor();
+    ImpressionModel.fit(ImpressionMetricXofSeed,ImpressionMetricYofSeed);
     
     Temp=Temp.replace('>','').replace('<','').replace('%','').replace('-',0).fillna(0).replace('--',0).fillna(0).replace(' --',0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
      
@@ -158,8 +186,10 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     
     
    
-    print("Temp columns -- ",Temp.columns.values)
+    #print("Temp columns -- ",Temp.columns.values)
     
+    #ImpressionMetricXofSeed=Seed.drop(['Campaign','Ad group','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate',PredVar],axis=1);
+    #ImpressionMetricYofSeed=Seed[PredVar];
           
     
         
@@ -167,23 +197,26 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols);
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1);
+    TempForOutPutImpression=TempForOutPut.drop(['Campaign','Ad group','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate',PredVar],axis=1);
     
     
     #print(TempForOutPut)
-    print(TempForOutPut[[TempForOutPut.columns.values[0],TempForOutPut.columns.values[1],\
-                         TempForOutPut.columns.values[2],TempForOutPut.columns.values[3]]])
+    #print(TempForOutPut[[TempForOutPut.columns.values[0],TempForOutPut.columns.values[1],\
+                         #TempForOutPut.columns.values[2],TempForOutPut.columns.values[3]]])
     
-    print("4")
-    print(Temp)
+    #print("4")
+    #print(Temp)
     
     OutputBid=Model.predict(TempForOutPut); 
- 
+    ImpressionOutputBid=ImpressionModel.predict(TempForOutPutImpression)
    
     Temp[PredVar]=OutputBid;
+    Temp['Impression Metrics Based Bid']=ImpressionOutputBid
     #print("-------***************prep for change seq*****************-----------------")
     #print(change);
     #if change=='Change':
-    Temp['Change']=percentChangeColumn(Temp);
+    Temp['Change']=percentChangeColumn(Temp,'New Bid');
+    Temp['Impression Metrics Based Change']=percentChangeColumn(Temp,'Impression Metrics Based Bid')
     
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(Temp)
