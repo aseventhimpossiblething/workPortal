@@ -88,7 +88,9 @@ def BidOpFileHandler():
         
     designated_Columns=['Campaign','Ad group','Keyword','Impr.','Match type',target_Variable,'Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']         
     core_cols=['Campaign','Ad group','Impr.',target_Variable,'Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
-   
+    
+    print('target_variable',target_variable);
+        
     isGoog1=str(Temp.columns).find('Cost')
     isGoog2=str(Temp.columns).find('Conversions')
     Temp=googConverter(Temp)
@@ -105,7 +107,7 @@ def BidOpFileHandler():
       
        def TrainingSheetBehavior(x,x2,Temp):
            print('async started')
-           print(x)
+           #print(x)
            designated_Columns=x
            core_cols=x2   
            Temp=Temp     
@@ -117,7 +119,7 @@ def BidOpFileHandler():
          
            #Temp=googConverter(Temp)     
            rowCheck=rowcheck(Temp,designated_Columns)     
-           print(len(rowCheck)," ",rowCheck); 
+           #print(len(rowCheck)," ",rowCheck); 
            if len(rowCheck)>0:
                 os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
                 rowCheck=str(rowCheck)
@@ -153,7 +155,7 @@ def BidOpFileHandler():
       
        TrainLoad=threading.Thread(target=TrainingSheetBehavior, args=[designated_Columns, core_cols,Temp]);
        TrainLoad.start(); 
-       print("is there an attempt to return")
+       #print("is there an attempt to return")
        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOpPending'><html>did not forward</html>"
        
     else:
