@@ -232,12 +232,13 @@ def BidOpOverview(desiCols,corecols,change,Temp):
        
     #Temp=Temp[['Change']]
     #Temp=Temp[['Change']]
-    #Temp.to_csv("outputsheet.xlsx");
+    Temp.to_csv("outputsheet.csv");
     
-    Temp[:5000].to_excel("outputsheet.xlsx");
+    #Temp.to_excel("outputsheet.xlsx");
     print("7")
     print("Should be after Temp to excel");
-    print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"));
+    #print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"));
+    print("outputsheet.csv ",pandas.read_csv("outputsheet.csv"));
     print('end of overview');
     
     record_async_start=open("ForestLoadingQueue.txt","w");
