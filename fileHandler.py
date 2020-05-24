@@ -89,7 +89,7 @@ def BidOpFileHandler():
     designated_Columns=['Campaign','Ad group','Keyword','Impr.','Match type',target_Variable,'Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']         
     core_cols=['Campaign','Ad group','Impr.',target_Variable,'Match Number','Market Number','Bid','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
     
-    print('target_variable',target_variable);
+    print('target_Variable',target_Variable);
         
     isGoog1=str(Temp.columns).find('Cost')
     isGoog2=str(Temp.columns).find('Conversions')
