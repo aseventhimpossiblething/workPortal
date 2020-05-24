@@ -197,7 +197,7 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols);
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1);
-    TempForOutPutImpression=TempForOutPut.drop(['Campaign','Ad group','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate',PredVar],axis=1);
+    TempForOutPutImpression=TempForOutPut.drop(['Campaign','Ad group','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate'],axis=1);
     
     
     #print(TempForOutPut)
