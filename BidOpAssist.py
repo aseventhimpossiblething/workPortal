@@ -11,6 +11,7 @@ import pandas
 import re
 from sklearn.ensemble import RandomForestRegressor
 
+
 def googConverterReverse(X):
     print("_______________________________________________")
     print("GoogConverterReverse Running")    
@@ -117,7 +118,7 @@ def percentChangeColumn(frame,colName):
         percentChangeCol.append(percentIncrease(OldBid[count],NewBid[count]));
         count+=1;
     return percentChangeCol;
-
+"""
 def impressionPercentChangeColumn(frame):
     #print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!percentChangeColumn is running ")
     #change=change;
@@ -132,6 +133,7 @@ def impressionPercentChangeColumn(frame):
         percentChangeCol.append(percentIncrease(OldBid[count],NewBid[count]));
         count+=1;
     return percentChangeCol;
+"""    
     
 
 
@@ -230,7 +232,9 @@ def BidOpOverview(desiCols,corecols,change,Temp):
        
     #Temp=Temp[['Change']]
     #Temp=Temp[['Change']]
-    Temp.to_excel("outputsheet.xlsx");
+    Temp.to_csv("outputsheet.xlsx");
+    
+    #Temp.to_excel("outputsheet.xlsx");
     print("7")
     print("Should be after Temp to excel");
     print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"));
