@@ -484,6 +484,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
    wordBoundry=(city.find(" "))+1;
    wordstart=0;
+   """
    if wordBoundry==0:
     wordstart=1;
     print("0 in city=",city[0])
@@ -496,6 +497,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     city=city[:wordBoundry]
     print("0 in city=",city[0])
     print("1 in city=",city[1])
+   """
    #city=city[wordstart:];
    wordBoundry=(city.find(" "))+1;
    print("City=",city)
