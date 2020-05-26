@@ -483,7 +483,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    lenCity=int(len(city));
    
    if lenCommunity==lenCity or community.find(city)==1:
-   if community.find(city)==-1:or lenCommunity==lenCity:
+   #if community.find(city)==-1:or lenCommunity==lenCity:
       print("community= ",community," ",len(community));
       print("city= ",city," ",len(city));
       lenCommunity=len(community);
