@@ -478,9 +478,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
    community=str(NewDataFrame['Community Name'][count]).lower();
    if community.find(city)!=1:
-      print("community ",community);
-      print("city ",city);
-      print("community==city ",communty==city);
+      print("community= ",community);
+      print("city= ",city);
+      #print("community==city ",communty==city);
    Keyword.append(Keyword_conv);   
      
    
@@ -489,7 +489,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #Label.append(label);
    
    #cityprime=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
-   city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
+   #city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
    #wordBoundry=(city.find(" "));
    #wordstart=0;
    """
