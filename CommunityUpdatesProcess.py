@@ -123,6 +123,7 @@ def filterNonParticipators(theFrame):
    theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount])]
    theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
    theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
+   #theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[])]
    #print("theFrame[~theFrame['Community Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
    
    #print("Drop while")
@@ -477,7 +478,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
    community=str(NewDataFrame['Community Name'][count]).lower();
-   if community.find(city)!=1:
+   if community.find(city)!=-1:
       print("community= ",community);
       print("city= ",city);
       #print("community==city ",communty==city);
