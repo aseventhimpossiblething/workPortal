@@ -470,9 +470,17 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                   .replace(" +–","+").replace(" +– ","+").replace(" +– +","+").replace("+– + ","+");
    
    
+   
    if len(Keyword_conv)<10:
       Keyword_conv=Keyword_conv+" Community"
       #print(Keyword_conv);
+      
+   city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
+   community=str(NewDataFrame['Community Name'][count]).lower();
+   if community.find(city)!=1:
+      print("community ",community);
+      print("city ",city);
+      print("community==city ",communty==city);
    Keyword.append(Keyword_conv);   
      
    
@@ -480,9 +488,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    label="Created by WebApp"  
    #Label.append(label);
    
-   cityprime=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
+   #cityprime=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
-   wordBoundry=(city.find(" "));
+   #wordBoundry=(city.find(" "));
    #wordstart=0;
    """
    if wordBoundry==0:
@@ -503,19 +511,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #wordBoundry=(city.find(" "))+1;
    #print("City=",city)
    
-   
-   #city=str(NewDataFrame['City'][count][:3]).lower();
+   city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
    community=str(NewDataFrame['Community Name'][count]).lower();
-   
-   #print("One by one City ",city);
-   #print("One by one Community ",community)
-   #print("city.find(community) ",city.find(community))
-   
    if community.find(city)>-1:
    #if str(NewDataFrame['City'][count][:5]).lower().find(str(NewDataFrame['Community Name'][count]))>-1:
      print("City is in Community")
      #print("City found in community","City = ",NewDataFrame['City'][count],"::: Community = ",NewDataFrame['Community Name'][count]);
-     print("cityprime-",cityprime," location of Break in string-",wordBoundry,"  :::City found in community","City = ",city,"::: Community Name = ",community);
+     print(":::City found in community","City = ",city,"::: Community Name = ",community);
      label=label+";City Name as Part of Community Name"
      print("----------------------------------------------------------------------------------------------------------------------------")
    #if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1 or str(NewDataFrame['Community Name'][count]).find(str(NewDataFrame['City'][count]))>-1:
