@@ -481,7 +481,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if community.find(city)!=-1:
       print("community= ",community);
       print("city= ",city);
-      if communty==city:
+      if len(communty)==len(city):
          print("communityin (==case ) ",community);
          print("city= (==case ) ",city);
        
