@@ -744,14 +744,15 @@ def initialCommUpdatProcess():
  print("past  os.chdir fileHandler.currentBingLocation")
   
  
- TheSampleText=WorkingBingEOF
- TheSamplefile=open('TheSampleText.txt','w+') 
- TheSamplefile.write(TheSampleText.to_string())
- TheSamplefile.close()
+ #TheSampleText=WorkingBingEOF
+ #TheSamplefile=open('TheSampleText.txt','w+') 
+ #TheSamplefile.write(TheSampleText.to_string())
+ #TheSamplefile.close()
  print("past  sample file open and close");
  
  
  os.chdir(fileHandler.SheetsFileLocation);
+ print("past  os.chdir(fileHandler.SheetsFileLocation)");
  storeRequest=open('RequestsVsResponses.txt','a+')
  storeRequest.write("Response , ")
  storeRequest.close() 
