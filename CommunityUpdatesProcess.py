@@ -488,7 +488,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       print(int(lenCommunity))
       print(int(lenCity))
       
-      if lenCommunity==4:
+      if len(community)==4:
          print("Both equal");
          #print("community in ==case  ",community);
          #print("city ==case  ",city);
