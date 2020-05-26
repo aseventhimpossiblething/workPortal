@@ -486,11 +486,16 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    wordstart=0;
    if wordBoundry==0:
     wordstart=1;
+    print("0 in city=",city[0])
+    print("1 in city=",city[1])
     print("wordBoundry when wordBoundry=0 ",wordBoundry)
     print("city when wordBoundry=0 =",city) 
-    wordBoundry=city[wordstart:].find(" ")
+    wordBoundry=city[wordstart:].find(" ")+1;
     print("New wordBoundry number=",wordBoundry)
     print("New city when wordBoundry=0 =",city[:wordBoundry]) 
+    city=city[:wordBoundry]
+    print("0 in city=",city[0])
+    print("1 in city=",city[1])
    #city=city[wordstart:];
    wordBoundry=(city.find(" "))+1;
    print("City=",city)
