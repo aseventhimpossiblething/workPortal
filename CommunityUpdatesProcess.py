@@ -481,6 +481,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if community.find(city)!=-1:
       print("community= ",community," ",len(community));
       print("city= ",city," ",len(city));
+      lenCommunity=len(community);
+      lenCity=len(city);
+      print(type(lenCommunity));
+      print(type(lenCity));
+      print(int(lenCommunity))
+      print(int(lenCity))
       
       if 4==4:
          print("Both equal");
