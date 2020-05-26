@@ -483,8 +483,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    cityprime=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
    wordBoundry=(city.find(" "))+1;
-   city=city[:wordBoundry];
-   
+   wordstart=0;
+   if wordBoundry=0:
+    wordstart=1;
+   city=city[wordstart:wordBoundry];
+   wordBoundry=(city.find(" "))+1;
    
    
    #city=str(NewDataFrame['City'][count][:3]).lower();
