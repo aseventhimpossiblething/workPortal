@@ -486,7 +486,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    wordstart=0;
    if wordBoundry==0:
     wordstart=1;
-   city=city[wordstart:];
+    print("wordBoundry when wordBoundry=0 ",wordBoundry)
+    print("city when wordBoundry=0 ",city) 
+   #city=city[wordstart:];
    wordBoundry=(city.find(" "))+1;
    print("City=",city)
    
