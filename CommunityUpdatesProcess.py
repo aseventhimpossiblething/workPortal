@@ -482,7 +482,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    lenCommunity=int(len(community));
    lenCity=int(len(city));
    
-   if lenCommunity==lenCity or community.find(city)==1:
+   if lenCommunity!=lenCity or community.find(city)==-1:
    #if community.find(city)==-1:or lenCommunity==lenCity:
       print("community= ",community," ",len(community));
       print("city= ",city," ",len(city));
@@ -492,12 +492,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       print(type(lenCity));
       print(int(lenCommunity))
       print(int(lenCity))
-      
+      """
       if len(community)==len(city):
          print("Both equal");
          print("community in ==case  ",community);
          print("city ==case  ",city);
-       
+      """ 
       #print("community==city ",communty==city);
       
    Keyword.append(Keyword_conv);   
