@@ -109,9 +109,11 @@ def mlgn():
     return gencook
 
 @app.route('/l2', methods=['POST'])
-def mlgne(usr,pwd):
+def mlgne():
     usr=usr;
     pwd=pwd;
+    print(usr);
+    print(pwd);
     gencook=make_response("<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/'><html>did not forward</html>");
     x=request.form['BDXPPC'];
     y=request.form['#!!9ooRanch'];
