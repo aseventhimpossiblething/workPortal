@@ -110,14 +110,16 @@ def mlgn():
 
 @app.route('/l2', methods=['POST'])
 def mlgne():
+    global usr
     usr=usr;
+    global pwd
     pwd=pwd;
     print(usr);
     print(pwd);
     gencook=make_response("<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/'><html>did not forward</html>");
-    x=request.form['BDXPPC'];
-    y=request.form['#!!9ooRanch'];
-    if x=="BDXPPC" and y=="#!!9ooRanch":
+    x=request.form['username'];
+    y=request.form['password'];
+    if x=="BDXPPC" and y=="11900":
        print("pass"); 
        #gencook=make_response("<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/'><html>did not forward</html>");
        gencook.set_cookie(setCnam(),bdxcred());
