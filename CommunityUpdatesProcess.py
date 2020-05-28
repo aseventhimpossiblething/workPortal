@@ -385,7 +385,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       Keyword_conv=Keyword_conv+" Community"
      MatchType_Conv="Broad"
    Campaign_Name.append(Campaign_Nameing_Conv);
-   AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str(">")+str(NewDataFrame['Community Id'][count])           
+   AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name'][count])+str("_>")+str(NewDataFrame['Community Id'][count])           
    Adgroup.append(AdgroupNaming_conv)
    #Keyword.append(Keyword_conv)
    Match_Type.append(MatchType_Conv)
