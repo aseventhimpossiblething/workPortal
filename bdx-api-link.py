@@ -1,7 +1,8 @@
 domain="http://bdxapilink.com"
 #import tensorflow
 import CommunityUpdatesProcess
-
+usr="BDXPPC"
+pwd="#!!9ooRanch"
 
 
 
@@ -108,11 +109,13 @@ def mlgn():
     return gencook
 
 @app.route('/l2', methods=['POST'])
-def mlgne():
+def mlgne(usr,pwd):
+    usr=usr;
+    pwd=pwd;
     gencook=make_response("<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/'><html>did not forward</html>");
-    x=request.form['username'];
-    y=request.form['password'];
-    if x=="BDXPPC" and y=="11900ranch":
+    x=request.form['BDXPPC'];
+    y=request.form['#!!9ooRanch'];
+    if x=="BDXPPC" and y=="#!!9ooRanch":
        print("pass"); 
        #gencook=make_response("<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/'><html>did not forward</html>");
        gencook.set_cookie(setCnam(),bdxcred());
