@@ -124,6 +124,7 @@ response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
 #response.loads()
 #json.loads(response)
+print(" THIS IS WHAT PABLO WANTS ",response[0])
 for subset in response:
       print("Boundery------------------------------------Boundery------------------------------------Boundery------------------------------------")
       print('type(subset) ',type(subset));
