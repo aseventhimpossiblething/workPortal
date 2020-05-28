@@ -155,7 +155,8 @@ response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
 for subset in response:
       print('subset ',subset)
-"""      
+"""  
+"""
       
 print("attempt to access city")      
 customer_id="2104897739" 
@@ -174,10 +175,10 @@ while numot<1:
       numot+=1
       print("response - ",response)
       #print("len(response) - ",len(response))
-      print("response[0] - ",response[0])
+      #print("response[0] - ",response[0])
 #view=json.load(response);
 #print(response);
-      
+"""      
 
 print("end active experiment block------------------------------------------------------------")      
 
