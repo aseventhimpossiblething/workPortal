@@ -128,10 +128,10 @@ print(" THIS IS WHAT PABLO WANTS ",str(response))
 for subset in response:
       print("Boundery------------------------------------Boundery------------------------------------Boundery------------------------------------")
       print('type(subset) ',type(subset));
-      print('subset ',subset['campaign']);
-      #print('str(subset) ',str(subset));
+      print('subset ',subset);
+      print('str(subset) ',str(subset));
       #print("dir(subset) ",dir(subset))
-      #print('str(subset)[0] ',str(subset)[0]);
+      print('str(subset)[0] ',str(subset)[0]);
       #print("str(subset)['result'] ",str(subset)['result']);      
       #subsetStr=type(subset);
       #print("type(subsetStr) ",type(subsetStr));
