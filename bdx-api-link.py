@@ -2,7 +2,7 @@ domain="http://bdxapilink.com"
 #import tensorflow
 import CommunityUpdatesProcess
 usr="BDXPPC"
-pwd="#!!9ooRanch"
+pwd="!!"
 
 
 
@@ -119,7 +119,7 @@ def mlgne():
     gencook=make_response("<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/'><html>did not forward</html>");
     x=request.form['username'];
     y=request.form['password'];
-    if x=="BDXPPC" and y=="11900":
+    if x==usr and y==pwd:
        print("pass"); 
        #gencook=make_response("<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/'><html>did not forward</html>");
        gencook.set_cookie(setCnam(),bdxcred());
