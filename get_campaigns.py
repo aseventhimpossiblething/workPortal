@@ -134,9 +134,13 @@ for subset in response:
       #print('str(subset)[0] ',str(subset)[0]);
       
       #str(subset).json.load();
-      str(subset).json.loads();
-      str(subset).json.dump();
-      str(subset).json.dumps();
+      #str(subset).json.loads();
+      #str(subset).json.dump();
+      #str(subset).json.dumps();
+      
+      json.loads(str(subset));
+      json.dumps(str(subset));
+      
       
       #print("str(subset)['result'] ",str(subset)['result']);      
       #subsetStr=type(subset);
