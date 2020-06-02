@@ -131,7 +131,7 @@ for subset in response:
       print('subset ',subset);
       #print("subset[1] ",subset[1]);
       #print("subset['results'] ",subset['results']);
-      print("subset['results']['campaign'] ",subset['results']['campaign']);
+      #print("subset['results']['campaign'] ",subset['results']['campaign']);
       print("subset['results']['campaign']['resource_name'] ",subset['results']['campaign']['resource_name']);
       print("subset[1] ",subset[1]);
       print('str(subset) ',str(subset));
