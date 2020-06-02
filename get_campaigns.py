@@ -138,7 +138,7 @@ for subset in response:
       #str(subset).json.dump();
       #str(subset).json.dumps();
       
-      json.loads(str(subset));
+      #json.loads(str(subset));
       json.dumps(str(subset));
       
       
