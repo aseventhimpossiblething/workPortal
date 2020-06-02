@@ -140,7 +140,8 @@ for subset in response:
       
       #json.loads(str(subset));
       NovDump=json.dumps(str(subset));
-      print("NovDump = ",NovDump);
+      print("NovDump[results] = ",NovDump['results']);
+       print("NovDump[campaign] = ",NovDump['campaign']);
       
       
       #print("str(subset)['result'] ",str(subset)['result']);      
