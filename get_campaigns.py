@@ -143,6 +143,7 @@ for subset in response:
       #print("NovDump[results] = ",NovDump['results']);
       #print("NovDump[campaign] = ",NovDump['campaign']);
       print("NovDump[0] = ",NovDump[0]);
+      print("NovDump[1] = ",NovDump[1]);
       
       #print("str(subset)['result'] ",str(subset)['result']);      
       #subsetStr=type(subset);
