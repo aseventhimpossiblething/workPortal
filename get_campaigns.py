@@ -139,7 +139,8 @@ for subset in response:
       #str(subset).json.dumps();
       
       #json.loads(str(subset));
-      json.dumps(str(subset));
+      NovDump=json.dumps(str(subset));
+      print("NovDump = ",NovDump);
       
       
       #print("str(subset)['result'] ",str(subset)['result']);      
