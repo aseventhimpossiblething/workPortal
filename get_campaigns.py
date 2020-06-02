@@ -129,7 +129,7 @@ for subset in response:
       print("Boundery------------------------------------Boundery------------------------------------Boundery------------------------------------")
       print('type(subset) ',type(subset));
       print('subset ',subset);
-      print("subset[1] ",subset[1]);
+      #print("subset[1] ",subset[1]);
       #print("subset['results'] ",subset['results']);
       print("subset['results']['campaign'] ",subset['results']['campaign']);
       print("subset['results']['campaign']['resource_name'] ",subset['results']['campaign']['resource_name']);
