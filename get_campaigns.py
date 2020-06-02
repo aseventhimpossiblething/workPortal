@@ -132,11 +132,13 @@ for subset in response:
       #print("subset[1] ",subset[1]);
       #print("subset['results'] ",subset['results']);
       #print("subset['results']['campaign'] ",subset['results']['campaign']);
-      print("subset['results']['campaign']['resource_name'][0] ",subset['results']['campaign']['resource_name'][0]);
-      print("subset[1] ",subset[1]);
-      print('str(subset) ',str(subset));
+      #print("subset['results']['campaign']['resource_name'][0] ",subset['results']['campaign']['resource_name'][0]);
+      #print("subset[1] ",subset[1]);
+      #print('str(subset) ',str(subset));
       #print("dir(subset) ",dir(subset))
       #print('str(subset)[0] ',str(subset)[0]);
+      json.loads(subset)
+      json.dumps(subset)
       
       #str(subset).json.load();
       #str(subset).json.loads();
@@ -150,8 +152,8 @@ for subset in response:
       print("NovDump[0] = ",NovDump[0]);
       print("NovDump[1] = ",NovDump[1]);
       
-      json.loads(NovDump);
-      print(json.loads(NovDump)['results']['campaign']['resource_name'][0]);
+      #json.loads(NovDump);
+      #print(json.loads(NovDump)['results']['campaign']['resource_name'][0]);
       #print("str(subset)['result'] ",str(subset)['result']);      
       #subsetStr=type(subset);
       #print("type(subsetStr) ",type(subsetStr));
