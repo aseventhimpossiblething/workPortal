@@ -145,6 +145,7 @@ for subset in response:
       print("NovDump[0] = ",NovDump[0]);
       print("NovDump[1] = ",NovDump[1]);
       
+      json.loads(subset);
       #print("str(subset)['result'] ",str(subset)['result']);      
       #subsetStr=type(subset);
       #print("type(subsetStr) ",type(subsetStr));
