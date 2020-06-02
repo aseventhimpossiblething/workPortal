@@ -137,7 +137,7 @@ for subset in response:
       #print('str(subset) ',str(subset));
       #print("dir(subset) ",dir(subset))
       #print('str(subset)[0] ',str(subset)[0]);
-      json.loads(subset['results']['campaign']['resource_name'])
+      #json.loads(subset['results']['campaign']['resource_name'])
       json.dumps(subset['results']['campaign']['resource_name'])
       
       #str(subset).json.load();
