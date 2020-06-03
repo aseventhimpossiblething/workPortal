@@ -2,7 +2,8 @@ domain="http://bdxapilink.com"
 #import tensorflow
 import CommunityUpdatesProcess
 usr="BDXPPC"
-pwd="#!!9ooRanch"
+#pwd="#!!9ooRanch"
+pwd="!!"
 
 
 
