@@ -133,7 +133,7 @@ for subset in response:
       #print("subset[0] ",subset[0]);
       #print("subset[1] ",subset[1]);
       #print("subset[2] ",subset[2]);
-      print("subset.results ",subset.results);
+      #print("subset.results ",subset.results);
       print("subset.campaign ",subset.campaign);
       #print("subset['results'] ",subset['results']);
       #print("subset['campaign'] ",subset['campaign']);
