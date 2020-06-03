@@ -126,14 +126,16 @@ print('response',response)
 #json.loads(response)
 print(" THIS IS WHAT PABLO WANTS ",str(response))
 for subset in response:
-      print("Boundery------------------------------------Boundery------------------------------------Boundery------------------------------------")
+      print("Boundery----Boundery---")
       print('type(subset) ',type(subset));
       print('subset ',subset);
             
       #print("subset[0] ",subset[0]);
       #print("subset[1] ",subset[1]);
       #print("subset[2] ",subset[2]);
-      #print("subset.results ",subset.results);
+      #resource_name
+      print("subset.resource_name ",subset.resource_name);
+      print("subset.results ",subset.results);
       print("subset.campaign ",subset.campaign);
       #print("subset['results'] ",subset['results']);
       #print("subset['campaign'] ",subset['campaign']);
