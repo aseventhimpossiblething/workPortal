@@ -129,8 +129,14 @@ for subset in response:
       print("Boundery------------------------------------Boundery------------------------------------Boundery------------------------------------")
       print('type(subset) ',type(subset));
       print('subset ',subset);
+            
+      #print("subset[0] ",subset[0]);
       #print("subset[1] ",subset[1]);
+      #print("subset[2] ",subset[2]);
+      print("subset.results ",subset.results);
+      print("subset.campaign ",subset.campaign);
       #print("subset['results'] ",subset['results']);
+      #print("subset['campaign'] ",subset['campaign']);
       #print("subset['results']['campaign'] ",subset['results']['campaign']);
       #print("subset['results']['campaign']['resource_name'][0] ",subset['results']['campaign']['resource_name'][0]);
       #print("subset[1] ",subset[1]);
@@ -159,7 +165,6 @@ for subset in response:
       #print("type(subsetStr) ",type(subsetStr));
       #view=json.loads(subsetStr) ; 
       #print("view ",view);
-      #print("kooiiiiiiiiiiiiiiiiiiiiiiiiiii0");
       #view1=json.loads(subset);
       #print("view1 ",view1)
       #loadit=json.loads(subset);
