@@ -135,7 +135,8 @@ for subset in response:
       #print("subset[1] ",subset[1]);
       #print("subset[2] ",subset[2]);
       #resource_name
-      #json.dumps(subset[results]);
+      Nsubset=json.dumps(subset);
+      print("Nsubset",Nsubset)
       #print("subset.resource_name ",subset.resource_name);
       #print("subset.results ",subset.results);
       #print("subset.campaign ",subset.campaign);
