@@ -139,7 +139,7 @@ for subset in response:
       #print("subset.resource_name ",subset.resource_name);
       #print("subset.results ",subset.results);
       #print("subset.campaign ",subset.campaign);
-      print("subset['results'] ",subset['results']);
+      print("subset['name'] ",subset['name']);
       print("subset['campaign'] ",subset['campaign']);
       #print("subset['results']['campaign'] ",subset['results']['campaign']);
       #print("subset['results']['campaign']['resource_name'][0] ",subset['results']['campaign']['resource_name'][0]);
@@ -149,7 +149,7 @@ for subset in response:
       #print('str(subset)[0] ',str(subset)[0]);
       #json.loads(subset['results']['campaign']['resource_name'][0])
       #json.dumps(subset['results']['campaign']['resource_name'][0])
-      
+ 
       #str(subset).json.load();
       #str(subset).json.loads();
       #str(subset).json.dump();
