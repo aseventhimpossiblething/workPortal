@@ -125,7 +125,7 @@ print('response',response)
 #response.loads()
 #json.loads(response)
 print(" THIS IS WHAT PABLO WANTS ",str(response))
-son.dumps(response)
+json.dumps(response)
 for subset in response:
       print("Boundery----Boundery---")
       print('type(subset) ',type(subset));
