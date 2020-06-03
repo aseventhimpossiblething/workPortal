@@ -134,9 +134,10 @@ for subset in response:
       #print("subset[1] ",subset[1]);
       #print("subset[2] ",subset[2]);
       #resource_name
-      print("subset.resource_name ",subset.resource_name);
-      print("subset.results ",subset.results);
-      print("subset.campaign ",subset.campaign);
+      json.dumps(subset);
+      #print("subset.resource_name ",subset.resource_name);
+      #print("subset.results ",subset.results);
+      #print("subset.campaign ",subset.campaign);
       #print("subset['results'] ",subset['results']);
       #print("subset['campaign'] ",subset['campaign']);
       #print("subset['results']['campaign'] ",subset['results']['campaign']);
