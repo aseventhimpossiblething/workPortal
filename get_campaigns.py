@@ -145,8 +145,8 @@ for subset in response:
       #print("subset.resource_name ",subset.resource_name);
       #print("subset.results ",subset.results);
       #print("subset.campaign ",subset.campaign);
-      print("subset['name'] ",subset['name']);
-      print("subset['campaign'] ",subset['campaign']);
+      #print("subset['name'] ",subset['name']);
+      #print("subset['campaign'] ",subset['campaign']);
       #print("subset['results']['campaign'] ",subset['results']['campaign']);
       #print("subset['results']['campaign']['resource_name'][0] ",subset['results']['campaign']['resource_name'][0]);
       #print("subset[1] ",subset[1]);
