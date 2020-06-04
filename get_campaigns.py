@@ -133,7 +133,8 @@ for subset in response:
       print('subset ',subset);
       
       
-      row.recommendation.text_ad_recommendation.ad      
+      #row.recommendation.text_ad_recommendation.ad  
+      subset.recommendation.text_ad_recommendation.ad  
       #print("subset[0] ",subset[0]);
       #print("subset[1] ",subset[1]);
       #print("subset[2] ",subset[2]);
