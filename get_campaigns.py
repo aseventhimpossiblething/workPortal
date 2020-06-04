@@ -15,8 +15,8 @@ query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.am
 #966-289-6891
 testcamp="1500631476"
 customer_id=testcamp
-response = ga_service.search_stream(customer_id, query=query)
-countOfSubset=0;
+#response = ga_service.search_stream(customer_id, query=query)
+#countOfSubset=0;
 """
 for subset in response:
       print("Boundery----Boundery---")
@@ -51,8 +51,9 @@ def fromAds(customer_id,query):
             print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
             countOfSubset+=1
             print("in while loop")
-            #print("while for obj before")   
-      
+            #print("while for obj before") 
+            
+testcamp="1500631476"      
 fromAds(customer_id,query);  
       
       
