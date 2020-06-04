@@ -139,6 +139,8 @@ for subset in response:
       print("jsonObj[0] ",jsonObj[0])
       print("jsonObj[1] ",jsonObj[1])
       print("type(jsonObj) ",type(jsonObj))
+      jsonObj=json.loads(jsonObj)
+      print("type(jsonObj) ",type(jsonObj))
       print("jsonObj['results'] ",jsonObj["results"])
       print("jsonObj.results ",jsonObj.results)
       print("jsonObj.campaign ",jsonObj.campaign)
