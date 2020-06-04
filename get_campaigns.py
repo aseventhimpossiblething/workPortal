@@ -104,6 +104,7 @@ print("google_ads_client - ",google_ads_client)
 #--------------------------------
 """
 print("active experiment block------------------------------------------------------------")
+from google.protobuf import json_format
 import argparse
 import sys
 import json
