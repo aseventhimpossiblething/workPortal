@@ -132,12 +132,13 @@ for subset in response:
       print('type(subset) ',type(subset));
       print('subset ',subset);
             
+      row.recommendation.text_ad_recommendation.ad      
       #print("subset[0] ",subset[0]);
       #print("subset[1] ",subset[1]);
       #print("subset[2] ",subset[2]);
       #resource_name
-      Nsubset=json.dumps(subset);
-      print("Nsubset",Nsubset)
+      #Nsubset=json.dumps(subset);
+      #print("Nsubset",Nsubset)
       #print("subset.resource_name ",subset.resource_name);
       #print("subset.results ",subset.results);
       #print("subset.campaign ",subset.campaign);
