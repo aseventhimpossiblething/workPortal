@@ -135,6 +135,8 @@ for subset in response:
       
       jsonObj=json_format.MessageToJson(subset)
       print("jsonObj ",jsonObj)
+      print("jsonObj[0] ",jsonObj[0])
+      print("jsonObj[1] ",jsonObj[1])
       print("jsonObj['results'] ",jsonObj["results"])
       print("jsonObj.results ",jsonObj.results)
       print("jsonObj.campaign ",jsonObj.campaign)
