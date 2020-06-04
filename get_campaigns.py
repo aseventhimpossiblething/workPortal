@@ -131,8 +131,8 @@ print('response',response)
 countOfSubset=0;
 for subset in response:
       print("Boundery----Boundery---")
-      print('type(subset) ',type(subset));
-      print('subset ',subset);
+      #print('type(subset) ',type(subset));
+      #print('subset ',subset);
       
       
       jsonObj=json_format.MessageToJson(subset)
@@ -150,6 +150,7 @@ for subset in response:
       #print("jsonObj['results'][0]['campaign']['resourceName'] ",jsonObj["results"][0]["campaign"]["resourceName"])
       #print("jsonObj['results'][0]['campaign']['name'] ",jsonObj["results"][0]["campaign"]["name"])
       print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
+      countOfSubset+=1;
       #print("jsonObj['results']['campaign'] ",jsonObj["results"]["campaign"])
       #print("jsonObj['campaign'] ",jsonObj["campaign"])
       #print("jsonObj.results ",jsonObj.results)
