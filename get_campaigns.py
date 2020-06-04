@@ -125,7 +125,7 @@ response = ga_service.search_stream(customer_id, query=query)
 print('response',response)
 #response.loads()
 #json.loads(response)
-print(" THIS IS WHAT PABLO WANTS ",str(response))
+#print(" THIS IS WHAT PABLO WANTS ",str(response))
 #json.dumps(response)
 for subset in response:
       print("Boundery----Boundery---")
@@ -133,7 +133,7 @@ for subset in response:
       print('subset ',subset);
       
       
-      #row.recommendation.text_ad_recommendation.ad      
+      row.recommendation.text_ad_recommendation.ad      
       #print("subset[0] ",subset[0]);
       #print("subset[1] ",subset[1]);
       #print("subset[2] ",subset[2]);
