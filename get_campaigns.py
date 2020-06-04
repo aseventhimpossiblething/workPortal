@@ -40,7 +40,8 @@ for subset in response:
 
 def fromAds(customer_id,query):      
     #google_ads_client = GoogleAdsClient.load_from_storage('google-ads.yaml')
-    #ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')  
+    #ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')
+    for subset in response:  
     jsonObj=json_format.MessageToJson(subset)
     jsonObj=json.loads(jsonObj)  
     response = ga_service.search_stream(customer_id, query=query)
