@@ -142,7 +142,7 @@ for subset in response:
       jsonObj=json.loads(jsonObj)
       print("type(jsonObj) ",type(jsonObj))
       print("jsonObj['results'] ",jsonObj["results"])
-       print("jsonObj['results']['campaign'] ",jsonObj["results"]["campaign"])
+      print("jsonObj['results']['campaign'] ",jsonObj["results"]["campaign"])
       print("jsonObj['campaign'] ",jsonObj["campaign"])
       print("jsonObj.results ",jsonObj.results)
       print("jsonObj.campaign ",jsonObj.campaign)
