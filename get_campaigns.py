@@ -129,6 +129,7 @@ print('response',response)
 #json.dumps(response)
 
 countOfSubset=0;
+#ActiveJson=[];
 for subset in response:
       print("Boundery----Boundery---")
       #print('type(subset) ',type(subset));
@@ -151,9 +152,17 @@ for subset in response:
       #print("jsonObj['results'][0]['campaign']['name'] ",jsonObj["results"][0]["campaign"]["name"])
       print("len(jsonObj) ",len(jsonObj))
       print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
-      countOfSubset+=1;
+      #countOfSubset+=1;
       print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
+      while len(jsonObj)<countOfSubset:
+            print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
+            countOfSubset+=1
+            print("in while loop")
+            
+      
+      
       #print("jsonObj['results']['campaign'] ",jsonObj["results"]["campaign"])
+      
       #print("jsonObj['campaign'] ",jsonObj["campaign"])
       #print("jsonObj.results ",jsonObj.results)
       #print("jsonObj.campaign ",jsonObj.campaign)
