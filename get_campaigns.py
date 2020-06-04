@@ -145,6 +145,7 @@ for subset in response:
       print("jsonObj['results'][0] ",jsonObj["results"][0])
       print("jsonObj['results'][1] ",jsonObj["results"][1])
       print("jsonObj['results'][0]['campaign'] ",jsonObj["results"][0]["campaign"])
+       rint("jsonObj['results'][0]['campaign']['resourceName'] ",jsonObj["results"][0]["campaign"]["resourceName"])
       print("jsonObj['results']['campaign'] ",jsonObj["results"]["campaign"])
       print("jsonObj['campaign'] ",jsonObj["campaign"])
       print("jsonObj.results ",jsonObj.results)
