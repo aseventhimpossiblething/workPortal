@@ -131,7 +131,8 @@ for subset in response:
       print("Boundery----Boundery---")
       print('type(subset) ',type(subset));
       print('subset ',subset);
-            
+      
+      
       row.recommendation.text_ad_recommendation.ad      
       #print("subset[0] ",subset[0]);
       #print("subset[1] ",subset[1]);
