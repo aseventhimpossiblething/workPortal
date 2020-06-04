@@ -135,6 +135,7 @@ for subset in response:
       
       jsonObj=json_format.MessageToJson(subset)
       print("jsonObj ",jsonObj)
+      print("jsonObj.campaign ",jsonObj.campaign)
       #row.recommendation.text_ad_recommendation.ad  
       #subset.recommendation.text_ad_recommendation.ad  
       #print("subset[0] ",subset[0]);
