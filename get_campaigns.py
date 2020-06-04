@@ -142,6 +142,7 @@ for subset in response:
       jsonObj=json.loads(jsonObj)
       print("type(jsonObj) ",type(jsonObj))
       print("jsonObj['results'] ",jsonObj["results"])
+      print("jsonObj['campaign'] ",jsonObj["campaign"])
       print("jsonObj.results ",jsonObj.results)
       print("jsonObj.campaign ",jsonObj.campaign)
       #row.recommendation.text_ad_recommendation.ad  
