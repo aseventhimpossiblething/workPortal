@@ -127,6 +127,8 @@ print('response',response)
 #json.loads(response)
 #print(" THIS IS WHAT PABLO WANTS ",str(response))
 #json.dumps(response)
+
+countOfSubset=0;
 for subset in response:
       print("Boundery----Boundery---")
       print('type(subset) ',type(subset));
@@ -147,7 +149,8 @@ for subset in response:
       print("jsonObj['results'][0]['campaign'] ",jsonObj["results"][0]["campaign"])
       print("jsonObj['results'][0]['campaign']['resourceName'] ",jsonObj["results"][0]["campaign"]["resourceName"])
       print("jsonObj['results'][0]['campaign']['name'] ",jsonObj["results"][0]["campaign"]["name"])
-      print("jsonObj['results']['campaign'] ",jsonObj["results"]["campaign"])
+      print("jsonObj['results'][countOfSubset]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
+      #print("jsonObj['results']['campaign'] ",jsonObj["results"]["campaign"])
       #print("jsonObj['campaign'] ",jsonObj["campaign"])
       #print("jsonObj.results ",jsonObj.results)
       #print("jsonObj.campaign ",jsonObj.campaign)
