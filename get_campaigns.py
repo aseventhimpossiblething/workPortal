@@ -146,10 +146,11 @@ for subset in response:
       print("jsonObj['results'][1] ",jsonObj["results"][1])
       print("jsonObj['results'][0]['campaign'] ",jsonObj["results"][0]["campaign"])
       print("jsonObj['results'][0]['campaign']['resourceName'] ",jsonObj["results"][0]["campaign"]["resourceName"])
+      print("jsonObj['results'][0]['campaign']['name'] ",jsonObj["results"][0]["campaign"]["name"])
       print("jsonObj['results']['campaign'] ",jsonObj["results"]["campaign"])
-      print("jsonObj['campaign'] ",jsonObj["campaign"])
-      print("jsonObj.results ",jsonObj.results)
-      print("jsonObj.campaign ",jsonObj.campaign)
+      #print("jsonObj['campaign'] ",jsonObj["campaign"])
+      #print("jsonObj.results ",jsonObj.results)
+      #print("jsonObj.campaign ",jsonObj.campaign)
       #row.recommendation.text_ad_recommendation.ad  
       #subset.recommendation.text_ad_recommendation.ad  
       #print("subset[0] ",subset[0]);
@@ -178,11 +179,11 @@ for subset in response:
       #str(subset).json.dumps();
       
       #json.loads(str(subset));
-      NovDump=json.dumps(str(subset));
+      #NovDump=json.dumps(str(subset));
       #print("NovDump[results] = ",NovDump['results']);
       #print("NovDump[campaign] = ",NovDump['campaign']);
-      print("NovDump[0] = ",NovDump[0]);
-      print("NovDump[1] = ",NovDump[1]);
+      #print("NovDump[0] = ",NovDump[0]);
+      #print("NovDump[1] = ",NovDump[1]);
       
       #json.loads(NovDump);
       #print(json.loads(NovDump)['results']['campaign']['resource_name'][0]);
