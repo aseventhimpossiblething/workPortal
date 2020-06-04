@@ -149,6 +149,7 @@ for subset in response:
       #print("jsonObj['results'][0]['campaign'] ",jsonObj["results"][0]["campaign"])
       #print("jsonObj['results'][0]['campaign']['resourceName'] ",jsonObj["results"][0]["campaign"]["resourceName"])
       #print("jsonObj['results'][0]['campaign']['name'] ",jsonObj["results"][0]["campaign"]["name"])
+      print("len(jsonObj) ",len(jsonObj))
       print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
       countOfSubset+=1;
       print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
