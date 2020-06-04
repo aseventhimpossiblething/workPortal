@@ -3,7 +3,6 @@ domain="http://bdxapilink.com"
 import CommunityUpdatesProcess
 usr="BDXPPC"
 pwd="#!!9ooRanch"
-#pwd="!!"
 
 
 
@@ -25,7 +24,8 @@ import os
 from flask import Flask, Markup, render_template, request, make_response
 from flask import send_file
 from flask import send_from_directory
-#import get_campaigns
+import get_campaigns
+print("from main after get_campaigns")
 
 
 
