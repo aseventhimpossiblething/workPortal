@@ -17,6 +17,7 @@ testcamp="1500631476"
 customer_id=testcamp
 response = ga_service.search_stream(customer_id, query=query)
 countOfSubset=0;
+"""
 for subset in response:
       print("Boundery----Boundery---")
       #print('type(subset) ',type(subset));
@@ -34,11 +35,12 @@ for subset in response:
             print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
             countOfSubset+=1
             print("in while loop")
-      print("while for obj before")    
+      print("while for obj before")   
+"""      
 
 def fromAds(customer_id,query):      
-    google_ads_client = GoogleAdsClient.load_from_storage('google-ads.yaml')
-    ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')  
+    #google_ads_client = GoogleAdsClient.load_from_storage('google-ads.yaml')
+    #ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')  
     jsonObj=json_format.MessageToJson(subset)
     jsonObj=json.loads(jsonObj)  
     response = ga_service.search_stream(customer_id, query=query)
