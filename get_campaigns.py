@@ -47,7 +47,7 @@ def fromAds(customer_id,query):
             print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
             countOfSubset+=1
             print("in while loop")
-      print("while for obj before")   
+            #print("while for obj before")   
       
 fromAds(customer_id,query);  
       
