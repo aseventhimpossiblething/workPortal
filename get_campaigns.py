@@ -51,17 +51,19 @@ def fromAds(customer_id,query):
         #response = ga_service.search_stream(customer_id, query=query)
         #print("len(subset) = ",len(subset))
         print("len(jsonObj) = ",len(jsonObj))
-        countOfSubset=3;    
-        print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])    
+        #countOfSubset=3;    
+        #print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])    
         countOfSubset=0; 
         while len(jsonObj)>countOfSubset:
-            print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
-            countOfSubset+=1
+            try:      
+               print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
+               countOfSubset+=1
             #print("in while loop")
-            #print("while for obj before") 
+            except:
+               print("Broken try")   
         
 testCampaign="150-063-1476"      
-#fromAds(testCampaign,query); 
+fromAds(testCampaign,query); 
 
 CityAccount="210-489-7739";
 fromAds(CityAccount,query);  
