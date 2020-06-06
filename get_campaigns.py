@@ -60,7 +60,7 @@ def fromAds(customer_id,query):
                countOfSubset+=1
             #print("in while loop")
             except:
-               print("Broken try")   
+               return "end"
         
 testCampaign="150-063-1476"      
 fromAds(testCampaign,query); 
