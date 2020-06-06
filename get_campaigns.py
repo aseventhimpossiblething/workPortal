@@ -13,12 +13,24 @@ ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')
 
 testCampaign="150-063-1476"  
 cityAccount="210-489-7739";
+cityMobileAccount="423-859-4348";
+communityAccount="262-853-2074";
+suburbAccount="861-225-9590";
+stateAccount="644-879-0580";
+hispanicAccount="473-277-5338";
+ArrayOfAccounts=[cityAccount,cityMobileAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
+
+"""
+
+testCampaign="150-063-1476"  
+cityAccount="210-489-7739";
 cityMobileAccount="";
-communityAccount="";
+communityAccount="262-853-2074";
 suburbAccount="";
 stateAccount="";
 hispanicAccount="";
 ArrayOfAccounts=[cityAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
+"""
 
 query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros, metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign ORDER BY campaign.id')
 
@@ -55,22 +67,14 @@ def fromAds(customer_id,query):
         
 testCampaign="150-063-1476"  
 cityAccount="210-489-7739";
-cityMobileAccount="";
-communityAccount="";
-suburbAccount="";
-stateAccount="";
-hispanicAccount="";
+cityMobileAccount="423-859-4348";
+communityAccount="262-853-2074";
+suburbAccount="861-225-9590";
+stateAccount="644-879-0580";
+hispanicAccount="473-277-5338";
 ArrayOfAccounts=[cityAccount,cityMobileAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
 
-"""
-fromAds(testCampaign,query); 
-fromAds(cityAccount,query); 
-fromAds(,query);
-fromAds(,query); 
-fromAds(,query); 
-fromAds(,query); 
-fromAds(,query); 
-"""
+
 def accntFormat(ArrayOfAccounts):
     len(ArrayOfAccounts);
     for accnts in ArrayOfAccounts:
