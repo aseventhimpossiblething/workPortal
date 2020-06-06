@@ -11,7 +11,7 @@ from google.ads.google_ads.errors import GoogleAdsException
 google_ads_client = GoogleAdsClient.load_from_storage('google-ads.yaml')
 ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')
 
-testCampaign="150-063-1476"  
+testCampaign="150-063-1476";  
 cityAccount="210-489-7739";
 cityMobileAccount="423-859-4348";
 communityAccount="262-853-2074";
@@ -37,18 +37,34 @@ def fromAds(customer_id,query):
     campaignBudget=[];
     campaignStatus=[];
     
-    #newTable=[campaignName,campaignCost,campaignClicks,campaignConversions,campaignImpressions,campaignBudget,campaignStatus];
+    newTable=[campaignName,campaignCost,campaignClicks,campaignConversions,campaignImpressions,campaignBudget,campaignStatus];
     print(customer_id) 
     customer_id=customer_id.replace("-","") 
-    response = ga_service.search_stream(customer_id, query=query)  
+    response = ga_service.search_stream(customer_id, query=query) 
     for subset in response:
         jsonObj=json_format.MessageToJson(subset)
         jsonObj=json.loads(jsonObj)  
         #print("len(jsonObj) = ",len(jsonObj))
+        
+        name=jsonObj["results"][countOfSubset]["campaign"]["name"];
+        status=jsonObj["results"][countOfSubset]["campaign"]["status"];
+        cost=jsonObj["results"][countOfSubset]["campaign"]["cost_micros"];
+        clicks=jsonObj["conversions"][countOfSubset]["campaign"]["clicks"];
+        conversions=jsonObj["conversions"][countOfSubset]["campaign"]["conversions"];
+        impressions=jsonObj["impressions"][countOfSubset]["campaign"]["impressions"];
+        budget=jsonObj["conversions"][countOfSubset]["campaign"]["amount_micros"];
+        #conversions=jsonObj["conversions"][countOfSubset]["campaign"]["conversions"];
         countOfSubset=0; 
         while 1000>countOfSubset:
             try:      
-               print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
+               #print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
+               print("name ",name);
+               print("status ",status);
+               print("cost ",cost);
+               print("clicks ",clicks);
+               print("conversions ",conversions);
+               print("impressions ",impressions);
+               print("budget ",budget);
                countOfSubset+=1
             #print("in while loop")
             except:
