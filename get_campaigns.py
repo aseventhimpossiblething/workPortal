@@ -44,10 +44,11 @@ def fromAds(customer_id,query):
     for subset in response:
         jsonObj=json_format.MessageToJson(subset)
         jsonObj=json.loads(jsonObj);
-        print("str(subset).find('results')) = ",str(subset).find("results"))
-        print("str(subset).count('results')) = ",str(subset).count("results"))
+        #print("str(subset).find('results')) = ",str(subset).find("results"))
+        #print("str(subset).count('results')) = ",str(subset).count("results"))
         
         countOfSubset=0; 
+        numberOfResults=str(subset).count("results");
         """
         name=jsonObj["results"][countOfSubset]["campaign"]["name"];
         status=jsonObj["results"][countOfSubset]["campaign"]["status"];
@@ -64,7 +65,7 @@ def fromAds(customer_id,query):
         #conversions=jsonObj["conversions"][countOfSubset]["campaign"]["conversions"];
         #countOfSubset=0; 
         """
-        while 1000>countOfSubset:
+        while numberOfResults>countOfSubset:
             name=jsonObj["results"][countOfSubset]["campaign"]["name"];
             status=jsonObj["results"][countOfSubset]["campaign"]["status"];
             cost=jsonObj["results"][countOfSubset]["metrics"]["costMicros"];
