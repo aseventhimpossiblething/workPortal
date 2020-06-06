@@ -47,7 +47,7 @@ def fromAds(customer_id,query):
         #print("jsonObj) = ",jsonObj)
         
         countOfSubset=0; 
-        
+        """
         name=jsonObj["results"][countOfSubset]["campaign"]["name"];
         status=jsonObj["results"][countOfSubset]["campaign"]["status"];
         
@@ -62,8 +62,15 @@ def fromAds(customer_id,query):
         
         #conversions=jsonObj["conversions"][countOfSubset]["campaign"]["conversions"];
         #countOfSubset=0; 
-        
+        """
         while 1000>countOfSubset:
+        name=jsonObj["results"][countOfSubset]["campaign"]["name"];
+        status=jsonObj["results"][countOfSubset]["campaign"]["status"];
+        cost=jsonObj["results"][countOfSubset]["metrics"]["costMicros"];
+        clicks=jsonObj["results"][countOfSubset]["metrics"]["clicks"];
+        conversions=jsonObj["results"][countOfSubset]["metrics"]["conversions"];
+        impressions=jsonObj["results"][countOfSubset]["metrics"]["impressions"];
+        budget=jsonObj["results"][countOfSubset]["campaignBudget"]["amountMicros"];
             try:      
                #print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
                print("name ",name);
