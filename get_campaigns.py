@@ -73,7 +73,7 @@ fromAds(,query);
 """
 def accntFormat(ArrayOfAccounts):
     len(ArrayOfAccounts);
-    for accnts in ArrayOfAccounts;
+    for accnts in ArrayOfAccounts:
         fromAds(accnts,query);
 accntFormat(ArrayOfAccounts);      
          
