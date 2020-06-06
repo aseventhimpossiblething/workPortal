@@ -95,8 +95,8 @@ def accntFormat(ArrayOfAccounts):
         print("failed to pill accnt ",accnts," count = ",count)
        count+=1; 
     
-fromAds("150-063-1476",query);     
-#accntFormat(ArrayOfAccounts);      
+#fromAds("150-063-1476",query);     
+accntFormat(ArrayOfAccounts);      
          
       
       
