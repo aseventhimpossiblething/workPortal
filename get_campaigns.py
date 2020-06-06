@@ -49,7 +49,7 @@ def fromAds(customer_id,query):
         jsonObj=json_format.MessageToJson(subset)
         jsonObj=json.loads(jsonObj)  
         #response = ga_service.search_stream(customer_id, query=query)
-        print("len(subset) = ",len(subset))
+        #print("len(subset) = ",len(subset))
         print("len(jsonObj) = ",len(jsonObj))
         countOfSubset=0; 
         while len(jsonObj)>countOfSubset:
