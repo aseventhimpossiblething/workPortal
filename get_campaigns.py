@@ -55,10 +55,10 @@ def fromAds(customer_id,query):
         cost=jsonObj["results"][countOfSubset]["metrics"]["costMicros"];
         #cost=jsonObj["results"][countOfSubset]["metrics"];
        
-        clicks=jsonObj["conversions"][countOfSubset]["metrics"]["clicks"];
-        conversions=jsonObj["conversions"][countOfSubset]["metrics"]["conversions"];
-        impressions=jsonObj["impressions"][countOfSubset]["metrics"]["impressions"];
-        budget=jsonObj["conversions"][countOfSubset]["campaign_budget"]["amountMicros"];
+        clicks=jsonObj["results"][countOfSubset]["metrics"]["clicks"];
+        conversions=jsonObj["results"][countOfSubset]["metrics"]["conversions"];
+        impressions=jsonObj["results"][countOfSubset]["metrics"]["impressions"];
+        budget=jsonObj["results"][countOfSubset]["campaign_budget"]["amountMicros"];
         
         #conversions=jsonObj["conversions"][countOfSubset]["campaign"]["conversions"];
         #countOfSubset=0; 
