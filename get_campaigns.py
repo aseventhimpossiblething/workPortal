@@ -44,7 +44,8 @@ def fromAds(customer_id,query):
     for subset in response:
         jsonObj=json_format.MessageToJson(subset)
         jsonObj=json.loads(jsonObj)  
-        #print("len(jsonObj) = ",len(jsonObj))
+        print("jsonObj) = ",jsonObj)
+        
         countOfSubset=0; 
         name=jsonObj["results"][countOfSubset]["campaign"]["name"];
         status=jsonObj["results"][countOfSubset]["campaign"]["status"];
