@@ -49,7 +49,7 @@ def fromAds(customer_id,query):
         
         countOfSubset=0; 
         numberOfResults=str(subset).count("results");
-        print(numberOfResults))
+        print(numberOfResults)
         """
         name=jsonObj["results"][countOfSubset]["campaign"]["name"];
         status=jsonObj["results"][countOfSubset]["campaign"]["status"];
