@@ -72,11 +72,12 @@ ArrayOfAccounts=[cityAccount,cityMobileAccount,cityMobileAccount,communityAccoun
 
 def accntFormat(ArrayOfAccounts):
     len(ArrayOfAccounts);
+    count=0;
     for accnts in ArrayOfAccounts:
        try: 
         fromAds(accnts,query);
        except:
-        print("failed to pill accnt ",accnts )
+        print("failed to pill accnt ",accnts," count = ",count)
 accntFormat(ArrayOfAccounts);      
          
       
