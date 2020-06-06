@@ -74,7 +74,10 @@ fromAds(,query);
 def accntFormat(ArrayOfAccounts):
     len(ArrayOfAccounts);
     for accnts in ArrayOfAccounts:
+       try: 
         fromAds(accnts,query);
+       except:
+        print("failed to pill accnt ",accnts )
 accntFormat(ArrayOfAccounts);      
          
       
