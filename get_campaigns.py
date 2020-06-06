@@ -57,7 +57,7 @@ def fromAds(customer_id,query):
 testCampaign="1500631476"      
 fromAds(testCampaign,query); 
 
-LiveAccount="966-289-6891";
+LiveAccount="9662896891";
 fromAds(testCampaign,query);  
       
       
