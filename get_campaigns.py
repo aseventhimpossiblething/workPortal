@@ -78,6 +78,7 @@ def accntFormat(ArrayOfAccounts):
         fromAds(accnts,query);
        except:
         print("failed to pill accnt ",accnts," count = ",count)
+       count+=1; 
 accntFormat(ArrayOfAccounts);      
          
       
