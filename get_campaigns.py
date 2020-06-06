@@ -44,10 +44,13 @@ def fromAds(customer_id,query):
     #google_ads_client = GoogleAdsClient.load_from_storage('google-ads.yaml')
     #ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')
     response = ga_service.search_stream(customer_id, query=query)  
-    for subset in response:  
+    print("len(response) = ",len(response))
+    for subset in response:
         jsonObj=json_format.MessageToJson(subset)
         jsonObj=json.loads(jsonObj)  
         #response = ga_service.search_stream(customer_id, query=query)
+        print("len(subset) = ",len(subset))
+        print("len(jsonObj) = ",len(jsonObj))
         countOfSubset=0; 
         while len(jsonObj)>countOfSubset:
             print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
