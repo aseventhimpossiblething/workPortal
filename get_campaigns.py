@@ -29,6 +29,14 @@ query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.am
 
 
 def fromAds(customer_id,query):
+    campaignName=[];
+    campaignCost=[];
+    campaignClicks=[];
+    campaignConversions=[];
+    campaignImpressions=[];
+    campaignBudget=[];
+    campaignStatus=[];
+    
     #newTable=[campaignName,campaignCost,campaignClicks,campaignConversions,campaignImpressions,campaignBudget,campaignStatus];
     print(customer_id) 
     customer_id=customer_id.replace("-","") 
