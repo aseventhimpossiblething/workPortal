@@ -53,8 +53,11 @@ def fromAds(customer_id,query):
             print("in while loop")
             #print("while for obj before") 
             
-testcamp="1500631476"      
-fromAds(customer_id,query);  
+testCampaign="1500631476"      
+fromAds(testCampaign,query); 
+
+LiveAccount="966-289-6891";
+fromAds(testCampaign,query);  
       
       
      
