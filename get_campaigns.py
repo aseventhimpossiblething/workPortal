@@ -73,6 +73,7 @@ def fromAds(customer_id,query):
             budget=jsonObj["results"][countOfSubset]["campaignBudget"]["amountMicros"];
             try:      
                #print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
+               """
                print("name ",name);
                print("status ",status);
                print("cost ",cost);
@@ -80,6 +81,7 @@ def fromAds(customer_id,query):
                print("conversions ",conversions);
                print("impressions ",impressions);
                print("budget ",budget);
+               """
                 
                 
                 
@@ -91,19 +93,13 @@ def fromAds(customer_id,query):
                campaignBudget.append(budget);
                campaignStatus.append(status);
             
-               """
-               print("name ",name);
-               print("status ",status);
-               print("cost ",cost);
-               print("clicks ",clicks);
-               print("conversions ",conversions);
-               print("impressions ",impressions);
-               print("budget ",budget);
-               """
+             
               
                countOfSubset+=1;
             #print("in while loop")
             except:
+               newTable=pandas.DataFrame(newTable)
+                
                return "end"
   
 
