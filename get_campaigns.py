@@ -20,25 +20,12 @@ stateAccount="644-879-0580";
 hispanicAccount="473-277-5338";
 ArrayOfAccounts=[cityAccount,cityMobileAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
 
-"""
 
-testCampaign="150-063-1476"  
-cityAccount="210-489-7739";
-cityMobileAccount="";
-communityAccount="262-853-2074";
-suburbAccount="";
-stateAccount="";
-hispanicAccount="";
-ArrayOfAccounts=[cityAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
-"""
 
 query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros, metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign ORDER BY campaign.id')
 
 #966-289-6891
-#testcamp="1500631476"
-#customer_id=testcamp
-#response = ga_service.search_stream(customer_id, query=query)
-#countOfSubset=0;
+
 
 
 def fromAds(customer_id,query):
@@ -58,7 +45,7 @@ def fromAds(customer_id,query):
             #print("in while loop")
             except:
                return "end"
-"""        
+     
 testCampaign="150-063-1476"  
 cityAccount="210-489-7739";
 cityMobileAccount="423-859-4348";
@@ -67,7 +54,7 @@ suburbAccount="861-225-9590";
 stateAccount="644-879-0580";
 hispanicAccount="473-277-5338";
 ArrayOfAccounts=[cityAccount,cityMobileAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
-"""
+
 
 
 def accntFormat(ArrayOfAccounts):
