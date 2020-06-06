@@ -64,23 +64,42 @@ def fromAds(customer_id,query):
         #countOfSubset=0; 
         """
         while 1000>countOfSubset:
-        name=jsonObj["results"][countOfSubset]["campaign"]["name"];
-        status=jsonObj["results"][countOfSubset]["campaign"]["status"];
-        cost=jsonObj["results"][countOfSubset]["metrics"]["costMicros"];
-        clicks=jsonObj["results"][countOfSubset]["metrics"]["clicks"];
-        conversions=jsonObj["results"][countOfSubset]["metrics"]["conversions"];
-        impressions=jsonObj["results"][countOfSubset]["metrics"]["impressions"];
-        budget=jsonObj["results"][countOfSubset]["campaignBudget"]["amountMicros"];
+            name=jsonObj["results"][countOfSubset]["campaign"]["name"];
+            status=jsonObj["results"][countOfSubset]["campaign"]["status"];
+            cost=jsonObj["results"][countOfSubset]["metrics"]["costMicros"];
+            clicks=jsonObj["results"][countOfSubset]["metrics"]["clicks"];
+            conversions=jsonObj["results"][countOfSubset]["metrics"]["conversions"];
+            impressions=jsonObj["results"][countOfSubset]["metrics"]["impressions"];
+            budget=jsonObj["results"][countOfSubset]["campaignBudget"]["amountMicros"];
             try:      
                #print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
                print("name ",name);
                print("status ",status);
                print("cost ",cost);
-                
                print("clicks ",clicks);
                print("conversions ",conversions);
                print("impressions ",impressions);
                print("budget ",budget);
+                
+                
+                
+               campaignName.append(name);
+               campaignCost.append(cost);
+               campaignClicks.append(clicks);
+               campaignConversions.append(conversions);
+               campaignImpressions.append(impressions);
+               campaignBudget.append(budget);
+               campaignStatus.append(status);
+            
+               """
+               print("name ",name);
+               print("status ",status);
+               print("cost ",cost);
+               print("clicks ",clicks);
+               print("conversions ",conversions);
+               print("impressions ",impressions);
+               print("budget ",budget);
+               """
               
                countOfSubset+=1;
             #print("in while loop")
