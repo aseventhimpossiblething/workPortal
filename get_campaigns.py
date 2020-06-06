@@ -18,7 +18,7 @@ communityAccount="262-853-2074";
 suburbAccount="861-225-9590";
 stateAccount="644-879-0580";
 hispanicAccount="473-277-5338";
-ArrayOfAccounts=[cityAccount,cityMobileAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
+ArrayOfAccounts=[cityAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
 
 
 
@@ -45,7 +45,8 @@ def fromAds(customer_id,query):
             #print("in while loop")
             except:
                return "end"
-     
+  
+"""
 testCampaign="150-063-1476"  
 cityAccount="210-489-7739";
 cityMobileAccount="423-859-4348";
@@ -53,8 +54,8 @@ communityAccount="262-853-2074";
 suburbAccount="861-225-9590";
 stateAccount="644-879-0580";
 hispanicAccount="473-277-5338";
-ArrayOfAccounts=[cityAccount,cityMobileAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
-
+ArrayOfAccounts=[cityAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
+"""
 
 
 def accntFormat(ArrayOfAccounts):
