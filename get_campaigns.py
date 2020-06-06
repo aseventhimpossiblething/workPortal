@@ -57,15 +57,15 @@ hispanicAccount="473-277-5338";
 ArrayOfAccounts=[cityAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
 """
 
-fromAds("150-063-1476",query);
+#fromAds("150-063-1476",query);
 def accntFormat(ArrayOfAccounts):
     len(ArrayOfAccounts);
     count=0;
     for accnts in ArrayOfAccounts:
        fromAds("150-063-1476",query); 
        try: 
-        #fromAds(accnt,query);
-        fromAds("150-063-1476",query);
+        fromAds(accnt,query);
+        #fromAds("150-063-1476",query);
        except:
         print("failed to pill accnt ",accnts," count = ",count)
        count+=1; 
