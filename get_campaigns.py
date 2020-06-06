@@ -63,7 +63,7 @@ def accntFormat(ArrayOfAccounts):
     count=0;
     for accnts in ArrayOfAccounts:
        try: 
-        fromAds(accnts,query);
+        fromAds(accnt,query);
        except:
         print("failed to pill accnt ",accnts," count = ",count)
        count+=1; 
