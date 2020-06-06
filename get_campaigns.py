@@ -38,7 +38,8 @@ for subset in response:
       print("while for obj before")   
 """      
 
-def fromAds(customer_id,query):      
+def fromAds(customer_id,query):
+    print(customer_id)  
     #google_ads_client = GoogleAdsClient.load_from_storage('google-ads.yaml')
     #ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')
     response = ga_service.search_stream(customer_id, query=query)  
