@@ -55,7 +55,7 @@ def fromAds(customer_id,query):
             #print("in while loop")
             #print("while for obj before") 
         
-testCampaign="1500631476"      
+testCampaign="150-063-1476"      
 fromAds(testCampaign,query); 
 
 CityAccount="210-489-7739";
