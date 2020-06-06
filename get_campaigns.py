@@ -71,7 +71,7 @@ fromAds(,query);
 fromAds(,query); 
 fromAds(,query); 
 """
-def accntFormat(ArrayOfAccounts);
+def accntFormat(ArrayOfAccounts):
     len(ArrayOfAccounts);
     for accnts in ArrayOfAccounts;
         fromAds(accnts,query);
