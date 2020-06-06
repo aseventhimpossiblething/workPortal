@@ -52,14 +52,14 @@ def fromAds(customer_id,query):
         status=jsonObj["results"][countOfSubset]["campaign"]["status"];
         
         #cost=jsonObj["results"][countOfSubset]["campaign"]["metrics.cost_micros"];
-        #cost=jsonObj["results"][countOfSubset]["metrics"]["cost_micros"];
-        cost=jsonObj["results"][countOfSubset]["metrics"];
-        """
-        clicks=jsonObj["conversions"][countOfSubset]["metric"]["clicks"];
+        cost=jsonObj["results"][countOfSubset]["metrics"]["costMicros"];
+        #cost=jsonObj["results"][countOfSubset]["metrics"];
+       
+        clicks=jsonObj["conversions"][countOfSubset]["metrics"]["clicks"];
         conversions=jsonObj["conversions"][countOfSubset]["metrics"]["conversions"];
         impressions=jsonObj["impressions"][countOfSubset]["metrics"]["impressions"];
-        budget=jsonObj["conversions"][countOfSubset]["campaign_budget"]["amount_micros"];
-        """
+        budget=jsonObj["conversions"][countOfSubset]["campaign_budget"]["amountMicros"];
+        
         #conversions=jsonObj["conversions"][countOfSubset]["campaign"]["conversions"];
         #countOfSubset=0; 
         
@@ -69,12 +69,12 @@ def fromAds(customer_id,query):
                print("name ",name);
                print("status ",status);
                print("cost ",cost);
-               """ 
+                
                print("clicks ",clicks);
                print("conversions ",conversions);
                print("impressions ",impressions);
                print("budget ",budget);
-               """
+              
                countOfSubset+=1;
             #print("in while loop")
             except:
