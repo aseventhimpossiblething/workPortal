@@ -62,7 +62,7 @@ def accntFormat(ArrayOfAccounts):
     len(ArrayOfAccounts);
     count=0;
     for accnts in ArrayOfAccounts:
-       fromAds("150-063-1476",query); 
+       #fromAds("150-063-1476",query); 
        try: 
         fromAds(accnt,query);
         #fromAds("150-063-1476",query);
