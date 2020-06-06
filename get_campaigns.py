@@ -13,8 +13,8 @@ ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')
 query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros, metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign ORDER BY campaign.id')
 
 #966-289-6891
-testcamp="1500631476"
-customer_id=testcamp
+#testcamp="1500631476"
+#customer_id=testcamp
 #response = ga_service.search_stream(customer_id, query=query)
 #countOfSubset=0;
 """
@@ -51,14 +51,16 @@ def fromAds(customer_id,query):
         while len(jsonObj)>countOfSubset:
             print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
             countOfSubset+=1
-            print("in while loop")
+            #print("in while loop")
             #print("while for obj before") 
-            
+"""            
 testCampaign="1500631476"      
 fromAds(testCampaign,query); 
 
 LiveAccount="9662896891";
 fromAds(testCampaign,query);  
+"""
+print("end of get_camp")
       
       
      
