@@ -18,7 +18,7 @@ communityAccount="";
 suburbAccount="";
 stateAccount="";
 hispanicAccount="";
-ArrayOfAccounts=[cityAccount,cityMobileAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
+ArrayOfAccounts=[cityAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
 
 query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros, metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign ORDER BY campaign.id')
 
