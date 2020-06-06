@@ -53,14 +53,13 @@ def fromAds(customer_id,query):
             countOfSubset+=1
             #print("in while loop")
             #print("while for obj before") 
-"""            
+        
 testCampaign="1500631476"      
 fromAds(testCampaign,query); 
 
 LiveAccount="9662896891";
 fromAds(testCampaign,query);  
-"""
-print("end of get_camp")
+
       
       
      
