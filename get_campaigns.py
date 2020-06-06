@@ -44,7 +44,7 @@ def fromAds(customer_id,query):
     for subset in response:
         jsonObj=json_format.MessageToJson(subset)
         jsonObj=json.loads(jsonObj)  
-        print("jsonObj) = ",jsonObj)
+        #print("jsonObj) = ",jsonObj)
         
         countOfSubset=0; 
         name=jsonObj["results"][countOfSubset]["campaign"]["name"];
@@ -58,7 +58,7 @@ def fromAds(customer_id,query):
         budget=jsonObj["conversions"][countOfSubset]["campaign_budget"]["amount_micros"];
         #conversions=jsonObj["conversions"][countOfSubset]["campaign"]["conversions"];
         #countOfSubset=0; 
-        """
+        
         while 1000>countOfSubset:
             try:      
                #print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
@@ -74,16 +74,7 @@ def fromAds(customer_id,query):
             except:
                return "end"
   
-"""
-testCampaign="150-063-1476"  
-cityAccount="210-489-7739";
-cityMobileAccount="423-859-4348";
-communityAccount="262-853-2074";
-suburbAccount="861-225-9590";
-stateAccount="644-879-0580";
-hispanicAccount="473-277-5338";
-ArrayOfAccounts=[cityAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
-"""
+
 
 #fromAds("150-063-1476",query);
 def accntFormat(ArrayOfAccounts):
@@ -98,8 +89,8 @@ def accntFormat(ArrayOfAccounts):
         print("failed to pill accnt ",accnts," count = ",count)
        count+=1; 
     
-fromAds("150-063-1476",query);     
-#accntFormat(ArrayOfAccounts);      
+#fromAds("150-063-1476",query);     
+accntFormat(ArrayOfAccounts);      
          
       
       
