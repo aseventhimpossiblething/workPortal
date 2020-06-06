@@ -57,11 +57,12 @@ hispanicAccount="473-277-5338";
 ArrayOfAccounts=[cityAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
 """
 
-
+fromAds("150-063-1476",query);
 def accntFormat(ArrayOfAccounts):
     len(ArrayOfAccounts);
     count=0;
     for accnts in ArrayOfAccounts:
+       fromAds("150-063-1476",query); 
        try: 
         #fromAds(accnt,query);
         fromAds("150-063-1476",query);
