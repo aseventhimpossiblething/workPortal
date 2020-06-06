@@ -51,6 +51,8 @@ def fromAds(customer_id,query):
         #response = ga_service.search_stream(customer_id, query=query)
         #print("len(subset) = ",len(subset))
         print("len(jsonObj) = ",len(jsonObj))
+        countOfSubset=3;    
+        print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])    
         countOfSubset=0; 
         while len(jsonObj)>countOfSubset:
             print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
