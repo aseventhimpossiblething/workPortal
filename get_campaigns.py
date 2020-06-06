@@ -39,7 +39,8 @@ for subset in response:
 """      
 
 def fromAds(customer_id,query):
-    print(customer_id)  
+    print(customer_id) 
+    customer_id=customer_id.replace("-","") 
     #google_ads_client = GoogleAdsClient.load_from_storage('google-ads.yaml')
     #ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')
     response = ga_service.search_stream(customer_id, query=query)  
@@ -57,7 +58,7 @@ def fromAds(customer_id,query):
 testCampaign="1500631476"      
 fromAds(testCampaign,query); 
 
-LiveAccount="9662896891";
+CityAccount="210-489-7739";
 fromAds(LiveAccount,query);  
 
       
