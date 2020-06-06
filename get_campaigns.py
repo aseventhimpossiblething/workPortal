@@ -47,6 +47,7 @@ def fromAds(customer_id,query):
         #print("jsonObj) = ",jsonObj)
         
         countOfSubset=0; 
+        
         name=jsonObj["results"][countOfSubset]["campaign"]["name"];
         status=jsonObj["results"][countOfSubset]["campaign"]["status"];
         
@@ -69,7 +70,7 @@ def fromAds(customer_id,query):
                print("conversions ",conversions);
                print("impressions ",impressions);
                print("budget ",budget);
-               countOfSubset+=1
+               countOfSubset+=1;
             #print("in while loop")
             except:
                return "end"
@@ -89,8 +90,8 @@ def accntFormat(ArrayOfAccounts):
         print("failed to pill accnt ",accnts," count = ",count)
        count+=1; 
     
-#fromAds("150-063-1476",query);     
-accntFormat(ArrayOfAccounts);      
+fromAds("150-063-1476",query);     
+#accntFormat(ArrayOfAccounts);      
          
       
       
