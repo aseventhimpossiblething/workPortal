@@ -30,7 +30,7 @@ print(accountNumberNameLookup["262-853-2074"])
 
 query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
 metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
-WHERE campaign.status="ENABLED" DURING "LAST_30_DAYS" ORDER BY campaign.id')
+WHERE campaign.status="ENABLED" ORDER BY campaign.id')
 
 #966-289-6891
 
