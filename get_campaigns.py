@@ -20,8 +20,10 @@ suburbAccount="861-225-9590";
 stateAccount="644-879-0580";
 hispanicAccount="473-277-5338";
 ArrayOfAccounts=[cityAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
-accountNumberName Lookup={"210-489-7739":"city","423-859-4348":"cityMobile","262-853-2074":"community","861-225-9590":"suburb","861-225-9590":"state","473-277-5338":"hispanic"}
-
+accountNumberNameLookup={"210-489-7739":"city","423-859-4348":"cityMobile","262-853-2074":"community","861-225-9590":"suburb","861-225-9590":"state","473-277-5338":"hispanic"}
+print(accountNumberNameLookup[0])
+print(accountNumberNameLookup[1])
+print(accountNumberNameLookup[2])
 
 
 query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
@@ -49,39 +51,14 @@ def fromAds(customer_id,query):
     for subset in response:
         jsonObj=json_format.MessageToJson(subset)
         jsonObj=json.loads(jsonObj);
-        print(" subset = ",subset)
+        #print(" subset = ",subset)
         #print("str(subset).count('results')) = ",str(subset).count("results"))
         
         countOfSubset=0; 
         numberOfResults=str(subset).count("results");
-        #print(numberOfResults)
-        """
-        name=jsonObj["results"][countOfSubset]["campaign"]["name"];
-        status=jsonObj["results"][countOfSubset]["campaign"]["status"];
-        
-        #cost=jsonObj["results"][countOfSubset]["campaign"]["metrics.cost_micros"];
-        cost=jsonObj["results"][countOfSubset]["metrics"]["costMicros"];
-        #cost=jsonObj["results"][countOfSubset]["metrics"];
-       
-        clicks=jsonObj["results"][countOfSubset]["metrics"]["clicks"];
-        conversions=jsonObj["results"][countOfSubset]["metrics"]["conversions"];
-        impressions=jsonObj["results"][countOfSubset]["metrics"]["impressions"];
-        budget=jsonObj["results"][countOfSubset]["campaignBudget"]["amountMicros"];
-        
-        #conversions=jsonObj["conversions"][countOfSubset]["campaign"]["conversions"];
-        #countOfSubset=0; 
-        """
+      
         while numberOfResults>countOfSubset:
-            """
-            #print("numberOfResults = ",numberOfResults,":: countOfSubset",countOfSubset)
-            name=jsonObj["results"][countOfSubset]["campaign"]["name"];
-            status=jsonObj["results"][countOfSubset]["campaign"]["status"];
-            cost=jsonObj["results"][countOfSubset]["metrics"]["costMicros"];
-            clicks=jsonObj["results"][countOfSubset]["metrics"]["clicks"];
-            conversions=jsonObj["results"][countOfSubset]["metrics"]["conversions"];
-            impressions=jsonObj["results"][countOfSubset]["metrics"]["impressions"];
-            budget=jsonObj["results"][countOfSubset]["campaignBudget"]["amountMicros"];
-            """
+         
             try:
                #print("numberOfResults = ",numberOfResults,":: countOfSubset",countOfSubset)
                name=jsonObj["results"][countOfSubset]["campaign"]["name"];
@@ -128,8 +105,8 @@ def accntFormat(ArrayOfAccounts):
         print("failed to pill accnt ",accnts," count = ",count)
        count+=1; 
     
-fromAds("150-063-1476",query);     
-#accntFormat(ArrayOfAccounts);      
+#fromAds("150-063-1476",query);     
+accntFormat(ArrayOfAccounts);      
          
       
       
