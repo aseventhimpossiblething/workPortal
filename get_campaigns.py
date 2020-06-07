@@ -116,7 +116,9 @@ def fromAds(customer_id,query):
                print("row ",countOfSubset," failed") 
                #newTable=pandas.DataFrame(newTable)
                #print(newTable)
-        return newTable=pandas.DataFrame(newTable)       
+        newTable=pandas.DataFrame(newTable);
+        print(newTable);
+        return "none";       
                #return "end"
   
 
