@@ -8,7 +8,6 @@ import pandas
 
 from google.ads.google_ads.client import GoogleAdsClient
 from google.ads.google_ads.errors import GoogleAdsException
-#query = ('SELECT campaign.id, campaign.name FROM campaign ORDER BY campaign.id')
 google_ads_client = GoogleAdsClient.load_from_storage('google-ads.yaml')
 ga_service = google_ads_client.get_service('GoogleAdsService', version='v3')
 
@@ -23,11 +22,11 @@ ArrayOfAccounts=[cityAccount,cityMobileAccount,communityAccount,suburbAccount,st
 accountNumberNameLookup={"210-489-7739":"city","423-859-4348":"cityMobile","262-853-2074":"community","861-225-9590":"suburb",\
                          "644-879-0580":"state","473-277-5338":"hispanic"}
 
-"""
+
 query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
 metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
 WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY campaign.id')
-"""
+
 
 #query = ('SELECT campaign.id, campaign.name FROM campaign WHERE segments.date DURING THIS_MONTH')
 
