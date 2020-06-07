@@ -38,7 +38,9 @@ def fromAds(customer_id,query):
     campaignBudget=[];
     campaignStatus=[];
     
-    newTable=[campaignName,campaignCost,campaignClicks,campaignConversions,campaignImpressions,campaignBudget,campaignStatus];
+    #newTable=[campaignName,campaignCost,campaignClicks,campaignConversions,campaignImpressions,campaignBudget,campaignStatus];
+    newTable={"name":campaignName,"cost":campaignCost,"clicks":campaignClicks,"conversions":campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
+    
     print(customer_id) 
     customer_id=customer_id.replace("-","") 
     response = ga_service.search_stream(customer_id, query=query) 
@@ -117,7 +119,7 @@ def fromAds(customer_id,query):
                #newTable=pandas.DataFrame(newTable)
                #print(newTable)
                countOfSubset+=1;
-    newTable=pandas.DataFrame(newTable, columns=newTable);
+    newTable=pandas.DataFrame(newTable);
     print(newTable);
     return "none";       
                #return "end"
