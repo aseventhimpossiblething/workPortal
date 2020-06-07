@@ -113,10 +113,11 @@ def fromAds(customer_id,query):
                countOfSubset+=1;
             #print("in while loop")
             except:
-               newTable=pandas.DataFrame(newTable)
-               print(newTable)
-                
-               return "end"
+               print("row ",countOfSubset," failed") 
+               #newTable=pandas.DataFrame(newTable)
+               #print(newTable)
+        return newTable=pandas.DataFrame(newTable)       
+               #return "end"
   
 
 
