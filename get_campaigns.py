@@ -56,8 +56,7 @@ def fromAds(customer_id,query):
     newTable={"name":campaignName,"cost":campaignCost,"clicks":campaignClicks,"conversions":campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
     
     AccntName=accountNumberNameLookup[str(customer_id)];
-    print(AccntName);
-    print(customer_id); 
+    print(AccntName,"=",customer_id); 
     
     customer_id=customer_id.replace("-","") 
     response = ga_service.search_stream(customer_id, query=query) 
