@@ -22,15 +22,16 @@ hispanicAccount="473-277-5338";
 ArrayOfAccounts=[cityAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
 accountNumberNameLookup={"210-489-7739":"city","423-859-4348":"cityMobile","262-853-2074":"community","861-225-9590":"suburb",\
                          "644-879-0580":"state","473-277-5338":"hispanic"}
+
 """
-print(accountNumberNameLookup["210-489-7739"])
-print(accountNumberNameLookup["423-859-4348"])
-print(accountNumberNameLookup["262-853-2074"])
+query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
+metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
+WHERE campaign.status="ENABLED" ORDER BY campaign.id')
 """
 
 query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
 metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
-WHERE campaign.status="ENABLED" ORDER BY campaign.id')
+DURING ORDER BY campaign.id')
 
 #966-289-6891
 
