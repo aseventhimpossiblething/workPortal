@@ -117,7 +117,7 @@ def fromAds(customer_id,query):
                #newTable=pandas.DataFrame(newTable)
                #print(newTable)
                countOfSubset+=1;
-    newTable=pandas.DataFrame(newTable);
+    newTable=pandas.DataFrame(newTable, columns=newTable);
     print(newTable);
     return "none";       
                #return "end"
