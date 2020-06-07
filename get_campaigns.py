@@ -23,7 +23,7 @@ ArrayOfAccounts=[cityAccount,cityMobileAccount,communityAccount,suburbAccount,st
 
 
 
-query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros, metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign ORDER BY campaign.id')
+query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros, metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign ORDER BY campaign.id WHERE status=ENABLED')
 
 #966-289-6891
 
