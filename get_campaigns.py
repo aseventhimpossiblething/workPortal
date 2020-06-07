@@ -26,10 +26,10 @@ accountNumberNameLookup={"210-489-7739":"city","423-859-4348":"cityMobile","262-
 """
 query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
 metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
-WHERE campaign.status="ENABLED" ORDER BY campaign.id')
+WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY campaign.id')
 """
 
-query = ('SELECT campaign.id, campaign.name FROM campaign WHERE segments.date DURING THIS_MONTH')
+#query = ('SELECT campaign.id, campaign.name FROM campaign WHERE segments.date DURING THIS_MONTH')
 
 #966-289-6891
 
