@@ -29,7 +29,7 @@ metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions F
 WHERE campaign.status="ENABLED" ORDER BY campaign.id')
 """
 
-query = ('SELECT campaign.id, campaign.name FROM campaign CAT ')
+query = ('SELECT campaign.id, campaign.name, segments.date FROM campaign  ')
 
 #966-289-6891
 
