@@ -35,10 +35,12 @@ metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions F
 
 
 def fromAds(customer_id,query):
-    
+    """
     print(accountNumberNameLookup["210-489-7739"])
     print(accountNumberNameLookup["423-859-4348"])
     print(accountNumberNameLookup["262-853-2074"])
+    """
+    
 
     campaignName=[];
     campaignCost=[];
@@ -51,7 +53,9 @@ def fromAds(customer_id,query):
     #newTable=[campaignName,campaignCost,campaignClicks,campaignConversions,campaignImpressions,campaignBudget,campaignStatus];
     newTable={"name":campaignName,"cost":campaignCost,"clicks":campaignClicks,"conversions":campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
     
-    print(customer_id) 
+    accountNumberNameLookup[str(customer_id)];
+    print(customer_id); 
+    
     customer_id=customer_id.replace("-","") 
     response = ga_service.search_stream(customer_id, query=query) 
     for subset in response:
