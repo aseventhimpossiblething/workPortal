@@ -50,7 +50,7 @@ def fromAds(customer_id,query):
         
         countOfSubset=0; 
         numberOfResults=str(subset).count("results");
-        print(numberOfResults)
+        #print(numberOfResults)
         """
         name=jsonObj["results"][countOfSubset]["campaign"]["name"];
         status=jsonObj["results"][countOfSubset]["campaign"]["status"];
@@ -114,6 +114,7 @@ def fromAds(customer_id,query):
             #print("in while loop")
             except:
                newTable=pandas.DataFrame(newTable)
+               print(newTable)
                 
                return "end"
   
