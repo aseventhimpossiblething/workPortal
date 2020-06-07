@@ -56,7 +56,7 @@ def fromAds(customer_id,query):
     newTable={"name":campaignName,"cost":campaignCost,"clicks":campaignClicks,"conversions":campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
     
     AccntName=accountNumberNameLookup[str(customer_id)];
-    prin(AccntName);
+    print(AccntName);
     print(customer_id); 
     
     customer_id=customer_id.replace("-","") 
