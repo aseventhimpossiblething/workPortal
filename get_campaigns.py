@@ -20,6 +20,7 @@ suburbAccount="861-225-9590";
 stateAccount="644-879-0580";
 hispanicAccount="473-277-5338";
 ArrayOfAccounts=[cityAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
+accountNumberName Lookup={"210-489-7739":"city","423-859-4348":"cityMobile","262-853-2074":"community","861-225-9590":"suburb","861-225-9590":"state","473-277-5338":"hispanic"}
 
 
 
@@ -91,18 +92,7 @@ def fromAds(customer_id,query):
                impressions=jsonObj["results"][countOfSubset]["metrics"]["impressions"];
                budget=jsonObj["results"][countOfSubset]["campaignBudget"]["amountMicros"]; 
                #print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
-               """
-               print("name ",name);
-               print("status ",status);
-               print("cost ",cost);
-               print("clicks ",clicks);
-               print("conversions ",conversions);
-               print("impressions ",impressions);
-               print("budget ",budget);
-               """
-                
-                
-                
+                            
                campaignName.append(name);
                campaignCost.append(cost);
                campaignClicks.append(clicks);
@@ -110,9 +100,7 @@ def fromAds(customer_id,query):
                campaignImpressions.append(impressions);
                campaignBudget.append(budget);
                campaignStatus.append(status);
-            
-             
-              
+                                       
                countOfSubset+=1;
             #print("in while loop")
             except:
