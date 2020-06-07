@@ -4,6 +4,7 @@ from google.protobuf import json_format
 import argparse
 import sys
 import json
+import pandas
 
 from google.ads.google_ads.client import GoogleAdsClient
 from google.ads.google_ads.errors import GoogleAdsException
