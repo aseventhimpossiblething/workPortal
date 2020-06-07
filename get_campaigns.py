@@ -48,7 +48,7 @@ def fromAds(customer_id,query):
     for subset in response:
         jsonObj=json_format.MessageToJson(subset)
         jsonObj=json.loads(jsonObj);
-        #print("str(subset).find('results')) = ",str(subset).find("results"))
+        print(subset = ",subset)
         #print("str(subset).count('results')) = ",str(subset).count("results"))
         
         countOfSubset=0; 
@@ -121,7 +121,7 @@ def fromAds(customer_id,query):
                #print(newTable)
                countOfSubset+=1;
     newTable=pandas.DataFrame(newTable);
-    print(newTable);
+    #print(newTable);
     return "none";       
                #return "end"
   
@@ -140,8 +140,8 @@ def accntFormat(ArrayOfAccounts):
         print("failed to pill accnt ",accnts," count = ",count)
        count+=1; 
     
-#fromAds("150-063-1476",query);     
-accntFormat(ArrayOfAccounts);      
+fromAds("150-063-1476",query);     
+#accntFormat(ArrayOfAccounts);      
          
       
       
