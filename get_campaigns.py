@@ -100,11 +100,11 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
        try:
         CampaignLevelTable=fromAds(accnts,query);
         AccntName=accountNumberNameLookup[str(accnts)];
-        cost=fromAds(accnts,query).cost;
-        clicks=fromAds(accnts,query).clicks;
-        conversions=fromAds(accnts,query).conversions;
-        impressions=fromAds(accnts,query).impressions;
-        budget=fromAds(accnts,query).budget;
+        cost=sum(fromAds(accnts,query).cost);
+        clicks=sum(fromAds(accnts,query).clicks);
+        conversions=sum(fromAds(accnts,query).conversions);
+        impressions=sum(fromAds(accnts,query).impressions);
+        budget=sum(fromAds(accnts,query).budget);
         print("From AccntFormat ")
         #AccntName=accountNumberNameLookup[str(accnts)];
         print(AccntName,"=",accnts); 
