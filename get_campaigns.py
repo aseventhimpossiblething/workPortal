@@ -145,7 +145,7 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
     
     
     partialCost=sum(partialCost);
-    partialClicks=sum(partialClicks);
+    #partialClicks=sum(partialClicks);
     partialConversions=sum(partialConversions);
     partialImpressions=sum(partialImpressions);
     partialBudget=sum(partialBudget);
