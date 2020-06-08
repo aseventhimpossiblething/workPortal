@@ -107,10 +107,15 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
         #AccntName=accountNumberNameLookup[str(accnts)];
         print(AccntName,"=",accnts); 
         print(fromAds(accnts,query));
+        print("cost");
         print(cost);
+        print("clicks");
         print(clicks);
+        print("conversions");
         print(conversions);
+        print("impressions");
         print(impressions);
+        print("budget");
         print(budget);
         #print(cost);
         #fromAds("150-063-1476",query);
