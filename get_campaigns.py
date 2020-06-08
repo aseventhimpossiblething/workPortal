@@ -64,11 +64,11 @@ def fromAds(customer_id,query):
             try:
                name=jsonObj["results"][countOfSubset]["campaign"]["name"];
                status=jsonObj["results"][countOfSubset]["campaign"]["status"];
-               cost=jsonObj["results"][countOfSubset]["metrics"]["costMicros"];
+               cost=float(jsonObj["results"][countOfSubset]["metrics"]["costMicros"]);
                clicks=jsonObj["results"][countOfSubset]["metrics"]["clicks"];
                conversions=jsonObj["results"][countOfSubset]["metrics"]["conversions"];
                impressions=jsonObj["results"][countOfSubset]["metrics"]["impressions"];
-               budget=jsonObj["results"][countOfSubset]["campaignBudget"]["amountMicros"]; 
+               budget=float(jsonObj["results"][countOfSubset]["campaignBudget"]["amountMicros"]); 
                print(type(cost)) 
                 
                campaignName.append(name);
