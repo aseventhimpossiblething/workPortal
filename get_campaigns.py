@@ -86,7 +86,7 @@ def fromAds(customer_id,query):
                print("row ",countOfSubset," failed") 
                countOfSubset+=1;
     newTable=pandas.DataFrame(newTable);
-    return "none";       
+    return newTable;       
               
   
 
@@ -96,9 +96,11 @@ def accntFormat(ArrayOfAccounts):
     len(ArrayOfAccounts);
     count=0;
     for accnts in ArrayOfAccounts:
-       fromAds(accnts,query); 
+       #fromAds(accnts,query); 
        try: 
         fromAds(accnts,query);
+        print("From AccntFormat ")
+        print(fromAds(accnts,query));
         #fromAds("150-063-1476",query);
        except:
         print("failed to pill accnt ",accnts," count = ",count)
