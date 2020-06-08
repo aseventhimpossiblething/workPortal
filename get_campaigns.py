@@ -158,7 +158,7 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
     #metrics=pandas.DataFrame(data=metrics)
     #metrics=" | "+str(metrics['cost'])+" | "+str(metrics["clicks"] +" | "+str(metrics["conversions"])+" | "+str(metrics["impressions"]);
                                                  
-    metrics=" | "+str(metrics['cost'])+" | "+str(metrics["clicks"] ;
+    metrics=" | "+str(metrics['cost'])+" | "+str(metrics['clicks'])+" | "+str(metrics["conversions"])+" | "+str(metrics["impressions"]) ;
     #FinalSumOfMetrics=[sum(metrics[cost],sum(metrics[clicks]),sum(metrics[conversions])\
     #                   ,sum(metrics[impressions]),sum(metrics[budget]];
                        
