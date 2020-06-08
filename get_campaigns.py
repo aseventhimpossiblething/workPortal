@@ -92,6 +92,7 @@ def fromAds(customer_id,query):
 
 #fromAds("150-063-1476",query);
 def allAccntCombinedBasedMetrics(ArrayOfAccounts):
+    print("in allAccntCombinedBasedMetrics(ArrayOfAccounts)") 
     len(ArrayOfAccounts);
     count=0;
     for accnts in ArrayOfAccounts:
