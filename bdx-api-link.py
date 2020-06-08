@@ -5,10 +5,11 @@ usr="BDXPPC"
 pwd="#!!9ooRanch"
 
 
-
+"""
 from google.oauth2.service_account import Credentials as ServiceAccountCreds
 from google.oauth2.credentials import Credentials as InstalledAppCredentials
 from google.auth.transport.requests import Request
+"""
 
 
 
@@ -25,11 +26,11 @@ from flask import Flask, Markup, render_template, request, make_response
 from flask import send_file
 from flask import send_from_directory
 import get_campaigns
-print("from main after get_campaigns")
 
 
 
-#import spider
+
+
 
 import spider
 
@@ -418,6 +419,17 @@ def BdOptmstn():
     if ready.find("100%")>-1:
        return render_template("BidOptimisation.html",CacheBreakStamp=datetime.now())           
     return settleURL
+
+
+@app.route('/SpendTrack')
+def index():
+    if chckbdxcred().find("NULL")==-1:
+        print(str(chckbdxcred()));
+        return str(chckbdxcred());
+    global domain;     
+    domainFavi=domain+"/favicon.png";
+    return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi);
+    
 
 
 
