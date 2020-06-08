@@ -145,14 +145,11 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
     
     
     partialCost=sum(partialCost);
-    #partialClicks=sum(partialClicks);
+    partialClicks=sum(partialClicks);
     partialConversions=sum(partialConversions);
     partialImpressions=sum(partialImpressions);
     partialBudget=sum(partialBudget);
-    partialClicks=sum(partialClicks);
-    partialConversions=sum(partialConversions);
-    partialImpression=sum(partialImpression);
-    partialBudget=sum(partialBudget);
+    
     
     metrics={"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"budget":partialBudget}
