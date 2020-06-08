@@ -35,13 +35,7 @@ WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY cam
 
 
 def fromAds(customer_id,query):
-    """
-    print(accountNumberNameLookup["210-489-7739"])
-    print(accountNumberNameLookup["423-859-4348"])
-    print(accountNumberNameLookup["262-853-2074"])
-    """
-    
-
+  
     campaignName=[];
     campaignCost=[];
     campaignClicks=[];
@@ -50,7 +44,6 @@ def fromAds(customer_id,query):
     campaignBudget=[];
     campaignStatus=[];
     
-    #newTable=[campaignName,campaignCost,campaignClicks,campaignConversions,campaignImpressions,campaignBudget,campaignStatus];
     newTable={"name":campaignName,"cost":campaignCost,"clicks":campaignClicks,"conversions":campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
     
     AccntName=accountNumberNameLookup[str(customer_id)];
@@ -78,8 +71,7 @@ def fromAds(customer_id,query):
                conversions=jsonObj["results"][countOfSubset]["metrics"]["conversions"];
                impressions=jsonObj["results"][countOfSubset]["metrics"]["impressions"];
                budget=jsonObj["results"][countOfSubset]["campaignBudget"]["amountMicros"]; 
-               #print("jsonObj['results'][",countOfSubset,"]['campaign']['name'] ",jsonObj["results"][countOfSubset]["campaign"]["name"])
-                            
+                                          
                campaignName.append(name);
                campaignCost.append(cost);
                campaignClicks.append(clicks);
@@ -89,16 +81,13 @@ def fromAds(customer_id,query):
                campaignStatus.append(status);
                                        
                countOfSubset+=1;
-            #print("in while loop")
+           
             except:
                print("row ",countOfSubset," failed") 
-               #newTable=pandas.DataFrame(newTable)
-               #print(newTable)
                countOfSubset+=1;
     newTable=pandas.DataFrame(newTable);
-    #print(newTable);
     return "none";       
-               #return "end"
+              
   
 
 
