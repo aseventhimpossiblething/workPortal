@@ -124,7 +124,7 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
         #print(AccntName,"=",accnts); 
         #print(fromAds(accnts,query));
         print("budget");
-        print("sum(fromAds(accnts,query).budget)");
+        print(sum(fromAds(accnts,query).budget));
         """
         print(cost);
         print("clicks");
