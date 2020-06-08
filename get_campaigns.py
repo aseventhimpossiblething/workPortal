@@ -44,7 +44,8 @@ def fromAds(customer_id,query):
     campaignBudget=[];
     campaignStatus=[];
     
-    newTable={"name":campaignName,"cost":campaignCost,"clicks":campaignClicks,"conversions":campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
+    newTable={"name":campaignName,"cost":campaignCost,"clicks":campaignClicks,"conversions":\
+              campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
     
     #AccntName=accountNumberNameLookup[str(customer_id)];
     #print(AccntName,"=",customer_id); 
@@ -113,10 +114,17 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
         conversions=sum(fromAds(accnts,query).conversions);
         impressions=sum(fromAds(accnts,query).impressions);
         budget=sum(fromAds(accnts,query).budget);
+        
+        partialCost.append(cost);
+        partialClicks.append(clicks);
+        partialConversions.append(conversions);
+        partialImpressions.append(impressions);
+        partialBudget.append(budget);
         #print("From AccntFormat ")
         #AccntName=accountNumberNameLookup[str(accnts)];
         #print(AccntName,"=",accnts); 
         #print(fromAds(accnts,query));
+        """
         print("cost");
         print(cost);
         print("clicks");
@@ -127,6 +135,7 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
         print(impressions);
         print("budget");
         print(budget);
+        """
         #print(cost);
         #fromAds("150-063-1476",query);
         #CampaignLevelTable=fromAds(accnts,query);
@@ -135,18 +144,31 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
        count+=1; 
     
     
+    partialCost=sum(partialCost);
+    partialClicks=sum(partialClicks);
+    partialConversions=sum(partialConversions);
+    partialImpressions=sum(partialImpressions=);
+    partialBudget=sum(partialBudget);
+    partialClicks=sum(partialClicks);
+    partialConversions=sum(partialConversions);
+    partialImpression=sum(partialImpression);
+    partialBudget=sum(partialBudget);
+    
     metrics={"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"budget":partialBudget}
     
     
     metrics=pandas.DataFrame(data=metrics)
-    FinalSumOfMetrics=[sum(metrics[cost]),sum(metrics[clicks]),sum(metrics[conversions])\
-                       ,sum(metrics[impressions]),sum(metrics[budget])];
+    """
+    FinalSumOfMetrics=[sum(metrics[cost],sum(metrics[clicks]),sum(metrics[conversions])\
+                       ,sum(metrics[impressions]),sum(metrics[budget]];
+                       
     
-    FinalSumOfMetrics=pandas.DataFrame(data=FinalSumOfMetrics)
+    FinalSumOfMetrics=pandas.DataFrame(data=FinalSumOfMetrics
+    """
     
-    print(FinalSumOfMetrics);
-    return FinalSumOfMetrics;
+    print(metrics);
+    return metrics;
     
 #fromAds("150-063-1476",query);     
 allAccntCombinedBasedMetrics(ArrayOfAccounts);      
