@@ -164,12 +164,14 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
                        
     
     #FinalSumOfMetrics=pandas.DataFrame(data=FinalSumOfMetrics
-    metrics=str(metrics)    
+    #metrics=str(metrics)    
     print(metrics);
     return metrics;
     
 #fromAds("150-063-1476",query);     
-allAccntCombinedBasedMetrics(ArrayOfAccounts);      
+googlemetrics=allAccntCombinedBasedMetrics(ArrayOfAccounts);
+print(googlemetrics.cost)
+
          
       
       
