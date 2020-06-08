@@ -98,7 +98,8 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
     partialImpressions=[];
     partialBudget=[];
     
-    d={"cost":sum(partialCost),}
+    metrics={"cost":sum(partialCost),"clicks":sum(partialClicks),"conversions":sum(partialConversions)\
+       ,"impressions":sum(partialImpressions),"budget":sum(partialBudget),}
     
       
     print("in allAccntCombinedBasedMetrics(ArrayOfAccounts)") 
@@ -135,6 +136,8 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
         print("failed to pill accnt ",accnts," count = ",count)
        count+=1; 
     
+    metrics=pandas.DataFrame(data=metrics)
+    print(metrics)
 #fromAds("150-063-1476",query);     
 allAccntCombinedBasedMetrics(ArrayOfAccounts);      
          
