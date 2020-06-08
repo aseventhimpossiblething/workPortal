@@ -165,7 +165,7 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
     
     #FinalSumOfMetrics=pandas.DataFrame(data=FinalSumOfMetrics
         
-    print(metrics);
+    print(str(metrics));
     return metrics;
     
 #fromAds("150-063-1476",query);     
