@@ -62,8 +62,8 @@ def fromAds(customer_id,query):
         while numberOfResults>countOfSubset:
          
             try:
-               name=float(jsonObj["results"][countOfSubset]["campaign"]["name"]);
-               status=float(jsonObj["results"][countOfSubset]["campaign"]["status"]);
+               name=jsonObj["results"][countOfSubset]["campaign"]["name"];
+               status=jsonObj["results"][countOfSubset]["campaign"]["status"];
                cost=float(jsonObj["results"][countOfSubset]["metrics"]["costMicros"])/10000;
                clicks=float(jsonObj["results"][countOfSubset]["metrics"]["clicks"]);
                conversions=float(jsonObj["results"][countOfSubset]["metrics"]["conversions"]);
