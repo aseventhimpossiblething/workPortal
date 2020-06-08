@@ -90,25 +90,37 @@ def fromAds(customer_id,query):
 
 
 #fromAds("150-063-1476",query);
-def accntFormat(ArrayOfAccounts):
+def allAccntCombinedBasedMetrics(ArrayOfAccounts):
     len(ArrayOfAccounts);
     count=0;
     for accnts in ArrayOfAccounts:
        #fromAds(accnts,query); 
        try:
-        print("From AccntFormat ")
+        CampaignLevelTable=fromAds(accnts,query);
         AccntName=accountNumberNameLookup[str(accnts)];
+        cost=fromAds(accnts,query).cost;
+        clicks=fromAds(accnts,query).clicks;
+        conversions=fromAds(accnts,query).conversions;
+        impressions=fromAds(accnts,query).impressions;
+        budget=fromAds(accnts,query).budget;
+        print("From AccntFormat ")
+        #AccntName=accountNumberNameLookup[str(accnts)];
         print(AccntName,"=",accnts); 
         print(fromAds(accnts,query));
-        fromAds(accnts,query).cost;
+        print(cost);
+        print(clicks);
+        print(conversions);
+        print(impressions);
+        print(budget);
+        #print(cost);
         #fromAds("150-063-1476",query);
-        fromAds(accnts,query);
+        CampaignLevelTable=fromAds(accnts,query);
        except:
         print("failed to pill accnt ",accnts," count = ",count)
        count+=1; 
     
 #fromAds("150-063-1476",query);     
-accntFormat(ArrayOfAccounts);      
+allAccntCombinedBasedMetrics(ArrayOfAccounts);      
          
       
       
