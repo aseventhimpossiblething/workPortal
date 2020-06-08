@@ -108,7 +108,6 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
        #fromAds(accnts,query); 
        try:
         CampaignLevelTable=fromAds(accnts,query);
-        #AccntName=accountNumberNameLookup[str(accnts)];
         cost=sum(fromAds(accnts,query).cost);
         clicks=sum(fromAds(accnts,query).clicks);
         conversions=sum(fromAds(accnts,query).conversions);
@@ -124,8 +123,9 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
         #AccntName=accountNumberNameLookup[str(accnts)];
         #print(AccntName,"=",accnts); 
         #print(fromAds(accnts,query));
+        print("budget");
+        print("sum(fromAds(accnts,query).budget)");
         """
-        print("cost");
         print(cost);
         print("clicks");
         print(clicks);
@@ -151,7 +151,7 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
     partialBudget=sum(partialBudget);
     
     
-    metrics={"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+    metrics={"__":["All Google Metrics"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"budget":partialBudget}
     
     
@@ -164,8 +164,8 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
                        
     
     #FinalSumOfMetrics=pandas.DataFrame(data=FinalSumOfMetrics
-        
-    print(str(metrics));
+    metrics=str(metrics)    
+    print(metrics);
     return metrics;
     
 #fromAds("150-063-1476",query);     
