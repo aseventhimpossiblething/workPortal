@@ -100,6 +100,7 @@ def accntFormat(ArrayOfAccounts):
         AccntName=accountNumberNameLookup[str(accnts)];
         print(AccntName,"=",accnts); 
         print(fromAds(accnts,query));
+        fromAds(accnts,query).cost;
         #fromAds("150-063-1476",query);
         fromAds(accnts,query);
        except:
