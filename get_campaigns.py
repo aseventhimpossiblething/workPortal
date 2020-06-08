@@ -46,16 +46,15 @@ def fromAds(customer_id,query):
     
     newTable={"name":campaignName,"cost":campaignCost,"clicks":campaignClicks,"conversions":campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
     
-    AccntName=accountNumberNameLookup[str(customer_id)];
-    print(AccntName,"=",customer_id); 
+    #AccntName=accountNumberNameLookup[str(customer_id)];
+    #print(AccntName,"=",customer_id); 
     
     customer_id=customer_id.replace("-","") 
     response = ga_service.search_stream(customer_id, query=query) 
     for subset in response:
         jsonObj=json_format.MessageToJson(subset)
         jsonObj=json.loads(jsonObj);
-        #print(" subset = ",subset)
-        #print("str(subset).count('results')) = ",str(subset).count("results"))
+      
         
         countOfSubset=0; 
         numberOfResults=str(subset).count("results");
@@ -63,7 +62,6 @@ def fromAds(customer_id,query):
         while numberOfResults>countOfSubset:
          
             try:
-               #print("numberOfResults = ",numberOfResults,":: countOfSubset",countOfSubset)
                name=jsonObj["results"][countOfSubset]["campaign"]["name"];
                status=jsonObj["results"][countOfSubset]["campaign"]["status"];
                cost=jsonObj["results"][countOfSubset]["metrics"]["costMicros"];
@@ -97,7 +95,9 @@ def accntFormat(ArrayOfAccounts):
     count=0;
     for accnts in ArrayOfAccounts:
        #fromAds(accnts,query); 
-       try: 
+       try:
+        AccntName=accountNumberNameLookup[str(accnts)];
+        print(AccntName,"=",accnts); 
         fromAds(accnts,query);
         print("From AccntFormat ")
         print(fromAds(accnts,query));
