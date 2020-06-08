@@ -155,7 +155,7 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
        ,"impressions":partialImpressions,"budget":partialBudget}
     
     
-    letrics=pandas.DataFrame(data=metrics, index=0)
+    letrics=pandas.DataFrame(data=metrics, index=[0])
     #metrics=" | "+str(metrics['cost'])+" | "+str(metrics["clicks"] +" | "+str(metrics["conversions"])+" | "+str(metrics["impressions"]);
                                                  
     metrics=" | "+str(metrics['cost'])+" | "+str(metrics['clicks'])+" | "+str(metrics["conversions"])+" | "+str(metrics["impressions"]) ;
