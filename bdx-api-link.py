@@ -422,7 +422,7 @@ def BdOptmstn():
 
 
 @app.route('/SpendTrack')
-def index():
+def inda():
     if chckbdxcred().find("NULL")==-1:
         print(str(chckbdxcred()));
         return str(chckbdxcred());
