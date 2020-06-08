@@ -92,6 +92,15 @@ def fromAds(customer_id,query):
 
 #fromAds("150-063-1476",query);
 def allAccntCombinedBasedMetrics(ArrayOfAccounts):
+    partialCost=[];
+    partialClicks=[];
+    partialConversions=[];
+    partialImpressions=[];
+    partialBudget=[];
+    
+    d={"cost":sum(partialCost),}
+    
+      
     print("in allAccntCombinedBasedMetrics(ArrayOfAccounts)") 
     len(ArrayOfAccounts);
     count=0;
