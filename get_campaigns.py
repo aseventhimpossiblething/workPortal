@@ -107,16 +107,16 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
        #fromAds(accnts,query); 
        try:
         CampaignLevelTable=fromAds(accnts,query);
-        AccntName=accountNumberNameLookup[str(accnts)];
+        #AccntName=accountNumberNameLookup[str(accnts)];
         cost=sum(fromAds(accnts,query).cost);
         clicks=sum(fromAds(accnts,query).clicks);
         conversions=sum(fromAds(accnts,query).conversions);
         impressions=sum(fromAds(accnts,query).impressions);
         budget=sum(fromAds(accnts,query).budget);
-        print("From AccntFormat ")
+        #print("From AccntFormat ")
         #AccntName=accountNumberNameLookup[str(accnts)];
-        print(AccntName,"=",accnts); 
-        print(fromAds(accnts,query));
+        #print(AccntName,"=",accnts); 
+        #print(fromAds(accnts,query));
         print("cost");
         print(cost);
         print("clicks");
@@ -129,7 +129,7 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
         print(budget);
         #print(cost);
         #fromAds("150-063-1476",query);
-        CampaignLevelTable=fromAds(accnts,query);
+        #CampaignLevelTable=fromAds(accnts,query);
        except:
         print("failed to pill accnt ",accnts," count = ",count)
        count+=1; 
