@@ -174,6 +174,15 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[partialBudget-partialCost];
     
+    partialCost=partialCost.append("-");
+    partialClicks=partialClicks.append("-");
+    partialConversions=partialConversions.append("-");
+    partialImpressions=partialImpressions.append("-");
+    partialBudget=partialBudget.append("-");
+    yesterdayCost=yesterdayCost.append("-");
+    budgetMinusCost=.append("-");
+    
+    
     
     metrics={"":["Google Ads MTD"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
