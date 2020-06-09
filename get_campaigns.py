@@ -1,5 +1,5 @@
 
-print("active experiment block------------------------------------------------------------")
+#print("active experiment block------------------------------------------------------------")
 from google.protobuf import json_format
 import argparse
 import sys
@@ -18,15 +18,15 @@ communityAccount="262-853-2074";
 suburbAccount="861-225-9590";
 stateAccount="644-879-0580";
 hispanicAccount="473-277-5338";
-ArrayOfAccounts=[cityAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
-accountNumberNameLookup={"210-489-7739":"city","423-859-4348":"cityMobile","262-853-2074":"community","861-225-9590":"suburb",\
+googleArrayOfAccounts=[cityAccount,cityMobileAccount,communityAccount,suburbAccount,stateAccount,hispanicAccount]
+googleAccountNumberNameLookup={"210-489-7739":"city","423-859-4348":"cityMobile","262-853-2074":"community","861-225-9590":"suburb",\
                          "644-879-0580":"state","473-277-5338":"hispanic"}
 
-
+"""
 query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
 metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
 WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY campaign.id')
-
+"""
 
 #query = ('SELECT campaign.id, campaign.name FROM campaign WHERE segments.date DURING THIS_MONTH')
 
@@ -34,7 +34,7 @@ WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY cam
 
 
 
-def fromAds(customer_id):
+def fromGoogleAds(customer_id):
     
     query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
      metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
@@ -97,7 +97,7 @@ def fromAds(customer_id):
 
 
 #fromAds("150-063-1476",query);
-def allAccntCombinedBasedMetrics(ArrayOfAccounts):
+def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialCost=[];
     partialClicks=[];
     partialConversions=[];
@@ -112,7 +112,7 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
     for accnts in ArrayOfAccounts:
        #fromAds(accnts,query); 
        try:
-        CampaignLevelTable=fromAds(accnts);
+        CampaignLevelTable=fromGoogleAds(accnts);
         cost=sum(CampaignLevelTable.cost);
         clicks=sum(CampaignLevelTable.clicks);
         conversions=sum(CampaignLevelTable.conversions);
@@ -135,10 +135,11 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
     partialConversions=sum(partialConversions);
     partialImpressions=sum(partialImpressions);
     partialBudget=sum(partialBudget);
+    budgetMinusCost=partialBudget-partialCost
     
     
     metrics={"":["Google Ads MTD"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
-       ,"impressions":partialImpressions,"budget":partialBudget}
+       ,"impressions":partialImpressions,"budget":partialBudget,"remaining budget":budgetMinusCost}
     
     
     metrics=pandas.DataFrame(data=metrics, index=[0])
@@ -147,7 +148,7 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
     return metrics;
     
 #fromAds("150-063-1476",query);     
-googlemetrics=allAccntCombinedBasedMetrics(ArrayOfAccounts);
+googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
 #print(googlemetrics.cost)
 
          
