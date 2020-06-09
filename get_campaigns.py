@@ -168,8 +168,10 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     return metrics;
     
 #fromAds("150-063-1476",query);     
-googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
+#googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
 #print(googlemetrics.cost)
+CampaignLevelTable=fromGoogleAds(accnts,"THIS_MONTH"); 
+print(CampaignLevelTable)
 
          
       
