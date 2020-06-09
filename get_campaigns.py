@@ -40,7 +40,7 @@ def fromGoogleAds(customer_id):
              metrics.impressions FROM campaign WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY campaign_budget.amount_micros')
     query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
           metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
-           WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY campaign.id')
+           WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH')
     
     campaignName=[];
     campaignCost=[];
