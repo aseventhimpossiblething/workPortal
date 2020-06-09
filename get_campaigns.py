@@ -125,10 +125,10 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     count=0;
     for accnts in googleArrayOfAccounts:
        #fromAds(accnts,query); 
-       #CampaignLevelTable=fromGoogleAds(accnts,"THIS_MONTH"); 
+       CampaignLevelTable=fromGoogleAds(accnts,"THIS_MONTH"); 
        #CampaignLevelTable2=fromGoogleAds(accnts,"YESTERDAY");
        try:
-        mtdGoogle=fromGoogleAds(accnts,"THIS_MONTH");
+        #mtdGoogle=fromGoogleAds(accnts,"THIS_MONTH");
         #yesterdayGoogleCost=fromGoogleAds(accnts,"YESTERDAY");
         cost=sum(mtdGoogle.cost);
         clicks=sum(mtdGoogle.clicks);
@@ -141,7 +141,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
         partialConversions.append(conversions);
         partialImpressions.append(impressions);
         partialBudget.append(budget);
-        #yesterdayCost.append(yesterdayGoogleCost);
+        yesterdayCost.append(yesterdayGoogleCost);
         
        except:
         print("failed to pull accnt ",accnts," count = ",count)
@@ -153,7 +153,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialConversions=sum(partialConversions);
     partialImpressions=sum(partialImpressions);
     partialBudget=sum(partialBudget);
-    #yesterdayCost=sum(yesterdayCost);
+    yesterdayCost=sum(yesterdayCost);
     budgetMinusCost=partialBudget-partialCost
     
     
