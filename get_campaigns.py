@@ -107,7 +107,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        
       
     print("in allAccntCombinedBasedMetrics(ArrayOfAccounts)") 
-    len(ArrayOfAccounts);
+    len(googleArrayOfAccounts);
     count=0;
     for accnts in ArrayOfAccounts:
        #fromAds(accnts,query); 
