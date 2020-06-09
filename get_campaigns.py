@@ -5,6 +5,11 @@ import argparse
 import sys
 import json
 import pandas
+from calendar import monthrange
+from datetime import date
+today = date.today()
+print(today)
+#monthrang(,)
 
 from google.ads.google_ads.client import GoogleAdsClient
 from google.ads.google_ads.errors import GoogleAdsException
