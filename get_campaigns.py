@@ -34,7 +34,7 @@ WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY cam
 
 
 
-def fromGoogleAdsMTD(customer_id,dateRange):
+def fromGoogleAds(customer_id,dateRange):
     
     query = ('SELECT campaign.name, campaign.status,campaign_budget.amount_micros,metrics.cost_micros,\
             metrics.clicks,metrics.conversions,metrics.impressions FROM campaign WHERE \
