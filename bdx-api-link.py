@@ -429,7 +429,9 @@ def inda():
     global domain;     
     domainFavi=domain+"/favicon.png";
     metrics=get_campaigns.googlemetrics;
-    return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi,metreics=metrics);
+    print("spendtrack")
+    print(metrics)
+    return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi,metrics=metrics);
 
 
 
@@ -443,8 +445,8 @@ def ind():
     domainFavi=domain+"/favicon.png";
     metrics=get_campaigns.googlemetrics;
     print("test fired")
-    #return get_campaigns.googlemetrics;
-    return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi,metrics=metrics);
+    return get_campaigns.googlemetrics;
+    #return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi,metrics=metrics);
 
     
 
