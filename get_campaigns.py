@@ -34,12 +34,12 @@ WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY cam
 
 
 
-def fromAds(customer_id,query):
-    """
+def fromAds(customer_id):
+    
     query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
      metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
      WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY campaign.id')
-    """ 
+    
     
     campaignName=[];
     campaignCost=[];
@@ -112,7 +112,7 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
     for accnts in ArrayOfAccounts:
        #fromAds(accnts,query); 
        try:
-        CampaignLevelTable=fromAds(accnts,query);
+        CampaignLevelTable=fromAds(accnts);
         cost=sum(CampaignLevelTable.cost);
         clicks=sum(CampaignLevelTable.clicks);
         conversions=sum(CampaignLevelTable.conversions);
@@ -137,7 +137,7 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
     partialBudget=sum(partialBudget);
     
     
-    metrics={"__":["Google Ads MTD"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+    metrics={"":["Google Ads MTD"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"budget":partialBudget}
     
     
