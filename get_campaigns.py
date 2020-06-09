@@ -23,6 +23,26 @@ print("thisDay ",thisDay)
 print("numberOfDays ",numberOfDays)
 print("daysLeft ",daysLeft)
 
+def formatDate(today):
+    thisYear=str(today.year);
+    thisMonth=str(today.month);
+    thisDay=str(today.day);
+    numberOfDays=str(monthrange(thisYear,thisMonth)[1]);
+    daysLeft=str(numberOfDays-thisDay)
+    if len(thisMonth)<2:
+       thisMonth="0"+thisMonth;
+    if len(thisDay)<2:    
+       thisDay="0"+thisDay;
+    
+    return format=thisYear+thisMonth+thisDay ;
+print("formatDate(today) ",formatDate(today));  
+        
+      
+     
+     
+     
+  
+
 from google.ads.google_ads.client import GoogleAdsClient
 from google.ads.google_ads.errors import GoogleAdsException
 google_ads_client = GoogleAdsClient.load_from_storage('google-ads.yaml')
