@@ -129,7 +129,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        #CampaignLevelTable2=fromGoogleAds(accnts,"YESTERDAY");
        try:
         mtdGoogle=fromGoogleAds(accnts,"THIS_MONTH");
-        yesterdayGoogleCost=fromGoogleAds(accnts,"YESTERDAY").cost;
+        yesterdayGoogleCost=fromGoogleAds(accnts,"YESTERDAY");
         cost=sum(mtdGoogle.cost);
         clicks=sum(mtdGoogle.clicks);
         conversions=sum(mtdGoogle.conversions);
@@ -141,7 +141,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
         partialConversions.append(conversions);
         partialImpressions.append(impressions);
         partialBudget.append(budget);
-        yesterdayCost.append(yesterdayGoogleCost);
+        #yesterdayCost.append(yesterdayGoogleCost);
         
        except:
         print("failed to pill accnt ",accnts," count = ",count)
