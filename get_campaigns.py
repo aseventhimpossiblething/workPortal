@@ -156,14 +156,15 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
         print("failed to pull accnt ",accnts," count = ",count)
        count+=1; 
     
-    
+    """
     partialCost=sum(partialCost);
     partialClicks=sum(partialClicks);
     partialConversions=sum(partialConversions);
     partialImpressions=sum(partialImpressions);
     partialBudget=sum(partialBudget);
     yesterdayCost=sum(yesterdayCost);
-    budgetMinusCost=partialBudget-partialCost
+    budgetMinusCost=partialBudget-partialCost;
+    """
     
     
     partialCost=[sum(partialCost)];
@@ -172,7 +173,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialImpressions=[sum(partialImpressions)];
     partialBudget=[sum(partialBudget)];
     yesterdayCost=[sum(yesterdayCost)];
-    budgetMinusCost=[partialBudget-partialCost];
+    budgetMinusCost=[(partialBudget-partialCost)];
     
     partialCost.append("-");
     partialClicks.append("-");
