@@ -36,11 +36,13 @@ WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY cam
 
 def fromGoogleAds(customer_id):
     
-    query = ('SELECT campaign.status,campaign_budget.amount_micros,metrics.cost_micros, metrics.clicks,metrics.conversions,\
+    query = ('SELECT campaign.name, campaign.status,campaign_budget.amount_micros,metrics.cost_micros, metrics.clicks,metrics.conversions,\
              metrics.impressions FROM campaign WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY campaign_budget.amount_micros')
+    """
     query = ('SELECT campaign.status, campaign_budget.amount_micros,\
           metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
            WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH')
+    """       
     
     campaignName=[];
     campaignCost=[];
