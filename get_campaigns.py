@@ -124,6 +124,8 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     count=0;
     for accnts in googleArrayOfAccounts:
        #fromAds(accnts,query); 
+       CampaignLevelTable=fromGoogleAds(accnts,"THIS_MONTH"); 
+       CampaignLevelTable2=fromGoogleAds(accnts,"YESTERDAY");
        try:
         CampaignLevelTable=fromGoogleAds(accnts,"THIS_MONTH");
         CampaignLevelTable2=fromGoogleAds(accnts,"YESTERDAY");
