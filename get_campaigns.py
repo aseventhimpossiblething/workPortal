@@ -36,7 +36,7 @@ WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY cam
 
 def fromGoogleAds(customer_id,dateRange):
     
-    query = ('SELECT campaign.name,campaign_budget.amount_micros,metrics.cost_micros,\
+    query = ('SELECT campaign.id, campaign.name,campaign_budget.amount_micros,metrics.cost_micros,\
             metrics.clicks,metrics.conversions,metrics.impressions FROM campaign WHERE \
             campaign.status="ENABLED" AND segments.date DURING '+dateRange)
     """
