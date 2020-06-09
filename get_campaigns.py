@@ -38,11 +38,10 @@ def fromGoogleAds(customer_id):
     
     query = ('SELECT campaign.name, campaign.status,campaign_budget.amount_micros,metrics.cost_micros, metrics.clicks,metrics.conversions,\
              metrics.impressions FROM campaign WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY campaign_budget.amount_micros')
-    """
-    query = ('SELECT campaign.status, campaign_budget.amount_micros,\
-          metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
-           WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH')
-    """       
+    
+    yesterdayQuery = ('SELECT campaign.name, metrics.cost_micros FROM campaign \
+           WHERE campaign.status="ENABLED" AND segments.date DURING YESTERDAY')
+          
     
     campaignName=[];
     campaignCost=[];
