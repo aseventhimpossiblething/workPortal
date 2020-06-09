@@ -196,7 +196,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     
    
     metrics=pandas.DataFrame(data=metrics)
-    metrics=str(pandas.DataFrame(data=metrics))
+    #metrics=str(pandas.DataFrame(data=metrics))
    
     print(metrics);
     return metrics;
