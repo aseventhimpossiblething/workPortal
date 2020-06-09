@@ -8,7 +8,8 @@ import pandas
 from calendar import monthrange
 from datetime import date
 today = date.today()
-print(today)
+print(today.year)
+print(today.day)
 #monthrang(,)
 
 from google.ads.google_ads.client import GoogleAdsClient
