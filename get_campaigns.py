@@ -144,7 +144,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
         #yesterdayCost.append(yesterdayGoogleCost);
         
        except:
-        print("failed to pill accnt ",accnts," count = ",count)
+        print("failed to pull accnt ",accnts," count = ",count)
        count+=1; 
     
     
