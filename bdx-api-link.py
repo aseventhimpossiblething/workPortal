@@ -440,6 +440,7 @@ def ind():
         return str(chckbdxcred());
     global domain;     
     domainFavi=domain+"/favicon.png";
+    get_campaigns;
     return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi);
 
     
