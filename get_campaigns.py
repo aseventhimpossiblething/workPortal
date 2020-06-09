@@ -134,7 +134,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        #CampaignLevelTable2=fromGoogleAds(accnts,"YESTERDAY");
        try:
         mtdGoogle=fromGoogleAds(accnts,"THIS_MONTH");
-        yesterdayGoogleCost=fromGoogleAds(accnts,"YESTERDAY").cost;
+        yesterdayGoogleCost=sum(fromGoogleAds(accnts,"YESTERDAY").cost);
         cost=sum(mtdGoogle.cost);
         clicks=sum(mtdGoogle.clicks);
         conversions=sum(mtdGoogle.conversions);
