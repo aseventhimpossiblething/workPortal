@@ -109,7 +109,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     print("in allAccntCombinedBasedMetrics(ArrayOfAccounts)") 
     len(googleArrayOfAccounts);
     count=0;
-    for accnts in ArrayOfAccounts:
+    for accnts in googleArrayOfAccounts:
        #fromAds(accnts,query); 
        try:
         CampaignLevelTable=fromGoogleAds(accnts);
