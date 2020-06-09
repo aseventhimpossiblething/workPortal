@@ -36,9 +36,7 @@ WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY cam
 
 def fromGoogleAds(customer_id,dateRange):
     
-    query = ('SELECT campaign.id, campaign.name,campaign_budget.amount_micros,metrics.cost_micros,\
-            metrics.clicks,metrics.conversions,metrics.impressions FROM campaign WHERE \
-            campaign.status="ENABLED" AND segments.date DURING '+dateRange);
+
     
     query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
              metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
@@ -48,10 +46,7 @@ def fromGoogleAds(customer_id,dateRange):
              metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
             WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY campaign.id')
     """        
-    """
-    yesterdayQuery = ('SELECT campaign.name, metrics.cost_micros FROM campaign \
-           WHERE campaign.status="ENABLED" AND segments.date DURING YESTERDAY')
-    """       
+     
           
     
     campaignName=[];
@@ -134,12 +129,12 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     count=0;
     for accnts in googleArrayOfAccounts:
        #fromAds(accnts,query); 
-       CampaignLevelTable=fromGoogleAds(accnts,"THIS_MONTH"); 
-       print(CampaignLevelTable)
+       #CampaignLevelTable=fromGoogleAds(accnts,"THIS_MONTH"); 
+       #print(CampaignLevelTable)
        #CampaignLevelTable2=fromGoogleAds(accnts,"YESTERDAY");
        try:
         mtdGoogle=fromGoogleAds(accnts,"THIS_MONTH");
-        #yesterdayGoogleCost=fromGoogleAds(accnts,"YESTERDAY");
+        yesterdayGoogleCost=fromGoogleAds(accnts,"YESTERDAY");
         cost=sum(mtdGoogle.cost);
         clicks=sum(mtdGoogle.clicks);
         conversions=sum(mtdGoogle.conversions);
@@ -177,10 +172,10 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     return metrics;
     
 #fromAds("150-063-1476",query);     
-#googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
+googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
 #print(googlemetrics.cost)
-CampaignLevelTable=fromGoogleAds("210-489-7739","THIS_MONTH"); 
-print(CampaignLevelTable)
+#CampaignLevelTable=fromGoogleAds("210-489-7739","THIS_MONTH"); 
+#print(CampaignLevelTable)
 
          
       
