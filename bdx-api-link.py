@@ -429,6 +429,19 @@ def inda():
     global domain;     
     domainFavi=domain+"/favicon.png";
     return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi);
+
+
+
+
+@app.route('/SpendTrac')
+def ind():
+    if chckbdxcred().find("NULL")==-1:
+        print(str(chckbdxcred()));
+        return str(chckbdxcred());
+    global domain;     
+    domainFavi=domain+"/favicon.png";
+    return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi);
+
     
 
 
