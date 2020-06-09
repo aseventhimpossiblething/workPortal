@@ -147,10 +147,12 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
         partialImpressions.append(impressions);
         partialBudget.append(budget);
         yesterdayCost.append(yesterdayGoogleCost);
+        """
         print("simple var type(yesterdayGoogleCost) ",type(yesterdayGoogleCost))
         print("array type(yesterdayCost) ",type(yesterdayCost))
         print(sum(yesterdayCost))
         #if type(sum(yesterdayGoogleCost))!="float"
+        """
         
        except:
         print("failed to pull accnt ",accnts," count = ",count)
