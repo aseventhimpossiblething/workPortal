@@ -34,13 +34,15 @@ WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY cam
 
 
 
-def fromGoogleAds(customer_id):
+def fromGoogleAdsMTD(customer_id,dateRange):
     
-    query = ('SELECT campaign.name, campaign.status,campaign_budget.amount_micros,metrics.cost_micros, metrics.clicks,metrics.conversions,\
-             metrics.impressions FROM campaign WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY campaign_budget.amount_micros')
-    
+    query = ('SELECT campaign.name, campaign.status,campaign_budget.amount_micros,metrics.cost_micros,\
+            metrics.clicks,metrics.conversions,metrics.impressions FROM campaign WHERE \
+            campaign.status="ENABLED" AND segments.date DURING'+dateRange+' ORDER BY campaign_budget.amount_micros')
+    """
     yesterdayQuery = ('SELECT campaign.name, metrics.cost_micros FROM campaign \
            WHERE campaign.status="ENABLED" AND segments.date DURING YESTERDAY')
+    """       
           
     
     campaignName=[];
@@ -50,6 +52,7 @@ def fromGoogleAds(customer_id):
     campaignImpressions=[];
     campaignBudget=[];
     campaignStatus=[];
+    #yesterdaySpend=[];
     
     newTable={"name":campaignName,"cost":campaignCost,"clicks":campaignClicks,"conversions":\
               campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
@@ -95,6 +98,14 @@ def fromGoogleAds(customer_id):
     newTable=pandas.DataFrame(newTable);
     return newTable;       
               
+"""  
+def googleYesterdayMetrics():
+     yesterdayQuery = ('SELECT campaign.name, metrics.cost_micros FROM campaign \
+           WHERE campaign.status="ENABLED" AND segments.date DURING YESTERDAY')
+"""           
+    
+  
+  
   
 
 
@@ -114,7 +125,8 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     for accnts in googleArrayOfAccounts:
        #fromAds(accnts,query); 
        try:
-        CampaignLevelTable=fromGoogleAds(accnts);
+        CampaignLevelTable=fromGoogleAds(accnts,"THIS_MONTH");
+        CampaignLevelTable2=fromGoogleAds(accnts,"YESTERDAY");
         cost=sum(CampaignLevelTable.cost);
         clicks=sum(CampaignLevelTable.clicks);
         conversions=sum(CampaignLevelTable.conversions);
