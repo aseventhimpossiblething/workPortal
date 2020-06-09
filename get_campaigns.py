@@ -33,8 +33,8 @@ def formatDate(today):
        thisMonth="0"+thisMonth;
     if len(thisDay)<2:    
        thisDay="0"+thisDay;
-    
-    return format=thisYear+thisMonth+thisDay ;
+    format=thisYear+thisMonth+thisDay ;
+    return format;
 print("formatDate(today) ",formatDate(today));  
         
       
