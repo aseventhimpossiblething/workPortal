@@ -433,15 +433,17 @@ def inda():
 
 
 
-@app.route('/SpendTrac')
+@app.route('/test')
 def ind():
     if chckbdxcred().find("NULL")==-1:
         print(str(chckbdxcred()));
         return str(chckbdxcred());
     global domain;     
     domainFavi=domain+"/favicon.png";
-    get_campaigns;
-    return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi);
+    get_campaigns.googlemetrics;
+    print("test fired")
+    return get_campaigns.googlemetrics;
+    #return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi);
 
     
 
