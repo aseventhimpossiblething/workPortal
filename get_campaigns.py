@@ -35,7 +35,12 @@ WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY cam
 
 
 def fromAds(customer_id,query):
-  
+    """
+    query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
+     metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
+     WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY campaign.id')
+    """ 
+    
     campaignName=[];
     campaignCost=[];
     campaignClicks=[];
@@ -108,37 +113,18 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
        #fromAds(accnts,query); 
        try:
         CampaignLevelTable=fromAds(accnts,query);
-        cost=sum(fromAds(accnts,query).cost);
-        clicks=sum(fromAds(accnts,query).clicks);
-        conversions=sum(fromAds(accnts,query).conversions);
-        impressions=sum(fromAds(accnts,query).impressions);
-        budget=sum(fromAds(accnts,query).budget);
+        cost=sum(CampaignLevelTable.cost);
+        clicks=sum(CampaignLevelTable.clicks);
+        conversions=sum(CampaignLevelTable.conversions);
+        impressions=sum(CampaignLevelTable.impressions);
+        budget=sum(CampaignLevelTable.budget);
         
         partialCost.append(cost);
         partialClicks.append(clicks);
         partialConversions.append(conversions);
         partialImpressions.append(impressions);
         partialBudget.append(budget);
-        #print("From AccntFormat ")
-        #AccntName=accountNumberNameLookup[str(accnts)];
-        #print(AccntName,"=",accnts); 
-        #print(fromAds(accnts,query));
-        print("budget");
-        print(sum(fromAds(accnts,query).budget));
-        """
-        print(cost);
-        print("clicks");
-        print(clicks);
-        print("conversions");
-        print(conversions);
-        print("impressions");
-        print(impressions);
-        print("budget");
-        print(budget);
-        """
-        #print(cost);
-        #fromAds("150-063-1476",query);
-        #CampaignLevelTable=fromAds(accnts,query);
+        
        except:
         print("failed to pill accnt ",accnts," count = ",count)
        count+=1; 
@@ -151,26 +137,18 @@ def allAccntCombinedBasedMetrics(ArrayOfAccounts):
     partialBudget=sum(partialBudget);
     
     
-    metrics={"__":["All Google Metrics"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+    metrics={"__":["Google Ads MTD"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"budget":partialBudget}
     
     
     metrics=pandas.DataFrame(data=metrics, index=[0])
-    #metrics=" | "+str(metrics['cost'])+" | "+str(metrics["clicks"] +" | "+str(metrics["conversions"])+" | "+str(metrics["impressions"]);
-                                                 
-    #metrics=" | "+str(metrics['cost'])+" | "+str(metrics['clicks'])+" | "+str(metrics["conversions"])+" | "+str(metrics["impressions"]) ;
-    #FinalSumOfMetrics=[sum(metrics[cost],sum(metrics[clicks]),sum(metrics[conversions])\
-    #                   ,sum(metrics[impressions]),sum(metrics[budget]];
-                       
-    
-    #FinalSumOfMetrics=pandas.DataFrame(data=FinalSumOfMetrics
-    #metrics=str(metrics)    
+   
     print(metrics);
     return metrics;
     
 #fromAds("150-063-1476",query);     
 googlemetrics=allAccntCombinedBasedMetrics(ArrayOfAccounts);
-print(googlemetrics.cost)
+#print(googlemetrics.cost)
 
          
       
