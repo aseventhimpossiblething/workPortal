@@ -174,13 +174,13 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[partialBudget-partialCost];
     
-    partialCost=partialCost.append("-");
-    partialClicks=partialClicks.append("-");
-    partialConversions=partialConversions.append("-");
-    partialImpressions=partialImpressions.append("-");
-    partialBudget=partialBudget.append("-");
-    yesterdayCost=yesterdayCost.append("-");
-    budgetMinusCost=.append("-");
+    partialCost.append("-");
+    partialClicks.append("-");
+    partialConversions.append("-");
+    partialImpressions.append("-");
+    partialBudget.append("-");
+    yesterdayCost.append("-");
+    budgetMinusCost.append("-");
     
     
     
