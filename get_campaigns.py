@@ -36,7 +36,7 @@ WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY cam
 
 def fromGoogleAds(customer_id,dateRange):
     
-    query = ('SELECT campaign.name, campaign.status,campaign_budget.amount_micros,metrics.cost_micros,\
+    query = ('SELECT campaign.name,campaign_budget.amount_micros,metrics.cost_micros,\
             metrics.clicks,metrics.conversions,metrics.impressions FROM campaign WHERE \
             campaign.status="ENABLED" AND segments.date DURING '+dateRange+' ORDER BY campaign_budget.amount_micros')
     """
@@ -116,6 +116,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialConversions=[];
     partialImpressions=[];
     partialBudget=[];
+    yesterdayCost=[];
     
        
       
@@ -124,22 +125,23 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     count=0;
     for accnts in googleArrayOfAccounts:
        #fromAds(accnts,query); 
-       CampaignLevelTable=fromGoogleAds(accnts,"THIS_MONTH"); 
-       CampaignLevelTable2=fromGoogleAds(accnts,"YESTERDAY");
+       #CampaignLevelTable=fromGoogleAds(accnts,"THIS_MONTH"); 
+       #CampaignLevelTable2=fromGoogleAds(accnts,"YESTERDAY");
        try:
-        CampaignLevelTable=fromGoogleAds(accnts,"THIS_MONTH");
-        CampaignLevelTable2=fromGoogleAds(accnts,"YESTERDAY");
-        cost=sum(CampaignLevelTable.cost);
-        clicks=sum(CampaignLevelTable.clicks);
-        conversions=sum(CampaignLevelTable.conversions);
-        impressions=sum(CampaignLevelTable.impressions);
-        budget=sum(CampaignLevelTable.budget);
+        mtdGoogle=fromGoogleAds(accnts,"THIS_MONTH");
+        yesterdayGoogleCost=fromGoogleAds(accnts,"YESTERDAY").cost;
+        cost=sum(mtdGoogle.cost);
+        clicks=sum(mtdGoogle.clicks);
+        conversions=sum(mtdGoogle.conversions);
+        impressions=sum(mtdGoogle.impressions);
+        budget=sum(mtdGoogle.budget);
         
         partialCost.append(cost);
         partialClicks.append(clicks);
         partialConversions.append(conversions);
         partialImpressions.append(impressions);
         partialBudget.append(budget);
+        yesterdayCost.append(yesterdayGoogleCost);
         
        except:
         print("failed to pill accnt ",accnts," count = ",count)
@@ -151,11 +153,12 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialConversions=sum(partialConversions);
     partialImpressions=sum(partialImpressions);
     partialBudget=sum(partialBudget);
+    yesterdayCost=sum(yesterdayCost);
     budgetMinusCost=partialBudget-partialCost
     
     
     metrics={"":["Google Ads MTD"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
-       ,"impressions":partialImpressions,"budget":partialBudget,"remaining budget":budgetMinusCost}
+       ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     
     
     metrics=pandas.DataFrame(data=metrics, index=[0])
