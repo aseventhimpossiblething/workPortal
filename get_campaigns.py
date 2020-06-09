@@ -13,7 +13,7 @@ thisYear=today.year
 thisMonth=today.month
 thisDay=today.day
 numberOfDays=monthrange(thisYear,thisMonth)
-daysLeft=numberOfDays-thisDay
+#daysLeft=numberOfDays-thisDay
 
 
 print("today ",today)
@@ -21,7 +21,7 @@ print("thisYear ",thisYear)
 print("thisMonth ",thisMonth)
 print("thisDay ",thisDay)
 print("numberOfDays ",numberOfDays)
-print("daysLeft ",daysLeft)
+#print("daysLeft ",daysLeft)
 
 from google.ads.google_ads.client import GoogleAdsClient
 from google.ads.google_ads.errors import GoogleAdsException
