@@ -158,19 +158,19 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialConversions=sum(partialConversions);
     partialImpressions=sum(partialImpressions);
     partialBudget=sum(partialBudget);
-    #yesterdayCost=sum(yesterdayCost);
+    yesterdayCost=sum(yesterdayCost);
     budgetMinusCost=partialBudget-partialCost
     
     
     metrics={"":["Google Ads MTD"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     
-    """
+   
     metrics=pandas.DataFrame(data=metrics, index=[0])
    
     print(metrics);
     return metrics;
-    """
+    
 #fromAds("150-063-1476",query);     
 googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
 #print(googlemetrics.cost)
