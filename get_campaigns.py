@@ -166,7 +166,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     budgetMinusCost=partialBudget-partialCost
     
     
-    metrics={"":["Google Ads MTD"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+    metrics={"":["Google Ads MTD","Bing Ads MTD"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     
    
