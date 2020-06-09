@@ -428,7 +428,8 @@ def inda():
         return str(chckbdxcred());
     global domain;     
     domainFavi=domain+"/favicon.png";
-    return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi);
+    metrics=get_campaigns.googlemetrics;
+    return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi,metreics=metrics);
 
 
 
