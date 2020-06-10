@@ -48,7 +48,7 @@ def MTY():
        thisDay="0"+thisDay;
     yesterday=thisYear+thisMonth+thisDay ;
     startOfMonth=thisYear+thisMonth+"01";
-    format=startOfMonth+' AND '+yesterday;
+    format='BETWEEN '+startOfMonth+' AND '+yesterday;
     """
     if start=="start":
        format=int(startOfMonth);
@@ -188,10 +188,10 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     len(googleArrayOfAccounts);
     count=0;
     for accnts in googleArrayOfAccounts:
-       mtdGoogle=fromGoogleAds(accnts,'BETWEEN '+MTY());
+       mtdGoogle=fromGoogleAds(accnts,MTY());
        yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
        try:
-        mtdGoogle=fromGoogleAds(accnts,'BETWEEN '+MTY());
+        mtdGoogle=fromGoogleAds(accnts,MTY());
         yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
         cost=sum(mtdGoogle.cost);
         clicks=sum(mtdGoogle.clicks);
