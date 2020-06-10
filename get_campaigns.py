@@ -48,7 +48,7 @@ def formatDate():
        thisDay="0"+thisDay;
     yesterday=thisYear+thisMonth+thisDay ;
     startOfMonth=thisYear+thisMonth+"01";
-    format=startOfMonth+"-"+today;
+    format=startOfMonth+"-"+yesterday;
     return format;
 print("formatDate() ",formatDate());  
         
