@@ -29,19 +29,33 @@ print("thisDay ",thisDay)
 print("numberOfDays ",numberOfDays)
 print("daysLeft ",daysLeft)
 
-def MTY():
+def project_Metric_For_Remaining_Month(metric):
     today = date.today();
     workingDate=today-timedelta(days=1);
-    #print("workingDate ",workingDate);
-    #today-timedelta(days-1)
     thisYear=workingDate.year;
     thisMonth=workingDate.month;
     thisDay=workingDate.day;
-    #if thisDay<=+1:
-        
     numberOfDays=monthrange(thisYear,thisMonth);
+    daysLeft=numberOfDays[1]-thisDay;
+    Metric_perDay=(metric/thisDay);
+    #projected_Metric_For_Month=Metric_perDay*daysLeft;
+    return Metric_perDay*daysLeft;
+print("project_Metric_For_Remaining_Month(30) ",project_Metric_For_Remaining_Month(30));
+    
+    
+    
+    
+    
+
+def MTY():
+    today = date.today();
+    workingDate=today-timedelta(days=1);
+    thisYear=workingDate.year;
+    thisMonth=workingDate.month;
+    thisDay=workingDate.day;
+    numberOfDays=monthrange(thisYear,thisMonth);
+    
     numberOfDays=numberOfDays[1];
-    #print("numberOfDays ",numberOfDays);
     thisYear=str(thisYear);
     daysLeft=str(numberOfDays-thisDay);
     thisDay=str(thisDay);
@@ -61,9 +75,9 @@ def MTY():
        format=int(yesterday)
     """   
     return format;
-print("MTY('') ",MTY());  
-print("MTY() ",MTY());  
-print("type(MTY()) ",type(MTY()))
+#print("MTY('') ",MTY());  
+#print("MTY() ",MTY());  
+#print("type(MTY()) ",type(MTY()))
         
       
      
@@ -189,8 +203,8 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     len(googleArrayOfAccounts);
     count=0;
     for accnts in googleArrayOfAccounts:
-       mtdGoogle=fromGoogleAds(accnts,MTY());
-       yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
+       #mtdGoogle=fromGoogleAds(accnts,MTY());
+       #yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
        try:
         mtdGoogle=fromGoogleAds(accnts,MTY());
         yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
@@ -241,7 +255,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     metrics=pandas.DataFrame(data=metrics)
     metrics=metrics.to_html();
    
-    print(metrics);
+    #print(metrics);
     return metrics;
 
 googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
