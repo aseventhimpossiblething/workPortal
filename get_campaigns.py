@@ -162,18 +162,14 @@ def fromGoogleAds(customer_id,dateRange):
     newTable=pandas.DataFrame(newTable);
     return newTable;       
               
-"""  
-def googleYesterdayMetrics():
-     yesterdayQuery = ('SELECT campaign.name, metrics.cost_micros FROM campaign \
-           WHERE campaign.status="ENABLED" AND segments.date DURING YESTERDAY')
-"""           
+       
     
   
   
   
 
 
-#fromAds("150-063-1476",query);
+
 def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialCost=[];
     partialClicks=[];
@@ -210,18 +206,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        except:
         print("failed to pull accnt ",accnts," count = ",count)
        count+=1; 
-    
-    """
-    partialCost=sum(partialCost);
-    partialClicks=sum(partialClicks);
-    partialConversions=sum(partialConversions);
-    partialImpressions=sum(partialImpressions);
-    partialBudget=sum(partialBudget);
-    yesterdayCost=sum(yesterdayCost);
-    budgetMinusCost=partialBudget-partialCost;
-    """
-    
-    
+        
     partialCost=[sum(partialCost)];
     partialClicks=[sum(partialClicks)];
     partialConversions=[sum(partialConversions)];
@@ -240,11 +225,11 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     
     
     
-    metrics={"":["Google Ads MTD"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+    metrics={"":["Google Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     
     
-    metrics={"":["Google Ads MTD","Bing Ads MTD"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+    metrics={"":["Google Ads MTY","Bing Ads MTD"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     
    
@@ -253,12 +238,9 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
    
     print(metrics);
     return metrics;
-    
-#fromAds("150-063-1476",query);     
+
 googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
-#print(googlemetrics.cost)
-#CampaignLevelTable=fromGoogleAds("210-489-7739","THIS_MONTH"); 
-#print(CampaignLevelTable)
+
 
          
       
