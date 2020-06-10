@@ -191,7 +191,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        mtdGoogle=fromGoogleAds(accnts,MTY());
        yesterdayGoogleCost=sum(fromGoogleAds(accnts,"YESTERDAY").cost);
        try:
-        mtdGoogle=fromGoogleAds(accnts,MTY('start'));
+        mtdGoogle=fromGoogleAds(accnts,MTY());
         yesterdayGoogleCost=sum(fromGoogleAds(accnts,"YESTERDAY").cost);
         cost=sum(mtdGoogle.cost);
         clicks=sum(mtdGoogle.clicks);
