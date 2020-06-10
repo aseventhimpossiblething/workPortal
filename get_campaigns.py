@@ -24,7 +24,7 @@ print("thisDay ",thisDay)
 print("numberOfDays ",numberOfDays)
 print("daysLeft ",daysLeft)
 
-def MTY():
+def MTY(start):
     today = date.today();
     workingDate=today-timedelta(days=1);
     print("workingDate ",workingDate);
@@ -48,9 +48,13 @@ def MTY():
        thisDay="0"+thisDay;
     yesterday=thisYear+thisMonth+thisDay ;
     startOfMonth=thisYear+thisMonth+"01";
-    format=int(startOfMonth)+","+int(yesterday);
+    if start=="start":
+       format=int(startOfMonth);
+    else:
+       format=int(yesterday)
     return format;
-print("MTY() ",MTY());  
+print("MTY('start') ",MTY('start'));  
+print("MTY('end') ",MTY('end'));  
 print("type(MTY()) ",type(MTY()))
         
       
@@ -186,7 +190,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        #print(CampaignLevelTable)
        #CampaignLevelTable2=fromGoogleAds(accnts,"YESTERDAY");
        try:
-        mtdGoogle=fromGoogleAds(accnts,20191010);
+        mtdGoogle=fromGoogleAds(accnts,MTY('start'));
         yesterdayGoogleCost=sum(fromGoogleAds(accnts,"YESTERDAY").cost);
         cost=sum(mtdGoogle.cost);
         clicks=sum(mtdGoogle.clicks);
