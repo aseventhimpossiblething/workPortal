@@ -48,7 +48,7 @@ def MTY():
        thisDay="0"+thisDay;
     yesterday=thisYear+thisMonth+thisDay ;
     startOfMonth=thisYear+thisMonth+"01";
-    format=startOfMonth+","+yesterday;
+    format=int(startOfMonth)+","+int(yesterday);
     return format;
 print("MTY() ",MTY());  
 print("type(MTY()) ",type(MTY()))
