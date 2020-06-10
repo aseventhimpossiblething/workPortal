@@ -93,7 +93,7 @@ def fromGoogleAds(customer_id,dateRange):
     
     query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
              metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
-            WHERE campaign.status="ENABLED" AND segments.date CUSTOM_DATE DURING '+dateRange+' ORDER BY campaign.id')
+            WHERE campaign.status="ENABLED" AND segments.date DURING CUSTOM_DATE '+dateRange+' ORDER BY campaign.id')
     """
     query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
              metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
