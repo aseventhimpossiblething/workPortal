@@ -50,7 +50,8 @@ def MTY():
     startOfMonth=thisYear+thisMonth+"01";
     format=startOfMonth+"-"+yesterday;
     return format;
-#print("formatDate() ",formatDate());  
+print("MTY() ",MTY());  
+print("type(MTY()) ",type(MTY()))
         
       
      
@@ -185,7 +186,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        #print(CampaignLevelTable)
        #CampaignLevelTable2=fromGoogleAds(accnts,"YESTERDAY");
        try:
-        mtdGoogle=fromGoogleAds(accnts,str(MTY()));
+        mtdGoogle=fromGoogleAds(accnts,"THIS_MONTH");
         yesterdayGoogleCost=sum(fromGoogleAds(accnts,"YESTERDAY").cost);
         cost=sum(mtdGoogle.cost);
         clicks=sum(mtdGoogle.clicks);
