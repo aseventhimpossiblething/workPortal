@@ -55,7 +55,7 @@ def MTY(start):
     return format;
 print("MTY('start') ",MTY('start'));  
 print("MTY('end') ",MTY('end'));  
-print("type(MTY()) ",type(MTY()))
+print("type(MTY(start)) ",type(MTY("start")))
         
       
      
