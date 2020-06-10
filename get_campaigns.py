@@ -1,7 +1,7 @@
 Authentication=0;
-bingDevtoken="11094FN06U360636"
 bingCustID=0;
-bingCVstAccntId=0;
+bingCustAccntId=0;
+bingDevtoken="11094FN06U360636"
 #print("active experiment block------------------------------------------------------------")
 from google.protobuf import json_format
 import argparse
