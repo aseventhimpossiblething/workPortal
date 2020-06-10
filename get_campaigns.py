@@ -1,3 +1,4 @@
+Authentication=0;
 bingDevtoken="11094FN06U360636"
 bingCustID=0;
 bingCVstAccntId=0;
