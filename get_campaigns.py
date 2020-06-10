@@ -26,7 +26,7 @@ print("daysLeft ",daysLeft)
 
 def formatDate():
     today = date.today();
-    workingDate=today-timedelta(days-1);
+    workingDate=today-timedelta(days=1);
     print("workingDate ",workingDate);
     #today-timedelta(days-1)
     thisYear=workingDate.year;
