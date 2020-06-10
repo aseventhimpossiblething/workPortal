@@ -24,10 +24,11 @@ print("numberOfDays ",numberOfDays)
 print("daysLeft ",daysLeft)
 
 def formatDate(today):
-    thisYear=str(today.year);
+    thisYear=today.year;
     thisMonth=today.month;
     thisDay=today.day;
     numberOfDays=monthrange(thisYear,thisMonth)[1];
+    thisYear=str(thisYear)
     daysLeft=str(numberOfDays-thisDay);
     thisDay=str(thisDay);
     thisMonth=str(thisMonth)
