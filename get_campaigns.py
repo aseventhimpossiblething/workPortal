@@ -58,7 +58,7 @@ def MTY():
     return format;
 print("MTY('') ",MTY());  
 print("MTY() ",MTY());  
-print("type(MTY()) ",type(MTY())
+print("type(MTY()) ",type(MTY()))
         
       
      
