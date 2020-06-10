@@ -28,6 +28,7 @@ def formatDate(today):
     thisMonth=today.month;
     thisDay=today.day;
     numberOfDays=monthrange(thisYear,thisMonth);
+    numberOfDays=numberOfDays[1];
     print("numberOfDays ",numberOfDays);
     thisYear=str(thisYear);
     daysLeft=str(numberOfDays-thisDay);
