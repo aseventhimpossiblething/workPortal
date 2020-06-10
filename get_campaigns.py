@@ -25,9 +25,13 @@ print("numberOfDays ",numberOfDays)
 print("daysLeft ",daysLeft)
 
 def formatDate():
-    thisYear=today.year;
-    thisMonth=today.month;
-    thisDay=today.day-1;
+    today = date.today();
+    workingDate=today-timedelta(days-1);
+    print("workingDate ",workingDate);
+    #today-timedelta(days-1)
+    thisYear=workingDate.year;
+    thisMonth=workingDate.month;
+    thisDay=workingDate.day;
     #if thisDay<=+1:
         
     numberOfDays=monthrange(thisYear,thisMonth);
@@ -42,7 +46,7 @@ def formatDate():
        thisMonth="0"+thisMonth;
     if len(thisDay)<2:    
        thisDay="0"+thisDay;
-    today=thisYear+thisMonth+thisDay ;
+    yesterday=thisYear+thisMonth+thisDay ;
     startOfMonth=thisYear+thisMonth+"01";
     format=startOfMonth+"-"+today;
     return format;
