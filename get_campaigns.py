@@ -6,7 +6,8 @@ import sys
 import json
 import pandas
 from calendar import monthrange
-from datetime import date
+from datetime import date, timedelta
+
 
 today = date.today()
 thisYear=today.year
@@ -23,10 +24,12 @@ print("thisDay ",thisDay)
 print("numberOfDays ",numberOfDays)
 print("daysLeft ",daysLeft)
 
-def formatDate(today):
+def formatDate():
     thisYear=today.year;
     thisMonth=today.month;
     thisDay=today.day-1;
+    #if thisDay<=+1:
+        
     numberOfDays=monthrange(thisYear,thisMonth);
     numberOfDays=numberOfDays[1];
     print("numberOfDays ",numberOfDays);
@@ -41,9 +44,9 @@ def formatDate(today):
        thisDay="0"+thisDay;
     today=thisYear+thisMonth+thisDay ;
     startOfMonth=thisYear+thisMonth+"01";
-    format=startOfMonth+today;
+    format=startOfMonth+"-"+today;
     return format;
-print("formatDate(today) ",formatDate(today));  
+print("formatDate() ",formatDate());  
         
       
      
