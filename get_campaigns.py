@@ -24,10 +24,10 @@ print("thisDay ",thisDay)
 print("numberOfDays ",numberOfDays)
 print("daysLeft ",daysLeft)
 
-def MTY(start):
+def MTY():
     today = date.today();
     workingDate=today-timedelta(days=1);
-    print("workingDate ",workingDate);
+    #print("workingDate ",workingDate);
     #today-timedelta(days-1)
     thisYear=workingDate.year;
     thisMonth=workingDate.month;
@@ -36,7 +36,7 @@ def MTY(start):
         
     numberOfDays=monthrange(thisYear,thisMonth);
     numberOfDays=numberOfDays[1];
-    print("numberOfDays ",numberOfDays);
+    #print("numberOfDays ",numberOfDays);
     thisYear=str(thisYear);
     daysLeft=str(numberOfDays-thisDay);
     thisDay=str(thisDay);
@@ -48,14 +48,17 @@ def MTY(start):
        thisDay="0"+thisDay;
     yesterday=thisYear+thisMonth+thisDay ;
     startOfMonth=thisYear+thisMonth+"01";
+    format=startOfMonth+' AND '+yesterday;
+    """
     if start=="start":
        format=int(startOfMonth);
     else:
        format=int(yesterday)
+    """   
     return format;
-print("MTY('start') ",MTY('start'));  
-print("MTY('end') ",MTY('end'));  
-print("type(MTY(start)) ",type(MTY("start")))
+print("MTY('') ",MTY());  
+print("MTY() ",MTY());  
+print("type(MTY()) ",type(MTY())
         
       
      
@@ -185,11 +188,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     len(googleArrayOfAccounts);
     count=0;
     for accnts in googleArrayOfAccounts:
-       #fromAds(accnts,query); 
-       #CampaignLevelTable=fromGoogleAds(accnts,"THIS_MONTH"); 
-       #print(CampaignLevelTable)
-       #CampaignLevelTable2=fromGoogleAds(accnts,"YESTERDAY");
-       mtdGoogle=fromGoogleAds(accnts,MTY('start'));
+       mtdGoogle=fromGoogleAds(accnts,MTY());
        yesterdayGoogleCost=sum(fromGoogleAds(accnts,"YESTERDAY").cost);
        try:
         mtdGoogle=fromGoogleAds(accnts,MTY('start'));
