@@ -31,7 +31,7 @@ def formatDate(today):
     daysLeft=str(numberOfDays-thisDay);
     thisDay=str(thisDay);
     thisMonth=str(thisMonth)
-    numberOfDays=;
+    numberOfDays=str(numberOfDays);
     if len(thisMonth)<2:
        thisMonth="0"+thisMonth;
     if len(thisDay)<2:    
