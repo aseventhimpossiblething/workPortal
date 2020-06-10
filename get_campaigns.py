@@ -1,4 +1,4 @@
-
+bingDevtoken="11094FN06U360636"
 #print("active experiment block------------------------------------------------------------")
 from google.protobuf import json_format
 import argparse
