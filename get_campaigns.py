@@ -189,6 +189,8 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        #CampaignLevelTable=fromGoogleAds(accnts,"THIS_MONTH"); 
        #print(CampaignLevelTable)
        #CampaignLevelTable2=fromGoogleAds(accnts,"YESTERDAY");
+       mtdGoogle=fromGoogleAds(accnts,MTY('start'));
+       yesterdayGoogleCost=sum(fromGoogleAds(accnts,"YESTERDAY").cost);
        try:
         mtdGoogle=fromGoogleAds(accnts,MTY('start'));
         yesterdayGoogleCost=sum(fromGoogleAds(accnts,"YESTERDAY").cost);
@@ -204,12 +206,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
         partialImpressions.append(impressions);
         partialBudget.append(budget);
         yesterdayCost.append(yesterdayGoogleCost);
-        """
-        print("simple var type(yesterdayGoogleCost) ",type(yesterdayGoogleCost))
-        print("array type(yesterdayCost) ",type(yesterdayCost))
-        print(sum(yesterdayCost))
-        #if type(sum(yesterdayGoogleCost))!="float"
-        """
+      
         
        except:
         print("failed to pull accnt ",accnts," count = ",count)
