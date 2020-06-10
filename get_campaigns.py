@@ -24,7 +24,7 @@ print("thisDay ",thisDay)
 print("numberOfDays ",numberOfDays)
 print("daysLeft ",daysLeft)
 
-def formatDate():
+def MTY():
     today = date.today();
     workingDate=today-timedelta(days=1);
     print("workingDate ",workingDate);
@@ -50,7 +50,7 @@ def formatDate():
     startOfMonth=thisYear+thisMonth+"01";
     format=startOfMonth+"-"+yesterday;
     return format;
-print("formatDate() ",formatDate());  
+#print("formatDate() ",formatDate());  
         
       
      
@@ -185,7 +185,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        #print(CampaignLevelTable)
        #CampaignLevelTable2=fromGoogleAds(accnts,"YESTERDAY");
        try:
-        mtdGoogle=fromGoogleAds(accnts,"THIS_MONTH");
+        mtdGoogle=fromGoogleAds(accnts,str(MTY()));
         yesterdayGoogleCost=sum(fromGoogleAds(accnts,"YESTERDAY").cost);
         cost=sum(mtdGoogle.cost);
         clicks=sum(mtdGoogle.clicks);
