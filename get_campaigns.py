@@ -426,6 +426,7 @@ def AccntCombinedBasedMetrics(googleArrayOfAccounts):
     
     ColNames=[];
     frame="none";
+    rows=[];
               
     len(googleArrayOfAccounts);
     count=0;
