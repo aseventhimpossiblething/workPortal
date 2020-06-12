@@ -313,6 +313,109 @@ googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def AccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialCost=[];
     partialClicks=[];
@@ -320,30 +423,30 @@ def AccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialImpressions=[];
     partialBudget=[];
     yesterdayCost=[];
+    
+    ColNames=[];
     frame="none";
-    rows="none;"
               
     len(googleArrayOfAccounts);
     count=0;
     for accnts in googleArrayOfAccounts:
-    
-    
+
         mtdGoogle=perAccntCombinedBasedMetrics(accnts);
-        #print("mtdGoogle.columns ",mtdGoogle.columns)
+       
         if frame=="none":
-            #ColNames.append(mtdGoogle.columns);
+        
             frame=mtdGoogle;
         else:
             frame.append(mtdGoogle[0]);
             
-        #print("perAccntCombinedBasedMetrics(accnts) ",perAccntCombinedBasedMetrics(accnts));
-        print("perAccntCombinedBasedMetrics(accnts) ",perAccntCombinedBasedMetrics(accnts));
-        rows.append(perAccntCombinedBasedMetrics(accnts));
+        print("perAccntCombinedBasedMetrics(accnts) ",perAccntCombinedBasedMetrics(accnts)); 
+        print(" ------------------------------------------------------------------------------------------------")
+        print("perAccntCombinedBasedMetrics(accnts)[0] ",perAccntCombinedBasedMetrics(accnts)[0]);
+        rows.append(perAccntCombinedBasedMetrics(accnts)[0]);
         print("frame ",frame)
         
-        #mtdGoogle=perAccntCombinedBasedMetrics(accnts);
-        print("perAccntCombinedBasedMetrics(accnts) ",perAccntCombinedBasedMetrics(accnts));
-        #mtdGoogle=fromGoogleAds(accnts,MTY());
+       
+        
         yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
         cost=sum(mtdGoogle.cost);
         clicks=sum(mtdGoogle.clicks);
@@ -357,9 +460,8 @@ def AccntCombinedBasedMetrics(googleArrayOfAccounts):
         partialImpressions.append(impressions);
         partialBudget.append(budget);
         yesterdayCost.append(yesterdayGoogleCost);
-               
-        #print("failed to pull accnt ",accnts," count = ",count)
-        count+=1; 
+ 
+       count+=1; 
         
     partialCost=[sum(partialCost)];
     partialClicks=[sum(partialClicks)];
@@ -372,24 +474,45 @@ def AccntCombinedBasedMetrics(googleArrayOfAccounts):
     metrics={"":["Google Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     
+    
+    print("frame ",frame)
     metrics=pandas.DataFrame(data=metrics)
-    #metrics=metrics.to_html();
+    metrics=metrics.to_html();
        
     return metrics;
 
-print("AccntCombinedBasedMetrics(googleArrayOfAccounts) ",AccntCombinedBasedMetrics(googleArrayOfAccounts));
+googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
 
 
 
 
 
-         
-  
 
 
 
 
 
-         
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
