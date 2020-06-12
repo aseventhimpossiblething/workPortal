@@ -287,7 +287,7 @@ print("-----------------------------------------------")
   
 
 
-def perAccntCombinedBasedMetrics(accnt):
+def perAccntCombinedBasedMetrics(accnts):
     partialCost=[];
     partialClicks=[];
     partialConversions=[];
