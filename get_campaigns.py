@@ -134,9 +134,10 @@ def fromGoogleAds(customer_id,dateRange):
                campaignStatus.append(status);
                                        
                countOfSubset+=1;
-           
+            
             except:
                countOfSubset+=1;
+               
     newTable=pandas.DataFrame(newTable);
     return newTable;       
 
@@ -255,6 +256,100 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     return metrics;
 
 googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def AccntCombinedBasedMetrics(googleArrayOfAccounts):
+    partialCost=[];
+    partialClicks=[];
+    partialConversions=[];
+    partialImpressions=[];
+    partialBudget=[];
+    yesterdayCost=[];
+    
+    
+          
+    len(googleArrayOfAccounts);
+    count=0;
+    for accnts in googleArrayOfAccounts:
+       
+        mtdGoogle=perAccntCombinedBasedMetrics(accnts);
+        print("perAccntCombinedBasedMetrics(accnts) ",perAccntCombinedBasedMetrics(accnts));
+       
+        #mtdGoogle=fromGoogleAds(accnts,MTY());
+        yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
+        cost=sum(mtdGoogle.cost);
+        clicks=sum(mtdGoogle.clicks);
+        conversions=sum(mtdGoogle.conversions);
+        impressions=sum(mtdGoogle.impressions);
+        budget=sum(mtdGoogle.budget);
+        
+        partialCost.append(cost);
+        partialClicks.append(clicks);
+        partialConversions.append(conversions);
+        partialImpressions.append(impressions);
+        partialBudget.append(budget);
+        yesterdayCost.append(yesterdayGoogleCost);
+              
+       
+        print("failed to pull accnt ",accnts," count = ",count)
+        count+=1; 
+        
+    partialCost=[sum(partialCost)];
+    partialClicks=[sum(partialClicks)];
+    partialConversions=[sum(partialConversions)];
+    partialImpressions=[sum(partialImpressions)];
+    partialBudget=[sum(partialBudget)];
+    yesterdayCost=[sum(yesterdayCost)];
+    budgetMinusCost=[(partialBudget[0]-partialCost[0])];
+        
+    metrics={"":["Google Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+       ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
+    
+
+    metrics=pandas.DataFrame(data=metrics)
+    metrics=metrics.to_html();
+       
+    return metrics;
+
+AccntCombinedBasedMetrics(googleArrayOfAccounts);
+
+
+
+
+         
+  
+
 
 
 
