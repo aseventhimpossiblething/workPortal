@@ -40,7 +40,7 @@ def project_Metric_For_Remaining_Month(metric):
     Metric_perDay=(metric/thisDay);
     #projected_Metric_For_Month=Metric_perDay*daysLeft;
     return Metric_perDay*daysLeft;
-print("project_Metric_For_Remaining_Month(30) ",project_Metric_For_Remaining_Month(30));
+print("project_Metric_For_Remaining_Month(12) ",project_Metric_For_Remaining_Month(12));
     
     
     
@@ -199,10 +199,11 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     
        
       
-    print("in allAccntCombinedBasedMetrics(ArrayOfAccounts)") 
+    #print("in allAccntCombinedBasedMetrics(ArrayOfAccounts)") 
     len(googleArrayOfAccounts);
     count=0;
     for accnts in googleArrayOfAccounts:
+       print("What doe fromGoogleAds(accnts,MTY()) return again?  ",fromGoogleAds(accnts,MTY()))
        #mtdGoogle=fromGoogleAds(accnts,MTY());
        #yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
        try:
@@ -234,6 +235,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
     
+    """
     partialCost.append("-");
     partialClicks.append("-");
     partialConversions.append("-");
@@ -241,6 +243,13 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialBudget.append("-");
     yesterdayCost.append("-");
     budgetMinusCost.append("-");
+    """
+    
+    
+    project_Metric_For_Remaining_Month();
+    
+    
+    
     
     
     
