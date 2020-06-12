@@ -235,7 +235,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
     
-    """
+    
     partialCost.append("-");
     partialClicks.append("-");
     partialConversions.append("-");
@@ -243,7 +243,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialBudget.append("-");
     yesterdayCost.append("-");
     budgetMinusCost.append("-");
-    """
+    
     
     
     #project_Metric_For_Remaining_Month();
@@ -256,10 +256,10 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     metrics={"":["Google Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     
-    
+    """
     metrics={"":["Google Ads MTY","Bing Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
-    
+    """
    
     metrics=pandas.DataFrame(data=metrics)
     metrics=metrics.to_html();
