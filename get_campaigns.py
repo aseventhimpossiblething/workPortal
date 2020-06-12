@@ -367,7 +367,7 @@ def perAccntCombinedBasedMetrics(accnts):
     #print(metrics);
     return metrics;
     print("Out of per Accnt")
-perAccntCombinedBasedMetrics("210-489-7739");
+print(perAccntCombinedBasedMetrics("210-489-7739"));
 
       
 
