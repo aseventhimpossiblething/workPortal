@@ -212,18 +212,21 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     for accnts in googleArrayOfAccounts:
        try:
         mtdGoogle=perAccntCombinedBasedMetrics(accnts);
-        print("Trying in All Accnts")
+        print("Trying in All Accnts");
+        print("mtGoogle ",mtGoogle);
         #print("mtdGoogle.columns ",mtdGoogle.columns)
         if len(frame)==0:
             #ColNames.append(mtdGoogle.columns);
             frame=mtdGoogle;
         else:
             frame.append(mtdGoogle);
+        print("frame ",frame);
+        print("almost made it through")
             
         #print("perAccntCombinedBasedMetrics(accnts) ",perAccntCombinedBasedMetrics(accnts));
         print("perAccntCombinedBasedMetrics(accnts)[0] ",perAccntCombinedBasedMetrics(accnts)[0]);
         rows.append(perAccntCombinedBasedMetrics(accnts)[0]);
-        print("frame ",frame)
+        #print("frame ",frame)
         
        
         mtdGoogle=fromGoogleAds(accnts,MTY());
