@@ -205,15 +205,16 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     yesterdayCost=[];
     
     ColNames=[];
-    frame="none";
+    frame="";
               
     len(googleArrayOfAccounts);
     count=0;
     for accnts in googleArrayOfAccounts:
        try:
         mtdGoogle=perAccntCombinedBasedMetrics(accnts);
+        print("Trying in All Accnts")
         #print("mtdGoogle.columns ",mtdGoogle.columns)
-        if frame=="none":
+        if len(frame)==0:
             #ColNames.append(mtdGoogle.columns);
             frame=mtdGoogle;
         else:
@@ -425,7 +426,7 @@ def AccntCombinedBasedMetrics(googleArrayOfAccounts):
     yesterdayCost=[];
     
     ColNames=[];
-    frame="none";
+    frame="";
     rows=[];
               
     len(googleArrayOfAccounts);
