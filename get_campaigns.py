@@ -228,7 +228,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
         yesterdayCost.append(yesterdayGoogleCost);
               
        except:
-        print("failed to pull accnt ",accnts," count = ",count)
+        print("failed to pull accnt ",accnts," count = ",count," ",AccntName)
        count+=1; 
         
     partialCost=[sum(partialCost)];
