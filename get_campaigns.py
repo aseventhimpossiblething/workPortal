@@ -140,7 +140,7 @@ def fromGoogleAds(customer_id,dateRange):
     newTable={"name":campaignName,"cost":campaignCost,"clicks":campaignClicks,"conversions":\
               campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
     
-    #AccntName=accountNumberNameLookup[str(customer_id)];
+    AccntName=accountNumberNameLookup[str(customer_id)];
     #print(AccntName,"=",customer_id); 
     
     customer_id=customer_id.replace("-","") 
@@ -288,7 +288,9 @@ print("-----------------------------------------------")
 
 
 def perAccntCombinedBasedMetrics(accnts):
-    AccntName=googleAccountNumberNameLookup(accnts);
+    print("accnts ",accnts)
+    print("type(accnts) ",type(accnts))
+    AccntName=googleAccountNumberNameLookup(str(accnts));
     AccntNumber=accnts;
     partialCost=[];
     partialClicks=[];
