@@ -198,6 +198,7 @@ def perAccntCombinedBasedMetrics(accnts):
     return metrics;
   
 def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
+    AccntName=googleAccountNumberNameLookup[str(accnts)];
     partialCost=[];
     partialClicks=[];
     partialConversions=[];
