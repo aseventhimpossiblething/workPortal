@@ -40,7 +40,7 @@ def project_Metric_For_Remaining_Month(metric):
     Metric_perDay=(metric/thisDay);
     #projected_Metric_For_Month=Metric_perDay*daysLeft;
     return Metric_perDay*daysLeft;
-print("project_Metric_For_Remaining_Month(12) ",project_Metric_For_Remaining_Month(12));
+print("project_Metric_For_Remaining_Month(11) ",project_Metric_For_Remaining_Month(11));
     
     
     
@@ -246,7 +246,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     """
     
     
-    project_Metric_For_Remaining_Month();
+    #project_Metric_For_Remaining_Month();
     
     
     
