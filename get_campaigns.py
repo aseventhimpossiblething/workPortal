@@ -239,7 +239,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
               
        except:
         AccntName=googleAccountNumberNameLookup[str(accnts)];
-        print("failed to pull accnt ",accnts," count = ",count," ",AccntName);
+        print(AccntName," failed to pull accnt ",accnts," count = ",count," ",AccntName);
        count+=1; 
         
     partialCost=[sum(partialCost)];
