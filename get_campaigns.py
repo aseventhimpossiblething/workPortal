@@ -290,7 +290,7 @@ print("-----------------------------------------------")
 def perAccntCombinedBasedMetrics(accnts):
     print("accnts ",accnts)
     print("type(accnts) ",type(accnts))
-    AccntName=googleAccountNumberNameLookup(str(accnts));
+    #AccntName=googleAccountNumberNameLookup(str(accnts));
     AccntNumber=accnts;
     partialCost=[];
     partialClicks=[];
@@ -334,7 +334,7 @@ def perAccntCombinedBasedMetrics(accnts):
     CTR=[partialClicks/partialImpressions];
     
     
-    metrics={"Accnt Name":[AccntName],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+    metrics={"Accnt Name":["AccntName"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
              ,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     
