@@ -140,7 +140,7 @@ def fromGoogleAds(customer_id,dateRange):
     newTable={"name":campaignName,"cost":campaignCost,"clicks":campaignClicks,"conversions":\
               campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
     
-    AccntName=accountNumberNameLookup[str(customer_id)];
+    AccntName=googleAccountNumberNameLookup[str(customer_id)];
     #print(AccntName,"=",customer_id); 
     
     customer_id=customer_id.replace("-","") 
