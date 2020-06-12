@@ -218,7 +218,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
             #ColNames.append(mtdGoogle.columns);
             frame=mtdGoogle;
         else:
-            frame.append(mtdGoogle[0]);
+            frame.append(mtdGoogle);
             
         #print("perAccntCombinedBasedMetrics(accnts) ",perAccntCombinedBasedMetrics(accnts));
         print("perAccntCombinedBasedMetrics(accnts)[0] ",perAccntCombinedBasedMetrics(accnts)[0]);
@@ -439,7 +439,7 @@ def AccntCombinedBasedMetrics(googleArrayOfAccounts):
         
             frame=mtdGoogle;
         else:
-            frame.append(mtdGoogle[0]);
+            frame.append(mtdGoogle);
             
         print("perAccntCombinedBasedMetrics(accnts) ",perAccntCombinedBasedMetrics(accnts)); 
         print(" ------------------------------------------------------------------------------------------------")
