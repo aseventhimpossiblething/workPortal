@@ -236,6 +236,11 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
     
     
+    metrics={"":["Google Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+       ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
+    
+    
+    """
     partialCost.append("-");
     partialClicks.append("-");
     partialConversions.append("-");
@@ -256,7 +261,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     metrics={"":["Google Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     
-    """
+    
     metrics={"":["Google Ads MTY","Bing Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     """
