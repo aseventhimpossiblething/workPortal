@@ -177,18 +177,28 @@ def perAccntCombinedBasedMetrics(accnts):
     print("type(partialCost[0]) ",type(partialCost[0]));
     print("partialClicks[0] ",partialClicks[0]);
     print("type(partialClicks[0]) ",type(partialClicks[0]));
-    
+    #CTR=[partialClicks[0]/partialImpressions[0]];
     
     if partialClicks[0]>0:
        CPC=[partialCost[0]/partialClicks[0]];
-       CTR=[partialClicks[0]/partialImpressions[0]];
+       ConvRate=[partialConversions[0]/partialClicks[0]];
     else:
-        CPC="No Clickss";
-        CTR="No Clickss";
+        CPC="No Clicks";
+        ConvRate="No Clicks";
+       
+        
+    
+    if partialConversions[0]>0:
+       CTR=[partialClicks[0]/partialImpressions[0]];
+      CPL=[partialCost[0]/partialConversions[0]]; CPL=[partialCost[0]/partialConversions[0]];
+    else:
+       CTR="No Clicks";
+       CPL="No Clicks";
+    
         
     #CPC=[partialCost[0]/partialClicks[0]];
-    CPL=[partialCost[0]/partialConversions[0]];
-    ConvRate=[partialConversions[0]/partialClicks[0]];
+    #CPL=[partialCost[0]/partialConversions[0]];
+    #ConvRate=[partialConversions[0]/partialClicks[0]];
     #CTR=[partialClicks[0]/partialImpressions[0]];
     
     
