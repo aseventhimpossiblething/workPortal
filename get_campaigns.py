@@ -328,13 +328,13 @@ def perAccntCombinedBasedMetrics(accnts):
     partialBudget=[sum(partialBudget)];
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
-    CPC=[partialCost/partialClicks];
-    CPL=[partialCost/partialConversions];
-    ConvRate=[partialConversions/partialClicks];
-    CTR=[partialClicks/partialImpressions];
+    CPC=[partialCost[0]/partialClicks[0]];
+    CPL=[partialCost[0]/partialConversions[0]];
+    ConvRate=[partialConversions[0]/partialClicks[0]];
+    CTR=[partialClicks[0]/partialImpressions[0]];
     
     
-    metrics={"Accnt Name":["AccntName"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+    metrics={"Accnt Name":[AccntName],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
              ,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     
