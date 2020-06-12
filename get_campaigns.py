@@ -434,7 +434,7 @@ def AccntCombinedBasedMetrics(googleArrayOfAccounts):
 
         mtdGoogle=perAccntCombinedBasedMetrics(accnts);
        
-        if frame=="none":
+        if len(frame)==0:
         
             frame=mtdGoogle;
         else:
