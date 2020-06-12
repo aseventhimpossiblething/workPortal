@@ -290,6 +290,7 @@ print("-----------------------------------------------")
 def perAccntCombinedBasedMetrics(accnts):
     print("accnts ",accnts)
     print("type(accnts) ",type(accnts))
+    AccntName=googleAccountNumberNameLookup[str(accnts)];
     #AccntName=googleAccountNumberNameLookup(str(accnts));
     AccntNumber=accnts;
     partialCost=[];
