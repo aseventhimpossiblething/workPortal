@@ -207,6 +207,8 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        #mtdGoogle=fromGoogleAds(accnts,MTY());
        #yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
        try:
+        perAccntCombinedBasedMetrics(accnts);
+        print("perAccntCombinedBasedMetrics(accnts) ",perAccntCombinedBasedMetrics(accnts))
         mtdGoogle=fromGoogleAds(accnts,MTY());
         yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
         cost=sum(mtdGoogle.cost);
@@ -335,7 +337,7 @@ def perAccntCombinedBasedMetrics(accnts):
     CTR=[partialClicks[0]/partialImpressions[0]];
     
     
-    metrics={"Accnt Name":[AccntName],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+    metrics={"Accnt Name":["Google "+AccntName+" Account"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
              ,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     
@@ -372,7 +374,7 @@ def perAccntCombinedBasedMetrics(accnts):
    
     #print(metrics);
     return metrics;
-    print("Out of per Accnt")
+  
 print(perAccntCombinedBasedMetrics("210-489-7739"));
 
       
