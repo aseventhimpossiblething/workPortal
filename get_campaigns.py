@@ -28,9 +28,8 @@ def project_Metric_For_Remaining_Month(metric):
     numberOfDays=monthrange(thisYear,thisMonth);
     daysLeft=numberOfDays[1]-thisDay;
     Metric_perDay=(metric/thisDay);
-    #projected_Metric_For_Month=Metric_perDay*daysLeft;
     return Metric_perDay*daysLeft;
-print("project_Metric_For_Remaining_Month(11) ",project_Metric_For_Remaining_Month(11));
+
 
 def MTY():
     today = date.today();
@@ -96,14 +95,12 @@ def fromGoogleAds(customer_id,dateRange):
     campaignImpressions=[];
     campaignBudget=[];
     campaignStatus=[];
-    #yesterdaySpend=[];
-    
+       
     newTable={"name":campaignName,"cost":campaignCost,"clicks":campaignClicks,"conversions":\
               campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
     
     AccntName=googleAccountNumberNameLookup[str(customer_id)];
-    #print(AccntName,"=",customer_id); 
-    
+        
     customer_id=customer_id.replace("-","") 
     response = ga_service.search_stream(customer_id, query=query) 
     for subset in response:
@@ -173,35 +170,27 @@ def perAccntCombinedBasedMetrics(accnts):
     partialBudget=[sum(partialBudget)];
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
+    """
     print("partialCost[0] ",partialCost[0]);
     print("type(partialCost[0]) ",type(partialCost[0]));
     print("partialClicks[0] ",partialClicks[0]);
     print("type(partialClicks[0]) ",type(partialClicks[0]));
     #CTR=[partialClicks[0]/partialImpressions[0]];
-    
+    """
     if partialClicks[0]>0:
        CPC=[partialCost[0]/partialClicks[0]];
        ConvRate=[partialConversions[0]/partialClicks[0]];
     else:
        CPC="No Clicks";
        ConvRate="No Clicks";
-       
-        
-    
+            
     if partialConversions[0]>0:
        CTR=[partialClicks[0]/partialImpressions[0]];
        CPL=[partialCost[0]/partialConversions[0]]; CPL=[partialCost[0]/partialConversions[0]];
     else:
        CTR="No Clicks";
        CPL="No Clicks";
-    
         
-    #CPC=[partialCost[0]/partialClicks[0]];
-    #CPL=[partialCost[0]/partialConversions[0]];
-    #ConvRate=[partialConversions[0]/partialClicks[0]];
-    #CTR=[partialClicks[0]/partialImpressions[0]];
-    
-    
     metrics={"Accnt Name":["Google "+AccntName+" Account"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
              ,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
@@ -215,9 +204,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialImpressions=[];
     partialBudget=[];
     yesterdayCost=[];
-    
-    
-          
+              
     len(googleArrayOfAccounts);
     count=0;
     for accnts in googleArrayOfAccounts:
@@ -319,16 +306,12 @@ def AccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialImpressions=[];
     partialBudget=[];
     yesterdayCost=[];
-    
-    
-          
+              
     len(googleArrayOfAccounts);
     count=0;
     for accnts in googleArrayOfAccounts:
-       
         mtdGoogle=perAccntCombinedBasedMetrics(accnts);
         print("perAccntCombinedBasedMetrics(accnts) ",perAccntCombinedBasedMetrics(accnts));
-       
         #mtdGoogle=fromGoogleAds(accnts,MTY());
         yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
         cost=sum(mtdGoogle.cost);
@@ -343,8 +326,7 @@ def AccntCombinedBasedMetrics(googleArrayOfAccounts):
         partialImpressions.append(impressions);
         partialBudget.append(budget);
         yesterdayCost.append(yesterdayGoogleCost);
-              
-       
+               
         print("failed to pull accnt ",accnts," count = ",count)
         count+=1; 
         
@@ -359,7 +341,6 @@ def AccntCombinedBasedMetrics(googleArrayOfAccounts):
     metrics={"":["Google Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     
-
     metrics=pandas.DataFrame(data=metrics)
     metrics=metrics.to_html();
        
