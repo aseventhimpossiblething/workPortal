@@ -333,7 +333,9 @@ def perAccntCombinedBasedMetrics(accnts):
     
     
     metrics={"Accnt Name":AccntName,"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
-       ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":,ConvRate:,"CTR":CTR,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
+             ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
+             ,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
+    
     
     
     """
