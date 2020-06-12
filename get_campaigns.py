@@ -481,7 +481,7 @@ def AccntCombinedBasedMetrics(googleArrayOfAccounts):
        
     return metrics;
 
-googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
+googlemetrics=AccntCombinedBasedMetrics(googleArrayOfAccounts);
 
 
 
