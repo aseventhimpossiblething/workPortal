@@ -219,10 +219,11 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
             frame=mtdGoogle;
         else:
             frame.append(mtdGoogle[0]);
+            
         #print("perAccntCombinedBasedMetrics(accnts) ",perAccntCombinedBasedMetrics(accnts));
         print("perAccntCombinedBasedMetrics(accnts)[0] ",perAccntCombinedBasedMetrics(accnts)[0]);
         rows.append(perAccntCombinedBasedMetrics(accnts)[0]);
-        
+        print("frame ",frame)
         
        
         #mtdGoogle=fromGoogleAds(accnts,MTY());
