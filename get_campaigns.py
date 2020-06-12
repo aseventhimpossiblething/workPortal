@@ -275,11 +275,100 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
 googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
 
 #210-489-7739
-googlemetrics=allAccntCombinedBasedMetrics("210-489-7739")
+#ooglemetrics=allAccntCombinedBasedMetrics("210-489-7739")
+
+
+print("-----------------------------------------------")
+print("-----------------------------------------------")
+print("-----------------------------------------------")
 
 
          
+  
+
+
+def perAccntCombinedBasedMetrics(accnt):
+    partialCost=[];
+    partialClicks=[];
+    partialConversions=[];
+    partialImpressions=[];
+    partialBudget=[];
+    yesterdayCost=[];
+    
+       
       
+    #print("in allAccntCombinedBasedMetrics(ArrayOfAccounts)") 
+    #len(googleArrayOfAccounts);
+    #count=0;
+    #for accnts in googleArrayOfAccounts:
+    print("What doe fromGoogleAds(accnts,MTY()) return again?  ",fromGoogleAds(accnts,MTY()))
+    #mtdGoogle=fromGoogleAds(accnts,MTY());
+    #yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
+    
+    mtdGoogle=fromGoogleAds(accnts,MTY());
+    yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
+    cost=sum(mtdGoogle.cost);
+    clicks=sum(mtdGoogle.clicks);
+    conversions=sum(mtdGoogle.conversions);
+    impressions=sum(mtdGoogle.impressions);
+    budget=sum(mtdGoogle.budget);
+        
+    partialCost.append(cost);
+    partialClicks.append(clicks);
+    partialConversions.append(conversions);
+    partialImpressions.append(impressions);
+    partialBudget.append(budget);
+    yesterdayCost.append(yesterdayGoogleCost);
+      
+        
+      
+    partialCost=[sum(partialCost)];
+    partialClicks=[sum(partialClicks)];
+    partialConversions=[sum(partialConversions)];
+    partialImpressions=[sum(partialImpressions)];
+    partialBudget=[sum(partialBudget)];
+    yesterdayCost=[sum(yesterdayCost)];
+    budgetMinusCost=[(partialBudget[0]-partialCost[0])];
+    
+    
+    metrics={"":["Google Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+       ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
+    
+    
+    """
+    partialCost.append("-");
+    partialClicks.append("-");
+    partialConversions.append("-");
+    partialImpressions.append("-");
+    partialBudget.append("-");
+    yesterdayCost.append("-");
+    budgetMinusCost.append("-");
+    
+    
+    
+    #project_Metric_For_Remaining_Month();
+    
+    
+    
+    
+    
+    
+    metrics={"":["Google Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+       ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
+    
+    
+    metrics={"":["Google Ads MTY","Bing Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+       ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
+    """
+   
+    metrics=pandas.DataFrame(data=metrics)
+    metrics=metrics.to_html();
+   
+    #print(metrics);
+    return metrics;
+    print("Out of per Accnt")
+perAccntCombinedBasedMetrics(accnt);
+
       
 
       
