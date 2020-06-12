@@ -208,7 +208,8 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        #yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
        try:
         perAccntCombinedBasedMetrics(accnts);
-        print("perAccntCombinedBasedMetrics(accnts) ",perAccntCombinedBasedMetrics(accnts))
+        #print("perAccntCombinedBasedMetrics(accnts) ",perAccntCombinedBasedMetrics(accnts));
+       
         mtdGoogle=fromGoogleAds(accnts,MTY());
         yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
         cost=sum(mtdGoogle.cost);
