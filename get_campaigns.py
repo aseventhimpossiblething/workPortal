@@ -120,8 +120,7 @@ def fromGoogleAds(customer_id,dateRange):
                conversions=float(jsonObj["results"][countOfSubset]["metrics"]["conversions"]);
                impressions=float(jsonObj["results"][countOfSubset]["metrics"]["impressions"]);
                budget=float(jsonObj["results"][countOfSubset]["campaignBudget"]["amountMicros"])/100000; 
-               #print(type(cost)) 
-                
+                               
                campaignName.append(name);
                campaignCost.append(cost);
                campaignClicks.append(clicks);
@@ -213,7 +212,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     for accnts in googleArrayOfAccounts:
        try:
         mtdGoogle=perAccntCombinedBasedMetrics(accnts);
-        print("mtdGoogle.columns ",mtdGoogle.columns)
+        #print("mtdGoogle.columns ",mtdGoogle.columns)
         if frame=="none":
             #ColNames.append(mtdGoogle.columns);
             frame=mtdGoogle;
@@ -274,7 +273,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     metrics={"":["Google Ads MTY","Bing Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     """
-   
+    print("frame ",frame)
     metrics=pandas.DataFrame(data=metrics)
     metrics=metrics.to_html();
        
@@ -313,7 +312,7 @@ googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
 
 
 
-
+"""
 def AccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialCost=[];
     partialClicks=[];
@@ -362,6 +361,7 @@ def AccntCombinedBasedMetrics(googleArrayOfAccounts):
     return metrics;
 
 print("AccntCombinedBasedMetrics(googleArrayOfAccounts) ",AccntCombinedBasedMetrics(googleArrayOfAccounts));
+"""
 
 
 
