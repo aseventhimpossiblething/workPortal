@@ -461,7 +461,7 @@ def AccntCombinedBasedMetrics(googleArrayOfAccounts):
         partialBudget.append(budget);
         yesterdayCost.append(yesterdayGoogleCost);
  
-       count+=1; 
+        count+=1; 
         
     partialCost=[sum(partialCost)];
     partialClicks=[sum(partialClicks)];
