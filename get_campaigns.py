@@ -173,6 +173,12 @@ def perAccntCombinedBasedMetrics(accnts):
     partialBudget=[sum(partialBudget)];
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
+    print("partialCost[0] ",partialCost[0]);
+    print("type(partialCost[0]) ",type(partialCost[0]));
+    print("partialClicks[0] ",partialClicks[0]);
+    print("type(partialClicks[0]) ",type(partialClicks[0]));
+    
+    #if type(partialClicks[0])==0;
     CPC=[partialCost[0]/partialClicks[0]];
     CPL=[partialCost[0]/partialConversions[0]];
     ConvRate=[partialConversions[0]/partialClicks[0]];
