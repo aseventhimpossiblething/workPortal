@@ -321,6 +321,7 @@ def AccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialBudget=[];
     yesterdayCost=[];
     frame="none";
+    rows="none;"
               
     len(googleArrayOfAccounts);
     count=0;
