@@ -198,7 +198,6 @@ def perAccntCombinedBasedMetrics(accnts):
     return metrics;
   
 def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
-    AccntName=googleAccountNumberNameLookup[str(accnts)];
     partialCost=[];
     partialClicks=[];
     partialConversions=[];
@@ -239,7 +238,8 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
         yesterdayCost.append(yesterdayGoogleCost);
               
        except:
-        print("failed to pull accnt ",accnts," count = ",count," ",AccntName)
+        AccntName=googleAccountNumberNameLookup[str(accnts)];
+        print("failed to pull accnt ",accnts," count = ",count," ",AccntName);
        count+=1; 
         
     partialCost=[sum(partialCost)];
