@@ -183,6 +183,107 @@ def fromGoogleAds(customer_id,dateRange):
               
        
     
+
+print("-----------------------------------------------")
+print("-----------------------------------------------")
+print("-----------------------------------------------")
+
+
+         
+  
+
+
+def perAccntCombinedBasedMetrics(accnts):
+    print("accnts ",accnts)
+    print("type(accnts) ",type(accnts))
+    AccntName=googleAccountNumberNameLookup[str(accnts)];
+    #AccntName=googleAccountNumberNameLookup(str(accnts));
+    AccntNumber=accnts;
+    partialCost=[];
+    partialClicks=[];
+    partialConversions=[];
+    partialImpressions=[];
+    partialBudget=[];
+    yesterdayCost=[];
+         
+  
+    #print("What doe fromGoogleAds(accnts,MTY()) return again?  ",fromGoogleAds(accnts,MTY()))
+  
+    mtdGoogle=fromGoogleAds(accnts,MTY());
+    yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
+    cost=sum(mtdGoogle.cost);
+    clicks=sum(mtdGoogle.clicks);
+    conversions=sum(mtdGoogle.conversions);
+    impressions=sum(mtdGoogle.impressions);
+    budget=sum(mtdGoogle.budget);
+        
+    partialCost.append(cost);
+    partialClicks.append(clicks);
+    partialConversions.append(conversions);
+    partialImpressions.append(impressions);
+    partialBudget.append(budget);
+    yesterdayCost.append(yesterdayGoogleCost);
+      
+        
+      
+    partialCost=[sum(partialCost)];
+    partialClicks=[sum(partialClicks)];
+    partialConversions=[sum(partialConversions)];
+    partialImpressions=[sum(partialImpressions)];
+    partialBudget=[sum(partialBudget)];
+    yesterdayCost=[sum(yesterdayCost)];
+    budgetMinusCost=[(partialBudget[0]-partialCost[0])];
+    CPC=[partialCost[0]/partialClicks[0]];
+    CPL=[partialCost[0]/partialConversions[0]];
+    ConvRate=[partialConversions[0]/partialClicks[0]];
+    CTR=[partialClicks[0]/partialImpressions[0]];
+    
+    
+    metrics={"Accnt Name":["Google "+AccntName+" Account"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+             ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
+             ,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
+    
+    
+    
+    """
+    partialCost.append("-");
+    partialClicks.append("-");
+    partialConversions.append("-");
+    partialImpressions.append("-");
+    partialBudget.append("-");
+    yesterdayCost.append("-");
+    budgetMinusCost.append("-");
+    
+    
+    
+    #project_Metric_For_Remaining_Month();
+    
+    
+    
+    
+    
+    
+    metrics={"":["Google Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+       ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
+    
+    
+    metrics={"":["Google Ads MTY","Bing Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+       ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
+    """
+   
+    metrics=pandas.DataFrame(data=metrics)
+    #metrics=metrics.to_html();
+   
+    #print(metrics);
+    return metrics;
+  
+print(perAccntCombinedBasedMetrics("210-489-7739"));
+
+      
+
+      
+      
+     
   
   
   
@@ -208,7 +309,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        #yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
        try:
         perAccntCombinedBasedMetrics(accnts);
-        #print("perAccntCombinedBasedMetrics(accnts) ",perAccntCombinedBasedMetrics(accnts));
+        print("perAccntCombinedBasedMetrics(accnts) ",perAccntCombinedBasedMetrics(accnts));
        
         mtdGoogle=fromGoogleAds(accnts,MTY());
         yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
@@ -289,7 +390,7 @@ print("-----------------------------------------------")
          
   
 
-
+"""
 def perAccntCombinedBasedMetrics(accnts):
     print("accnts ",accnts)
     print("type(accnts) ",type(accnts))
@@ -302,9 +403,7 @@ def perAccntCombinedBasedMetrics(accnts):
     partialImpressions=[];
     partialBudget=[];
     yesterdayCost=[];
-    
-       
-      
+         
   
     #print("What doe fromGoogleAds(accnts,MTY()) return again?  ",fromGoogleAds(accnts,MTY()))
   
@@ -344,7 +443,7 @@ def perAccntCombinedBasedMetrics(accnts):
     
     
     
-    """
+    
     partialCost.append("-");
     partialClicks.append("-");
     partialConversions.append("-");
@@ -368,7 +467,7 @@ def perAccntCombinedBasedMetrics(accnts):
     
     metrics={"":["Google Ads MTY","Bing Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
-    """
+    
    
     metrics=pandas.DataFrame(data=metrics)
     #metrics=metrics.to_html();
@@ -378,7 +477,7 @@ def perAccntCombinedBasedMetrics(accnts):
   
 print(perAccntCombinedBasedMetrics("210-489-7739"));
 
-      
+"""    
 
       
       
