@@ -178,11 +178,18 @@ def perAccntCombinedBasedMetrics(accnts):
     print("partialClicks[0] ",partialClicks[0]);
     print("type(partialClicks[0]) ",type(partialClicks[0]));
     
-    #if type(partialClicks[0])==0;
-    CPC=[partialCost[0]/partialClicks[0]];
+    
+    if partialClicks[0]>0:
+       CPC=[partialCost[0]/partialClicks[0]];
+       CTR=[partialClicks[0]/partialImpressions[0]];
+    else:
+        CPC="No Clickss";
+        CTR="No Clickss";
+        
+    #CPC=[partialCost[0]/partialClicks[0]];
     CPL=[partialCost[0]/partialConversions[0]];
     ConvRate=[partialConversions[0]/partialClicks[0]];
-    CTR=[partialClicks[0]/partialImpressions[0]];
+    #CTR=[partialClicks[0]/partialImpressions[0]];
     
     
     metrics={"Accnt Name":["Google "+AccntName+" Account"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
