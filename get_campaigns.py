@@ -203,7 +203,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     len(googleArrayOfAccounts);
     count=0;
     for accnts in googleArrayOfAccounts:
-       print("What doe fromGoogleAds(accnts,MTY()) return again?  ",fromGoogleAds(accnts,MTY()))
+       #print("What doe fromGoogleAds(accnts,MTY()) return again?  ",fromGoogleAds(accnts,MTY()))
        #mtdGoogle=fromGoogleAds(accnts,MTY());
        #yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
        try:
@@ -288,6 +288,8 @@ print("-----------------------------------------------")
 
 
 def perAccntCombinedBasedMetrics(accnts):
+    AccntName=googleAccountNumberNameLookup(accnts);
+    AccntNumber=accnts;
     partialCost=[];
     partialClicks=[];
     partialConversions=[];
@@ -297,14 +299,9 @@ def perAccntCombinedBasedMetrics(accnts):
     
        
       
-    #print("in allAccntCombinedBasedMetrics(ArrayOfAccounts)") 
-    #len(googleArrayOfAccounts);
-    #count=0;
-    #for accnts in googleArrayOfAccounts:
-    print("What doe fromGoogleAds(accnts,MTY()) return again?  ",fromGoogleAds(accnts,MTY()))
-    #mtdGoogle=fromGoogleAds(accnts,MTY());
-    #yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
-    
+  
+    #print("What doe fromGoogleAds(accnts,MTY()) return again?  ",fromGoogleAds(accnts,MTY()))
+  
     mtdGoogle=fromGoogleAds(accnts,MTY());
     yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
     cost=sum(mtdGoogle.cost);
@@ -329,10 +326,14 @@ def perAccntCombinedBasedMetrics(accnts):
     partialBudget=[sum(partialBudget)];
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
+    CPC=[partialCost/partialClicks];
+    CPL=[partialCost/partialConversions];
+    ConvRate=[partialConversions/partialClicks];
+    CTR=[partialClicks/partialImpressions];
     
     
-    metrics={"":["Google Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
-       ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
+    metrics={"Accnt Name":[googleAccountNumberNameLookup()],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+       ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":,ConvRate:,"CTR":CTR,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     
     
     """
@@ -362,7 +363,7 @@ def perAccntCombinedBasedMetrics(accnts):
     """
    
     metrics=pandas.DataFrame(data=metrics)
-    metrics=metrics.to_html();
+    #metrics=metrics.to_html();
    
     #print(metrics);
     return metrics;
