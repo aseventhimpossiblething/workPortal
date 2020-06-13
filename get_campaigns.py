@@ -176,24 +176,30 @@ def perAccntCombinedBasedMetrics(accnts):
     
     
     def addComa(x):
-        print("raw Number ",x);
-        strx=str(x);
-        deciLo=strx.find(".");
-        strx4=strx[deciLo:];
-        strx=strx[:deciLo];
+        if x>=1000:
+           if type(x)!="int"of type(x)!="float":
+              x=int(x);
+            
+           print("raw Number ",x);
+           strx=str(x);
+           deciLo=strx.find(".");
+           strx4=strx[deciLo:];
+           strx=strx[:deciLo];
         
-        print("strx ",strx);
-        print("type(strx) ",type(strx));
+           print("strx ",strx);
+           print("type(strx) ",type(strx));
         
-        cutSite=(len(strx))-3;
-        print("cutSite ",cutSite);
-        print("type(cutSte) ",type(cutSite));
+           cutSite=(len(strx))-3;
+           print("cutSite ",cutSite);
+           print("type(cutSte) ",type(cutSite));
         
-        strx3=strx[cutSite:];
-        strx1=strx[:cutSite];
-        print("strx1 ",strx1);
-        print("strx3 ",strx3);
-        print("strx4 ",strx4);   
+           strx3=strx[cutSite:];
+           strx1=strx[:cutSite];
+           print("strx1 ",strx1);
+           print("strx3 ",strx3);
+           print("strx4 ",strx4); 
+           strx=strx1+","+strx3+strx4;
+           print("strx ",strx);
     
     
     addComa(100.256);
