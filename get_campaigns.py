@@ -186,14 +186,14 @@ def perAccntCombinedBasedMetrics(accnts):
         print("type(strx) ",type(strx));
         
         cutSite=(len(strx))-3;
-        print("cutsite ",cutsite);
-        print("type(cutsite) ",type(cutsite));
+        print("cutSite ",cutSite);
+        print("type(cutSte) ",type(cutSite));
         
-        #strx3=strx[cutsite:];
-        #strx1=strx[:cutSite];
-        #print("strx1 ",strx1);
-        #print("strx3 ",strx3);
-        #print("strx4 ",strx4);   
+        strx3=strx[cutSite:];
+        strx1=strx[:cutSite];
+        print("strx1 ",strx1);
+        print("strx3 ",strx3);
+        print("strx4 ",strx4);   
     
     
     addComa(100.256);
