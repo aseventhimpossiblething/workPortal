@@ -180,13 +180,17 @@ def perAccntCombinedBasedMetrics(accnts):
         strx=str(x)
         deciLo=strx.find(".");
         print("str(Number).find(.) ",deciLo);
+        strx4=strx[deciLo:];
         strx=strx[:deciLo];
+        cutSite=len(strx)-3;
+        print("cutSite ",cutSite);
         print("strx ",strx);
         print("len(strx) ",len(strx));
-        print("strx[0] ",strx[0]);
+        print("strx[:cutSite] ",strx[:cutSite]);
         #print("Number ",x);
     
     addComa(100.256);
+    addComa(1000.256);
     #addComa(impression);
     """
         
