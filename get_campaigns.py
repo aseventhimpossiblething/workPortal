@@ -176,8 +176,11 @@ def perAccntCombinedBasedMetrics(accnts):
     
     print("budget ",budget);
     print("str(budget) ",str(budget));
+    print("str(budget).find(.) ",str(budget).find("."));
     print("impressions ",impressions);
     print("str(impressions) ",str(impressions));
+    print("str(impressions).find(.) ",str(impressions).find("."));
+    
     
   
 
