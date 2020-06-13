@@ -174,12 +174,31 @@ def perAccntCombinedBasedMetrics(accnts):
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
     
+    def addComa(x):
+        print("raw Number ",x);
+        print("str(Number) ",str(x));
+        print("str(Number).find(.) ",str(x).find("."));
+        decLocation=str(x).find("."));
+        x=x[:decLocation];
+        print("len(Number) ",len(x));
+        print("Number ",x);
+        
+    
     print("budget ",budget);
     print("str(budget) ",str(budget));
     print("str(budget).find(.) ",str(budget).find("."));
+    decLocation=str(budget).find("."));
+    budget=budget[:decLocation];
+    print("budget ",budget);
+    print("budget ",budget);
+    
     print("impressions ",impressions);
     print("str(impressions) ",str(impressions));
     print("str(impressions).find(.) ",str(impressions).find("."));
+    decLocation=str(impression).find("."));
+    impression=impression[:decLocation];
+    print("impression ",impression);
+    print("impression ",impression);
     
     
   
