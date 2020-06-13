@@ -294,12 +294,15 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     
     #print("frame=frame ",frame)
     
-    frame=frame.reset_index(drop=True)
-    print(frame)
+    #frame=frame.reset_index(drop=True)
+    #print(frame)
     #frame=frame.style.hide_index()
     #frame=frame.to_html();
     metrics=pandas.DataFrame(data=metrics)
-    metrics.reset_index(drop=True)
+    metrics=metrics.append(frame)
+    metrics=metrics.reset_index(drop=True)
+    
+    #metrics.reset_index(drop=True)
     print(metrics)
     metrics=metrics.to_html();
        
