@@ -176,6 +176,7 @@ def perAccntCombinedBasedMetrics(accnts):
     
     
     def addComa(x):
+        print("__________________")
         print("x ",x);
         if x>=1000:
            print("x>1000 ",x); 
@@ -191,7 +192,7 @@ def perAccntCombinedBasedMetrics(accnts):
            print("strx ",strx);
            print("type(strx) ",type(strx));
         
-           cutSite=(len(strx))-2;
+           cutSite=(len(strx))-3;
            print("cutSite ",cutSite);
            print("type(cutSte) ",type(cutSite));
         
@@ -202,6 +203,7 @@ def perAccntCombinedBasedMetrics(accnts):
            #print("strx4 ",strx4); 
            strx=strx1+","+strx3;
            print("strx ",strx);
+           print("__________________")
     
     
     addComa(100.256);
