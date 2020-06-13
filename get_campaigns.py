@@ -187,7 +187,7 @@ def perAccntCombinedBasedMetrics(accnts):
            strx=str(x);
            print("strx=str(x); ",x);
            existingComa=x.find(",");
-           if existingComa=>0:
+           if existingComa>0:
               x=x[:existingComma];
               butt=x[exitingComma:];  
             
