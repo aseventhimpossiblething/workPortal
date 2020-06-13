@@ -206,7 +206,9 @@ def perAccntCombinedBasedMetrics(accnts):
               print(str(deciLo)); 
               print("entered if"); 
               strx=strx[:deciLo];
-              butt=strx[deciLo:]; 
+              butt=strx[deciLo:];
+              print("strx[deciLo:]",strx[deciLo:]);  
+              print("butt ",butt);
               print("strx=strx[:deciLo]; ",strx);  
            print("passed if"); 
            print("butt ",butt);
