@@ -178,13 +178,12 @@ def perAccntCombinedBasedMetrics(accnts):
     def addComa(x):
         print("raw Number ",x);
         strx=str(x)
-        print("str(Number) ",strx);
         deciLo=strx.find(".");
-        print("type(deciLo) ",type(deciLo));
         print("str(Number).find(.) ",deciLo);
-        #decLo=str(x).find(".");
         strx=strx[:deciLo];
-        #print("len(Number) ",len(x));
+        print("strx ",strx);
+        print("len(strx) ",len(strx));
+        print("strx[0] ",strx[0]);
         #print("Number ",x);
     
     addComa(100.256);
