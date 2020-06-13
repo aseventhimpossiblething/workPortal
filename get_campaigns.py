@@ -182,7 +182,7 @@ def perAccntCombinedBasedMetrics(accnts):
         deciLo=strx.find(".");
         print("str(Number).find(.) ",deciLo);
         #decLo=str(x).find(".");
-        strx=strx[:decLo];
+        strx=strx[:deciLo];
         #print("len(Number) ",len(x));
         #print("Number ",x);
     
