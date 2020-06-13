@@ -187,7 +187,7 @@ def perAccntCombinedBasedMetrics(accnts):
         
         cutSite=(len(strx))-3;
         print("cutsite ",cutsite);
-        print("type(cutsite) ",type(cutsite))
+        print("type(cutsite) ",type(cutsite));
         
         #strx3=strx[cutsite:];
         #strx1=strx[:cutSite];
