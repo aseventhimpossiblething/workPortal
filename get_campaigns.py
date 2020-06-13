@@ -206,17 +206,17 @@ def perAccntCombinedBasedMetrics(accnts):
     budget=format(partialBbudget,",");
     """
     
-    partialCost=format(partialCost,",");
-    partialClicks=format(partialClicks,",");
-    partialConversions=format(partialConversions,",");
-    partialImpressions=format(partialImpressions,",");
-    partialBudget=format(partialBudget,",");
-    yesterdayCost=format(yesterdayCost,",");
-    budgetMinusCost=format(budgetMinusCost,",");
-    projectedCost=format(projectedCost,",");
-    projectedClicks=format(projectedClicks,",");
-    projectedConversions=format(projectedConversions,",");
-    projectedImpressions=format(projectedImpressions,",");
+    partialCost=[format(partialCost[0],",")];
+    partialClicks=[format(partialClicks[0],",")];
+    partialConversions=[format(partialConversions[0],",")];
+    partialImpressions=[format(partialImpressions[0],",")];
+    partialBudget=[format(partialBudget[0],",")];
+    yesterdayCost=[format(yesterdayCost[0],",")];
+    budgetMinusCost=[format(budgetMinusCost[0],",")];
+    projectedCost=[format(projectedCost[0],",")];
+    projectedClicks=[format(projectedClicks[0],",")];
+    projectedConversions=[format(projectedConversions[0],",")];
+    projectedImpressions=[format(projectedImpressions[0],",")];
     
     
     metrics={"Accnt Name":["Google "+AccntName+" Account MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
