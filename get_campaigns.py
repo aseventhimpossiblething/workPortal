@@ -179,12 +179,12 @@ def perAccntCombinedBasedMetrics(accnts):
         print("raw Number ",x);
         print("str(Number) ",str(x));
         print("str(Number).find(.) ",str(x).find("."));
-        decLocation=str(x).find(".");
-        x=x[:decLocation];
+        decLo=str(x).find(".");
+        x=x[:decLo];
         print("len(Number) ",len(x));
         print("Number ",x);
     
-    #addComa(budget);
+    addComa(budget);
     #addComa(impression);
     """
         
