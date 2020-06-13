@@ -16,8 +16,6 @@ today = date.today()
 thisYear=today.year
 thisMonth=today.month
 thisDay=today.day
-#print("type(thisDay) ",type(thisDay))
-#print("thisDay ",thisDay)
 numberOfDays=monthrange(thisYear,thisMonth)[1]
 daysLeft=numberOfDays-thisDay
 
@@ -27,8 +25,6 @@ def project_Metric_For_Remaining_Month(metric):
     thisYear=workingDate.year;
     thisMonth=workingDate.month;
     thisDay=workingDate.day;
-    #print("-inside function-type(thisDay) ",type(thisDay))
-    #print("-inside function-thisDay ",thisDay)
     numberOfDays=monthrange(thisYear,thisMonth);
     daysLeft=numberOfDays[1]-thisDay;
     Metric_perDay=(metric/thisDay);
@@ -154,21 +150,16 @@ def perAccntCombinedBasedMetrics(accnts):
     
            
     mtdGoogle=fromGoogleAds(accnts,MTY());
-    """
+    
     yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
     cost=sum(mtdGoogle.cost);
     clicks=sum(mtdGoogle.clicks);
     conversions=sum(mtdGoogle.conversions);
     impressions=sum(mtdGoogle.impressions);
     budget=sum(mtdGoogle.budget);
-    """
     
-    yesterdayGoogleCost=format(sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost),",");    
-    cost=format(sum(mtdGoogle.cost),",");
-    clicks=format(sum(mtdGoogle.clicks),",");
-    conversions=format(sum(mtdGoogle.conversions),",");
-    impressions=format(sum(mtdGoogle.impressions),",");
-    budget=format(sum(mtdGoogle.budget),",");
+    
+   
     
     
         
@@ -204,7 +195,29 @@ def perAccntCombinedBasedMetrics(accnts):
     projectedCost=[project_Metric_For_Remaining_Month(partialCost[0])];
     projectedClicks=[project_Metric_For_Remaining_Month(partialClicks[0])];
     projectedConversions=[project_Metric_For_Remaining_Month(partialConversions[0])];
-    projectedImpressions=[project_Metric_For_Remaining_Month(partialImpressions[0])];    
+    projectedImpressions=[project_Metric_For_Remaining_Month(partialImpressions[0])]; 
+    
+    """
+    yesterdayGoogleCost=format(yesterdayGoogleCost,",");    
+    cost=format(partialCost,",");
+    clicks=format(partialClicks,",");
+    conversions=format(partialConversions,",");
+    impressions=format(partialImpressions,",");
+    budget=format(partialBbudget,",");
+    """
+    
+    partialCost=format(partialCost,",");
+    partialClicks=format(partialClicks,",");
+    partialConversions=format(partialConversions,",");
+    partialImpressions=format(partialImpressions,",");
+    partialBudget=format(partialBudget,",");
+    yesterdayCost=format(yesterdayCost,",");
+    budgetMinusCost=format(budgetMinusCost,",");
+    projectedCost=format(projectedCost,",");
+    projectedClicks=format(projectedClicks,",");
+    projectedConversions=format(projectedConversions,",");
+    projectedImpressions=format(projectedImpressions,",");
+    
     
     metrics={"Accnt Name":["Google "+AccntName+" Account MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
