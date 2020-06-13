@@ -174,7 +174,7 @@ def perAccntCombinedBasedMetrics(accnts):
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
     
-    """
+    
     def addComa(x):
         print("raw Number ",x);
         print("str(Number) ",str(x));
@@ -186,6 +186,7 @@ def perAccntCombinedBasedMetrics(accnts):
     
     addComa(budget);
     addComa(impression);
+    """
         
         
     
