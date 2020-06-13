@@ -16,6 +16,8 @@ today = date.today()
 thisYear=today.year
 thisMonth=today.month
 thisDay=today.day
+print("type(thisDay) ",type(thisDay))
+print("thisDay ",thisDay)
 numberOfDays=monthrange(thisYear,thisMonth)[1]
 daysLeft=numberOfDays-thisDay
 
@@ -25,6 +27,8 @@ def project_Metric_For_Remaining_Month(metric):
     thisYear=workingDate.year;
     thisMonth=workingDate.month;
     thisDay=workingDate.day;
+    print("-inside function-type(thisDay) ",type(thisDay))
+    print("-inside function-thisDay ",thisDay)
     numberOfDays=monthrange(thisYear,thisMonth);
     daysLeft=numberOfDays[1]-thisDay;
     Metric_perDay=(metric/thisDay);
