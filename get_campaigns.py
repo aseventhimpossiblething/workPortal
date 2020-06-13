@@ -185,7 +185,12 @@ def perAccntCombinedBasedMetrics(accnts):
                        
            print("raw Number ",x);
            strx=str(x);
-           print("strx=str(x); ",x); 
+           print("strx=str(x); ",x);
+           existingComa=x.find(",");
+           if existingComa=>0:
+              x=x[:existingComma];
+              butt=x[exitingComma:];  
+            
            deciLo=strx.find(".");
            print("deciLo=strx.find(.); ",deciLo)
            print("type(deciLo) ",type(deciLo))
@@ -198,6 +203,7 @@ def perAccntCombinedBasedMetrics(accnts):
               print(str(deciLo)); 
               print("entered if"); 
               strx=strx[:deciLo];
+              butt=strx[deciLo:]; 
               print("strx=strx[:deciLo]; ",strx);  
            print("passed if");               
            #deciLo=deciLo.find(".")  
@@ -218,6 +224,9 @@ def perAccntCombinedBasedMetrics(accnts):
            #print("strx4 ",strx4); 
            strx=strx1+","+strx3;
            print("strx ",strx);
+           if deciLo>0:
+              strx=strx+butt;
+           return strx;     
            
            #print("__________________")
     
