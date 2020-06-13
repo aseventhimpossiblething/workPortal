@@ -187,109 +187,6 @@ def perAccntCombinedBasedMetrics(accnts):
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
     
-    
-    
-    """
-    def addComa(x):
-        print("__________________")
-        print("x ",x);
-        if x>=1000:
-           print("x>1000 ",x); 
-           if type(x)!="int" or type(x)!="float":
-              x=float(x);
-                       
-           print("raw Number ",x);
-           strx=str(x);
-           print("strx=str(x); ",x);
-           existingComa=strx.find(",");
-           print("existingComa ",existingComa);
-           if existingComa>=0:
-              print("entered if of existingComa");  
-              strx=strx[:existingComma];
-              butt=strx[exitingComma:];
-              print("completeing if of exiting Coma");
-           print("passed if of existing comma"); 
-           deciLo=strx.find(".");
-           print("deciLo=strx.find(.); ",deciLo)
-           print("type(deciLo) ",type(deciLo))
-           strxDeci=strx[deciLo:];
-           print("before if"); 
-           #print("strxDeci=strx[deciLo:]; ",strxDeci); 
-           #print("type(deciLo) ",type(deciLo));
-           #deciLo=str(deciLo); 
-           if deciLo>0:
-              print(str(deciLo)); 
-              print("entered if"); 
-              strx=strx[:deciLo];
-              butt=strx[deciLo:];
-              print("strx[deciLo:]",strx[deciLo:]);  
-              print("butt ",butt);
-              print("strx=strx[:deciLo]; ",strx);  
-           print("passed if"); 
-           print("butt ",butt);
-           #deciLo=deciLo.find(".")  
-           #strxDeci=strx[deciLo:];
-           #strx=strx[:deciLo];
-        
-           #print("strx ",strx);
-           #print("type(strx) ",type(strx));
-           
-           cutSite=(len(strx))-3;
-           print("cutSite ",cutSite);
-           print("type(cutSite) ",type(cutSite));
-        
-           strx3=strx[cutSite:];
-           strx1=strx[:cutSite];
-           print("strx1 ",strx1);
-           print("strx3 ",strx3);
-           #print("strx4 ",strx4); 
-           strx=strx1+","+strx3;
-           #print("strx ",strx);
-           print("deciLo ",deciLo); 
-           if deciLo>0:
-              strx=strx+butt;
-                
-           print("final strx ",strx)     
-           return strx;     
-           
-           #print("__________________")
-    
-    """
-    #addComa(100.256);
-    #addComa(1000,555.256);
-    #addComa(1000555.256);
-    #addComa(10000555.256);
-    #addComa(impression);
-    """
-    def addComas(x):
-        return format(x,",");
-    """    
-        
-    #tryFormat
-    #print(tryFormat);
-    """
-        
-        
-    
-    print("budget ",budget);
-    print("str(budget) ",str(budget));
-    print("str(budget).find(.) ",str(budget).find("."));
-    decLocation=str(budget).find(".");
-    budget=budget[:decLocation];
-    print("budget ",budget);
-    print("budget ",budget);
-    
-    print("impressions ",impressions);
-    print("str(impressions) ",str(impressions));
-    print("str(impressions).find(.) ",str(impressions).find("."));
-    decLocation=str(impression).find(".");
-    impression=impression[:decLocation];
-    print("impression ",impression);
-    print("impression ",impression);
-    """
-    
-  
-
     if partialClicks[0]>0:
        CPC=[partialCost[0]/partialClicks[0]];
        ConvRate=[partialConversions[0]/partialClicks[0]];
@@ -309,7 +206,6 @@ def perAccntCombinedBasedMetrics(accnts):
     projectedConversions=[project_Metric_For_Remaining_Month(partialConversions[0])];
     projectedImpressions=[project_Metric_For_Remaining_Month(partialImpressions[0])];    
     
-    
     metrics={"Accnt Name":["Google "+AccntName+" Account MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
              ,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost\
@@ -325,7 +221,7 @@ def perAccntCombinedBasedMetrics(accnts):
     return metrics;
 
 
- print("perAccntCombinedBasedMetrics(210-489-7739) ",perAccntCombinedBasedMetrics("210-489-7739"))
+print("perAccntCombinedBasedMetrics(210-489-7739) ",perAccntCombinedBasedMetrics("210-489-7739"))
   
 def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialCost=[];
