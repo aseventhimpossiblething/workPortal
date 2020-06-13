@@ -229,7 +229,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
         else:
             print("following else len(frame) path ")  
             print("mtdGoogle ",mtdGoogle)
-            frame.append(mtdGoogle);
+            frame=frame.append(mtdGoogle);
             print("following else len(frame) path after append ")
         #print("frame ",frame);
         #print("almost made it through")
