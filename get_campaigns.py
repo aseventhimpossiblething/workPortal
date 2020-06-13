@@ -293,7 +293,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     #print("frame ",frame)
     
     #print("frame=frame ",frame)
-    frame=frame.reindex()
+    frame=frame.reset_index()
     print(frame)
     frame=frame.style.hide_index()
     frame=frame.to_html();
