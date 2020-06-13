@@ -168,7 +168,7 @@ def perAccntCombinedBasedMetrics(accnts):
     clicks=format(sum(mtdGoogle.clicks),",");
     conversions=format(sum(mtdGoogle.conversions),",");
     impressions=format(sum(mtdGoogle.impressions),",");
-    budget=format(sum(mtdGoogle.budget,",");
+    budget=format(sum(mtdGoogle.budget),",");
     
     
         
