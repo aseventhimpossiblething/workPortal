@@ -173,6 +173,12 @@ def perAccntCombinedBasedMetrics(accnts):
     partialBudget=[sum(partialBudget)];
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
+    
+    print("budget ",budget);
+    print("str(budget) ",str(budget));
+    print("impressions ",impressions);
+    print("str(impressions) ",str(impressions));
+    
   
 
     if partialClicks[0]>0:
