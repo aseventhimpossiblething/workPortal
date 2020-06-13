@@ -323,6 +323,9 @@ def perAccntCombinedBasedMetrics(accnts):
     """         
     metrics=pandas.DataFrame(data=metrics)
     return metrics;
+
+
+ print("perAccntCombinedBasedMetrics(210-489-7739) ",perAccntCombinedBasedMetrics("210-489-7739"))
   
 def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialCost=[];
