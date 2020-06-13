@@ -213,7 +213,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        
        #mtdGoogle=perAccntCombinedBasedMetrics(accnts); 
        #print("mtdGoogle ",mtdGoogle);
-       print('type(frame) ',type(frame));
+       #print('type(frame) ',type(frame));
        
        try:
         mtdGoogle=perAccntCombinedBasedMetrics(accnts);
@@ -227,10 +227,10 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
             frame=mtdGoogle;
             print("following if len(frame) path")
         else:
-            print("following else len(frame) path ")  
-            print("mtdGoogle ",mtdGoogle)
+            #print("following else len(frame) path ")  
+            #print("mtdGoogle ",mtdGoogle)
             frame=frame.append(mtdGoogle);
-            print("following else len(frame) path after append ")
+            #print("following else len(frame) path after append ")
         #print("frame ",frame);
         #print("almost made it through")
             
@@ -267,6 +267,8 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialBudget=[sum(partialBudget)];
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
+    
+    
         
     metrics={"":["Google Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
@@ -288,11 +290,12 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     metrics={"":["Google Ads MTY","Bing Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     """
-    print("frame ",frame)
+    #print("frame ",frame)
+    frame=frame.to_html();
     metrics=pandas.DataFrame(data=metrics)
     metrics=metrics.to_html();
        
-    return metrics;
+    return frame;
 
 googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
 
