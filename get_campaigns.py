@@ -273,10 +273,10 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
     
     
-    projectedCost=[project_Metric_For_Remaining_Month(partialCost)];
-    projectedClicks=[project_Metric_For_Remaining_Month(partialClicks)];
-    projectedConversions=[project_Metric_For_Remaining_Month(partialConversions)];
-    projectedImpressions=[project_Metric_For_Remaining_Month(partialImpressions)];
+    projectedCost=[project_Metric_For_Remaining_Month(partialCost[0])];
+    projectedClicks=[project_Metric_For_Remaining_Month(partialClicks[0])];
+    projectedConversions=[project_Metric_For_Remaining_Month(partialConversions[0])];
+    projectedImpressions=[project_Metric_For_Remaining_Month(partialImpressions[0])];
     
 
     
