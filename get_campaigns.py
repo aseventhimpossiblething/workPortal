@@ -291,6 +291,8 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     """
     #print("frame ",frame)
+    
+    print("frame[0] ",frame[0])
     frame=frame.to_html();
     metrics=pandas.DataFrame(data=metrics)
     metrics=metrics.to_html();
