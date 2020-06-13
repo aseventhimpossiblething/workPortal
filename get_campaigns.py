@@ -194,7 +194,7 @@ def perAccntCombinedBasedMetrics(accnts):
     
     print("impressions ",impressions);
     print("str(impressions) ",str(impressions));
-    print("str(impressions).find(.) ",str(impressions).find(".");
+    print("str(impressions).find(.) ",str(impressions).find("."));
     decLocation=str(impression).find("."));
     impression=impression[:decLocation];
     print("impression ",impression);
