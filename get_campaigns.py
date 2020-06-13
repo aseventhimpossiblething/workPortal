@@ -184,8 +184,8 @@ def perAccntCombinedBasedMetrics(accnts):
         print("len(Number) ",len(x));
         print("Number ",x);
     
-    addComa(budget);
-    addComa(impression);
+    #addComa(budget);
+    #addComa(impression);
     """
         
         
