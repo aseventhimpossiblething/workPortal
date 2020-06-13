@@ -224,8 +224,11 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
         if len(frame)==0:
             #ColNames.append(mtdGoogle.columns);
             frame=mtdGoogle;
+            print("following if len(frame) path")
         else:
+            print("following else len(frame) path ")            
             frame.append(mtdGoogle);
+            print("following else len(frame) path after append ")
         #print("frame ",frame);
         #print("almost made it through")
             
