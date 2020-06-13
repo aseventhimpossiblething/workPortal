@@ -213,6 +213,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        
        #mtdGoogle=perAccntCombinedBasedMetrics(accnts); 
        #print("mtdGoogle ",mtdGoogle);
+       print('type(frame) ',type(frame));
        
        try:
         mtdGoogle=perAccntCombinedBasedMetrics(accnts);
