@@ -208,7 +208,8 @@ def perAccntCombinedBasedMetrics(accnts):
               strx=strx[:deciLo];
               butt=strx[deciLo:]; 
               print("strx=strx[:deciLo]; ",strx);  
-           print("passed if");               
+           print("passed if"); 
+           print("butt ",butt);
            #deciLo=deciLo.find(".")  
            #strxDeci=strx[deciLo:];
            #strx=strx[:deciLo];
@@ -227,6 +228,7 @@ def perAccntCombinedBasedMetrics(accnts):
            #print("strx4 ",strx4); 
            strx=strx1+","+strx3;
            #print("strx ",strx);
+           print("deciLo ",deciLo); 
            if deciLo>0:
               strx=strx+butt;
                 
