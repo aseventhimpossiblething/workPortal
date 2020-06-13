@@ -210,12 +210,14 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     len(googleArrayOfAccounts);
     count=0;
     for accnts in googleArrayOfAccounts:
+       """ 
        mtdGoogle=perAccntCombinedBasedMetrics(accnts); 
-       print("mtGoogle ",mtGoogle);
+       print("mtdGoogle ",mtdGoogle);
+       """
        try:
         mtdGoogle=perAccntCombinedBasedMetrics(accnts);
         print("Trying in All Accnts");
-        print("mtGoogle ",mtGoogle);
+        print("mtdGoogle ",mtdGoogle);
         #print("past mtGoogle but failing before if statement")
         #print("mtdGoogle.columns ",mtdGoogle.columns)
         if len(frame)==0:
