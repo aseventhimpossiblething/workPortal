@@ -190,7 +190,7 @@ def perAccntCombinedBasedMetrics(accnts):
        CTR="No Clicks";
        CPL="No Clicks";
         
-    metrics={"Accnt Name":["Google "+AccntName+" Account"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+    metrics={"Accnt Name":["Google "+AccntName+" Account MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
              ,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
     metrics=pandas.DataFrame(data=metrics)
@@ -267,11 +267,40 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialBudget=[sum(partialBudget)];
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
+    """
+    CPC="n/a";
+    CPL="n/a";
+    ConvRate="n/a";
+    CTR="n/a";
+    """
     
     
-        
-    metrics={"":["Google Ads MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+    if partialClicks[0]>0:
+       CPC=[partialCost[0]/partialClicks[0]];
+       ConvRate=[partialConversions[0]/partialClicks[0]];
+    else:
+       CPC="No Clicks";
+       ConvRate="No Clicks";
+            
+    if partialConversions[0]>0:
+       CTR=[partialClicks[0]/partialImpressions[0]];
+       CPL=[partialCost[0]/partialConversions[0]]; CPL=[partialCost[0]/partialConversions[0]];
+    else:
+       CTR="No Clicks";
+       CPL="No Clicks";
+    
+    
+    """    
+    metrics={"":["Google Ads All Accounts MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
        ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
+    """
+    
+           
+    metrics={"Accnt Name":["Google Ads All Accounts MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+             ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
+             ,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
+    
+    
     
     """
     partialCost.append("-");
