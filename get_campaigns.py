@@ -150,14 +150,27 @@ def perAccntCombinedBasedMetrics(accnts):
     partialImpressions=[];
     partialBudget=[];
     yesterdayCost=[];
-            
+    
+    
+           
     mtdGoogle=fromGoogleAds(accnts,MTY());
+    """
     yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
     cost=sum(mtdGoogle.cost);
     clicks=sum(mtdGoogle.clicks);
     conversions=sum(mtdGoogle.conversions);
     impressions=sum(mtdGoogle.impressions);
     budget=sum(mtdGoogle.budget);
+    """
+    
+    yesterdayGoogleCost=format(sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost),",");    
+    cost=format(sum(mtdGoogle.cost),",");
+    clicks=format(sum(mtdGoogle.clicks),",");
+    conversions=format(sum(mtdGoogle.conversions),",");
+    impressions=format(sum(mtdGoogle.impressions),",");
+    budget=format(sum(mtdGoogle.budget,",");
+    
+    
         
     partialCost.append(cost);
     partialClicks.append(clicks);
@@ -175,6 +188,8 @@ def perAccntCombinedBasedMetrics(accnts):
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
     
     
+    
+    """
     def addComa(x):
         print("__________________")
         print("x ",x);
@@ -239,16 +254,19 @@ def perAccntCombinedBasedMetrics(accnts):
            
            #print("__________________")
     
-    
+    """
     #addComa(100.256);
     #addComa(1000,555.256);
     #addComa(1000555.256);
     #addComa(10000555.256);
     #addComa(impression);
-    number=1000000000
-    tryFormat=format(number,",");
+    """
+    def addComas(x):
+        return format(x,",");
+    """    
+        
     #tryFormat
-    print(tryFormat);
+    #print(tryFormat);
     """
         
         
