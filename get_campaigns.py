@@ -177,7 +177,7 @@ def perAccntCombinedBasedMetrics(accnts):
     
     def addComa(x):
         if x>=1000:
-           if type(x)!="int"of type(x)!="float":
+           if type(x)!="int" or type(x)!="float":
               x=int(x);
             
            print("raw Number ",x);
