@@ -293,9 +293,9 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     #print("frame ",frame)
     
     #print("frame=frame ",frame)
-    frame=frame.reset_index()
+    #frame=frame.reset_index()
     print(frame)
-    frame=frame.style.hide_index()
+    #frame=frame.style.hide_index()
     frame=frame.to_html();
     metrics=pandas.DataFrame(data=metrics)
     metrics=metrics.to_html();
