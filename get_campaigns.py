@@ -182,8 +182,12 @@ def perAccntCombinedBasedMetrics(accnts):
         x=x[:decLocation];
         print("len(Number) ",len(x));
         print("Number ",x);
-        
     
+    addComa(budget);
+    addComa(impression);
+        
+        
+    """
     print("budget ",budget);
     print("str(budget) ",str(budget));
     print("str(budget).find(.) ",str(budget).find("."));
@@ -199,7 +203,7 @@ def perAccntCombinedBasedMetrics(accnts):
     impression=impression[:decLocation];
     print("impression ",impression);
     print("impression ",impression);
-    
+    """
     
   
 
