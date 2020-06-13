@@ -189,8 +189,10 @@ def perAccntCombinedBasedMetrics(accnts):
            deciLo=strx.find(".");
            print("deciLo=strx.find(.); ",deciLo)
            strxDeci=strx[deciLo:];
-           print("strxDeci=strx[deciLo:]; ",strxDeci) 
-           if deciLo.find(".")>0:
+           print("strxDeci=strx[deciLo:]; ",strxDeci); 
+           print("type(deciLo) ",type(deciLo));
+           deciLo=str(deciLo); 
+           if deciLo.find(".")>=1:
               print("entered if"); 
               strx=strx[:deciLo];
               print("strx=strx[:deciLo]; ",strx);  
