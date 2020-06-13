@@ -211,6 +211,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     count=0;
     for accnts in googleArrayOfAccounts:
        mtdGoogle=perAccntCombinedBasedMetrics(accnts); 
+       print("mtGoogle ",mtGoogle);
        try:
         mtdGoogle=perAccntCombinedBasedMetrics(accnts);
         print("Trying in All Accnts");
