@@ -181,9 +181,13 @@ def perAccntCombinedBasedMetrics(accnts):
         deciLo=strx.find(".");
         strx4=strx[deciLo:];
         strx=strx[:deciLo];
+        
+        print("strx ",strx);
+        print("type(strx) ",type(strx));
+        
         cutSite=(len(strx))-3;
         
-        strx3=strx[cutsite:];
+        #strx3=strx[cutsite:];
         #strx1=strx[:cutSite];
         #print("strx1 ",strx1);
         #print("strx3 ",strx3);
