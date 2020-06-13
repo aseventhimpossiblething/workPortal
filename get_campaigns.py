@@ -187,10 +187,13 @@ def perAccntCombinedBasedMetrics(accnts):
            strx=str(x);
            print("strx=str(x); ",x);
            existingComa=x.find(",");
-           if existingComa>0:
+           print("existingComa ",existingComa);
+           if existingComa>=0:
+              print("entered if of existingComa");  
               x=x[:existingComma];
-              butt=x[exitingComma:];  
-            
+              butt=x[exitingComma:];
+              print("completeing if of exiting Coma");
+           print("passed if of existing comma"); 
            deciLo=strx.find(".");
            print("deciLo=strx.find(.); ",deciLo)
            print("type(deciLo) ",type(deciLo))
