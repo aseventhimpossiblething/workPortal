@@ -218,7 +218,7 @@ def perAccntCombinedBasedMetrics(accnts):
            
            cutSite=(len(strx))-3;
            print("cutSite ",cutSite);
-           print("type(cutSte) ",type(cutSite));
+           print("type(cutSite) ",type(cutSite));
         
            strx3=strx[cutSite:];
            strx1=strx[:cutSite];
@@ -226,9 +226,11 @@ def perAccntCombinedBasedMetrics(accnts):
            print("strx3 ",strx3);
            #print("strx4 ",strx4); 
            strx=strx1+","+strx3;
-           print("strx ",strx);
+           #print("strx ",strx);
            if deciLo>0:
               strx=strx+butt;
+                
+           print("final strx ",strx)     
            return strx;     
            
            #print("__________________")
