@@ -194,7 +194,7 @@ def perAccntCombinedBasedMetrics(accnts):
            #strxDeci=strx[deciLo:];
            #strx=strx[:deciLo];
         
-           print("strx ",strx);
+           #print("strx ",strx);
            #print("type(strx) ",type(strx));
            """
            cutSite=(len(strx))-3;
@@ -209,7 +209,7 @@ def perAccntCombinedBasedMetrics(accnts):
            strx=strx1+","+strx3;
            print("strx ",strx);
            """ 
-           print("__________________")
+           #print("__________________")
     
     
     addComa(100.256);
