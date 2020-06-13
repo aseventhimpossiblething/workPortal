@@ -431,20 +431,20 @@ def inda():
     metrics=get_campaigns.googlemetrics;
     print("spendtrack")
     print(metrics)
-    return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi,metrics=metrics);
+    return render_template('SpendTrack.html',domain=domain,domainFav=domainFavi,metrics=metrics);
 
 
 
 
-@app.route('/test')
+@app.route('/GoogleAccnts')
 def ind():
     if chckbdxcred().find("NULL")==-1:
         print(str(chckbdxcred()));
         return str(chckbdxcred());
-    global domain;     
-    domainFavi=domain+"/favicon.png";
-    metrics=get_campaigns.googlemetrics;
-    print("test fired")
+    #global domain;     
+    #domainFavi=domain+"/favicon.png";
+    #metrics=get_campaigns.googlemetrics;
+    #print("test fired")
     return get_campaigns.googlemetrics;
     #return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi,metrics=metrics);
 
