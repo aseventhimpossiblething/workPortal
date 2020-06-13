@@ -195,7 +195,7 @@ def perAccntCombinedBasedMetrics(accnts):
     projectedImpressions=[project_Metric_For_Remaining_Month(partialImpressions[0])];    
     
     
-     metrics={"Accnt Name":["Google Ads All Accounts MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+    metrics={"Accnt Name":["Google Ads All Accounts MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
              ,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost\
              ,"projected cost EOM":projectedCost,"projected clicks EOM":projectedClicks,"projected conversions EOM":projectedConversions\
