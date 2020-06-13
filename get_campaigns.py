@@ -267,6 +267,16 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialBudget=[sum(partialBudget)];
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
+    
+    
+    projectedCost=[project_Metric_For_Remaining_Month(partialCost)];
+    projectedClicks=[project_Metric_For_Remaining_Month(partialClicks)];
+    projectedConversions=[project_Metric_For_Remaining_Month(partialConversions)];
+    projectedImpressions=[project_Metric_For_Remaining_Month(partialImpressions)];
+    
+
+    
+    
     """
     CPC="n/a";
     CPL="n/a";
@@ -290,16 +300,19 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        CPL="No Clicks";
     
     
-    """    
-    metrics={"":["Google Ads All Accounts MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
-       ,"impressions":partialImpressions,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
-    """
+   
+
+    metrics={"Accnt Name":["Google Ads All Accounts MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+             ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
+             ,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost\
+             ,"projected cost EOM":projectedCost,"projected clicks EOM":projectedClicks,"projected conversions EOM":projectedConversions\
+             ,"projected impressions EOM":projectedImpressions}
     
-           
+    """       
     metrics={"Accnt Name":["Google Ads All Accounts MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
              ,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
-    
+    """
     
     
     """
