@@ -246,7 +246,7 @@ def perAccntCombinedBasedMetrics(accnts):
     #addComa(10000555.256);
     #addComa(impression);
     number=1000000000
-    tryFormat=format(10000000000:",");
+    tryFormat=format(number,",");
     #tryFormat
     print(tryFormat);
     """
