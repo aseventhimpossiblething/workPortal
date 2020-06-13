@@ -214,8 +214,8 @@ def perAccntCombinedBasedMetrics(accnts):
     
     addComa(100.256);
     addComa(100555.256);
-    addComa(1000555.256);
-    addComa(10000555.256);
+    #addComa(1000555.256);
+    #addComa(10000555.256);
     #addComa(impression);
     """
         
