@@ -173,13 +173,8 @@ def perAccntCombinedBasedMetrics(accnts):
     partialBudget=[sum(partialBudget)];
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
-    """
-    print("partialCost[0] ",partialCost[0]);
-    print("type(partialCost[0]) ",type(partialCost[0]));
-    print("partialClicks[0] ",partialClicks[0]);
-    print("type(partialClicks[0]) ",type(partialClicks[0]));
-    #CTR=[partialClicks[0]/partialImpressions[0]];
-    """
+  
+
     if partialClicks[0]>0:
        CPC=[partialCost[0]/partialClicks[0]];
        ConvRate=[partialConversions[0]/partialClicks[0]];
@@ -194,9 +189,23 @@ def perAccntCombinedBasedMetrics(accnts):
        CTR="No Clicks";
        CPL="No Clicks";
         
+    projectedCost=[project_Metric_For_Remaining_Month(partialCost[0])];
+    projectedClicks=[project_Metric_For_Remaining_Month(partialClicks[0])];
+    projectedConversions=[project_Metric_For_Remaining_Month(partialConversions[0])];
+    projectedImpressions=[project_Metric_For_Remaining_Month(partialImpressions[0])];    
+    
+    
+     metrics={"Accnt Name":["Google Ads All Accounts MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
+             ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
+             ,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost\
+             ,"projected cost EOM":projectedCost,"projected clicks EOM":projectedClicks,"projected conversions EOM":projectedConversions\
+             ,"projected impressions EOM":projectedImpressions}
+    
+    """    
     metrics={"Accnt Name":["Google "+AccntName+" Account MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
              ,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost}
+    """         
     metrics=pandas.DataFrame(data=metrics)
     return metrics;
   
@@ -352,7 +361,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     print(metrics)
     metrics=metrics.to_html();
        
-    return frame;
+    return metrics;
 
 googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
 
