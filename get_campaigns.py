@@ -195,7 +195,7 @@ def perAccntCombinedBasedMetrics(accnts):
            #strx=strx[:deciLo];
         
            print("strx ",strx);
-           print("type(strx) ",type(strx));
+           #print("type(strx) ",type(strx));
            """
            cutSite=(len(strx))-3;
            print("cutSite ",cutSite);
