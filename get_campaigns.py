@@ -218,6 +218,8 @@ def perAccntCombinedBasedMetrics(accnts):
     projectedConversions=[format(projectedConversions[0],",")];
     projectedImpressions=[format(projectedImpressions[0],",")];
     
+    expCost=partialCost;
+    print("exCost ",exCost);
     
     metrics={"Accnt Name":["Google "+AccntName+" Account MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
