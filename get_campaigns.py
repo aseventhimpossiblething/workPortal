@@ -202,24 +202,34 @@ def perAccntCombinedBasedMetrics(accnts):
     budget=format(partialBbudget,",");
     """
     
+    partialCost=[format(round(partialCost[0],2),",")];
+    partialClicks=[format(round(partialClicks[0],","))];
+    partialConversions=[format(round(partialConversions[0],","))];
+    partialImpressions=[format(round(partialImpressions[0],","))];
+    partialBudget=[format(round(partialBudget[0],","))];
+    yesterdayCost=[format(round(yesterdayCost[0],","))];
+    budgetMinusCost=[format(round(budgetMinusCost[0],","))];
     
-    #partialCost=[format(partialCost[0],",")];
+    """
+    partialCost=[format(partialCost[0],",")];
     partialClicks=[format(partialClicks[0],",")];
     partialConversions=[format(partialConversions[0],",")];
     partialImpressions=[format(partialImpressions[0],",")];
     partialBudget=[format(partialBudget[0],",")];
     yesterdayCost=[format(yesterdayCost[0],",")];
     budgetMinusCost=[format(budgetMinusCost[0],",")];
+    """
     
     projectedCost=[format(projectedCost[0],",")];
     projectedClicks=[format(projectedClicks[0],",")];
     projectedConversions=[format(projectedConversions[0],",")];
     projectedImpressions=[format(projectedImpressions[0],",")];
-    
+    """
     exCost=float(partialCost[0]);
     print("exCost ",exCost);
     print("round(exCost,2) ",round(exCost,2));
     #round(5.2);
+    """
     
     metrics={"Accnt Name":["Google "+AccntName+" Account MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
