@@ -158,18 +158,13 @@ def perAccntCombinedBasedMetrics(accnts):
     impressions=sum(mtdGoogle.impressions);
     budget=sum(mtdGoogle.budget);
     
-    
-   
-    
-    
-        
     partialCost.append(cost);
     partialClicks.append(clicks);
     partialConversions.append(conversions);
     partialImpressions.append(impressions);
     partialBudget.append(budget);
     yesterdayCost.append(yesterdayGoogleCost);
-          
+     
     partialCost=[sum(partialCost)];
     partialClicks=[sum(partialClicks)];
     partialConversions=[sum(partialConversions)];
@@ -191,11 +186,12 @@ def perAccntCombinedBasedMetrics(accnts):
     else:
        CTR="No Clicks";
        CPL="No Clicks";
-        
+       
     projectedCost=[project_Metric_For_Remaining_Month(partialCost[0])];
     projectedClicks=[project_Metric_For_Remaining_Month(partialClicks[0])];
     projectedConversions=[project_Metric_For_Remaining_Month(partialConversions[0])];
     projectedImpressions=[project_Metric_For_Remaining_Month(partialImpressions[0])]; 
+    
     
     """
     yesterdayGoogleCost=format(yesterdayGoogleCost,",");    
@@ -206,13 +202,15 @@ def perAccntCombinedBasedMetrics(accnts):
     budget=format(partialBbudget,",");
     """
     
-    partialCost=[format(partialCost[0],",")];
+    
+    #partialCost=[format(partialCost[0],",")];
     partialClicks=[format(partialClicks[0],",")];
     partialConversions=[format(partialConversions[0],",")];
     partialImpressions=[format(partialImpressions[0],",")];
     partialBudget=[format(partialBudget[0],",")];
     yesterdayCost=[format(yesterdayCost[0],",")];
     budgetMinusCost=[format(budgetMinusCost[0],",")];
+    
     projectedCost=[format(projectedCost[0],",")];
     projectedClicks=[format(projectedClicks[0],",")];
     projectedConversions=[format(projectedConversions[0],",")];
