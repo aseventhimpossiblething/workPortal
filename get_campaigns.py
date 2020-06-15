@@ -216,7 +216,7 @@ def perAccntCombinedBasedMetrics(accnts):
     return metrics;
 
 
-print("perAccntCombinedBasedMetrics(210-489-7739) ",perAccntCombinedBasedMetrics("210-489-7739"))
+#print("perAccntCombinedBasedMetrics(210-489-7739) ",perAccntCombinedBasedMetrics("210-489-7739"))
   
 def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialCost=[];
@@ -234,29 +234,11 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     for accnts in googleArrayOfAccounts:
        try:
         mtdGoogle=perAccntCombinedBasedMetrics(accnts);
-        #print("Trying in All Accnts");
-        #print("mtdGoogle ",mtdGoogle);
-        #print("past mtGoogle but failing before if statement")
-        #print("mtdGoogle.columns ",mtdGoogle.columns)
-        #print("len(frame) ",len(frame));
         if len(frame)==0:
-            #ColNames.append(mtdGoogle.columns);
-            frame=mtdGoogle;
-            print("following if len(frame) path")
+           frame=mtdGoogle;
         else:
-            #print("following else len(frame) path ")  
-            #print("mtdGoogle ",mtdGoogle)
-            frame=frame.append(mtdGoogle);
-            #print("following else len(frame) path after append ")
-        #print("frame ",frame);
-        #print("almost made it through")
-            
-        #print("perAccntCombinedBasedMetrics(accnts) ",perAccntCombinedBasedMetrics(accnts));
-        #print("perAccntCombinedBasedMetrics(accnts)[0] ",perAccntCombinedBasedMetrics(accnts)[0]);
-        #rows.append(perAccntCombinedBasedMetrics(accnts)[0]);
-        #print("frame ",frame)
-        
-       
+           frame=frame.append(mtdGoogle);
+              
         mtdGoogle=fromGoogleAds(accnts,MTY());
         yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
         cost=sum(mtdGoogle.cost);
@@ -303,17 +285,17 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        CTR="No Clicks";
        CPL="No Clicks";
         
-    partialCost=round(partialCost[0],2);
-    partialClicks=round(partialClicks[0],2);
-    partialConversions=round(partialConversions[0],2);
-    partialImpressions=round(partialImpressions[0],2);
-    partialBudget=round(partialBudget[0],2);
-    yesterdayCost=round(yesterdayCost[0],2);
-    budgetMinusCost=round(budgetMinusCost[0],2);
-    projectedCost=round(projectedCost[0],2);
-    projectedClicks=round(projectedClicks[0],2);
-    projectedConversions=round(projectedConversions[0],2);
-    projectedImpressions=round(projectedImpressions[0],2);
+    partialCost=format(round(partialCost[0],2),",");
+    partialClicks=format(round(partialClicks[0],2),",");
+    partialConversions=format(round(partialConversions[0],2),",");
+    partialImpressions=format(round(partialImpressions[0],2),",");
+    partialBudget=format(round(partialBudget[0],2),",");
+    yesterdayCost=format(round(yesterdayCost[0],2),",");
+    budgetMinusCost=format(round(budgetMinusCost[0],2),",");
+    projectedCost=format(round(projectedCost[0],2),",");
+    projectedClicks=format(round(projectedClicks[0],2),",");
+    projectedConversions=format(round(projectedConversions[0],2),",");
+    projectedImpressions=format(round(projectedImpressions[0],2),",");
     
     metrics={"Accnt Name":["Google Ads All Accounts MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
