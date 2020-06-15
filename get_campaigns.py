@@ -218,7 +218,7 @@ def perAccntCombinedBasedMetrics(accnts):
     projectedConversions=[format(projectedConversions[0],",")];
     projectedImpressions=[format(projectedImpressions[0],",")];
     
-    exCost=partialCost[0];
+    exCost=float(partialCost[0]);
     print("exCost ",exCost);
     print("round(exCost,2) ",round(exCost,2));
     #round(5.2);
