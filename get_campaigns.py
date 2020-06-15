@@ -199,7 +199,7 @@ def perAccntCombinedBasedMetrics(accnts):
     budget=format(partialBbudget,",");
     """
     
-    print("format(round(partialCost[0]),",") ",format(round(partialCost[0],2),","));
+    #print("format(round(partialCost[0]),",") ",format(round(partialCost[0],2),","));
     
     
     partialCost=[format(round(partialCost[0],2),",")];
@@ -223,10 +223,10 @@ def perAccntCombinedBasedMetrics(accnts):
     budgetMinusCost=[format(budgetMinusCost[0],",")];
     """
     
-    projectedCost=[format(projectedCost[0],",")];
-    projectedClicks=[format(projectedClicks[0],",")];
-    projectedConversions=[format(projectedConversions[0],",")];
-    projectedImpressions=[format(projectedImpressions[0],",")];
+    projectedCost=[format(round(projectedCost[0],2),",")];
+    projectedClicks=[format(round(projectedClicks[0],2),",")];
+    projectedConversions=[format(round(projectedConversions[0],2),",")];
+    projectedImpressions=[format(round(projectedImpressions[0],2),",")];
     """
     exCost=float(partialCost[0]);
     print("exCost ",exCost);
@@ -322,24 +322,11 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialBudget=[sum(partialBudget)];
     yesterdayCost=[sum(yesterdayCost)];
     budgetMinusCost=[(partialBudget[0]-partialCost[0])];
-    
-    
     projectedCost=[project_Metric_For_Remaining_Month(partialCost[0])];
     projectedClicks=[project_Metric_For_Remaining_Month(partialClicks[0])];
     projectedConversions=[project_Metric_For_Remaining_Month(partialConversions[0])];
     projectedImpressions=[project_Metric_For_Remaining_Month(partialImpressions[0])];
-    
-
-    
-    
-    """
-    CPC="n/a";
-    CPL="n/a";
-    ConvRate="n/a";
-    CTR="n/a";
-    """
-    
-    
+       
     if partialClicks[0]>0:
        CPC=[partialCost[0]/partialClicks[0]];
        ConvRate=[partialConversions[0]/partialClicks[0]];
@@ -354,6 +341,20 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        CTR="No Clicks";
        CPL="No Clicks";
     
+    """
+    partialCost
+    partialClicks
+    partialConversions
+    partialImpressions
+    partialBudget
+    yesterdayCost
+    budgetMinusCost
+    projectedCost
+    projectedClicks
+    projectedConversions
+    projectedImpressions
+    """
+   
     
    
 
