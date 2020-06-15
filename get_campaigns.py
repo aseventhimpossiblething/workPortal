@@ -188,20 +188,7 @@ def perAccntCombinedBasedMetrics(accnts):
     projectedClicks=[project_Metric_For_Remaining_Month(partialClicks[0])];
     projectedConversions=[project_Metric_For_Remaining_Month(partialConversions[0])];
     projectedImpressions=[project_Metric_For_Remaining_Month(partialImpressions[0])]; 
-    
-    
-    """
-    yesterdayGoogleCost=format(yesterdayGoogleCost,",");    
-    cost=format(partialCost,",");
-    clicks=format(partialClicks,",");
-    conversions=format(partialConversions,",");
-    impressions=format(partialImpressions,",");
-    budget=format(partialBbudget,",");
-    """
-    
-    #print("format(round(partialCost[0]),",") ",format(round(partialCost[0],2),","));
-    
-    
+            
     partialCost=[format(round(partialCost[0],2),",")];
     partialClicks=[format(round(partialClicks[0]),",")];
     partialConversions=[format(round(partialConversions[0]),",")];
@@ -209,31 +196,11 @@ def perAccntCombinedBasedMetrics(accnts):
     partialBudget=[format(round(partialBudget[0]),",")];
     yesterdayCost=[format(round(yesterdayCost[0]),",")];
     budgetMinusCost=[format(round(budgetMinusCost[0]),",")];
-    
-    
-    #print("partialClicks ",round(partialClicks[0],2));
-    
-    """
-    partialCost=[format(partialCost[0],",")];
-    partialClicks=[format(partialClicks[0],",")];
-    partialConversions=[format(partialConversions[0],",")];
-    partialImpressions=[format(partialImpressions[0],",")];
-    partialBudget=[format(partialBudget[0],",")];
-    yesterdayCost=[format(yesterdayCost[0],",")];
-    budgetMinusCost=[format(budgetMinusCost[0],",")];
-    """
-    
     projectedCost=[format(round(projectedCost[0],2),",")];
     projectedClicks=[format(round(projectedClicks[0],2),",")];
     projectedConversions=[format(round(projectedConversions[0],2),",")];
     projectedImpressions=[format(round(projectedImpressions[0],2),",")];
-    """
-    exCost=float(partialCost[0]);
-    print("exCost ",exCost);
-    print("round(exCost,2) ",round(exCost,2));
-    #round(5.2);
-    """
-    
+     
     metrics={"Accnt Name":["Google "+AccntName+" Account MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
              ,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost\
@@ -265,11 +232,6 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     len(googleArrayOfAccounts);
     count=0;
     for accnts in googleArrayOfAccounts:
-       
-       #mtdGoogle=perAccntCombinedBasedMetrics(accnts); 
-       #print("mtdGoogle ",mtdGoogle);
-       #print('type(frame) ',type(frame));
-       
        try:
         mtdGoogle=perAccntCombinedBasedMetrics(accnts);
         #print("Trying in All Accnts");
@@ -340,8 +302,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     else:
        CTR="No Clicks";
        CPL="No Clicks";
-    
-    
+        
     partialCost=round(partialCost[0],2);
     partialClicks=round(partialClicks[0],2);
     partialConversions=round(partialConversions[0],2);
@@ -354,10 +315,6 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     projectedConversions=round(projectedConversions[0],2);
     projectedImpressions=round(projectedImpressions[0],2);
     
-   
-    
-   
-
     metrics={"Accnt Name":["Google Ads All Accounts MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
              ,"yesterday spend":yesterdayCost,"budget":partialBudget,"remaining budget":budgetMinusCost\
