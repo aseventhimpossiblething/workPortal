@@ -202,7 +202,10 @@ def perAccntCombinedBasedMetrics(accnts):
     budget=format(partialBbudget,",");
     """
     
-    #partialCost=[format(round(partialCost[0],2),",")];
+    print("partialCost[0] ",partialCost)
+    
+    
+    partialCost=[format(round(partialCost[0],2),",")];
     partialClicks=[format(round(partialClicks[0]),",")];
     partialConversions=[format(round(partialConversions[0]),",")];
     partialImpressions=[format(round(partialImpressions[0]),",")];
@@ -210,7 +213,8 @@ def perAccntCombinedBasedMetrics(accnts):
     yesterdayCost=[format(round(yesterdayCost[0]),",")];
     budgetMinusCost=[format(round(budgetMinusCost[0]),",")];
     
-    print("partialClicks ",round(partialClicks[0],2));
+    
+    #print("partialClicks ",round(partialClicks[0],2));
     
     """
     partialCost=[format(partialCost[0],",")];
