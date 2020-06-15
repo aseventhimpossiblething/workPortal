@@ -210,6 +210,8 @@ def perAccntCombinedBasedMetrics(accnts):
     yesterdayCost=[format(round(yesterdayCost[0]),",")];
     budgetMinusCost=[format(round(budgetMinusCost[0]),",")];
     
+    print("partialCost ",partialCost);
+    
     """
     partialCost=[format(partialCost[0],",")];
     partialClicks=[format(partialClicks[0],",")];
