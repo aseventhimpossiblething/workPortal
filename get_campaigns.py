@@ -146,11 +146,8 @@ def perAccntCombinedBasedMetrics(accnts):
     partialImpressions=[];
     partialBudget=[];
     yesterdayCost=[];
-    
-    
-           
+               
     mtdGoogle=fromGoogleAds(accnts,MTY());
-    
     yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
     cost=sum(mtdGoogle.cost);
     clicks=sum(mtdGoogle.clicks);
