@@ -280,7 +280,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
             
     if partialConversions[0]>0:
        CTR=[round(partialClicks[0]/partialImpressions[0],2)];
-       CPL=[round(partialCost[0]/partialConversions[0]]; CPL=[partialCost[0]/partialConversions[0],2)];
+       CPL=[round(partialCost[0]/partialConversions[0],2)];
     else:
        CTR="No Clicks";
        CPL="No Clicks";
