@@ -346,7 +346,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialClicks=format(partialClicks[0],",");
     partialConversions=format(partialConversions[0],",");
     partialImpressions=format(partialImpressions[0],",");
-    partialBudget=format(partialBudgets[0],",");
+    partialBudget=format(partialBudget[0],",");
     yesterdayCost=format(yesterdayCost[0],",");
     budgetMinusCost=format(budgetMinusCost[0],",");
     projectedCost=format(projectedCost[0],",");
