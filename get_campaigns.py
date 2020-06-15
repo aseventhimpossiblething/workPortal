@@ -285,17 +285,17 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        CTR="No Clicks";
        CPL="No Clicks";
         
-    partialCost=format(round(partialCost[0],2),",");
-    partialClicks=format(round(partialClicks[0],2),",");
-    partialConversions=format(round(partialConversions[0],2),",");
-    partialImpressions=format(round(partialImpressions[0],2),",");
-    partialBudget=format(round(partialBudget[0],2),",");
-    yesterdayCost=format(round(yesterdayCost[0],2),",");
-    budgetMinusCost=format(round(budgetMinusCost[0],2),",");
-    projectedCost=format(round(projectedCost[0],2),",");
-    projectedClicks=format(round(projectedClicks[0],2),",");
-    projectedConversions=format(round(projectedConversions[0],2),",");
-    projectedImpressions=format(round(projectedImpressions[0],2),",");
+    partialCost=" "+format(round(partialCost[0],2),",");
+    partialClicks=" "+format(round(partialClicks[0],2),",");
+    partialConversions=" "+format(round(partialConversions[0],2),",");
+    partialImpressions=" "+format(round(partialImpressions[0],2),",");
+    partialBudget=" "+format(round(partialBudget[0],2),",");
+    yesterdayCost=" "+format(round(yesterdayCost[0],2),",");
+    budgetMinusCost=" "+format(round(budgetMinusCost[0],2),",");
+    projectedCost=" "+format(round(projectedCost[0],2),",");
+    projectedClicks=" "+format(round(projectedClicks[0],2),",");
+    projectedConversions=" "+format(round(projectedConversions[0],2),",");
+    projectedImpressions=" "+format(round(projectedImpressions[0],2),",");
     
     metrics={"Accnt Name":["Google Ads All Accounts MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
