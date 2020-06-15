@@ -172,7 +172,7 @@ def perAccntCombinedBasedMetrics(accnts):
     
     if partialClicks[0]>0:
        CPC=[round(partialCost[0]/partialClicks[0],2)];
-       ConvRate=[round(partialConversions[0]/partialClicks[0],2];
+       ConvRate=[round(partialConversions[0]/partialClicks[0],2)];
     else:
        CPC="No Clicks";
        ConvRate="No Clicks";
