@@ -342,17 +342,17 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        CPL="No Clicks";
     
     
-    partialCost=format(partialCost,2);
-    partialClicks=format(partialClicks,2);
-    partialConversions=format(partialConversions,2);
-    partialImpressions=format(partialImpressions,2);
-    partialBudget=format(partialBudgets,2);
-    yesterdayCost=format(yesterdayCost,2);
-    budgetMinusCost=format(budgetMinusCost,2);
-    projectedCost=format(projectedCost,2);
-    projectedClicks=format(projectedClicks,2);
-    projectedConversions=format(projectedConversions,2);
-    projectedImpressions=format(projectedImpressions,2);
+    partialCost=format(partialCost[0],2);
+    partialClicks=format(partialClicks[0],2);
+    partialConversions=format(partialConversions[0],2);
+    partialImpressions=format(partialImpressions[0],2);
+    partialBudget=format(partialBudgets[0],2);
+    yesterdayCost=format(yesterdayCost[0],2);
+    budgetMinusCost=format(budgetMinusCost[0],2);
+    projectedCost=format(projectedCost[0],2);
+    projectedClicks=format(projectedClicks[0],2);
+    projectedConversions=format(projectedConversions[0],2);
+    projectedImpressions=format(projectedImpressions[0],2);
     
    
     
