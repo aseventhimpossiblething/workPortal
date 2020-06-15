@@ -285,8 +285,8 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
        CTR="No Clicks";
        CPL="No Clicks";
         
-    partialCost=": "+format(round(partialCost[0],2),",");
-    partialClicks=": "+format(round(partialClicks[0],2),",");
+    partialCost=" "+format(round(partialCost[0],2),",");
+    partialClicks=" "+format(round(partialClicks[0],2),",");
     partialConversions=" "+format(round(partialConversions[0],2),",");
     partialImpressions=" "+format(round(partialImpressions[0],2),",");
     partialBudget=" "+format(round(partialBudget[0],2),",");
