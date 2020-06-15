@@ -220,6 +220,7 @@ def perAccntCombinedBasedMetrics(accnts):
     
     expCost=partialCost;
     print("exCost ",exCost);
+    print("round(exCost,2) ",round(exCost,2));
     
     metrics={"Accnt Name":["Google "+AccntName+" Account MTY"],"cost":partialCost,"clicks":partialClicks,"conversions":partialConversions\
              ,"impressions":partialImpressions,"CPC":CPC,"CPL":CPL,"Conv. rate":ConvRate,"CTR":CTR\
