@@ -203,12 +203,12 @@ def perAccntCombinedBasedMetrics(accnts):
     """
     
     partialCost=[format(round(partialCost[0],2),",")];
-    partialClicks=[format(round(partialClicks[0],","))];
-    partialConversions=[format(round(partialConversions[0],","))];
-    partialImpressions=[format(round(partialImpressions[0],","))];
-    partialBudget=[format(round(partialBudget[0],","))];
-    yesterdayCost=[format(round(yesterdayCost[0],","))];
-    budgetMinusCost=[format(round(budgetMinusCost[0],","))];
+    partialClicks=[format(round(partialClicks[0]),",")];
+    partialConversions=[format(round(partialConversions[0]),",")];
+    partialImpressions=[format(round(partialImpressions[0]),",")];
+    partialBudget=[format(round(partialBudget[0]),",")];
+    yesterdayCost=[format(round(yesterdayCost[0]),",")];
+    budgetMinusCost=[format(round(budgetMinusCost[0]),",")];
     
     """
     partialCost=[format(partialCost[0],",")];
