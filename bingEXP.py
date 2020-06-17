@@ -4,4 +4,4 @@ campaign_service = ServiceClient(
     authorization_data=authorization_data, 
     environment = ENVIRONMENT,
 )
-print campaign_service.soap_client
+print(campaign_service.soap_client)
