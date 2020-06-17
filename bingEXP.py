@@ -1,5 +1,5 @@
 from app.models import BingAdsUser
-#from bingads import *
+from bingads import *
 
 
 campaign_service = ServiceClient(
