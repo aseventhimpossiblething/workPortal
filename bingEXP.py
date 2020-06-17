@@ -1,3 +1,7 @@
+from app.models import BingAdsUser
+#from bingads import *
+
+
 campaign_service = ServiceClient(
     service='CampaignManagementService', 
     version = 13,
