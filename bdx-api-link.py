@@ -4,6 +4,8 @@ import CommunityUpdatesProcess
 usr="BDXPPC"
 pwd="#!!9ooRanch"
 
+import bingEXP
+
 
 """
 from google.oauth2.service_account import Credentials as ServiceAccountCreds
