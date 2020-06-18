@@ -1,6 +1,6 @@
 from app.models import BingAdsUser
 from bingads import *
-import bingEXP
+#import bingEXP
 
 print("Bing  Loading")
 
