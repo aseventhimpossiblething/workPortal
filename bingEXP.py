@@ -2,6 +2,8 @@ from app.models import BingAdsUser
 from bingads import *
 import bingEXP
 
+print("Bing  Loading")
+
 campaign_service = ServiceClient(
     service='CampaignManagementService', 
     version = 13,
