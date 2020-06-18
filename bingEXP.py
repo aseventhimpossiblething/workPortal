@@ -1,4 +1,4 @@
-from app.models import BingAdsUser
+#from app.models import BingAdsUser
 from bingads import *
 #import bingEXP
 
