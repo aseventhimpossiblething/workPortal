@@ -244,7 +244,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
         else:
            print("type(mtdGoogle) ",type(mtdGoogle)); 
            print("mtdGoogle ",mtdGoogle);
-           print("mtdGoogle[cost] ",mtdGoogle[cost]);
+           print("mtdGoogle[[cost]] ",mtdGoogle[[cost]]);
            print("mtdGoogle.cost ",mtdGoogle.cost); 
            frame=frame.append(mtdGoogle);
               
