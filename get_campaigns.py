@@ -246,8 +246,8 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
         if len(frame)==0:
            frame=mtdGoogle;
         else:
-           mtdGoogle["impressions"][0].replace(",","");            
-           frame=frame.append(mtdGoogle);
+           if float(mtdGoogle["impressions"][0].replace(",",""))!=0:          
+              frame=frame.append(mtdGoogle);
               
         mtdGoogle=fromGoogleAds(accnts,MTY());
         yesterdayGoogleCost=sum(fromGoogleAds(accnts,"DURING YESTERDAY").cost);
