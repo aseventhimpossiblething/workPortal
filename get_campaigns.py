@@ -234,8 +234,8 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     mtdGoogle=perAccntCombinedBasedMetrics(googleArrayOfAccounts[0]);
     #print("type(mtdGoogle) ",type(mtdGoogle)); 
     #print("mtdGoogle ",mtdGoogle);
-    print("mtdGoogle[impressions][0] ",mtdGoogle["impressions"][0]);
-    print("type(mtdGoogle[impressions][0]) ",type(mtdGoogle["impressions"][0]))
+    print("float(mtdGoogle[impressions][0]) ",float(mtdGoogle["impressions"][0]));
+    print("type(float(mtdGoogle[impressions][0])) ",type(float(mtdGoogle["impressions"][0])));
     #print("mtdGoogle.cost ",mtdGoogle.cost); 
     for accnts in googleArrayOfAccounts:
        try:
@@ -243,7 +243,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
         if len(frame)==0:
            frame=mtdGoogle;
         else:
-           mtdGoogle["impressions"][0];            
+           float(mtdGoogle["impressions"][0]);            
            frame=frame.append(mtdGoogle);
               
         mtdGoogle=fromGoogleAds(accnts,MTY());
