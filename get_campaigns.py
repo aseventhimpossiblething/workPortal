@@ -235,7 +235,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     #print("type(mtdGoogle) ",type(mtdGoogle)); 
     #print("mtdGoogle ",mtdGoogle);
     print("mtdGoogle[impressions][0] ",mtdGoogle["impressions"][0]);
-    print("type(mtdGoogle[impressions]) ",type(mtdGoogle["impressions"]))
+    print("type(mtdGoogle[impressions][0]) ",type(mtdGoogle["impressions"][0]))
     #print("mtdGoogle.cost ",mtdGoogle.cost); 
     for accnts in googleArrayOfAccounts:
        try:
