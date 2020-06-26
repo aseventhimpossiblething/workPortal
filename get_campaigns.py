@@ -236,7 +236,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     #print("mtdGoogle ",mtdGoogle);
     print("mtdGoogle[impressions][0] ",mtdGoogle["impressions"][0]);
     print("type(mtdGoogle[impressions][0]) ",type(mtdGoogle["impressions"][0]));
-    expMTDforReplace=mtdGoogle["impressions"][0].replace(",","");
+    expMTDforReplace=float(mtdGoogle["impressions"][0].replace(",",""));
     print("expMTDforReplace ",expMTDforReplace);
     print("type(expMTDforReplace) ",type(expMTDforReplace));
     #print("mtdGoogle.cost ",mtdGoogle.cost); 
