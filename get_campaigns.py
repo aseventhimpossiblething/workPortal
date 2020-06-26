@@ -231,7 +231,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
               
     len(googleArrayOfAccounts);
     count=0;
-    mtdGoogle=perAccntCombinedBasedMetrics(0);
+    mtdGoogle=perAccntCombinedBasedMetrics("cityAccount");
     print("type(mtdGoogle) ",type(mtdGoogle)); 
     print("mtdGoogle ",mtdGoogle);
     print("mtdGoogle[cost] ",mtdGoogle[cost]);
