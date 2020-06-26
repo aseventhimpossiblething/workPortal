@@ -237,6 +237,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
         if len(frame)==0:
            frame=mtdGoogle;
         else:
+           print("mtGoogle ",mtGoogle) 
            frame=frame.append(mtdGoogle);
               
         mtdGoogle=fromGoogleAds(accnts,MTY());
