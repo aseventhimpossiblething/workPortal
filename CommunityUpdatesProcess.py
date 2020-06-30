@@ -154,7 +154,7 @@ def filterNonParticipators(theFrame):
    Community=str(theFrame["Community Name"][icount]).replace("40s","").replace("40'","").replace("45s","")\
    .replace("45'","").replace("50s","").replace("50'","").replace("55s","").replace("55'","").replace("60s","").replace("60'","").replace("65s","")\
    .replace("65'","").replace("70s","").replace("70'","").replace("75s","").replace("75'","").replace("80s","").replace("80'","").replace("85s","")\
-   .replace("85'","").replace("90s","").replace("90'","").replace("95s","").replace("95'","").replace("100s","").replace("100'","").replace("105s","")\
+   .replace("85'","").replace("90s","").replace("90'","").replace("95s","").replace("95'","").replace("100s","").replace("100'","").replace("105s","")
    .replace("105'","").replace("110s","").replace("110'","")
   
    """
