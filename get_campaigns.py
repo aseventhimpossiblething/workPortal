@@ -234,11 +234,11 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     mtdGoogle=perAccntCombinedBasedMetrics(googleArrayOfAccounts[0]);
     #print("type(mtdGoogle) ",type(mtdGoogle)); 
     #print("mtdGoogle ",mtdGoogle);
-    print("mtdGoogle[impressions][0] ",mtdGoogle["impressions"][0]);
-    print("type(mtdGoogle[impressions][0]) ",type(mtdGoogle["impressions"][0]));
-    expMTDforReplace=float(mtdGoogle["impressions"][0].replace(",",""));
-    print("expMTDforReplace ",expMTDforReplace);
-    print("type(expMTDforReplace) ",type(expMTDforReplace));
+    #print("mtdGoogle[impressions][0] ",mtdGoogle["impressions"][0]);
+    #print("type(mtdGoogle[impressions][0]) ",type(mtdGoogle["impressions"][0]));
+    #expMTDforReplace=float(mtdGoogle["impressions"][0].replace(",",""));
+    #print("expMTDforReplace ",expMTDforReplace);
+    #print("type(expMTDforReplace) ",type(expMTDforReplace));
     #print("mtdGoogle.cost ",mtdGoogle.cost); 
     for accnts in googleArrayOfAccounts:
        try:
@@ -354,6 +354,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     metrics=metrics.to_html();
        
     return metrics;
+
 
 googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
     
