@@ -357,10 +357,10 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
 
 
 googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
-"""
-def googlemetrics():
+
+def googlemetric():
     return allAccntCombinedBasedMetrics(googleArrayOfAccounts);
-"""    
+   
     
 
 
