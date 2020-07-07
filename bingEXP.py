@@ -422,8 +422,8 @@ if __name__ == '__main__':
 #038d48da-9b0f-4521-8c07-b6aee27aa69e
 
 authorization_data=AuthorizationData(
-        account_id=None,
-        customer_id=None,
+        #account_id=None,
+        #customer_id=None,
         account_id="038d48da-9b0f-4521-8c07-b6aee27aa69e",
         customer_id="038d48da-9b0f-4521-8c07-b6aee27aa69e",
     
