@@ -1,3 +1,9 @@
+Authentication=0;
+bingCustID=0;
+bingCustAccntId=0;
+bingDevtoken="11094FN06U360636"
+import msal
+
 #from app.models import BingAdsUser
 from bingads import *
 #import bingEXP
@@ -25,6 +31,8 @@ CLIENT_ID = 'TODO'
 DEVELOPER_TOKEN='TODO'
 ENVIRONMENT='production'
 REFRESH_TOKEN="refresh.txt"
+
+DEVELOPER_TOKEN="11094FN06U360636"
 
 # Optional
 CLIENT_STATE='ClientStateGoesHere'
@@ -407,3 +415,25 @@ if __name__ == '__main__':
     authenticate(authorization_data)
 
     main(authorization_data)
+    
+    
+#---------------------------------------------------------------------------------
+print("Loading the web service client proxies...")
+
+authorization_data=AuthorizationData(
+        account_id=None,
+        customer_id=None,
+        developer_token=DEVELOPER_TOKEN,
+        authentication=None,
+    )
+
+customer_service=ServiceClient(
+        service='CustomerManagementService', 
+        version=13,
+        authorization_data=authorization_data, 
+        environment=ENVIRONMENT,
+    )
+
+authenticate(authorization_data)
+
+main(authorization_data)    
