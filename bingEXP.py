@@ -419,7 +419,7 @@ if __name__ == '__main__':
     
 #---------------------------------------------------------------------------------
 
-"""
+
 authorization_data=AuthorizationData(
         account_id=None,
         customer_id=None,
@@ -439,4 +439,4 @@ authenticate(authorization_data)
 
 
 main(authorization_data)    
-"""
+
