@@ -418,22 +418,6 @@ if __name__ == '__main__':
     
     
 #---------------------------------------------------------------------------------
-print("Loading the web service client proxies...")
 
-authorization_data=AuthorizationData(
-        account_id=None,
-        customer_id=None,
-        developer_token=DEVELOPER_TOKEN,
-        authentication=None,
-    )
-
-customer_service=ServiceClient(
-        service='CustomerManagementService', 
-        version=13,
-        authorization_data=authorization_data, 
-        environment=ENVIRONMENT,
-    )
-
-authenticate(authorization_data)
 
 main(authorization_data)    
