@@ -77,8 +77,12 @@ def BidOpFileHandler():
     #record_async_start=open("ForestLoadingQueue.txt","r")
     #record_async_start.close()
   
-    
     target_Variable='New Bid' 
+        
+    
+    print("target_Variable Defined")    
+    print("target_Variable")  
+    print(target_Variable) 
         
     #designated_Columns=['Campaign','Ad group','Match type',target_Variable,'Bid','Avg. CPC','CPA']         
     #core_cols=['Campaign','Ad group',target_Variable,'Match Number','Bid','Avg. CPC','CPA']     
