@@ -77,7 +77,7 @@ def BidOpFileHandler():
     #record_async_start=open("ForestLoadingQueue.txt","r")
     #record_async_start.close()
   
-    target_Variable='New Bid' 
+    target_Variable='Changes' 
         
     
     print("target_Variable Defined")    
