@@ -105,7 +105,7 @@ def BidOpFileHandler():
     #Temp=pandas.DataFrame(Temp,columns=designated_Columns);
     #print("Temp['Match type']",Temp['Match type'])
     
-     
+    print("str(Temp.columns).find(New Bid)",str(Temp.columns).find('New Bid')) 
     isTrainingSheet=str(Temp.columns).find('New Bid'); 
     if isTrainingSheet!=-1:
       
