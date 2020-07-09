@@ -76,13 +76,16 @@ def BidOpFileHandler():
     record_async_start.close()
     #record_async_start=open("ForestLoadingQueue.txt","r")
     #record_async_start.close()
+    #rowcheck(,) 
   
-    target_Variable='Changes' 
+    target_Variable='New Bid' 
+    #rowcheck(,target_Variable)    
         
-    
+    """
     print("target_Variable Defined")    
     print("target_Variable")  
     print(target_Variable) 
+    """
         
     #designated_Columns=['Campaign','Ad group','Match type',target_Variable,'Bid','Avg. CPC','CPA']         
     #core_cols=['Campaign','Ad group',target_Variable,'Match Number','Bid','Avg. CPC','CPA']     
@@ -107,8 +110,8 @@ def BidOpFileHandler():
     
     #print("str(Temp.columns).find(New Bid)",str(Temp.columns).find('New Bid')) 
     isTrainingSheet=str(Temp.columns).find(target_Variable); 
-    if isTrainingSheet=="Xongo":    
-    #if isTrainingSheet!=-1:
+    #if isTrainingSheet=="Xongo":    
+    if isTrainingSheet!=-1:
       
        def TrainingSheetBehavior(x,x2,Temp):
            print('async started')
