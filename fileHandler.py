@@ -109,7 +109,7 @@ def BidOpFileHandler():
     #print("Temp['Match type']",Temp['Match type'])
     
     #print("str(Temp.columns).find(New Bid)",str(Temp.columns).find('New Bid')) 
-    isTrainingSheet=str(Temp.columns).find(target_Variable); 
+    isTrainingSheet=str(Temp.columns).find('Change'); 
     #if isTrainingSheet=="Xongo":    
     if isTrainingSheet!=-1:
       
