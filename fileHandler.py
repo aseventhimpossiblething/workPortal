@@ -105,9 +105,10 @@ def BidOpFileHandler():
     #Temp=pandas.DataFrame(Temp,columns=designated_Columns);
     #print("Temp['Match type']",Temp['Match type'])
     
-    print("str(Temp.columns).find(New Bid)",str(Temp.columns).find('New Bid')) 
+    #print("str(Temp.columns).find(New Bid)",str(Temp.columns).find('New Bid')) 
     isTrainingSheet=str(Temp.columns).find(target_Variable); 
-    if isTrainingSheet!=-1:
+    if isTrainingSheet=="Xongo":    
+    #if isTrainingSheet!=-1:
       
        def TrainingSheetBehavior(x,x2,Temp):
            print('async started')
