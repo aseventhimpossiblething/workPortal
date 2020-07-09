@@ -48,9 +48,10 @@ def googConverter(X):
     Temp=X;
     cols=Temp.columns
     #print("initial cols ",cols)
+    #"Impr. (Top) %"    
     New_cols=[];
     for col in cols:
-        col=str(col).replace('Cost / conv.','CPA').replace("'","").replace('Max. CPC','Bid').replace('Cost','Spend')\
+        col=str(col).replace("Impr. (Abs. Top) %","Absolute Top Impression Share").replace("Impr. (Top) %","Top Impr. share").replace("New CPC","New Bid").replace("Cost / conv.","CPA").replace("'","").replace('Max. CPC','Bid').replace('Cost','Spend')\
         .replace('Conversions','Conv.').replace('Search top IS','Top Impr. share').replace('Search abs. top IS','Absolute Top Impression Share')\
         .replace('Search impr. share','Impr. share (IS)').replace('Quality Score','Qual. score').replace('Search lost IS (rank)','IS lost to rank')\
         .replace(']','').replace('[','')             
