@@ -138,7 +138,7 @@ def impressionPercentChangeColumn(frame):
 
 
 def BidOpOverview(desiCols,corecols,change,Temp):
-    #print("in BidOpOverview ");
+    print("in BidOpOverview ");
     Temp=Temp;
     #print("")
     #print("Temp['Match type'] ",Temp['Match type']);
@@ -251,73 +251,6 @@ def BidOpOverview(desiCols,corecols,change,Temp):
 
 
 
-
-"""            
-Sheet_To_Be_analysed="None"
-Dimension_Predicted='Changes'
-ExampleSheetName='Machine.xlsx'
-
-    record_async_start.close();         
-    return Temp  
-            
-Sheet_To_Be_analysed="None"
-Dimension_Predicted='Changes'
-ExampleSheetName='Machine.xlsx'
-
-
-
-ModelCol1=['Campaign','Ad group','Keyword','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','CTR','Changes']
-ModelCol2=['Cost / conv.','Impr. (Top) %','Impr. (Abs. Top) %','Search impr. share','Search lost IS (rank)','Quality Score','Match type']
-ModelCol3=['Campaign','Ad group','Keyword','Max. CPC','Avg. CPC','Cost','Clicks','Conversions','CTR']
-ModelColumns=ModelCol1+ModelCol2
-ModelColumns_for_Analysed_Sheet=ModelCol2+ModelCol3
-ColumnsToClear_for_Analysis=[Dimension_Predicted,'Campaign','Ad group','Keyword','Match type']
-ColumnsToClear_for_Analysis2=['Campaign','Ad group','Keyword','Match type']
-
-Pattern_inputModel="Empty"
-Pattern_New_CPC="Empty"
-X_Sheet_Analysis="Empty"
-
-
-
-def PrepModel():      
-    PatternSheet=open(ExampleSheetName, 'rb')
-    Pattern_no_Frame=pandas.read_excel(PatternSheet)
-    PatternSheetFramed=pandas.DataFrame(Pattern_no_Frame, columns=ModelColumns).fillna(0)
-    global Pattern_New_CPC
-    Pattern_New_CPC=PatternSheetFramed[Dimension_Predicted]
-    global Pattern_inputModel
-    Pattern_inputModel=PatternSheetFramed.drop(ColumnsToClear_for_Analysis, axis=1)
-    
-    
-def Analysis():
-    print("*******from inside analysis max ctime file***",max(glob.glob('*xlsx'),key=os.path.getctime))
-    global MostRecentFile
-    MostRecentFile=newFileSyntax2
-
-      
-    global Sheet_To_Be_analysed
-    Sheet_To_Be_analysed=open(newFileSyntax2,'rb')
-    print("type Sheet_To_Be_analysed",type(Sheet_To_Be_analysed))
-    print("Sheet_To_Be_analysed",Sheet_To_Be_analysed)
-    print("pandas.read_excel(newFileSyntax2)",pandas.read_excel(newFileSyntax2))
-    
-
-    
- 
-def Predict():
-    taughtModel=RandomForestRegressor(n_estimators=25).fit(Pattern_inputModel,Pattern_New_CPC)
-    outputArr=taughtModel.predict(X_Sheet_Analysis)
-    #print(list(outputArr))
-    return list(outputArr)
-
-def BidOpAssist():
-    PrepModel()
-    Analysis()
-    return list(numpy.array(Predict()))
-
-
-"""
 
 
 
