@@ -140,17 +140,13 @@ def impressionPercentChangeColumn(frame):
 def BidOpOverview(desiCols,corecols,change,Temp):
     print("in BidOpOverview ");
     Temp=Temp;
-    #print("")
-    #print("Temp['Match type'] ",Temp['Match type']);
-    
+        
     PredVar=change    
     designated_Columns=desiCols;
     core_cols=corecols;
     loc=corecols.count(PredVar)
        
     if loc<1:
-       #print(PreVar," not present")     
-       #print("x.count(",PredVar, "- 2) ",loc )     
        loc=corecols.index(PredVar)
     
     loc=corecols.index(PredVar)        
@@ -163,7 +159,8 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/');
     Seed=pandas.read_excel('BidOpSeed.xlsx');
     Seed=pandas.DataFrame(Seed,columns=core_cols);
-    Seed=Seed.replace('>','').replace('<','').replace('%','').replace("-",0).fillna(0).replace("--",0).fillna(0).replace(" --",0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
+    Seed=Seed.replace('>','').replace('<','').replace('%','').replace("-",0).fillna(0).replace("--",0)\
+    .fillna(0).replace(" --",0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
     XofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
     YofSeed=Seed[PredVar];
     
@@ -180,7 +177,8 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     ImpressionModel=RandomForestRegressor();
     ImpressionModel.fit(ImpressionMetricXofSeed,ImpressionMetricYofSeed);
     
-    Temp=Temp.replace('>','').replace('<','').replace('%','').replace('-',0).fillna(0).replace('--',0).fillna(0).replace(' --',0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
+    Temp=Temp.replace('>','').replace('<','').replace('%','').replace('-',0).fillna(0).replace('--',0).fillna(0)\
+    .replace(' --',0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
      
         
     Temp['Match Number']=Match_num(Temp);
