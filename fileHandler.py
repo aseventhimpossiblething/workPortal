@@ -106,7 +106,7 @@ def BidOpFileHandler():
     #print("Temp['Match type']",Temp['Match type'])
     
     print("str(Temp.columns).find(New Bid)",str(Temp.columns).find('New Bid')) 
-    isTrainingSheet=str(Temp.columns).find('New Bid'); 
+    isTrainingSheet=str(Temp.columns).find(target_Variable); 
     if isTrainingSheet!=-1:
       
        def TrainingSheetBehavior(x,x2,Temp):
