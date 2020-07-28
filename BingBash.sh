@@ -2,5 +2,5 @@
 pwd
 cd /var/www/workPortal
 pwd
-gunicorn -c var/www/workPortal/appconfig.py bdx-api-link:app
-tail -F /var/www/workPortal/Sheets/error.log
+gunicorn -c appconfig.py bdx-api-link:app
+tail -F Sheets/error.log
