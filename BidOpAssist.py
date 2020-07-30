@@ -112,7 +112,8 @@ def percentChangeColumn(frame,colName):
     frame=frame;
     #print('frame',frame);
     OldBid=frame['Bid'];
-    NewBid=frame['New Bid'];
+    #NewBid=frame['New Bid'];
+    NewBid=frame[colName];
     count=0;
     for i in OldBid:
         percentChangeCol.append(percentIncrease(OldBid[count],NewBid[count]));
@@ -204,17 +205,14 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     #print(TempForOutPut[[TempForOutPut.columns.values[0],TempForOutPut.columns.values[1],\
                          #TempForOutPut.columns.values[2],TempForOutPut.columns.values[3]]])
     
-    #print("4")
-    #print(Temp)
+    
     
     OutputBid=Model.predict(TempForOutPut); 
     ImpressionOutputBid=ImpressionModel.predict(TempForOutPutImpression)
    
     Temp[PredVar]=OutputBid;
     Temp['Impression Metrics Based Bid']=ImpressionOutputBid
-    #print("-------***************prep for change seq*****************-----------------")
-    #print(change);
-    #if change=='Change':
+   
     Temp['Change']=percentChangeColumn(Temp,'New Bid');
     Temp['Impression Metrics Based Change']=percentChangeColumn(Temp,'Impression Metrics Based Bid')
     
@@ -223,28 +221,21 @@ def BidOpOverview(desiCols,corecols,change,Temp):
     
      
 
-    print(" after predict_____________________________________")
-    #print(Temp[['Keyword']])
-    #print(Temp)
+   
     print("-------------------WAITING TO WRITE TO EXCEL------------------------")
        
-    #Temp=Temp[['Change']]
-    #Temp=Temp[['Change']]
-    #Temp.to_csv("outputsheet.xlsx");
+  
     
     Temp.to_excel("outputsheet.xlsx");
-    print("7")
-    print("Should be after Temp to excel");
-    print("outputsheet.xlsx ",pandas.read_excel("outputsheet.xlsx"));
-    #print("outputsheet.csv ",pandas.read_csv("outputsheet.csv"));
-    #print("outputsheet.xlsx ",pandas.read_csv("outputsheet.xlsx"));
+    
+
     print('end of overview');
     
     record_async_start=open("ForestLoadingQueue.txt","w");
     record_async_start.write("100%");
 
     record_async_start.close(); 
-    print("9")
+   
     return Temp  
 
 
