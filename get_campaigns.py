@@ -22,6 +22,22 @@ thisDay=today.day
 numberOfDays=monthrange(thisYear,thisMonth)[1]
 daysLeft=numberOfDays-thisDay
 
+SpendtrackRows=["Assumed Daily Spend-Entire Month","Actual Amount Spent MTD","Actual Remaining Budget","Actual Avg Daily Spend MTD","Yesterday Total Spend",\
+                "Recommended Daily Spend to Meet Budget","To Meet Budget Raise/Lower Daily Spend by (Based on Yesterday spend)",\
+                "To Meet Budget Raise/Lower Avg Daily Spend by","Projected Spend Based on Actual Daily Average Spend",\
+                "Projected Spend Based on Yesterday Spend","Projected Conversions if Recommendation ignored",\
+                "Total Clicks All Channels MTD","CPC Google+Bing MTD"];
+
+"""
+"Assumed Daily Spend-Entire Month","Actual Amount Spent MTD","Actual Remaining Budget","Actual Avg Daily Spend MTD","Yesterday Total Spend",\
+"Recommended Daily Spend to Meet Budget","To Meet Budget Raise/Lower Daily Spend by (Based on Yesterday spend)",\
+"To Meet Budget Raise/Lower Avg Daily Spend by","Projected Spend Based on Actual Daily Average Spend",\
+"Projected Spend Based on Yesterday Spend","Projected Conversions if Recommendation ignored",\
+"Total Clicks All Channels MTD","CPC Google+Bing MTD"
+"""
+
+
+
 def project_Metric_For_Remaining_Month(metric):
     today = date.today();
     workingDate=today-timedelta(days=1);
@@ -74,22 +90,14 @@ googleArrayOfAccounts=[cityAccount,cityMobileAccount,communityAccount,suburbAcco
 googleAccountNumberNameLookup={"210-489-7739":"city","423-859-4348":"cityMobile","262-853-2074":"community","861-225-9590":"suburb",\
                          "644-879-0580":"state","473-277-5338":"hispanic"}
 
-"""
-query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
-metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
-WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY campaign.id')
-"""
+
 
 def fromGoogleAds(customer_id,dateRange):
        
     query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
              metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
             WHERE campaign.status="ENABLED" AND segments.date '+dateRange+' ORDER BY campaign.id')
-    """
-    query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
-             metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
-            WHERE campaign.status="ENABLED" AND segments.date DURING THIS_MONTH ORDER BY campaign.id')
-    """        
+        
        
     campaignName=[];
     campaignCost=[];
