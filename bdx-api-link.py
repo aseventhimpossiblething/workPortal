@@ -450,7 +450,19 @@ def ind():
     #print("test fired")
     return get_campaigns.googlemetrics;
     #return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi,metrics=metrics);
+    
 
+
+@app.route('/Budget')
+def Budge():
+    if chckbdxcred().find("NULL")==-1:
+        print(str(chckbdxcred()));
+        return str(chckbdxcred());
+    return render_template('Budget.html');   
+    
+    
+    
+    
     
 
 
