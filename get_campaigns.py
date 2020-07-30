@@ -22,11 +22,12 @@ thisDay=today.day
 numberOfDays=monthrange(thisYear,thisMonth)[1]
 daysLeft=numberOfDays-thisDay
 
-SpendtrackRows=["Assumed Daily Spend-Entire Month","Actual Amount Spent MTD","Actual Remaining Budget","Actual Avg Daily Spend MTD","Yesterday Total Spend",\
+SpendtrackRows=["NHS Budget","Assumed Daily Spend-Entire Month","Actual Amount Spent MTD","Actual Remaining Budget","Actual Avg Daily Spend MTD","Yesterday Total Spend",\
                 "Recommended Daily Spend to Meet Budget","To Meet Budget Raise/Lower Daily Spend by (Based on Yesterday spend)",\
                 "To Meet Budget Raise/Lower Avg Daily Spend by","Projected Spend Based on Actual Daily Average Spend",\
                 "Projected Spend Based on Yesterday Spend","Projected Conversions if Recommendation ignored",\
                 "Total Clicks All Channels MTD","CPC Google+Bing MTD"];
+SpendtrackDataCol=["Budget imput,Budget/days of month"];
 
 """
 "Assumed Daily Spend-Entire Month","Actual Amount Spent MTD","Actual Remaining Budget","Actual Avg Daily Spend MTD","Yesterday Total Spend",\
