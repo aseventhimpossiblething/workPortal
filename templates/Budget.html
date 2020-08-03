@@ -8,12 +8,18 @@
 <hr>  
 
 
+  
+["NHS Budget","Assumed Daily Spend-Entire Month","Actual Amount Spent MTD","Actual Remaining Budget","Actual Avg Daily Spend MTD","Yesterday Total Spend",\
+                "Recommended Daily Spend to Meet Budget","To Meet Budget Raise/Lower Daily Spend by (Based on Yesterday spend)",\
+                "To Meet Budget Raise/Lower Avg Daily Spend by","Projected Spend Based on Actual Daily Average Spend",\
+                "Projected Spend Based on Yesterday Spend","Projected Conversions if Recommendation ignored",\
+                "Total Clicks All Channels MTD","CPC Google+Bing MTD"  
 
 <form  id="frmID" name="CommForm" method=POST enctype="multipart/form-data" onsubmit="return ValidateForm()" action="/CommunityFileHander">
-<p><input type="file" accept=".xlsx" name="Communities" id="Communities" Value="Select Community List" size=30 >Community List</p>
-<p><input type="file" accept=".xlsx" name="currentGoogle" id="currentGoogle" Value="Active Google Extended Ads" size=30 >Active Google Ads</p>
-<p><input type="file" accept=".xlsx" name="currentBing" id="currentBing" Value="Active Bing Extended Ads" size=30 >Active Bing Ads</p>  
-<p><input type="submit" name="submit" ></p>  
+<p>NHS Budget <input type="file" accept=".xlsx" name="Communities" id="Communities" Value="Select Community List" size=30 >Community List</p>
+<p>Assumed Daily Spend-Entire Month<input type="file" accept=".xlsx" name="currentGoogle" id="currentGoogle" Value="Active Google Extended Ads" size=30 >Active Google Ads</p>
+<p>Actual Remaining Budget<input type="file" accept=".xlsx" name="currentBing" id="currentBing" Value="Active Bing Extended Ads" size=30 >Active Bing Ads</p>  
+<p>Actual Remaining Budget<input type="submit" name="submit" ></p>  
 </form> 
 
 {%endblock%}
