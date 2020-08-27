@@ -438,7 +438,7 @@ def fromGoogleAds(customer_id,dateRange):
                
     newTable=pandas.DataFrame(newTable);
     return newTable; 
-fromGoogleAds("210-489-7739",MTY());
+print(fromGoogleAds("210-489-7739",MTY()));
 print("Experimental Section end ")
 
 
