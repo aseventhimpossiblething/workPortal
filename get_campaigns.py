@@ -385,10 +385,13 @@ print("EXperimental section-----start")
 
 def fromGoogleAds(customer_id,dateRange):
        
-    query = ('SELECT campaign.criteria, campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
+    query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
              metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
             WHERE campaign.status="ENABLED" AND segments.date '+dateRange+' ORDER BY campaign.id')
-        
+    
+    NewQuery=('SELECT ad_group_criterion.keyword.text, ad_group.name, campaign.name, metrics.impressions, metrics.clicks, \
+             metrics.ctr, metrics.average_cpc FROM keyword_view WHERE segments.date DURING LAST_30_DAYS')
+       
        
     campaignName=[];
     campaignCost=[];
@@ -404,7 +407,7 @@ def fromGoogleAds(customer_id,dateRange):
     AccntName=googleAccountNumberNameLookup[str(customer_id)];
         
     customer_id=customer_id.replace("-","") 
-    response = ga_service.search_stream(customer_id, query=query) 
+    response = ga_service.search_stream(customer_id, query=NewQuery) 
     for subset in response:
         jsonObj=json_format.MessageToJson(subset)
         jsonObj=json.loads(jsonObj);
