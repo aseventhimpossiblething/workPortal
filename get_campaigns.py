@@ -424,13 +424,17 @@ def fromGoogleAds(customer_id,dateRange):
          
         while numberOfResults>countOfSubset:
             #print("Looping in experiment", countOfSubset)
+            
+             print("Looping in experiment", countOfSubset);
+             print(jsonObj["results"][countOfSubset]);
          
+            """       
             try:
                print("Looping in experiment", countOfSubset);
                print(jsonObj["results"][countOfSubset]);
                
             
-               """
+               
                name=jsonObj["results"][countOfSubset]["campaign"]["name"];
                status=jsonObj["results"][countOfSubset]["campaign"]["status"];
                cost=float(jsonObj["results"][countOfSubset]["metrics"]["costMicros"])/1000000;
@@ -460,14 +464,14 @@ def fromGoogleAds(customer_id,dateRange):
                campaignImpressions.append(impressions);
                campaignBudget.append(budget);
                campaignStatus.append(status);
-               ""
+               
                                        
                countOfSubset+=1;
             
             except:
                print("skipped ",countOfSubset );
                countOfSubset+=1;
-               
+            """   
     newTable=pandas.DataFrame(newTable);
     return newTable; 
 print(fromGoogleAds("210-489-7739",MTY()));
