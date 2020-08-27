@@ -421,16 +421,26 @@ def fromGoogleAds(customer_id,dateRange):
       
         countOfSubset=0; 
         numberOfResults=str(subset).count("results");
+        
+        print("Looping in experiment", countOfSubset);
+        print(jsonObj["results"][0]);
+        print("---------------------------------")
+        print(jsonObj["results"][1]);
+        print("---------------------------------")
+        print(jsonObj["results"][2]);
          
+        """ 
         while numberOfResults>countOfSubset:
             #print("Looping in experiment", countOfSubset)
             
             print("Looping in experiment", countOfSubset);
             print(jsonObj["results"][0]);
+            print("---------------------------------")
             print(jsonObj["results"][1]);
+            print("---------------------------------")
             print(jsonObj["results"][2]);
          
-            """       
+               
             try:
                print("Looping in experiment", countOfSubset);
                print(jsonObj["results"][countOfSubset]);
