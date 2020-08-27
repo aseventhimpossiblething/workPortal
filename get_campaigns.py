@@ -421,17 +421,14 @@ def fromGoogleAds(customer_id,dateRange):
       
         countOfSubset=0; 
         numberOfResults=str(subset).count("results");
-        
+        print("------------------------------------------------")
         print("Looping in experiment", countOfSubset);
-        print(jsonObj["results"][0]);
+        print(jsonObj["results"][countOfSubset]);
         print(" ")
-        print(jsonObj["results"][0]['campaign'])
-        print(jsonObj["results"][0]['adGroup'])
-        print(jsonObj["results"][0]['adGroupCriterion'])
-        print("---------------------------------")
-        print(jsonObj["results"][1]);
-        print("---------------------------------")
-        print(jsonObj["results"][2]);
+        print(jsonObj["results"][countOfSubset]['campaign'])
+        print(jsonObj["results"][countOfSubset]['adGroup'])
+        print(jsonObj["results"][countOfSubset]['adGroupCriterion'])
+     
         return 0;
          
         """ 
