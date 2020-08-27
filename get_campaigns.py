@@ -513,7 +513,7 @@ def googlemetric():
 
 
 
-
+"""
 def AccntCombinedBasedMetrics(googleArrayOfAccounts):
     partialCost=[];
     partialClicks=[];
@@ -579,7 +579,7 @@ def AccntCombinedBasedMetrics(googleArrayOfAccounts):
     metrics=metrics.to_html();
        
     return metrics;
-
+"""
 #googlemetrics=AccntCombinedBasedMetrics(googleArrayOfAccounts);
 
 
