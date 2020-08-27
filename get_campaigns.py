@@ -424,6 +424,10 @@ def fromGoogleAds(customer_id,dateRange):
         
         print("Looping in experiment", countOfSubset);
         print(jsonObj["results"][0]);
+        print(" ")
+        print(jsonObj["results"][0]['campaign'])
+        print(jsonObj["results"][0]['adgroup['])
+        print(jsonObj["results"][0]['keyword'])
         print("---------------------------------")
         print(jsonObj["results"][1]);
         print("---------------------------------")
