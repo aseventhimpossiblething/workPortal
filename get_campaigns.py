@@ -437,7 +437,8 @@ def fromGoogleAds(customer_id,dateRange):
                countOfSubset+=1;
                
     newTable=pandas.DataFrame(newTable);
-    return newTable;       
+    return newTable; 
+fromGoogleAds(customer_id,dateRange);
 print("Experimental Section end ")
 
 
