@@ -426,7 +426,9 @@ def fromGoogleAds(customer_id,dateRange):
             #print("Looping in experiment", countOfSubset)
             
             print("Looping in experiment", countOfSubset);
-            print(jsonObj["results"][countOfSubset]);
+            print(jsonObj["results"][0]);
+            print(jsonObj["results"][1]);
+            print(jsonObj["results"][2]);
          
             """       
             try:
