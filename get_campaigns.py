@@ -449,6 +449,7 @@ def fromGoogleAds(customer_id,dateRange):
                countOfSubset+=1;
             
             except:
+                print("skipped ",countOfSubset )
                countOfSubset+=1;
                
     newTable=pandas.DataFrame(newTable);
