@@ -385,7 +385,7 @@ print("EXperimental section-----start")
 
 def fromGoogleAds(customer_id,dateRange):
        
-    query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
+    query = ('SELECT campaign.keywords, campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
              metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
             WHERE campaign.status="ENABLED" AND segments.date '+dateRange+' ORDER BY campaign.id')
         
