@@ -429,7 +429,7 @@ def fromGoogleAds(customer_id,dateRange):
         print(jsonObj["results"][countOfSubset]['adGroup'])
         print(jsonObj["results"][countOfSubset]['adGroupCriterion'])
      
-        return 0;
+        #return 0;
          
         """ 
         while numberOfResults>countOfSubset:
