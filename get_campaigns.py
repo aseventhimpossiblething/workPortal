@@ -380,8 +380,65 @@ def googlemetric():
     
 
 
+print("---END OF CODE ------")
+print("EXperimental section-----start")
 
-
+def fromGoogleAds(customer_id,dateRange):
+       
+    query = ('SELECT campaign.id, campaign.name, campaign.status, campaign_budget.amount_micros,\
+             metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
+            WHERE campaign.status="ENABLED" AND segments.date '+dateRange+' ORDER BY campaign.id')
+        
+       
+    campaignName=[];
+    campaignCost=[];
+    campaignClicks=[];
+    campaignConversions=[];
+    campaignImpressions=[];
+    campaignBudget=[];
+    campaignStatus=[];
+       
+    newTable={"name":campaignName,"cost":campaignCost,"clicks":campaignClicks,"conversions":\
+              campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
+    
+    AccntName=googleAccountNumberNameLookup[str(customer_id)];
+        
+    customer_id=customer_id.replace("-","") 
+    response = ga_service.search_stream(customer_id, query=query) 
+    for subset in response:
+        jsonObj=json_format.MessageToJson(subset)
+        jsonObj=json.loads(jsonObj);
+      
+        countOfSubset=0; 
+        numberOfResults=str(subset).count("results");
+      
+        while numberOfResults>countOfSubset:
+         
+            try:
+               name=jsonObj["results"][countOfSubset]["campaign"]["name"];
+               status=jsonObj["results"][countOfSubset]["campaign"]["status"];
+               cost=float(jsonObj["results"][countOfSubset]["metrics"]["costMicros"])/1000000;
+               clicks=float(jsonObj["results"][countOfSubset]["metrics"]["clicks"]);
+               conversions=float(jsonObj["results"][countOfSubset]["metrics"]["conversions"]);
+               impressions=float(jsonObj["results"][countOfSubset]["metrics"]["impressions"]);
+               budget=float(jsonObj["results"][countOfSubset]["campaignBudget"]["amountMicros"])/100000; 
+                               
+               campaignName.append(name);
+               campaignCost.append(cost);
+               campaignClicks.append(clicks);
+               campaignConversions.append(conversions);
+               campaignImpressions.append(impressions);
+               campaignBudget.append(budget);
+               campaignStatus.append(status);
+                                       
+               countOfSubset+=1;
+            
+            except:
+               countOfSubset+=1;
+               
+    newTable=pandas.DataFrame(newTable);
+    return newTable;       
+print("Experimental Section end ")
 
 
 
