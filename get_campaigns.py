@@ -428,6 +428,7 @@ def fromGoogleAds(customer_id,dateRange):
                impressions=float(jsonObj["results"][countOfSubset]["metrics"]["impressions"]);
                budget=float(jsonObj["results"][countOfSubset]["campaignBudget"]["amountMicros"])/100000; 
                
+               print("before print series")
                print(name);
                print(status);
                print(cost);
@@ -435,6 +436,7 @@ def fromGoogleAds(customer_id,dateRange):
                print(conversions);
                print(impressions);
                print(budget);
+               print("after print series")
                 
                 
                
