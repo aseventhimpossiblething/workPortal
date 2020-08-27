@@ -404,6 +404,13 @@ def fromGoogleAds(customer_id,dateRange):
     newTable={"name":campaignName,"cost":campaignCost,"clicks":campaignClicks,"conversions":\
               campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
     
+    
+    
+    """
+    newTable={"name":campaignName,"cost":campaignCost,"clicks":campaignClicks,"conversions":\
+              campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
+    """          
+    
     AccntName=googleAccountNumberNameLookup[str(customer_id)];
         
     customer_id=customer_id.replace("-","") 
@@ -419,7 +426,11 @@ def fromGoogleAds(customer_id,dateRange):
             #print("Looping in experiment", countOfSubset)
          
             try:
-               print("Looping in experiment", countOfSubset) 
+               print("Looping in experiment", countOfSubset);
+               print(jsonObj["results"][countOfSubset]);
+               
+            
+               """
                name=jsonObj["results"][countOfSubset]["campaign"]["name"];
                status=jsonObj["results"][countOfSubset]["campaign"]["status"];
                cost=float(jsonObj["results"][countOfSubset]["metrics"]["costMicros"])/1000000;
@@ -427,6 +438,7 @@ def fromGoogleAds(customer_id,dateRange):
                conversions=float(jsonObj["results"][countOfSubset]["metrics"]["conversions"]);
                impressions=float(jsonObj["results"][countOfSubset]["metrics"]["impressions"]);
                budget=float(jsonObj["results"][countOfSubset]["campaignBudget"]["amountMicros"])/100000; 
+               
                
                print("before print series")
                print(name);
@@ -448,6 +460,7 @@ def fromGoogleAds(customer_id,dateRange):
                campaignImpressions.append(impressions);
                campaignBudget.append(budget);
                campaignStatus.append(status);
+               ""
                                        
                countOfSubset+=1;
             
