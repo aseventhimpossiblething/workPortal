@@ -426,7 +426,7 @@ def fromGoogleAds(customer_id,dateRange):
         print(jsonObj["results"][0]);
         print(" ")
         print(jsonObj["results"][0]['campaign'])
-        print(jsonObj["results"][0]['adgroup'])
+        print(jsonObj["results"][0]['adGroup'])
         print(jsonObj["results"][0]['keyword'])
         print("---------------------------------")
         print(jsonObj["results"][1]);
