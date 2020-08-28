@@ -434,14 +434,14 @@ def fromGoogleAds(customer_id,dateRange):
         campaign=jsonObj["results"][countOfSubset]['campaign']['name'];
         adGroup=jsonObj["results"][countOfSubset]['adGroup']['name'];
         keyword=jsonObj["results"][countOfSubset]['adGroupCriterion']['keyword']['text'];
-        cost=jsonObj["results"][countOfSubset]['metrics']['costMicros']
+        cost=jsonObj["results"][countOfSubset]['metrics']['cost_micros']
         clicks=jsonObj["results"][countOfSubset]['metrics']['clicks']
         conversions=jsonObj["results"][countOfSubset]['metrics']['conversions']
         impressions=jsonObj["results"][countOfSubset]['metrics']['impressions']
         print(campaign);
         print(adGroup);
         print(keyword);
-        print(cost_micros);
+        print(cost);
         print(clicks);
         print(conversions);
         print(impressions);      
