@@ -394,7 +394,7 @@ def fromGoogleAds(customer_id,dateRange):
 
 
 
-    NewQuery=('SELECT ad_group_criterion.keyword.text, ad_group.name, campaign.name, metrics.conversions, metrics.impressions, metrics.clicks, \
+    NewQuery=('SELECT ad_group_criterion.keyword.text, ad_group.name, campaign.name, metrics.cost, metrics.conversions, metrics.impressions, metrics.clicks, \
              metrics.ctr, metrics.average_cpc FROM keyword_view WHERE segments.date DURING LAST_30_DAYS')
        
        
@@ -431,9 +431,9 @@ def fromGoogleAds(customer_id,dateRange):
         print(jsonObj["results"][countOfSubset]);
         print(" ")
          
-        campaign=jsonObj["results"][countOfSubset]['campaign'];
-        adGroup=jsonObj["results"][countOfSubset]['adGroup'];
-        keyword=jsonObj["results"][countOfSubset]['adGroupCriterion'];
+        campaign=jsonObj["results"][countOfSubset]['campaign']['name'];
+        adGroup=jsonObj["results"][countOfSubset]['adGroup']['name'];
+        keyword=jsonObj["results"][countOfSubset]['adGroupCriterion']['text'];
         #cost=jsonObj["results"][countOfSubset]['metrics']['cost']
         clicks=jsonObj["results"][countOfSubset]['metrics']['clicks']
         conversions=jsonObj["results"][countOfSubset]['metrics']['conversions']
