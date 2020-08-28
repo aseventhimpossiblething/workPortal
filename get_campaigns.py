@@ -394,8 +394,9 @@ def fromGoogleAds(customer_id,dateRange):
 
 
 
-    NewQuery=('SELECT ad_group_criterion.keyword.text, ad_group.name, campaign.name, metrics.cost_micros, metrics.conversions, metrics.impressions, metrics.clicks, \
-             metrics.ctr, metrics.average_cpc FROM keyword_view WHERE segments.date DURING LAST_30_DAYS')
+    NewQuery=('SELECT ad_group_criterion.keyword.text, ad_group.name, campaign.name, metrics.cost_micros,\
+               metrics.conversions, metrics.impressions, metrics.clicks, metrics.ctr, ad_group_criterion.keyword.match_type \
+               metrics.average_cpc FROM keyword_view WHERE segments.date DURING LAST_30_DAYS')
        
        
     campaignName=[];
