@@ -389,6 +389,11 @@ def fromGoogleAds(customer_id,dateRange):
              metrics.cost_micros, metrics.clicks,  metrics.conversions, metrics.impressions FROM campaign \
             WHERE campaign.status="ENABLED" AND segments.date '+dateRange+' ORDER BY campaign.id')
     
+   
+
+
+
+
     NewQuery=('SELECT ad_group_criterion.keyword.text, ad_group.name, campaign.name, metrics.impressions, metrics.clicks, \
              metrics.ctr, metrics.average_cpc FROM keyword_view WHERE segments.date DURING LAST_30_DAYS')
        
@@ -425,9 +430,13 @@ def fromGoogleAds(customer_id,dateRange):
         print("Looping in experiment", countOfSubset);
         print(jsonObj["results"][countOfSubset]);
         print(" ")
-        print(jsonObj["results"][countOfSubset]['campaign'])
-        print(jsonObj["results"][countOfSubset]['adGroup'])
-        print(jsonObj["results"][countOfSubset]['adGroupCriterion'])
+         
+        campaign=jsonObj["results"][countOfSubset]['campaign'];
+        adGroup=jsonObj["results"][countOfSubset]['adGroup'];
+        keyword=jsonObj["results"][countOfSubset]['adGroupCriterion'];
+        print(campaign);
+        print(adGroup);
+        print(adGroupCriterion);
      
         #return 0;
          
