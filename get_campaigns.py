@@ -443,7 +443,7 @@ def fromGoogleAds(customer_id,dateRange):
         print(adGroupCriterion);
         print(cost);
         print(clicks);
-        print(conversions;
+        print(conversions);
         print(impressions);      
      
         #return 0;
