@@ -318,7 +318,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             [count])+"?refer=").lower()
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
-            .replace("Lots","").replace(,);
+            .replace("Lots","");
   Keyword_conv=NewDataFrame['Community Name'][count].replace("  "," ")
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
