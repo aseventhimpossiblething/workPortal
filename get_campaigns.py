@@ -381,6 +381,10 @@ def googlemetric():
 
 
 print("---END OF CODE ------")
+
+
+
+"""
 print("EXperimental section-----start")
 
 def fromGoogleAds(customer_id,dateRange):
@@ -411,11 +415,7 @@ def fromGoogleAds(customer_id,dateRange):
               campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
     
     
-    
-    """
-    newTable={"name":campaignName,"cost":campaignCost,"clicks":campaignClicks,"conversions":\
-              campaignConversions,"impressions":campaignImpressions,"budget":campaignBudget,"status":campaignStatus}
-    """          
+      
     
     AccntName=googleAccountNumberNameLookup[str(customer_id)];
         
@@ -447,67 +447,15 @@ def fromGoogleAds(customer_id,dateRange):
         print("conversions",conversions);
         print("impressions",impressions);      
      
-        #return 0;
+       
          
-        """ 
-        while numberOfResults>countOfSubset:
-            #print("Looping in experiment", countOfSubset)
-            
-            print("Looping in experiment", countOfSubset);
-            print(jsonObj["results"][0]);
-            print("---------------------------------")
-            print(jsonObj["results"][1]);
-            print("---------------------------------")
-            print(jsonObj["results"][2]);
-         
-               
-            try:
-               print("Looping in experiment", countOfSubset);
-               print(jsonObj["results"][countOfSubset]);
-               
-            
-               
-               name=jsonObj["results"][countOfSubset]["campaign"]["name"];
-               status=jsonObj["results"][countOfSubset]["campaign"]["status"];
-               cost=float(jsonObj["results"][countOfSubset]["metrics"]["costMicros"])/1000000;
-               clicks=float(jsonObj["results"][countOfSubset]["metrics"]["clicks"]);
-               conversions=float(jsonObj["results"][countOfSubset]["metrics"]["conversions"]);
-               impressions=float(jsonObj["results"][countOfSubset]["metrics"]["impressions"]);
-               budget=float(jsonObj["results"][countOfSubset]["campaignBudget"]["amountMicros"])/100000; 
-               
-               
-               print("before print series")
-               print(name);
-               print(status);
-               print(cost);
-               print(clicks);
-               print(conversions);
-               print(impressions);
-               print(budget);
-               print("after print series")
-                
-                
-               
-                               
-               campaignName.append(name);
-               campaignCost.append(cost);
-               campaignClicks.append(clicks);
-               campaignConversions.append(conversions);
-               campaignImpressions.append(impressions);
-               campaignBudget.append(budget);
-               campaignStatus.append(status);
-               
-                                       
-               countOfSubset+=1;
-            
-            except:
-               print("skipped ",countOfSubset );
-               countOfSubset+=1;
-            """   
+       
     newTable=pandas.DataFrame(newTable);
     return newTable; 
 print(fromGoogleAds("210-489-7739",MTY()));
 print("Experimental Section end ")
+"""
+
 
 
 
