@@ -186,7 +186,7 @@ def filterNonParticipators(theFrame):
   try:
    #print("inside try of second loop",icount0)
    Community=str(theFrame["Community Name"][icount0]).replace("40s","").replace("40'","").replace("40","").replace("45s","")\
-   .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
+   .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","").replace("OLY","")\
    .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
    .replace("65'","").replace("65","").replace("70s","").replace("70'","").replace("70","").replace("75s","")\
    .replace("75'","").replace("75","").replace("80s","").replace("80'","").replace("80","").replace("85s","")\
