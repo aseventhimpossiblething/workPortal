@@ -77,7 +77,8 @@ def WorkingBing():
 def filterNonParticipators(theFrame):
  
  def firstDropLoop(theFrame):
-  DropRowsContaining=['Oak Creek','Custom','Oak Creek','Clayton','Oakwood','Craftmark','Freedom','Crossland','del Webb','Webb','webb','G & I','Build on Your Lot','BYOL','Build','build'];
+  DropRowsContaining=['Oak Creek','Custom','Oak Creek','Clayton','Oakwood','Craftmark','Freedom','Crossland','del Webb','Webb','webb',\
+                      'G & I','Build on Your Lot','BYOL','Build','build','Manufactured Housing Consultants'];
   def LowDropRowsContaining(words):
       lowerWords=[]; 
       words=words;
