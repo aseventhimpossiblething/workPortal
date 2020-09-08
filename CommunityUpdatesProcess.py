@@ -326,6 +326,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      URL_Struct1=URL_Struct1+"403"
      Keyword_conv=Keyword_conv
      #Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=Keyword_conv.replace(" + ","")
+     Keyword_conv=Keyword_conv.replace("++","+")
+     Keyword_conv=Keyword_conv.replace(" ++ ","")
      Keyword_conv=Keyword_conv.replace("&"," ")
      Keyword_conv=Keyword_conv.replace(" "," +")
      Keyword_conv=Keyword_conv.replace("+55+","55+")
@@ -371,6 +374,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      URL_Struct1=URL_Struct1+"202"
      Keyword_conv=Keyword_conv
      #Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=Keyword_conv.replace(" + ","")
+     Keyword_conv=Keyword_conv.replace("++","+")
+     Keyword_conv=Keyword_conv.replace(" ++ ","")
      Keyword_conv=Keyword_conv.replace("&"," ")
      Keyword_conv=Keyword_conv.replace(" "," +")
      Keyword_conv=Keyword_conv.replace("+55+","55+")
@@ -466,11 +472,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   
    Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+").replace(" + + +","+")\
                   .replace("+ + + ","+").replace("++","+").replace("+ +","+").replace(" ++","+").replace("++ ","+")\
-                  .replace(" + +","+").replace("+ + ","+").replace("+–","+").replace("+– ","+")\
-                  .replace(" +–","+").replace(" +– ","+").replace(" +– +","+").replace("+– + ","+");
-   
-   
-   
+                  .replace(" + +","+").replace("+ + ","+").replace("+–","+").replace("+– ","+").replace(" +–","+")\
+                  .replace(" +– ","+").replace(" +– +","+").replace("+– + ","+").replace(" + ","").replace("++","+")\
+                  .replace(" ++ ","");
+         
    if len(Keyword_conv)<10:
       Keyword_conv=Keyword_conv+" Community"
       #print(Keyword_conv);
