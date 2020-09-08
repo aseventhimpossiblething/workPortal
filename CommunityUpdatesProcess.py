@@ -310,8 +310,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
             [count].replace(" ","-")+"/"+NewDataFrame['Community Name']\
             [count].replace(" ","-")+"-by-"+NewDataFrame['Brand Name']\
-            [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower()
-  URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-");
+            [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id']\
+            [count])+"?refer=").lower()
+  URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-")\
+            .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("Lots","");
   Keyword_conv=NewDataFrame['Community Name'][count].replace("  "," ")
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
