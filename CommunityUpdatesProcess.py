@@ -584,9 +584,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     
     
       
-   print("Keyword Push ",Keyword_conv); 
-   print("Keyword Length ",len(Keyword_conv));
-   print("Keyword last Character ",Keyword_conv[len(Keyword_conv)-1]);
+  
+
+   if str(Keyword_conv[len(Keyword_conv)-1])=="+":
+          print("Keyword Push ",Keyword_conv); 
+          print("Keyword Length ",len(Keyword_conv));
+          print("Keyword last Character ",Keyword_conv[len(Keyword_conv)-1]);
    Keyword.append(Keyword_conv);   
      
    
