@@ -456,8 +456,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    """
    
    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State']\
-                      [count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name']\
-                      [count])+str("_>")+str(NewDataFrame['Community Id'][count]); 
+                      [count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]); 
    """
    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State']\
                       [count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name']\
