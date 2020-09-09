@@ -419,6 +419,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                 .replace("65'","").replace("65","").replace("70s","").replace("70'","").replace("70","").replace("75s","")\
                 .replace("75'","").replace("75","").replace("80s","").replace("80'","").replace("80","").replace("85s","")\
                 .replace("85'","").replace("85","").replace("90s","").replace("90'","").replace("90","").replace("95s","")\
+                .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
+                .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","").replace("Phase","")\
+                .replace(" I ","").replace(" II ","").replace("Build On Your Lot","").replace("build on your lot","").replace("-"," ").replace("on your lot","")\
+                .replace("105'","").replace("110s","").replace("110'","").replace("  "," ").replace("Austin_TX>269>Willa._>125784","Austin_TX>269>Willa_>125784")\
+                .replace("Cielo at Sand Creek | Vista Collection","Cielo at Sand Creek Vista Collection").replace("On Your Lot","").replace("OLY","")\
+                .replace("Austin_TX>269>Highpointe /_>146097","Austin_TX>269>Highpointe_>146097").replace("|","").relace("/","").replace("&"," ");
       
    """ 
       .replace("40s","").replace("40'","").replace("40","").replace("45s","")\
