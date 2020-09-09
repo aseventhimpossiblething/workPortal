@@ -361,7 +361,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     
     
     
-    
+               """ 
                .replace(" Acre ","").replace("Phase III","").replace("III","")\
                .replace(" 45 ","").replace(" 50s ","").replace(" 50' ","").replace(" 50 ","").replace(" 55s ","")\
                .replace(" 55' ","").replace(" 55 ","").replace(" 60s ","").replace(" 60' ","").replace(" 60 ","").replace(" 65s ","")\
@@ -369,7 +369,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                .replace(" 75' ","").replace(" 75 ","").replace(" 80s ","").replace(" 80' ","").replace(" 80 ","").replace(" 85s ","")\
                .replace(" 85 '","").replace(" 85 ","").replace(" 90s ","").replace(" 90' ","").replace(" 90 ","").replace(" 95s ","")\
                .replace(" 95' ","").replace(" 95 ","").replace(" 100s ","").replace(" 100' ","").replace(" 100 ","").replace(" 105s ","")\
-  
+               """
   
   
  
