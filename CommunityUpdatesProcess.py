@@ -562,7 +562,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                   .replace("+ + + ","+").replace("++","+").replace("+ +","+").replace(" ++","+").replace("++ ","+")\
                   .replace(" + +","+").replace("+ + ","+").replace("+–","+").replace("+– ","+").replace(" +–","+")\
                   .replace(" +– ","+").replace(" +– +","+").replace("+– + ","+").replace(" + ","").replace("++","+")\
-                  .replace(" ++ ","").replace("+ ","").replace(",","");
+                  .replace(" ++ ","").replace("+ ","").replace(",","").replace(" +","");
          
    if len(Keyword_conv)<10:
       Keyword_conv=Keyword_conv+" Community"
