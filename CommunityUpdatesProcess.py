@@ -362,15 +362,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     
     
     
-  """ 
-               .replace(" Acre ","").replace("Phase III","").replace("III","")\
-               .replace(" 45 ","").replace(" 50s ","").replace(" 50' ","").replace(" 50 ","").replace(" 55s ","")\
-               .replace(" 55' ","").replace(" 55 ","").replace(" 60s ","").replace(" 60' ","").replace(" 60 ","").replace(" 65s ","")\
-               .replace(" 65' ","").replace(" 65 ","").replace(" 70s ","").replace(" 70' ","").replace(" 70 ","").replace(" 75s ","")\
-               .replace(" 75' ","").replace(" 75 ","").replace(" 80s ","").replace(" 80' ","").replace(" 80 ","").replace(" 85s ","")\
-               .replace(" 85 '","").replace(" 85 ","").replace(" 90s ","").replace(" 90' ","").replace(" 90 ","").replace(" 95s ","")\
-               .replace(" 95' ","").replace(" 95 ","").replace(" 100s ","").replace(" 100' ","").replace(" 100 ","").replace(" 105s ","")\
-  """
+
   
   
  
@@ -409,12 +401,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=Keyword_conv.replace("++","+")
      Keyword_conv=Keyword_conv.replace(" ++ ","")
      Keyword_conv=Keyword_conv.replace("&"," ")
-     Keyword_conv=Keyword_conv.replace(" "," +")
+     #Keyword_conv=Keyword_conv.replace(" "," +")
      Keyword_conv=Keyword_conv.replace("+55+","55+")
      Keyword_conv=Keyword_conv.replace("+-","-")
      Keyword_conv=Keyword_conv.replace("-"," ")
      Keyword_conv=Keyword_conv.replace("'","")
      Keyword_conv=Keyword_conv.replace("+,","")
+     Keyword_conv=Keyword_conv.replace(",","")
      Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
      Keyword_conv="+"+Keyword_conv
      set_bid=.45;
@@ -458,11 +451,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=Keyword_conv.replace("++","+")
      Keyword_conv=Keyword_conv.replace(" ++ ","")
      Keyword_conv=Keyword_conv.replace("&"," ")
-     Keyword_conv=Keyword_conv.replace(" "," +")
+     #Keyword_conv=Keyword_conv.replace(" "," +")
      Keyword_conv=Keyword_conv.replace("+55+","55+")
      Keyword_conv=Keyword_conv.replace("+-"," ")
      Keyword_conv=Keyword_conv.replace("-"," ")
      Keyword_conv=Keyword_conv.replace("'","")
+     Keyword_conv=Keyword_conv.replace(",","")
      Keyword_conv=Keyword_conv.replace("+G +& +I","G&I ")
      Keyword_conv="+"+Keyword_conv
      set_bid=.45;
@@ -470,64 +464,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       Keyword_conv=Keyword_conv+" Community"
      MatchType_Conv="Broad"
    Campaign_Name.append(Campaign_Nameing_Conv);
-   """
-   communityName=str(NewDataFrame['Community Name'][count]);
-   communityName.replace("40s","").replace("40'","").replace("40","").replace("45s","")\
-                .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
-                .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
-                .replace("65'","").replace("65","").replace("70s","").replace("70'","").replace("70","").replace("75s","")\
-                .replace("75'","").replace("75","").replace("80s","").replace("80'","").replace("80","").replace("85s","")\
-                .replace("85'","").replace("85","").replace("90s","").replace("90'","").replace("90","").replace("95s","")\
-                .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
-                .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","").replace("Phase","")\
-                .replace(" I ","").replace(" II ","").replace("Build On Your Lot","").replace("build on your lot","").replace("-"," ").replace("on your lot","")\
-                .replace("105'","").replace("110s","").replace("110'","").replace("  "," ").replace("Austin_TX>269>Willa._>125784","Austin_TX>269>Willa_>125784")\
-                .replace("Cielo at Sand Creek | Vista Collection","Cielo at Sand Creek Vista Collection").replace("On Your Lot","").replace("OLY","")\
-                .replace("Austin_TX>269>Highpointe /_>146097","Austin_TX>269>Highpointe_>146097").replace("|","").relace("/","").replace("&"," ");
-   """   
-   """ 
-      .replace("40s","").replace("40'","").replace("40","").replace("45s","")\
-      .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
-      .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
-      .replace("65'","").replace("65","").replace("70s","").replace("70'","").replace("70","").replace("75s","")\
-      .replace("75'","").replace("75","").replace("80s","").replace("80'","").replace("80","").replace("85s","")\
-      .replace("85'","").replace("85","").replace("90s","").replace("90'","").replace("90","").replace("95s","")\
-      .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
-      .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","").replace("Phase","")\
-      .replace(" I ","").replace(" II ","").replace("Build On Your Lot","").replace("build on your lot","").replace("-"," ").replace("on your lot","")\
-      .replace("105'","").replace("110s","").replace("110'","").replace("  "," ").replace("Austin_TX>269>Willa._>125784","Austin_TX>269>Willa_>125784")\
-      .replace("Cielo at Sand Creek | Vista Collection","Cielo at Sand Creek Vista Collection").replace("On Your Lot","").replace("OLY","")\
-      .replace("Austin_TX>269>Highpointe /_>146097","Austin_TX>269>Highpointe_>146097").replace("|","").relace("/","").replace("&"," ");
-   """
+
+
    
    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID']\
                       [count])+str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
-   """
-   AdgroupNaming_conv=AdgroupNaming_conv.replace("-"," ").replace("_","").replace("40s","").replace("40'","").replace("40","").replace("45s","")\
-               .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
-               .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
-               .replace("65'","").replace("65","").replace("70s","").replace("70'","").replace("70","").replace("75s","")\
-               .replace("75'","").replace("75","").replace("80s","").replace("80'","").replace("80","").replace("85s","")\
-               .replace("85'","").replace("85","").replace("90s","").replace("90'","").replace("90","").replace("95s","")\
-               .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
-               .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","").replace("Phase","")\
-               .replace(" I ","").replace(" II ","").replace("Build On Your Lot","").replace("build on your lot","").replace("-"," ").replace("on your lot","")\
-               .replace("105'","").replace("110s","").replace("110'","").replace("  "," ").replace("Austin_TX>269>Willa._>125784","Austin_TX>269>Willa_>125784")\
-               .replace("Cielo at Sand Creek | Vista Collection","Cielo at Sand Creek Vista Collection").replace("On Your Lot","").replace("OLY","")\
-               .replace("Austin_TX>269>Highpointe /_>146097","Austin_TX>269>Highpointe_>146097").replace("|","").replace("/","").replace("&"," ")\
-               .replace(" 40s ","").replace(" 40' ","").replace(" 40 ","").replace(" 45s ","")\
-               .replace(" 45' ","").replace(" 45 ","").replace(" 50s ","").replace(" 50' ","").replace(" 50 ","").replace(" 55s ","")\
-               .replace(" 55' ","").replace(" 55 ","").replace(" 60s ","").replace(" 60' ","").replace(" 60 ","").replace(" 65s ","")\
-               .replace(" 65' ","").replace(" 65 ","").replace(" 70s ","").replace(" 70' ","").replace(" 70 ","").replace(" 75s ","")\
-               .replace(" 75' ","").replace(" 75 ","").replace(" 80s ","").replace(" 80' ","").replace(" 80 ","").replace(" 85s ","")\
-               .replace(" 85 '","").replace(" 85 ","").replace(" 90s ","").replace(" 90' ","").replace(" 90 ","").replace(" 95s ","")\
-               .replace(" 95' ","").replace(" 95 ","").replace(" 100s ","").replace(" 100' ","").replace(" 100 ","").replace(" 105s ","")\
-               .replace(" 105 '","").replace(" 105 ","").replace(" 110s ","").replace(" 110' ","").replace(" 110 ","").replace(" Phase ","")\
-               .replace(" I ","").replace(" II ","").replace(" Build On Your Lot ","").replace(" build on your lot ","").replace(" - "," ").replace(" on your lot ","")\
-               .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
-               .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
-               .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ")
-  """
+
    
    
    
@@ -540,20 +482,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                       [count])+str("_>")+str(NewDataFrame['Community Id'][count]); 
    """                   
    
-   """
-   AdgroupNaming_conv=str(AdgroupNaming_conv).replace("40s","").replace("40'","").replace("40","").replace("45s","")\
-      .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
-      .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
-      .replace("65'","").replace("65","").replace("70s","").replace("70'","").replace("70","").replace("75s","")\
-      .replace("75'","").replace("75","").replace("80s","").replace("80'","").replace("80","").replace("85s","")\
-      .replace("85'","").replace("85","").replace("90s","").replace("90'","").replace("90","").replace("95s","")\
-      .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("100","").replace("105s","")\
-      .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","").replace("Phase","")\
-      .replace(" I ","").replace(" II ","").replace("Build On Your Lot","").replace("build on your lot","").replace("-"," ").replace("on your lot","")\
-      .replace("105'","").replace("110s","").replace("110'","").replace("  "," ").replace("Austin_TX>269>Willa._>125784","Austin_TX>269>Willa_>125784")\
-      .replace("Cielo at Sand Creek | Vista Collection","Cielo at Sand Creek Vista Collection").replace("On Your Lot","").replace("OLY","")\
-      .replace("Austin_TX>269>Highpointe /_>146097","Austin_TX>269>Highpointe_>146097").replace("|","").relace("/","").replace("&"," ");
-   """  
+ 
    
    Adgroup.append(AdgroupNaming_conv)
    #Keyword.append(Keyword_conv)
@@ -569,12 +498,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Title1A_Name_Conv=Title1A_Name_Conv+" New Homes" 
    Title1A.append(Title1A_Name_Conv);
    
-   """
-   if Title1A_Name_Conv.find("!")>-1:
-      Title1B_Name_Conv=Title1A_Name_Conv.replace("!",".") 
-   
-   Title1B.append(Title1B_Name_Conv);
-   """
+ 
    
    Title2A_conv=NewDataFrame['City'][count]
    if len(Title2A_conv)<12:
@@ -638,7 +562,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                   .replace("+ + + ","+").replace("++","+").replace("+ +","+").replace(" ++","+").replace("++ ","+")\
                   .replace(" + +","+").replace("+ + ","+").replace("+–","+").replace("+– ","+").replace(" +–","+")\
                   .replace(" +– ","+").replace(" +– +","+").replace("+– + ","+").replace(" + ","").replace("++","+")\
-                  .replace(" ++ ","");
+                  .replace(" ++ ","").replace("+ ","").replace(",","");
          
    if len(Keyword_conv)<10:
       Keyword_conv=Keyword_conv+" Community"
