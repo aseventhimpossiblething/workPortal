@@ -592,6 +592,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       """ 
       #print("community==city ",communty==city);
       
+   print("Keyword Push ",Keyword_conv); 
+   print("Keyword Length ",len(Keyword_conv));
+   print("Keyword last Character ",Keyword_conv[len(Keyword_conv]);
    Keyword.append(Keyword_conv);   
      
    
