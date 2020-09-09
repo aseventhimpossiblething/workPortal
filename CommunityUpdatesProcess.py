@@ -353,13 +353,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   
   
  
-    
+  print("count ",count)  
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
             [count].replace(" ","-")+"/"+communityName\
-            [count].replace(" ","-")+"-by-"+NewDataFrame['Brand Name']\
+            .replace(" ","-")+"-by-"+NewDataFrame['Brand Name']\
             [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id']\
             [count])+"?refer=").lower()
+  
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
             .replace("Lots","");
