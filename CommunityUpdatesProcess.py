@@ -560,6 +560,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
           print("Keyword Length ",len(Keyword_conv));
           print("Keyword last Character ",Keyword_conv[len(Keyword_conv)-1]);
           print("Keyword last Character ",Keyword_conv[:len(Keyword_conv)-1])
+          Keyword_conv=Keyword_conv[:len(Keyword_conv)-1]
    Keyword.append(Keyword_conv);   
      
    
