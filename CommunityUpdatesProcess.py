@@ -78,7 +78,7 @@ def filterNonParticipators(theFrame):
  
  def firstDropLoop(theFrame):
   DropRowsContaining=['Oak Creek','Custom','Oak Creek','Clayton','Oakwood','Craftmark','Freedom','Crossland','del Webb','Webb','webb',\
-                      'G & I','Build on Your Lot','BYOL','Build','build','Manufactured Housing Consultants','Homesites','lots',":ft"];
+                      'G & I','Build on Your Lot','BYOL','Build','build','Manufactured Housing Consultants','Homesites','lots',':ft','Built','Built on Your Land'];
   def LowDropRowsContaining(words):
       lowerWords=[]; 
       words=words;
