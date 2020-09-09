@@ -571,6 +571,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
    community=str(communityName).lower();
    
+   """
    lenCommunity=int(len(community));
    lenCity=int(len(city));
    
@@ -579,12 +580,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       print("city= ",city," ",len(city));
       lenCommunity=len(community);
       lenCity=len(city);
+   """   
     
     
       
    print("Keyword Push ",Keyword_conv); 
    print("Keyword Length ",len(Keyword_conv));
-   print("Keyword last Character ",Keyword_conv[0]);
+   print("Keyword last Character ",Keyword_conv[len(Keyword_conv)]);
    Keyword.append(Keyword_conv);   
      
    
@@ -604,14 +606,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      print(":::City found in community","City = ",city,"::: Community Name = ",community);
      label=label+";City Name as Part of Community Name"
      print("----------------------------------------------------------------------------------------------------------------------------")
-   #if str(NewDataFrame['City'][count]).find(str(NewDataFrame['Community Name'][count]))>-1 or str(NewDataFrame['Community Name'][count]).find(str(NewDataFrame['City'][count]))>-1:
-   #  print("If city is in community or community in city")
-   #  print("City = ",NewDataFrame['City'][count],"---- Community Name = ",NewDataFrame['Community Name'][count]); 
-   #  print("----------------------------------------------------------------------------------------------------------------------------")
-   #else:
-    #print("Not marked......City = ",NewDataFrame['City'][count][:5],":::: Community Name = ",NewDataFrame['Community Name'][count])
-    #print(str(NewDataFrame['City'][count][:5]).find(str(NewDataFrame['Community Name'][count])))
-    #print("-------------------------")
+   
    
    Label.append(label);
   except:
