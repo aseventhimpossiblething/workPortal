@@ -355,24 +355,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   
   
   
-  
-  
-               
-  
-    
-    
-    
-
-  
-  
- 
-  
-
-  
-  
-  
- 
-  print("count ",count)  
+   
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
             [count].replace(" ","-")+"/"+communityName\
@@ -476,12 +459,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
    
    
-   """
-   AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State']\
-                      [count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name']\
-                      [count])+str("_>")+str(NewDataFrame['Community Id'][count]); 
-   """                   
-   
+
  
    
    Adgroup.append(AdgroupNaming_conv)
@@ -513,7 +491,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    PreTextA="Find your family a perfect New Home at \
     "+str(communityName)+" in "+str(NewDataFrame['City']\
     [count])+", "+str(NewDataFrame['State'][count])
-    #print("---Alert PreTextA ---",PreTextA)
+    
    
    if len(PreTextA)>89:
     PreTextA="Find your family a perfect New Home at "+str(NewDataFrame['Community Name']\
@@ -566,21 +544,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
          
    if len(Keyword_conv)<10:
       Keyword_conv=Keyword_conv+" Community"
-      #print(Keyword_conv);
+     
       
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
    community=str(communityName).lower();
    
-   """
-   lenCommunity=int(len(community));
-   lenCity=int(len(city));
-   
-   if lenCommunity!=lenCity or community.find(city)==-1:
-      print("community= ",community," ",len(community));
-      print("city= ",city," ",len(city));
-      lenCommunity=len(community);
-      lenCity=len(city);
-   """   
+    
     
     
       
