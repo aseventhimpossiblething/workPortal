@@ -152,7 +152,9 @@ def filterNonParticipators(theFrame):
  while icount<len(theFrame['Community Name']):
   try:
    #print("Start of try before Community String first loop")
-   Community=str(theFrame["Community Name"][icount]).replace("40s","").replace("40'","").replace("45s","")\
+   Community=str(theFrame["Community Name"][icount])
+   """
+   .replace("40s","").replace("40'","").replace("45s","")\
    .replace("45'","").replace("50s","").replace("50'","").replace("55s","").replace("55'","").replace("60s","").replace("60'","").replace("65s","")\
    .replace("65'","").replace("70s","").replace("70'","").replace("75s","").replace("75'","").replace("80s","").replace("80'","").replace("85s","")\
    .replace("85'","").replace("90s","").replace("90'","").replace("95s","").replace("95'","").replace("100s","").replace("100'","").replace("105s","")\
@@ -160,6 +162,7 @@ def filterNonParticipators(theFrame):
    .replace("105'","").replace("110s","").replace("110'","").replace("  "," ").replace("Austin_TX>269>Willa._>125784","Austin_TX>269>Willa_>125784")\
    .replace("Cielo at Sand Creek | Vista Collection","Cielo at Sand Creek Vista Collection").replace("On Your Lot","")\
    .replace("Austin_TX>269>Highpointe /_>146097","Austin_TX>269>Highpointe_>146097").replace("|","").replace("/","").replace("&"," ")\
+   """
    
 
   
@@ -180,7 +183,9 @@ def filterNonParticipators(theFrame):
   #print(" just before failing try icount0= ",icount0)
   try:
    #print("inside try of second loop",icount0)
-   Community=str(theFrame["Community Name"][icount0]).replace("40s","").replace("40'","").replace("40","").replace("45s","")\
+   Community=str(theFrame["Community Name"][icount0])
+   """
+   .replace("40s","").replace("40'","").replace("40","").replace("45s","")\
    .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
    .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
    .replace("65'","").replace("65","").replace("70s","").replace("70'","").replace("70","").replace("75s","")\
@@ -192,7 +197,7 @@ def filterNonParticipators(theFrame):
    .replace("105'","").replace("110s","").replace("110'","").replace("  "," ").replace("Austin_TX>269>Willa._>125784","Austin_TX>269>Willa_>125784")\
    .replace("Cielo at Sand Creek | Vista Collection","Cielo at Sand Creek Vista Collection").replace("On Your Lot","").replace("OLY","")\
    .replace("Austin_TX>269>Highpointe /_>146097","Austin_TX>269>Highpointe_>146097").replace("|","").replace("/","").replace("&"," ")
-   
+   """
    
    
    if DeDupArray.count(Community)>1:
