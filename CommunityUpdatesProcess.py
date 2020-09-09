@@ -575,22 +575,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    lenCity=int(len(city));
    
    if lenCommunity!=lenCity or community.find(city)==-1:
-   #if community.find(city)==-1:or lenCommunity==lenCity:
       print("community= ",community," ",len(community));
       print("city= ",city," ",len(city));
       lenCommunity=len(community);
       lenCity=len(city);
-      print(type(lenCommunity));
-      print(type(lenCity));
-      print(int(lenCommunity))
-      print(int(lenCity))
-      """
-      if len(community)==len(city):
-         print("Both equal");
-         print("community in ==case  ",community);
-         print("city ==case  ",city);
-      """ 
-      #print("community==city ",communty==city);
+    
+    
       
    print("Keyword Push ",Keyword_conv); 
    print("Keyword Length ",len(Keyword_conv));
@@ -598,32 +588,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Keyword.append(Keyword_conv);   
      
    
-   #print("----------label Check--------")  
+    
    label="Created by WebApp"  
-   #Label.append(label);
+ 
    
-   #cityprime=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
-   #city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
-   #wordBoundry=(city.find(" "));
-   #wordstart=0;
-   """
-   if wordBoundry==0:
-    wordstart=1;
-    print("0 in city=",city[0]);
-    print("1 in city=",city[1]);
-    print("wordBoundry when wordBoundry=0 ",wordBoundry);
-    print("city when wordBoundry=0 =",city);
-    wordBoundry=city[wordstart:].find(" ")+1;
-    print("New wordBoundry number=",wordBoundry);
-    print("New city when wordBoundry=0 =",city[:wordBoundry]) ;
-    #city=city[:wordBoundry]
-    #print("0 in city=",city[0])
-    #print("1 in city=",city[1])
-   """ 
+
    
-   #city=city[wordstart:];
-   #wordBoundry=(city.find(" "))+1;
-   #print("City=",city)
    
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
    community=str(communityName).lower();
