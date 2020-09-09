@@ -429,6 +429,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                       [count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name']\
                       [count])+str("_>")+str(NewDataFrame['Community Id'][count]); 
    """
+   AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State']\
+                      [count])+str(">")+str(NewDataFrame['Market ID'][count])+str(">")+str(NewDataFrame['Community Name']\
+                      [count])+str("_>")+str(NewDataFrame['Community Id'][count]); 
+   """                   
+   
+   """
    AdgroupNaming_conv=str(AdgroupNaming_conv).replace("40s","").replace("40'","").replace("40","").replace("45s","")\
       .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
       .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
