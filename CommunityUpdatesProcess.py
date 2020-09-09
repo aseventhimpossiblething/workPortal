@@ -413,6 +413,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Campaign_Name.append(Campaign_Nameing_Conv);
    
    communityName=str(NewDataFrame['Community Name'][count]);
+   communityName.replace("40s","").replace("40'","").replace("40","").replace("45s","")
       
    """ 
       .replace("40s","").replace("40'","").replace("40","").replace("45s","")\
