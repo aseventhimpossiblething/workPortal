@@ -356,14 +356,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
-            [count].replace(" ","-")+"/"+NewDataFrame['Community Name']\
+            [count].replace(" ","-")+"/"+communityName\
             [count].replace(" ","-")+"-by-"+NewDataFrame['Brand Name']\
             [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id']\
             [count])+"?refer=").lower()
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
             .replace("Lots","");
-  Keyword_conv=NewDataFrame['Community Name'][count].replace("  "," ")
+  Keyword_conv=communityName.replace("  "," ")
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
   
@@ -396,13 +396,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     if MatchType=="SB":
      URL_Struct1=URL_Struct1+"402"
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
-     Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=communityName
      MatchType_Conv="Broad"
      set_bid=.30;
     if MatchType=="SX":
      URL_Struct1=URL_Struct1+"401"
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
-     Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=communityName
      MatchType_Conv="Exact"
      set_bid=.65;
    if SearchChan=="bing":
@@ -412,13 +412,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     if MatchType=="SB":
      URL_Struct1=URL_Struct1+"202"
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
-     Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=communityName
      MatchType_Conv="Broad"
      set_bid=.40;
     if MatchType=="SX":
      URL_Struct1=URL_Struct1+"201"
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201")
-     Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=communityName
      MatchType_Conv="Exact"
      set_bid=.52;
     if MatchType=="SBMM":
@@ -531,7 +531,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Match_Type.append(MatchType_Conv)
    Status.append("Active")
    Bid.append(set_bid)
-   Title1A_Name_Conv=NewDataFrame['Community Name'][count]
+   Title1A_Name_Conv=communityName
    if len(Title1A_Name_Conv)>29:
     Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find("at")-1]
    if len(Title1A_Name_Conv)>29:
@@ -558,7 +558,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
         
    Title3A.append("Schedule a New Home Tour Today")
    PreTextA="Find your family a perfect New Home at \
-    "+str(NewDataFrame['Community Name'][count])+" in "+str(NewDataFrame['City']\
+    "+str(communityName)+" in "+str(NewDataFrame['City']\
     [count])+", "+str(NewDataFrame['State'][count])
     #print("---Alert PreTextA ---",PreTextA)
    
@@ -616,7 +616,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       #print(Keyword_conv);
       
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
-   community=str(NewDataFrame['Community Name'][count]).lower();
+   community=str(communityName).lower();
    
    lenCommunity=int(len(community));
    lenCity=int(len(city));
@@ -670,7 +670,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #print("City=",city)
    
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
-   community=str(NewDataFrame['Community Name'][count]).lower();
+   community=str(communityName).lower();
    if community.find(city)>-1:
    #if str(NewDataFrame['City'][count][:5]).lower().find(str(NewDataFrame['Community Name'][count]))>-1:
      print("City is in Community")
