@@ -325,9 +325,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                .replace("70s","").replace(" 70s ","").replace(" 70' ","").replace("75s","").replace(" 75s ","").replace(" 75' ","")\
                .replace("80s","").replace(" 80s ","").replace(" 80' ","").replace("85s","").replace(" 85s ","").replace(" 85 '","")\
                .replace("90s","").replace(" 90s ","").replace(" 90' ","").replace("95s","").replace(" 95s ","").replace(" 95' ","")\
-               .replace("100s","").replace(" 100s ","").replace(" 100' ","").replace("105s","").replace(" 105s ","")\  
-               .replace("Homesites","").replace("","lots").replace("-"," ").replace("_","").replace("40s","").replace("BYOL","")\
-               .replace("40'","").replace("40","").replace("45s","").replace(" Homesites ","").replace("homesites","").replace("()","").replace("byol","")\
+               .replace("100s","").replace(" 100s ","").replace(" 100' ","").replace("105s","").replace(" 105s ","").replace("Homesites","")\
+               .replace("","lots").replace("-"," ").replace("_","").replace("40s","").replace("BYOL","").replace("40'","").replace("40","")\
+               .replace("45s","").replace(" Homesites ","").replace("homesites","").replace("()","").replace("byol","")\
                .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","").replace("  ","").replace("ft.","")\
                .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","").replace("Coming Soon!","")\
                .replace("65'","").replace("65","").replace("70s","").replace("70'","").replace("70","").replace("75s","").replace("Coming Soon","")\
