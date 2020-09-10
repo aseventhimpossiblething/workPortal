@@ -822,6 +822,9 @@ def initialCommUpdatProcess():
            Altered.append(AlteredComName)
            #AlteredToBeDeDuped.append(AlteredComName)
            thisLoopCount+=1;
+     DedupedMultiples=list(dict.fromkeys(Multiples)) 
+     print("DedupedMultiples ",DedupedMultiples)
+     """      
      #for communityNames in Altered:
      #    print("Altered.count",Altered.count(communityNames));
      #AlteredToBeDeDuped
@@ -833,6 +836,7 @@ def initialCommUpdatProcess():
      print("Altered[1] ",Altered[1]) 
      print("Altered[2] ",Altered[2]) 
      print("Altered[9516] ",Altered[9516]) 
+     """
      return Multiples;    
  #CommunityNameDuplicateSpecialLoop(WorkingCommunities);       
      
@@ -875,7 +879,8 @@ def initialCommUpdatProcess():
   
   
  print(CommunityNameDuplicateSpecialLoop(WorkingCommunities))
- print(CommunityNameDuplicateSpecialLoop(WorkingCommunities).count('Dove Creek Dove Creek '))
+ print("CommunityNameDuplicateSpecialLoop(WorkingCommunities).count('Dove Creek Dove Creek ') ",CommunityNameDuplicateSpecialLoop(WorkingCommunities).count('Dove Creek Dove Creek '))
+ print("CommunityNameDuplicateSpecialLoop(WorkingCommunities).count('Dovlines house') ",CommunityNameDuplicateSpecialLoop(WorkingCommunities).count('Dovlines house'))
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
  return "finished"
