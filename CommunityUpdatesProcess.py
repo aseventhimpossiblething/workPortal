@@ -822,7 +822,7 @@ def initialCommUpdatProcess():
      print("len(cleanupFrame['Community Name']) ",len(cleanupFrame['Community Name']))
      print("len(Altered) ",len(Altered))      
      return "None";    
- CommunityNameDuplicateSpecialLoop(WorkingCommunities);       
+ #CommunityNameDuplicateSpecialLoop(WorkingCommunities);       
      
  
  
@@ -863,7 +863,7 @@ def initialCommUpdatProcess():
   
   
  
- print(CommunityNameDuplicateSpecialLoop(WorkingCommunities))
+ CommunityNameDuplicateSpecialLoop(WorkingCommunities)
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
  return "finished"
