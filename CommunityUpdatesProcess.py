@@ -824,8 +824,12 @@ def initialCommUpdatProcess():
      AlteredToBeDeDuped
      print("len(cleanupFrame['Community Name']) ",len(cleanupFrame['Community Name']))
      print("len(Altered) ",len(Altered))  
-     print("Altered.count(Austin) ",Altered.count("Austin"))  
-     print("len(Altered)[9517] ",len(Altered)[9517]) 
+     print("Altered.count(Austin) ",Altered.count("Austin")) 
+     #print("Altered.count(Austin) ",Altered.count("Austin"))
+     print("Altered[0] ",Altered[0]) 
+     print("Altered[1] ",Altered[1]) 
+     print("Altered[2] ",Altered[2]) 
+     print("Altered[9516] ",Altered[9516]) 
      return "None";    
  #CommunityNameDuplicateSpecialLoop(WorkingCommunities);       
      
