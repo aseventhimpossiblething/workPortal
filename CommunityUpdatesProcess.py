@@ -824,13 +824,15 @@ def initialCommUpdatProcess():
            Altered.append(AlteredComName)
            #AlteredToBeDeDuped.append(AlteredComName)
            thisLoopCount+=1;
-     DedupedMultiples=list(dict.fromkeys(Multiples)) 
-     print("len(Altered) ",len(Altered))  
-     print("len(Multiples) ",len(Multiples))
-     #print("DedupedMultiples.count() ",DedupedMultiples.count())
-     #print("len(DedupedMultiples) ",len(DedupedMultiples))
-     print("DedupedMultiples ",DedupedMultiples)      
-     cleanupFrame.drop(cleanupFrame.index[repeatedRows])
+     DedupedMultiples=list(dict.fromkeys(Multiples)); 
+     print("len(Altered) ",len(Altered));  
+     print("len(Multiples) ",len(Multiples));
+     print("DedupedMultiples.count() ",DedupedMultiples.count());
+     print("len(DedupedMultiples) ",len(DedupedMultiples));
+     #print("DedupedMultiples ",DedupedMultiples);      
+     DedupedCleanUP=cleanupFrame.drop(cleanupFrame.index[repeatedRows]);
+     print("len(cleanupFrame) ",len(cleanupFrame));
+     print("len(DedupedCleanUP) ",len(DedupedCleanUP)):
      """      
      #for communityNames in Altered:
      #    print("Altered.count",Altered.count(communityNames));
@@ -888,7 +890,7 @@ def initialCommUpdatProcess():
  #print(CommunityNameDuplicateSpecialLoop(WorkingCommunities))
  #print("CommunityNameDuplicateSpecialLoop(WorkingCommunities).count('Dove Creek Dove Creek ') ",CommunityNameDuplicateSpecialLoop(WorkingCommunities).count('Dove Creek Dove Creek '))
  #print("CommunityNameDuplicateSpecialLoop(WorkingCommunities).count('Dovlines house') ",CommunityNameDuplicateSpecialLoop(WorkingCommunities).count('Dovlines house'))
- #print("END OF ASYNC FILE LOAD.....................................................................")
+ print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
  return "finished"
 
