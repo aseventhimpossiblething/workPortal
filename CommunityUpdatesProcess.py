@@ -874,8 +874,8 @@ def initialCommUpdatProcess():
  
   
   
- 
  print(CommunityNameDuplicateSpecialLoop(WorkingCommunities))
+ print(CommunityNameDuplicateSpecialLoop(WorkingCommunities).count('Dove Creek Dove Creek '))
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
  return "finished"
