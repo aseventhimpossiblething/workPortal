@@ -824,28 +824,18 @@ def initialCommUpdatProcess():
            Altered.append(AlteredComName)
            #AlteredToBeDeDuped.append(AlteredComName)
            thisLoopCount+=1;
-     DedupedMultiples=list(dict.fromkeys(Multiples)); 
+     DedupedMultiples=list(dict.fromkeys(Multiples));
+     DedupedCleanUP=cleanupFrame.drop(cleanupFrame.index[repeatedRows]);
+     MPCFrame=cleanupFrame.iloc[repeatedRows];
+     
+     print("MPCFrame ",MPCFrame);
+     print("type(MPCFrame) ",type(MPCFrame));
      print("len(Altered) ",len(Altered));  
      print("len(Multiples) ",len(Multiples));
-     #print("DedupedMultiples.count() ",DedupedMultiples.count());
      print("len(DedupedMultiples) ",len(DedupedMultiples));
-     #print("DedupedMultiples ",DedupedMultiples);      
-     DedupedCleanUP=cleanupFrame.drop(cleanupFrame.index[repeatedRows]);
      print("len(cleanupFrame) ",len(cleanupFrame));
      print("len(DedupedCleanUP) ",len(DedupedCleanUP));
-     """      
-     #for communityNames in Altered:
-     #    print("Altered.count",Altered.count(communityNames));
-     #AlteredToBeDeDuped
-     print("len(cleanupFrame['Community Name']) ",len(cleanupFrame['Community Name']))
-     print("len(Altered) ",len(Altered))  
-     print("len(Multiples) ",len(Multiples)) 
-     print("Altered.count(Altered[0]) ",Altered.count(Altered[0]))
-     print("Altered[0] ",Altered[0]) 
-     print("Altered[1] ",Altered[1]) 
-     print("Altered[2] ",Altered[2]) 
-     print("Altered[9516] ",Altered[9516]) 
-     """
+   
      return Multiples;    
  #CommunityNameDuplicateSpecialLoop(WorkingCommunities);       
      
