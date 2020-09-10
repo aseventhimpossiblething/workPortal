@@ -817,6 +817,7 @@ def initialCommUpdatProcess():
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
            Altered.append(AlteredComName)
            thisLoopCount+=1;
+     return Altered    
  CommunityNameDuplicateSpecialLoop(WorkingCommunities);       
      
  
@@ -858,7 +859,7 @@ def initialCommUpdatProcess():
   
   
  
- 
+ print(CommunityNameDuplicateSpecialLoop(WorkingCommunities))
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
  return "finished"
