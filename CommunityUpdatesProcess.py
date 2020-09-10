@@ -832,7 +832,7 @@ def initialCommUpdatProcess():
      #print("DedupedMultiples ",DedupedMultiples);      
      DedupedCleanUP=cleanupFrame.drop(cleanupFrame.index[repeatedRows]);
      print("len(cleanupFrame) ",len(cleanupFrame));
-     print("len(DedupedCleanUP) ",len(DedupedCleanUP)):
+     print("len(DedupedCleanUP) ",len(DedupedCleanUP));
      """      
      #for communityNames in Altered:
      #    print("Altered.count",Altered.count(communityNames));
