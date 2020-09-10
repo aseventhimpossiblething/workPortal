@@ -447,9 +447,10 @@ def ind():
     #global domain;     
     #domainFavi=domain+"/favicon.png";
     #metrics=get_campaigns.googlemetrics;
-    #print("test fired")
+    print("test fired")
     if chckbdxcred().find("NULL")!=-1:
        return get_campaigns.googlemetrics;
+    
     #return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi,metrics=metrics);
     
 
