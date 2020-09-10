@@ -833,7 +833,7 @@ def initialCommUpdatProcess():
      print("Altered[1] ",Altered[1]) 
      print("Altered[2] ",Altered[2]) 
      print("Altered[9516] ",Altered[9516]) 
-     return "None";    
+     return Multiples;    
  #CommunityNameDuplicateSpecialLoop(WorkingCommunities);       
      
  
@@ -875,7 +875,7 @@ def initialCommUpdatProcess():
   
   
  
- CommunityNameDuplicateSpecialLoop(WorkingCommunities)
+ print(CommunityNameDuplicateSpecialLoop(WorkingCommunities))
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
  return "finished"
