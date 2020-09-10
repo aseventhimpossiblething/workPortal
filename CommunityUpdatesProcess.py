@@ -824,7 +824,7 @@ def initialCommUpdatProcess():
            Altered.append(AlteredComName)
            #AlteredToBeDeDuped.append(AlteredComName)
            thisLoopCount+=1;
-     DedupedMultiples=list(dict.fromkeys(Multiples)) 
+     DedupedMultiples=dict.fromkeys(Multiples) 
      print("len(Altered) ",len(Altered))  
      print("len(Multiples) ",len(Multiples)
      #print("DedupedMultiples.count() ",DedupedMultiples.count())
