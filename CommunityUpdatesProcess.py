@@ -816,6 +816,8 @@ def initialCommUpdatProcess():
                .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
+           if Altered.count(AlteredComName)>1:
+              print(AlteredComName," ",Altered.count(AlteredComName))
            Altered.append(AlteredComName)
            AlteredToBeDeDuped.append(AlteredComName)
            thisLoopCount+=1;
@@ -825,7 +827,7 @@ def initialCommUpdatProcess():
      print("len(cleanupFrame['Community Name']) ",len(cleanupFrame['Community Name']))
      print("len(Altered) ",len(Altered))  
      print("Altered.count(Austin) ",Altered.count("Austin")) 
-     #print("Altered.count(Austin) ",Altered.count("Austin"))
+     print("Altered.count(Altered[0]) ",Altered.count(Altered[0]))
      print("Altered[0] ",Altered[0]) 
      print("Altered[1] ",Altered[1]) 
      print("Altered[2] ",Altered[2]) 
