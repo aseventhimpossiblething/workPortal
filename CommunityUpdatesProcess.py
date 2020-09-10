@@ -781,7 +781,8 @@ def initialCommUpdatProcess():
  
  def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      Altered=[];
-     Multiples=[]
+     Multiples=[];
+     repeatedRows=[];
      thisLoopCount=0; 
      while thisLoopCount<len(cleanupFrame['Community Name']):
            AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
@@ -818,12 +819,14 @@ def initialCommUpdatProcess():
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
            if Altered.count(AlteredComName)>0:
               #print(AlteredComName," ",Altered.count(AlteredComName))
-              Multiples.append(AlteredComName)
+              Multiples.append(AlteredComName);
+              repeatedRows.append(thisLoopCount);
            Altered.append(AlteredComName)
            #AlteredToBeDeDuped.append(AlteredComName)
            thisLoopCount+=1;
      DedupedMultiples=list(dict.fromkeys(Multiples)) 
      print("DedupedMultiples ",DedupedMultiples)
+     cleanupFrame.drop(cleanupFrame.index[repeatedRows])
      """      
      #for communityNames in Altered:
      #    print("Altered.count",Altered.count(communityNames));
