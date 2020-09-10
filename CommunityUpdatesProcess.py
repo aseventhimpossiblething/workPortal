@@ -781,6 +781,7 @@ def initialCommUpdatProcess():
  
  def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      Altered=[];
+     AlteredToBeDeDuped=[]
      thisLoopCount=0; 
      while thisLoopCount<len(cleanupFrame['Community Name']):
            AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
@@ -816,11 +817,15 @@ def initialCommUpdatProcess():
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
            Altered.append(AlteredComName)
+           AlteredToBeDeDuped.append(AlteredComName)
            thisLoopCount+=1;
      #for communityNames in Altered:
-     #    print("Altered.count",Altered.count(communityNames)); 
+     #    print("Altered.count",Altered.count(communityNames));
+     AlteredToBeDeDuped
      print("len(cleanupFrame['Community Name']) ",len(cleanupFrame['Community Name']))
-     print("len(Altered) ",len(Altered))      
+     print("len(Altered) ",len(Altered))  
+     print("Altered.count(Austin) ",Altered.count("Austin"))  
+     print("len(Altered)[9517] ",len(Altered)[9517]) 
      return "None";    
  #CommunityNameDuplicateSpecialLoop(WorkingCommunities);       
      
