@@ -782,7 +782,7 @@ def initialCommUpdatProcess():
  def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      Altered=[];
      thisLoopCount=0; 
-     while thisLoopCount>len(cleanupFrame['Community Name']):
+     while thisLoopCount<len(cleanupFrame['Community Name']):
            AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
                .replace("50s","").replace(" 50s ","").replace(" 50' ","").replace("55s","").replace(" 55s ","").replace("55'","")\
                .replace("60s","").replace(" 60s ","").replace(" 60' ","").replace("65s","").replace(" 65s ","").replace(" 65' ","")\
