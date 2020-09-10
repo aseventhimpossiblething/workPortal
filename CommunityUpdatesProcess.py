@@ -817,10 +817,11 @@ def initialCommUpdatProcess():
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
            Altered.append(AlteredComName)
            thisLoopCount+=1;
-     for communityNames in Altered:
-         Altered.count(communityNames); 
-         
-     return len(Altered);    
+     #for communityNames in Altered:
+     #    print("Altered.count",Altered.count(communityNames)); 
+     print("len(cleanupFrame['Community Name']) ",len(cleanupFrame['Community Name']))
+     print("len(Altered) ",len(Altered))      
+     return "None";    
  CommunityNameDuplicateSpecialLoop(WorkingCommunities);       
      
  
