@@ -433,7 +433,7 @@ def inda():
     domainFavi=domain+"/favicon.png";
     metrics=get_campaigns.googlemetrics;
     print("spendtrack")
-    print(metrics)
+    #print(metrics)
     return render_template('SpendTrack.html',domain=domain,domainFav=domainFavi,metrics=metrics);
 
 
