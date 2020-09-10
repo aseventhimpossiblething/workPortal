@@ -820,11 +820,11 @@ def initialCommUpdatProcess():
               print(AlteredComName," ",Altered.count(AlteredComName))
               Multiples.append(AlteredComName)
            Altered.append(AlteredComName)
-           AlteredToBeDeDuped.append(AlteredComName)
+           #AlteredToBeDeDuped.append(AlteredComName)
            thisLoopCount+=1;
      #for communityNames in Altered:
      #    print("Altered.count",Altered.count(communityNames));
-     AlteredToBeDeDuped
+     #AlteredToBeDeDuped
      print("len(cleanupFrame['Community Name']) ",len(cleanupFrame['Community Name']))
      print("len(Altered) ",len(Altered))  
      print("Altered.count(Austin) ",Altered.count("Austin")) 
