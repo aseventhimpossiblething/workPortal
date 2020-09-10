@@ -827,7 +827,7 @@ def initialCommUpdatProcess():
      DedupedMultiples=list(dict.fromkeys(Multiples)); 
      print("len(Altered) ",len(Altered));  
      print("len(Multiples) ",len(Multiples));
-     print("DedupedMultiples.count() ",DedupedMultiples.count());
+     #print("DedupedMultiples.count() ",DedupedMultiples.count());
      print("len(DedupedMultiples) ",len(DedupedMultiples));
      #print("DedupedMultiples ",DedupedMultiples);      
      DedupedCleanUP=cleanupFrame.drop(cleanupFrame.index[repeatedRows]);
