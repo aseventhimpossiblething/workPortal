@@ -824,6 +824,7 @@ def initialCommUpdatProcess():
            if AlteredComNames.count(AlteredColNamesWithMultiples)>1:
               #print(AlteredComName," ",Altered.count(AlteredComName))
               MultiplesCommunityNames.append(AlteredComName);
+              MultiplesCommunityIds.append(cleanupFrame['Community id'])
               repeatedRows.append(thisLoopCount);
            AlteredComNames.append(AlteredComName)
            thisLoopCount+=1;
