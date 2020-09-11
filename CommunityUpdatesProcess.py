@@ -853,7 +853,7 @@ def initialCommUpdatProcess():
 
 
      #CommunityNameCleaner(cleanupFrame['Community Name'])
-     print("AlteredColNamesWithMultiples ",AlteredColNamesWithMultiples); 
+     #print("AlteredColNamesWithMultiples ",AlteredColNamesWithMultiples); 
      print("len(AlteredColNamesWithMultiples) ",len(AlteredColNamesWithMultiples));
      #print("CommunityNameCleaner(cleanupFrame[5]) ",CommunityNameCleaner[5]) 
       
@@ -900,6 +900,7 @@ def initialCommUpdatProcess():
            #AlteredComNames.append(AlteredComName)
            thisLoopCount+=1;
      DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
+     print("MultiplesCommunityNames ",MultiplesCommunityNames)
      
      countOfAppendToMultiplesDedupedRowNumbers=0;
      while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):
