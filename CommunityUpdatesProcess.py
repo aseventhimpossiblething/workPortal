@@ -821,7 +821,7 @@ def initialCommUpdatProcess():
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
            AlteredColNamesWithMultiples.append(AlteredComName);
-           if AlteredComNames.count(AlteredComName)>0:
+           if AlteredComNames.count(AlteredColNamesWithMultiples)>1:
               #print(AlteredComName," ",Altered.count(AlteredComName))
               MultiplesCommunityNames.append(AlteredComName);
               repeatedRows.append(thisLoopCount);
