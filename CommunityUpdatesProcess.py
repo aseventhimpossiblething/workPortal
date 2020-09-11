@@ -824,7 +824,7 @@ def initialCommUpdatProcess():
            AlteredComNames.append(AlteredComName)
            thisLoopCount+=1;
      DedupedMultiples=list(dict.fromkeys(Multiples));
-     AlteredComNames.find(DedupedMultiples[0]); 
+     AlteredComNames.index(DedupedMultiples[0]); 
      
      DedupedCleanUP=cleanupFrame.drop(cleanupFrame.index[repeatedRows]);
      newsubFrame=pandas.DataFrame(cleanupFrame.iloc[repeatedRows])
