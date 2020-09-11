@@ -843,14 +843,16 @@ def initialCommUpdatProcess():
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
  
  def CommunityNameDuplicateSpecialLoop(cleanupFrame):
-     AlteredColNamesWithMultiples=[]; 
+     AlteredColNamesWithMultiples=CommunityNameCleaner(cleanupFrame['Community Name'])
      AlteredComNames=[];
      MultiplesCommunityNames=[];
      MultiplesCommunityIds=[]
      MultiplesDedupedRowNumbers=[];
      repeatedRows=[];
      thisLoopCount=0; 
-     CommunityNameCleaner(cleanupFrame['Community Name'])
+     #CommunityNameCleaner(cleanupFrame['Community Name'])
+     print("AlteredColNamesWithMultiples ",AlteredColNamesWithMultiples); 
+     print("len(AlteredColNamesWithMultiples) ",len(AlteredColNamesWithMultiples));
      """
      while thisLoopCount<len(cleanupFrame['Community Name']):
            AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
