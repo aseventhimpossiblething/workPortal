@@ -971,7 +971,7 @@ def initialCommUpdatProcess():
            print("seems to work");
       return out;    
  
- CommunityNameCleaner([5,4,8,9]);
+ print(CommunityNameCleaner([5,4,8,9]));
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
  return "finished"
