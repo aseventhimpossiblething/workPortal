@@ -827,6 +827,7 @@ def initialCommUpdatProcess():
      DedupedMultiples=list(dict.fromkeys(Multiples));
      DedupedCleanUP=cleanupFrame.drop(cleanupFrame.index[repeatedRows]);
      MPCFrame=cleanupFrame.iloc[repeatedRows].drop_duplicates();
+     newsubFrame=cleanupFrame.iloc[0]
      
      print("cleanupFrame['Community Id'].drop_duplicates() ",cleanupFrame['Community Id'].drop_duplicates())
      print(repeatedRows)
@@ -839,6 +840,7 @@ def initialCommUpdatProcess():
      print("len(DedupedMultiples) ",len(DedupedMultiples));
      print("len(cleanupFrame) ",len(cleanupFrame));
      print("len(DedupedCleanUP) ",len(DedupedCleanUP));
+     print("newsubFrame ",newsubFrame)
    
      return Multiples;    
  #CommunityNameDuplicateSpecialLoop(WorkingCommunities);       
