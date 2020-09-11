@@ -831,6 +831,7 @@ def initialCommUpdatProcess():
      
      countOfAppendToMultiplesDedupedRowNumbers=0;
      while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):
+             print("while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):")
              RowOfDuplicate=AlteredColNamesWithMultiples.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]);
              CommIdOfDuplicate=cleanupFrame['Community Id'][RowOfComID]
              CommNameOfDuplicate=cleanupFrame['Community Name'][RowOfComID]
