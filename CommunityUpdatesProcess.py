@@ -787,6 +787,8 @@ def initialCommUpdatProcess():
      MultiplesDedupedRowNumbers=[];
      repeatedRows=[];
      thisLoopCount=0; 
+     for segments in cleanupFrame['Community Name']:
+         AlteredColNamesWithMultiples.append(segments);
      while thisLoopCount<len(cleanupFrame['Community Name']):
            AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
                .replace("50s","").replace(" 50s ","").replace(" 50' ","").replace("55s","").replace(" 55s ","").replace("55'","")\
@@ -820,7 +822,7 @@ def initialCommUpdatProcess():
                .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
-           AlteredColNamesWithMultiples.append(AlteredComName);
+           #AlteredColNamesWithMultiples.append(AlteredComName);
            if AlteredComNames.count(AlteredColNamesWithMultiples)>1:
               #print(AlteredComName," ",Altered.count(AlteredComName))
               MultiplesCommunityNames.append(AlteredComName);
@@ -832,7 +834,7 @@ def initialCommUpdatProcess():
      
      countOfAppendToMultiplesDedupedRowNumbers=0;
      while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):
-             print("while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):")
+             #print("while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):")
              RowOfDuplicate=AlteredColNamesWithMultiples.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]);
              CommIdOfDuplicate=cleanupFrame['Community Id'][RowOfComID]
              CommNameOfDuplicate=cleanupFrame['Community Name'][RowOfComID]
