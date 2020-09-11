@@ -782,7 +782,7 @@ def initialCommUpdatProcess():
  def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      AlteredComNames=[];
      MultiplesCommunityNames=[];
-     MultiplesDedupedRows=[];
+     MultiplesDedupedRowNumbers=[];
      repeatedRows=[];
      thisLoopCount=0; 
      while thisLoopCount<len(cleanupFrame['Community Name']):
@@ -825,9 +825,9 @@ def initialCommUpdatProcess():
            AlteredComNames.append(AlteredComName)
            thisLoopCount+=1;
      DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
-     countOfAppendToMultiplesDedupedRows=0;
+     countOfAppendToMultiplesDedupedRowNumbers=0;
      while countOfAppendToMultiplesDedupedRows<len(DedupedMultiplesCommunityNames):
-             MultiplesDedupedRows.append(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRows]);
+             MultiplesDedupedRowNumbers.append(countOfAppendToMultiplesDedupedRowNumbers);
              countOfAppendToMultiplesDedupedRows+=1;
           
      
@@ -841,8 +841,8 @@ def initialCommUpdatProcess():
      
      #MPCFrame=cleanupFrame.iloc[repeatedRows].drop_duplicates();
      
-     print("MultiplesDedupedRows ",MultiplesDedupedRows);
-     print("len(MultiplesDedupedRows) ",len(MultiplesDedupedRows));
+     print("MultiplesDedupedRowNumbers ",MultiplesDedupedRowNumbers);
+     print("len(MultiplesDedupedRowNumbers) ",len(MultiplesDedupedRowNumbers));
      
      #print("AlteredComNames.index(DedupedMultiples[0]);  ",AlteredComNames.index(DedupedMultiplesCommunityNames[0]));
      #print("DedupedMultiples[0] ",DedupedMultiplesCommunityNames[0]);
