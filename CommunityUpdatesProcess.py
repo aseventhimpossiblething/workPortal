@@ -833,7 +833,7 @@ def initialCommUpdatProcess():
      MPCFrame=cleanupFrame.iloc[repeatedRows].drop_duplicates();
      
      
-     print("AlteredComNames.find(DedupedMultiples[0]);  ",AlteredComNames.find(DedupedMultiples[0]));
+     print("AlteredComNames.find(DedupedMultiples[0]);  ",AlteredComNames.index(DedupedMultiples[0]));
     
      """
      print("cleanupFrame['Community Id'].drop_duplicates() ",cleanupFrame['Community Id'].drop_duplicates())
