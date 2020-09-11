@@ -821,8 +821,7 @@ def initialCommUpdatProcess():
               #print(AlteredComName," ",Altered.count(AlteredComName))
               Multiples.append(AlteredComName);
               repeatedRows.append(thisLoopCount);
-           Altered.append(AlteredComName)
-           #AlteredToBeDeDuped.append(AlteredComName)
+           AlteredComNames.append(AlteredComName)
            thisLoopCount+=1;
      DedupedMultiples=list(dict.fromkeys(Multiples));
      AlteredComNames.find(DedupedMultiples[0]); 
