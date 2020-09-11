@@ -783,7 +783,7 @@ def initialCommUpdatProcess():
      AlteredComNames=[];
      MultiplesCommunityNames=[];
      MultiplesDedupedRows=[];
-     #repeatedRows=[];
+     repeatedRows=[];
      thisLoopCount=0; 
      while thisLoopCount<len(cleanupFrame['Community Name']):
            AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
@@ -821,7 +821,7 @@ def initialCommUpdatProcess():
            if AlteredComNames.count(AlteredComName)>0:
               #print(AlteredComName," ",Altered.count(AlteredComName))
               MultiplesCommunityNames.append(AlteredComName);
-              #repeatedRows.append(thisLoopCount);
+              repeatedRows.append(thisLoopCount);
            AlteredComNames.append(AlteredComName)
            thisLoopCount+=1;
      DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
