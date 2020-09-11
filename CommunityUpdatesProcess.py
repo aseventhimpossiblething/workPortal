@@ -827,7 +827,7 @@ def initialCommUpdatProcess():
      DedupedMultiples=list(dict.fromkeys(Multiples));
      DedupedCleanUP=cleanupFrame.drop(cleanupFrame.index[repeatedRows]);
      MPCFrame=cleanupFrame.iloc[repeatedRows].drop_duplicates();
-     newsubFrame=cleanupFrame.iloc[0]
+     newsubFrame=pandas.DataFrame(cleanupFrame.iloc[repeatedRows])
      
      print("cleanupFrame['Community Id'].drop_duplicates() ",cleanupFrame['Community Id'].drop_duplicates())
      print(repeatedRows)
