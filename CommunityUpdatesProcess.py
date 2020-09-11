@@ -782,6 +782,7 @@ def initialCommUpdatProcess():
  def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      AlteredComNames=[];
      MultiplesCommunityNames=[];
+     MultiplesDedupedCommunityNames=[]
      MultiplesDedupedRowNumbers=[];
      repeatedRows=[];
      thisLoopCount=0; 
