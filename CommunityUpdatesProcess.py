@@ -834,7 +834,7 @@ def initialCommUpdatProcess():
           
      
           
-     print("AlteredComNames.iloc[MultiplesDedupedRowNumbers] ",AlteredComNames.iloc[MultiplesDedupedRowNumbers]); 
+     print("cleanupFrame.iloc[MultiplesDedupedRowNumbers]) ",cleanupFrame.iloc[MultiplesDedupedRowNumbers]); 
      
      
      DedupedCleanUP=cleanupFrame.drop(cleanupFrame.index[repeatedRows]);
