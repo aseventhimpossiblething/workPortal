@@ -825,9 +825,10 @@ def initialCommUpdatProcess():
            AlteredComNames.append(AlteredComName)
            thisLoopCount+=1;
      DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
+     
      countOfAppendToMultiplesDedupedRowNumbers=0;
      while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):
-             MultiplesDedupedRowNumbers.append(countOfAppendToMultiplesDedupedRowNumbers);
+             MultiplesDedupedRowNumbers.append(DedupedMultiplesCommunityNames);
              countOfAppendToMultiplesDedupedRowNumbers+=1;
           
      
