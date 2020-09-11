@@ -833,7 +833,7 @@ def initialCommUpdatProcess():
      #AlteredComNames.index(DedupedMultiplesCommunityNames[0]); 
      
      
-     DedupedCleanUP=cleanupFrame.drop(cleanupFrame.index[MultiplesDedupedRows]);
+     #DedupedCleanUP=cleanupFrame.drop(cleanupFrame.index[MultiplesDedupedRows]);
      #newsubFrame=pandas.DataFrame(cleanupFrame.iloc[repeatedRows])
      
      
