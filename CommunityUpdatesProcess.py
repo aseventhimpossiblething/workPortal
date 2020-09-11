@@ -781,8 +781,9 @@ def initialCommUpdatProcess():
  
  def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      AlteredComNames=[];
-     Multiples=[];
-     repeatedRows=[];
+     MultiplesCommunityNames=[];
+     MultiplesDedupedRows=[];
+     #repeatedRows=[];
      thisLoopCount=0; 
      while thisLoopCount<len(cleanupFrame['Community Name']):
            AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
@@ -819,23 +820,31 @@ def initialCommUpdatProcess():
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
            if AlteredComNames.count(AlteredComName)>0:
               #print(AlteredComName," ",Altered.count(AlteredComName))
-              Multiples.append(AlteredComName);
-              repeatedRows.append(thisLoopCount);
+              MultiplesCommunityNames.append(AlteredComName);
+              #repeatedRows.append(thisLoopCount);
            AlteredComNames.append(AlteredComName)
            thisLoopCount+=1;
-     DedupedMultiples=list(dict.fromkeys(Multiples));
-     AlteredComNames.index(DedupedMultiples[0]); 
+     DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
+     for elements in DedupedMultiplesCommunityNames:
+         MultiplesDedupedRows.append(elements);
+          
      
-     DedupedCleanUP=cleanupFrame.drop(cleanupFrame.index[repeatedRows]);
-     newsubFrame=pandas.DataFrame(cleanupFrame.iloc[repeatedRows])
+          
+     #AlteredComNames.index(DedupedMultiplesCommunityNames[0]); 
      
      
-     MPCFrame=cleanupFrame.iloc[repeatedRows].drop_duplicates();
+     DedupedCleanUP=cleanupFrame.drop(cleanupFrame.index[MultiplesDedupedRows]);
+     #newsubFrame=pandas.DataFrame(cleanupFrame.iloc[repeatedRows])
      
      
-     print("AlteredComNames.index(DedupedMultiples[0]);  ",AlteredComNames.index(DedupedMultiples[0]));
-     print("DedupedMultiples[0] ",DedupedMultiples[0]);
-     print("AlteredComNames[AlteredComNames.index(DedupedMultiples[0])] ",AlteredComNames[AlteredComNames.index(DedupedMultiples[0])]);
+     #MPCFrame=cleanupFrame.iloc[repeatedRows].drop_duplicates();
+     
+     print("MultiplesDedupedRows ",MultiplesDedupedRows);
+     print("len(MultiplesDedupedRows) ",len(MultiplesDedupedRows));
+     
+     #print("AlteredComNames.index(DedupedMultiples[0]);  ",AlteredComNames.index(DedupedMultiplesCommunityNames[0]));
+     #print("DedupedMultiples[0] ",DedupedMultiplesCommunityNames[0]);
+     #print("AlteredComNames[AlteredComNames.index(DedupedMultiples[0])] ",AlteredComNames[AlteredComNames.index(DedupedMultiplesCommunityNames[0])]);
      
      
      
