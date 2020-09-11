@@ -969,7 +969,7 @@ def initialCommUpdatProcess():
                 out.append(AlteredComName)
                 thisLoopCount+=1;
                 print("seems to work")
-     return out;    
+    return out;    
  
  CommunityNameCleaner([5,4,8,9]);
  print("END OF ASYNC FILE LOAD.....................................................................")
