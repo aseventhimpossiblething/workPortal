@@ -836,11 +836,20 @@ def initialCommUpdatProcess():
              countOfAppendToMultiplesDedupedRowNumbers+=1;
           
      
-          
+     DedupedComumityIds=pandas.DataFrame(MultiplesCommunityIds).drop_duplicates();
+     DedupedCommunitynames=pandas.DataFrame(MultiplesCommunityNames).drop_duplicates();
+     print("length=",len(MultiplesCommunityIds)," MultiplesCommunityIds=",MultiplesCommunityIds);
+     print("length=",len(DedupedCommnityId)," DedupedComunityIds=",DedupedCommnityIds);
+     print("length=",len(MultiplesCommunityNames)," MultiplesCommunityName=",MultiplesCommunityName); 
+     print("length=",len(DedupedCommunitynames)," DedupedCommunitynames=",DedupedCommunitynames);      
+           
+     
      print("cleanupFrame.iloc[MultiplesDedupedRowNumbers]) ",cleanupFrame.iloc[MultiplesDedupedRowNumbers]); 
      
      
      DedupedCleanUP=cleanupFrame.drop(cleanupFrame.index[repeatedRows]);
+     newsubFrame=pandas.DataFrame(cleanupFrame.iloc[MultiplesDedupedRowNumbers]);
+     
      newsubFrame=pandas.DataFrame(cleanupFrame.iloc[MultiplesDedupedRowNumbers]);
      
      
