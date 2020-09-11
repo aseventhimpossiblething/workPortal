@@ -932,7 +932,7 @@ def initialCommUpdatProcess():
  #print("CommunityNameDuplicateSpecialLoop(WorkingCommunities).count('Dovlines house') ",CommunityNameDuplicateSpecialLoop(WorkingCommunities).count('Dovlines house'))
  def CommunityNameCleaner(x):
       out=[]; 
-      thisLoopCount+=0;
+      thisLoopCount=0;
       while thisLoopCount<len(x):
            AlteredComName=str(x[thisLoopCount]).replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
                .replace("50s","").replace(" 50s ","").replace(" 50' ","").replace("55s","").replace(" 55s ","").replace("55'","")\
