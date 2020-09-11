@@ -70,7 +70,7 @@ def CommunityNameCleaner(x):
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ")
            out.append(AlteredComName)
            thisLoopCount+=1;
-           print("seems to work");
+           
       return out;    
  
 
@@ -850,9 +850,14 @@ def initialCommUpdatProcess():
      MultiplesDedupedRowNumbers=[];
      repeatedRows=[];
      thisLoopCount=0; 
+
+
      #CommunityNameCleaner(cleanupFrame['Community Name'])
      print("AlteredColNamesWithMultiples ",AlteredColNamesWithMultiples); 
      print("len(AlteredColNamesWithMultiples) ",len(AlteredColNamesWithMultiples));
+     print("CommunityNameCleaner(cleanupFrame[5]) ",CommunityNameCleaner[5]) 
+      
+      
      """
      while thisLoopCount<len(cleanupFrame['Community Name']):
            AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
@@ -889,8 +894,8 @@ def initialCommUpdatProcess():
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
      """
      """
-           AlteredColNamesWithMultiples.append(AlteredComName);
-           if AlteredComNames.count(AlteredColNamesWithMultiples)>1:
+     #AlteredColNamesWithMultiples.append(AlteredComName);
+     if AlteredComNames.count(AlteredColNamesWithMultiples)>1:
               #print(AlteredComName," ",Altered.count(AlteredComName))
               MultiplesCommunityNames.append(AlteredComName);
               MultiplesCommunityIds.append(cleanupFrame['Community id'])
@@ -940,6 +945,7 @@ def initialCommUpdatProcess():
      
      
      """
+     """ 
      print("cleanupFrame['Community Id'].drop_duplicates() ",cleanupFrame['Community Id'].drop_duplicates())
      print(repeatedRows)
      print("cleanupFrame ",cleanupFrame);
@@ -956,7 +962,7 @@ def initialCommUpdatProcess():
    
      #return Multiples;    
        
-     """
+     
  
  
  
@@ -1040,7 +1046,7 @@ def initialCommUpdatProcess():
            print("seems to work");
       return out;    
  """
- print(CommunityNameDuplicateSpecialLoop(WorkingCommunities));
+ CommunityNameDuplicateSpecialLoop(WorkingCommunities);
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
  return "finished"
