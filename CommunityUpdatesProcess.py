@@ -826,7 +826,7 @@ def initialCommUpdatProcess():
            thisLoopCount+=1;
      DedupedMultiples=list(dict.fromkeys(Multiples));
      DedupedCleanUP=cleanupFrame.drop(cleanupFrame.index[repeatedRows]);
-     MPCFrame=cleanupFrame.iloc[repeatedRows].drop_duplicates(subset=[6]);
+     MPCFrame=cleanupFrame.iloc[repeatedRows].drop_duplicates(subset=['Community Name']);
      
      print(repeatedRows)
      print("cleanupFrame ",cleanupFrame);
