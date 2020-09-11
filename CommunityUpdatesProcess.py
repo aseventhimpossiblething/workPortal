@@ -843,7 +843,8 @@ def initialCommUpdatProcess():
      print("length=",len(MultiplesCommunityIds)," MultiplesCommunityIds=",MultiplesCommunityIds);
      print("length=",len(DedupedComumityIds)," DedupedComumityIds=",DedupedComumityIds);
      print("length=",len(MultiplesCommunityNames)," MultiplesCommunityName=",MultiplesCommunityNames); 
-     print("length=",len(DedupedCommunitynames)," DedupedCommunitynames=",DedupedCommunitynames);      
+     print("length=",len(DedupedCommunitynames)," DedupedCommunitynames=",DedupedCommunitynames);  
+     print("length=",len(MultiplesDedupedRowNumbers),"MultiplesDedupedRowNumbers=",MultiplesDedupedRowNumbers);  
            
      
      print("cleanupFrame.iloc[MultiplesDedupedRowNumbers]) ",cleanupFrame.iloc[MultiplesDedupedRowNumbers]); 
