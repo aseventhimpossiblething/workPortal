@@ -866,7 +866,7 @@ def initialCommUpdatProcess():
      print("newsubFrame ",newsubFrame)
      """
    
-     return Multiples;    
+     #return Multiples;    
  #CommunityNameDuplicateSpecialLoop(WorkingCommunities);       
      
  
