@@ -842,7 +842,7 @@ def initialCommUpdatProcess():
      DedupedCommunitynames=pandas.DataFrame(MultiplesCommunityNames).drop_duplicates();
      print("length=",len(MultiplesCommunityIds)," MultiplesCommunityIds=",MultiplesCommunityIds);
      print("length=",len(DedupedComumityIds)," DedupedComumityIds=",DedupedComumityIds);
-     print("length=",len(MultiplesCommunityNames)," MultiplesCommunityName=",MultiplesCommunityName); 
+     print("length=",len(MultiplesCommunityNames)," MultiplesCommunityName=",MultiplesCommunityNames); 
      print("length=",len(DedupedCommunitynames)," DedupedCommunitynames=",DedupedCommunitynames);      
            
      
