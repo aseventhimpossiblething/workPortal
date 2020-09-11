@@ -850,7 +850,7 @@ def initialCommUpdatProcess():
      MultiplesDedupedRowNumbers=[];
      repeatedRows=[];
      thisLoopCount=0; 
-     CommunityNameCleaner(cleanupFrame)
+     CommunityNameCleaner(cleanupFrame['Community Name'])
      """
      while thisLoopCount<len(cleanupFrame['Community Name']):
            AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
