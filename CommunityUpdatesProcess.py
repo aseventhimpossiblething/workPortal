@@ -780,6 +780,7 @@ def initialCommUpdatProcess():
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
  
  def CommunityNameDuplicateSpecialLoop(cleanupFrame):
+     AlteredColNamesWithMultiples=[]; 
      AlteredComNames=[];
      MultiplesCommunityNames=[];
      MultiplesCommunityIds=[]
@@ -819,6 +820,7 @@ def initialCommUpdatProcess():
                .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
+           AlteredColNamesWithMultiples.append(AlteredComName);
            if AlteredComNames.count(AlteredComName)>0:
               #print(AlteredComName," ",Altered.count(AlteredComName))
               MultiplesCommunityNames.append(AlteredComName);
@@ -829,7 +831,7 @@ def initialCommUpdatProcess():
      
      countOfAppendToMultiplesDedupedRowNumbers=0;
      while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):
-             RowOfDuplicate=AlteredComNames.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]);
+             RowOfDuplicate=AlteredColNamesWithMultiples.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]);
              CommIdOfDuplicate=cleanupFrame['Community Id'][RowOfComID]
              CommNameOfDuplicate=cleanupFrame['Community Name'][RowOfComID]
              MultiplesDedupedRowNumbers.append(AlteredComNames.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]));
