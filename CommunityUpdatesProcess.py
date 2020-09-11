@@ -855,10 +855,10 @@ def initialCommUpdatProcess():
      #CommunityNameCleaner(cleanupFrame['Community Name'])
      print("AlteredColNamesWithMultiples ",AlteredColNamesWithMultiples); 
      print("len(AlteredColNamesWithMultiples) ",len(AlteredColNamesWithMultiples));
-     print("CommunityNameCleaner(cleanupFrame[5]) ",CommunityNameCleaner[5]) 
+     #print("CommunityNameCleaner(cleanupFrame[5]) ",CommunityNameCleaner[5]) 
       
       
-     """
+     
      while thisLoopCount<len(cleanupFrame['Community Name']):
            AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
                .replace("50s","").replace(" 50s ","").replace(" 50' ","").replace("55s","").replace(" 55s ","").replace("55'","")\
@@ -892,8 +892,8 @@ def initialCommUpdatProcess():
                .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
-     """
-     """
+     
+    
      #AlteredColNamesWithMultiples.append(AlteredComName);
      if AlteredComNames.count(AlteredColNamesWithMultiples)>1:
               #print(AlteredComName," ",Altered.count(AlteredComName))
@@ -944,8 +944,8 @@ def initialCommUpdatProcess():
      
      
      
-     """
-     """ 
+     
+     
      print("cleanupFrame['Community Id'].drop_duplicates() ",cleanupFrame['Community Id'].drop_duplicates())
      print(repeatedRows)
      print("cleanupFrame ",cleanupFrame);
@@ -958,7 +958,7 @@ def initialCommUpdatProcess():
      print("len(cleanupFrame) ",len(cleanupFrame));
      print("len(DedupedCleanUP) ",len(DedupedCleanUP));
      print("newsubFrame ",newsubFrame)
-     """
+     
    
      #return Multiples;    
        
