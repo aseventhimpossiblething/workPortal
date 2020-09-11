@@ -828,7 +828,7 @@ def initialCommUpdatProcess():
      countOfAppendToMultiplesDedupedRowNumbers=0;
      while countOfAppendToMultiplesDedupedRows<len(DedupedMultiplesCommunityNames):
              MultiplesDedupedRowNumbers.append(countOfAppendToMultiplesDedupedRowNumbers);
-             countOfAppendToMultiplesDedupedRows+=1;
+             countOfAppendToMultiplesDedupedRowNumbers+=1;
           
      
           
