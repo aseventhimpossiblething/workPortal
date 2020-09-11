@@ -782,7 +782,7 @@ def initialCommUpdatProcess():
  def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      AlteredComNames=[];
      MultiplesCommunityNames=[];
-     MultiplesDedupedCommunityNames=[]
+     #MultiplesDedupedCommunityNames=[]
      MultiplesDedupedRowNumbers=[];
      repeatedRows=[];
      thisLoopCount=0; 
@@ -829,7 +829,7 @@ def initialCommUpdatProcess():
      
      countOfAppendToMultiplesDedupedRowNumbers=0;
      while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):
-             AlteredComNames.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]);
+             #AlteredComNames.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]);
              MultiplesDedupedRowNumbers.append(AlteredComNames.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]));
              countOfAppendToMultiplesDedupedRowNumbers+=1;
           
