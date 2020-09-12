@@ -853,7 +853,7 @@ def initialCommUpdatProcess():
 
 
      #CommunityNameCleaner(cleanupFrame['Community Name'])
-     print("AlteredColNamesWithMultiples ",AlteredColNamesWithMultiples); 
+     print("AlteredColNamesWithMultiples.count('One Central Park') ",AlteredColNamesWithMultiples.count('One Central Park')); 
      print("len(AlteredColNamesWithMultiples) ",len(AlteredColNamesWithMultiples));
      #print("CommunityNameCleaner(cleanupFrame[5]) ",CommunityNameCleaner[5]) 
       
