@@ -966,7 +966,7 @@ def initialCommUpdatProcess():
      topCleaned['URL Signal']=TopUrlGen(topCleaned);
      BottomCleaned=cleanupFrame.iloc[MultiplesDedupedRowNumbers];
      BottomCleaned=BottomCleaned.drop_duplicates();
-     BottomCleaned['URL Signal']=BottomUrlGen(BottomCleaned) 
+     BottomCleaned['URL Signal']=BottomUrlGen(BottomCleaned); 
      UnitedFrame=topCleaned.append(BottomCleaned); 
            
      url='https://www.newhomesource.com/community/fl/land-o-lakes/lakeshore-ranch-by-william-ryan-homes/90385?refer=gppc403'
