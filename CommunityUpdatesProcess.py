@@ -929,7 +929,7 @@ def initialCommUpdatProcess():
          print("topCleaned.iloc[222]['State'] ",topCleaned.iloc[222]['State'])  
          print("topCleaned.iloc[223] ",topCleaned.iloc[223]) 
          print("topCleaned.iloc[223][State] ",topCleaned.iloc[223]['State'])    
-         """
+         
          while cntr<len(topCleaned['Community Name']):
                print(" - ");     
                #print(topCleaned['Community Name'][cntr]," - ",cntr);     
@@ -938,7 +938,7 @@ def initialCommUpdatProcess():
                print("topCleaned.iloc[cntr] ",topCleaned.iloc[cntr])   
                print(" - "); 
                print("len(topCleaned['Community Name']) ",len(topCleaned['Community Name']))
-               urlsAssembly='https://www.newhomesource.com/community/'
+               urlsAssembly='https://www.newhomesource.com/community/'+topCleaned.iloc[223]['State']
                           #+str(topCleaned['State'][cntr])
                           #+"/"+topCleaned['City'][cntr]
                           #.replace(" ","-")+"/"+topCleaned['Community Name']\
@@ -954,7 +954,7 @@ def initialCommUpdatProcess():
          
                NewUrls.append(urlsAssembly); 
                cntr+=1;
-         """    
+           
          return NewUrls;
 
 
