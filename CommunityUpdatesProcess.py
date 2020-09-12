@@ -939,7 +939,7 @@ def initialCommUpdatProcess():
                #print(" - "); 
                #print("len(topCleaned['Community Name']) ",len(topCleaned['Community Name']))
                urlsAssembly=str('https://www.newhomesource.com/community/'+topCleaned.iloc[cntr]['State']+topCleaned.iloc[cntr]['City']+topCleaned.iloc[cntr]['Community Name']+topCleaned.iloc[cntr]['Brand Name']+str(topCleaned.iloc[cntr]['Community Id'])+"?refer=").lower()
-                          #.replace(" ","-")replace(" ","-")         
+                          #.replace(" ","-")replace(" ","-").replace(" ","-")         
                           #+str(topCleaned['State'][cntr])
                           #+"/"+topCleaned['City'][cntr]
                           #.replace(" ","-")+"/"+topCleaned['Community Name']\
@@ -949,7 +949,7 @@ def initialCommUpdatProcess():
                           #.lower() ;
                   
                         
-               urlsAssembly=urlsAssembly.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
+               urlsAssembly=urlsAssembly.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                         .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
                         .replace("Lots","");
          
