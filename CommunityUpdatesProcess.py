@@ -853,7 +853,7 @@ def initialCommUpdatProcess():
 
 
      #CommunityNameCleaner(cleanupFrame['Community Name'])
-     #print("AlteredColNamesWithMultiples ",AlteredColNamesWithMultiples); 
+     print("AlteredColNamesWithMultiples ",AlteredColNamesWithMultiples); 
      print("len(AlteredColNamesWithMultiples) ",len(AlteredColNamesWithMultiples));
      #print("CommunityNameCleaner(cleanupFrame[5]) ",CommunityNameCleaner[5]) 
       
@@ -892,8 +892,8 @@ def initialCommUpdatProcess():
                .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
-           print("Cleaner Main Loop is running ----------------------------------------")
-           print("AlteredColNamesWithMultiples.count(AlteredComNames) ",AlteredColNamesWithMultiples.count(AlteredComNames)) 
+           #print("Cleaner Main Loop is running ----------------------------------------")
+           #print("AlteredColNamesWithMultiples.count(AlteredComNames) ",AlteredColNamesWithMultiples.count(AlteredComNames)) 
            #print(AlteredComNames," len=",len(AlteredComNames)); 
            if AlteredColNamesWithMultiples.count(AlteredComNames)>1:
               #print(AlteredComNames," len=",len(AlteredComNames));    
