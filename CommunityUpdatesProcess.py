@@ -900,13 +900,13 @@ def initialCommUpdatProcess():
               #print(AlteredComNames," len=",len(AlteredComNames));    
               #print("Checking if statement to push");
               MultiplesCommunityNames.append(AlteredComName);
-              print("passing-----MultiplesCommunityNames.append(AlteredComName)")
+              #print("passing-----MultiplesCommunityNames.append(AlteredComName)")
               MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])
-              #print("passing----- MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])") 
+              print("passing----- MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])") 
               repeatedRows.append(thisLoopCount);
-              #print("Almost the end of loop except for counter")
+              print("Almost the end of loop except for counter")
            thisLoopCount+=1;
-     #print("exit loop")
+     print("exit loop")
      DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
      #print("MultiplesCommunityNames ",MultiplesCommunityNames)
      
@@ -916,7 +916,12 @@ def initialCommUpdatProcess():
              RowOfDuplicate=AlteredColNamesWithMultiples.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]);
              CommIdOfDuplicate=cleanupFrame['Community Id'][RowOfDuplicate]
              CommNameOfDuplicate=cleanupFrame['Community Name'][RowOfDuplicate]
+             CommunityName=DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]
+             """     
+             AlteredComNames.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers])
              MultiplesDedupedRowNumbers.append(AlteredComNames.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]));
+             """
+             print(" MultiplesDedupedRowNumbers ",MultiplesDedupedRowNumbers)
              countOfAppendToMultiplesDedupedRowNumbers+=1;
           
      
