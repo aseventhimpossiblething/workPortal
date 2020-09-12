@@ -927,7 +927,9 @@ def initialCommUpdatProcess():
                urlsAssembly=str('https://www.newhomesource.com/community/'+topCleaned['State']\
                           [cntr]+"/"+topCleaned['City'][cntr].replace(" ","-")+"/"+topCleaned['Community Name']\
                           [cntr].replace(" ","-")+"-by-"+topCleaned['Brand Name'][cntr].replace(" ","-")+"/"\
-                          +str(topCleaned['Community Id'][cntr])+"?refer=")\
+                          +str(topCleaned['Community Id']\
+                          [cntr])\
+                          +"?refer=")\
                           .lower() ;
                urlsAssembly=urlsAssembly.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                         .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
