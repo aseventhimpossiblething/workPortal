@@ -945,8 +945,8 @@ def initialCommUpdatProcess():
      topCleaned=cleanupFrame.drop(repeatedRows);          
      topCleaned=topCleaned.drop_duplicates();
      topCleaned['Final URL']=TopUrlGen(topCleaned);
-     print("topCleaned[0]",topCleaned[0]);
-     print("topCleaned[100]",topCleaned[100]); 
+     print("topCleaned.iloc[0]",topCleaned.iloc[0]);
+     print("topCleaned.iloc[100]",topCleaned.iloc[100]); 
      print("len(topCleaned[State])",len(topCleaned['State']));  
      print("len(topCleaned[FinalURL])",len(topCleaned['Final URL']));  
         
