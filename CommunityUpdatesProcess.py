@@ -935,7 +935,7 @@ def initialCommUpdatProcess():
       
      print("topCleaned ",topCleaned);
      print("BottomCleaned ",BottomCleaned);
-     #print("MultiplesDedupedRowNumber ",MultiplesDedupedRowNumber) 
+     print("MultiplesDedupedRowNumbers ",MultiplesDedupedRowNumbers) 
      
      #DedupedComumityIds=pandas.DataFrame(MultiplesCommunityIds).drop_duplicates();
      #DedupedCommunitynames=pandas.DataFrame(MultiplesCommunityNames).drop_duplicates();
