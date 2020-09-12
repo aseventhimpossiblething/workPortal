@@ -901,7 +901,7 @@ def initialCommUpdatProcess():
               print("Checking if statement to push");
               MultiplesCommunityNames.append(AlteredComName);
               print("passing-----MultiplesCommunityNames.append(AlteredComName)")
-              MultiplesCommunityIds.append(cleanupFrame['Community id'][thisLoopCount])
+              MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])
               print("passing----- MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])") 
               repeatedRows.append(thisLoopCount);
               print("Almost the end of loop except for counter")
