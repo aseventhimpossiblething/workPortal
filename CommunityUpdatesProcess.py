@@ -92,9 +92,9 @@ def UrlGen(topCleaned,MPC):
                 
                if MPC=="Default":
                   NewUrls.append(MPC);
-                  return NewUrls
-               print("URL_Struct1 = ",URL_Struct1);   
-               NewUrls.append(URL_Struct1); 
+               if MPC!="Default":   
+                  print("URL_Struct1 = ",URL_Struct1);   
+                  NewUrls.append(URL_Struct1); 
                cntr+=1;
            
          return NewUrls;
