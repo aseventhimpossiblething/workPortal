@@ -925,7 +925,7 @@ def initialCommUpdatProcess():
          cntr=0;
          #print(topCleaned['Community Name'].sort())
          print("topCleaned['Community Name'][222] ",topCleaned['Community Name'][222])  
-         print("topCleaned['Community Name'][223] ",topCleaned['Community Name'][223]) 
+         #print("topCleaned['Community Name'][223] ",topCleaned['Community Name'][223]) 
          print("topCleaned.iloc[222] ",topCleaned.iloc[222])  
          print("topCleaned.iloc[223] ",topCleaned.iloc[223])   
          """   
