@@ -919,17 +919,37 @@ def initialCommUpdatProcess():
              #print(" MultiplesDedupedRowNumbers ",MultiplesDedupedRowNumbers)
              countOfAppendToMultiplesDedupedRowNumbers+=1;
       
-     #for segments in  
+           
+     def TopUrlGen(topCleaned):
+         NewUrls=[] 
+         cntr=0;
+         while cntr<len(topCleaned['Community Name']):
+               urlsAssembly=str('https://www.newhomesource.com/community/'+topCleaned['State']\
+                          [cntr]+"/"+topCleaned['City'][cntr].replace(" ","-")+"/"+topCleaned['Community Name']\
+                          [cntr].replace(" ","-")+"-by-"+topCleaned['Brand Name']\
+                          [cntr].replace(" ","-")+"/"+str(topCleaned['Community Id'][cntr])+"?refer=").lower() ;
+               urlsAssembly=urlsAssembly.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
+                        .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
+                        .replace("Lots","");
+               cntr+=1;
+         return NewUrls;
+
+
+
      topCleaned=cleanupFrame.drop(repeatedRows);          
      topCleaned=topCleaned.drop_duplicates();
+     topCleaned['Final URL']=TopUrlGen(topCleaned);
+     print("topCleaned[0]",topCleaned[0]);
+     print("topCleaned[100]",topCleaned[100]); 
+     print("len(topCleaned[State])",len(topCleaned['State']));  
+     print("len(topCleaned[FinalURL])",len(topCleaned['Final URL']));  
+        
+      
      BottomCleaned=cleanupFrame.iloc[MultiplesDedupedRowNumbers];
      BottomCleaned=BottomCleaned.drop_duplicates();
-     UnitedFrame=topCleaned.append(BottomCleaned);
+     #UnitedFrame=topCleaned.append(BottomCleaned);
       
-     cntr=0;
-     while cntr<len(topCleaned['Community Name']):
-         urlsAssembly='https://www.newhomesource.com/community/'+topCleaned['State'][cntr]+topCleaned['City'][cntr] ;
-      
+   
       
      url='https://www.newhomesource.com/community/fl/land-o-lakes/lakeshore-ranch-by-william-ryan-homes/90385?refer=gppc403'
      url='https://www.newhomesource.com/community/' 
@@ -937,7 +957,7 @@ def initialCommUpdatProcess():
       
      print("topCleaned ",topCleaned);
      print("BottomCleaned ",BottomCleaned);
-     print("UnitedFrame ",UnitedFrame); 
+     #print("UnitedFrame ",UnitedFrame); 
      
      #DedupedComumityIds=pandas.DataFrame(MultiplesCommunityIds).drop_duplicates();
      #DedupedCommunitynames=pandas.DataFrame(MultiplesCommunityNames).drop_duplicates();
