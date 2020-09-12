@@ -282,15 +282,7 @@ def filterNonParticipators(theFrame):
   icount0+=1; 
   
  theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name'])
- #print("Length theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name']) ",len(theFrame))
- 
- 
- """
- print("New Loop to check Community against city  ");
- CommunityVsCityCount=0;
- while CommunityVsCityCount<len(theFrame['City']):
-  str(theFrame['City'][CommunityVsCityCount]).find
- """ 
+
  
 
   
@@ -619,10 +611,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   
 
    if str(Keyword_conv[len(Keyword_conv)-1])=="+":
-          print("Keyword Push ",Keyword_conv); 
-          print("Keyword Length ",len(Keyword_conv));
-          print("Keyword last Character ",Keyword_conv[len(Keyword_conv)-1]);
-          print("Keyword last Character ",Keyword_conv[:len(Keyword_conv)-1])
+          #print("Keyword Push ",Keyword_conv); 
+          #print("Keyword Length ",len(Keyword_conv));
+          #print("Keyword last Character ",Keyword_conv[len(Keyword_conv)-1]);
+          #print("Keyword last Character ",Keyword_conv[:len(Keyword_conv)-1])
           Keyword_conv=Keyword_conv[:len(Keyword_conv)-1]
    Keyword.append(Keyword_conv);   
      
@@ -638,11 +630,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    community=str(communityName).lower();
    if community.find(city)>-1:
    #if str(NewDataFrame['City'][count][:5]).lower().find(str(NewDataFrame['Community Name'][count]))>-1:
-     print("City is in Community")
+     #print("City is in Community")
      #print("City found in community","City = ",NewDataFrame['City'][count],"::: Community = ",NewDataFrame['Community Name'][count]);
-     print(":::City found in community","City = ",city,"::: Community Name = ",community);
+     #print(":::City found in community","City = ",city,"::: Community Name = ",community);
      label=label+";City Name as Part of Community Name"
-     print("----------------------------------------------------------------------------------------------------------------------------")
+   
    
    
    Label.append(label);
