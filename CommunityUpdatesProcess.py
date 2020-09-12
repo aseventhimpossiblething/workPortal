@@ -78,8 +78,9 @@ def UrlGen(topCleaned,MPC):
          NewUrls=[] 
          cntr=0;
          while cntr<len(topCleaned['Community Name']):
-                
-               URL_Struct1="https://www.newhomesource.com/communities/"+NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]+"-area?communityname=";
+                  
+               Name=str(topCleanediloc[cntr]['Community Name']).replace(" ","%"); 
+               URL_Struct1="https://www.newhomesource.com/communities/"+topCleaned['State'][count]+"/"+topCleaned['City'][count]+"-area?communityname=";
                #URL_Struct1=str("https://www.newhomesource.com/communities/"+NewDataFrame.iloc[cntr]['State']+"/"+NewDataFrame.iloc[cntr]['City']+"-area?communityname="                
                """               
                .replace(" ","-")+"/"+communityName\
