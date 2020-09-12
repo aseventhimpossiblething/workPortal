@@ -81,16 +81,13 @@ def UrlGen(topCleaned,MPC):
                   
                Name=str(topCleaned.iloc[cntr]['Community Name']).replace(" ","%"); 
                #URL_Struct1="https://www.newhomesource.com/communities/"+topCleaned['State'][count]+"/"+topCleaned['City'][count]+"-area?communityname=";
-               URL_Struct1=str("https://www.newhomesource.com/communities/"+topCleaned.iloc[cntr]['State']+"/"+topCleaned.iloc[cntr]['City']+"-area?communityname="+topCleaned.iloc[cntr]['Community Name']                
-               """               
-               .replace(" ","-")+"/"+communityName\
-               .replace(" ","-")+"-by-"+NewDataFrame['Brand Name'][count]\
-               .replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower()
+               URL_Struct1=str("https://www.newhomesource.com/communities/"+topCleaned.iloc[cntr]['State']+"/"+topCleaned.iloc[cntr]['City']+"-area?communityname="+topCleaned.iloc[cntr]['Community Name']).lower()                
+         
                  
-               URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
+               URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
                .replace("Lots","");
-               """ 
+                
                if MPC=="MPC":
                   MPC=URL_Struct1;             
                NewUrls.append(MPC); 
