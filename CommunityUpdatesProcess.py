@@ -848,6 +848,7 @@ def initialCommUpdatProcess():
      MultiplesCommunityNames=[];
      MultiplesCommunityIds=[]
      MultiplesDedupedRowNumbers=[];
+     FinalCommmunityNames=[]:
      repeatedRows=[];
      thisLoopCount=0; 
 
@@ -933,7 +934,7 @@ def initialCommUpdatProcess():
      #print("length=",len(MultiplesCommunityNames)," MultiplesCommunityName=",MultiplesCommunityNames); 
      print("length=",len(DedupedCommunitynames)," DedupedCommunitynames=",DedupedCommunitynames);  
      print("length=",len(MultiplesDedupedRowNumbers),"MultiplesDedupedRowNumbers=",MultiplesDedupedRowNumbers);  
-     print("len(DedupedMultiplesCommunityNames) ",len(DedupedMultiplesCommunityNames))     
+     #print("len(DedupedMultiplesCommunityNames) ",len(DedupedMultiplesCommunityNames))     
      
      print("cleanupFrame.iloc[MultiplesDedupedRowNumbers]) ",cleanupFrame.iloc[MultiplesDedupedRowNumbers]); 
      
