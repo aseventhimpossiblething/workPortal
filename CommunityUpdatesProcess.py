@@ -80,8 +80,8 @@ def UrlGen(topCleaned,MPC):
          while cntr<len(topCleaned['Community Name']):
                   
                Name=str(topCleaned.iloc[cntr]['Community Name']).replace(" ","%"); 
-               URL_Struct1="https://www.newhomesource.com/communities/"+topCleaned['State'][count]+"/"+topCleaned['City'][count]+"-area?communityname=";
-               #URL_Struct1=str("https://www.newhomesource.com/communities/"+topCleaned.iloc[cntr]['State']+"/"+topCleaned.iloc[cntr]['City']+"-area?communityname="                
+               #URL_Struct1="https://www.newhomesource.com/communities/"+topCleaned['State'][count]+"/"+topCleaned['City'][count]+"-area?communityname=";
+               URL_Struct1=str("https://www.newhomesource.com/communities/"+topCleaned.iloc[cntr]['State']+"/"+topCleaned.iloc[cntr]['City']+"-area?communityname="+topCleaned.iloc[cntr]['Community Name']                
                """               
                .replace(" ","-")+"/"+communityName\
                .replace(" ","-")+"-by-"+NewDataFrame['Brand Name'][count]\
