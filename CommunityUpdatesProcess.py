@@ -929,11 +929,13 @@ def initialCommUpdatProcess():
                   
      topCleaned=cleanupFrame.drop(repeatedRows)          
      topCleaned=topCleaned.drop_duplicates()
-     BottomCleaned=cleanupFrame.iloc(MultiplesDedupedRowNumbers)
-     BottomCleaned=BottomCleaned.drop_duplicates()
+     #BottomCleaned=cleanupFrame.iloc(MultiplesDedupedRowNumbers)
+     #BottomCleaned=BottomCleaned.drop_duplicates()
+      
       
      print("topCleaned ",topCleaned);
-     print("BottomCleaned ",BottomCleaned);
+     #print("BottomCleaned ",BottomCleaned);
+     print("MultiplesDedupedRowNumber ",MultiplesDedupedRowNumber) 
      
      #DedupedComumityIds=pandas.DataFrame(MultiplesCommunityIds).drop_duplicates();
      #DedupedCommunitynames=pandas.DataFrame(MultiplesCommunityNames).drop_duplicates();
