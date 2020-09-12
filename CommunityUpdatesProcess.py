@@ -514,11 +514,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   
    
   URL_Struct1=str("https://www.newhomesource.com/community/"\
-            +NewDataFrame['State'][count]+"/"+NewDataFrame['City']\
-            [count].replace(" ","-")+"/"+communityName\
-            .replace(" ","-")+"-by-"+NewDataFrame['Brand Name']\
-            [count].replace(" ","-")+"/"+str(NewDataFrame['Community Id']\
-            [count])+"?refer=").lower()
+            +NewDataFrame.iloc[count]['State']+"/"+NewDataFrame.iloc[count]['City']\
+            .replace(" ","-")+"/"+communityName\
+            .replace(" ","-")+"-by-"+NewDataFrame.iloc[count]['Brand Name']\
+            .replace(" ","-")+"/"+str(NewDataFrame.iloc[count]['Community Id'])+"?refer=").lower()
   
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
@@ -569,7 +568,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      set_bid=.65;
    if SearchChan=="bing":
     URL_Struct1=URL_Struct1+"msm"
-    Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
+    Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame.iloc[count]['Market ID']]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     if MatchType=="SB":
      URL_Struct1=URL_Struct1+"202"
@@ -607,8 +606,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
 
 
    
-   AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID']\
-                      [count])+str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
+   AdgroupNaming_conv=str(NewDataFrame.iloc[count]['City'])+str("_")+str(NewDataFrame.iloc[count]['State'])+str(">")+str(NewDataFrame.iloc[count]['Market ID'])\
+                      +str(">")+communityName+str("_>")+str(NewDataFrame.iloc[count]['Community Id']);
 
    
    
@@ -646,13 +645,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
         
    Title3A.append("Schedule a New Home Tour Today")
    PreTextA="Find your family a perfect New Home at \
-    "+str(communityName)+" in "+str(NewDataFrame['City']\
-    [count])+", "+str(NewDataFrame['State'][count])
+    "+str(communityName)+" in "+str(NewDataFrame.iloc[count]['City'])\
+      +", "+str(NewDataFrame.iloc[count]['State'])
     
    
    if len(PreTextA)>89:
-    PreTextA="Find your family a perfect New Home at "+str(NewDataFrame['Community Name']\
-                                                           [count])+" in "+str(NewDataFrame['City'][count])
+    PreTextA="Find your family a perfect New Home at "+str(NewDataFrame.iloc[count]['Community Name'])\
+             +" in "+str(NewDataFrame.iloc[count]['City'])
     
    
    if len(PreTextA)>89:
@@ -663,7 +662,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    TextA.append(PreTextA);
    TextB.append(PreTextA+"!");
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
-   Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
+   Path1A_conv=NewDataFrame.iloc[count]['City'].replace(" ","-")
    if len(Path1A_conv)>15:
     Path1A_conv=Path1A_conv.replace("-","")
     Path1A_conv=Path1A_conv.replace("Village","Villa")
@@ -703,15 +702,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       Keyword_conv=Keyword_conv+" Community"
      
       
-   city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
+   city=str(NewDataFrame.iloc[count]['City']).lower().replace("-"," ").replace("_"," ").replace(","," ");
    community=str(communityName).lower();
    
-    
-    
-    
-      
-  
-
    if str(Keyword_conv[len(Keyword_conv)-1])=="+":
           #print("Keyword Push ",Keyword_conv); 
           #print("Keyword Length ",len(Keyword_conv));
@@ -728,17 +721,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
 
    
    
-   city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
+   city=str(NewDataFrame.iloc[count]['City']).lower().replace("-"," ").replace("_"," ").replace(","," ");
    community=str(communityName).lower();
    if community.find(city)>-1:
-   #if str(NewDataFrame['City'][count][:5]).lower().find(str(NewDataFrame['Community Name'][count]))>-1:
-     #print("City is in Community")
-     #print("City found in community","City = ",NewDataFrame['City'][count],"::: Community = ",NewDataFrame['Community Name'][count]);
-     #print(":::City found in community","City = ",city,"::: Community Name = ",community);
      label=label+";City Name as Part of Community Name"
-   
-   
-   
+  
    Label.append(label);
   except:
    NewDataFrame=NewDataFrame.drop([count])
