@@ -923,6 +923,9 @@ def initialCommUpdatProcess():
      def TopUrlGen(topCleaned):
          NewUrls=[] 
          cntr=0;
+         print(topCleaned['Community Name'].sort())
+         print("topCleaned['Community Name'][222] ",topCleaned['Community Name'][222])  
+         """   
          while cntr<len(topCleaned['Community Name']):
                print(" - ");     
                print(topCleaned['Community Name'][cntr]," - ",cntr);     
@@ -938,11 +941,12 @@ def initialCommUpdatProcess():
                           #+str(topCleaned['Community Id'][cntr])
                           #+"?refer=")\
                           #.lower() ;
-               """                 
+         """           
+         """                 
                urlsAssembly=urlsAssembly.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                         .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
                         .replace("Lots","");
-               """
+         """
                NewUrls.append(urlsAssembly); 
                cntr+=1;
          return NewUrls;
