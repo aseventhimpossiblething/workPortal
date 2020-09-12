@@ -514,7 +514,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   
    
   URL_Struct1=str("https://www.newhomesource.com/community/"\
-            +NewDataFrame.iloc[count]['State']+"/"+NewDataFrame.iloc[count]['City']\
+            +NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]\
             .replace(" ","-")+"/"+communityName\
             .replace(" ","-")+"-by-"+NewDataFrame['Brand Name'][count]\
             .replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower()
