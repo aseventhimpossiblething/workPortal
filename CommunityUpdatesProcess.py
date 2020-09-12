@@ -928,12 +928,13 @@ def initialCommUpdatProcess():
          #print("topCleaned['Community Name'][223] ",topCleaned['Community Name'][223]) 
          print("topCleaned.iloc[222] ",topCleaned.iloc[222])  
          print("topCleaned.iloc[223] ",topCleaned.iloc[223])   
-         """   
+         
          while cntr<len(topCleaned['Community Name']):
                print(" - ");     
-               print(topCleaned['Community Name'][cntr]," - ",cntr);     
-               print(topCleaned['Community Id'][cntr]," - ",cntr);     
-               #print(topCleaned['State'][cntr]," - ",cntr);   
+               #print(topCleaned['Community Name'][cntr]," - ",cntr);     
+               #print(topCleaned['Community Id'][cntr]," - ",cntr);     
+               #print(topCleaned['State'][cntr]," - ",cntr); 
+               print("topCleaned.iloc[cntr] ",topCleaned.iloc[cntr])   
                print(" - "); 
                print("len(topCleaned['Community Name']) ",len(topCleaned['Community Name']))
                urlsAssembly='https://www.newhomesource.com/community/'
@@ -944,15 +945,15 @@ def initialCommUpdatProcess():
                           #+str(topCleaned['Community Id'][cntr])
                           #+"?refer=")\
                           #.lower() ;
-         """           
-         """                 
+                  
+                        
                urlsAssembly=urlsAssembly.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                         .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
                         .replace("Lots","");
          
                NewUrls.append(urlsAssembly); 
                cntr+=1;
-         """      
+             
          return NewUrls;
 
 
