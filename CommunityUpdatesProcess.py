@@ -893,10 +893,10 @@ def initialCommUpdatProcess():
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
            print("Cleaner Main Loop is running ----------------------------------------")
-           print("AlteredComNames.count(AlteredColNamesWithMultiples) ",AlteredComNames.count(AlteredColNamesWithMultiples)) 
-           print(AlteredComNames," len=",len(AlteredComNames)); 
-           if AlteredComNames.count(AlteredColNamesWithMultiples)>1:
-              print(AlteredComNames," len=",len(AlteredComNames));    
+           print("AlteredColNamesWithMultiples.count(AlteredComNames) ",AlteredColNamesWithMultiples.count(AlteredComNames)) 
+           #print(AlteredComNames," len=",len(AlteredComNames)); 
+           if AlteredColNamesWithMultiples.count(AlteredComNames)>1:
+              #print(AlteredComNames," len=",len(AlteredComNames));    
               print("Checking if statement to push");
               MultiplesCommunityNames.append(AlteredComName);
               MultiplesCommunityIds.append(cleanupFrame['Community id'][thisLoopCount])
