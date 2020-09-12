@@ -946,9 +946,10 @@ def initialCommUpdatProcess():
                urlsAssembly=urlsAssembly.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                         .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
                         .replace("Lots","");
-         """
+         
                NewUrls.append(urlsAssembly); 
                cntr+=1;
+         """      
          return NewUrls;
 
 
