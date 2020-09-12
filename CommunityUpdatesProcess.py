@@ -929,7 +929,7 @@ def initialCommUpdatProcess():
                print(topCleaned['Community Id'][cntr]," - ",cntr);     
                #print(topCleaned['State'][cntr]," - ",cntr);   
                print(" - "); 
-               print("len(topCleaned['Community Name'] ",len(topCleaned['Community Name'])
+               print("len(topCleaned['Community Name']) ",len(topCleaned['Community Name']))
                urlsAssembly='https://www.newhomesource.com/community/'
                           #+str(topCleaned['State'][cntr])
                           #+"/"+topCleaned['City'][cntr]
