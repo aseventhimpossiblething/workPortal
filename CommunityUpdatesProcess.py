@@ -918,15 +918,22 @@ def initialCommUpdatProcess():
              """
              #print(" MultiplesDedupedRowNumbers ",MultiplesDedupedRowNumbers)
              countOfAppendToMultiplesDedupedRowNumbers+=1;
-                  
+      
+     #for segments in  
      topCleaned=cleanupFrame.drop(repeatedRows);          
      topCleaned=topCleaned.drop_duplicates();
      BottomCleaned=cleanupFrame.iloc[MultiplesDedupedRowNumbers];
      BottomCleaned=BottomCleaned.drop_duplicates();
      UnitedFrame=topCleaned.append(BottomCleaned);
       
+     cntr=0;
+     while cntr<len(topCleaned['Community Name']):
+         urlsAssembly='https://www.newhomesource.com/community/'+topCleaned['State'][cntr]+topCleaned['City'][cntr] ;
+      
+      
      url='https://www.newhomesource.com/community/fl/land-o-lakes/lakeshore-ranch-by-william-ryan-homes/90385?refer=gppc403'
      url='https://www.newhomesource.com/community/' 
+     url2='https://www.newhomesource.com/communities/tx/dallas-area?communityname=montgomery%20farm%20estates'
       
      print("topCleaned ",topCleaned);
      print("BottomCleaned ",BottomCleaned);
