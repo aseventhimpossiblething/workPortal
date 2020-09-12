@@ -902,8 +902,9 @@ def initialCommUpdatProcess():
               MultiplesCommunityNames.append(AlteredComName);
               MultiplesCommunityIds.append(cleanupFrame['Community id'][thisLoopCount])
               repeatedRows.append(thisLoopCount);
-           #AlteredComNames.append(AlteredComName)
+              print("Almost the end of loop except for counter")
            thisLoopCount+=1;
+     print("exit loop")
      DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
      print("MultiplesCommunityNames ",MultiplesCommunityNames)
      
