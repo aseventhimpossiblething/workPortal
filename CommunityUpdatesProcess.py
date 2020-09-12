@@ -80,6 +80,7 @@ def UrlGen(topCleaned,MPC):
          while cntr<len(topCleaned['Community Name']):
                   
                Name=str(topCleaned.iloc[cntr]['Community Name']).replace(" ","%"); 
+               print("Inside Community Name = ",Name);
                #URL_Struct1="https://www.newhomesource.com/communities/"+topCleaned['State'][count]+"/"+topCleaned['City'][count]+"-area?communityname=";
                URL_Struct1=str("https://www.newhomesource.com/communities/"+topCleaned.iloc[cntr]['State']+"/"+topCleaned.iloc[cntr]['City']+"-area?communityname="+topCleaned.iloc[cntr]['Community Name']).lower()                
          
@@ -702,6 +703,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path2A.append("New Homes")
    #print("NewDataFrame['URL Signal'][count]" ,NewDataFrame['URL Signal'][count]) 
    if NewDataFrame['URL Signal'][count]!="Default":
+      #print("NewDataFrame['URL Signal'][count]" ,NewDataFrame['URL Signal'][count])
       URL_Struct1=NewDataFrame['URL Signal'][count];      
    Final_URL.append(URL_Struct1)
  
