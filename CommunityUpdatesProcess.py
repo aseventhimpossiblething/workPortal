@@ -848,7 +848,7 @@ def initialCommUpdatProcess():
      MultiplesCommunityNames=[];
      MultiplesCommunityIds=[]
      MultiplesDedupedRowNumbers=[];
-     FinalCommmunityNames=[]:
+     FinalCommmunityNames=[];
      repeatedRows=[];
      thisLoopCount=0; 
 
