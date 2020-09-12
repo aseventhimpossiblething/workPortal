@@ -936,6 +936,7 @@ def initialCommUpdatProcess():
                         .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
                         .replace("Lots","");
                """
+               NewUrls.append(urlsAssembly); 
                cntr+=1;
          return NewUrls;
 
