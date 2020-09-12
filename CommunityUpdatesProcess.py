@@ -893,9 +893,10 @@ def initialCommUpdatProcess():
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
            #print("Cleaner Main Loop is running ----------------------------------------")
-           #print("AlteredColNamesWithMultiples.count(AlteredComNames) ",AlteredColNamesWithMultiples.count(AlteredComNames)) 
-           #print(AlteredComNames," len=",len(AlteredComNames)); 
-           if AlteredColNamesWithMultiples.count(AlteredComNames)>1:
+           #print("AlteredColNamesWithMultiples.count('One Central Park') ",AlteredColNamesWithMultiples.count('One Central Park'))  
+           #print("AlteredColNamesWithMultiples.count(AlteredComName) ",AlteredColNamesWithMultiples.count(AlteredComName)) 
+           #print("AlteredComName ",AlteredComName," len=",len(AlteredComNams)); 
+           if AlteredColNamesWithMultiples.count(AlteredComName)>1:
               #print(AlteredComNames," len=",len(AlteredComNames));    
               print("Checking if statement to push");
               MultiplesCommunityNames.append(AlteredComName);
