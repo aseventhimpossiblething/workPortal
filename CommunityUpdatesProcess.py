@@ -898,24 +898,24 @@ def initialCommUpdatProcess():
            #print("AlteredComName ",AlteredComName," len=",len(AlteredComNams)); 
            if AlteredColNamesWithMultiples.count(AlteredComName)>1:
               #print(AlteredComNames," len=",len(AlteredComNames));    
-              print("Checking if statement to push");
+              #print("Checking if statement to push");
               MultiplesCommunityNames.append(AlteredComName);
               print("passing-----MultiplesCommunityNames.append(AlteredComName)")
               MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])
-              print("passing----- MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])") 
+              #print("passing----- MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])") 
               repeatedRows.append(thisLoopCount);
-              print("Almost the end of loop except for counter")
+              #print("Almost the end of loop except for counter")
            thisLoopCount+=1;
-     print("exit loop")
+     #print("exit loop")
      DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
-     print("MultiplesCommunityNames ",MultiplesCommunityNames)
+     #print("MultiplesCommunityNames ",MultiplesCommunityNames)
      
      countOfAppendToMultiplesDedupedRowNumbers=0;
      while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):
              #print("while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):")
              RowOfDuplicate=AlteredColNamesWithMultiples.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]);
-             CommIdOfDuplicate=cleanupFrame['Community Id'][RowOfComID]
-             CommNameOfDuplicate=cleanupFrame['Community Name'][RowOfComID]
+             CommIdOfDuplicate=cleanupFrame['Community Id'][RowOfDuplicate]
+             CommNameOfDuplicate=cleanupFrame['Community Name'][RowOfDuplicate]
              MultiplesDedupedRowNumbers.append(AlteredComNames.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]));
              countOfAppendToMultiplesDedupedRowNumbers+=1;
           
