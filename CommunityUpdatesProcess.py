@@ -421,6 +421,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      print("topCleaned ",topCleaned);
      print("BottomCleaned ",BottomCleaned);
      print("UnitedFrame ",UnitedFrame); 
+     UnitedFrame.reset_index();
              
      return UnitedFrame;  
 
