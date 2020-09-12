@@ -925,6 +925,9 @@ def initialCommUpdatProcess():
      BottomCleaned=BottomCleaned.drop_duplicates();
      UnitedFrame=topCleaned.append(BottomCleaned);
       
+     url='https://www.newhomesource.com/community/fl/land-o-lakes/lakeshore-ranch-by-william-ryan-homes/90385?refer=gppc403'
+     url='https://www.newhomesource.com/community/ 
+      
      print("topCleaned ",topCleaned);
      print("BottomCleaned ",BottomCleaned);
      print("UnitedFrame ",UnitedFrame); 
@@ -960,20 +963,7 @@ def initialCommUpdatProcess():
      
      
      
-     """
-     print("cleanupFrame['Community Id'].drop_duplicates() ",cleanupFrame['Community Id'].drop_duplicates())
-     print(repeatedRows)
-     print("cleanupFrame ",cleanupFrame);
-     print("cleanupFrame.iloc[repeatedRows] ",cleanupFrame.iloc[repeatedRows]);
-     print("MPCFrame ",MPCFrame);
-     print("type(MPCFrame) ",type(MPCFrame));
-     print("len(Altered) ",len(Altered));  
-     print("len(Multiples) ",len(Multiples));
-     print("len(DedupedMultiples) ",len(DedupedMultiples));
-     print("len(cleanupFrame) ",len(cleanupFrame));
-     print("len(DedupedCleanUP) ",len(DedupedCleanUP));
-     print("newsubFrame ",newsubFrame)
-     """
+
    
      #return Multiples;    
        
