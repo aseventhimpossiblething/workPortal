@@ -926,7 +926,7 @@ def initialCommUpdatProcess():
      UnitedFrame=topCleaned.append(BottomCleaned);
       
      url='https://www.newhomesource.com/community/fl/land-o-lakes/lakeshore-ranch-by-william-ryan-homes/90385?refer=gppc403'
-     url='https://www.newhomesource.com/community/ 
+     url='https://www.newhomesource.com/community/' 
       
      print("topCleaned ",topCleaned);
      print("BottomCleaned ",BottomCleaned);
