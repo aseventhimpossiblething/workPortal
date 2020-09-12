@@ -931,14 +931,14 @@ def initialCommUpdatProcess():
          print("topCleaned.iloc[223][State] ",topCleaned.iloc[223]['State'])    
          
          while cntr<len(topCleaned['Community Name']):
-               print(" - ");     
+               #print(" - ");     
                #print(topCleaned['Community Name'][cntr]," - ",cntr);     
                #print(topCleaned['Community Id'][cntr]," - ",cntr);     
                #print(topCleaned['State'][cntr]," - ",cntr); 
-               print("topCleaned.iloc[cntr] ",topCleaned.iloc[cntr])   
-               print(" - "); 
-               print("len(topCleaned['Community Name']) ",len(topCleaned['Community Name']))
-               urlsAssembly='https://www.newhomesource.com/community/'+topCleaned.iloc[223]['State']
+               #print("topCleaned.iloc[cntr] ",topCleaned.iloc[cntr])   
+               #print(" - "); 
+               #print("len(topCleaned['Community Name']) ",len(topCleaned['Community Name']))
+               urlsAssembly=str('https://www.newhomesource.com/community/'+topCleaned.iloc[cntr]['State']+topCleaned.iloc[cntr]['City'].replace(" ","-")+"/"+topCleaned.iloc[cntr]['Community Name'].replace(" ","-")+"-by-"+topCleaned.iloc[cntr]replace(" ","-")+"-by-"+topCleaned.iloc[cntr]['Brand Name'].replace(" ","-")+topCleaned.iloc[cntr]['Community Id']+"?refer=").lower()    
                           #+str(topCleaned['State'][cntr])
                           #+"/"+topCleaned['City'][cntr]
                           #.replace(" ","-")+"/"+topCleaned['Community Name']\
