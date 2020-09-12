@@ -74,7 +74,7 @@ def CommunityNameCleaner(x):
       return out;   
 
  
-  def UrlGen(topCleaned,MPC):
+def UrlGen(topCleaned,MPC):
          NewUrls=[] 
          cntr=0;
          while cntr<len(topCleaned['Community Name']):
