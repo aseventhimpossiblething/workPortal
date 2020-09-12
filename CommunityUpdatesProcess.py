@@ -924,7 +924,7 @@ def initialCommUpdatProcess():
          NewUrls=[] 
          cntr=0;
          while cntr<len(topCleaned['Community Name']):
-               print(topCleaned['State'][cntr]);   
+               print(topCleaned['State'][cntr]," - ",cntr);   
                urlsAssembly='https://www.newhomesource.com/community/'+str(topCleaned['State'][cntr])
                           #+"/"+topCleaned['City'][cntr]
                           #.replace(" ","-")+"/"+topCleaned['Community Name']\
