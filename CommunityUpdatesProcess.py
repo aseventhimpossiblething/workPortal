@@ -923,100 +923,61 @@ def initialCommUpdatProcess():
      def TopUrlGen(topCleaned):
          NewUrls=[] 
          cntr=0;
-         #print(topCleaned['Community Name'].sort())
-         print("topCleaned['Community Name'][222] ",topCleaned['Community Name'][222])  
-         #print("topCleaned['Community Name'][223] ",topCleaned['Community Name'][223]) 
-         print("topCleaned.iloc[222]['State'] ",topCleaned.iloc[222]['State'])  
-         print("topCleaned.iloc[223] ",topCleaned.iloc[223]) 
-         print("topCleaned.iloc[223][State] ",topCleaned.iloc[223]['State'])    
-         
          while cntr<len(topCleaned['Community Name']):
-               #print(" - ");     
-               #print(topCleaned['Community Name'][cntr]," - ",cntr);     
-               #print(topCleaned['Community Id'][cntr]," - ",cntr);     
-               #print(topCleaned['State'][cntr]," - ",cntr); 
-               #print("topCleaned.iloc[cntr] ",topCleaned.iloc[cntr])   
-               #print(" - "); 
-               #print("len(topCleaned['Community Name']) ",len(topCleaned['Community Name']))
-               urlsAssembly=str('https://www.newhomesource.com/community/'+topCleaned.iloc[cntr]['State']+topCleaned.iloc[cntr]['City']+topCleaned.iloc[cntr]['Community Name']+topCleaned.iloc[cntr]['Brand Name']+str(topCleaned.iloc[cntr]['Community Id'])+"?refer=").lower()
-                          #.replace(" ","-")replace(" ","-").replace(" ","-")         
-                          #+str(topCleaned['State'][cntr])
-                          #+"/"+topCleaned['City'][cntr]
-                          #.replace(" ","-")+"/"+topCleaned['Community Name']\
-                          #[cntr].replace(" ","-")+"-by-"+topCleaned['Brand Name'][cntr].replace(" ","-")+"/"
-                          #+str(topCleaned['Community Id'][cntr])
-                          #+"?refer=")\
-                          #.lower() ;
-                  
-                        
+               urlsAssembly=str('https://www.newhomesource.com/community/'+topCleaned.iloc[cntr]\
+                            ['State']+topCleaned.iloc[cntr]['City']+topCleaned.iloc[cntr]\
+                            ['Community Name']+topCleaned.iloc[cntr]['Brand Name']+str(topCleaned.iloc[cntr]\
+                            ['Community Id'])+"?refer=").lower()
+                         
+                                     
                urlsAssembly=urlsAssembly.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                         .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
                         .replace("Lots","");
          
-               NewUrls.append(urlsAssembly); 
+               NewUrls.append(Default); 
                cntr+=1;
            
          return NewUrls;
 
 
 
+     def BottompUrlGen(topCleaned):
+         NewUrls=[] 
+         cntr=0;
+         while cntr<len(topCleaned['Community Name']):
+               urlsAssembly=str('https://www.newhomesource.com/community/'+topCleaned.iloc[cntr]\
+                            ['State']+topCleaned.iloc[cntr]['City']+topCleaned.iloc[cntr]\
+                            ['Community Name']+topCleaned.iloc[cntr]['Brand Name']+str(topCleaned.iloc[cntr]\
+                            ['Community Id'])+"?refer=").lower()
+                        
+                  
+                        
+               urlsAssembly=urlsAssembly.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
+                        .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
+                        .replace("Lots","");
+         
+               NewUrls.append("MPC"); 
+               cntr+=1;
+           
+         return NewUrls;
+      
      topCleaned=cleanupFrame.drop(repeatedRows);          
      topCleaned=topCleaned.drop_duplicates();
-     topCleaned['Final URL']=TopUrlGen(topCleaned);
-     print("topCleaned.iloc[0]",topCleaned.iloc[0]);
-     print("topCleaned.iloc[100]",topCleaned.iloc[100]); 
-     print("len(topCleaned[State])",len(topCleaned['State']));  
-     print("len(topCleaned[FinalURL])",len(topCleaned['Final URL']));  
-        
-      
+     topCleaned['URL Signal']=TopUrlGen(topCleaned);
      BottomCleaned=cleanupFrame.iloc[MultiplesDedupedRowNumbers];
      BottomCleaned=BottomCleaned.drop_duplicates();
-     #UnitedFrame=topCleaned.append(BottomCleaned);
-      
-   
-      
+     BottomCleaned['URL Signal']=BottomUrlGen(BottomCleaned) 
+     UnitedFrame=topCleaned.append(BottomCleaned); 
+           
      url='https://www.newhomesource.com/community/fl/land-o-lakes/lakeshore-ranch-by-william-ryan-homes/90385?refer=gppc403'
      url='https://www.newhomesource.com/community/' 
      url2='https://www.newhomesource.com/communities/tx/dallas-area?communityname=montgomery%20farm%20estates'
       
      print("topCleaned ",topCleaned);
      print("BottomCleaned ",BottomCleaned);
-     #print("UnitedFrame ",UnitedFrame); 
-     
-     #DedupedComumityIds=pandas.DataFrame(MultiplesCommunityIds).drop_duplicates();
-     #DedupedCommunitynames=pandas.DataFrame(MultiplesCommunityNames).drop_duplicates();
-     #print("length=",len(MultiplesCommunityIds)," MultiplesCommunityIds=",MultiplesCommunityIds);
-     #print("length=",len(DedupedComumityIds)," DedupedComumityIds=",DedupedComumityIds);
-     #print("length=",len(MultiplesCommunityNames)," MultiplesCommunityName=",MultiplesCommunityNames); 
-     #print("length=",len(DedupedCommunitynames)," DedupedCommunitynames=",DedupedCommunitynames);  
-     #print("length=",len(MultiplesDedupedRowNumbers),"MultiplesDedupedRowNumbers=",MultiplesDedupedRowNumbers);  
-     #print("len(DedupedMultiplesCommunityNames) ",len(DedupedMultiplesCommunityNames))     
-     
-     #print("cleanupFrame.iloc[MultiplesDedupedRowNumbers]) ",cleanupFrame.iloc[MultiplesDedupedRowNumbers]); 
-     
-     
-     #DedupedCleanUP=cleanupFrame.drop(cleanupFrame.index[repeatedRows]);
-     #newsubFrame=pandas.DataFrame(cleanupFrame.iloc[MultiplesDedupedRowNumbers]);
-     
-     #newsubFrame=pandas.DataFrame(cleanupFrame.iloc[MultiplesDedupedRowNumbers]);
-     
-     
-     #MPCFrame=cleanupFrame.iloc[repeatedRows].drop_duplicates();
-     
-     #print("MultiplesDedupedRowNumbers ",MultiplesDedupedRowNumbers);
-     #print("len(MultiplesDedupedRowNumbers) ",len(MultiplesDedupedRowNumbers));
-     
-     #print("AlteredComNames.index(DedupedMultiples[0]);  ",AlteredComNames.index(DedupedMultiplesCommunityNames[0]));
-     #print("DedupedMultiples[0] ",DedupedMultiplesCommunityNames[0]);
-     #print("AlteredComNames[AlteredComNames.index(DedupedMultiples[0])] ",AlteredComNames[AlteredComNames.index(DedupedMultiplesCommunityNames[0])]);
-     
-     
-     
-     
-     
-
-   
-     #return Multiples;    
+     print("UnitedFrame ",UnitedFrame); 
+             
+     return UnitedFrame;    
        
      
  
@@ -1024,7 +985,6 @@ def initialCommUpdatProcess():
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
-
  
  KeywordGen(NewGoogle,"sbmm","google")
  KeywordGen(NewGoogle,"sb","google")
@@ -1032,21 +992,10 @@ def initialCommUpdatProcess():
  KeywordGen(NewBing,"sbmm","bing")
  KeywordGen(NewBing,"sb","bing")
  KeywordGen(NewBing,"sx","bing")
- 
-                       
-   
- print("Main ")
+
  os.chdir(fileHandler.currentBingLocation)
  print("past  os.chdir fileHandler.currentBingLocation")
   
- 
- #TheSampleText=WorkingBingEOF
- #TheSamplefile=open('TheSampleText.txt','w+') 
- #TheSamplefile.write(TheSampleText.to_string())
- #TheSamplefile.close()
- print("past  sample file open and close");
- 
- 
  os.chdir(fileHandler.SheetsFileLocation);
  print("past  os.chdir(fileHandler.SheetsFileLocation)");
  storeRequest=open('RequestsVsResponses.txt','a+')
