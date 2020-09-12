@@ -475,7 +475,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   hilecount=MaintatanceVar;
  while count < hilecount:
   
-  communityName=str(NewDataFrame['Community Name'][count]);
+  communityName=str(NewDataFrame.iloc[count]['Community Name']);
   
   communityName=communityName.replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
                .replace("50s","").replace(" 50s ","").replace(" 50' ","").replace("55s","").replace(" 55s ","").replace("55'","")\
