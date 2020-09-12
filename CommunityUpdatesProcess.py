@@ -430,9 +430,9 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      BottomCleaned['URL Signal']=UrlGen(BottomCleaned,"MPC"); 
      UnitedFrame=topCleaned.append(BottomCleaned); 
          
-     print("topCleaned ",topCleaned);
-     print("BottomCleaned ",BottomCleaned);
-     print("UnitedFrame ",UnitedFrame); 
+     #print("topCleaned ",topCleaned);
+     #print("BottomCleaned ",BottomCleaned);
+     #print("UnitedFrame ",UnitedFrame); 
      UnitedFrame=UnitedFrame.reset_index();
              
      return UnitedFrame;  
@@ -700,6 +700,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("and","&")
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
+   print("NewDataFrame['URL Signal'][count]" ,NewDataFrame['URL Signal'][count]) 
+   if NewDataFrame['URL Signal'][count]!="Default":
+      URL_Struct1=NewDataFrame['URL Signal'][count];      
    Final_URL.append(URL_Struct1)
  
   
