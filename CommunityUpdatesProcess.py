@@ -902,7 +902,7 @@ def initialCommUpdatProcess():
               MultiplesCommunityNames.append(AlteredComName);
               print("passing-----MultiplesCommunityNames.append(AlteredComName)")
               MultiplesCommunityIds.append(cleanupFrame['Community id'][thisLoopCount])
-              print("passing----- MultiplesCommunityIds.append(cleanupFrame['Community id'][thisLoopCount])") 
+              print("passing----- MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])") 
               repeatedRows.append(thisLoopCount);
               print("Almost the end of loop except for counter")
            thisLoopCount+=1;
