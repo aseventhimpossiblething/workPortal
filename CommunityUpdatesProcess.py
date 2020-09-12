@@ -938,7 +938,7 @@ def initialCommUpdatProcess():
                #print("topCleaned.iloc[cntr] ",topCleaned.iloc[cntr])   
                #print(" - "); 
                #print("len(topCleaned['Community Name']) ",len(topCleaned['Community Name']))
-               urlsAssembly=str('https://www.newhomesource.com/community/'+topCleaned.iloc[cntr]['State']+topCleaned.iloc[cntr]['City'].replace(" ","-")+"/"+topCleaned.iloc[cntr]['Community Name'].replace(" ","-")+"-by-"+topCleaned.iloc[cntr]replace(" ","-")+"-by-"+topCleaned.iloc[cntr]['Brand Name'].replace(" ","-")+topCleaned.iloc[cntr]['Community Id']+"?refer=").lower()    
+               urlsAssembly='https://www.newhomesource.com/community/'+topCleaned.iloc[cntr]['State']+topCleaned.iloc[cntr]['City']+topCleaned.iloc[cntr]['Community Name']+topCleaned.iloc[cntr]['Brand Name']+topCleaned.iloc[cntr]['Community Id']   
                           #+str(topCleaned['State'][cntr])
                           #+"/"+topCleaned['City'][cntr]
                           #.replace(" ","-")+"/"+topCleaned['Community Name']\
