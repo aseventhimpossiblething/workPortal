@@ -902,11 +902,11 @@ def initialCommUpdatProcess():
               MultiplesCommunityNames.append(AlteredComName);
               #print("passing-----MultiplesCommunityNames.append(AlteredComName)")
               MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])
-              print("passing----- MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])") 
+              #print("passing----- MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])") 
               repeatedRows.append(thisLoopCount);
-              print("Almost the end of loop except for counter")
+              #print("Almost the end of loop except for counter")
            thisLoopCount+=1;
-     print("exit loop")
+     #print("exit loop")
      DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
      #print("MultiplesCommunityNames ",MultiplesCommunityNames)
      
@@ -917,22 +917,23 @@ def initialCommUpdatProcess():
              CommIdOfDuplicate=cleanupFrame['Community Id'][RowOfDuplicate]
              CommNameOfDuplicate=cleanupFrame['Community Name'][RowOfDuplicate]
              CommunityName=DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]
+             MultiplesDedupedRowNumbers.append(RowOfDuplicate)     
              """     
              AlteredComNames.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers])
              MultiplesDedupedRowNumbers.append(AlteredComNames.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]));
              """
-             print(" MultiplesDedupedRowNumbers ",MultiplesDedupedRowNumbers)
+             #print(" MultiplesDedupedRowNumbers ",MultiplesDedupedRowNumbers)
              countOfAppendToMultiplesDedupedRowNumbers+=1;
           
      
      DedupedComumityIds=pandas.DataFrame(MultiplesCommunityIds).drop_duplicates();
      DedupedCommunitynames=pandas.DataFrame(MultiplesCommunityNames).drop_duplicates();
-     print("length=",len(MultiplesCommunityIds)," MultiplesCommunityIds=",MultiplesCommunityIds);
-     print("length=",len(DedupedComumityIds)," DedupedComumityIds=",DedupedComumityIds);
-     print("length=",len(MultiplesCommunityNames)," MultiplesCommunityName=",MultiplesCommunityNames); 
+     #print("length=",len(MultiplesCommunityIds)," MultiplesCommunityIds=",MultiplesCommunityIds);
+     #print("length=",len(DedupedComumityIds)," DedupedComumityIds=",DedupedComumityIds);
+     #print("length=",len(MultiplesCommunityNames)," MultiplesCommunityName=",MultiplesCommunityNames); 
      print("length=",len(DedupedCommunitynames)," DedupedCommunitynames=",DedupedCommunitynames);  
      print("length=",len(MultiplesDedupedRowNumbers),"MultiplesDedupedRowNumbers=",MultiplesDedupedRowNumbers);  
-           
+     print("len(DedupedMultiplesCommunityNames) ",len(DedupedMultiplesCommunityNames))     
      
      print("cleanupFrame.iloc[MultiplesDedupedRowNumbers]) ",cleanupFrame.iloc[MultiplesDedupedRowNumbers]); 
      
