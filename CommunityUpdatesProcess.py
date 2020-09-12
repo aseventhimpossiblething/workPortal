@@ -434,6 +434,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
  
 
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
+ NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame);     
  MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
  print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
@@ -964,7 +965,7 @@ def initialCommUpdatProcess():
 
 
 
- CommunityNameDuplicateSpecialLoop(WorkingCommunities);
+ #CommunityNameDuplicateSpecialLoop(WorkingCommunities);
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
  return "finished"
