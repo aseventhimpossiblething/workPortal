@@ -941,7 +941,7 @@ def initialCommUpdatProcess():
 
 
 
-     def BottompUrlGen(topCleaned):
+     def BottomUrlGen(topCleaned):
          NewUrls=[] 
          cntr=0;
          while cntr<len(topCleaned['Community Name']):
