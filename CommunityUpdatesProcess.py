@@ -516,8 +516,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame.iloc[count]['State']+"/"+NewDataFrame.iloc[count]['City']\
             .replace(" ","-")+"/"+communityName\
-            .replace(" ","-")+"-by-"+NewDataFrame.['Brand Name'][count]\
-            .replace(" ","-")+"/"+str(NewDataFrame.['Community Id'][count])+"?refer=").lower()
+            .replace(" ","-")+"-by-"+NewDataFrame['Brand Name'][count]\
+            .replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower()
   
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
