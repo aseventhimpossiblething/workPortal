@@ -115,17 +115,17 @@ def UrlGen(topCleaned,MPC):
                print("Inside Community Name = ",Name);
                #URL_Struct1="https://www.newhomesource.com/communities/"+topCleaned['State'][count]+"/"+topCleaned['City'][count]+"-area?communityname=";
                URL_Struct1=str("https://www.newhomesource.com/communities/"+topCleaned.iloc[cntr]['State']+"/"+topCleaned.iloc[cntr]['Market Name']+"-area?communityname="+Name).lower()                
-               print("URL_Struct1 - 1 = ",URL_Struct1); 
+               #print("URL_Struct1 - 1 = ",URL_Struct1); 
                  
                URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
                .replace("Lots","");
-               print("URL_Struct1 -2  = ",URL_Struct1);
+               #print("URL_Struct1 -2  = ",URL_Struct1);
                 
                if MPC=="Default":
                   NewUrls.append(MPC);
                if MPC!="Default":   
-                  print("URL_Struct1 = ",URL_Struct1);   
+                  #print("URL_Struct1 = ",URL_Struct1);   
                   NewUrls.append(URL_Struct1); 
                cntr+=1;
            
@@ -956,13 +956,13 @@ def initialCommUpdatProcess():
  print(os.listdir(os.getcwd()))
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
  print(WorkingCommunities)
- print("Alert 960-------------------Alert 960----------------------------Alert 960-----------------------Alert 960 ") 
+ print("Alert 1-------------------Alert 1----------------------------Alert 1-----------------------Alert 1 ") 
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
- print("Alert 961-------------------Alert 961----------------------------Alert 961-----------------------Alert 961 ")      
+ print("Alert 2-------------------Alert 2----------------------------Alert 2-----------------------Alert 2 ")      
  WorkingCommunities=WorkingCommunities.drop([4])
- print("Alert 963-------------------Alert 963----------------------------Alert 963-----------------------Alert 963 ")      
+ print("Alert 3-------------------Alert 3----------------------------Alert 3-----------------------Alert 3 ")      
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
- print("Alert 964-------------------Alert 964----------------------------Alert 964-----------------------Alert 964 ")      
+ print("Alert 4-------------------Alert 4----------------------------Alert 4-----------------------Alert 4 ")      
  if IsCommValid!="Valid":
   return IsCommValid
  WorkingGoogleEOF=WorkingGoogle()    
