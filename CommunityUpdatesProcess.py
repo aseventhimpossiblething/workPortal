@@ -955,11 +955,11 @@ def initialCommUpdatProcess():
  global IsCommUpdateRunning
  print("fileHandler.currentCommunitiesLocation - ",fileHandler.currentCommunitiesLocation)
  os.chdir(fileHandler.currentCommunitiesLocation);
- 
- 
- """
- WorkingCommunities=pandas.read_excel('WorkingCommunities')
  print(os.listdir(os.getcwd()));
+ 
+ 
+ WorkingCommunities=pandas.read_excel('WorkingCommunities');
+ 
  print("WorkingCommunities.iloc[0] ",WorkingCommunities.iloc[0]); 
  print("WorkingCommunities.iloc[1] ",WorkingCommunities.iloc[1]); 
  print("WorkingCommunities.iloc[2] ",WorkingCommunities.iloc[2]); 
@@ -967,7 +967,7 @@ def initialCommUpdatProcess():
  print("WorkingCommunities.iloc[4] ",WorkingCommunities.iloc[4]); 
  print("WorkingCommunities.iloc[5] ",WorkingCommunities.iloc[5]); 
  print("WorkingCommunities.iloc[6] ",WorkingCommunities.iloc[6]); 
- """
+ 
        
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
  #print(WorkingCommunities)
