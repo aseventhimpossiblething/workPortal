@@ -969,8 +969,9 @@ def initialCommUpdatProcess():
  print("AVersion ",AVersion);
  print("regular ",regular);  
 
- AVersion=str(WorkingCommunities.iloc[[2]].values).find('Community Id'))
- regular=str(WorkingCommunities.iloc[[4]].values).find('Community Id'))
+     
+ AVersion=str(WorkingCommunities.iloc[[2]].values).find('Community Id')
+ regular=str(WorkingCommunities.iloc[[4]].values).find('Community Id')
  
  print("AVersion ",AVersion);
  print("regular ",regular);     
