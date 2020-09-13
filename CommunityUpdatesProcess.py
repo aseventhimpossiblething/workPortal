@@ -114,7 +114,7 @@ def UrlGen(topCleaned,MPC):
                
                print("Inside Community Name = ",Name);
                #URL_Struct1="https://www.newhomesource.com/communities/"+topCleaned['State'][count]+"/"+topCleaned['City'][count]+"-area?communityname=";
-               URL_Struct1=str("https://www.newhomesource.com/communities/"+topCleaned.iloc[cntr]['State']+"/"+topCleaned.iloc[cntr]['City']+"-area?communityname="+Name).lower()                
+               URL_Struct1=str("https://www.newhomesource.com/communities/"+topCleaned.iloc[cntr]['State']+"/"+topCleaned.iloc[cntr]['Market Name']+"-area?communityname="+Name).lower()                
                print("URL_Struct1 - 1 = ",URL_Struct1); 
                  
                URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
