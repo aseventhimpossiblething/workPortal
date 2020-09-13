@@ -167,7 +167,9 @@ def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
   titlestring.find(checkword3)!=-1 and titlestring.find(checkword4)!=-1:
   return "Valid"
+  print("If actually running in check 170")
  else:
+  print("else running in check 172")    
   Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
   return Invalid
     
