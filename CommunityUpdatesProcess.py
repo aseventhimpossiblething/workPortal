@@ -961,7 +961,7 @@ def initialCommUpdatProcess():
  print("Alert 2-------------------Alert 2----------------------------Alert 2-----------------------Alert 2 ")      
  WorkingCommunities=WorkingCommunities.drop([4])
  print("Alert 3-------------------Alert 3----------------------------Alert 3-----------------------Alert 3 ")      
- WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
+ WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','Community Name','City')
  print("Alert 4-------------------Alert 4----------------------------Alert 4-----------------------Alert 4 ")      
  if IsCommValid!="Valid":
   return IsCommValid
