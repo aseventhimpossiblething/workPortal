@@ -963,9 +963,13 @@ def initialCommUpdatProcess():
  #WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
  
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,])
- AVersion="WorkingCommunities.iloc[2] ",WorkingCommunities.iloc[2]
- regular="WorkingCommunities.iloc[4] ",WorkingCommunities.iloc[4]
- print("AVersion.find('Cummunity Name') ",AVersion.find('Cummunity Name'))
+ AVersion=WorkingCommunities.iloc[2]
+ regular=WorkingCommunities.iloc[4]
+ 
+ #print(" ",);
+ #print(" ",);     
+ print("AVersion.find('Community Name') ",AVersion.find('Community Name'))
+ print("regular.find('Community Name' ",regular.find('Community Name');  
  #if AVersion.find('Cummunity Name')
 
 
