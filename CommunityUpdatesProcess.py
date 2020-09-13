@@ -976,7 +976,7 @@ def initialCommUpdatProcess():
  print("AVersion ",AVersion);
  print("regular ",regular);     
  print("WorkingCommunities ",WorkingCommunities)
- print("WorkingCommunities['Community Id'] ",WorkingCommunities['Community Id']);  
+ print("WorkingCommunities.columns ",WorkingCommunities.columns);  
       
       
  """
