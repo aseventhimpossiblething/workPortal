@@ -952,14 +952,15 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
 def initialCommUpdatProcess():
  global IsCommUpdateRunning
  print("fileHandler.currentCommunitiesLocation - ",fileHandler.currentCommunitiesLocation)
- print("Alert 955-------------------Alert 955----------------------------Alert 955-----------------------Alert 955 ") 
  os.chdir(fileHandler.currentCommunitiesLocation)
  print(os.listdir(os.getcwd()))
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
  print(WorkingCommunities)
  print("Alert 960-------------------Alert 960----------------------------Alert 960-----------------------Alert 960 ") 
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
+ print("Alert 961-------------------Alert 961----------------------------Alert 961-----------------------Alert 961 ")      
  WorkingCommunities=WorkingCommunities.drop([4])
+ print("Alert 963-------------------Alert 963----------------------------Alert 963-----------------------Alert 963 ")      
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','City','Zip')
  print("Alert 964-------------------Alert 964----------------------------Alert 964-----------------------Alert 964 ")      
  if IsCommValid!="Valid":
