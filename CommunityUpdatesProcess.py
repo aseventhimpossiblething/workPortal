@@ -235,17 +235,14 @@ def filterNonParticipators(theFrame):
    theFrame=theFrame.drop_duplicates();
    #print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
    theFrame=theFrame.dropna()
-   #print("LengththeFrame=theFrame.dropna ",len(theFrame))
-   #print("theFrame['Brand Name'].str.contains('Clayton') ",theFrame['Brand Name'].str.contains('Clayton'))
+  
+   try:
+      theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount])]
+      theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
+      theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
+   except:
+      print("Brand Name Not Present");
    
-   #print("Drop while")
-   
-   theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount])]
-   theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
-   theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
-   #print("theFrame[~theFrame['Brand Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
-   
-   #print("Drop while")
    
    theFrame=theFrame[~theFrame['Builder Name'].str.contains(DropRowsContaining[DropLoopCount])]
    theFrame=theFrame[~theFrame['Builder Name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
