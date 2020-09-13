@@ -976,7 +976,9 @@ def initialCommUpdatProcess():
  print("AVersion ",AVersion);
  print("regular ",regular);     
  print("WorkingCommunities ",WorkingCommunities)
- #print("regular.find('Community Id') ",regular.find('Community Id'));  
+ print("WorkingCommunities[''Community Id] ",WorkingCommunities[''Community Id]);  
+      
+      
  """
  if AVersion!=-1:
     WorkingCommunities=WorkingCommunities.drop([]) 
