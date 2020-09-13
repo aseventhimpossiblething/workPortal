@@ -963,8 +963,8 @@ def initialCommUpdatProcess():
  #WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
  
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,])
- AVersion=str(WorkingCommunities.iloc[[2]])
- regular=str(WorkingCommunities.iloc[[4]])
+ AVersion=str(WorkingCommunities.iloc[[2]].values)
+ regular=str(WorkingCommunities.iloc[[4]].values)
  
  print("AVersion ",AVersion);
  print("regular ",regular);     
