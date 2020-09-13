@@ -966,10 +966,10 @@ def initialCommUpdatProcess():
  AVersion=WorkingCommunities.iloc[2]
  regular=WorkingCommunities.iloc[4]
  
- #print(" ",);
- #print(" ",);     
- print("AVersion.find('Community Name') ",AVersion.find('Community Name'))
- print("regular.find('Community Name' ",regular.find('Community Name'));  
+ print("AVersion ",AVersion);
+ print("regular ",regular);     
+ #print("AVersion.find('Community Name') ",AVersion.find('Community Name'))
+ #print("regular.find('Community Name' ",regular.find('Community Name'));  
  #if AVersion.find('Cummunity Name')
 
 
