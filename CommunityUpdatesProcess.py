@@ -969,7 +969,7 @@ def initialCommUpdatProcess():
  #print(" ",);
  #print(" ",);     
  print("AVersion.find('Community Name') ",AVersion.find('Community Name'))
- print("regular.find('Community Name' ",regular.find('Community Name');  
+ print("regular.find('Community Name' ",regular.find('Community Name'));  
  #if AVersion.find('Cummunity Name')
 
 
