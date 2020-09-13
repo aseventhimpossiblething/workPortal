@@ -234,13 +234,16 @@ def filterNonParticipators(theFrame):
       
    theFrame=theFrame.drop_duplicates();
    #print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
-   theFrame=theFrame.dropna()
+   theFrame=theFrame.dropna();
   
    try:
+      print("Start Try")
       theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount])]
       theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
       theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
+      print("end Try")
    except:
+      print("Sstart except");
       print("Brand Name Not Present");
    
    
