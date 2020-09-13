@@ -964,17 +964,17 @@ def initialCommUpdatProcess():
  
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,]);
  AVersion=str(WorkingCommunities.iloc[[2]].values);
- regular=str(WorkingCommunities.iloc[[4]].values);
+ BVersion=str(WorkingCommunities.iloc[[4]].values);
  
  print("AVersion ",AVersion);
  print("regular ",regular);  
 
      
  AVersion=str(WorkingCommunities.iloc[[2]].values).find('Community Id');
- regular=str(WorkingCommunities.iloc[[4]].values).find('Community Id');
+ BVersion=str(WorkingCommunities.iloc[[4]].values).find('Community Id');
  
  print("AVersion ",AVersion);
- print("regular ",regular);     
+ print("BVersion ",BVersion);     
  print("WorkingCommunities ",WorkingCommunities)
  print("WorkingCommunities.columns ",WorkingCommunities.columns);  
       
@@ -982,6 +982,9 @@ def initialCommUpdatProcess():
  
  if AVersion!=-1:
     WorkingCommunities=WorkingCommunities.drop([2,3]); 
+ if BVersion!=-1:
+    WorkingCommunities=WorkingCommunities.drop([2]); 
+    
     
       
 
