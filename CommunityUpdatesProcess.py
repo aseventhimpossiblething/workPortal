@@ -955,6 +955,10 @@ def initialCommUpdatProcess():
  global IsCommUpdateRunning
  print("fileHandler.currentCommunitiesLocation - ",fileHandler.currentCommunitiesLocation)
  os.chdir(fileHandler.currentCommunitiesLocation);
+ 
+ 
+
+ WorkingCommunities=pandas.read_excel('WorkingCommunities')
  print(os.listdir(os.getcwd()));
  print(WorkingCommunities.iloc[0]); 
  print(WorkingCommunities.iloc[1]); 
