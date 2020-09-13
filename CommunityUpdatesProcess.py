@@ -167,7 +167,6 @@ def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
   titlestring.find(checkword3)!=-1 and titlestring.find(checkword4)!=-1:
   return "Valid"
-  print("If actually running in check 170")
  else:
   print("else running in check 172")    
   Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
@@ -955,10 +954,18 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
 def initialCommUpdatProcess():
  global IsCommUpdateRunning
  print("fileHandler.currentCommunitiesLocation - ",fileHandler.currentCommunitiesLocation)
- os.chdir(fileHandler.currentCommunitiesLocation)
- print(os.listdir(os.getcwd()))
+ os.chdir(fileHandler.currentCommunitiesLocation);
+ print(os.listdir(os.getcwd()));
+ print(WorkingCommunities.iloc[0]); 
+ print(WorkingCommunities.iloc[1]); 
+ print(WorkingCommunities.iloc[2]); 
+ print(WorkingCommunities.iloc[3]); 
+ print(WorkingCommunities.iloc[4]); 
+ print(WorkingCommunities.iloc[5]); 
+ print(WorkingCommunities.iloc[6]); 
+       
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3])
- print(WorkingCommunities)
+ #print(WorkingCommunities)
  print("Alert 1-------------------Alert 1----------------------------Alert 1-----------------------Alert 1 ") 
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
  print("Alert 2-------------------Alert 2----------------------------Alert 2-----------------------Alert 2 ")      
