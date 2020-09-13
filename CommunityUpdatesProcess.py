@@ -79,7 +79,7 @@ def UrlGen(topCleaned,MPC):
          cntr=0;
          while cntr<len(topCleaned['Community Name']):
                   
-               Name=str(topCleaned.iloc[cntr]['Community Name']).replace(" ","%").replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
+               Name=str(topCleaned.iloc[cntr]['Community Name']).replace(" ","%20").replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
                .replace("50s","").replace(" 50s ","").replace(" 50' ","").replace("55s","").replace(" 55s ","").replace("55'","")\
                .replace("60s","").replace(" 60s ","").replace(" 60' ","").replace("65s","").replace(" 65s ","").replace(" 65' ","")\
                .replace("70s","").replace(" 70s ","").replace(" 70' ","").replace("75s","").replace(" 75s ","").replace(" 75' ","")\
