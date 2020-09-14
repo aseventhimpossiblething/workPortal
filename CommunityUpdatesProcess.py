@@ -959,6 +959,9 @@ def initialCommUpdatProcess():
  print("fileHandler.currentCommunitiesLocation - ",fileHandler.currentCommunitiesLocation)
  os.chdir(fileHandler.currentCommunitiesLocation);
  print(os.listdir(os.getcwd()));
+ print("____________________________________________________________CURRENT VERSION")   
+ print("____________________________________________________________CURRENT VERSION")     
+ 
  
   
  
