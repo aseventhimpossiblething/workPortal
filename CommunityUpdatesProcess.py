@@ -984,12 +984,16 @@ def initialCommUpdatProcess():
  print("WorkingCommunities ",WorkingCommunities)
  print("WorkingCommunities.columns ",WorkingCommunities.columns);  
  """     
-      
+     
  
  if AVersion!=-1:
-    WorkingCommunities=WorkingCommunities.drop([2,3]); 
+    print("AVersion");        
+    WorkingCommunities=WorkingCommunities.drop([2,3]);
+    
  if BVersion!=-1:
-    WorkingCommunities=WorkingCommunities.drop([2]); 
+    print("BVersion");  
+    WorkingCommunities=WorkingCommunities.drop([2]);
+
     
     
       
