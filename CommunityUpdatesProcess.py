@@ -241,8 +241,9 @@ def filterNonParticipators(theFrame):
    #theFrame[1];
    #theFrame[2];  
    #theFrame[3];
-   #theFrame[4];    
-      
+   #theFrame[4];
+   theFrame[5];
+   theFrame[6];       
       
    try:
       #print("Start Try")
