@@ -979,12 +979,12 @@ def initialCommUpdatProcess():
  AVersion=str(WorkingCommunities.iloc[[2]].values).find('Community Id');
  BVersion=str(WorkingCommunities.iloc[[4]].values).find('Community Id');
  
- """
- print("AVersion ",AVersion);
+ 
+ #print("AVersion ",AVersion);
  print("BVersion ",BVersion);     
- print("WorkingCommunities ",WorkingCommunities)
- print("WorkingCommunities.columns ",WorkingCommunities.columns);  
- """     
+ #print("WorkingCommunities ",WorkingCommunities)
+ #print("WorkingCommunities.columns ",WorkingCommunities.columns);  
+      
      
  
  if AVersion!=-1:
