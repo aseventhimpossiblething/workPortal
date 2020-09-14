@@ -982,7 +982,7 @@ def initialCommUpdatProcess():
  
  #print("AVersion ",AVersion);
  print("BVersion ",BVersion);     
- #print("WorkingCommunities ",WorkingCommunities)
+ print("WorkingCommunities ",WorkingCommunities)
  #print("WorkingCommunities.columns ",WorkingCommunities.columns);  
       
      
