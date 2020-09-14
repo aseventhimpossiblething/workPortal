@@ -601,6 +601,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=Keyword_conv.replace("'","")
      Keyword_conv=Keyword_conv.replace("+,","")
      Keyword_conv=Keyword_conv.replace(",","")
+     Keyword_conv=Keyword_conv.replace(" s ","")
+     Keyword_conv=Keyword_conv.replace("+s ","")
      Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
      Keyword_conv="+"+Keyword_conv
      set_bid=.45;
@@ -650,6 +652,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=Keyword_conv.replace("'","")
      Keyword_conv=Keyword_conv.replace(",","")
      Keyword_conv=Keyword_conv.replace("+G +& +I","G&I ")
+     Keyword_conv=Keyword_conv.replace(" s ","")
+     Keyword_conv=Keyword_conv.replace("+s ","")
      Keyword_conv="+"+Keyword_conv
      set_bid=.45;
      if len(Keyword_conv)<12:
@@ -753,7 +757,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                   .replace("+ + + ","+").replace("++","+").replace("+ +","+").replace(" ++","+").replace("++ ","+")\
                   .replace(" + +","+").replace("+ + ","+").replace("+–","+").replace("+– ","+").replace(" +–","+")\
                   .replace(" +– ","+").replace(" +– +","+").replace("+– + ","+").replace(" + ","").replace("++","+")\
-                  .replace(" ++ ","").replace("+ ","").replace(",","");
+                  .replace(" ++ ","").replace("+ ","").replace(",","").replace(" s ","")
+   Keyword_conv=Keyword_conv.replace("+s ","");
          
    if len(Keyword_conv)<10:
       Keyword_conv=Keyword_conv+" Community"
