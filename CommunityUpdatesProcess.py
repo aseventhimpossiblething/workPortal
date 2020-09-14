@@ -974,18 +974,19 @@ def initialCommUpdatProcess():
  AVersion=str(WorkingCommunities.iloc[[2]].values);
  BVersion=str(WorkingCommunities.iloc[[4]].values);
  
- print("AVersion ",AVersion);
- print("BVersion ",BVersion);  
+ #print("AVersion ",AVersion);
+ #print("BVersion ",BVersion);  
 
      
  AVersion=str(WorkingCommunities.iloc[[2]].values).find('Community Id');
  BVersion=str(WorkingCommunities.iloc[[4]].values).find('Community Id');
  
+ """
  print("AVersion ",AVersion);
  print("BVersion ",BVersion);     
  print("WorkingCommunities ",WorkingCommunities)
  print("WorkingCommunities.columns ",WorkingCommunities.columns);  
-      
+ """     
       
  
  if AVersion!=-1:
@@ -1000,11 +1001,9 @@ def initialCommUpdatProcess():
 
 
 
- print("Alert 1-------------------Alert 1----------------------------Alert 1-----------------------Alert 1 ") 
+ 
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
- print("Alert 2-------------------Alert 2----------------------------Alert 2-----------------------Alert 2 ")      
  WorkingCommunities=WorkingCommunities.drop([4])
- print("Alert 3-------------------Alert 3----------------------------Alert 3-----------------------Alert 3 ")      
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','Community Name','City')
  if IsCommValid!="Valid":
   return IsCommValid
