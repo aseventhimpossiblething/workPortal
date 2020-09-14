@@ -238,7 +238,7 @@ def filterNonParticipators(theFrame):
    
       
    #theFrame[0];
-   theFrame[1];
+   #theFrame[1];
    theFrame[2];  
    theFrame[3];   
       
