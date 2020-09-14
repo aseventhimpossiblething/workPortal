@@ -627,6 +627,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       
    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
+   
+   print("str(NewDataFrame['Community Id'][count]) ",str(NewDataFrame['Community Id'][count]));
+   if str(NewDataFrame['Community Id'][count]).find("nan")>-1:
+            AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
+                      +str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
         
    Adgroup.append(AdgroupNaming_conv)
    #Keyword.append(Keyword_conv)
