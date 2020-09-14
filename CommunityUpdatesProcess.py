@@ -235,7 +235,13 @@ def filterNonParticipators(theFrame):
    theFrame=theFrame.drop_duplicates();
    #print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
    theFrame=theFrame.dropna();
-  
+   
+   theFrame[0];
+   theFrame[1];
+   theFrame[2];  
+   theFrame[3];   
+      
+      
    try:
       print("Start Try")
       theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount])]
@@ -998,7 +1004,6 @@ def initialCommUpdatProcess():
  WorkingCommunities=WorkingCommunities.drop([4])
  print("Alert 3-------------------Alert 3----------------------------Alert 3-----------------------Alert 3 ")      
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','Community Name','City')
- print("Alert 4-------------------Alert 4----------------------------Alert 4-----------------------Alert 4 ")      
  if IsCommValid!="Valid":
   return IsCommValid
  WorkingGoogleEOF=WorkingGoogle()    
