@@ -68,7 +68,7 @@ def CommunityNameCleaner(x):
                .replace(" 110' ","").replace(" 110 ","").replace(" Phase ","").replace(" I ","").replace(" II ","").replace(" Build On Your Lot ","")\
                .replace(" build on your lot ","").replace(" - "," ").replace(" on your lot ","").replace(" 105' ","").replace(" 110s ","")\
                .replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
-               .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","").replace("TRUE OLY ","")\
+               .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","").replace("True OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ").replace("pricing","").replace("TRUE OLY ","")
            out.append(AlteredComName)
            thisLoopCount+=1;
@@ -107,7 +107,7 @@ def UrlGen(topCleaned,MPC):
                .replace(" 65' ","").replace(" 65 ","").replace(" 70s ","").replace(" 70' ","").replace(" 70 ","").replace(" 75s ","")\
                .replace(" 75' ","").replace(" 75 ","").replace(" 80s ","").replace(" 80' ","").replace(" 80 ","").replace(" 85s ","")\
                .replace(" 85 '","").replace(" 85 ","").replace(" 90s ","").replace(" 90' ","").replace(" 90 ","").replace(" 95s ","").replace("pricing","").replace("TRUE OLY ","")\
-               .replace(" 95' ","").replace(" 95 ","").replace(" 105s ","")\
+               .replace(" 95' ","").replace(" 95 ","").replace(" 105s ","").replace("True OLY ","")\
                .replace(" 105 '","").replace(" 105 ","").replace(" 110s ","").replace(" 110' ","").replace(" 110 ","").replace(" Phase ","")\
                .replace(" I ","").replace(" II ","").replace(" Build On Your Lot ","").replace(" build on your lot ","").replace(" - "," ").replace(" on your lot ","")\
                .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
@@ -320,46 +320,15 @@ def filterNonParticipators(theFrame):
  while icount0<len(theFrame['Community Name']):
   #print(" just before failing try icount0= ",icount0)
   try:
-   #print("inside try of second loop",icount0)
    Community=str(theFrame["Community Name"][icount0])
-   """
-   .replace("40s","").replace("40'","").replace("40","").replace("45s","")\
-   .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","")\
-   .replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","")\
-   .replace("65'","").replace("65","").replace("70s","").replace("70'","").replace("70","").replace("75s","")\
-   .replace("75'","").replace("75","").replace("80s","").replace("80'","").replace("80","").replace("85s","")\
-   .replace("85'","").replace("85","").replace("90s","").replace("90'","").replace("90","").replace("95s","")\
-   .replace("95'","").replace("95","").replace("100s","").replace("100'","").replace("105s","")\
-   .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","").replace("Phase","")\
-   .replace(" I ","").replace(" II ","").replace("Build On Your Lot","").replace("build on your lot","").replace("-"," ").replace("on your lot","")\
-   .replace("105'","").replace("110s","").replace("110'","").replace("  "," ").replace("Austin_TX>269>Willa._>125784","Austin_TX>269>Willa_>125784")\
-   .replace("Cielo at Sand Creek | Vista Collection","Cielo at Sand Creek Vista Collection").replace("On Your Lot","").replace("OLY","")\
-   .replace("Austin_TX>269>Highpointe /_>146097","Austin_TX>269>Highpointe_>146097").replace("|","").replace("/","").replace("&"," ")
-   """
-   
-   
    if DeDupArray.count(Community)>1:
-    #print("Inside second loop (if) predicted fail")
-    #print("found in string ",DeDupArray.count(Community)," times");
-    #print("____________________________________________________")
-    #print("icount0 ",icount0)
-    #print("theFrame size before drop ",len(theFrame))
     theFrame=theFrame.drop([icount0])
-    #print("theFrame size after drop ",len(theFrame))
-    #print("____________________________________________________")
-   
-   
   except:
    print("Second Loop failed Count ",icount0)
    icount0+0;
-  #if icount0%100==0:
-  # print("Second Loop Count ",icount0)
   icount0+=1; 
   
  theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name'])
-
- 
-
   
  print("End of Filter ")
  print(" Frame size ",len(theFrame))
@@ -404,7 +373,6 @@ def communityCheck(checkby,checkin,Name):
  print("End Community Check for ",Name)
  return checkby
  
- 
 
  
 def CommunityNameDuplicateSpecialLoop(cleanupFrame):
@@ -423,7 +391,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
                .replace("70s","").replace(" 70s ","").replace(" 70' ","").replace("75s","").replace(" 75s ","").replace(" 75' ","")\
                .replace("80s","").replace(" 80s ","").replace(" 80' ","").replace("85s","").replace(" 85s ","").replace(" 85 '","")\
                .replace("90s","").replace(" 90s ","").replace(" 90' ","").replace("95s","").replace(" 95s ","").replace(" 95' ","")\
-               .replace("100s","").replace("105s","").replace(" 105s ","").replace("Homesites","")\
+               .replace("105s","").replace(" 105s ","").replace("Homesites","")\
                .replace("lots","").replace("-"," ").replace("_","").replace("40s","").replace("BYOL","").replace("40'","").replace("40","")\
                .replace("45s","").replace(" Homesites ","").replace("homesites","").replace("()","").replace("byol","").replace("Lots","")\
                .replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","").replace("55s","").replace("  ","").replace("ft.","")\
@@ -446,8 +414,8 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
                .replace(" 105 '","").replace(" 105 ","").replace(" 110s ","").replace(" 110' ","").replace(" 110 ","").replace(" Phase ","")\
                .replace(" I ","").replace(" II ","").replace(" Build On Your Lot ","").replace(" build on your lot ","").replace(" - "," ").replace(" on your lot ","")\
                .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
-               .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
-               .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
+               .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","").replace(" s ","").replace("TRUE OLY ","")\
+               .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ").replace("pricing","").replace("True OLY ","");
            if AlteredColNamesWithMultiples.count(AlteredComName)>1:
               MultiplesCommunityNames.append(AlteredComName);
               MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])
@@ -457,7 +425,6 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
      countOfAppendToMultiplesDedupedRowNumbers=0;
      while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):
-             #print("while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):")
              RowOfDuplicate=AlteredColNamesWithMultiples.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]);
              CommIdOfDuplicate=cleanupFrame['Community Id'][RowOfDuplicate]
              CommNameOfDuplicate=cleanupFrame['Community Name'][RowOfDuplicate]
@@ -469,24 +436,23 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      topCleaned['URL Signal']=UrlGen(topCleaned,"Default");
      BottomCleaned=cleanupFrame.iloc[MultiplesDedupedRowNumbers];
      BottomCleaned=BottomCleaned.drop_duplicates();
+     print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
+     del BottomCleaned['Community Id'];
+     print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
+     BlankCommunityIds=[];  
+     colrepCounter=0;
+     while colrepCounter<len(BottomCleaned['Community Name']):
+         BlankCommunityIds.append(" ");
+         colrepCounter+=1;   
+            
+      
+     
      BottomCleaned['URL Signal']=UrlGen(BottomCleaned,"MPC"); 
      UnitedFrame=topCleaned.append(BottomCleaned); 
-         
-     #print("topCleaned ",topCleaned);
-     #print("BottomCleaned ",BottomCleaned);
-     #print("UnitedFrame ",UnitedFrame); 
      UnitedFrame=UnitedFrame.reset_index();
              
      return UnitedFrame;  
 
-
-
-
-
-
-
- 
- 
 
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
  NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame);     
@@ -564,9 +530,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ")\
   
-  
-  
-   
+     
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]\
             .replace(" ","-")+"/"+communityName\
@@ -660,21 +624,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       Keyword_conv=Keyword_conv+" Community"
      MatchType_Conv="Broad"
    Campaign_Name.append(Campaign_Nameing_Conv);
-
-
-   
+      
    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
-
-   
-   
-   
-   
-   
-   
-
- 
-   
+        
    Adgroup.append(AdgroupNaming_conv)
    #Keyword.append(Keyword_conv)
    Match_Type.append(MatchType_Conv)
@@ -688,9 +641,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if len(Title1A_Name_Conv)< 20:
     Title1A_Name_Conv=Title1A_Name_Conv+" New Homes" 
    Title1A.append(Title1A_Name_Conv);
-   
- 
-   
+      
    Title2A_conv=NewDataFrame['City'][count]
    if len(Title2A_conv)<12:
     Title2A_conv=Title2A_conv+" New Homes for sale"   
@@ -704,18 +655,15 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    PreTextA="Find your family a perfect New Home at \
     "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])
-    
-   
+      
    if len(PreTextA)>89:
     PreTextA="Find your family a perfect New Home at "+str(NewDataFrame['Community Name'][count])\
              +" in "+str(NewDataFrame['City'][count])
     
-   
    if len(PreTextA)>89:
     PreTextA.find("at")
     PreTextA=PreTextA[:PreTextA.find("at")]
-   
-   
+      
    TextA.append(PreTextA);
    TextB.append(PreTextA+"!");
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
@@ -774,15 +722,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
           #print("Keyword last Character ",Keyword_conv[:len(Keyword_conv)-1])
           Keyword_conv=Keyword_conv[:len(Keyword_conv)-1]
    Keyword.append(Keyword_conv);   
-     
-   
-    
    label="Created by WebApp"  
- 
-   
-
-   
-   
+         
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
    community=str(communityName).lower();
    if community.find(city)>-1:
