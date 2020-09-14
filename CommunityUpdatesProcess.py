@@ -973,7 +973,7 @@ def initialCommUpdatProcess():
  BVersion=str(WorkingCommunities.iloc[[4]].values);
  
  print("AVersion ",AVersion);
- print("regular ",regular);  
+ print("BVersion ",BVersion);  
 
      
  AVersion=str(WorkingCommunities.iloc[[2]].values).find('Community Id');
