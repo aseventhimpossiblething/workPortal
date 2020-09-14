@@ -243,7 +243,7 @@ def filterNonParticipators(theFrame):
    #theFrame[3];
    #theFrame[4];
    #theFrame[5];
-   print("theFrame ",theFrame);       
+   print("theFrame.columns ",theFrame.columns);       
       
    try:
       #print("Start Try")
