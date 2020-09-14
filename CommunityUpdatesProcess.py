@@ -37,7 +37,7 @@ def CommunityNameCleaner(x):
       thisLoopCount=0;
       while thisLoopCount<len(x):
            AlteredComName=str(x[thisLoopCount]).replace("40s","").replace("45s","").replace("50s","").replace("55s","").replace("60","")\
-               .replace("65s","").replace("70s","").replace("75s","").replace("80s","").replace("85s","").replace("90s","").replace("95s","")\   
+               .replace("65s","").replace("70s","").replace("75s","").replace("80s","").replace("85s","").replace("90s","").replace("95s","")\
                .replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
                .replace("50s","").replace(" 50s ","").replace(" 50' ","").replace("55s","").replace(" 55s ","").replace("55'","")\
                .replace("60s","").replace(" 60s ","").replace(" 60' ","").replace("65s","").replace(" 65s ","").replace(" 65' ","")\
