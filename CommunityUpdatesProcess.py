@@ -236,7 +236,8 @@ def filterNonParticipators(theFrame):
    #print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
    theFrame=theFrame.dropna();
    
-   theFrame[0];
+      
+   #theFrame[0];
    theFrame[1];
    theFrame[2];  
    theFrame[3];   
