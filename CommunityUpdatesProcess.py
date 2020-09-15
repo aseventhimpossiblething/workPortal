@@ -440,7 +440,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      
      BottomCleaned=BottomCleaned.drop_duplicates();
 
-     """
+     
      print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
      del BottomCleaned['Community Id'];
      print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
@@ -450,7 +450,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
          BlankCommunityIds.append(" ");
          colrepCounter+=1;   
      BottomCleaned['URL Signal']=UrlGen(BottomCleaned,"MPC"); 
-     """
+     
       
      UnitedFrame=topCleaned.append(BottomCleaned); 
      UnitedFrame=UnitedFrame.reset_index();
