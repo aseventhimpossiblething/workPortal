@@ -241,7 +241,7 @@ def filterNonParticipators(theFrame):
    #theFrame[3];
    #theFrame[4];
    #theFrame[5];
-   print("theFrame.columns ",theFrame.columns);       
+   #print("theFrame.columns ",theFrame.columns);       
       
    try:
       #print("Start Try")
@@ -441,9 +441,9 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      BottomCleaned=BottomCleaned.drop_duplicates();
 
      
-     print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
+     #print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
      del BottomCleaned['Community Id'];
-     print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
+     #print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
      BlankCommunityIds=[];  
      colrepCounter=0;
      while colrepCounter<len(BottomCleaned['Community Name']):
@@ -535,7 +535,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ")\
   
-  #for communityName[count]   
+  for letters in communityName[count]:
+            print("printing Letter ",letters);
+            print("printing Letter type",type(letters));
+            #if type(letters)= 
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]\
             .replace(" ","-")+"/"+communityName\
@@ -727,12 +730,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    """
       
       
-   print("-----------------------------")
+   @print("-----------------------------")
    
    nadgrp=AdgroupNaming_conv.replace("nan","")
-   print("nadgrp[len(nadgrp)-1] ",nadgrp[len(nadgrp)-1])
+   #print("nadgrp[len(nadgrp)-1] ",nadgrp[len(nadgrp)-1])
    if nadgrp[len(nadgrp)-1]==">":
-      print("attempting if 1")
+      #print("attempting if 1")
       URL_Struct1=str("https://www.newhomesource.com/communities/"+NewDataFrame['State']\
                   [count]+"/"+NewDataFrame['Market Name'][count]+"-area?communityname="+communityName[count]).lower()     
                
@@ -741,10 +744,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                .replace("Lots","");
           
       Final_URL.append(URL_Struct1)
-      print("Yes >")
+      #print("Yes >")
    else:
       Final_URL.append(URL_Struct1)
-      print("Not not >");
+      #print("Not not >");
 
      
  
