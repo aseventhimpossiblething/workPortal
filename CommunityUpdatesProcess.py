@@ -711,15 +711,16 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       #print("NewDataFrame['URL Signal'][count]" ,NewDataFrame['URL Signal'][count])
       URL_Struct1=NewDataFrame['URL Signal'][count];      
    """
-   
-   print("-----------------------------")
+
    try:
+       print("-----------------------------")     
        print('try running')     
        #print("AdgroupNaming_conv ",AdgroupNaming_conv)
        nadgrp=AdgroupNaming_conv.replace("nan","")
        print("len(nadgrp) ",len(nadgrp))
        print("type(len(nadgrp)); ",type(len(nadgrp)))     
-       print("nadgrp; ",nadgrp);
+       print("nadgrp[0]; ",nadgrp[0]);
+       print("nadgrp[len(nadgrp)]; ",nadgrp[len(nadgrp)]);
        print("-----------------------------")
    except:
        print("exclude")    
