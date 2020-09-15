@@ -732,15 +732,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("nadgrp[len(nadgrp)-1] ",nadgrp[len(nadgrp)-1])
    if nadgrp[len(nadgrp)-1]==">":
       print("attempting if 1")
-      URL_Struct1=str("https://www.newhomesource.com/communities/"+NewDataFrame['State'][count]+"/"+NewDataFrame['Market Name'][count]+"-area?communityname="+NewDataFrame['Community Name'][count])
-      #.lower()                
-              
-      """           
+      URL_Struct1=str("https://www.newhomesource.com/communities/"+NewDataFrame['State']\
+                  [count]+"/"+NewDataFrame['Market Name'][count]+"-area?communityname="+NewDataFrame['Community Name'][count]).lower()     
+               
       URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
                .replace("Lots","");
-      """         
-      
+          
       Final_URL.append(URL_Struct1)
       print("Yes >")
    else:
