@@ -36,7 +36,7 @@ def CommunityNameCleaner(x):
       out=[]; 
       thisLoopCount=0;
       while thisLoopCount<len(x):
-           AlteredComName=str(x[thisLoopCount]).replace(" s ","").replace("40s","").replace("45s","").replace("50s","").replace("55s","").replace("60","")\
+           AlteredComName=str(x[thisLoopCount]).replace(" s ","").replace("40s","").replace("45s","").replace("50s","").replace("55s","").replace("60s","")\
                .replace("65s","").replace("70s","").replace("75s","").replace("80s","").replace("85s","").replace("90s","").replace("95s","")\
                .replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
                .replace("50s","").replace(" 50s ","").replace(" 50' ","").replace("55s","").replace(" 55s ","").replace("55'","")\
@@ -81,7 +81,8 @@ def UrlGen(topCleaned,MPC):
          cntr=0;
          while cntr<len(topCleaned['Community Name']):
                   
-               Name=str(topCleaned.iloc[cntr]['Community Name']).replace(" s ","").replace(" ","%20").replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
+               Name=str(topCleaned.iloc[cntr]['Community Name']).replace(" s ","").replace(" ","%20").replace("40s","")\
+               .replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
                .replace("50s","").replace(" 50s ","").replace(" 50' ","").replace("55s","").replace(" 55s ","").replace("55'","")\
                .replace("60s","").replace(" 60s ","").replace(" 60' ","").replace("65s","").replace(" 65s ","").replace(" 65' ","")\
                .replace("70s","").replace(" 70s ","").replace(" 70' ","").replace("75s","").replace(" 75s ","").replace(" 75' ","")\
@@ -433,8 +434,10 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
              countOfAppendToMultiplesDedupedRowNumbers+=1;
      topCleaned=cleanupFrame.drop(repeatedRows);          
      topCleaned=topCleaned.drop_duplicates();
-     topCleaned['URL Signal']=UrlGen(topCleaned,"Default");
+     #topCleaned['URL Signal']=UrlGen(topCleaned,"Default");
      BottomCleaned=cleanupFrame.iloc[MultiplesDedupedRowNumbers];
+     
+     """ 
      BottomCleaned=BottomCleaned.drop_duplicates();
      print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
      del BottomCleaned['Community Id'];
@@ -444,10 +447,9 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      while colrepCounter<len(BottomCleaned['Community Name']):
          BlankCommunityIds.append(" ");
          colrepCounter+=1;   
-            
-      
-     
      BottomCleaned['URL Signal']=UrlGen(BottomCleaned,"MPC"); 
+     """
+      
      UnitedFrame=topCleaned.append(BottomCleaned); 
      UnitedFrame=UnitedFrame.reset_index();
              
