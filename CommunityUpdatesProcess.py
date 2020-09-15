@@ -704,11 +704,15 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
    #print("NewDataFrame['URL Signal'][count]" ,NewDataFrame['URL Signal'][count]) 
+      
    """  
+   
    if NewDataFrame['URL Signal'][count]!="Default":
       #print("NewDataFrame['URL Signal'][count]" ,NewDataFrame['URL Signal'][count])
       URL_Struct1=NewDataFrame['URL Signal'][count];      
    """
+   print("AdgroupNaming_conv ",AdgroupNaming_conv)
+   
    Final_URL.append(URL_Struct1)
  
   
