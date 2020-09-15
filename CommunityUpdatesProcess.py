@@ -713,7 +713,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    """
    
       
-  
+   """
    print("-----------------------------")     
    print('try running')     
    #print("AdgroupNaming_conv ",AdgroupNaming_conv)
@@ -722,9 +722,19 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("type(len(nadgrp)); ",type(len(nadgrp)))     
    print("nadgrp[0]; ",nadgrp[0]);
    print("nadgrp[len(nadgrp)-1]; ",nadgrp[len(nadgrp)-1]);
-   print("nadgrp; ",nadgrp);     
+   print("nadgrp; ",nadgrp); 
+   """
+      
+      
    print("-----------------------------")
-     
+   
+   nadgrp=AdgroupNaming_conv.replace("nan","")
+   print("nadgrp[len(nadgrp)-1] ",nadgrp[len(nadgrp)-1])
+   if nadgrp[len(nadgrp)-1]==">":
+      print("Yes >")
+   else:
+      print("Not not >");
+
      
  
    
