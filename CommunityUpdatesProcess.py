@@ -632,7 +632,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
    
-   print("str(NewDataFrame['Community Id'][count]) ",str(NewDataFrame['Community Id'][count]));
+   #print("str(NewDataFrame['Community Id'][count]) ",str(NewDataFrame['Community Id'][count]));
    if str(NewDataFrame['Community Id'][count]).find("nan")>-1:
             AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>");
@@ -711,20 +711,20 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       #print("NewDataFrame['URL Signal'][count]" ,NewDataFrame['URL Signal'][count])
       URL_Struct1=NewDataFrame['URL Signal'][count];      
    """
-
-   try:
-       print("-----------------------------")     
-       print('try running')     
-       #print("AdgroupNaming_conv ",AdgroupNaming_conv)
-       nadgrp=AdgroupNaming_conv.replace("nan","")
-       print("len(nadgrp) ",len(nadgrp))
-       print("type(len(nadgrp)); ",type(len(nadgrp)))     
-       print("nadgrp[0]; ",nadgrp[0]);
-       print("nadgrp[len(nadgrp)-1]; ",nadgrp[len(nadgrp)-1]);
-       print("nadgrp; ",nadgrp);     
-       print("-----------------------------")
-   except:
-       print("exclude")    
+   
+      
+  
+   print("-----------------------------")     
+   print('try running')     
+   #print("AdgroupNaming_conv ",AdgroupNaming_conv)
+   nadgrp=AdgroupNaming_conv.replace("nan","")
+   print("len(nadgrp) ",len(nadgrp))
+   print("type(len(nadgrp)); ",type(len(nadgrp)))     
+   print("nadgrp[0]; ",nadgrp[0]);
+   print("nadgrp[len(nadgrp)-1]; ",nadgrp[len(nadgrp)-1]);
+   print("nadgrp; ",nadgrp);     
+   print("-----------------------------")
+     
      
  
    
