@@ -721,6 +721,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
        print("type(len(nadgrp)); ",type(len(nadgrp)))     
        print("nadgrp[0]; ",nadgrp[0]);
        print("nadgrp[len(nadgrp)]; ",nadgrp[len(nadgrp)]);
+       print("nadgrp; ",nadgrp);     
        print("-----------------------------")
    except:
        print("exclude")    
