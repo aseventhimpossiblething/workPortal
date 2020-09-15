@@ -534,11 +534,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ")\
-  
+  """
   for letters in communityName[count]:
             print("printing Letter ",letters);
             print("printing Letter type",type(letters));
             #if type(letters)= 
+  """          
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]\
             .replace(" ","-")+"/"+communityName\
