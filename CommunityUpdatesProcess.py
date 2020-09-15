@@ -715,10 +715,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("-----------------------------")
    try:
        print('try running')     
-       print("AdgroupNaming_conv ",AdgroupNaming_conv)
+       #print("AdgroupNaming_conv ",AdgroupNaming_conv)
        nadgrp=AdgroupNaming_conv.replace("nan","")
        print("len(nadgrp) ",len(nadgrp))
-       print("nadgrp[len(nadgrp)]; ",nadgrp[len(nadgrp)]);
+       print("type(len(nadgrp)); ",type(len(nadgrp)))     
+       print("nadgrp; ",nadgrp);
        print("-----------------------------")
    except:
        print("exclude")    
