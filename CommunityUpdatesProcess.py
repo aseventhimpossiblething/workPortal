@@ -731,8 +731,17 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    nadgrp=AdgroupNaming_conv.replace("nan","")
    print("nadgrp[len(nadgrp)-1] ",nadgrp[len(nadgrp)-1])
    if nadgrp[len(nadgrp)-1]==">":
+      URL_Struct1=str("https://www.newhomesource.com/communities/"+NewDataFrame['State'][count]+"/"+NewDataFrame['Market Name'][count]+"-area?communityname="+Name).lower()                
+              
+                 
+      URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
+               .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
+               .replace("Lots","");
+      
+      Final_URL.append(URL_Struct1)
       print("Yes >")
    else:
+      Final_URL.append(URL_Struct1)
       print("Not not >");
 
      
@@ -740,7 +749,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
       
    
-   Final_URL.append(URL_Struct1)
+   #Final_URL.append(URL_Struct1)
  
   
    Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+").replace(" + + +","+")\
