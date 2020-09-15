@@ -740,8 +740,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    print("communityName ",communityName)  
    if nadgrp[len(nadgrp)-1]==">":
           print("attempting if 1")
-          communityName=communityName.replace(" ","%").replace(" s ","").replace("61s","").replace("64s","").replace("71s","").replace("74s","").replace("81s","")
-          .replace("61s","").replace("94s","").replace(" s ","")  
+          communityName=communityName.replace(" ","%").replace(" s ","").replace("61s","").replace("64s","").replace("71s","").replace("74s","").replace("81s","")\
+          .replace("61s","").replace("94s","").replace(" s ","");  
           URL_Struct1=str("https://www.newhomesource.com/communities/"+NewDataFrame['State']\
                      [count]+"/"+NewDataFrame['Market Name'][count]+"-area?communityname="+communityName).lower()     
                   
