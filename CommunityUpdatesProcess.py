@@ -718,7 +718,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
        nadgrp=AdgroupNaming_conv.replace("nan","")
        print("len(nadgrp) ",len(nadgrp))
        print("nadgrp[len(nadgrp)]; ",nadgrp[len(nadgrp)]);
-   exclude:
+   except:
        print("exclue")    
      
    print("-----------------------------")
