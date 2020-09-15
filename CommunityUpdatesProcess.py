@@ -732,7 +732,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       
    @print("-----------------------------")
    
-   nadgrp=str(AdgroupNaming_conv).replace("nan","")
+   nadgrp=AdgroupNaming_conv
    print("nadgrp[len(nadgrp)-1] ",nadgrp[len(nadgrp)-1])
    if nadgrp[len(nadgrp)-1]==">":
       print("attempting if 1")
