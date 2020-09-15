@@ -711,7 +711,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       #print("NewDataFrame['URL Signal'][count]" ,NewDataFrame['URL Signal'][count])
       URL_Struct1=NewDataFrame['URL Signal'][count];      
    """
+   print("-----------------------------")
    print("AdgroupNaming_conv ",AdgroupNaming_conv)
+   print("len(AdgroupNaming_conv) ",len(AdgroupNaming_conv))
+   print("AdgroupNaming_conv[len(AdgroupNaming_conv)]; ",AdgroupNaming_conv[len(AdgroupNaming_conv)]);
+   print("-----------------------------")
+      
    
    Final_URL.append(URL_Struct1)
  
