@@ -541,7 +541,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   print("printing Letter type",type(letters));
   #if type(letters)= 
   """          
-  
+  communityName.replace(" s ","").replace("61s","").replace(" 64s ","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","")
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]\
             .replace(" ","-")+"/"+communityName\
@@ -734,28 +734,27 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       
       
    #print("-----------------------------")
-   try:
-       nadgrp=AdgroupNaming_conv.replace("nan","")
-       print("nadgrp[len(nadgrp)-1] ",nadgrp[len(nadgrp)-1])
-       if nadgrp[len(nadgrp)-1]==">":
+   
+   nadgrp=AdgroupNaming_conv.replace("nan","")
+   print("nadgrp[len(nadgrp)-1] ",nadgrp[len(nadgrp)-1])
+   print("communityName[count] ",communityName[count])  
+   if nadgrp[len(nadgrp)-1]==">":
           print("attempting if 1")
-          URL_Struct1=str("https://www.newhomesource.com/communities/"+NewDataFrame['State'][count]+"/"+NewDataFrame['Market Name'][count]+"-area?communityname="+communityName[count]).lower()     
+          URL_Struct1="https://www.newhomesource.com/communities/"+NewDataFrame['State'][count]+"/"+NewDataFrame['Market Name'][count]+"-area?communityname="+communityName[count]
+          #.lower()     
           """         
           URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
                .replace("Lots","");
           """    
           Final_URL.append(URL_Struct1)
-          print("Yes >")
-       else:
+         print("Yes >")
+   else:
           Final_URL.append(URL_Struct1)
           print("Not not >");
 
-   except:
-      print("row failed") 
-      Final_URL.append(URL_Struct1)
- 
-   
+
+     
       
    
    #Final_URL.append(URL_Struct1)
