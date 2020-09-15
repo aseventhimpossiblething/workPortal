@@ -748,7 +748,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                .replace("Lots","");
           """    
           Final_URL.append(URL_Struct1)
-         print("Yes >")
+          print("Yes >")
    else:
           Final_URL.append(URL_Struct1)
           print("Not not >");
