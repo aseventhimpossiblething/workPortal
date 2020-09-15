@@ -437,8 +437,10 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      #topCleaned['URL Signal']=UrlGen(topCleaned,"Default");
      BottomCleaned=cleanupFrame.iloc[MultiplesDedupedRowNumbers];
      
-     """ 
+     
      BottomCleaned=BottomCleaned.drop_duplicates();
+
+     """
      print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
      del BottomCleaned['Community Id'];
      print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
