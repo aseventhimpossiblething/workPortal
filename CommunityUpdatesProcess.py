@@ -439,7 +439,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
 
      
      #print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
-     del BottomCleaned['Community Id'];
+     #del BottomCleaned['Community Id'];
      #print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
      BlankCommunityIds=[];
      print("len(BlankCommunityIds) ",len(BlankCommunityIds))
