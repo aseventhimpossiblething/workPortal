@@ -76,7 +76,7 @@ def CommunityNameCleaner(x):
       return out;   
 
  
-def UrlGen(topCleaned,MPC):
+def UrlGen(topCleaned):
          NewUrls=[] 
          cntr=0;
          while cntr<len(topCleaned['Community Name']):
@@ -121,11 +121,13 @@ def UrlGen(topCleaned,MPC):
                URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
                .replace("Lots","");
-                               
+                
+               """ 
                if MPC=="Default":
                   NewUrls.append(MPC);
                if MPC!="Default":   
-                  #print("URL_Struct1 = ",URL_Struct1);   
+                  #print("URL_Struct1 = ",URL_Struct1);
+               """   
                   NewUrls.append(URL_Struct1); 
                cntr+=1;
            
@@ -454,6 +456,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
       
      UnitedFrame=topCleaned.append(BottomCleaned); 
      UnitedFrame=UnitedFrame.reset_index();
+     UnitedFrame['URL Signal']=UrlGen(topCleaned); 
              
      return UnitedFrame;  
 
