@@ -409,7 +409,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","").replace(" s ","").replace("TRUE OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ").replace("pricing","").replace("True OLY ","")\
                .replace("4","").replace("5","").replace("6","").replace("7","").replace("8","").replace("9","").replace("0","").replace("1","").replace("2","").replace("3","").replace("8","");
-           AlteredColNamesWithMultiples.append(AlteredComName);
+           #AlteredColNamesWithMultiples.append(AlteredComName);
            if AlteredColNamesWithMultiples.count(AlteredComName)>1:
               MultiplesCommunityNames.append(AlteredComName);
               MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])
@@ -417,10 +417,10 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
            thisLoopCount+=1;
      
      wackyNewTable=cleanupFrame 
-     wackyNewTable['Community Names']=AlteredColNamesWithMultiples
+     wackyNewTable['Community Names']=AlteredColNamesWithMultiples;
      #wackyNewTable=cleanupFrame.drop(['Community Name'], axis=1);
-     print("len(wackyNewTable['Community Names']) ",len(wackyNewTable['Community Names']));
-     print("len(AlteredColNamesWithMultiples) ",len(AlteredColNamesWithMultiples));
+     #print("len(wackyNewTable['Community Names']) ",len(wackyNewTable['Community Names']));
+     #print("len(AlteredColNamesWithMultiples) ",len(AlteredColNamesWithMultiples));
      
      
      UnitedFrame=wackyNewTable
