@@ -449,6 +449,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      
       
      UnitedFrame=topCleaned.append(BottomCleaned); 
+     UnitedFrame=UnitedFrame.drop_duplicates(); 
      UnitedFrame=UnitedFrame.reset_index();
      #UnitedFrame['URL Signal']=UrlGen(topCleaned); 
              
