@@ -462,7 +462,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
       
      UnitedFrame=topCleaned.append(BottomCleaned); 
      UnitedFrame=UnitedFrame.reset_index();
-     UnitedFrame['URL Signal']=UrlGen(topCleaned); 
+     #UnitedFrame['URL Signal']=UrlGen(topCleaned); 
              
      return UnitedFrame;  
 
@@ -757,8 +757,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
           URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
                .replace("Lots","");
-          pushh=NewDataFrame['URL Signal'][count];   
-          Final_URL.append(pushh)
+          #pushh=NewDataFrame['URL Signal'][count];   
+          Final_URL.append(URL_Struct1)
           print("Yes >")
    else:
           Final_URL.append(URL_Struct1)
