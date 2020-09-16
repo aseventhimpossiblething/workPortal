@@ -417,10 +417,12 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
            thisLoopCount+=1;
      
 
-     wackyNewTable=cleanupFrame.drop(['Community Name'], axis=1);
-     print("len(wackyNewTable['Community Name']) ",len(wackyNewTable['Community Name']));
+     wackyNewTable['Community Names']=AlteredColNamesWithMultiples
+     #wackyNewTable=cleanupFrame.drop(['Community Name'], axis=1);
+     print("len(wackyNewTable['Community Names']) ",len(wackyNewTable['Community Names']));
      print("len(AlteredColNamesWithMultiples) ",len(AlteredColNamesWithMultiples));
-     wackyNewTable['Community Name']=AlteredColNamesWithMultiples
+     
+     
      UnitedFrame=wackyNewTable
      """
      DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
