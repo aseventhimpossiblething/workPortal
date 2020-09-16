@@ -80,6 +80,7 @@ def UrlGen(topCleaned):
          NewUrls=[] 
          cntr=0;
          while cntr<len(topCleaned['Community Name']):
+               print("Before name")   
                   
                Name=str(topCleaned.iloc[cntr]['Community Name']).replace(" s ","").replace(" ","%20").replace("40s","")\
                .replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
@@ -114,13 +115,14 @@ def UrlGen(topCleaned):
                .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
-               
+               print("after filter 1")   
                URL_Struct1=str("https://www.newhomesource.com/communities/"+topCleaned.iloc[cntr]['State']+"/"+topCleaned.iloc[cntr]['Market Name']+"-area?communityname="+Name).lower()                
               
                  
                URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
                .replace("Lots","");
+               print("After filter 2 before append")      
                 
                """ 
                if MPC=="Default":
@@ -129,6 +131,7 @@ def UrlGen(topCleaned):
                   #print("URL_Struct1 = ",URL_Struct1);
                """   
                NewUrls.append(URL_Struct1); 
+               print("after append")      
                cntr+=1;
            
          return NewUrls;
