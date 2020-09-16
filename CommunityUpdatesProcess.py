@@ -430,11 +430,12 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
              countOfAppendToMultiplesDedupedRowNumbers+=1;
      topCleaned=cleanupFrame.drop(repeatedRows);          
      topCleaned=topCleaned.drop_duplicates();
+     topCleaned=topCleaned.drop_duplicates(subset='Community Name'); 
      #topCleaned['URL Signal']=UrlGen(topCleaned,"Default");
      BottomCleaned=cleanupFrame.iloc[MultiplesDedupedRowNumbers];
      
-     
      BottomCleaned=BottomCleaned.drop_duplicates();
+     BottomCleaned=BottomCleaned.drop_duplicates(subset='Community Name');
 
      
      #print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
