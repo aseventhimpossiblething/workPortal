@@ -417,7 +417,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
            thisLoopCount+=1;
      
      wackyNewTable=cleanupFrame.drop(['Community Name'], axis=1);
-     wackyNewTable['Community Names']=AlteredColNamesWithMultiples
+     wackyNewTable['Community Name']=AlteredColNamesWithMultiples
      UnitedFrame=wackyNewTable
      """
      DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
