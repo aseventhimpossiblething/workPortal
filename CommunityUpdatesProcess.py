@@ -143,29 +143,7 @@ def UrlGen(topCleaned):
 
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
+     
 
 
 
@@ -394,9 +372,9 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      repeatedRows=[];
      thisLoopCount=0; 
      while thisLoopCount<len(cleanupFrame['Community Name']):
-           AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("70s","").replace(" 70s ","")\
-                .replace(" 70' ","").replace("75s","").replace(" 75s ","").replace(" 75' ","")\
-               .replace("61's","").replace("64's","").replace("71's","")\
+           AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("0","").replace("1","").replace("2","").replace("70s","").replace(" 70s ","")\
+                .replace(" 70' ","").replace("75s","").replace(" 75s ","").replace(" 75' ","").replace("3","").replace("4","").replace("5","").replace("6","")\
+               .replace("61's","").replace("64's","").replace("71's","").replace("7","").replace("8","").replace("9","")\
                .replace("81's","").replace("84s","").replace("81s","").replace(" s ","").replace("40s","").replace("40's","")\
                .replace("74s","").replace("81s","").replace(" s ","").replace("40s","").replace("40's","")\
                .replace("61s","").replace("64s","").replace("71s","").replace("94's","").replace("91's","")\
