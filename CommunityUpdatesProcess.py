@@ -751,8 +751,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
           URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
                .replace("Lots","");
-             
-          Final_URL.append(URL_Struct1)
+          pushh=NewDataFrame['URL Signal'][count];   
+          Final_URL.append(pushh)
           print("Yes >")
    else:
           Final_URL.append(URL_Struct1)
