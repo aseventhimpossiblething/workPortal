@@ -415,7 +415,11 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
               MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])
               repeatedRows.append(thisLoopCount);
            thisLoopCount+=1;
-      
+     
+     wackyNewTable=cleanupFrame.drop(['Community Names'], axis=1);
+     wackyNewTable['Community Names']=AlteredColNamesWithMultiples
+     UnitedFrame=wackyNewTable
+     """
      DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
      countOfAppendToMultiplesDedupedRowNumbers=0;
      while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):
@@ -455,6 +459,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      UnitedFrame=UnitedFrame.reset_index();
      UnitedFrame['URL Signal']=UrlGen(topCleaned);
      UnitedFrame 
+     """
              
      return UnitedFrame;  
 
