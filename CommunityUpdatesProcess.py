@@ -79,9 +79,10 @@ def CommunityNameCleaner(x):
 def UrlGen(topCleaned):
          NewUrls=[] 
          cntr=0;
-         while cntr<len(topCleaned['Community Name']):
+         while cntr<len(topCleaned['Community Name'])-1:
                print("Before name")
-               print("len(topCleaned['Community Name']) ",len(topCleaned['Community Name'])) 
+               print("len(str(topCleaned.iloc[cntr]['Community Name'])) ",len(str(topCleaned.iloc[cntr]['Community Name'])))
+               print("",str(topCleaned.iloc[cntr]['Community Name']))   
                print("cntr ",cntr)   
                   
                Name=str(topCleaned.iloc[cntr]['Community Name']).replace(" s ","").replace(" ","%20").replace("40s","")\
