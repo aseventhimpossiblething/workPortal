@@ -396,7 +396,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      while thisLoopCount<len(cleanupFrame['Community Name']):
            AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("61's","").replace("64's","").replace("71's","")\
                .replace("81's","").replace("84s","").replace("81s","").replace(" s ","").replace("40s","").replace("40's","")\
-               .replace("74s","").replace("81s","")\.replace(" s ","").replace("40s","").replace("40's","")\
+               .replace("74s","").replace("81s","").replace(" s ","").replace("40s","").replace("40's","")\
                .replace("61s","").replace("64s","").replace("71s","").replace("94's","").replace("91's","")\
                .replace(" s ","").replace("40s","").replace("40's","")\
                .replace("74s","").replace("81s","")\.replace(" s ","").replace("40s","").replace("40's","")\
