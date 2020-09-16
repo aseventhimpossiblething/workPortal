@@ -416,7 +416,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
               repeatedRows.append(thisLoopCount);
            thisLoopCount+=1;
      
-     wackyNewTable=cleanupFrame.drop(['Community Names'], axis=1);
+     wackyNewTable=cleanupFrame.drop(['Community Name'], axis=1);
      wackyNewTable['Community Names']=AlteredColNamesWithMultiples
      UnitedFrame=wackyNewTable
      """
