@@ -441,12 +441,16 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      #print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
      del BottomCleaned['Community Id'];
      #print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
-     BlankCommunityIds=[];  
+     BlankCommunityIds=[];
+     print("len(BlankCommunityIds) ",len(BlankCommunityIds))
      colrepCounter=0;
      while colrepCounter<len(BottomCleaned['Community Name']):
          BlankCommunityIds.append(" ");
          colrepCounter+=1;   
      #BottomCleaned['URL Signal']=UrlGen(BottomCleaned); 
+     print("len(BlankCommunityIds) ",len(BlankCommunityIds))
+     print("len(BottomCleaned['Community Id']) ",len(BottomCleaned['Community Id']))
+     print("BottomCleaned",BottomCleaned)
      
       
      UnitedFrame=topCleaned.append(BottomCleaned); 
