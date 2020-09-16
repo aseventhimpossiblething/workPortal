@@ -394,7 +394,9 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      repeatedRows=[];
      thisLoopCount=0; 
      while thisLoopCount<len(cleanupFrame['Community Name']):
-           AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("61's","").replace("64's","").replace("71's","")\
+           AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("70s","").replace(" 70s ","")\
+                .replace(" 70' ","").replace("75s","").replace(" 75s ","").replace(" 75' ","")\
+               .replace("61's","").replace("64's","").replace("71's","")\
                .replace("81's","").replace("84s","").replace("81s","").replace(" s ","").replace("40s","").replace("40's","")\
                .replace("74s","").replace("81s","").replace(" s ","").replace("40s","").replace("40's","")\
                .replace("61s","").replace("64s","").replace("71s","").replace("94's","").replace("91's","")\
@@ -425,7 +427,8 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
                .replace(" 65' ","").replace(" 65 ","").replace(" 70s ","").replace(" 70' ","").replace(" 70 ","").replace(" 75s ","")\
                .replace(" 75' ","").replace(" 75 ","").replace(" 80s ","").replace(" 80' ","").replace(" 80 ","").replace(" 85s ","")\
                .replace(" 85 '","").replace(" 85 ","").replace(" 90s ","").replace(" 90' ","").replace(" 90 ","").replace(" 95s ","")\
-               .replace(" 95' ","").replace(" 95 ","").replace(" 105s ","").replace("pricing","").replace("TRUE OLY ","")\
+               .replace(" 95' ","").replace(" 95 ","").replace(" 105s ","").replace("pricing","").replace("TRUE OLY ","").replace("70s","")\
+               .replace("74","").replace("64","").replace("75s","").replace(" 75s ","").replace(" 75' ","").replace("74's","").replace("64's","")\
                .replace(" 105 '","").replace(" 105 ","").replace(" 110s ","").replace(" 110' ","").replace(" 110 ","").replace(" Phase ","")\
                .replace(" I ","").replace(" II ","").replace(" Build On Your Lot ","").replace(" build on your lot ","").replace(" - "," ").replace(" on your lot ","")\
                .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
