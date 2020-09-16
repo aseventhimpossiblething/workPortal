@@ -452,11 +452,12 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      print("len(BottomCleaned['Community Id']) ",len(BottomCleaned['Community Id']))
      print("BottomCleaned",BottomCleaned)
      
-      
-     UnitedFrame=topCleaned.append(BottomCleaned); 
-     UnitedFrame=UnitedFrame.drop_duplicates(subset='Community Name'); 
-     UnitedFrame=UnitedFrame.reset_index();
-     #UnitedFrame['URL Signal']=UrlGen(topCleaned); 
+     UnitedFrame=topCleaned
+     #UnitedFrame=topCleaned.append(BottomCleaned); 
+     #UnitedFrame=UnitedFrame.drop_duplicates(subset='Community Name'); 
+     #UnitedFrame=UnitedFrame.reset_index();
+     #UnitedFrame['URL Signal']=UrlGen(topCleaned);
+     UnitedFrame 
              
      return UnitedFrame;  
 
