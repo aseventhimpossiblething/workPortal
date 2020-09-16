@@ -128,7 +128,7 @@ def UrlGen(topCleaned):
                if MPC!="Default":   
                   #print("URL_Struct1 = ",URL_Struct1);
                """   
-                  NewUrls.append(URL_Struct1); 
+               NewUrls.append(URL_Struct1); 
                cntr+=1;
            
          return NewUrls;
