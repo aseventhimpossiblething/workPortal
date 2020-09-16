@@ -457,7 +457,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      while colrepCounter<len(BottomCleaned['Community Name']):
          BlankCommunityIds.append(" ");
          colrepCounter+=1;   
-     BottomCleaned['URL Signal']=UrlGen(BottomCleaned); 
+     #BottomCleaned['URL Signal']=UrlGen(BottomCleaned); 
      
       
      UnitedFrame=topCleaned.append(BottomCleaned); 
