@@ -412,7 +412,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ").replace("pricing","").replace("True OLY ","")\
                .replace("4","").replace("5","").replace("6","").replace("7","").replace("8","").replace("9","").replace("0","").replace("1","").replace("2","").replace("3","").replace("8","");
                
-          AlteredColNamesWithMultiples=append(frstComName); 
+          AlteredColNamesWithMultiples.append(frstComName); 
           frstLoopCount+=1;  
       
       
