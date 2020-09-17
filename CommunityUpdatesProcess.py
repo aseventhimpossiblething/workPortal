@@ -560,7 +560,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
           if AlteredColNamesWithMultiples.count(nam)>1:
               #print("name ",nam); 
               #print("trying nam if")
-              newcomid.append("nan");
+              newcomid.append("MPC Community");
           else:
               newcomid.append(wackyNewTable['Community Id'][cctv]); 
               #newcomid.append("nan");       
