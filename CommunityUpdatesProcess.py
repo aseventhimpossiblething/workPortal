@@ -374,7 +374,8 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      
     frstLoopCount=0; 
     while frstLoopCount<len(cleanupFrame['Community Name']):
-          frstComName=str(cleanupFrame['Community Name'][frstLoopCount]).replace("'","").replace("0","").replace("1","").replace("2","") .replace("3","").replace("4","").replace("5","").replace("6","") .replace("7","").replace("7","").replace("9","")
+          frstComName=str(cleanupFrame['Community Name'][frstLoopCount])
+          #.replace("'","").replace("0","").replace("1","").replace("2","") .replace("3","").replace("4","").replace("5","").replace("6","") .replace("7","").replace("7","").replace("9","")
           """"
                 .replace("'","").replace("0","").replace("1","").replace("2","").replace("70s","").replace(" 70s ","")\
                 .replace(" 70' ","").replace("75s","").replace(" 75s ","").replace(" 75' ","").replace("3","").replace("4","").replace("5","").replace("6","")\
@@ -423,7 +424,8 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
       
     thisLoopCount=0; 
     while thisLoopCount<len(cleanupFrame['Community Name']):
-           AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("'","").replace("0","").replace("1","").replace("2","") .replace("3","").replace("4","").replace("5","").replace("6","") .replace("7","").replace("7","").replace("9","")
+           AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount])
+           #.replace("'","").replace("0","").replace("1","").replace("2","") .replace("3","").replace("4","").replace("5","").replace("6","") .replace("7","").replace("7","").replace("9","")
             
            """ 
                .replace("0","").replace("1","").replace("2","").replace("70s","").replace(" 70s ","")\
