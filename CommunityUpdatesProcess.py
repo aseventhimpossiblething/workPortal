@@ -489,6 +489,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
     wackyNewTable['Community Id']=newcomid;
     wackyNewTable=wackyNewTable.drop_duplicates(subset='Community Name') 
      
+    UnitedFrame=UnitedFrame.reset_index(); 
     UnitedFrame=wackyNewTable
     """
     DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
