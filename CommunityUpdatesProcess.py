@@ -573,7 +573,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
 
 
 
-    yetanotherarray=()
+    yetanotherarray=[];
     mcrzylp=0;
     while mcrzylp<len(wackyNewTable['Community Name']):
           rwo=wackyNewTable['Community Name'][mcrzylp];
