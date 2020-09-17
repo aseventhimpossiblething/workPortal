@@ -476,7 +476,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
           #print("len(wackyNewTable['Community Name']) ",len(wackyNewTable['Community Name']));
           #print("name ",nam);   
           #print("AlteredColNamesWithMultiples.count(nam) ",AlteredColNamesWithMultiples.count(nam))  
-          #nam=wackyNewTable['Community Name'][cctv]; 
+          nam=wackyNewTable['Community Name'][cctv]; 
           print("AlteredColNamesWithMultiples.count(nam) ",AlteredColNamesWithMultiples.count(nam))   
           if AlteredColNamesWithMultiples.count(nam)>1:
               print("name ",nam); 
