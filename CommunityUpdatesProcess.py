@@ -76,77 +76,6 @@ def CommunityNameCleaner(x):
       return out;   
 
  
-def UrlGen(topCleaned):
-         NewUrls=[] 
-         cntr=0;
-         while cntr<len(topCleaned['Community Name'])-1:
-               print("Before name")
-               print("len(str(topCleaned.iloc[cntr]['Community Name'])) ",len(str(topCleaned.iloc[cntr]['Community Name'])))
-               print("",str(topCleaned.iloc[cntr]['Community Name']))   
-               print("cntr ",cntr)   
-                  
-               Name=str(topCleaned.iloc[cntr]['Community Name']).replace(" s ","").replace(" ","%20").replace("40s","")\
-               .replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","")\
-               .replace("50s","").replace(" 50s ","").replace(" 50' ","").replace("55s","").replace(" 55s ","").replace("55'","")\
-               .replace("60s","").replace(" 60s ","").replace(" 60' ","").replace("65s","").replace(" 65s ","").replace(" 65' ","")\
-               .replace("70s","").replace(" 70s ","").replace(" 70' ","").replace("75s","").replace(" 75s ","").replace(" 75' ","")\
-               .replace("80s","").replace(" 80s ","").replace(" 80' ","").replace("85s","").replace(" 85s ","").replace(" 85 '","")\
-               .replace("90s","").replace(" 90s ","").replace(" 90' ","").replace("95s","").replace(" 95s ","").replace(" 95' ","")\
-               .replace("105s","").replace(" 105s ","").replace("Homesites","").replace("lots","").replace("-"," ").replace("_","")\
-               .replace("40s","").replace("BYOL","").replace("40'","").replace("40","").replace("45s","").replace(" Homesites ","")\
-               .replace("homesites","").replace("()","").replace("byol","").replace("Lots","").replace("45'","").replace("45","")\
-               .replace("50s","").replace("50'","").replace("50","").replace("55s","").replace("  ","").replace("ft.","").replace("55'","")\
-               .replace("55","").replace("60s","").replace("60'","").replace("60","").replace("65s","").replace("Coming Soon!","")\
-               .replace("65'","").replace("65","").replace("70s","").replace("70'","").replace("70","").replace("75s","").replace("Coming Soon","")\
-               .replace("75'","").replace("75","").replace("80s","").replace("80'","").replace("80","").replace("85s","").replace(" Coming Soon ","")\
-               .replace("85'","").replace("85","").replace("90s","").replace("90'","").replace("90","").replace("95s","").replace("coming soon","")\
-               .replace("95'","").replace("95","").replace("105s","").replace("Built On Your Land","")\
-               .replace("105'","").replace("105","").replace("110s","").replace("110'","").replace("110","").replace("Phase","").replace("Build On Your Land","")\
-               .replace(" I ","").replace(" II ","").replace("Build On Your Lot","").replace("build on your lot","").replace("-"," ").replace("on your lot","")\
-               .replace("105'","").replace("110s","").replace("110'","").replace("  "," ").replace("Austin_TX>269>Willa._>125784","Austin_TX>269>Willa_>125784")\
-               .replace("Cielo at Sand Creek | Vista Collection","Cielo at Sand Creek Vista Collection").replace("On Your Lot","").replace("OLY","")\
-               .replace("Austin_TX>269>Highpointe /_>146097","Austin_TX>269>Highpointe_>146097").replace("|","").replace("/","").replace("&"," ")\
-               .replace(" 40s ","").replace(" 40' ","").replace(" 40 ","").replace(" 45s ","").replace(" Acre ","").replace("Phase III","").replace("III","")\
-               .replace(" 45' ","").replace(" 45 ","").replace(" 50s ","").replace(" 50' ","").replace(" 50 ","").replace(" 55s ","")\
-               .replace(" 55' ","").replace(" 55 ","").replace(" 60s ","").replace(" 60' ","").replace(" 60 ","").replace(" 65s ","")\
-               .replace(" 65' ","").replace(" 65 ","").replace(" 70s ","").replace(" 70' ","").replace(" 70 ","").replace(" 75s ","")\
-               .replace(" 75' ","").replace(" 75 ","").replace(" 80s ","").replace(" 80' ","").replace(" 80 ","").replace(" 85s ","").replace(" s ","").replace(" ' ","")\
-               .replace(" 85 '","").replace(" 85 ","").replace(" 90s ","").replace(" 90' ","").replace(" 90 ","").replace(" 95s ","").replace("pricing","").replace("TRUE OLY ","")\
-               .replace(" 95' ","").replace(" 95 ","").replace(" 105s ","").replace("True OLY ","")\
-               .replace(" 105 '","").replace(" 105 ","").replace(" 110s ","").replace(" 110' ","").replace(" 110 ","").replace(" Phase ","")\
-               .replace(" I ","").replace(" II ","").replace(" Build On Your Lot ","").replace(" build on your lot ","").replace(" - "," ").replace(" on your lot ","")\
-               .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
-               .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
-               .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ");
-               print("after filter 1")   
-               URL_Struct1=str("https://www.newhomesource.com/communities/"+topCleaned.iloc[cntr]['State']+"/"+topCleaned.iloc[cntr]['Market Name']+"-area?communityname="+Name).lower()                
-              
-                 
-               URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
-               .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
-               .replace("Lots","");
-               print("After filter 2 before append")      
-                
-               """ 
-               if MPC=="Default":
-                  NewUrls.append(MPC);
-               if MPC!="Default":   
-                  #print("URL_Struct1 = ",URL_Struct1);
-               """   
-               NewUrls.append(URL_Struct1); 
-               print("after append")      
-               cntr+=1;
-           
-         return NewUrls;
-
-
-
-      
-      
-     
-
-
-
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
  titlestring=str(sheet.iloc[1])
  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
@@ -278,18 +207,6 @@ def filterNonParticipators(theFrame):
   try:
    #print("Start of try before Community String first loop")
    Community=str(theFrame["Community Name"][icount])
-   """
-   .replace("40s","").replace("40'","").replace("45s","")\
-   .replace("45'","").replace("50s","").replace("50'","").replace("55s","").replace("55'","").replace("60s","").replace("60'","").replace("65s","")\
-   .replace("65'","").replace("70s","").replace("70'","").replace("75s","").replace("75'","").replace("80s","").replace("80'","").replace("85s","")\
-   .replace("85'","").replace("90s","").replace("90'","").replace("95s","").replace("95'","").replace("100s","").replace("100'","").replace("105s","")\
-   .replace("Phase","").replace(" I ","").replace(" II ","").replace("Build On Your Lot","").replace("build on your lot","").replace("-"," ").replace("on your lot","")\
-   .replace("105'","").replace("110s","").replace("110'","").replace("  "," ").replace("Austin_TX>269>Willa._>125784","Austin_TX>269>Willa_>125784")\
-   .replace("Cielo at Sand Creek | Vista Collection","Cielo at Sand Creek Vista Collection").replace("On Your Lot","")\
-   .replace("Austin_TX>269>Highpointe /_>146097","Austin_TX>269>Highpointe_>146097").replace("|","").replace("/","").replace("&"," ")\
-   """
-   
-
   
       
   except:
@@ -407,48 +324,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
                .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ").replace(" s ","").replace(" ' ","")\
-            
-          #.replace("'","").replace("0","").replace("1","").replace("2","") .replace("3","").replace("4","").replace("5","").replace("6","") .replace("7","").replace("7","").replace("9","")
-          """"
-                .replace("'","").replace("0","").replace("1","").replace("2","").replace("70s","").replace(" 70s ","")\
-                .replace(" 70' ","").replace("75s","").replace(" 75s ","").replace(" 75' ","").replace("3","").replace("4","").replace("5","").replace("6","")\
-               .replace("61's","").replace("64's","").replace("71's","").replace("7","").replace("8","").replace("9","").replace("81's","")\
-               .replace("84s","").replace("81s","").replace(" s ","").replace("40s","").replace("40's","").replace("74s","").replace("81s","")\
-               .replace(" s ","").replace("40s","").replace("40's","").replace("61s","").replace("64s","").replace("71s","").replace("94's","").replace("91's","")\
-               .replace(" s ","").replace("40s","").replace("40's","").replace("74s","").replace("81s","").replace(" s ","").replace("40s","")\
-               .replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","").replace("50s","").replace(" 50s ","")\
-               .replace(" 50' ","").replace("55s","").replace(" 55s ","").replace("55'","").replace("60s","").replace(" 60s ","").replace(" 60' ","")\
-               .replace("65s","").replace(" 65s ","").replace(" 65' ","").replace("70s","").replace(" 70s ","").replace(" 70' ","").replace("75s","")\
-               .replace(" 75s ","").replace(" 75' ","").replace("80s","").replace(" 80s ","").replace(" 80' ","").replace("85s","").replace(" 85s ","")\
-               .replace(" 85 '","").replace("90s","").replace(" 90s ","").replace(" 90' ","").replace("95s","").replace(" 95s ","").replace(" 95' ","")\
-               .replace("105s","").replace(" 105s ","").replace("Homesites","").replace("lots","").replace("-"," ").replace("_","").replace("40s","")\
-               .replace("BYOL","").replace("40'","").replace("40","").replace("45s","").replace(" Homesites ","").replace("homesites","").replace("()","")\
-               .replace("byol","").replace("Lots","").replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","")\
-               .replace("55s","").replace("  ","").replace("ft.","").replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","")\
-                .replace("65s","").replace("Coming Soon!","").replace("65'","").replace("65","").replace("70s","").replace("70'","").replace("70","").replace("75s","")\
-                .replace("Coming Soon","").replace("75'","").replace("75","").replace("80s","").replace("80'","").replace("80","").replace("85s","").replace(" Coming Soon ","")\
-               .replace("85'","").replace("85","").replace("90s","").replace("90'","").replace("90","").replace("95s","").replace("coming soon","")\
-               .replace("95'","").replace("95","").replace("105s","").replace("Built On Your Land","").replace("105'","").replace("105","").replace("110s","")\
-               .replace("110'","").replace("110","").replace("Phase","").replace("Build On Your Land","").replace(" I ","").replace(" II ","")\
-               .replace("Build On Your Lot","").replace("build on your lot","").replace("-"," ").replace("on your lot","").replace("105'","")\
-               .replace("110s","").replace("110'","").replace("  "," ").replace("Austin_TX>269>Willa._>125784","Austin_TX>269>Willa_>125784")\
-               .replace("Cielo at Sand Creek | Vista Collection","Cielo at Sand Creek Vista Collection").replace("On Your Lot","").replace("OLY","").replace("Austin_TX>269>Highpointe /_>146097","Austin_TX>269>Highpointe_>146097").replace("|","").replace("/","").replace("&"," ")\
-               .replace(" 40s ","").replace(" 40' ","").replace(" 40 ","").replace(" 45s ","").replace(" Acre ","").replace("Phase III","").replace("III","")\
-               .replace(" 45' ","").replace(" 45 ","").replace(" 50s ","").replace(" 50' ","").replace(" 50 ","").replace(" 55s ","").replace("0","").replace("1","").replace("2","").replace("3","")\
-               .replace(" 55' ","").replace(" 55 ","").replace(" 60s ","").replace(" 60' ","").replace(" 60 ","").replace(" 65s ","")\
-               .replace(" 65' ","").replace(" 65 ","").replace(" 70s ","").replace(" 70' ","").replace(" 70 ","").replace(" 75s ","")\
-               .replace(" 75' ","").replace(" 75 ","").replace(" 80s ","").replace(" 80' ","").replace(" 80 ","").replace(" 85s ","")\
-               .replace(" 85 '","").replace(" 85 ","").replace(" 90s ","").replace(" 90' ","").replace(" 90 ","").replace(" 95s ","")\
-               .replace(" 95' ","").replace(" 95 ","").replace(" 105s ","").replace("pricing","").replace("TRUE OLY ","").replace("70s","")\
-               .replace("74","").replace("64","").replace("75s","").replace(" 75s ","").replace(" 75' ","").replace("74's","").replace("64's","")\
-               .replace(" 105 '","").replace(" 105 ","").replace(" 110s ","").replace(" 110' ","").replace(" 110 ","").replace(" Phase ","")\
-               .replace(" I ","").replace(" II ","").replace(" Build On Your Lot ","").replace(" build on your lot ","").replace(" - "," ").replace(" on your lot ","")\
-               .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
-               .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","").replace(" s ","").replace("TRUE OLY ","")\
-               .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ").replace("pricing","").replace("True OLY ","")\
-               .replace("4","").replace("5","").replace("6","").replace("7","").replace("8","").replace("9","").replace("0","").replace("1","").replace("2","").replace("3","").replace("8","").replace(" s ","").replace(" ' ","").replace("'","");
-          """
-         
+
           AlteredColNamesWithMultiples.append(frstComName); 
           frstLoopCount+=1;  
       
@@ -491,51 +367,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ").replace(" s ","").replace(" ' ","")\
       
-      
-      
-      
-           #.replace("'","").replace("0","").replace("1","").replace("2","") .replace("3","").replace("4","").replace("5","").replace("6","") .replace("7","").replace("7","").replace("9","")
-            
-           """ 
-               .replace("0","").replace("1","").replace("2","").replace("70s","").replace(" 70s ","")\
-               .replace(" 70' ","").replace("75s","").replace(" 75s ","").replace(" 75' ","").replace("3","").replace("4","").replace("5","").replace("6","")\
-               .replace("61's","").replace("64's","").replace("71's","").replace("7","").replace("8","").replace("9","").replace("81's","")\
-               .replace("84s","").replace("81s","").replace(" s ","").replace("40s","").replace("40's","").replace("74s","").replace("81s","")\
-               .replace(" s ","").replace("40s","").replace("40's","").replace("61s","").replace("64s","").replace("71s","").replace("94's","").replace("91's","")\
-               .replace(" s ","").replace("40s","").replace("40's","").replace("74s","").replace("81s","").replace(" s ","").replace("40s","")\
-               .replace("40's","").replace(" 40s ","").replace("45s","").replace(" 45s ","").replace(" 45' ","").replace("50s","").replace(" 50s ","")\
-               .replace(" 50' ","").replace("55s","").replace(" 55s ","").replace("55'","").replace("60s","").replace(" 60s ","").replace(" 60' ","")\
-               .replace("65s","").replace(" 65s ","").replace(" 65' ","").replace("70s","").replace(" 70s ","").replace(" 70' ","").replace("75s","")\
-               .replace(" 75s ","").replace(" 75' ","").replace("80s","").replace(" 80s ","").replace(" 80' ","").replace("85s","").replace(" 85s ","")\
-               .replace(" 85 '","").replace("90s","").replace(" 90s ","").replace(" 90' ","").replace("95s","").replace(" 95s ","").replace(" 95' ","")\
-               .replace("105s","").replace(" 105s ","").replace("Homesites","").replace("lots","").replace("-"," ").replace("_","").replace("40s","")\
-               .replace("BYOL","").replace("40'","").replace("40","").replace("45s","").replace(" Homesites ","").replace("homesites","").replace("()","")\
-               .replace("byol","").replace("Lots","").replace("45'","").replace("45","").replace("50s","").replace("50'","").replace("50","")\
-               .replace("55s","").replace("  ","").replace("ft.","").replace("55'","").replace("55","").replace("60s","").replace("60'","").replace("60","")\
-                .replace("65s","").replace("Coming Soon!","").replace("65'","").replace("65","").replace("70s","").replace("70'","").replace("70","").replace("75s","")\
-                .replace("Coming Soon","").replace("75'","").replace("75","").replace("80s","").replace("80'","").replace("80","").replace("85s","").replace(" Coming Soon ","")\
-               .replace("85'","").replace("85","").replace("90s","").replace("90'","").replace("90","").replace("95s","").replace("coming soon","")\
-               .replace("95'","").replace("95","").replace("105s","").replace("Built On Your Land","").replace("105'","").replace("105","").replace("110s","")\
-               .replace("110'","").replace("110","").replace("Phase","").replace("Build On Your Land","").replace(" I ","").replace(" II ","")\
-               .replace("Build On Your Lot","").replace("build on your lot","").replace("-"," ").replace("on your lot","").replace("105'","")\
-               .replace("110s","").replace("110'","").replace("  "," ").replace("Austin_TX>269>Willa._>125784","Austin_TX>269>Willa_>125784")\
-               .replace("Cielo at Sand Creek | Vista Collection","Cielo at Sand Creek Vista Collection").replace("On Your Lot","").replace("OLY","").replace("Austin_TX>269>Highpointe /_>146097","Austin_TX>269>Highpointe_>146097").replace("|","").replace("/","").replace("&"," ")\
-               .replace(" 40s ","").replace(" 40' ","").replace(" 40 ","").replace(" 45s ","").replace(" Acre ","").replace("Phase III","").replace("III","")\
-               .replace(" 45' ","").replace(" 45 ","").replace(" 50s ","").replace(" 50' ","").replace(" 50 ","").replace(" 55s ","").replace("0","").replace("1","").replace("2","").replace("3","")\
-               .replace(" 55' ","").replace(" 55 ","").replace(" 60s ","").replace(" 60' ","").replace(" 60 ","").replace(" 65s ","")\
-               .replace(" 65' ","").replace(" 65 ","").replace(" 70s ","").replace(" 70' ","").replace(" 70 ","").replace(" 75s ","")\
-               .replace(" 75' ","").replace(" 75 ","").replace(" 80s ","").replace(" 80' ","").replace(" 80 ","").replace(" 85s ","")\
-               .replace(" 85 '","").replace(" 85 ","").replace(" 90s ","").replace(" 90' ","").replace(" 90 ","").replace(" 95s ","")\
-               .replace(" 95' ","").replace(" 95 ","").replace(" 105s ","").replace("pricing","").replace("TRUE OLY ","").replace("70s","")\
-               .replace("74","").replace("64","").replace("75s","").replace(" 75s ","").replace(" 75' ","").replace("74's","").replace("64's","")\
-               .replace(" 105 '","").replace(" 105 ","").replace(" 110s ","").replace(" 110' ","").replace(" 110 ","").replace(" Phase ","")\
-               .replace(" I ","").replace(" II ","").replace(" Build On Your Lot ","").replace(" build on your lot ","").replace(" - "," ").replace(" on your lot ","")\
-               .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
-               .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","").replace(" s ","").replace("TRUE OLY ","")\
-               .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ").replace("pricing","").replace("True OLY ","")\
-               .replace("4","").replace("5","").replace("6","").replace("7","").replace("8","").replace("9","").replace("0","").replace("1","").replace("2","").replace("3","").replace("8","").replace(" s ","").replace(" ' ","").replace("'","");
            
-           """
       
            if AlteredColNamesWithMultiples.count(AlteredComName)>1:
               MultiplesCommunityNames.append(AlteredComName);
@@ -545,21 +377,13 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      
     wackyNewTable=cleanupFrame 
     wackyNewTable['Community Name']=AlteredColNamesWithMultiples;
-    #wackyNewTable=cleanupFrame.drop(['Community Name'], axis=1);
-    #print("len(wackyNewTable['Community Names']) ",len(wackyNewTable['Community Names']));
-    #print("len(AlteredColNamesWithMultiples) ",len(AlteredColNamesWithMultiples));
-    print("len(wackyNewTable['Community Name']) ",len(wackyNewTable['Community Name']));  
     cctv=0;
     newcomid=[];
     while cctv<len(wackyNewTable['Community Name']):
-          #print("len(wackyNewTable['Community Name']) ",len(wackyNewTable['Community Name']));
-          #print("name ",nam);   
-          #print("AlteredColNamesWithMultiples.count(nam) ",AlteredColNamesWithMultiples.count(nam))  
           nam=wackyNewTable['Community Name'][cctv]; 
-          #print("AlteredColNamesWithMultiples.count(nam) ",AlteredColNamesWithMultiples.count(nam))   
+       
           if AlteredColNamesWithMultiples.count(nam)>1:
-              #print("name ",nam); 
-              #print("trying nam if")
+      
               newcomid.append("MPC Community");
           else:
               newcomid.append(wackyNewTable['Community Id'][cctv]); 
@@ -567,9 +391,6 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
           cctv+=1;
     wackyNewTable['Community Id']=newcomid;
     wackyNewTable=wackyNewTable.drop_duplicates(subset='Community Name') 
-    #print("len(wackyNewTable) ",len(wackyNewTable)) 
-    #wackyNewTable=wackyNewTable.drop_duplicates(subset='Community Name')
-    #print("len(wackyNewTable) ",len(wackyNewTable)) 
     wackyNewTable=wackyNewTable.reset_index(); 
 
 
@@ -601,48 +422,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
     UnitedFrame=wackyNewTable
     #UnitedFrame=UnitedFrame.reset_index() 
       
-    """
-    DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
-    countOfAppendToMultiplesDedupedRowNumbers=0;
-    while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):
-             RowOfDuplicate=AlteredColNamesWithMultiples.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]);
-             CommIdOfDuplicate=cleanupFrame['Community Id'][RowOfDuplicate]
-             CommNameOfDuplicate=cleanupFrame['Community Name'][RowOfDuplicate]
-             CommunityName=DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]
-             MultiplesDedupedRowNumbers.append(RowOfDuplicate)     
-             countOfAppendToMultiplesDedupedRowNumbers+=1;
-    topCleaned=cleanupFrame.drop(repeatedRows);          
-    topCleaned=topCleaned.drop_duplicates();
-    topCleaned=topCleaned.drop_duplicates(subset='Community Name'); 
-    #topCleaned['URL Signal']=UrlGen(topCleaned,"Default");
-    BottomCleaned=cleanupFrame.iloc[MultiplesDedupedRowNumbers];
-     
-    BottomCleaned=BottomCleaned.drop_duplicates();
-    BottomCleaned=BottomCleaned.drop_duplicates(subset='Community Name');
-
-     
-    #print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
-    #del BottomCleaned['Community Id'];
-    #print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
-    BlankCommunityIds=[];
-    print("len(BlankCommunityIds) ",len(BlankCommunityIds))
-    colrepCounter=0;
-    while colrepCounter<len(BottomCleaned['Community Name']):
-         BlankCommunityIds.append(" ");
-         colrepCounter+=1;   
-    #BottomCleaned['URL Signal']=UrlGen(BottomCleaned); 
-    print("len(BlankCommunityIds) ",len(BlankCommunityIds))
-    print("len(BottomCleaned['Community Id']) ",len(BottomCleaned['Community Id']))
-    print("BottomCleaned",BottomCleaned)
-    
-    #UnitedFrame=topCleaned
-    UnitedFrame=topCleaned.append(BottomCleaned); 
-    UnitedFrame=UnitedFrame.drop_duplicates(subset='Community Name'); 
-    UnitedFrame=UnitedFrame.reset_index();
-    UnitedFrame['URL Signal']=UrlGen(topCleaned);
-    UnitedFrame 
-    """
-             
+            
     return UnitedFrame;  
 
 
@@ -723,18 +503,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ").replace(" s ","").replace(" ' ","")\
   
-  """
-  for letters in communityName[count]:
-  print("printing Letter ",letters);
-  print("printing Letter type",type(letters));
-  #if type(letters)= 
-  """          
+
   communityName.replace("91's","").replace("94's","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace(" s ","").replace("61s","").replace(" 64s ","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace("74's","").replace("61's","").replace(" 64's ","").replace("71's","").replace("74's","").replace("81's","").replace(" 84's ","").replace(" s ","").replace(" ' ","")
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]\
             .replace(" ","-")+"/"+communityName\
             .replace(" ","-")+"-by-"+NewDataFrame['Brand Name'][count]\
-            .replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower()
+            .replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower().replace("m/i","m-i");
   
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
