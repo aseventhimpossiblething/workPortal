@@ -418,8 +418,8 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
       
       
       
-     thisLoopCount=0; 
-     while thisLoopCount<len(cleanupFrame['Community Name']):
+    thisLoopCount=0; 
+    while thisLoopCount<len(cleanupFrame['Community Name']):
            AlteredComName=str(cleanupFrame['Community Name'][thisLoopCount]).replace("0","").replace("1","").replace("2","").replace("70s","").replace(" 70s ","")\
                 .replace(" 70' ","").replace("75s","").replace(" 75s ","").replace(" 75' ","").replace("3","").replace("4","").replace("5","").replace("6","")\
                .replace("61's","").replace("64's","").replace("71's","").replace("7","").replace("8","").replace("9","").replace("81's","")\
@@ -464,66 +464,66 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
               repeatedRows.append(thisLoopCount);
            thisLoopCount+=1;
      
-     wackyNewTable=cleanupFrame 
-     wackyNewTable['Community Name']=AlteredColNamesWithMultiples;
-     #wackyNewTable=cleanupFrame.drop(['Community Name'], axis=1);
-     #print("len(wackyNewTable['Community Names']) ",len(wackyNewTable['Community Names']));
-     #print("len(AlteredColNamesWithMultiples) ",len(AlteredColNamesWithMultiples));
-     cctv=0;
-     newcomid=[];
-     while cctv<len(wackyNewTable['Community Name']):
+    wackyNewTable=cleanupFrame 
+    wackyNewTable['Community Name']=AlteredColNamesWithMultiples;
+    #wackyNewTable=cleanupFrame.drop(['Community Name'], axis=1);
+    #print("len(wackyNewTable['Community Names']) ",len(wackyNewTable['Community Names']));
+    #print("len(AlteredColNamesWithMultiples) ",len(AlteredColNamesWithMultiples));
+    cctv=0;
+    newcomid=[];
+    while cctv<len(wackyNewTable['Community Name']):
            nam=len(wackyNewTable['Community Name'][cctv]); 
            if AlteredColNamesWithMultiples.count(nam)>1:
               newcomid.append("nan");
            else:
               newcomid.append(wackyNewTable['Community Id'][cctv]);   
      cctv+=1;
-     wackyNewTable['Community Id']=newcomid;
+    wackyNewTable['Community Id']=newcomid;
      
-     UnitedFrame=wackyNewTable
-     """
-     DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
-     countOfAppendToMultiplesDedupedRowNumbers=0;
-     while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):
+    UnitedFrame=wackyNewTable
+    """
+    DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
+    countOfAppendToMultiplesDedupedRowNumbers=0;
+    while countOfAppendToMultiplesDedupedRowNumbers<len(DedupedMultiplesCommunityNames):
              RowOfDuplicate=AlteredColNamesWithMultiples.index(DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]);
              CommIdOfDuplicate=cleanupFrame['Community Id'][RowOfDuplicate]
              CommNameOfDuplicate=cleanupFrame['Community Name'][RowOfDuplicate]
              CommunityName=DedupedMultiplesCommunityNames[countOfAppendToMultiplesDedupedRowNumbers]
              MultiplesDedupedRowNumbers.append(RowOfDuplicate)     
              countOfAppendToMultiplesDedupedRowNumbers+=1;
-     topCleaned=cleanupFrame.drop(repeatedRows);          
-     topCleaned=topCleaned.drop_duplicates();
-     topCleaned=topCleaned.drop_duplicates(subset='Community Name'); 
-     #topCleaned['URL Signal']=UrlGen(topCleaned,"Default");
-     BottomCleaned=cleanupFrame.iloc[MultiplesDedupedRowNumbers];
+    topCleaned=cleanupFrame.drop(repeatedRows);          
+    topCleaned=topCleaned.drop_duplicates();
+    topCleaned=topCleaned.drop_duplicates(subset='Community Name'); 
+    #topCleaned['URL Signal']=UrlGen(topCleaned,"Default");
+    BottomCleaned=cleanupFrame.iloc[MultiplesDedupedRowNumbers];
      
-     BottomCleaned=BottomCleaned.drop_duplicates();
-     BottomCleaned=BottomCleaned.drop_duplicates(subset='Community Name');
+    BottomCleaned=BottomCleaned.drop_duplicates();
+    BottomCleaned=BottomCleaned.drop_duplicates(subset='Community Name');
 
      
-     #print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
-     #del BottomCleaned['Community Id'];
-     #print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
-     BlankCommunityIds=[];
-     print("len(BlankCommunityIds) ",len(BlankCommunityIds))
-     colrepCounter=0;
-     while colrepCounter<len(BottomCleaned['Community Name']):
+    #print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
+    #del BottomCleaned['Community Id'];
+    #print("BottomCleaned.columns.values ",BottomCleaned.columns.values);
+    BlankCommunityIds=[];
+    print("len(BlankCommunityIds) ",len(BlankCommunityIds))
+    colrepCounter=0;
+    while colrepCounter<len(BottomCleaned['Community Name']):
          BlankCommunityIds.append(" ");
          colrepCounter+=1;   
-     #BottomCleaned['URL Signal']=UrlGen(BottomCleaned); 
-     print("len(BlankCommunityIds) ",len(BlankCommunityIds))
-     print("len(BottomCleaned['Community Id']) ",len(BottomCleaned['Community Id']))
-     print("BottomCleaned",BottomCleaned)
-     
-     #UnitedFrame=topCleaned
-     UnitedFrame=topCleaned.append(BottomCleaned); 
-     UnitedFrame=UnitedFrame.drop_duplicates(subset='Community Name'); 
-     UnitedFrame=UnitedFrame.reset_index();
-     UnitedFrame['URL Signal']=UrlGen(topCleaned);
-     UnitedFrame 
-     """
+    #BottomCleaned['URL Signal']=UrlGen(BottomCleaned); 
+    print("len(BlankCommunityIds) ",len(BlankCommunityIds))
+    print("len(BottomCleaned['Community Id']) ",len(BottomCleaned['Community Id']))
+    print("BottomCleaned",BottomCleaned)
+    
+    #UnitedFrame=topCleaned
+    UnitedFrame=topCleaned.append(BottomCleaned); 
+    UnitedFrame=UnitedFrame.drop_duplicates(subset='Community Name'); 
+    UnitedFrame=UnitedFrame.reset_index();
+    UnitedFrame['URL Signal']=UrlGen(topCleaned);
+    UnitedFrame 
+    """
              
-     return UnitedFrame;  
+    return UnitedFrame;  
 
 
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
