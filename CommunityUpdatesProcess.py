@@ -67,7 +67,7 @@ def CommunityNameCleaner(x):
                .replace(" 95' ","").replace(" 95 ","").replace(" 105s ","").replace(" 105 '","").replace(" 105 ","").replace(" 110s ","")\
                .replace(" 110' ","").replace(" 110 ","").replace(" Phase ","").replace(" I ","").replace(" II ","").replace(" Build On Your Lot ","")\
                .replace(" build on your lot ","").replace(" - "," ").replace(" on your lot ","").replace(" 105' ","").replace(" 110s ","")\
-               .replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")).replace(" s ","").replace(" ' ","")\
+               .replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")).replace(" s ","")\
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","").replace("True OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ").replace("pricing","").replace("TRUE OLY ","")
            out.append(AlteredComName)
@@ -410,7 +410,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
                .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","").replace(" s ","").replace("TRUE OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ").replace("pricing","").replace("True OLY ","")\
-               .replace("4","").replace("5","").replace("6","").replace("7","").replace("8","").replace("9","").replace("0","").replace("1","").replace("2","").replace("3","").replace("8","")).replace(" s ","").replace(" ' ","");
+               .replace("4","").replace("5","").replace("6","").replace("7","").replace("8","").replace("9","").replace("0","").replace("1","").replace("2","").replace("3","").replace("8","")).replace(" s ","");
                
           AlteredColNamesWithMultiples.append(frstComName); 
           frstLoopCount+=1;  
@@ -456,7 +456,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
                .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","").replace(" s ","").replace("TRUE OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ").replace("pricing","").replace("True OLY ","")\
-               .replace("4","").replace("5","").replace("6","").replace("7","").replace("8","").replace("9","").replace("0","").replace("1","").replace("2","").replace("3","").replace("8","")).replace(" s ","").replace(" ' ","");
+               .replace("4","").replace("5","").replace("6","").replace("7","").replace("8","").replace("9","").replace("0","").replace("1","").replace("2","").replace("3","").replace("8","")).replace(" s ","");
            #AlteredColNamesWithMultiples.append(AlteredComName);
            if AlteredColNamesWithMultiples.count(AlteredComName)>1:
               MultiplesCommunityNames.append(AlteredComName);
