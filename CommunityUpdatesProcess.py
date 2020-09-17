@@ -474,10 +474,12 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
     newcomid=[];
     while cctv<len(wackyNewTable['Community Name']):
           #print("len(wackyNewTable['Community Name']) ",len(wackyNewTable['Community Name']));
-          print("name ",nam);   
-          print("AlteredColNamesWithMultiples.count(nam) ",AlteredColNamesWithMultiples.count(nam))  
-          nam=len(wackyNewTable['Community Name'][cctv]); 
+          #print("name ",nam);   
+          #print("AlteredColNamesWithMultiples.count(nam) ",AlteredColNamesWithMultiples.count(nam))  
+          nam=wackyNewTable['Community Name'][cctv]; 
+          print("AlteredColNamesWithMultiples.count(nam) ",AlteredColNamesWithMultiples.count(nam))   
           if AlteredColNamesWithMultiples.count(nam)>1:
+              print("name ",nam); 
               print("trying nam if")
               newcomid.append("nan");
           else:
