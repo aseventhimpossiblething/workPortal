@@ -587,7 +587,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
     while mcrzylp<len(wackyNewTable['Community Name']):
           rwo=wackyNewTable['Community Name'][mcrzylp];  
           yetanotherarray.count(rwo);
-          if yetanotherarray(rwo)>2:
+          if yetanotherarray.count(rwo)>2:
              print("still finding multiples") 
           mcrzylp+=1;  
 
