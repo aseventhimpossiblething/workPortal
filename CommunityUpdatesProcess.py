@@ -417,7 +417,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
            thisLoopCount+=1;
      
      wackyNewTable=cleanupFrame 
-     wackyNewTable['Community Names']=AlteredColNamesWithMultiples;
+     wackyNewTable['Community Name']=AlteredColNamesWithMultiples;
      #wackyNewTable=cleanupFrame.drop(['Community Name'], axis=1);
      #print("len(wackyNewTable['Community Names']) ",len(wackyNewTable['Community Names']));
      #print("len(AlteredColNamesWithMultiples) ",len(AlteredColNamesWithMultiples));
