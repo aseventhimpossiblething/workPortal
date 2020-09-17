@@ -431,7 +431,7 @@ def inda():
         return str(chckbdxcred());
     global domain;     
     domainFavi=domain+"/favicon.png";
-    metrics=get_campaigns.googlemetrics;
+    #metrics=get_campaigns.googlemetrics;
     print("spendtrack")
     #print(metrics)
     return render_template('SpendTrack.html',domain=domain,domainFav=domainFavi,metrics=metrics);
