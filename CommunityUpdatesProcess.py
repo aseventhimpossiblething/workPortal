@@ -395,22 +395,28 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
 
 
     anotherdrop=[];
+    anotherdropsqueeze=[]  
     yetanotherarray=[];
     mcrzylp=0;
     while mcrzylp<len(wackyNewTable['Community Name']):
           rwo=wackyNewTable['Community Name'][mcrzylp];
+          rwosqueeze=rwo.replace(" ","")
           yetanotherarray.append(rwo);
+          yetanotherarray.append(rwosqueeze); 
           mcrzylp+=1;  
   
       
       
     mcrzylp=0;
     while mcrzylp<len(wackyNewTable['Community Name']):
-          rwo=wackyNewTable['Community Name'][mcrzylp];  
+          rwo=wackyNewTable['Community Name'][mcrzylp];
+          rwosqueeze=rwo.replace(" ","")
           yetanotherarray.count(rwo);
-          if yetanotherarray.count(rwo)>2:
+          if yetanotherarray.count(rwo)>1:
              anotherdrop.append(mcrzylp)
-             print("still finding multiples") 
+          if yetanotherarray.count(rwo)>1:
+             anotherdropsqueeze.count(mcrzylp)
+             #print("still finding multiples") 
           mcrzylp+=1;
       
     sorted=wackyNewTable.sort_values(by='Community Name') 
