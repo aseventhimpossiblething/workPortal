@@ -400,7 +400,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
     mcrzylp=0;
     while mcrzylp<len(wackyNewTable['Community Name']):
           rwo=wackyNewTable['Community Name'][mcrzylp];
-          rwosqueeze=rwo.replace(" ","")
+          rwosqueeze=rwo.replace(" ","").replace("'","")
           yetanotherarray.append(rwo);
           yetanotherarray.append(rwosqueeze); 
           mcrzylp+=1;  
@@ -410,7 +410,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
     mcrzylp=0;
     while mcrzylp<len(wackyNewTable['Community Name']):
           rwo=wackyNewTable['Community Name'][mcrzylp];
-          rwosqueeze=rwo.replace(" ","")
+          rwosqueeze=rwo.replace(" ","").replace("'","")
           yetanotherarray.count(rwo);
           if yetanotherarray.count(rwo)>1:
              anotherdrop.append(mcrzylp)
