@@ -473,10 +473,12 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
     cctv=0;
     newcomid=[];
     while cctv<len(wackyNewTable['Community Name']):
-          print("len(wackyNewTable['Community Name']) ",len(wackyNewTable['Community Name']));
-          print("len(newcomid) ",len(newcomid));   
+          #print("len(wackyNewTable['Community Name']) ",len(wackyNewTable['Community Name']));
+          print("name ",nam);   
+          print("AlteredColNamesWithMultiples.count(nam) ",AlteredColNamesWithMultiples.count(nam))  
           nam=len(wackyNewTable['Community Name'][cctv]); 
           if AlteredColNamesWithMultiples.count(nam)>1:
+              print("trying nam if")
               newcomid.append("nan");
           else:
               newcomid.append(wackyNewTable['Community Id'][cctv]); 
@@ -808,10 +810,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #print("-----------------------------")
    
    nadgrp=AdgroupNaming_conv.replace("nan","")
-   print("nadgrp[len(nadgrp)-1] ",nadgrp[len(nadgrp)-1])
-   print("communityName ",communityName)  
+   #print("nadgrp[len(nadgrp)-1] ",nadgrp[len(nadgrp)-1])
+   #print("communityName ",communityName)  
    if nadgrp[len(nadgrp)-1]==">":
-          print("attempting if 1")
+          #print("attempting if 1")
           communityName=communityName.replace(" ","%20").replace(" s ","").replace("61s","").replace("64s","").replace("71s","").replace("74s","").replace("81s","")\
           .replace("61s","").replace("94s","").replace(" s ","").replace("74's ","");  
           URL_Struct1=str("https://www.newhomesource.com/communities/"+NewDataFrame['State']\
@@ -822,10 +824,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                .replace("Lots","");
           #pushh=NewDataFrame['URL Signal'][count];   
           Final_URL.append(URL_Struct1)
-          print("Yes >")
+          #print("Yes >")
    else:
           Final_URL.append(URL_Struct1)
-          print("Not not >");
+          #print("Not not >");
 
 
      
