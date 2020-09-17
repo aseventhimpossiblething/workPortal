@@ -426,7 +426,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      while cctv<len(wackyNewTable['Community Name']):
            nam=len(wackyNewTable['Community Name'][cctv]); 
            if wackyNewTable['Community Name'].count(nam)>1:
-              newcomid.append("nan"):
+              newcomid.append("nan");
            else:
               newcomid.append(wackyNewTable['Community Id'][cctv]);   
      cctv+=1;
