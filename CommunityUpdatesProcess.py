@@ -673,36 +673,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("and","&")
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
-   #print("NewDataFrame['URL Signal'][count]" ,NewDataFrame['URL Signal'][count]) 
       
-   """  
-   
-   if NewDataFrame['URL Signal'][count]!="Default":
-      #print("NewDataFrame['URL Signal'][count]" ,NewDataFrame['URL Signal'][count])
-      URL_Struct1=NewDataFrame['URL Signal'][count];      
-   """
-   
-      
-   """
-   print("-----------------------------")     
-   print('try running')     
-   #print("AdgroupNaming_conv ",AdgroupNaming_conv)
-   nadgrp=AdgroupNaming_conv.replace("nan","")
-   print("len(nadgrp) ",len(nadgrp))
-   print("type(len(nadgrp)); ",type(len(nadgrp)))     
-   print("nadgrp[0]; ",nadgrp[0]);
-   print("nadgrp[len(nadgrp)-1]; ",nadgrp[len(nadgrp)-1]);
-   print("nadgrp; ",nadgrp); 
-   """
-      
-      
-   #print("-----------------------------")
+
    
    nadgrp=AdgroupNaming_conv.replace("nan","")
-   #print("nadgrp[len(nadgrp)-1] ",nadgrp[len(nadgrp)-1])
-   #print("communityName ",communityName)  
    if nadgrp[len(nadgrp)-1]==">":
-          #print("attempting if 1")
           communityName=communityName.replace(" ","%20").replace(" s ","").replace("61s","").replace("64s","").replace("71s","").replace("74s","").replace("81s","")\
           .replace("61s","").replace("94s","").replace(" s ","").replace("74's ","");  
           URL_Struct1=str("https://www.newhomesource.com/communities/"+NewDataFrame['State']\
@@ -711,12 +686,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
           URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
                .replace("Lots","");
-          #pushh=NewDataFrame['URL Signal'][count];   
           Final_URL.append(URL_Struct1)
-          #print("Yes >")
+          
    else:
           Final_URL.append(URL_Struct1)
-          #print("Not not >");
+          
 
 
      
@@ -740,10 +714,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    community=str(communityName).lower();
    
    if str(Keyword_conv[len(Keyword_conv)-1])=="+":
-          #print("Keyword Push ",Keyword_conv); 
-          #print("Keyword Length ",len(Keyword_conv));
-          #print("Keyword last Character ",Keyword_conv[len(Keyword_conv)-1]);
-          #print("Keyword last Character ",Keyword_conv[:len(Keyword_conv)-1])
           Keyword_conv=Keyword_conv[:len(Keyword_conv)-1]
    Keyword.append(Keyword_conv);   
    label="Created by WebApp"  
@@ -934,14 +904,11 @@ def initialCommUpdatProcess():
  print("____________________________________________________________CURRENT VERSION")   
  print("____________________________________________________________CURRENT VERSION")     
        
- #WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,2,3]);
  
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,]);
  AVersion=str(WorkingCommunities.iloc[[2]].values);
  BVersion=str(WorkingCommunities.iloc[[4]].values);
  
- #print("AVersion ",AVersion);
- #print("BVersion ",BVersion);  
      
  AVersion=str(WorkingCommunities.iloc[[2]].values).find('Community Id');
  BVersion=str(WorkingCommunities.iloc[[4]].values).find('Community Id');
@@ -981,9 +948,6 @@ def initialCommUpdatProcess():
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
   
-       
-     
- 
  
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
