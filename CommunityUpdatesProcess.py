@@ -556,10 +556,10 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
           #print("name ",nam);   
           #print("AlteredColNamesWithMultiples.count(nam) ",AlteredColNamesWithMultiples.count(nam))  
           nam=wackyNewTable['Community Name'][cctv]; 
-          print("AlteredColNamesWithMultiples.count(nam) ",AlteredColNamesWithMultiples.count(nam))   
+          #print("AlteredColNamesWithMultiples.count(nam) ",AlteredColNamesWithMultiples.count(nam))   
           if AlteredColNamesWithMultiples.count(nam)>1:
-              print("name ",nam); 
-              print("trying nam if")
+              #print("name ",nam); 
+              #print("trying nam if")
               newcomid.append("nan");
           else:
               newcomid.append(wackyNewTable['Community Id'][cctv]); 
@@ -570,6 +570,19 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
     print("len(wackyNewTable) ",len(wackyNewTable)) 
     wackyNewTable=wackyNewTable.drop_duplicates(subset='Community Name')
     print("len(wackyNewTable) ",len(wackyNewTable))   
+
+
+
+    
+    mcrzylp=0;
+    while mcrzylp<len(wackyNewTable['Community Name']):
+          rwo=wackyNewTable['Community Name'][mcrzylp];  
+          wackyNewTable['Community Name'].count(rwo);
+          if wackyNewTable['Community Name'].count(rwo)>2:
+             print("still finding multiples") 
+          mcrzylp+=1;  
+
+
      
     
     UnitedFrame=wackyNewTable
