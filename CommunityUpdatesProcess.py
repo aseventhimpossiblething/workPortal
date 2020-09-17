@@ -592,10 +592,12 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
              print("still finding multiples") 
           mcrzylp+=1;
       
-
-
-     
+    sorted=wackyNewTable.sort_values(by='Column Name') 
+    print(" sorted['Community Name'] ",sorted['Community Name'])  
+    print(" 1 len(wackyNewTable['Community Name']) ",len(wackyNewTable['Community Name'])) 
     wackyNewTable.drop(anotherdrop)
+      
+    print( " 2 len(wackyNewTable['Community Name']) ",len(wackyNewTable['Community Name']))   
     UnitedFrame=wackyNewTable
     #UnitedFrame=UnitedFrame.reset_index() 
       
