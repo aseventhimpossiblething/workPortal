@@ -570,7 +570,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
     print("len(wackyNewTable) ",len(wackyNewTable)) 
     #wackyNewTable=wackyNewTable.drop_duplicates(subset='Community Name')
     #print("len(wackyNewTable) ",len(wackyNewTable)) 
-    wackyNewTable=wackyNewTable.reset.index(); 
+    wackyNewTable=wackyNewTable.reset_index(); 
 
 
 
