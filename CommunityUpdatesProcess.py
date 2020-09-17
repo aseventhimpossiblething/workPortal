@@ -566,14 +566,14 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
               #newcomid.append("nan");       
           cctv+=1;
     wackyNewTable['Community Id']=newcomid;
-    #wackyNewTable=wackyNewTable.drop_duplicates(subset='Community Name') 
-    print("len(wackyNewTable) ",len(wackyNewTable)) 
+    wackyNewTable=wackyNewTable.drop_duplicates(subset='Community Name') 
+    #print("len(wackyNewTable) ",len(wackyNewTable)) 
     #wackyNewTable=wackyNewTable.drop_duplicates(subset='Community Name')
     #print("len(wackyNewTable) ",len(wackyNewTable)) 
     wackyNewTable=wackyNewTable.reset_index(); 
 
 
-
+    anotherdrop=[];
     yetanotherarray=[];
     mcrzylp=0;
     while mcrzylp<len(wackyNewTable['Community Name']):
@@ -588,14 +588,16 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
           rwo=wackyNewTable['Community Name'][mcrzylp];  
           yetanotherarray.count(rwo);
           if yetanotherarray.count(rwo)>2:
+             anotherdrop.append(mcrzylp)
              print("still finding multiples") 
-          mcrzylp+=1;  
+          mcrzylp+=1;
+      
 
 
      
-    
+    wackyNewTable.drop(anotherdrop)
     UnitedFrame=wackyNewTable
-    #UnitedFrame=UnitedFrame.reset_index() 
+    UnitedFrame=UnitedFrame.reset_index() 
       
     """
     DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
