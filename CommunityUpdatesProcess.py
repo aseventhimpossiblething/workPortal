@@ -374,7 +374,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      
     frstLoopCount=0; 
     while frstLoopCount<len(cleanupFrame['Community Name']):
-          frstComName=str(cleanupFrame['Community Name'][frstLoopCount]).replace("0","").replace("1","").replace("2","").replace("70s","").replace(" 70s ","")\
+          frstComName=str(cleanupFrame['Community Name'][frstLoopCount]).replace("'","").replace("0","").replace("1","").replace("2","").replace("70s","").replace(" 70s ","")\
                 .replace(" 70' ","").replace("75s","").replace(" 75s ","").replace(" 75' ","").replace("3","").replace("4","").replace("5","").replace("6","")\
                .replace("61's","").replace("64's","").replace("71's","").replace("7","").replace("8","").replace("9","").replace("81's","")\
                .replace("84s","").replace("81s","").replace(" s ","").replace("40s","").replace("40's","").replace("74s","").replace("81s","")\
@@ -410,7 +410,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
                .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","").replace(" s ","").replace("TRUE OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ").replace("pricing","").replace("True OLY ","")\
-               .replace("4","").replace("5","").replace("6","").replace("7","").replace("8","").replace("9","").replace("0","").replace("1","").replace("2","").replace("3","").replace("8","").replace(" s ","").replace(" ' ","");
+               .replace("4","").replace("5","").replace("6","").replace("7","").replace("8","").replace("9","").replace("0","").replace("1","").replace("2","").replace("3","").replace("8","").replace(" s ","").replace(" ' ","").replace("'","");
                
           AlteredColNamesWithMultiples.append(frstComName); 
           frstLoopCount+=1;  
@@ -456,7 +456,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
                .replace(" 105' ","").replace(" 110s ","").replace(" 110' ","").replace("  "," ").replace(" Austin_TX>269>Willa._>125784 ","Austin_TX>269>Willa_>125784")\
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","").replace(" s ","").replace("TRUE OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ").replace("pricing","").replace("True OLY ","")\
-               .replace("4","").replace("5","").replace("6","").replace("7","").replace("8","").replace("9","").replace("0","").replace("1","").replace("2","").replace("3","").replace("8","").replace(" s ","").replace(" ' ","");
+               .replace("4","").replace("5","").replace("6","").replace("7","").replace("8","").replace("9","").replace("0","").replace("1","").replace("2","").replace("3","").replace("8","").replace(" s ","").replace(" ' ","").replace("'","");
            #AlteredColNamesWithMultiples.append(AlteredComName);
            if AlteredColNamesWithMultiples.count(AlteredComName)>1:
               MultiplesCommunityNames.append(AlteredComName);
@@ -476,7 +476,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
           #print("len(wackyNewTable['Community Name']) ",len(wackyNewTable['Community Name']));
           #print("name ",nam);   
           #print("AlteredColNamesWithMultiples.count(nam) ",AlteredColNamesWithMultiples.count(nam))  
-          nam=wackyNewTable['Community Name'][cctv]; 
+          #nam=wackyNewTable['Community Name'][cctv]; 
           print("AlteredColNamesWithMultiples.count(nam) ",AlteredColNamesWithMultiples.count(nam))   
           if AlteredColNamesWithMultiples.count(nam)>1:
               print("name ",nam); 
