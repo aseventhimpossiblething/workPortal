@@ -595,7 +595,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
      
     
     UnitedFrame=wackyNewTable
-    UnitedFrame=UnitedFrame.reset_index() 
+    #UnitedFrame=UnitedFrame.reset_index() 
       
     """
     DedupedMultiplesCommunityNames=list(dict.fromkeys(MultiplesCommunityNames));
