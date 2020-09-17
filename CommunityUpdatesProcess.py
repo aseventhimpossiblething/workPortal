@@ -487,6 +487,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
               #newcomid.append("nan");       
           cctv+=1;
     wackyNewTable['Community Id']=newcomid;
+    wackyNewTable=wackyNewTable.drop_duplicates(subset='Community Name') 
      
     UnitedFrame=wackyNewTable
     """
