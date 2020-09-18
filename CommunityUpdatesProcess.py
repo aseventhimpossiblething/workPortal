@@ -745,10 +745,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if community.find(city)>-1:
      label=label+";City Name as Part of Community Name "
 
-   print("label ",label);
-   label2=Label+";B Ad Copy" 
+   #print("label ",label);
+   
    Label.append(label);
-   LabelB.append(label2);
+   label=Label+ ";B Ad Copy" ;   
+   LabelB.append(label);
    #print("label ",label);
   except:
    NewDataFrame=NewDataFrame.drop([count])
