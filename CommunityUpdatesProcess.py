@@ -638,21 +638,19 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Title2A.append(Title2A_conv)
         
    Title3A.append("Schedule a new home tour today")
-   PreTextA="Find your family a perfect new home at\
-    "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
+   PreTextA="Find your family a perfect new home at"+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])
       
-   PreTextB="Get connected to the trusted builder at\
-    "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
+   PreTextB="Get connected to the trusted builder at"+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])   
       
    
    if len(PreTextA)>89:
-      PreTextA="Find your family a perfect new home at "+str(NewDataFrame['Community Name'][count])\
+      PreTextA="Find your family a perfect new home at"+str(NewDataFrame['Community Name'][count])\
              +" in "+str(NewDataFrame['City'][count])
     
    if len(PreTextB)>89:
-      PreTextA="Get connected to the trusted builder at "+str(NewDataFrame['Community Name'][count])\
+      PreTextA="Get connected to the trusted builder at"+str(NewDataFrame['Community Name'][count])\
              +" in "+str(NewDataFrame['City'][count])  
     
    if len(PreTextA)>89:
