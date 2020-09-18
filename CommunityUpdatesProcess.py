@@ -737,16 +737,19 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if str(Keyword_conv[len(Keyword_conv)-1])=="+":
           Keyword_conv=Keyword_conv[:len(Keyword_conv)-1]
    Keyword.append(Keyword_conv);   
-   label="Created by WebApp"  
+   label="Created by WebApp"
+   print("label ",label);    
          
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
    community=str(communityName).lower();
    if community.find(city)>-1:
      label=label+";City Name as Part of Community Name "
-   
+
+   print("label ",label);
    label2=Label+";B Ad Copy" 
    Label.append(label);
-   LabelB.append(label2);   
+   LabelB.append(label2);
+   print("label ",label);
   except:
    NewDataFrame=NewDataFrame.drop([count])
   count+=1;
