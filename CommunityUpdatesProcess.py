@@ -640,7 +640,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       PreTextA="Find your family a perfect new home at "+str(communityName)
     
    if len(PreTextB)>89:
-      PreTextA="Get connected to the trusted builder at "+str(communityName)+"!"  
+      PreTextB="Get connected to the trusted builder at "+str(communityName)+"!"  
    
    """
    if len(PreTextA)>89:
