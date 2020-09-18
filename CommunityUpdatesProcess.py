@@ -648,16 +648,21 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       
    
    if len(PreTextA)>89:
-   PreTextA="Find your family a perfect new home at "+str(NewDataFrame['Community Name'][count])\
+      PreTextA="Find your family a perfect new home at "+str(NewDataFrame['Community Name'][count])\
              +" in "+str(NewDataFrame['City'][count])
     
    if len(PreTextB)>89:
-   PreTextA="Get connected to the trusted builder at "+str(NewDataFrame['Community Name'][count])\
+      PreTextA="Get connected to the trusted builder at "+str(NewDataFrame['Community Name'][count])\
              +" in "+str(NewDataFrame['City'][count])  
     
    if len(PreTextA)>89:
-    PreTextA.find("at")
-    PreTextA=PreTextA[:PreTextA.find("at")]
+      PreTextA.find("at")
+      PreTextA=PreTextA[:PreTextA.find("at")]
+      
+     
+   if len(PreTextB)>89:
+      PreTextB.find("at")
+      PreTextB=PreTextB[:PreTextB.find("at")]  
       
    TextA.append(PreTextA);
    TextB.append(PreTextB+"!");
