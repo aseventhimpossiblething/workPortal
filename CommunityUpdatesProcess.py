@@ -738,7 +738,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
           Keyword_conv=Keyword_conv[:len(Keyword_conv)-1]
    Keyword.append(Keyword_conv);   
    label="Created by WebApp"
-   print("label ",label);    
+   #print("label ",label);    
          
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
    community=str(communityName).lower();
