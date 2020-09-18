@@ -637,12 +637,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       
    
    if len(PreTextA)>89:
-      PreTextA="Find your family a perfect new home at "+str(NewDataFrame['Community Name'][count])\
+      PreTextA="Find your family a perfect new home at "+str(communityName)\
              +" in "+str(NewDataFrame['City'][count])
     
    if len(PreTextB)>89:
-      PreTextA="Get connected to the trusted builder at "+str(NewDataFrame['Community Name'][count])\
-             +" in "+str(NewDataFrame['City'][count])  
+      PreTextA="Get connected to the trusted builder at "+str(communityName)\
+             +" in "+str(NewDataFrame['City'][count])+"!"  
     
    if len(PreTextA)>89:
       PreTextA.find("at")
@@ -654,7 +654,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       PreTextB=PreTextB[:PreTextB.find("at")]  
       
    TextA.append(PreTextA);
-   TextB.append(PreTextB+"!");
+   TextB.append(PreTextB);
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
    if len(Path1A_conv)>15:
