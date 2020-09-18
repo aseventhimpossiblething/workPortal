@@ -753,6 +753,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
   
  print("len(Campaign_Name) ",len(Campaign_Name));
+ print("len(Adgroup) ",len(Adgroup));
+ print("len(Keyword) ",len(Keyword));
+ print("len(Match_Type) ",len(Match_Type)); 
+ print("len(Status) ",len(Status));
+ print("len(Bid) ",len(Bid));
+ print("len(Label) ",len(Label));
+ print("len(LabelB) ",len(LabelB));      
 
 
    
