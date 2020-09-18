@@ -746,9 +746,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      label=label+";City Name as Part of Community Name "
 
    #print("label ",label);
-   
-   Label.append(label);
-   label=label+"; Ad Copy  B";  
+   Label2=Label+"; Ad Copy A";
+   Label.append(label2);
+   label2=label+"; Ad Copy B";  
    LabelB.append(label);
    #print("label ",label);
   except:
