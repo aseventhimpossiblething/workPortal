@@ -746,11 +746,16 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
    label2=Label+";B Ad Copy" 
    Label.append(label);
-   Label2.append(label2);   
+   LabelB.append(label2);   
   except:
    NewDataFrame=NewDataFrame.drop([count])
   count+=1;
+   
   
+ print("len(Campaign_Name) ",len(Campaign_Name));
+
+
+   
  GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Labels":Label} 
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
  GoogleAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
@@ -763,7 +768,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  BingAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
                 "Text":TextA,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
  BingAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
-                "Text":TextB,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
+                "Text":TextB,"Text Part 2":Text2B,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
  BingKWFrame=pandas.DataFrame(BingKWFrame)
  BingAdFrameA=pandas.DataFrame(BingAdFrameA)
  BingAdFrameB=pandas.DataFrame(BingAdFrameB)
