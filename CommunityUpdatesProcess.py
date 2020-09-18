@@ -748,7 +748,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #print("label ",label);
    
    Label.append(label);
-   label=Label+"B Ad Copy"   
+   label=Label;  
    LabelB.append(label);
    #print("label ",label);
   except:
