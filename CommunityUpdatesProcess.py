@@ -178,18 +178,10 @@ def filterNonParticipators(theFrame):
    theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount])]
    theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
    theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
-   #theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[])]
-   #print("theFrame[~theFrame['Community Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
-   
-   #print("Drop while")
-   
+         
    theFrame=theFrame.drop_duplicates(subset=['Community Name']);
-   #print("Length theFrame=theFrame.drop_duplicates(subset=['Community Name')] ",len(theFrame))
-   
-   
    
    DropLoopCount+=1;
-   #print("end Drop while") 
    
   return theFrame
  theFrame=firstDropLoop(theFrame)  
@@ -199,7 +191,6 @@ def filterNonParticipators(theFrame):
  
   
  theFrame=theFrame.reset_index(drop=True) 
- #print(theFrame)
  failcounter=0 ;
  DeDupArray=[];
  icount=0;
@@ -638,19 +629,19 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Title2A.append(Title2A_conv)
         
    Title3A.append("Schedule a new home tour today")
-   PreTextA="Find your family a perfect new home at"+str(communityName)+" in "+str(NewDataFrame['City'][count])\
+   PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])
       
-   PreTextB="Get connected to the trusted builder at"+str(communityName)+" in "+str(NewDataFrame['City'][count])\
+   PreTextB="Get connected to the trusted builder at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])   
       
    
    if len(PreTextA)>89:
-      PreTextA="Find your family a perfect new home at"+str(NewDataFrame['Community Name'][count])\
+      PreTextA="Find your family a perfect new home at "+str(NewDataFrame['Community Name'][count])\
              +" in "+str(NewDataFrame['City'][count])
     
    if len(PreTextB)>89:
-      PreTextA="Get connected to the trusted builder at"+str(NewDataFrame['Community Name'][count])\
+      PreTextA="Get connected to the trusted builder at "+str(NewDataFrame['Community Name'][count])\
              +" in "+str(NewDataFrame['City'][count])  
     
    if len(PreTextA)>89:
