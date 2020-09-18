@@ -638,12 +638,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
    if len(PreTextA)>89:
       PreTextA="Find your family a perfect new home at "+str(communityName)\
-             +" in "+str(NewDataFrame['City'][count])
+             +" in "
     
    if len(PreTextB)>89:
       PreTextA="Get connected to the trusted builder at "+str(communityName)\
-             +" in "+str(NewDataFrame['City'][count])+"!"  
-    
+             +" in "+"!"  
+   
+   """
    if len(PreTextA)>89:
       PreTextA.find("at")
       PreTextA=PreTextA[:PreTextA.find("at")]
@@ -652,6 +653,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if len(PreTextB)>89:
       PreTextB.find("at")
       PreTextB=PreTextB[:PreTextB.find("at")]  
+   """  
       
    TextA.append(PreTextA);
    TextB.append(PreTextB);
