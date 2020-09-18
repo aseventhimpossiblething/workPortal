@@ -624,25 +624,25 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if len(Title1A_Name_Conv)>29:
     Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find(" ",2)]
    if len(Title1A_Name_Conv)< 20:
-    Title1A_Name_Conv=Title1A_Name_Conv+" New Homes" 
+    Title1A_Name_Conv=Title1A_Name_Conv+" new nomes" 
    Title1A.append(Title1A_Name_Conv);
       
    Title2A_conv=NewDataFrame['City'][count]
    if len(Title2A_conv)<12:
-    Title2A_conv=Title2A_conv+" New Homes for sale"   
+    Title2A_conv=Title2A_conv+" new nomes for sale"   
    elif len(Title2A_conv)<20:
-     Title2A_conv=Title2A_conv+" New Homes"
+     Title2A_conv=Title2A_conv+" hew homes"
    elif len(Title2A_conv)<25:
-     Title2A_conv=Title2A_conv+" Homes"
+     Title2A_conv=Title2A_conv+" homes"
    Title2A.append(Title2A_conv)
         
-   Title3A.append("Schedule a New Home Tour Today")
-   PreTextA="Find your family a perfect New Home at \
+   Title3A.append("Schedule a new home tour today")
+   PreTextA="Find your family a perfect new home at \
     "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])
       
    if len(PreTextA)>89:
-    PreTextA="Find your family a perfect New Home at "+str(NewDataFrame['Community Name'][count])\
+    PreTextA="Find your family a perfect new home at "+str(NewDataFrame['Community Name'][count])\
              +" in "+str(NewDataFrame['City'][count])
     
    if len(PreTextA)>89:
