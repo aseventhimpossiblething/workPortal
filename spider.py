@@ -3,7 +3,7 @@
 import os
 import threading
 import time
-target_Site="https://www.newhomesource.com"
+target_Site="google"
 def sendSpider(targetSite):
     os.system("echo 'bash'")
     os.system("sudo touch spiderfile")
