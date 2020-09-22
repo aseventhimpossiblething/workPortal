@@ -1,4 +1,5 @@
 #clear associated file spiderGrep and midnighhowl
+"""
 import os
 import threading
 import time
@@ -27,7 +28,8 @@ def sendSpider(targetSite):
     """
     #os.system("bash spiderGrep.sh")
     #os.system("cat spiderfile | grep -a ' broken' >brokenLines")
-    os.system("echo 'bash2'")
+    #os.system("echo 'bash2'")
 #launchSpider=threading.Thread(target=sendSpider, args=(target_Site,))
 #launchSpider.start()
-sendSpider(target_Site)
+#sendSpider(target_Site)
+"""
