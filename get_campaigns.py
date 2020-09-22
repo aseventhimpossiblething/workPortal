@@ -372,7 +372,7 @@ def allAccntCombinedBasedMetrics(googleArrayOfAccounts):
     return metrics;
 
 
-googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
+#googlemetrics=allAccntCombinedBasedMetrics(googleArrayOfAccounts);
 
 def googlemetric():
     return allAccntCombinedBasedMetrics(googleArrayOfAccounts);
