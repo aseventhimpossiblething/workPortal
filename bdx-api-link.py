@@ -424,34 +424,9 @@ def BdOptmstn():
     return settleURL
 
 
-@app.route('/SpendTrack')
-def inda():
-    if chckbdxcred().find("NULL")==-1:
-        print(str(chckbdxcred()));
-        return str(chckbdxcred());
-    global domain;     
-    domainFavi=domain+"/favicon.png";
-    #metrics=get_campaigns.googlemetrics;
-    print("spendtrack")
-    #print(metrics)
-    return render_template('SpendTrack.html',domain=domain,domainFav=domainFavi,metrics=metrics);
 
 
 
-
-@app.route('/GoogleAccnts')
-def ind():
-    if chckbdxcred().find("NULL")==-1:
-        print(str(chckbdxcred()));
-        return str(chckbdxcred());
-    #global domain;     
-    #domainFavi=domain+"/favicon.png";
-    #metrics=get_campaigns.googlemetrics;
-    print("test fired")
-    if chckbdxcred().find("NULL")!=-1:
-       return get_campaigns.googlemetrics;
-    
-    #return render_template('PotentialSheetTransfer.html',domain=domain,domainFav=domainFavi,metrics=metrics);
     
 
 
