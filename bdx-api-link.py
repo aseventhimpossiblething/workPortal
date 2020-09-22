@@ -1,18 +1,11 @@
 domain="http://bdxapilink.com"
-#import tensorflow
-#import CommunityUpdatesProcess
 usr="BDXPPC"
 pwd="#!!9ooRanch"
 
-#import bingEXP
 
 
-"""
-from google.oauth2.service_account import Credentials as ServiceAccountCreds
-from google.oauth2.credentials import Credentials as InstalledAppCredentials
-from google.auth.transport.requests import Request
-"""
 
+print("1")
 
 
 
@@ -31,45 +24,24 @@ from flask import send_from_directory
 import get_campaigns
 
 
+print("2")
 
 
 
 
-#import spider
+
 
 from datetime import datetime
 os.system('sudo chmod -R 777 Sheets')
 os.system('sudo chmod -R 777 templates')
-#from flask_sslify import SSLify
+
+
+print("3")
+
 
 import psycopg2
 app = Flask(__name__,"/static/")
-#sslify = SSLify(app)
 
-
-#application = Flask(__name__)   # Flask constructor
-#app.config['MAX_CONTENT_LENGTH'] = 1000 * 1024 * 1024
-
-
-
-#conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-#conn = psycopg2.connect("dbname='dcect276ul8asc' user='ffsezxsqjvacnw' host='ec2-54-83-9-36.compute-1.amazonaws.com' password='657c149f7aac22520e75d72bddb9a16c76e60ac324fb4358f9f579ac1c2619d4'")
-
-#conn.cursor().execute("SELECT * FROM information_schema.tables ")
-#conn.cursor().execute("CREATE TABLE newTable (id int,Data text)")
-
-#print("run __: ",conn.cursor().execute("SELECT * FROM dcect276ul8asc"))
-#print('run conn.cursor().execute("SELECT * FROM information_schema.tables")___:', conn.cursor().execute("SELECT * FROM information_schema.tables"))
-#print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
-
-#print("attempting to create tables")
-#conn.cursor().execute("CREATE TABLE DocumentSubmissions("Documents")")
-#conn.cursor().execute("CREATE TABLE storage (user_id serial PRIMARY KEY, username VARCHAR (50) UNIQUE NOT NULL, password VARCHAR (50) NOT NULL, email VARCHAR (355) UNIQUE NOT NULL, created_on TIMESTAMP NOT NULL, last_login TIMESTAMP)")
-
-#conn.cursor().close()
-#conn.commit()
-#print(conn.cursor().execute("SELECT * FROM pg_stat_user_tables"))
-#conn.close
 
 login_page="/login"
 def setCnam():
@@ -85,6 +57,9 @@ def logontrue():
     return "pass"
 def logonfalse():
     return "no pass"
+
+
+print("4")
 
 
 def chckbdxcred():
@@ -103,6 +78,8 @@ def chckbdxcred():
  
     
     
+
+print("5")
     
 
 
@@ -133,6 +110,8 @@ def mlgne():
 
 
 
+print("6")
+
 
 
 
@@ -156,6 +135,9 @@ def official():
 def favicon():
     return send_from_directory('/app/favicon.png','favicon')     
 
+
+
+print("7")
 
 
 @app.route('/DisplayCommUpdate')
@@ -199,6 +181,9 @@ def GoogleKWSX():
                   attachment_filename="GoogleKWSX.xlsx")
 
 
+print("8")
+
+
 @app.route('/GoogleAdSBMMA')
 def GoogleASBMM():
  return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM/DefaultSheet.xlsx",\
@@ -221,6 +206,9 @@ def GoogleASBM():
                 
          
 
+print("9")
+
+        
 
 @app.route('/GoogleAdSBMB')
 def GoogleBSBM():
@@ -242,7 +230,10 @@ def GoogleASX():
 def GoogleBSX():
  return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBExact/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdBSX.xlsx")
-               
+  
+ 
+print("10")
+   
         
 
 @app.route('/BingKWSBMM')
@@ -272,6 +263,10 @@ def BingASBMM():
                  attachment_filename="BingAdSBMMA.xlsx")
                 
 
+
+print("11")
+    
+    
 
 @app.route('/BingAdSBMMB')
 def BingBSBMM():
@@ -333,6 +328,8 @@ def BasisN1():
 
 
 
+print("12")
+
 
 
 
@@ -356,6 +353,16 @@ def index():
     return render_template('LandingTemplate.html',domain=domain,domainFav=domainFavi);
     #return chckbdxcred();
 
+    
+    
+    
+
+print("13")
+    
+
+    
+    
+    
 @app.route('/BidOps')
 def BidOpInput():
     if chckbdxcred().find("NULL")==-1:
@@ -374,6 +381,13 @@ def BidOPUpload():
 
 
 
+
+
+print("14")
+
+
+
+
 @app.route('/CommunityUpdates')
 def CommunitiesUploads():
     if chckbdxcred().find("NULL")==-1:
@@ -389,6 +403,11 @@ def CommunityFileHandling():
 @app.route('/account')
 def acc():
     return render_template('account.html')
+    
+    
+
+print("15")
+    
     
    
 @app.route('/BidOpPending')
@@ -427,6 +446,8 @@ def BdOptmstn():
 
 
 
+print("16")
+
     
 
 
@@ -447,3 +468,8 @@ def Budge():
 if __name__=='__main__':
     app.run()
 
+    
+    
+
+print("17")
+    
