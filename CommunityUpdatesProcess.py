@@ -454,7 +454,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  Path2B=[];
  
  Label=[];
- LabelB=[]; 
+ LabelB=[];
+ KWLabel=[];     
  
  count=0;
  hilecount=len(NewDataFrame['Market ID']);
@@ -734,7 +735,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if community.find(city)>-1:
      label=label+";City Name as Part of Community Name "
 
-   #print("label ",label);
+   KWLabel.append(label)
    label1=label+"; Ad Copy A";
    Label.append(label1);
    label2=label+"; Ad Copy B";  
@@ -756,7 +757,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
 
 
    
- GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Labels":Label} 
+ GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Labels":KWLabel} 
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
  GoogleAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
                 "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
