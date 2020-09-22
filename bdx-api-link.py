@@ -35,7 +35,7 @@ import get_campaigns
 
 
 
-import spider
+#import spider
 
 from datetime import datetime
 os.system('sudo chmod -R 777 Sheets')
