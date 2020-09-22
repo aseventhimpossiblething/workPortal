@@ -20,16 +20,22 @@ def sendSpider(targetSite):
     
     #print("=",spiderlines)
     """
+    """ 
     time.sleep(20)
     spiderfile=open('spiderfile','r')
     spiderlines=spiderfile.readlines()
     #print(spiderlines)
     spiderfile.close()
     """
+    """
     #os.system("bash spiderGrep.sh")
     #os.system("cat spiderfile | grep -a ' broken' >brokenLines")
     #os.system("echo 'bash2'")
 #launchSpider=threading.Thread(target=sendSpider, args=(target_Site,))
 #launchSpider.start()
+
+
+
 #sendSpider(target_Site)
+
 """
