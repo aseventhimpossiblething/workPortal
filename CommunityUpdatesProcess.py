@@ -617,14 +617,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if len(Title1A_Name_Conv)>29:
     Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find(" ",2)]
    if len(Title1A_Name_Conv)< 20:
-    Title1A_Name_Conv=Title1A_Name_Conv+" new nomes" 
+    Title1A_Name_Conv=Title1A_Name_Conv+" New Homes" 
    Title1A.append(Title1A_Name_Conv);
       
    Title2A_conv=NewDataFrame['City'][count]
    if len(Title2A_conv)<12:
-    Title2A_conv=Title2A_conv+" new nomes for sale"   
+    Title2A_conv=Title2A_conv+" new homes for sale"   
    elif len(Title2A_conv)<20:
-     Title2A_conv=Title2A_conv+" hew homes"
+     Title2A_conv=Title2A_conv+" new homes"
    elif len(Title2A_conv)<25:
      Title2A_conv=Title2A_conv+" homes"
    Title2A.append(Title2A_conv)
