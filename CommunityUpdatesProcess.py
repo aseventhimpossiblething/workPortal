@@ -24,9 +24,13 @@ import xlsxwriter
 print("all imports loaded ")
 
 fileHandler.SheetsFileLocation
+print("fileHandler.SheetsFileLocation ",fileHandler.SheetsFileLocation)
 fileHandler.currentCommunitiesLocation
+print("fileHandler.currentCommunitiesLocation ",fileHandler.currentCommunitiesLocation)
 fileHandler.currentGoogleLocation
+print("fileHandler.currentGoogleLocation ", fileHandler.currentGoogleLocation)
 fileHandler.currentBingLocation
+print("fileHandler.currentBingLocation ",fileHandler.currentBingLocation)
 print("filehandler locations ")
 
 
