@@ -9,7 +9,7 @@ print("1")
 
 
 
-
+"""
 import glob
 import numpy
 import scipy
@@ -22,6 +22,7 @@ from flask import Flask, Markup, render_template, request, make_response
 from flask import send_file
 from flask import send_from_directory
 #import get_campaigns
+"""
 
 
 print("2")
