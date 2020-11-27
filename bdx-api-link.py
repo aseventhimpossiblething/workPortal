@@ -20,7 +20,7 @@ import pandas
 print("1.5")
 import BidOpAssist
 print("1.6")
-import CommunityUpdatesProcess
+#import CommunityUpdatesProcess
 print("1.7")
 import fileHandler
 print("1.8")
