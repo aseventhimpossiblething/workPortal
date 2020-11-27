@@ -935,8 +935,8 @@ def initialCommUpdatProcess():
  #print(pandas.read_excel('WorkingCommunities'))
 
        
- WorkingCommunities=pandas.read_excel('WorkingCommunities');
- #WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,]);
+ #WorkingCommunities=pandas.read_excel('WorkingCommunities');
+ WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,]);
  #print(WorkingCommunities)    
  print("0",WorkingCommunities.iloc[[0]].values)
  print("1",WorkingCommunities.iloc[[1]].values)
