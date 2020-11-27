@@ -1012,8 +1012,8 @@ def initialCommUpdatProcess():
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
  
- print("  googleURLS ", googleURLS)
- print(" bingURLS ",bingURLS)
+ print("  googleURLS ", googleURLS,"---This has been google")
+ print(" bingURLS ",bingURLS,"---This has been bing")
  print(" WorkingCommunities ",WorkingCommunities)     
  
  
