@@ -21,6 +21,7 @@ import sys
 from openpyxl import Workbook
 from openpyxl import load_workbook
 import xlsxwriter
+print("all imports loaded ")
 
 fileHandler.SheetsFileLocation
 fileHandler.currentCommunitiesLocation
