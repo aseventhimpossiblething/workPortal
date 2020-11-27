@@ -940,7 +940,10 @@ def initialCommUpdatProcess():
  #print(WorkingCommunities)     
  AVersion=str(WorkingCommunities.iloc[[2]].values);
  BVersion=str(WorkingCommunities.iloc[[4]].values);
- 
+
+ print("AVersion ",AVersion);
+ print("BVersion ",BVersion);     
+ print("CVersion? row 3? ",WorkingCommunities.iloc[[3]]);
      
  AVersion=str(WorkingCommunities.iloc[[2]].values).find('Community Id');
  BVersion=str(WorkingCommunities.iloc[[4]].values).find('Community Id');
