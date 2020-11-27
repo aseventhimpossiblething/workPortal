@@ -4,8 +4,12 @@ import glob
 import numpy
 import scipy
 import pandas
+print("loading bid op assist ")
 import BidOpAssist
+print("bid op assist loaded ")
+print("loading filehandler ")
 import fileHandler
+print("filehandler loaded ")
 from flask import Flask, Markup, render_template, request
 import os
 import psycopg2
