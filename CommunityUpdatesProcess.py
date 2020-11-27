@@ -940,24 +940,22 @@ def initialCommUpdatProcess():
  #print(WorkingCommunities)     
  AVersion=str(WorkingCommunities.iloc[[2]].values);
  BVersion=str(WorkingCommunities.iloc[[4]].values);
-
+ CVersion=str(WorkingCommunities.iloc[[4]].values);
  print("AVersion ",AVersion);
  print("BVersion ",BVersion);     
- print("CVersion? row 0? ",WorkingCommunities.iloc[[0]]);
- print("CVersion? row 1? ",WorkingCommunities.iloc[[1]]);
- print("CVersion? row 2? ",WorkingCommunities.iloc[[2]]);
- print("CVersion? row 3? ",WorkingCommunities.iloc[[3]]);
- print("CVersion? row 4? ",WorkingCommunities.iloc[[4]]);
- print("CVersion? row 5? ",WorkingCommunities.iloc[[5]]);
- print("CVersion? row 6? ",WorkingCommunities.iloc[[6]]);
- print("CVersion? row 7? ",WorkingCommunities.iloc[[7]]);
+ print("CVersion ",CVersion);
+      
+ 
       
  AVersion=str(WorkingCommunities.iloc[[2]].values).find('Community Id');
  BVersion=str(WorkingCommunities.iloc[[4]].values).find('Community Id');
- 
+ BVersion=str(WorkingCommunities.iloc[[0]].values).find('Community Id');
+
  print("=======================Watch for Version Print============= Begin")
  print("AVersion ",AVersion);
- print("BVersion ",BVersion);     
+ print("BVersion ",BVersion);  
+ print("CVersion ",CVersion); 
+
  print("WorkingCommunities ",WorkingCommunities)
  #print("WorkingCommunities.columns ",WorkingCommunities.columns);  
  print("=======================Watch for Version Print============= End")
@@ -970,7 +968,11 @@ def initialCommUpdatProcess():
  if BVersion!=-1:
     print("BVersion--------------------------------------------------------------------");  
     WorkingCommunities=WorkingCommunities.drop([2]);
-
+     
+  
+ if CVersion!=-1:
+    print("CVersion--------------------------------------------------------------------");  
+    #WorkingCommunities=WorkingCommunities.drop([2]);
  
 
  
