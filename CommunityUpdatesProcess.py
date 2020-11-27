@@ -18,10 +18,18 @@ from openpyxl import Workbook
 from openpyxl import load_workbook
 import xlsxwriter
 
+"""
 fileHandler.SheetsFileLocation
 fileHandler.currentCommunitiesLocation
 fileHandler.currentGoogleLocation
 fileHandler.currentBingLocation
+"""
+
+SheetsFileLocation="/var/www/workPortal/Sheets"
+currentCommunitiesLocation="/var/www/workPortal/Sheets/CommunityUpdates/currentCommunities"
+currentGoogleLocation="/var/www/workPortal/Sheets/CommunityUpdates/Google/currentGoogle"
+currentBingLocation="/var/www/workPortal/Sheets/CommunityUpdates/Bing/currentBing"
+
 
 
 
