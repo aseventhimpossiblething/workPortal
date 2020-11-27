@@ -509,10 +509,15 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             .replace(" ","-")+"/"+communityName\
             .replace(" ","-")+"-by-"+NewDataFrame['Brand Name'][count]\
             .replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower().replace("m/i","m-i");
-  
+  print("!!!!!!!!!!!ALERT LINE 512 UNCOMMENT  URL_Struct1=URL_Struct1.replace; ")
+  print("!!!!!!!!!!!ALERT LINE 512 UNCOMMENT  URL_Struct1=URL_Struct1.replace; ") 
+  print("!!!!!!!!!!!ALERT LINE 512 UNCOMMENT  URL_Struct1=URL_Struct1.replace; ")
+      
+  """
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
             .replace("Lots","");
+  """
   Keyword_conv=communityName.replace("  "," ")
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
