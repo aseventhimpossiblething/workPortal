@@ -948,23 +948,14 @@ def initialCommUpdatProcess():
  os.chdir(fileHandler.currentCommunitiesLocation);
  print(os.listdir(os.getcwd()));
  
- print("____________________________________________________________CURRENT VERSION")   
- print("____________________________________________________________CURRENT VERSION")
-
-
-       
+      
 
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,]);
 
-  
-
-
-
+ 
  AVersion=str(WorkingCommunities.iloc[[2]].values);
  BVersion=str(WorkingCommunities.iloc[[4]].values);
  CVersion=str(WorkingCommunities.iloc[[0]].values);
-      
-      
       
       
  print("AVersion ",AVersion);
@@ -982,9 +973,7 @@ def initialCommUpdatProcess():
  print("AVersion ",AVersion);
  print("BVersion ",BVersion);  
  print("CVersion ",CVersion); 
-
- print("WorkingCommunities ",WorkingCommunities)
- #print("WorkingCommunities.columns ",WorkingCommunities.columns);  
+ 
  print("=======================Watch for Version Print============= End")
 
  
@@ -996,8 +985,7 @@ def initialCommUpdatProcess():
     print("BVersion--------------------------------------------------------------------");  
     WorkingCommunities=WorkingCommunities.drop([2]);
      
-  
- if CVersion!=-1:
+  if CVersion!=-1:
     print("CVersion--------------------------------------------------------------------");  
     #WorkingCommunities=WorkingCommunities.drop([2]);
  
@@ -1006,7 +994,7 @@ def initialCommUpdatProcess():
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
  WorkingCommunities=WorkingCommunities.drop([4])
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','Community Name','City')
- #print("WorkingCommunities Being Loaded --",WorkingCommunities)
+
  
  if IsCommValid!="Valid":
   return IsCommValid
@@ -1014,25 +1002,20 @@ def initialCommUpdatProcess():
  WorkingBingEOF=WorkingBing()
 
 
- #print(" WorkingGoogleEOF ",WorkingGoogleEOF)
- #print(" WorkingBingEOF ",WorkingBingEOF) 
+
 
  WorkingCommunities['Community Id']
  WorkingGoogleEOF['Final URL']  
  WorkingBingEOF['Final Url']
       
   
- #print("  WorkingGoogleEOF['Final URL'] ", WorkingGoogleEOF['Final URL']) 
- #print("  WorkingBingEOF['Final Url'] ", WorkingBingEOF['Final Url'])      
+   
  
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
- print(" WorkingCommunities['Community Id'] ",WorkingCommunities['Community Id'])     
  #WorkingCommunities=filterNonParticipators(WorkingCommunities);
- #print("=======================Everything dissapears here=======================")
- #print("  googleURLS ", googleURLS,"---This has been google")
- #print(" bingURLS ",bingURLS,"---This has been bing")
+
  print(" WorkingCommunities ",WorkingCommunities)     
  
  
