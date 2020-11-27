@@ -109,7 +109,7 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkwor
   return IsCommValid  
 
 def WorkingGoogle():  
- os.chdir(fileHandler.currentGoogleLocation)
+ os.chdir(currentGoogleLocation)
  WorkingGoogle=pandas.read_excel('WorkingGoogle')
  global IsGoogleValid 
  IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Headline 1','Final URL')
@@ -120,7 +120,7 @@ def WorkingGoogle():
   return  WorkingGoogle
   
 def WorkingBing():
- os.chdir(fileHandler.currentBingLocation)
+ os.chdir(currentBingLocation)
  WorkingBing=pandas.read_excel('WorkingBing')
  IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1','Final Url')
  if IsBingValid!='Valid':
