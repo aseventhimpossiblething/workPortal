@@ -509,15 +509,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             .replace(" ","-")+"/"+communityName\
             .replace(" ","-")+"-by-"+NewDataFrame['Brand Name'][count]\
             .replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower().replace("m/i","m-i");
-  print("!!!!!!!!!!!ALERT LINE 512 UNCOMMENT  URL_Struct1=URL_Struct1.replace; ")
-  print("!!!!!!!!!!!ALERT LINE 512 UNCOMMENT  URL_Struct1=URL_Struct1.replace; ") 
-  print("!!!!!!!!!!!ALERT LINE 512 UNCOMMENT  URL_Struct1=URL_Struct1.replace; ")
+  
       
-  """
+  
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
             .replace("Lots","");
-  """
+  
   Keyword_conv=communityName.replace("  "," ")
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
@@ -1016,7 +1014,7 @@ def initialCommUpdatProcess():
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  print(" WorkingCommunities['Community Id'] ",WorkingCommunities['Community Id'])     
- #WorkingCommunities=filterNonParticipators(WorkingCommunities);
+ WorkingCommunities=filterNonParticipators(WorkingCommunities);
  #print("=======================Everything dissapears here=======================")
  #print("  googleURLS ", googleURLS,"---This has been google")
  #print(" bingURLS ",bingURLS,"---This has been bing")
