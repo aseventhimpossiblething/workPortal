@@ -1011,11 +1011,17 @@ def initialCommUpdatProcess():
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
-  
+ 
+ print("  googleURLS ", googleURLS)
+ print(" bingURLS ",bingURLS)
+ print(" WorkingCommunities ",WorkingCommunities)     
  
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
+ 
+ print(" NewGoogle ",NewGoogle)  
+ print(" NewBing ",NewBing)
  
  KeywordGen(NewGoogle,"sbmm","google")
  KeywordGen(NewGoogle,"sb","google")
