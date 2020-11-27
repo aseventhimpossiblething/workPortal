@@ -996,12 +996,16 @@ def initialCommUpdatProcess():
  WorkingBingEOF=WorkingBing()
 
 
- print(" WorkingGoogleEOF ",WorkingGoogleEOF)
- print(" WorkingBingEOF ",WorkingBingEOF) 
+ #print(" WorkingGoogleEOF ",WorkingGoogleEOF)
+ #print(" WorkingBingEOF ",WorkingBingEOF) 
 
  WorkingCommunities['Community Id']
  WorkingGoogleEOF['Final URL']  
  WorkingBingEOF['Final Url']
+      
+ print(" WorkingCommunities['Community Id'] ",WorkingCommunities['Community Id']) 
+ print("  WorkingGoogleEOF['Final URL'] ", WorkingGoogleEOF['Final URL']) 
+ print("  WorkingBingEOF['Final Url'] ", WorkingBingEOF['Final Url'])      
  
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
