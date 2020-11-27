@@ -1,6 +1,6 @@
 print("Attempt to load filehandler");
 import BidOpAssist
-print("loaded CommunityUpdatesProcess in filehandler");
+print("Attempted load CommunityUpdatesProcess in filehandler");
 import CommunityUpdatesProcess
 print("CommunityUpdatesProcess in filehandler loaded");
 from datetime import datetime
