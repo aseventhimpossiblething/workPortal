@@ -506,7 +506,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   print("Entering 2nd Replace Complex! Com Name line 506")    
   communityName.replace("91's","").replace("94's","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace(" s ","").replace("61s","").replace(" 64s ","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace("74's","").replace("61's","").replace(" 64's ","").replace("71's","").replace("74's","").replace("81's","").replace(" 84's ","").replace(" s ","").replace(" ' ","")
   print("Leaving 2nd Replace Complex! Com Name line 508")
-  print("Entering 3rd Replace Complex! Com Name line 509")
+  print("Entering 3rd Replace Complex! Com Name URL Struct 509")
+      
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]\
             .replace(" ","-")+"/"+communityName\
@@ -514,7 +515,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             .replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower().replace("m/i","m-i");
   
       
-  print("Leaving 3rd Replace Complex! Com Name line 517")
+  print("Leaving 3rd Replace Complex! URL Struct line 517")
   print("Entering 4th Replace Complex! URLstruct line 518")
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
@@ -1019,7 +1020,7 @@ def initialCommUpdatProcess():
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  print(" WorkingCommunities['Community Id'] ",WorkingCommunities['Community Id'])     
- WorkingCommunities=filterNonParticipators(WorkingCommunities);
+ #WorkingCommunities=filterNonParticipators(WorkingCommunities);
  #print("=======================Everything dissapears here=======================")
  #print("  googleURLS ", googleURLS,"---This has been google")
  #print(" bingURLS ",bingURLS,"---This has been bing")
