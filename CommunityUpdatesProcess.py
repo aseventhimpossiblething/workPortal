@@ -547,7 +547,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       Keyword_conv=Keyword_conv+" Community"
   
 
-  try:
+  
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc"
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
