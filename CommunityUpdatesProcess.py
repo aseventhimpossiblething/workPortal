@@ -932,7 +932,7 @@ def initialCommUpdatProcess():
  
  print("____________________________________________________________CURRENT VERSION")   
  print("____________________________________________________________CURRENT VERSION")
- print(read_excel('WorkingCommunities'))
+ print(pandas.read_excel('WorkingCommunities'))
 
        
  
