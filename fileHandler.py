@@ -1,3 +1,4 @@
+print("Attempt to load filehandler");
 import BidOpAssist
 import CommunityUpdatesProcess
 from datetime import datetime
