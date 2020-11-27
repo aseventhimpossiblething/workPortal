@@ -18,7 +18,7 @@ import scipy
 print("1.4")
 import pandas
 print("1.5")
-#import BidOpAssist
+import BidOpAssist
 print("1.6")
 import CommunityUpdatesProcess
 print("1.7")
