@@ -527,16 +527,15 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY")  
   print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY")  
 
-  """    
+    
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]\
             .replace(" ","-")+"/"+communityName\
             .replace(" ","-")+"-by-"+NewDataFrame['Brand Name'][count]\
             .replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower().replace("m/i","m-i");
-  """          
+          
 
-  #URL_Struct1=NewDataFrame['Community Id'][count]+"?refer=").lower().replace("m/i","m-i");
-  URL_Struct1="https://www.newhomesource.com/community/"  
+
   
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
@@ -548,7 +547,538 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       Keyword_conv=Keyword_conv+" Community"
   
 
+  try:
+   if SearchChan=="google":
+    URL_Struct1=URL_Struct1+"gppc"
+    Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
+    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
+    if MatchType=="SBMM":
+     URL_Struct1=URL_Struct1+"403"
+     Keyword_conv=Keyword_conv
+     #Keyword_conv=NewDataFrame['Community Name'][count]
+     Keyword_conv=Keyword_conv.replace(" + ","")
+     Keyword_conv=Keyword_conv.replace("++","+")
+     Keyword_conv=Keyword_conv.replace(" ++ ","")
+     Keyword_conv=Keyword_conv.replace("&"," ")
+     Keyword_conv=Keyword_conv.replace(" "," +")
+     Keyword_conv=Keyword_conv.replace("+55+","55+")
+     Keyword_conv=Keyword_conv.replace("+-","-")
+     Keyword_conv=Keyword_conv.replace("-"," ")
+     Keyword_conv=Keyword_conv.replace("'","")
+     Keyword_conv=Keyword_conv.replace("+,","")
+     Keyword_conv=Keyword_conv.replace(",","")
+     Keyword_conv=Keyword_conv.replace(" s ","")
+     Keyword_conv=Keyword_conv.replace("+s ","")
+     Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
+     Keyword_conv="+"+Keyword_conv
+     set_bid=.45;
+     
+     if len(Keyword_conv)<12:
+      Keyword_conv=Keyword_conv+" Community"
+     MatchType_Conv="Broad"
+    if MatchType=="SB":
+     URL_Struct1=URL_Struct1+"402"
+     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
+     Keyword_conv=communityName
+     MatchType_Conv="Broad"
+     set_bid=.30;
+    if MatchType=="SX":
+     URL_Struct1=URL_Struct1+"401"
+     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
+     Keyword_conv=communityName
+     MatchType_Conv="Exact"
+     set_bid=.65;
+   if SearchChan=="bing":
+    URL_Struct1=URL_Struct1+"msm"
+    Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
+    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
+    if MatchType=="SB":
+     URL_Struct1=URL_Struct1+"202"
+     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
+     Keyword_conv=communityName
+     MatchType_Conv="Broad"
+     set_bid=.40;
+    if MatchType=="SX":
+     URL_Struct1=URL_Struct1+"201"
+     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201")
+     Keyword_conv=communityName
+     MatchType_Conv="Exact"
+     set_bid=.52;
+    if MatchType=="SBMM":
+     URL_Struct1=URL_Struct1+"202"
+     Keyword_conv=Keyword_conv
+     Keyword_conv=Keyword_conv.replace(" + ","")
+     Keyword_conv=Keyword_conv.replace("++","+")
+     Keyword_conv=Keyword_conv.replace(" ++ ","")
+     Keyword_conv=Keyword_conv.replace("&"," ")
+     Keyword_conv=Keyword_conv.replace(" "," +")
+     Keyword_conv=Keyword_conv.replace("+55+","55+")
+     Keyword_conv=Keyword_conv.replace("+-"," ")
+     Keyword_conv=Keyword_conv.replace("-"," ")
+     Keyword_conv=Keyword_conv.replace("'","")
+     Keyword_conv=Keyword_conv.replace(",","")
+     Keyword_conv=Keyword_conv.replace("+G +& +I","G&I ")
+     Keyword_conv=Keyword_conv.replace(" s ","")
+     Keyword_conv=Keyword_conv.replace("+s ","")
+     Keyword_conv="+"+Keyword_conv
+     set_bid=.45;
+     if len(Keyword_conv)<12:
+      Keyword_conv=Keyword_conv+" Community"
+     MatchType_Conv="Broad"
+   Campaign_Name.append(Campaign_Nameing_Conv);
+      
+   AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
+                      +str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
+   
+   #print("str(NewDataFrame['Community Id'][count]) ",str(NewDataFrame['Community Id'][count]));
+   if str(NewDataFrame['Community Id'][count]).find("nan")>-1:
+            AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
+                      +str(">")+communityName+str("_>");
+        
+   Adgroup.append(AdgroupNaming_conv)
+   #Keyword.append(Keyword_conv)
+   Match_Type.append(MatchType_Conv)
+   Status.append("Active")
+   Bid.append(set_bid)
+   Title1A_Name_Conv=communityName
+   if len(Title1A_Name_Conv)>29:
+    Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find("at")-1]
+   if len(Title1A_Name_Conv)>29:
+    Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find(" ",2)]
+   if len(Title1A_Name_Conv)< 20:
+    Title1A_Name_Conv=Title1A_Name_Conv+" New Homes" 
+   Title1A.append(Title1A_Name_Conv);
+      
+   Title2A_conv=NewDataFrame['City'][count]
+   if len(Title2A_conv)<12:
+    Title2A_conv=Title2A_conv+" new homes for sale"   
+   elif len(Title2A_conv)<20:
+     Title2A_conv=Title2A_conv+" new homes"
+   elif len(Title2A_conv)<25:
+     Title2A_conv=Title2A_conv+" homes"
+   Title2A.append(Title2A_conv)
+        
+   Title3A.append("Schedule a new home tour today")
+   PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
+      +", "+str(NewDataFrame['State'][count])
+      
+   PreTextB="Get connected to the trusted builder at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
+      +", "+str(NewDataFrame['State'][count])   
+      
+   
+   if len(PreTextA)>89:
+      PreTextA="Find your family a perfect new home at "+str(communityName)
+    
+   if len(PreTextB)>89:
+      PreTextB="Get connected to the trusted builder at "+str(communityName)+"!"  
+   
+   """
+   if len(PreTextA)>89:
+      PreTextA.find("at")
+      PreTextA=PreTextA[:PreTextA.find("at")]
+      
+     
+   if len(PreTextB)>89:
+      PreTextB.find("at")
+      PreTextB=PreTextB[:PreTextB.find("at")]  
+   """  
+      
+   TextA.append(PreTextA);
+   TextB.append(PreTextB);
+   Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
+   Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
+   if len(Path1A_conv)>15:
+    Path1A_conv=Path1A_conv.replace("-","")
+    Path1A_conv=Path1A_conv.replace("Village","Villa")
+    Path1A_conv=Path1A_conv.replace("North","N")
+    Path1A_conv=Path1A_conv.replace("South","S")
+    Path1A_conv=Path1A_conv.replace("West","W")
+    Path1A_conv=Path1A_conv.replace("East","E")
+    Path1A_conv=Path1A_conv.replace("Viejo","")
+    Path1A_conv=Path1A_conv.replace("Parkland","Pklnd")
+    Path1A_conv=Path1A_conv.replace("Park","Pk")
+    Path1A_conv=Path1A_conv.replace("Township","Twnshp")
+    Path1A_conv=Path1A_conv.replace("Springs","Spngs")
+    Path1A_conv=Path1A_conv.replace("Beach","Bch")
+    Path1A_conv=Path1A_conv.replace("Gardens","Gdns")
+    Path1A_conv=Path1A_conv.replace("Point","Pt")
+    Path1A_conv=Path1A_conv.replace("Heights","Hghts")
+    Path1A_conv=Path1A_conv.replace("Plains","Plns")
+    Path1A_conv=Path1A_conv.replace("Valley","Vlly")
+    Path1A_conv=Path1A_conv.replace("Lake","lk")
+    Path1A_conv=Path1A_conv.replace("Estates","Est")
+    Path1A_conv=Path1A_conv.replace("Collection","")
+    Path1A_conv=Path1A_conv.replace("Vistoso","")
+    Path1A_conv=Path1A_conv.replace("Station","STA")
+    Path1A_conv=Path1A_conv.replace("and","&")
+   Path1A.append(Path1A_conv)
+   Path2A.append("New Homes")
+      
+
+   
+   nadgrp=AdgroupNaming_conv.replace("nan","")
+   if nadgrp[len(nadgrp)-1]==">":
+          communityName=communityName.replace(" ","%20").replace(" s ","").replace("61s","").replace("64s","").replace("71s","").replace("74s","").replace("81s","")\
+          .replace("61s","").replace("94s","").replace(" s ","").replace("74's ","");  
+          URL_Struct1=str("https://www.newhomesource.com/communities/"+NewDataFrame['State']\
+                     [count]+"/"+NewDataFrame['Market Name'][count]+"-area?communityname="+communityName).lower()     
+                  
+          URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
+               .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
+               .replace("Lots","");
+          Final_URL.append(URL_Struct1)
+          
+   else:
+          Final_URL.append(URL_Struct1)
+          
+
+
+     
+      
+   
+   #Final_URL.append(URL_Struct1)
  
+  
+   Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+").replace(" + + +","+")\
+                  .replace("+ + + ","+").replace("++","+").replace("+ +","+").replace(" ++","+").replace("++ ","+")\
+                  .replace(" + +","+").replace("+ + ","+").replace("+–","+").replace("+– ","+").replace(" +–","+")\
+                  .replace(" +– ","+").replace(" +– +","+").replace("+– + ","+").replace(" + ","").replace("++","+")\
+                  .replace(" ++ ","").replace("+ ","").replace(",","").replace(" s ","")
+   Keyword_conv=Keyword_conv.replace("+s ","");
+         
+   if len(Keyword_conv)<10:
+      Keyword_conv=Keyword_conv+" Community"
+     
+      
+   city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
+   community=str(communityName).lower();
+   
+   if str(Keyword_conv[len(Keyword_conv)-1])=="+":
+          Keyword_conv=Keyword_conv[:len(Keyword_conv)-1]
+   Keyword.append(Keyword_conv);   
+   label="Created by WebApp"
+   #print("label ",label);    
+         
+   city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
+   community=str(communityName).lower();
+   if community.find(city)>-1:
+     label=label+";City Name as Part of Community Name "
+
+   KWLabel.append(label)
+   label1=label+"; Ad Copy A";
+   Label.append(label1);
+   label2=label+"; Ad Copy B";  
+   LabelB.append(label2);
+   #print("label ",label);
+  except:
+   NewDataFrame=NewDataFrame.drop([count])
+  count+=1;
+   
+  
+ print("len(Campaign_Name) ",len(Campaign_Name));
+ print("len(Adgroup) ",len(Adgroup));
+ print("len(Keyword) ",len(Keyword));
+ print("len(Match_Type) ",len(Match_Type)); 
+ print("len(Status) ",len(Status));
+ print("len(Bid) ",len(Bid));
+ print("len(Label) ",len(Label));
+ print("len(LabelB) ",len(LabelB));      
+
+
+   
+ GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Labels":KWLabel} 
+ GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
+ GoogleAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
+                "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
+ GoogleAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
+                "Description":TextB,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":LabelB}
+ GoogleAdFrameA=pandas.DataFrame(GoogleAdFrameA)
+ GoogleAdFrameB=pandas.DataFrame(GoogleAdFrameB)
+ BingKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Bid":Bid,"Labels":KWLabel} 
+ BingAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
+                "Text":TextA,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
+ BingAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
+                "Text":TextB,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":LabelB}
+ BingKWFrame=pandas.DataFrame(BingKWFrame)
+ BingAdFrameA=pandas.DataFrame(BingAdFrameA)
+ BingAdFrameB=pandas.DataFrame(BingAdFrameB)
+ 
+ 
+
+ if SearchChan=="google":
+  if MatchType=='SBMM':
+   print("In KeywordGen google SBMM ")
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW')
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   GoogleKWFrame.to_excel(writer)
+   writer.save()
+   
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM')
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   GoogleAdFrameA.to_excel(writer)
+   writer.save()
+   
+   
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBMM/'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBMM/')
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   GoogleAdFrameB.to_excel(writer)
+   writer.save()
+   
+    
+  if MatchType=='SB':
+   print("In KeywordGen google SB ")
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW')
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   GoogleKWFrame.to_excel(writer)
+   writer.save()
+   
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABroad'
+   #os.chdir('/var/www/workPortal/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABroad')
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   GoogleAdFrameA.to_excel(writer)
+   writer.save()
+     
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBroad'
+   #os.chdir('/var/www/workPortal/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBroad')
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   GoogleAdFrameB.to_excel(writer)
+   writer.save()
+   
+     
+  if MatchType=='SX':
+   print("In KeywordGen google SX ")
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW')
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   GoogleKWFrame.to_excel(writer)
+   writer.save() 
+   
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionAExact' 
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionAExact')
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   GoogleAdFrameA.to_excel(writer)
+   writer.save()
+   
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBExact'   
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBExact')
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   GoogleAdFrameB.to_excel(writer)
+   writer.save()
+   
+     
+ if SearchChan=="bing":
+  if MatchType=='SBMM':
+   print("In KeywordGen bing SBMM ")
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM')
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   BingKWFrame.to_excel(writer)
+   writer.save()
+   
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBMM'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBMM')
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   BingAdFrameA.to_excel(writer)
+   writer.save()
+   
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeBMM'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeBMM')
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   BingAdFrameB.to_excel(writer)
+   writer.save()
+   
+   
+      
+  if MatchType=='SB':
+   print("In KeywordGen bing SB ")
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad')
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   BingKWFrame.to_excel(writer)
+   writer.save()
+   
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBroad'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBroad')
+   os.chdir(SaveLocation) 
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   BingAdFrameA.to_excel(writer)
+   writer.save()
+     
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeBroad'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeBroad')
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   BingAdFrameB.to_excel(writer)
+   writer.save()
+   
+    
+  if MatchType=='SX':
+   print("In KeywordGen bing SX ")
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact' 
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact')
+   os.chdir(SaveLocation) 
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   BingKWFrame.to_excel(writer)
+   writer.save()
+   
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeExact'   
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeExact')
+   os.chdir(SaveLocation) 
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   BingAdFrameA.to_excel(writer)
+   writer.save()
+   
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeExact'
+   #os.chdir('/var/www/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeExact')
+   os.chdir(SaveLocation) 
+   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   BingAdFrameB.to_excel(writer)
+   writer.save()
+   
+    
+def initialCommUpdatProcess():
+ global IsCommUpdateRunning
+ print("fileHandler.currentCommunitiesLocation - ",fileHandler.currentCommunitiesLocation)
+ os.chdir(fileHandler.currentCommunitiesLocation);
+ print(os.listdir(os.getcwd()));
+ 
+      
+
+ WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,]);
+
+ 
+ AVersion=str(WorkingCommunities.iloc[[2]].values);
+ BVersion=str(WorkingCommunities.iloc[[4]].values);
+ CVersion=str(WorkingCommunities.iloc[[0]].values);
+      
+      
+ print("AVersion ",AVersion);
+ print("BVersion ",BVersion);     
+ print("CVersion ",CVersion);
+
+      
+ 
+      
+ AVersion=str(WorkingCommunities.iloc[[2]].values).find('Community Id');
+ BVersion=str(WorkingCommunities.iloc[[4]].values).find('Community Id');
+ CVersion=str(WorkingCommunities.iloc[[0]].values).find('Community Id');
+
+ print("=======================Watch for Version Print============= Begin")
+ print("AVersion ",AVersion);
+ print("BVersion ",BVersion);  
+ print("CVersion ",CVersion); 
+ 
+ print("=======================Watch for Version Print============= End")
+
+ 
+ if AVersion!=-1:
+    print("AVersion-------------------------------------------------------------------");        
+    WorkingCommunities=WorkingCommunities.drop([2,3]);
+    
+ if BVersion!=-1:
+    print("BVersion--------------------------------------------------------------------");  
+    WorkingCommunities=WorkingCommunities.drop([2]);
+     
+  if CVersion!=-1:
+    print("CVersion--------------------------------------------------------------------");  
+    #WorkingCommunities=WorkingCommunities.drop([2]);
+ 
+
+ 
+ WorkingCommunities.columns=WorkingCommunities.iloc[0]
+ WorkingCommunities=WorkingCommunities.drop([4])
+ WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','Community Name','City')
+
+ 
+ if IsCommValid!="Valid":
+  return IsCommValid
+ WorkingGoogleEOF=WorkingGoogle()    
+ WorkingBingEOF=WorkingBing()
+
+
+
+
+ WorkingCommunities['Community Id']
+ WorkingGoogleEOF['Final URL']  
+ WorkingBingEOF['Final Url']
+      
+  
+   
+ 
+
+ googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
+ bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
+ #WorkingCommunities=filterNonParticipators(WorkingCommunities);
+
+ print(" WorkingCommunities ",WorkingCommunities)     
+ 
+ 
+ NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
+ NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
+ 
+ print(" NewGoogle ",NewGoogle)  
+ print(" NewBing ",NewBing)
+ 
+ #KeywordGen(NewGoogle,"sbmm","google")
+ print("Only one Keygen is active!!!!!")
+ print("Only one Keygen is active!!!!!")
+ print("Only one Keygen is active!!!!!")
+ """
+ KeywordGen(NewGoogle,"sb","google")
+ KeywordGen(NewGoogle,"sx","google")
+ KeywordGen(NewBing,"sbmm","bing")
+ KeywordGen(NewBing,"sb","bing")
+ KeywordGen(NewBing,"sx","bing")
+ """
+
+ os.chdir(fileHandler.currentBingLocation)
+ print("past  os.chdir fileHandler.currentBingLocation")
+  
+ os.chdir(fileHandler.SheetsFileLocation);
+ print("past  os.chdir(fileHandler.SheetsFileLocation)");
+ storeRequest=open('RequestsVsResponses.txt','a+')
+ storeRequest.write("Response , ")
+ storeRequest.close() 
+ storeRequest=open('RequestsVsResponses.txt','r+')
+ storeRequest.close()
+ 
+  
+
+
+
+ #CommunityNameDuplicateSpecialLoop(WorkingCommunities);
+ print("END OF ASYNC FILE LOAD.....................................................................")
+ sys.exit()
+ return "finished"
+
+
+
+
+
+   
+   
+
+  
+  
+  
+  
 
 
 
