@@ -935,15 +935,31 @@ def initialCommUpdatProcess():
  #print(pandas.read_excel('WorkingCommunities'))
 
        
- 
- WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,]);
- #print(WorkingCommunities)     
+ WorkingCommunities=pandas.read_excel('WorkingCommunities');
+ #WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,]);
+ #print(WorkingCommunities)    
+ print("0",WorkingCommunities.iloc[[0]].values)
+ print("1",WorkingCommunities.iloc[[1]].values)
+ print("2",WorkingCommunities.iloc[[2]].values)
+ print("3",WorkingCommunities.iloc[[3]].values)
+ print("4",WorkingCommunities.iloc[[4]].values)
+ print("5",WorkingCommunities.iloc[[5]].values)
+ print("6",WorkingCommunities.iloc[[6]].values)
+ print("7",WorkingCommunities.iloc[[7]].values)     
+
+
+
  AVersion=str(WorkingCommunities.iloc[[2]].values);
  BVersion=str(WorkingCommunities.iloc[[4]].values);
- CVersion=str(WorkingCommunities.iloc[[4]].values);
+ CVersion=str(WorkingCommunities.iloc[[0]].values);
+      
+      
+      
+      
  print("AVersion ",AVersion);
  print("BVersion ",BVersion);     
  print("CVersion ",CVersion);
+
       
  
       
