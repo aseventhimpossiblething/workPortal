@@ -9,18 +9,29 @@ print("1")
 
 
 
-
+print("1.1")
 import glob
+print("1.2")
 import numpy
+print("1.3")
 import scipy
+print("1.4")
 import pandas
+print("1.5")
 import BidOpAssist
+print("1.6")
 import CommunityUpdatesProcess
+print("1.7")
 import fileHandler
+print("1.8")
 import os
+print("1.9")
 from flask import Flask, Markup, render_template, request, make_response
+print("1.11")
 from flask import send_file
+print("1.12")
 from flask import send_from_directory
+print("1.13")
 #import get_campaigns
 
 
@@ -33,6 +44,7 @@ print("2")
 
 
 from datetime import datetime
+print("2.1")
 os.system('sudo chmod -R 777 Sheets')
 os.system('sudo chmod -R 777 templates')
 
