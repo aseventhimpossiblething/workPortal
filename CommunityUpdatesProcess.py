@@ -507,6 +507,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   communityName.replace("91's","").replace("94's","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace(" s ","").replace("61s","").replace(" 64s ","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace("74's","").replace("61's","").replace(" 64's ","").replace("71's","").replace("74's","").replace("81's","").replace(" 84's ","").replace(" s ","").replace(" ' ","")
   print("Leaving 2nd Replace Complex! Com Name line 508")
   print("Entering 3rd Replace Complex! Com Name URL Struct 509")
+      
+  print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY") 
+  print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY")  
+  print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY")  
+  print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY")   
   """    
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]\
@@ -1036,11 +1041,16 @@ def initialCommUpdatProcess():
  print(" NewBing ",NewBing)
  
  KeywordGen(NewGoogle,"sbmm","google")
+ print("Only one Keygen is active!!!!!")
+ print("Only one Keygen is active!!!!!")
+ print("Only one Keygen is active!!!!!")
+ """
  KeywordGen(NewGoogle,"sb","google")
  KeywordGen(NewGoogle,"sx","google")
  KeywordGen(NewBing,"sbmm","bing")
  KeywordGen(NewBing,"sb","bing")
  KeywordGen(NewBing,"sx","bing")
+ """
 
  os.chdir(fileHandler.currentBingLocation)
  print("past  os.chdir fileHandler.currentBingLocation")
