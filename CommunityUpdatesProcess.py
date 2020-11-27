@@ -17,6 +17,7 @@ import sys
 from openpyxl import Workbook
 from openpyxl import load_workbook
 import xlsxwriter
+print("imports loaded")
 
 """
 fileHandler.SheetsFileLocation
@@ -25,10 +26,14 @@ fileHandler.currentGoogleLocation
 fileHandler.currentBingLocation
 """
 
+print("filehandler data point removed")
+
 SheetsFileLocation="/var/www/workPortal/Sheets"
 currentCommunitiesLocation="/var/www/workPortal/Sheets/CommunityUpdates/currentCommunities"
 currentGoogleLocation="/var/www/workPortal/Sheets/CommunityUpdates/Google/currentGoogle"
 currentBingLocation="/var/www/workPortal/Sheets/CommunityUpdates/Bing/currentBing"
+
+print("new Sheet locations")
 
 
 
