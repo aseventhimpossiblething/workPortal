@@ -931,7 +931,9 @@ def initialCommUpdatProcess():
  print(os.listdir(os.getcwd()));
  
  print("____________________________________________________________CURRENT VERSION")   
- print("____________________________________________________________CURRENT VERSION")     
+ print("____________________________________________________________CURRENT VERSION")
+ print(read_excel('WorkingCommunities'))
+
        
  
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,]);
