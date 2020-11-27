@@ -23,6 +23,7 @@ from openpyxl import load_workbook
 import xlsxwriter
 print("all imports loaded ")
 
+"""
 fileHandler.SheetsFileLocation
 print("fileHandler.SheetsFileLocation ",fileHandler.SheetsFileLocation)
 fileHandler.currentCommunitiesLocation
@@ -32,6 +33,7 @@ print("fileHandler.currentGoogleLocation ", fileHandler.currentGoogleLocation)
 fileHandler.currentBingLocation
 print("fileHandler.currentBingLocation ",fileHandler.currentBingLocation)
 print("filehandler locations ")
+"""
 
 
 
