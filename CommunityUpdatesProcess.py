@@ -1,4 +1,4 @@
-print("tTtempted load Com Updates")
+print("Atempted load Com Updates itself ")
 MaintatanceVar="Off";
 import glob
 import numpy
