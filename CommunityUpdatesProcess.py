@@ -28,7 +28,7 @@ SheetsAreLoaded=None;
 IsCommValid=None;
 IsGoogleValid=None;
 IsBingValid=None;
-
+print("loaded com up page")
 
 
 
