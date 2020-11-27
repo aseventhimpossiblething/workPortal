@@ -424,6 +424,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
 
 
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
+ print("KeywordGen Initiated")     
  print(NewDataFrame)     
  NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame); 
  print(NewDataFrame)
