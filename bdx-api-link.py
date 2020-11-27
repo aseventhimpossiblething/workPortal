@@ -22,7 +22,7 @@ import BidOpAssist
 print("1.6")
 #import CommunityUpdatesProcess
 print("1.7")
-#import fileHandler
+import fileHandler
 print("1.8")
 import os
 print("1.9")
