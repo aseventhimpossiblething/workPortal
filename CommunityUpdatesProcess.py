@@ -557,54 +557,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      URL_Struct1=URL_Struct1+"403"
      Keyword_conv=Keyword_conv
      #Keyword_conv=NewDataFrame['Community Name'][count]
-     Keyword_conv=Keyword_conv.replace(" + ","")
-     Keyword_conv=Keyword_conv.replace("++","+")
-     Keyword_conv=Keyword_conv.replace(" ++ ","")
-     Keyword_conv=Keyword_conv.replace("&"," ")
-     Keyword_conv=Keyword_conv.replace(" "," +")
-     Keyword_conv=Keyword_conv.replace("+55+","55+")
-     Keyword_conv=Keyword_conv.replace("+-","-")
-     Keyword_conv=Keyword_conv.replace("-"," ")
-     Keyword_conv=Keyword_conv.replace("'","")
-     Keyword_conv=Keyword_conv.replace("+,","")
-     Keyword_conv=Keyword_conv.replace(",","")
-     Keyword_conv=Keyword_conv.replace(" s ","")
-     Keyword_conv=Keyword_conv.replace("+s ","")
-     Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
-     Keyword_conv="+"+Keyword_conv
-     set_bid=.45;
      
-     if len(Keyword_conv)<12:
-      Keyword_conv=Keyword_conv+" Community"
-     MatchType_Conv="Broad"
-    if MatchType=="SB":
-     URL_Struct1=URL_Struct1+"402"
-     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
-     Keyword_conv=communityName
-     MatchType_Conv="Broad"
-     set_bid=.30;
-    if MatchType=="SX":
-     URL_Struct1=URL_Struct1+"401"
-     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
-     Keyword_conv=communityName
-     MatchType_Conv="Exact"
-     set_bid=.65;
-   if SearchChan=="bing":
-    URL_Struct1=URL_Struct1+"msm"
-    Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
-    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
-    if MatchType=="SB":
-     URL_Struct1=URL_Struct1+"202"
-     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
-     Keyword_conv=communityName
-     MatchType_Conv="Broad"
- 
-
-   
-   
-
-  
-  
   
   
 
