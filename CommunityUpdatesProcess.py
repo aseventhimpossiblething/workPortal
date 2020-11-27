@@ -988,13 +988,17 @@ def initialCommUpdatProcess():
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
  WorkingCommunities=WorkingCommunities.drop([4])
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community Id','Community Name','City')
- print("WorkingCommunities Being Loaded --",WorkingCommunities)
+ #print("WorkingCommunities Being Loaded --",WorkingCommunities)
  
  if IsCommValid!="Valid":
   return IsCommValid
  WorkingGoogleEOF=WorkingGoogle()    
  WorkingBingEOF=WorkingBing()
- 
+
+
+ print(" WorkingGoogleEOF ",WorkingGoogleEOF)
+ print(" WorkingBingEOF ",WorkingBingEOF) 
+
  WorkingCommunities['Community Id']
  WorkingGoogleEOF['Final URL']  
  WorkingBingEOF['Final Url']
