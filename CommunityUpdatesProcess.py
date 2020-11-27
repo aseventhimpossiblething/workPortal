@@ -1003,16 +1003,17 @@ def initialCommUpdatProcess():
  WorkingGoogleEOF['Final URL']  
  WorkingBingEOF['Final Url']
       
- print(" WorkingCommunities['Community Id'] ",WorkingCommunities['Community Id']) 
+  
  #print("  WorkingGoogleEOF['Final URL'] ", WorkingGoogleEOF['Final URL']) 
  #print("  WorkingBingEOF['Final Url'] ", WorkingBingEOF['Final Url'])      
  
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
+ print(" WorkingCommunities['Community Id'] ",WorkingCommunities['Community Id'])     
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
  print("=======================Everything dissapears here=======================")
- print("  googleURLS ", googleURLS,"---This has been google")
+ #print("  googleURLS ", googleURLS,"---This has been google")
  #print(" bingURLS ",bingURLS,"---This has been bing")
  print(" WorkingCommunities ",WorkingCommunities)     
  
