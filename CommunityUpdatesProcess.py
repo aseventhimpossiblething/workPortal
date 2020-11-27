@@ -1056,12 +1056,6 @@ def initialCommUpdatProcess():
 
 
 
- #CommunityNameDuplicateSpecialLoop(WorkingCommunities);
- print("END OF ASYNC FILE LOAD.....................................................................")
- sys.exit()
- return "finished"
-
-
 
 
 
