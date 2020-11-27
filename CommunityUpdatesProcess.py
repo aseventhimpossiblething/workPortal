@@ -1,11 +1,11 @@
-print("tTtempted load Com Updates")
+print("atTtempted load Com Updates")
 MaintatanceVar="Off";
 import glob
 import numpy
 import scipy
 import pandas
 import BidOpAssist
-import fileHandler
+#import fileHandler
 from flask import Flask, Markup, render_template, request
 import os
 import psycopg2
