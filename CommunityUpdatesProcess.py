@@ -27,6 +27,7 @@ fileHandler.SheetsFileLocation
 fileHandler.currentCommunitiesLocation
 fileHandler.currentGoogleLocation
 fileHandler.currentBingLocation
+print("filehandler locations ")
 
 
 
