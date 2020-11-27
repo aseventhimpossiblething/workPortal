@@ -465,7 +465,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  if type(MaintatanceVar)=="<class 'int'>":
   hilecount=MaintatanceVar;
  while count < hilecount:
-  
+  print("General Sizes ", "len(Campaign_Name) ",len(Campaign_Name))
+  print("General Sizes ", "len(Adgroup) ",len(Adgroup))
+ 
+
+
+
+
   communityName=str(NewDataFrame['Community Name'][count]);
   communityName=communityName.replace(" s ","").replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","")\
                .replace(" 45s ","").replace(" 45' ","").replace("Series","").replace("series","")\
