@@ -943,8 +943,15 @@ def initialCommUpdatProcess():
 
  print("AVersion ",AVersion);
  print("BVersion ",BVersion);     
+ print("CVersion? row 0? ",WorkingCommunities.iloc[[0]]);
+ print("CVersion? row 1? ",WorkingCommunities.iloc[[1]]);
+ print("CVersion? row 2? ",WorkingCommunities.iloc[[2]]);
  print("CVersion? row 3? ",WorkingCommunities.iloc[[3]]);
-     
+ print("CVersion? row 4? ",WorkingCommunities.iloc[[4]]);
+ print("CVersion? row 5? ",WorkingCommunities.iloc[[5]]);
+ print("CVersion? row 6? ",WorkingCommunities.iloc[[6]]);
+ print("CVersion? row 7? ",WorkingCommunities.iloc[[7]]);
+      
  AVersion=str(WorkingCommunities.iloc[[2]].values).find('Community Id');
  BVersion=str(WorkingCommunities.iloc[[4]].values).find('Community Id');
  
