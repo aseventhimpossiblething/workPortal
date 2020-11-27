@@ -467,7 +467,6 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  while count < hilecount:
   
   communityName=str(NewDataFrame['Community Name'][count]);
-  print("Entering 1st Replace Complex! Com Name Line 470")
   communityName=communityName.replace(" s ","").replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","")\
                .replace(" 45s ","").replace(" 45' ","").replace("Series","").replace("series","")\
                .replace("50s","").replace(" 50s ","").replace(" 50' ","").replace("55s","").replace(" 55s ","").replace("55'","")\
@@ -502,16 +501,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                .replace(" Cielo at Sand Creek | Vista Collection ","Cielo at Sand Creek Vista Collection").replace(" On Your Lot ","").replace(" OLY ","")\
                .replace(" Austin_TX>269>Highpointe /_>146097 ","Austin_TX>269>Highpointe_>146097").replace(" | ","").replace("/","").replace(" & "," ").replace(" s ","").replace(" ' ","")\
   
-  print("Leaving 1st Replace Complex! Com Name line 505")
-  print("Entering 2nd Replace Complex! Com Name line 506")    
+  
   communityName.replace("91's","").replace("94's","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace(" s ","").replace("61s","").replace(" 64s ","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace("74's","").replace("61's","").replace(" 64's ","").replace("71's","").replace("74's","").replace("81's","").replace(" 84's ","").replace(" s ","").replace(" ' ","")
-  print("Leaving 2nd Replace Complex! Com Name line 508")
-  print("Entering 3rd Replace Complex! Com Name URL Struct 509")
+
       
   print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY") 
   print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY")  
   print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY")  
-  print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY")   
+
   """    
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]\
@@ -522,13 +519,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
 
   #URL_Struct1=NewDataFrame['Community Id'][count]+"?refer=").lower().replace("m/i","m-i");
   URL_Struct1="https://www.newhomesource.com/community/"  
-  print("Leaving 3rd Replace Complex! URL Struct line 517")
-  print("Entering 4th Replace Complex! URLstruct line 518")
+  
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
             .replace("Lots","");
   
-  print("Leaving 4th Replace Complex! URLstruct line 523")
+ 
   Keyword_conv=communityName.replace("  "," ")
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
