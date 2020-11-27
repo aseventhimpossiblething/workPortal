@@ -1,6 +1,8 @@
 print("Attempt to load filehandler");
 import BidOpAssist
+print("loaded CommunityUpdatesProcess in filehandler");
 import CommunityUpdatesProcess
+print("CommunityUpdatesProcess in filehandler loaded");
 from datetime import datetime
 from flask import Flask, Markup, render_template, request
 import glob
