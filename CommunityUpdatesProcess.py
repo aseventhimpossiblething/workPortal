@@ -1037,7 +1037,7 @@ def initialCommUpdatProcess():
  print(" NewGoogle ",NewGoogle)  
  print(" NewBing ",NewBing)
  
- #KeywordGen(NewGoogle,"sbmm","google")
+ KeywordGen(NewGoogle,"sbmm","google")
  print("Only one Keygen is active!!!!!")
  print("Only one Keygen is active!!!!!")
  print("Only one Keygen is active!!!!!")
