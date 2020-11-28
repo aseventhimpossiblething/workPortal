@@ -676,16 +676,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   if len(PreTextB)>89:
       PreTextB="Get connected to the trusted builder at "+str(communityName)+"!"  
    
-   """
-   if len(PreTextA)>89:
-      PreTextA.find("at")
-      PreTextA=PreTextA[:PreTextA.find("at")]
-      
-     
-   if len(PreTextB)>89:
-      PreTextB.find("at")
-      PreTextB=PreTextB[:PreTextB.find("at")]  
-   """  
+
       
   TextA.append(PreTextA);
   TextB.append(PreTextB);
