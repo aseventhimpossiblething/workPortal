@@ -438,7 +438,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("Dataframe incomming to KeywordGen ",NewDataFrame)     
  NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame); 
  print("Dataframe set to proceed through KW Gn----===========================",NewDataFrame)
- print("NewDataFrame[0] ",NewDataFrame[0])   
+ print("NewDataFrame.columns ",NewDataFrame.columns)   
  MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
  print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
