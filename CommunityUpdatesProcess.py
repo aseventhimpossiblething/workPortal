@@ -634,46 +634,46 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
    
-   #print("str(NewDataFrame['Community Id'][count]) ",str(NewDataFrame['Community Id'][count]));
-   if str(NewDataFrame['Community Id'][count]).find("nan")>-1:
+  #print("str(NewDataFrame['Community Id'][count]) ",str(NewDataFrame['Community Id'][count]));
+  if str(NewDataFrame['Community Id'][count]).find("nan")>-1:
             AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>");
         
-   Adgroup.append(AdgroupNaming_conv)
-   #Keyword.append(Keyword_conv)
-   Match_Type.append(MatchType_Conv)
-   Status.append("Active")
-   Bid.append(set_bid)
-   Title1A_Name_Conv=communityName
-   if len(Title1A_Name_Conv)>29:
+  Adgroup.append(AdgroupNaming_conv)
+  #Keyword.append(Keyword_conv)
+  Match_Type.append(MatchType_Conv)
+  Status.append("Active")
+  Bid.append(set_bid)
+  Title1A_Name_Conv=communityName
+  if len(Title1A_Name_Conv)>29:
     Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find("at")-1]
-   if len(Title1A_Name_Conv)>29:
+  if len(Title1A_Name_Conv)>29:
     Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find(" ",2)]
-   if len(Title1A_Name_Conv)< 20:
-    Title1A_Name_Conv=Title1A_Name_Conv+" New Homes" 
+  if len(Title1A_Name_Conv)< 20:
+   Title1A_Name_Conv=Title1A_Name_Conv+" New Homes" 
    Title1A.append(Title1A_Name_Conv);
       
    Title2A_conv=NewDataFrame['City'][count]
-   if len(Title2A_conv)<12:
+  if len(Title2A_conv)<12:
     Title2A_conv=Title2A_conv+" new homes for sale"   
-   elif len(Title2A_conv)<20:
+  elif len(Title2A_conv)<20:
      Title2A_conv=Title2A_conv+" new homes"
-   elif len(Title2A_conv)<25:
+  elif len(Title2A_conv)<25:
      Title2A_conv=Title2A_conv+" homes"
-   Title2A.append(Title2A_conv)
+  Title2A.append(Title2A_conv)
         
-   Title3A.append("Schedule a new home tour today")
-   PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
+  Title3A.append("Schedule a new home tour today")
+  PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])
       
-   PreTextB="Get connected to the trusted builder at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
+  PreTextB="Get connected to the trusted builder at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])   
       
    
-   if len(PreTextA)>89:
+  if len(PreTextA)>89:
       PreTextA="Find your family a perfect new home at "+str(communityName)
     
-   if len(PreTextB)>89:
+  if len(PreTextB)>89:
       PreTextB="Get connected to the trusted builder at "+str(communityName)+"!"  
    
    """
@@ -687,11 +687,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       PreTextB=PreTextB[:PreTextB.find("at")]  
    """  
       
-   TextA.append(PreTextA);
-   TextB.append(PreTextB);
-   Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
-   Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
-   if len(Path1A_conv)>15:
+  TextA.append(PreTextA);
+  TextB.append(PreTextB);
+  Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
+  Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
+  if len(Path1A_conv)>15:
     Path1A_conv=Path1A_conv.replace("-","")
     Path1A_conv=Path1A_conv.replace("Village","Villa")
     Path1A_conv=Path1A_conv.replace("North","N")
@@ -715,13 +715,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("Vistoso","")
     Path1A_conv=Path1A_conv.replace("Station","STA")
     Path1A_conv=Path1A_conv.replace("and","&")
-   Path1A.append(Path1A_conv)
-   Path2A.append("New Homes")
+  Path1A.append(Path1A_conv)
+  Path2A.append("New Homes")
       
 
    
-   nadgrp=AdgroupNaming_conv.replace("nan","")
-   if nadgrp[len(nadgrp)-1]==">":
+  nadgrp=AdgroupNaming_conv.replace("nan","")
+  if nadgrp[len(nadgrp)-1]==">":
           communityName=communityName.replace(" ","%20").replace(" s ","").replace("61s","").replace("64s","").replace("71s","").replace("74s","").replace("81s","")\
           .replace("61s","").replace("94s","").replace(" s ","").replace("74's ","");  
           URL_Struct1=str("https://www.newhomesource.com/communities/"+NewDataFrame['State']\
@@ -732,7 +732,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                .replace("Lots","");
           Final_URL.append(URL_Struct1)
           
-   else:
+  else:
           Final_URL.append(URL_Struct1)
           
 
@@ -740,43 +740,43 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      
       
    
-   #Final_URL.append(URL_Struct1)
+  #Final_URL.append(URL_Struct1)
  
   
-   Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+").replace(" + + +","+")\
+  Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+").replace(" + + +","+")\
                   .replace("+ + + ","+").replace("++","+").replace("+ +","+").replace(" ++","+").replace("++ ","+")\
                   .replace(" + +","+").replace("+ + ","+").replace("+–","+").replace("+– ","+").replace(" +–","+")\
                   .replace(" +– ","+").replace(" +– +","+").replace("+– + ","+").replace(" + ","").replace("++","+")\
                   .replace(" ++ ","").replace("+ ","").replace(",","").replace(" s ","")
-   Keyword_conv=Keyword_conv.replace("+s ","");
+  Keyword_conv=Keyword_conv.replace("+s ","");
          
-   if len(Keyword_conv)<10:
+  if len(Keyword_conv)<10:
       Keyword_conv=Keyword_conv+" Community"
      
       
-   city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
-   community=str(communityName).lower();
+  city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
+  community=str(communityName).lower();
    
-   if str(Keyword_conv[len(Keyword_conv)-1])=="+":
+  if str(Keyword_conv[len(Keyword_conv)-1])=="+":
           Keyword_conv=Keyword_conv[:len(Keyword_conv)-1]
-   Keyword.append(Keyword_conv);   
-   label="Created by WebApp"
-   #print("label ",label);    
+  Keyword.append(Keyword_conv);   
+  label="Created by WebApp"
+  #print("label ",label);    
          
-   city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
-   community=str(communityName).lower();
-   if community.find(city)>-1:
+  city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
+  community=str(communityName).lower();
+  if community.find(city)>-1:
      label=label+";City Name as Part of Community Name "
 
-   KWLabel.append(label)
-   label1=label+"; Ad Copy A";
-   Label.append(label1);
-   label2=label+"; Ad Copy B";  
-   LabelB.append(label2);
-   #print("label ",label);
+  KWLabel.append(label)
+  label1=label+"; Ad Copy A";
+  Label.append(label1);
+  label2=label+"; Ad Copy B";  
+  LabelB.append(label2);
+  #print("label ",label);
   
  
-  count+=1;
+ count+=1;
    
   
  print("len(Campaign_Name) ",len(Campaign_Name));
