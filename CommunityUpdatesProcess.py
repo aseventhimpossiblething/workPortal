@@ -435,6 +435,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("KeywordGen Initiated-----------------------------------------------------------------------------------------------")
  print("KeywordGen Initiated-----------------------------------------------------------------------------------------------")
+ print("NewDataFrame[0] ",NewDataFrame[0])     
  print("Dataframe incomming to KeywordGen ",NewDataFrame)     
  NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame); 
  print("Dataframe set to proceed through KW Gn----===========================",NewDataFrame)
@@ -478,14 +479,14 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  if type(MaintatanceVar)=="<class 'int'>":
   hilecount=MaintatanceVar;
  while count < hilecount:
-            
+  """          
   print("General Sizes ", "len(Campaign_Name) ",len(Campaign_Name))
   print("General Sizes ", "len(Adgroup) ",len(Adgroup))
   print("count ",count)
   print("str(NewDataFrame['Community Name'][count]) ",str(NewDataFrame['Community Name'][count]))
   print("Campaign_Name ",Campaign_Name)
   print("Adgroup ",Adgroup)
-
+  """
 
 
   communityName=str(NewDataFrame['Community Name'][count]);
@@ -737,12 +738,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
           Final_URL.append(URL_Struct1)
           
 
-
      
-      
-   
-   #Final_URL.append(URL_Struct1)
- 
   
    Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+").replace(" + + +","+")\
                   .replace("+ + + ","+").replace("++","+").replace("+ +","+").replace(" ++","+").replace("++ ","+")\
