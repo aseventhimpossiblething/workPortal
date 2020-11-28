@@ -525,8 +525,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
 
       
   print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY") 
-  print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY")  
-  print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY")  
+ 
 
   """    
   URL_Struct1=str("https://www.newhomesource.com/community/"\
@@ -1027,7 +1026,7 @@ def initialCommUpdatProcess():
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
- #WorkingCommunities=filterNonParticipators(WorkingCommunities);
+ WorkingCommunities=filterNonParticipators(WorkingCommunities);
 
  print(" WorkingCommunities ",WorkingCommunities)     
  
