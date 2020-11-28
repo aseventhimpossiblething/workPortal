@@ -531,14 +531,20 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY") 
  
 
-    
+  """   
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]\
             .replace(" ","-")+"/"+communityName\
             .replace(" ","-")+"-by-"+NewDataFrame['Brand Name'][count]\
             .replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower().replace("m/i","m-i");
-           
-
+  """         
+  
+  URL_Struct1="https://www.newhomesource.com/community/"+NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]
+            #.replace(" ","-")+"/"+communityName\
+            #.replace(" ","-")+"-by-"+NewDataFrame['Brand Name'][count]\
+            #.replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower().replace("m/i","m-i");
+               
+      
   #URL_Struct1=NewDataFrame['Community Id'][count]+"?refer=").lower().replace("m/i","m-i");
   #URL_Struct1="https://www.newhomesource.com/community/"  
   
