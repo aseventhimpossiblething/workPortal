@@ -551,12 +551,15 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
   
-
+ 
+  
   try:
    if SearchChan=="google":
-    URL_Struct1=URL_Struct1+"gppc"
-    #Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
-    Campaign_Nameing_Conv=NewDataFrame['Market Name'][count]  
+    URL_Struct1=URL_Struct1+"gppc";
+    if str(NewDataFrame.columns).find("Market Name")>-1:
+       Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
+    else:  
+       Campaign_Nameing_Conv=NewDataFrame['Market Name'][count];  
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     if MatchType=="SBMM":
      URL_Struct1=URL_Struct1+"403"
