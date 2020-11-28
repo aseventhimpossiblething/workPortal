@@ -482,9 +482,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   print("General Sizes ", "len(Campaign_Name) ",len(Campaign_Name))
   print("General Sizes ", "len(Adgroup) ",len(Adgroup))
   print("count ",count)
-  print("str(NewDataFrame['Community Name'][count]) ",str(NewDataFrame['Community Name'][count]))
-  print("Campaign_Name ",Campaign_Name)
-  print("Adgroup ",Adgroup)
+  #print("str(NewDataFrame['Community Name'][count]) ",str(NewDataFrame['Community Name'][count]))
+  #print("Campaign_Name ",Campaign_Name)
+  #print("Adgroup ",Adgroup)
 
 
 
@@ -554,7 +554,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   
   if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc"
-    print("NewDataFrame['Market Name'][count] ",NewDataFrame['Market Name'][count])
+    #print("NewDataFrame['Market Name'][count] ",NewDataFrame['Market Name'][count])
     #Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
     #Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market Name'][count]]
     Campaign_Nameing_Conv=NewDataFrame['Market Name'][count] 
