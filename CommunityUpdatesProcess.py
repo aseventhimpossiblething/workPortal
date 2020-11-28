@@ -536,13 +536,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]\
             .replace(" ","-")+"/"+communityName\
             .replace(" ","-")+"-by-"+NewDataFrame['Brand Name'][count]\
-            .replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower().replace("m/i","m-i");
+            .replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count]+"?refer=").lower().replace("m/i","m-i");
   """         
   print("str(NewDataFrame['Community Id'][count]) ",str(NewDataFrame['Community Id'][count]))
       
   URL_Struct1="https://www.newhomesource.com/community/"+NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]+"/"+communityName\
-            +"-by-"+str(NewDataFrame['Brand Name'][count])+"/"
-            #+str(NewDataFrame['Community Id'][count])
+            +"-by-"+str(NewDataFrame['Brand Name'][count])+"/"+str(NewDataFrame['Community Id'][count])
             #+str(NewDataFrame['Community Id'][count])
             #+"?refer="
             #).lower().replace("m/i","m-i");
