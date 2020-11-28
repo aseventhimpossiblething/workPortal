@@ -478,9 +478,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  if type(MaintatanceVar)=="<class 'int'>":
   hilecount=MaintatanceVar;
  while count < hilecount:
+            
   print("General Sizes ", "len(Campaign_Name) ",len(Campaign_Name))
   print("General Sizes ", "len(Adgroup) ",len(Adgroup))
- 
+  print("count ",count)
+  print("str(NewDataFrame['Community Name'][count]) ",str(NewDataFrame['Community Name'][count]))
 
 
 
@@ -1026,7 +1028,7 @@ def initialCommUpdatProcess():
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
- WorkingCommunities=filterNonParticipators(WorkingCommunities);
+ #WorkingCommunities=filterNonParticipators(WorkingCommunities);
 
  print(" WorkingCommunities ",WorkingCommunities)     
  
