@@ -471,7 +471,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  KWLabel=[];     
  
  count=0;
- hilecount=len(NewDataFrame['Market ID']);
+ hilecount=len(NewDataFrame['Market Name']);
  Keyword_conv="none"; 
  MatchType_Conv=0;
  set_bid=.45;
