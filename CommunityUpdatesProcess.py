@@ -552,9 +552,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       Keyword_conv=Keyword_conv+" Community"
   
  
-  print("str(NewDataFrame.columns).find(Market Name) ",str(NewDataFrame.columns).find("Market Name"))
-  print("str(NewDataFrame.columns).find(Market Name)>-1 ",str(NewDataFrame.columns).find("Market Name")>-1)
-  print("Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market Id'][count]]; ",Market_LookUp.google[NewDataFrame['Market Id'][count]])    
+  #print("str(NewDataFrame.columns).find(Market Name) ",str(NewDataFrame.columns).find("Market Name"))
+  #print("str(NewDataFrame.columns).find(Market Name)>-1 ",str(NewDataFrame.columns).find("Market Name")>-1)
+  #print("Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market Id'][count]]; ",Market_LookUp.google[NewDataFrame['Market Id'][count]])    
       
   try:
    if SearchChan=="google":
@@ -562,7 +562,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     if str(NewDataFrame.columns).find("Market Name")>-1:
        Campaign_Nameing_Conv=NewDataFrame['Market Name'][count];      
     else:  
-       Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market Id'][count]];     
+       Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];     
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     if MatchType=="SBMM":
      URL_Struct1=URL_Struct1+"403"
