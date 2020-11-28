@@ -772,7 +772,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   #print("label ",label);
   
  
- count+=1;
+  count+=1;
    
   
  print("len(Campaign_Name) ",len(Campaign_Name));
