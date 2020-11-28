@@ -483,7 +483,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   print("General Sizes ", "len(Adgroup) ",len(Adgroup))
   print("count ",count)
   print("str(NewDataFrame['Community Name'][count]) ",str(NewDataFrame['Community Name'][count]))
-
+  print("Campaign_Name ",Campaign_Name)
+  print("Adgroup ",Adgroup)
 
 
 
