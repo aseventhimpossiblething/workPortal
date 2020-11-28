@@ -997,7 +997,7 @@ def initialCommUpdatProcess():
     print("BVersion--------------------------------------------------------------------");  
     WorkingCommunities=WorkingCommunities.drop([2]);
      
-  if CVersion!=-1:
+ if CVersion!=-1:
     print("CVersion--------------------------------------------------------------------");  
     #WorkingCommunities=WorkingCommunities.drop([2]);
  
