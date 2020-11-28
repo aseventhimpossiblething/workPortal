@@ -551,8 +551,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       Keyword_conv=Keyword_conv+" Community"
   
 
-  try:
-   if SearchChan=="google":
+  
+  if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc"
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
@@ -592,7 +592,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=communityName
      MatchType_Conv="Exact"
      set_bid=.65;
-   if SearchChan=="bing":
+  if SearchChan=="bing":
     URL_Struct1=URL_Struct1+"msm"
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
@@ -774,9 +774,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    label2=label+"; Ad Copy B";  
    LabelB.append(label2);
    #print("label ",label);
-  except:
-   NewDataFrame=NewDataFrame.drop([count])
-   print("except KW Gen count ",count)
+  
+ 
   count+=1;
    
   
