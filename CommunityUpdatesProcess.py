@@ -554,14 +554,16 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  
   print("str(NewDataFrame.columns).find(Market Name) ",str(NewDataFrame.columns).find("Market Name"))
   print("str(NewDataFrame.columns).find(Market Name)>-1 ",str(NewDataFrame.columns).find("Market Name")>-1)
+  print("Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]; ",Market_LookUp.google[NewDataFrame['Market ID'][count]])    
       
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
     if str(NewDataFrame.columns).find("Market Name")>-1:
+       Campaign_Nameing_Conv=NewDataFrame['Market Name'][count];      
        Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market Name'][count]];
     else:  
-       Campaign_Nameing_Conv=NewDataFrame['Market ID'][count];  
+       Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];     
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     if MatchType=="SBMM":
      URL_Struct1=URL_Struct1+"403"
