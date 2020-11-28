@@ -433,10 +433,11 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
 
 
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
- print("KeywordGen Initiated")   
- print(NewDataFrame)     
+ print("KeywordGen Initiated-----------------------------------------------------------------------------------------------")
+ print("KeywordGen Initiated-----------------------------------------------------------------------------------------------")
+ print("Dataframe incomming to KeywordGen ",NewDataFrame)     
  NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame); 
- print(NewDataFrame)
+ print("Dataframe set to proceed through KW Gn----===========================",NewDataFrame)
  MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
  print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
