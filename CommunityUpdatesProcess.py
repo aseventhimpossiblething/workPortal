@@ -776,6 +776,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #print("label ",label);
   except:
    NewDataFrame=NewDataFrame.drop([count])
+   print("except KW Gen count ",count)
   count+=1;
    
   
