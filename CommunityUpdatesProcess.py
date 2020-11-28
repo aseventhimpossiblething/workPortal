@@ -629,9 +629,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
      MatchType_Conv="Broad"
-   Campaign_Name.append(Campaign_Nameing_Conv);
+  Campaign_Name.append(Campaign_Nameing_Conv);
       
-   AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
+  AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
    
    #print("str(NewDataFrame['Community Id'][count]) ",str(NewDataFrame['Community Id'][count]));
