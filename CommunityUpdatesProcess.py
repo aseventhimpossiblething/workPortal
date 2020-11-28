@@ -552,7 +552,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       Keyword_conv=Keyword_conv+" Community"
   
  
-  
+  print("str(NewDataFrame.columns).find(Market Name) ",str(NewDataFrame.columns).find("Market Name"))
+  print("str(NewDataFrame.columns).find(Market Name)>-1 ",str(NewDataFrame.columns).find("Market Name")>-1)
+      
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
