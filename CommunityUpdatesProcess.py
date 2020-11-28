@@ -433,10 +433,11 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
 
 
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
- #print("KeywordGen Initiated")   
- #print(NewDataFrame)     
+ print("KeywordGen Initiated-----------------------------------------------------------------------------------------------")
+ print("KeywordGen Initiated-----------------------------------------------------------------------------------------------")
+ print("Dataframe incomming to KeywordGen ",NewDataFrame)     
  NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame); 
- #print(NewDataFrame)
+ print("Dataframe set to proceed through KW Gn----===========================",NewDataFrame)
  MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
  print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
@@ -477,10 +478,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  if type(MaintatanceVar)=="<class 'int'>":
   hilecount=MaintatanceVar;
  while count < hilecount:
+            
   print("General Sizes ", "len(Campaign_Name) ",len(Campaign_Name))
   print("General Sizes ", "len(Adgroup) ",len(Adgroup))
- 
-
+  print("count ",count)
+  print("str(NewDataFrame['Community Name'][count]) ",str(NewDataFrame['Community Name'][count]))
+  print("Campaign_Name ",Campaign_Name)
+  print("Adgroup ",Adgroup)
 
 
 
@@ -524,18 +528,18 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
 
       
   print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY") 
-  print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY")  
-  print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY")  
+ 
 
-    
+  """    
   URL_Struct1=str("https://www.newhomesource.com/community/"\
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]\
             .replace(" ","-")+"/"+communityName\
             .replace(" ","-")+"-by-"+NewDataFrame['Brand Name'][count]\
             .replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower().replace("m/i","m-i");
-          
+  """          
 
-
+  #URL_Struct1=NewDataFrame['Community Id'][count]+"?refer=").lower().replace("m/i","m-i");
+  URL_Struct1="https://www.newhomesource.com/community/"  
   
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
@@ -547,7 +551,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
       Keyword_conv=Keyword_conv+" Community"
   
 
-  
+  try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc"
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
@@ -772,6 +776,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    #print("label ",label);
   except:
    NewDataFrame=NewDataFrame.drop([count])
+   print("except KW Gen count ",count)
   count+=1;
    
   
@@ -996,7 +1001,7 @@ def initialCommUpdatProcess():
     print("BVersion--------------------------------------------------------------------");  
     WorkingCommunities=WorkingCommunities.drop([2]);
      
-  if CVersion!=-1:
+ if CVersion!=-1:
     print("CVersion--------------------------------------------------------------------");  
     #WorkingCommunities=WorkingCommunities.drop([2]);
  
@@ -1036,7 +1041,7 @@ def initialCommUpdatProcess():
  print(" NewGoogle ",NewGoogle)  
  print(" NewBing ",NewBing)
  
- #KeywordGen(NewGoogle,"sbmm","google")
+ KeywordGen(NewGoogle,"sbmm","google")
  print("Only one Keygen is active!!!!!")
  print("Only one Keygen is active!!!!!")
  print("Only one Keygen is active!!!!!")
