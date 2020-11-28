@@ -554,6 +554,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   
   if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc"
+    print("NewDataFrame['Market ID'][count] ",NewDataFrame['Market ID'][count])
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     if MatchType=="SBMM":
