@@ -480,9 +480,9 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  while count < hilecount:
   print("hilecount ",hilecount)          
   print("General Sizes ", "len(Campaign_Name) ",len(Campaign_Name))
-  #print("total ",Campaign_Name)
+  print("total ",Campaign_Name)
   print("General Sizes ", "len(Adgroup) ",len(Adgroup))
-  #print("total ", "Adgroup ",Adgroup)
+  print("total ", "Adgroup ",Adgroup)
   print("count ",count)
   #print("str(NewDataFrame['Community Name'][count]) ",str(NewDataFrame['Community Name'][count]))
   #print("Campaign_Name ",Campaign_Name)
