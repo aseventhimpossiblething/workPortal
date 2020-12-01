@@ -1029,7 +1029,7 @@ def initialCommUpdatProcess():
 
 
 
- WorkingCommunities['Community Id']
+ WorkingCommunities['Community ID']
  WorkingGoogleEOF['Final URL']  
  WorkingBingEOF['Final Url']
       
