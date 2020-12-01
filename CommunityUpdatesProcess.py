@@ -18,12 +18,6 @@ from openpyxl import Workbook
 from openpyxl import load_workbook
 import xlsxwriter
 
-"""
-fileHandler.SheetsFileLocation
-fileHandler.currentCommunitiesLocation
-fileHandler.currentGoogleLocation
-fileHandler.currentBingLocation
-"""
 
 SheetsFileLocation="/var/www/workPortal/Sheets"
 currentCommunitiesLocation="/var/www/workPortal/Sheets/CommunityUpdates/currentCommunities"
@@ -912,7 +906,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
  print("NewDataFrame.columns ",NewDataFrame.columns)   
  MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
- print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
+ print("Starting KeywordGenII for ",SearchChan,"Match Type ",MatchType);
  Failed_Rows=[];
  Campaign_Name=[];
  Adgroup=[];
@@ -1004,16 +998,11 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
-    #if str(NewDataFrame.columns).find("Market Name")>-1:
-    #   Campaign_Nameing_Conv=NewDataFrame['Market Name'][count];      
-    #else:  
-    #   Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]; 
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     if MatchType=="SBMM":
      URL_Struct1=URL_Struct1+"403"
      Keyword_conv=Keyword_conv
-     #Keyword_conv=NewDataFrame['Community Name'][count]
      Keyword_conv=Keyword_conv.replace(" + ","")
      Keyword_conv=Keyword_conv.replace("++","+")
      Keyword_conv=Keyword_conv.replace(" ++ ","")
@@ -1460,12 +1449,18 @@ def initialCommUpdatProcess():
  print(" NewBing ",NewBing)
  
  KeywordGen(NewGoogle,"sbmm","google")
+ print( 'One Keywordgen Running which is KeywordGen(NewGoogle,"sbmm","google")' )   
+ print( 'One Keywordgen Running which is KeywordGen(NewGoogle,"sbmm","google")' ) 
+ """     
  KeywordGen(NewGoogle,"sb","google")
  KeywordGen(NewGoogle,"sx","google")
  KeywordGen(NewBing,"sbmm","bing")
  KeywordGen(NewBing,"sb","bing")
  KeywordGen(NewBing,"sx","bing")
  
+ """
+ print( 'One KeywordgenII Running which is KeywordGenII(NewGoogle,"sb","google")' )
+ KeywordGen(NewGoogle,"sb","google")     
 
  os.chdir(fileHandler.currentBingLocation)
  print("past  os.chdir fileHandler.currentBingLocation")
