@@ -992,7 +992,7 @@ def initialCommUpdatProcess():
       
  AVersion=str(WorkingCommunities.iloc[[2]].values).find('Community Id');
  BVersion=str(WorkingCommunities.iloc[[4]].values).find('Community Id');
- CVersion=str(WorkingCommunities.iloc[[0]].values).find('Community Id');
+ CVersion=str(WorkingCommunities.iloc[[0]].values).find('Community ID');
 
  print("=======================Watch for Version Print============= Begin")
  print("AVersion ",AVersion);
