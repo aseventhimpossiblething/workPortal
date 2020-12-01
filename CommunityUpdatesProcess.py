@@ -262,11 +262,11 @@ def communityCheck(checkby,checkin,Name):
  checkby=checkby.reset_index()
  count=0;
  DropRows=[];
- hilecount=checkby['Community Id'].count();
+ hilecount=checkby['Community ID'].count();
  if type(MaintatanceVar)=="<class 'int'>":
   hilecount=MaintatanceVar;
  while count < hilecount:
-  if checkin.find(str(checkby['Community Id'][count]))>-1:
+  if checkin.find(str(checkby['Community ID'][count]))>-1:
    DropRows.append(count);
    checkby=checkby.drop([count]);
    if count % 4000==0:
@@ -371,7 +371,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
       
            if AlteredColNamesWithMultiples.count(AlteredComName)>1:
               MultiplesCommunityNames.append(AlteredComName);
-              MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])
+              MultiplesCommunityIds.append(cleanupFrame['Community ID'][thisLoopCount])
               repeatedRows.append(thisLoopCount);
            thisLoopCount+=1;
      
@@ -386,10 +386,10 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
       
               newcomid.append("MPC Community");
           else:
-              newcomid.append(wackyNewTable['Community Id'][cctv]); 
+              newcomid.append(wackyNewTable['Community ID'][cctv]); 
               #newcomid.append("nan");       
           cctv+=1;
-    wackyNewTable['Community Id']=newcomid;
+    wackyNewTable['Community ID']=newcomid;
     wackyNewTable=wackyNewTable.drop_duplicates(subset='Community Name') 
     wackyNewTable=wackyNewTable.reset_index(); 
 
@@ -536,16 +536,16 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
             +NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]\
             .replace(" ","-")+"/"+communityName\
             .replace(" ","-")+"-by-"+NewDataFrame['Brand Name'][count]\
-            .replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count]+"?refer=").lower().replace("m/i","m-i");
+            .replace(" ","-")+"/"+str(NewDataFrame['Community ID'][count]+"?refer=").lower().replace("m/i","m-i");
   """         
-  print("str(NewDataFrame['Community Id'][count]) ",str(NewDataFrame['Community Id'][count]))
+  print("str(NewDataFrame['Community ID'][count]) ",str(NewDataFrame['Community ID'][count]))
       
   URL_Struct1=str("https://www.newhomesource.com/community/"+NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]+"/"+communityName\
-            +"-by-"+str(NewDataFrame['Brand Name'][count])+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower().replace("m/i","m-i");
-            #.replace(" ","-")+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower().replace("m/i","m-i");
+            +"-by-"+str(NewDataFrame['Brand Name'][count])+"/"+str(NewDataFrame['Community ID'][count])+"?refer=").lower().replace("m/i","m-i");
+            #.replace(" ","-")+"/"+str(NewDataFrame['Community ID'][count])+"?refer=").lower().replace("m/i","m-i");
                
       
-  #URL_Struct1=NewDataFrame['Community Id'][count]+"?refer=").lower().replace("m/i","m-i");
+  #URL_Struct1=NewDataFrame['Community ID'][count]+"?refer=").lower().replace("m/i","m-i");
   #URL_Struct1="https://www.newhomesource.com/community/"  
   
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
@@ -646,10 +646,10 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Campaign_Name.append(Campaign_Nameing_Conv);
       
    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
-                      +str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
+                      +str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
    
-   #print("str(NewDataFrame['Community Id'][count]) ",str(NewDataFrame['Community Id'][count]));
-   if str(NewDataFrame['Community Id'][count]).find("nan")>-1:
+   #print("str(NewDataFrame['Community ID'][count]) ",str(NewDataFrame['Community ID'][count]));
+   if str(NewDataFrame['Community ID'][count]).find("nan")>-1:
             AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>");
         
@@ -990,8 +990,8 @@ def initialCommUpdatProcess():
       
  
       
- AVersion=str(WorkingCommunities.iloc[[2]].values).find('Community Id');
- BVersion=str(WorkingCommunities.iloc[[4]].values).find('Community Id');
+ AVersion=str(WorkingCommunities.iloc[[2]].values).find('Community ID');
+ BVersion=str(WorkingCommunities.iloc[[4]].values).find('Community ID');
  CVersion=str(WorkingCommunities.iloc[[0]].values).find('Community ID');
 
  print("=======================Watch for Version Print============= Begin")
