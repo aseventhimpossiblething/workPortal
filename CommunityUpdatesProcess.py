@@ -528,7 +528,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   communityName.replace("91's","").replace("94's","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace(" s ","").replace("61s","").replace(" 64s ","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace("74's","").replace("61's","").replace(" 64's ","").replace("71's","").replace("74's","").replace("81's","").replace(" 84's ","").replace(" s ","").replace(" ' ","")
 
       
-  print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY") 
+  #print("ALERT REPAIR KEGEN URL!!!!!!!!! URL_Struct1 INITIATED BADLY") 
  
 
   """   
@@ -1039,7 +1039,7 @@ def initialCommUpdatProcess():
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
- #WorkingCommunities=filterNonParticipators(WorkingCommunities);
+ WorkingCommunities=filterNonParticipators(WorkingCommunities);
 
  print(" WorkingCommunities ",WorkingCommunities)     
  
@@ -1051,16 +1051,12 @@ def initialCommUpdatProcess():
  print(" NewBing ",NewBing)
  
  KeywordGen(NewGoogle,"sbmm","google")
- print("Only one Keygen is active!!!!!")
- print("Only one Keygen is active!!!!!")
- print("Only one Keygen is active!!!!!")
- """
  KeywordGen(NewGoogle,"sb","google")
  KeywordGen(NewGoogle,"sx","google")
  KeywordGen(NewBing,"sbmm","bing")
  KeywordGen(NewBing,"sb","bing")
  KeywordGen(NewBing,"sx","bing")
- """
+ 
 
  os.chdir(fileHandler.currentBingLocation)
  print("past  os.chdir fileHandler.currentBingLocation")
