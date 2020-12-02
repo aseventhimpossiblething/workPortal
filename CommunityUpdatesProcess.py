@@ -903,7 +903,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
 #----------------------------------------Start KeygenII()----------------------------------------------------------------------------
 
 def KeywordGenII(NewDataFrame,SearchChan):
- MatchType="SBMM"     
+ #MatchType="SBMM"     
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
  print("Dataframe incomming to KeywordGen ",NewDataFrame)     
@@ -1316,7 +1316,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  
 
  if SearchChan=="google":
-  if MatchType=='SBMM':
+   #if MatchType=='SBMM':
    print("In KeywordGenII google SBMM ")
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'
    os.chdir(SaveLocation)
@@ -1337,7 +1337,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    GoogleAdFrameB.to_excel(writer)
    writer.save()
    
-    
+  """ 
   if MatchType=='SB':
    print("In KeywordGen google SB ")
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW'
@@ -1378,10 +1378,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameB.to_excel(writer)
    writer.save()
-   
+  """ 
      
  if SearchChan=="bing":
-  if MatchType=='SBMM':
+   #if MatchType=='SBMM':
    print("In KeywordGen bing SBMM ")
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM'
    os.chdir(SaveLocation)
@@ -1402,7 +1402,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    writer.save()
    
    
-      
+  """    
   if MatchType=='SB':
    print("In KeywordGen bing SB ")
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad'
@@ -1443,6 +1443,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    BingAdFrameB.to_excel(writer)
    writer.save()
+   
+  """ 
  
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
@@ -1550,7 +1552,8 @@ def initialCommUpdatProcess():
   
  
  print( 'One KeywordgenII Running which is KeywordGenII(NewGoogle,"sb","google")' )
- KeywordGenII(NewGoogle,"google")     
+ KeywordGenII(NewGoogle,"google")
+ KeywordGenII(NewBing,"bing")
 
  os.chdir(fileHandler.currentBingLocation)
  print("past  os.chdir fileHandler.currentBingLocation")
