@@ -910,7 +910,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame); 
  #MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
- print("Starting KeywordGenII for ",SearchChan,"Match Type ",MatchType);
+ print("Starting KeywordGenII for ",SearchChan,MatchType);
  Failed_Rows=[];
  Campaign_Name=[];
  Adgroup=[];
