@@ -1530,12 +1530,17 @@ def initialCommUpdatProcess():
  
  #print(" NewGoogle ",NewGoogle)  
  #print(" NewBing ",NewBing)
- 
- #KeywordGen(NewGoogle,"sbmm","google")
- print( 'One Keywordgen Running which is KeywordGen(NewGoogle,"sbmm","google")' )   
- print( 'One Keywordgen Running which is KeywordGen(NewGoogle,"sbmm","google")' ) 
- 
+ print("!!!!!! original Keyworgen not Runnung!!!!!!!")   
+ print("!!!!!! original Keyworgen not Runnung!!!!!!!")  
+ print("!!!!!! original Keyworgen not Runnung!!!!!!!") 
+ print("!!!!!! original Keyworgen not Runnung!!!!!!!")  
+
+
+
+
+
  """
+ KeywordGen(NewGoogle,"sbmm","google")
  KeywordGen(NewGoogle,"sb","google")
  KeywordGen(NewGoogle,"sx","google")
  KeywordGen(NewBing,"sbmm","bing")
