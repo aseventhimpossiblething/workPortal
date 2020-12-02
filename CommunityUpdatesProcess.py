@@ -1032,7 +1032,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
     set_bid=.30;
     Campaign_Name.append(Campaign_Nameing_Conv);
 
-    MatchType=="SX":
+    MatchType=="SX"
     URL_Struct1=URL_Struct1+"401"
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
     Keyword_conv=communityName
