@@ -1033,11 +1033,12 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Keyword_conv=Keyword_conv.replace("+s ","")
     Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
     Keyword_conv="+"+Keyword_conv
-    print("Keyword_conv ",Keyword_conv) 
+    print("Keyword_conv 1 ",Keyword_conv) 
      
     if len(Keyword_conv)<12:
      Keyword_conv=Keyword_conv+" Community"
-    
+
+    print("Keyword_conv 2 ",Keyword_conv) 
       
 
   
@@ -1232,13 +1233,14 @@ def KeywordGenII(NewDataFrame,SearchChan):
           Final_URL.append(URL_Struct1)
           #print("URL_Struct1 ",URL_Struct1)  
           
-  
+   print("Keyword_conv 2 ",Keyword_conv) 
    Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+").replace(" + + +","+")\
                   .replace("+ + + ","+").replace("++","+").replace("+ +","+").replace(" ++","+").replace("++ ","+")\
                   .replace(" + +","+").replace("+ + ","+").replace("+–","+").replace("+– ","+").replace(" +–","+")\
                   .replace(" +– ","+").replace(" +– +","+").replace("+– + ","+").replace(" + ","").replace("++","+")\
                   .replace(" ++ ","").replace("+ ","").replace(",","").replace(" s ","")
    Keyword_conv=Keyword_conv.replace("+s ","");
+   print("Keyword_conv 2-2 ",Keyword_conv) 
          
    if len(Keyword_conv)<10:
       Keyword_conv=Keyword_conv+" Community"
