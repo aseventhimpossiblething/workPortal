@@ -1229,12 +1229,16 @@ def KeywordGenII(NewDataFrame,SearchChan):
                .replace("Lots","");
           #print("URL_Struct1 ",URL_Struct1)
           Final_URL.append(URL_Struct1)
+          URL_Struct1.replace("403","402")
           Final_URL.append(URL_Struct1)
+          URL_Struct1.replace("402","401")
           Final_URL.append(URL_Struct1)
           
    else:
           Final_URL.append(URL_Struct1)
+          URL_Struct1.replace("403","402")  
           Final_URL.append(URL_Struct1)
+          URL_Struct1.replace("402","401")  
           Final_URL.append(URL_Struct1)
           #print("URL_Struct1 ",URL_Struct1)  
           
