@@ -1527,19 +1527,21 @@ def initialCommUpdatProcess():
  #print(" NewGoogle ",NewGoogle)  
  #print(" NewBing ",NewBing)
  
- KeywordGen(NewGoogle,"sbmm","google")
+ #KeywordGen(NewGoogle,"sbmm","google")
  print( 'One Keywordgen Running which is KeywordGen(NewGoogle,"sbmm","google")' )   
  print( 'One Keywordgen Running which is KeywordGen(NewGoogle,"sbmm","google")' ) 
-     
+ 
+ """
  KeywordGen(NewGoogle,"sb","google")
  KeywordGen(NewGoogle,"sx","google")
  KeywordGen(NewBing,"sbmm","bing")
  KeywordGen(NewBing,"sb","bing")
  KeywordGen(NewBing,"sx","bing")
+ """
   
  
  print( 'One KeywordgenII Running which is KeywordGenII(NewGoogle,"sb","google")' )
- #KeywordGenII(NewGoogle,"google")     
+ KeywordGenII(NewGoogle,"google")     
 
  os.chdir(fileHandler.currentBingLocation)
  print("past  os.chdir fileHandler.currentBingLocation")
