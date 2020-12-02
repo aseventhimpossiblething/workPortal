@@ -1227,7 +1227,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
           URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
                .replace("Lots","");
-          print("URL_Struct1 ",URL_Struct1)
+          #print("URL_Struct1 ",URL_Struct1)
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
@@ -1236,7 +1236,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
-          print("URL_Struct1 ",URL_Struct1)  
+          #print("URL_Struct1 ",URL_Struct1)  
           
   
    Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+").replace(" + + +","+")\
