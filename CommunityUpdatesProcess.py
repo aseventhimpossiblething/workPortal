@@ -1001,7 +1001,8 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
-    print("initial Campaign_Nameing_Conv ",Campaign_Nameing_Conv)  
+    Campaign_Name.append(Campaign_Nameing_Conv);  
+    #print("initial Campaign_Nameing_Conv ",Campaign_Nameing_Conv)  
     #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     
     URL_Struct1=URL_Struct1+"403"
@@ -1025,7 +1026,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
      
     if len(Keyword_conv)<12:
      Keyword_conv=Keyword_conv+" Community"
-    Campaign_Name.append(Campaign_Nameing_Conv);
+    #Campaign_Name.append(Campaign_Nameing_Conv);
       
     MatchType_Conv="Broad"
     URL_Struct1=URL_Struct1+"402"
@@ -1033,7 +1034,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
     Keyword_conv=communityName
     MatchType_Conv="Broad"
     set_bid=.30;
-    Campaign_Name.append(Campaign_Nameing_Conv);
+    #Campaign_Name.append(Campaign_Nameing_Conv);
 
     MatchType=="SX"
     URL_Struct1=URL_Struct1+"401"
@@ -1041,7 +1042,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
     Keyword_conv=communityName
     MatchType_Conv="Exact"
     set_bid=.65;
-    Campaign_Name.append(Campaign_Nameing_Conv);
+    #Campaign_Name.append(Campaign_Nameing_Conv);
       
    if SearchChan=="bing":
     URL_Struct1=URL_Struct1+"msm"
@@ -1053,7 +1054,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
     Keyword_conv=communityName
     MatchType_Conv="Broad"
     set_bid=.40;
-    Campaign_Name.append(Campaign_Nameing_Conv);
+    #Campaign_Name.append(Campaign_Nameing_Conv);
         
     MatchType=="SX"
     URL_Struct1=URL_Struct1+"201"
@@ -1061,7 +1062,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
     Keyword_conv=communityName
     MatchType_Conv="Exact"
     set_bid=.52;
-    Campaign_Name.append(Campaign_Nameing_Conv);
+    #Campaign_Name.append(Campaign_Nameing_Conv);
 
     MatchType=="SBMM"
     URL_Struct1=URL_Struct1+"202"
@@ -1223,7 +1224,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
  print("len(Bid) ",len(Bid));
  print("len(Label) ",len(Label));
  print("len(LabelB) ",len(LabelB));   
- print("Campaign_Name ",Campaign_Name)
+ #print("Campaign_Name ",Campaign_Name)
 
 
    
