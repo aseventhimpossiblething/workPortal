@@ -943,6 +943,8 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
  set_bid=.45;
  if type(MaintatanceVar)=="<class 'int'>":
   hilecount=MaintatanceVar;
+ 
+ """
  while count < hilecount:
   communityName=str(NewDataFrame['Community Name'][count]);
   communityName=communityName.replace(" s ","").replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","")\
@@ -994,7 +996,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
   Keyword_conv=communityName.replace("  "," ")
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
- """  
+   
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
