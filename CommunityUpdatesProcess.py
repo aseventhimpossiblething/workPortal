@@ -994,7 +994,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
   Keyword_conv=communityName.replace("  "," ")
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
-    
+ """  
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
@@ -1370,7 +1370,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    BingAdFrameB.to_excel(writer)
    writer.save()
-  
+ """
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
 
