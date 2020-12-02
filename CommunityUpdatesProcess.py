@@ -944,7 +944,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
  if type(MaintatanceVar)=="<class 'int'>":
   hilecount=MaintatanceVar;
  
- """
+ 
  while count < hilecount:
   communityName=str(NewDataFrame['Community Name'][count]);
   communityName=communityName.replace(" s ","").replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","")\
@@ -1372,7 +1372,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    BingAdFrameB.to_excel(writer)
    writer.save()
- """
+ 
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
 
