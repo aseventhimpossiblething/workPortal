@@ -908,7 +908,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
  print("Dataframe incomming to KeywordGen ",NewDataFrame)     
  NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame); 
- MatchType=MatchType.upper();
+ #MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
  print("Starting KeywordGenII for ",SearchChan,"Match Type ",MatchType);
  Failed_Rows=[];
