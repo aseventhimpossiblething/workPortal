@@ -1044,7 +1044,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
     URL_Struct1=URL_Struct1+"msm"
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
-    MatchType=="SB":
+    MatchType=="SB"
     URL_Struct1=URL_Struct1+"202"
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
     Keyword_conv=communityName
