@@ -898,6 +898,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
 #----------------------------------------Start KeygenII()----------------------------------------------------------------------------
 
 def KeywordGenII(NewDataFrame,SearchChan):
+ MatchType="SBMM"     
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
  print("Dataframe incomming to KeywordGen ",NewDataFrame)     
@@ -1316,7 +1317,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
 
  if SearchChan=="google":
   if MatchType=='SBMM':
-   print("In KeywordGen google SBMM ")
+   print("In KeywordGenII google SBMM ")
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'
    os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
@@ -1543,7 +1544,7 @@ def initialCommUpdatProcess():
  
  
  print( 'One KeywordgenII Running which is KeywordGenII(NewGoogle,"sb","google")' )
- KeywordGenII(NewGoogle,"sbmm","google")     
+ KeywordGenII(NewGoogle,"google")     
 
  os.chdir(fileHandler.currentBingLocation)
  print("past  os.chdir fileHandler.currentBingLocation")
