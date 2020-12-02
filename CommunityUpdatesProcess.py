@@ -1402,7 +1402,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    writer.save()
    
    
-  """    
+ """    
   if MatchType=='SB':
    print("In KeywordGen bing SB ")
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad'
@@ -1444,7 +1444,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    BingAdFrameB.to_excel(writer)
    writer.save()
    
-  """ 
+ """ 
  
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
