@@ -429,13 +429,10 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("KeywordGen Initiated-----------------------------------------------------------------------------------------------")
  print("KeywordGen Initiated-----------------------------------------------------------------------------------------------")
- #print("Dataframe incomming to KeywordGen ",NewDataFrame)     
  NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame); 
  print("Dataframe set to proceed through KW Gn----===========================",NewDataFrame)
- #print("NewDataFrame.columns ",NewDataFrame.columns)   
  MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
- #print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
  Failed_Rows=[];
  Campaign_Name=[];
  Adgroup=[];
@@ -519,30 +516,20 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
             .replace("Lots","");
-  
-  print("1st appearance of Keyword_conv = ",Keyword_conv)    
+    
   Keyword_conv=communityName.replace("  "," ")
-  print("appearance 2 of Keyword_conv = ",Keyword_conv) 
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
-  print("appearance 3 of Keyword_conv = ",Keyword_conv)     
     
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
-    #if str(NewDataFrame.columns).find("Market Name")>-1:
-    #   Campaign_Nameing_Conv=NewDataFrame['Market Name'][count];      
-    #else:  
-    #   Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]]; 
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     if MatchType=="SBMM":
      URL_Struct1=URL_Struct1+"403"
-     print("appearance 4 of Keyword_conv = ",Keyword_conv) 
      Keyword_conv=Keyword_conv
-     print("appearance 5 of Keyword_conv = ",Keyword_conv) 
      Keyword_conv=Keyword_conv.replace(" + ","")
-     print("appearance 6 of Keyword_conv = ",Keyword_conv) 
      Keyword_conv=Keyword_conv.replace("++","+")
      Keyword_conv=Keyword_conv.replace(" ++ ","")
      Keyword_conv=Keyword_conv.replace("&"," ")
@@ -558,7 +545,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
      Keyword_conv="+"+Keyword_conv
      set_bid=.45;
-     print("jumped column of Keyword_conv = ",Keyword_conv) 
+ 
      if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
      MatchType_Conv="Broad"
@@ -921,8 +908,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
  print("Dataframe incomming to KeywordGen ",NewDataFrame)     
  NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame); 
- print("Dataframe set to proceed through KW Gn----===========================",NewDataFrame)
- print("NewDataFrame.columns ",NewDataFrame.columns)   
  MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
  print("Starting KeywordGenII for ",SearchChan,"Match Type ",MatchType);
@@ -1019,10 +1004,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
-    #print("NewDataFrame['Market ID'][count] ",NewDataFrame['Market ID'][count])
-    #print("NewDataFrame['Market ID'][count+1] ",NewDataFrame['Market ID'][count+1])
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count+1]];
-    #Campaign_Nameing_Conv="placeholder"  
     Campaign_Name.append(Campaign_Nameing_Conv);  
  
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","SB").replace("403","402")
@@ -1051,7 +1033,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Keyword_conv=Keyword_conv.replace("+s ","")
     Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
     Keyword_conv="+"+Keyword_conv
-  
+    print("Keyword_conv ",Keyword_conv) 
      
     if len(Keyword_conv)<12:
      Keyword_conv=Keyword_conv+" Community"
