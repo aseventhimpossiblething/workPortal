@@ -987,7 +987,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
             
   URL_Struct1=str("https://www.newhomesource.com/community/"+NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]+"/"+communityName\
             +"-by-"+str(NewDataFrame['Brand Name'][count])+"/"+str(NewDataFrame['Community ID'][count])+"?refer=").lower().replace("m/i","m-i");
-            #.replace(" ","-")+"/"+str(NewDataFrame['Community ID'][count])+"?refer=").lower().replace("m/i","m-i");
+        
              
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
@@ -1001,7 +1001,8 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
-    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
+    print("initial Campaign_Nameing_Conv ",Campaign_Nameing_Conv)  
+    #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     
     URL_Struct1=URL_Struct1+"403"
     Keyword_conv=Keyword_conv
@@ -1221,7 +1222,8 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
  print("len(Status) ",len(Status));
  print("len(Bid) ",len(Bid));
  print("len(Label) ",len(Label));
- print("len(LabelB) ",len(LabelB));      
+ print("len(LabelB) ",len(LabelB));   
+ print("Campaign_Name ",Campaign_Name)
 
 
    
