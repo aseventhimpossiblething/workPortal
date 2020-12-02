@@ -1033,17 +1033,17 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
       
     MatchType_Conv="Broad"
     URL_Struct1=URL_Struct1+"402"
-    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
+    #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
     Keyword_conv=communityName
-    MatchType_Conv="Broad"
+    #MatchType_Conv="Broad"
     set_bid=.30;
     #Campaign_Name.append(Campaign_Nameing_Conv);
 
-    MatchType=="SX"
+    #MatchType=="SX"
     URL_Struct1=URL_Struct1+"401"
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
     Keyword_conv=communityName
-    MatchType_Conv="Exact"
+    #MatchType_Conv="Exact"
     set_bid=.65;
     #Campaign_Name.append(Campaign_Nameing_Conv);
       
@@ -1065,15 +1065,15 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
     set_bid=.40;
     #Campaign_Name.append(Campaign_Nameing_Conv);
         
-    MatchType=="SX"
+    #MatchType=="SX"
     URL_Struct1=URL_Struct1+"201"
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201")
     Keyword_conv=communityName
-    MatchType_Conv="Exact"
+    #MatchType_Conv="Exact"
     set_bid=.52;
     #Campaign_Name.append(Campaign_Nameing_Conv);
 
-    MatchType=="SBMM"
+    #MatchType=="SBMM"
     URL_Struct1=URL_Struct1+"202"
     Keyword_conv=Keyword_conv
     Keyword_conv=Keyword_conv.replace(" + ","")
@@ -1106,9 +1106,23 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
                       +str(">")+communityName+str("_>");
         
    Adgroup.append(AdgroupNaming_conv)
-   Match_Type.append(MatchType_Conv)
+   Adgroup.append(AdgroupNaming_conv)
+   Adgroup.append(AdgroupNaming_conv)
+
+   Match_Type.append("Broad")
+   Match_Type.append("Broad")
+   Match_Type.append("Exact")
+      
    Status.append("Active")
+   Status.append("Active")
+   Status.append("Active")
+   
+
    Bid.append(set_bid)
+   Bid.append(set_bid)
+   Bid.append(set_bid)   
+
+
    Title1A_Name_Conv=communityName
    if len(Title1A_Name_Conv)>29:
     Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find("at")-1]
@@ -1116,6 +1130,8 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
     Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find(" ",2)]
    if len(Title1A_Name_Conv)< 20:
     Title1A_Name_Conv=Title1A_Name_Conv+" New Homes" 
+   Title1A.append(Title1A_Name_Conv);
+   Title1A.append(Title1A_Name_Conv);
    Title1A.append(Title1A_Name_Conv);
       
    Title2A_conv=NewDataFrame['City'][count]
@@ -1126,8 +1142,13 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
    elif len(Title2A_conv)<25:
      Title2A_conv=Title2A_conv+" homes"
    Title2A.append(Title2A_conv)
+   Title2A.append(Title2A_conv)
+   Title2A.append(Title2A_conv)
         
    Title3A.append("Schedule a new home tour today")
+   Title3A.append("Schedule a new home tour today")
+   Title3A.append("Schedule a new home tour today")
+
    PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])
       
@@ -1143,8 +1164,20 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
      
       
    TextA.append(PreTextA);
+   TextA.append(PreTextA);
+   TextA.append(PreTextA);
+
    TextB.append(PreTextB);
+   TextB.append(PreTextB);
+   TextB.append(PreTextB); 
+      
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
+   Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
+   Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
+   
+
+
+
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
    if len(Path1A_conv)>15:
     Path1A_conv=Path1A_conv.replace("-","")
@@ -1171,7 +1204,12 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("Station","STA")
     Path1A_conv=Path1A_conv.replace("and","&")
    Path1A.append(Path1A_conv)
+   Path1A.append(Path1A_conv)
+   Path1A.append(Path1A_conv)
+      
    Path2A.append("New Homes")
+   Path2A.append("New Homes")
+   Path2A.append("New Homes")   
       
    nadgrp=AdgroupNaming_conv.replace("nan","")
    if nadgrp[len(nadgrp)-1]==">":
@@ -1184,8 +1222,12 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
                .replace("Lots","");
           Final_URL.append(URL_Struct1)
+          Final_URL.append(URL_Struct1)
+          Final_URL.append(URL_Struct1)
           
    else:
+          Final_URL.append(URL_Struct1)
+          Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
           
   
@@ -1205,7 +1247,9 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
    
    if str(Keyword_conv[len(Keyword_conv)-1])=="+":
           Keyword_conv=Keyword_conv[:len(Keyword_conv)-1]
-   Keyword.append(Keyword_conv);   
+   Keyword.append(Keyword_conv); 
+   Keyword.append(Keyword_conv); 
+   Keyword.append(Keyword_conv);    
    label="Created by WebApp"
          
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
@@ -1214,10 +1258,19 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
      label=label+";City Name as Part of Community Name "
 
    KWLabel.append(label)
+   KWLabel.append(label)
+   KWLabel.append(label)
+      
    label1=label+"; Ad Copy A";
    Label.append(label1);
+   Label.append(label1);
+   Label.append(label1);
+       
    label2=label+"; Ad Copy B";  
    LabelB.append(label2);
+   LabelB.append(label2);
+   LabelB.append(label2);
+      
    #print("label ",label);
   except:
    NewDataFrame=NewDataFrame.drop([count])
@@ -1233,7 +1286,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
  print("len(Bid) ",len(Bid));
  print("len(Label) ",len(Label));
  print("len(LabelB) ",len(LabelB));   
- #print("Campaign_Name ",Campaign_Name)
+ print("Campaign_Name ",Campaign_Name)
 
 
    
