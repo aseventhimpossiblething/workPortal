@@ -1473,7 +1473,7 @@ def initialCommUpdatProcess():
  
  
  print( 'One KeywordgenII Running which is KeywordGenII(NewGoogle,"sb","google")' )
- #KeywordGenII(NewGoogle,"sb","google")     
+ KeywordGenII(NewGoogle,"sbmm","google")     
 
  os.chdir(fileHandler.currentBingLocation)
  print("past  os.chdir fileHandler.currentBingLocation")
