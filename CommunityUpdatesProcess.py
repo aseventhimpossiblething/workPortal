@@ -998,7 +998,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
    
-  try:
+  #try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
@@ -1030,27 +1030,26 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Keyword_conv=Keyword_conv.replace("+s ","")
     Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
     Keyword_conv="+"+Keyword_conv
-    set_bid=.45;
+   
      
     if len(Keyword_conv)<12:
      Keyword_conv=Keyword_conv+" Community"
-    #Campaign_Name.append(Campaign_Nameing_Conv);
+    
       
     #MatchType_Conv="Broad"
     #URL_Struct1=URL_Struct1+"402"
     #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
-    Keyword_conv=communityName
+    #Keyword_conv=communityName
     #MatchType_Conv="Broad"
-    set_bid=.30;
+    #set_bid=.30;
     #Campaign_Name.append(Campaign_Nameing_Conv);
 
     #MatchType=="SX"
     #URL_Struct1=URL_Struct1+"401"
-    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
-    Keyword_conv=communityName
-    #MatchType_Conv="Exact"
-    set_bid=.65;
-    #Campaign_Name.append(Campaign_Nameing_Conv);
+    #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC401")
+    #Keyword_conv=communityName
+  
+  
       
    if SearchChan=="bing":
     URL_Struct1=URL_Struct1+"msm"
@@ -1068,7 +1067,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
     #MatchType=="SB"
     #URL_Struct1=URL_Struct1+"202"
     #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
-    Keyword_conv=communityName
+    #Keyword_conv=communityName
     #MatchType_Conv="Broad"
     #set_bid=.40;
     #Campaign_Name.append(Campaign_Nameing_Conv);
@@ -1098,12 +1097,12 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Keyword_conv=Keyword_conv.replace(" s ","")
     Keyword_conv=Keyword_conv.replace("+s ","")
     Keyword_conv="+"+Keyword_conv
-    set_bid=.45;
+    #set_bid=.45;
     if len(Keyword_conv)<12:
      Keyword_conv=Keyword_conv+" Community"
-     MatchType_Conv="Broad"
+     #MatchType_Conv="Broad"
    
-   #Campaign_Name.append(Campaign_Nameing_Conv);
+   
       
    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
@@ -1286,7 +1285,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    LabelB.append(label2);
       
    #print("label ",label);
-  except:
+  #except:
    NewDataFrame=NewDataFrame.drop([count])
    print("except KW Gen count ",count)
   count+=1;
