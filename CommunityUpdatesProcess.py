@@ -1504,16 +1504,16 @@ def initialCommUpdatProcess():
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
 
- print(" WorkingCommunities ",WorkingCommunities)     
+ #print(" WorkingCommunities ",WorkingCommunities)     
  
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
  
- print(" NewGoogle ",NewGoogle)  
- print(" NewBing ",NewBing)
+ #print(" NewGoogle ",NewGoogle)  
+ #print(" NewBing ",NewBing)
  
- #KeywordGen(NewGoogle,"sbmm","google")
+ KeywordGen(NewGoogle,"sbmm","google")
  print( 'One Keywordgen Running which is KeywordGen(NewGoogle,"sbmm","google")' )   
  print( 'One Keywordgen Running which is KeywordGen(NewGoogle,"sbmm","google")' ) 
  """    
@@ -1526,7 +1526,7 @@ def initialCommUpdatProcess():
  
  
  print( 'One KeywordgenII Running which is KeywordGenII(NewGoogle,"sb","google")' )
- KeywordGenII(NewGoogle,"google")     
+ #KeywordGenII(NewGoogle,"google")     
 
  os.chdir(fileHandler.currentBingLocation)
  print("past  os.chdir fileHandler.currentBingLocation")
