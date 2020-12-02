@@ -429,13 +429,13 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("KeywordGen Initiated-----------------------------------------------------------------------------------------------")
  print("KeywordGen Initiated-----------------------------------------------------------------------------------------------")
- print("Dataframe incomming to KeywordGen ",NewDataFrame)     
+ #print("Dataframe incomming to KeywordGen ",NewDataFrame)     
  NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame); 
  print("Dataframe set to proceed through KW Gn----===========================",NewDataFrame)
- print("NewDataFrame.columns ",NewDataFrame.columns)   
+ #print("NewDataFrame.columns ",NewDataFrame.columns)   
  MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
- print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
+ #print("Starting KeywordGen for ",SearchChan,"Match Type ",MatchType);
  Failed_Rows=[];
  Campaign_Name=[];
  Adgroup=[];
@@ -519,10 +519,13 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
             .replace("Lots","");
-   
+  
+  print("1st appearance of Keyword_conv = ",Keyword_conv)    
   Keyword_conv=communityName.replace("  "," ")
+  print("appearance 2 of Keyword_conv = ",Keyword_conv) 
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
+  print("appearance 3 of Keyword_conv = ",Keyword_conv)     
     
   try:
    if SearchChan=="google":
@@ -535,9 +538,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
     if MatchType=="SBMM":
      URL_Struct1=URL_Struct1+"403"
+     print("appearance 4 of Keyword_conv = ",Keyword_conv) 
      Keyword_conv=Keyword_conv
-     #Keyword_conv=NewDataFrame['Community Name'][count]
+     print("appearance 5 of Keyword_conv = ",Keyword_conv) 
      Keyword_conv=Keyword_conv.replace(" + ","")
+     print("appearance 6 of Keyword_conv = ",Keyword_conv) 
      Keyword_conv=Keyword_conv.replace("++","+")
      Keyword_conv=Keyword_conv.replace(" ++ ","")
      Keyword_conv=Keyword_conv.replace("&"," ")
@@ -553,7 +558,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
      Keyword_conv="+"+Keyword_conv
      set_bid=.45;
-     
+     print("jumped column of Keyword_conv = ",Keyword_conv) 
      if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
      MatchType_Conv="Broad"
