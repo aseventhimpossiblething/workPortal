@@ -683,6 +683,19 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
     Path1A_conv=Path1A_conv.replace("and","&")
    Path1A.append(Path1A_conv)
    Path2A.append("New Homes")
+
+
+   if URL_Struct1.find("mpc community")>-1:
+          communityName=communityName.replace(" ","%20").replace(" s ","").replace("61s","").replace("64s","").replace("71s","").replace("74s","").replace("81s","")\
+          .replace("61s","").replace("94s","").replace(" s ","").replace("74's ","");  
+          URL_Struct1=str("https://www.newhomesource.com/communities/"+NewDataFrame['State']\
+                     [count]+"/"+NewDataFrame['Market Name'][count]+"-area?communityname="+communityName).lower()     
+                  
+          URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
+               .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
+               .replace("Lots","");
+
+
       
    nadgrp=AdgroupNaming_conv.replace("nan","")
    if nadgrp[len(nadgrp)-1]==">":
@@ -1189,7 +1202,21 @@ def KeywordGenII(NewDataFrame,SearchChan):
       
    Path2A.append("New Homes")
    Path2A.append("New Homes")
-   Path2A.append("New Homes")   
+   Path2A.append("New Homes") 
+
+
+
+   if URL_Struct1.find("mpc community")>-1:
+          communityName=communityName.replace(" ","%20").replace(" s ","").replace("61s","").replace("64s","").replace("71s","").replace("74s","").replace("81s","")\
+          .replace("61s","").replace("94s","").replace(" s ","").replace("74's ","");  
+          URL_Struct1=str("https://www.newhomesource.com/communities/"+NewDataFrame['State']\
+                     [count]+"/"+NewDataFrame['Market Name'][count]+"-area?communityname="+communityName).lower()     
+                  
+          URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
+               .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
+               .replace("Lots","");
+         
+        
       
    nadgrp=AdgroupNaming_conv.replace("nan","")
    if nadgrp[len(nadgrp)-1]==">":
