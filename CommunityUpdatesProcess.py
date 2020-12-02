@@ -897,7 +897,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    
 #----------------------------------------Start KeygenII()----------------------------------------------------------------------------
 
-def KeywordGenII(NewDataFrame,MatchType,SearchChan):
+def KeywordGenII(NewDataFrame,SearchChan):
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
  print("Dataframe incomming to KeywordGen ",NewDataFrame)     
@@ -1007,6 +1007,10 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
     Campaign_Name.append(Campaign_Nameing_Conv);
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SB","SX").replace("402","401") 
     Campaign_Name.append(Campaign_Nameing_Conv);
+    Bid.append(.45)
+    Bid.append(.30)
+    Bid.append(.65)    
+      
     
     URL_Struct1=URL_Struct1+"403"
     Keyword_conv=Keyword_conv
@@ -1056,6 +1060,9 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
     Campaign_Name.append(Campaign_Nameing_Conv); 
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SB","SX").replace("_MSM202","_MSM201")  
     Campaign_Name.append(Campaign_Nameing_Conv); 
+    Bid.append(.45)
+    Bid.append(.40)
+    Bid.append(.52)   
       
     #MatchType=="SB"
     URL_Struct1=URL_Struct1+"202"
@@ -1118,9 +1125,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
    Status.append("Active")
    
 
-   Bid.append(set_bid)
-   Bid.append(set_bid)
-   Bid.append(set_bid)   
+    
 
 
    Title1A_Name_Conv=communityName
@@ -1286,7 +1291,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
  print("len(Bid) ",len(Bid));
  print("len(Label) ",len(Label));
  print("len(LabelB) ",len(LabelB));   
- print("Campaign_Name ",Campaign_Name)
+ #print("Campaign_Name ",Campaign_Name)
 
 
    
