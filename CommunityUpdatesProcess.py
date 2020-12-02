@@ -1001,76 +1001,76 @@ def KeywordGenII(NewDataFrame,SearchChan):
   #try:
   if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
-   Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
-   Campaign_Name.append(Campaign_Nameing_Conv);  
-   #print("initial Campaign_Nameing_Conv ",Campaign_Nameing_Conv)  
-   Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","SB").replace("403","402")
-   Campaign_Name.append(Campaign_Nameing_Conv);
-   Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SB","SX").replace("402","401") 
-   Campaign_Name.append(Campaign_Nameing_Conv);
-   Bid.append(.45)
-   Bid.append(.30)
-   Bid.append(.65)    
+  Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
+  Campaign_Name.append(Campaign_Nameing_Conv);  
+ 
+  Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","SB").replace("403","402")
+  Campaign_Name.append(Campaign_Nameing_Conv);
+  Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SB","SX").replace("402","401") 
+  Campaign_Name.append(Campaign_Nameing_Conv);
+  Bid.append(.45)
+  Bid.append(.30)
+  Bid.append(.65)    
       
     
-   URL_Struct1=URL_Struct1+"403"
-   Keyword_conv=Keyword_conv
-   Keyword_conv=Keyword_conv.replace(" + ","")
-   Keyword_conv=Keyword_conv.replace("++","+")
-   Keyword_conv=Keyword_conv.replace(" ++ ","")
-   Keyword_conv=Keyword_conv.replace("&"," ")
-   Keyword_conv=Keyword_conv.replace(" "," +")
-   Keyword_conv=Keyword_conv.replace("+55+","55+")
-   Keyword_conv=Keyword_conv.replace("+-","-")
-   Keyword_conv=Keyword_conv.replace("-"," ")
-   Keyword_conv=Keyword_conv.replace("'","")
-   Keyword_conv=Keyword_conv.replace("+,","")
-   Keyword_conv=Keyword_conv.replace(",","")
-   Keyword_conv=Keyword_conv.replace(" s ","")
-   Keyword_conv=Keyword_conv.replace("+s ","")
-   Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
-   Keyword_conv="+"+Keyword_conv
-   
+  URL_Struct1=URL_Struct1+"403"
+  Keyword_conv=Keyword_conv
+  Keyword_conv=Keyword_conv.replace(" + ","")
+  Keyword_conv=Keyword_conv.replace("++","+")
+  Keyword_conv=Keyword_conv.replace(" ++ ","")
+  Keyword_conv=Keyword_conv.replace("&"," ")
+  Keyword_conv=Keyword_conv.replace(" "," +")
+  Keyword_conv=Keyword_conv.replace("+55+","55+")
+  Keyword_conv=Keyword_conv.replace("+-","-")
+  Keyword_conv=Keyword_conv.replace("-"," ")
+  Keyword_conv=Keyword_conv.replace("'","")
+  Keyword_conv=Keyword_conv.replace("+,","")
+  Keyword_conv=Keyword_conv.replace(",","")
+  Keyword_conv=Keyword_conv.replace(" s ","")
+  Keyword_conv=Keyword_conv.replace("+s ","")
+  Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
+  Keyword_conv="+"+Keyword_conv
+  
      
-   if len(Keyword_conv)<12:
+  if len(Keyword_conv)<12:
      Keyword_conv=Keyword_conv+" Community"
     
       
 
   
       
-   if SearchChan=="bing":
+  if SearchChan=="bing":
     URL_Struct1=URL_Struct1+"msm"
-   Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
-   Campaign_Name.append(Campaign_Nameing_Conv);
-   Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","SB").replace("_MSM203","_MSM202")  
-   #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
-   Campaign_Name.append(Campaign_Nameing_Conv); 
-   Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SB","SX").replace("_MSM202","_MSM201")  
-   Campaign_Name.append(Campaign_Nameing_Conv); 
-   Bid.append(.45)
-   Bid.append(.40)
-   Bid.append(.52)   
+  Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
+  Campaign_Name.append(Campaign_Nameing_Conv);
+  Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","SB").replace("_MSM203","_MSM202")  
+
+  Campaign_Name.append(Campaign_Nameing_Conv); 
+  Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SB","SX").replace("_MSM202","_MSM201")  
+  Campaign_Name.append(Campaign_Nameing_Conv); 
+  Bid.append(.45)
+  Bid.append(.40)
+  Bid.append(.52)   
       
            
    
-   Keyword_conv=Keyword_conv
-   Keyword_conv=Keyword_conv.replace(" + ","")
-   Keyword_conv=Keyword_conv.replace("++","+")
-   Keyword_conv=Keyword_conv.replace(" ++ ","")
-   Keyword_conv=Keyword_conv.replace("&"," ")
-   Keyword_conv=Keyword_conv.replace(" "," +")
-   Keyword_conv=Keyword_conv.replace("+55+","55+")
-   Keyword_conv=Keyword_conv.replace("+-"," ")
-   Keyword_conv=Keyword_conv.replace("-"," ")
-   Keyword_conv=Keyword_conv.replace("'","")
-   Keyword_conv=Keyword_conv.replace(",","")
-   Keyword_conv=Keyword_conv.replace("+G +& +I","G&I ")
-   Keyword_conv=Keyword_conv.replace(" s ","")
-   Keyword_conv=Keyword_conv.replace("+s ","")
-   Keyword_conv="+"+Keyword_conv
-   
-   if len(Keyword_conv)<12:
+  Keyword_conv=Keyword_conv
+  Keyword_conv=Keyword_conv.replace(" + ","")
+  Keyword_conv=Keyword_conv.replace("++","+")
+  Keyword_conv=Keyword_conv.replace(" ++ ","")
+  Keyword_conv=Keyword_conv.replace("&"," ")
+  Keyword_conv=Keyword_conv.replace(" "," +")
+  Keyword_conv=Keyword_conv.replace("+55+","55+")
+  Keyword_conv=Keyword_conv.replace("+-"," ")
+  Keyword_conv=Keyword_conv.replace("-"," ")
+  Keyword_conv=Keyword_conv.replace("'","")
+  Keyword_conv=Keyword_conv.replace(",","")
+  Keyword_conv=Keyword_conv.replace("+G +& +I","G&I ")
+  Keyword_conv=Keyword_conv.replace(" s ","")
+  Keyword_conv=Keyword_conv.replace("+s ","")
+  Keyword_conv="+"+Keyword_conv
+  
+  if len(Keyword_conv)<12:
      Keyword_conv=Keyword_conv+" Community"
      #MatchType_Conv="Broad"
    
