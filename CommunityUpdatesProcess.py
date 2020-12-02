@@ -1337,7 +1337,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    GoogleAdFrameB.to_excel(writer)
    writer.save()
    
-  """ 
+ """ 
   if MatchType=='SB':
    print("In KeywordGen google SB ")
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW'
@@ -1378,7 +1378,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    GoogleAdFrameB.to_excel(writer)
    writer.save()
-  """ 
+ """ 
      
  if SearchChan=="bing":
    #if MatchType=='SBMM':
