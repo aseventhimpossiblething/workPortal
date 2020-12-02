@@ -999,7 +999,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
       Keyword_conv=Keyword_conv+" Community"
    
   #try:
-   if SearchChan=="google":
+  if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
    Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
    Campaign_Name.append(Campaign_Nameing_Conv);  
