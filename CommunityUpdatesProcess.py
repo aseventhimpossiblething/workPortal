@@ -1001,6 +1001,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
   #try:
   if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
+    print("NewDataFrame['Market ID'][count] ",NewDataFrame['Market ID'][count])
+    print("NewDataFrame['Market ID'][count+1] ",NewDataFrame['Market ID'][count+1])
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count+1]];
     Campaign_Name.append(Campaign_Nameing_Conv);  
  
