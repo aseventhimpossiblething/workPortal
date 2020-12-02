@@ -1044,7 +1044,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   
       
    if SearchChan=="bing":
-    URL_Struct1=URL_Struct1+"msm"
+    URL_Struct1=URL_Struct1+"_MSM203"
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
     Campaign_Name.append(Campaign_Nameing_Conv);
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","SB").replace("_MSM203","_MSM202")  
@@ -1227,11 +1227,12 @@ def KeywordGenII(NewDataFrame,SearchChan):
    else:
           #print("URL_Struct1 ",URL_Struct1)
           Final_URL.append(URL_Struct1)
-          URL_Struct1=URL_Struct1.replace("403","402")  
+          URL_Struct1=URL_Struct1.replace("403","402").replace("_MSM203","_MSM202")  
           Final_URL.append(URL_Struct1)
-          URL_Struct1=URL_Struct1.replace("402","401")  
+          URL_Struct1=URL_Struct1.replace("402","401").replace("_MSM202","_MSM201") 
           Final_URL.append(URL_Struct1)
           #print("URL_Struct1 ",URL_Struct1)  
+          
           
   
    Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+").replace(" + + +","+")\
@@ -1251,7 +1252,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  
    if str(Keyword_conv[len(Keyword_conv)-1])=="+":
           Keyword_conv=Keyword_conv[:len(Keyword_conv)-1]
-   print("Keyword_conv 3 ",Keyword_conv)    
+   #print("Keyword_conv 3 ",Keyword_conv)    
    Keyword.append(Keyword_conv);
    Keyword_conv=Keyword_conv.replace("+"," ");   
    Keyword.append(Keyword_conv); 
