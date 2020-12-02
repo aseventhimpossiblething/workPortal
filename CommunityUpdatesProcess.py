@@ -1036,8 +1036,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
      Keyword_conv=Keyword_conv+" Community"
     #Campaign_Name.append(Campaign_Nameing_Conv);
       
-    MatchType_Conv="Broad"
-    URL_Struct1=URL_Struct1+"402"
+    #MatchType_Conv="Broad"
+    #URL_Struct1=URL_Struct1+"402"
     #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_GPPC403","_GPPC402")
     Keyword_conv=communityName
     #MatchType_Conv="Broad"
@@ -1066,23 +1066,23 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Bid.append(.52)   
       
     #MatchType=="SB"
-    URL_Struct1=URL_Struct1+"202"
-    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
+    #URL_Struct1=URL_Struct1+"202"
+    #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
     Keyword_conv=communityName
-    MatchType_Conv="Broad"
-    set_bid=.40;
+    #MatchType_Conv="Broad"
+    #set_bid=.40;
     #Campaign_Name.append(Campaign_Nameing_Conv);
         
     #MatchType=="SX"
-    URL_Struct1=URL_Struct1+"201"
-    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201")
-    Keyword_conv=communityName
+    #URL_Struct1=URL_Struct1+"201"
+    #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM201")
+    #Keyword_conv=communityName
     #MatchType_Conv="Exact"
-    set_bid=.52;
+    #set_bid=.52;
     #Campaign_Name.append(Campaign_Nameing_Conv);
 
     #MatchType=="SBMM"
-    URL_Struct1=URL_Struct1+"202"
+    #URL_Struct1=URL_Struct1+"202"
     Keyword_conv=Keyword_conv
     Keyword_conv=Keyword_conv.replace(" + ","")
     Keyword_conv=Keyword_conv.replace("++","+")
@@ -1227,6 +1227,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
           URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
                .replace("Lots","");
+          print("URL_Struct1 ",URL_Struct1)
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
@@ -1235,6 +1236,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
+          print("URL_Struct1 ",URL_Struct1)  
           
   
    Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+").replace(" + + +","+")\
