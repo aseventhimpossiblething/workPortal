@@ -1240,7 +1240,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
                   .replace(" +– ","+").replace(" +– +","+").replace("+– + ","+").replace(" + ","").replace("++","+")\
                   .replace(" ++ ","").replace("+ ","").replace(",","").replace(" s ","")
    Keyword_conv=Keyword_conv.replace("+s ","");
-   print("Keyword_conv 1 ",Keyword_conv) 
+    
          
    if len(Keyword_conv)<10:
       Keyword_conv=Keyword_conv+" Community"
@@ -1248,11 +1248,12 @@ def KeywordGenII(NewDataFrame,SearchChan):
       
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
    community=str(communityName).lower();
-   print("Keyword_conv 2 ",Keyword_conv) 
+ 
    if str(Keyword_conv[len(Keyword_conv)-1])=="+":
           Keyword_conv=Keyword_conv[:len(Keyword_conv)-1]
    print("Keyword_conv 3 ",Keyword_conv)    
-   Keyword.append(Keyword_conv); 
+   Keyword.append(Keyword_conv);
+   Keyword_conv=Keyword_conv.replace("+"," ");   
    Keyword.append(Keyword_conv); 
    Keyword.append(Keyword_conv);    
    label="Created by WebApp"
