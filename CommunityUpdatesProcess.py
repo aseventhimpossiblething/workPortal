@@ -1003,7 +1003,10 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
     Campaign_Name.append(Campaign_Nameing_Conv);  
     #print("initial Campaign_Nameing_Conv ",Campaign_Nameing_Conv)  
-    #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
+    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","SB").replace("403","402")
+    Campaign_Name.append(Campaign_Nameing_Conv);
+    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SB","SX").replace("402","401") 
+    Campaign_Name.append(Campaign_Nameing_Conv);
     
     URL_Struct1=URL_Struct1+"403"
     Keyword_conv=Keyword_conv
@@ -1047,8 +1050,14 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
    if SearchChan=="bing":
     URL_Struct1=URL_Struct1+"msm"
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
-    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
-    MatchType=="SB"
+    Campaign_Name.append(Campaign_Nameing_Conv);
+    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","SB").replace("_MSM203","_MSM202")  
+    #Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
+    Campaign_Name.append(Campaign_Nameing_Conv); 
+    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SB","SX").replace("_MSM202","_MSM201")  
+    Campaign_Name.append(Campaign_Nameing_Conv); 
+      
+    #MatchType=="SB"
     URL_Struct1=URL_Struct1+"202"
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
     Keyword_conv=communityName
@@ -1091,7 +1100,7 @@ def KeywordGenII(NewDataFrame,MatchType,SearchChan):
    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
    
-   #print("str(NewDataFrame['Community ID'][count]) ",str(NewDataFrame['Community ID'][count]));
+
    if str(NewDataFrame['Community ID'][count]).find("nan")>-1:
             AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>");
