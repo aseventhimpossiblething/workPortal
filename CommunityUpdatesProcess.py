@@ -1318,23 +1318,23 @@ def KeywordGenII(NewDataFrame,SearchChan):
 
  if SearchChan=="google":
    #if MatchType=='SBMM':
-   print("In KeywordGenII google SBMM ")
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW'
+   #print("In KeywordGenII google SBMM ")
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords'
    os.chdir(SaveLocation)
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   writer=pandas.ExcelWriter('GKW.xlsx')
    GoogleKWFrame.to_excel(writer)
    writer.save()
    
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABMM'
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA'
    os.chdir(SaveLocation)
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   writer=pandas.ExcelWriter('GADA.xlsx')
    GoogleAdFrameA.to_excel(writer)
    writer.save()
    
    
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBMM/'
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB'
    os.chdir(SaveLocation)
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   writer=pandas.ExcelWriter('GADB.xlsx')
    GoogleAdFrameB.to_excel(writer)
    writer.save()
    
@@ -1384,21 +1384,21 @@ def KeywordGenII(NewDataFrame,SearchChan):
  if SearchChan=="bing":
    #if MatchType=='SBMM':
    print("In KeywordGen bing SBMM ")
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM'
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingKW'
    os.chdir(SaveLocation)
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   writer=pandas.ExcelWriter('BKW.xlsx')
    BingKWFrame.to_excel(writer)
    writer.save()
    
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBMM'
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype'
    os.chdir(SaveLocation)
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   writer=pandas.ExcelWriter('BADA.xlsx')
    BingAdFrameA.to_excel(writer)
    writer.save()
    
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeBMM'
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype'
    os.chdir(SaveLocation)
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
+   writer=pandas.ExcelWriter('BADB.xlsx')
    BingAdFrameB.to_excel(writer)
    writer.save()
    
