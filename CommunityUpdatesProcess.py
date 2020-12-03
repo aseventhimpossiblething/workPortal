@@ -1227,9 +1227,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
    else:
           #print("URL_Struct1 ",URL_Struct1)
           Final_URL.append(URL_Struct1)
-          URL_Struct1=URL_Struct1.replace("403","402").replace("_MSM203","_MSM202")  
+          URL_Struct1=URL_Struct1.replace("403","402").replace("msm203","msm202")  
           Final_URL.append(URL_Struct1)
-          URL_Struct1=URL_Struct1.replace("402","401").replace("_MSM202","_MSM201") 
+          URL_Struct1=URL_Struct1.replace("402","401").replace("msm202","msm201") 
           Final_URL.append(URL_Struct1)
           #print("URL_Struct1 ",URL_Struct1)  
           
