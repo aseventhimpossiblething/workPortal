@@ -5,7 +5,6 @@ pwd="#!!9ooRanch"
 
 
 
-print("1")
 
 
 
@@ -32,11 +31,7 @@ from flask import send_file
 print("1.12")
 from flask import send_from_directory
 print("1.13")
-#import get_campaigns
 
-
-
-print("2")
 
 
 
@@ -44,7 +39,8 @@ print("2")
 
 
 from datetime import datetime
-print("2.1")
+
+os.system('sudo chmod -R 777 var')
 os.system('sudo chmod -R 777 Sheets')
 os.system('sudo chmod -R 777 templates')
 
