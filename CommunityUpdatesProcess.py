@@ -1044,7 +1044,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   
       
    if SearchChan=="bing":
-    URL_Struct1=URL_Struct1+"_MSM203"
+    URL_Struct1=URL_Struct1+"msm203"
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
     Campaign_Name.append(Campaign_Nameing_Conv);
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","SB").replace("_MSM203","_MSM202")  
