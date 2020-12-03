@@ -1538,11 +1538,6 @@ def initialCommUpdatProcess():
  print("!!!!!! original Keyworgen not Runnung!!!!!!!") 
  print("!!!!!! original Keyworgen not Runnung!!!!!!!")  
 
-
-
-
-
-
  KeywordGen(NewGoogle,"sbmm","google")
  KeywordGen(NewGoogle,"sb","google")
  KeywordGen(NewGoogle,"sx","google")
@@ -1567,9 +1562,6 @@ def initialCommUpdatProcess():
  storeRequest=open('RequestsVsResponses.txt','r+')
  storeRequest.close()
  
-  
-
-
 
  #CommunityNameDuplicateSpecialLoop(WorkingCommunities);
  print("END OF ASYNC FILE LOAD.....................................................................")
