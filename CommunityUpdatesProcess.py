@@ -686,6 +686,20 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
           URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
                .replace("Lots","");
+          
+          if SearchChan.lower().find("google")>-1:
+                  URL_Struct1=URL_Struct1+"?refer=gppc40"
+          if SearchChan.lower().find("bing")>-1:
+                  URL_Struct1=URL_Struct1+"?refer=msm20"
+          if MatchType.lower()="sbmm":
+                  URL_Struct1=URL_Struct1+"3"
+          if MatchType.lower()="sb":
+                  URL_Struct1=URL_Struct1+"2" 
+          if MatchType.lower()="sx":
+                  URL_Struct1=URL_Struct1+"1"        
+                   
+                  
+                  
 
 
       
@@ -699,6 +713,18 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
           URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
                .replace("Lots","");
+      
+          if SearchChan.lower().find("google")>-1:
+                  URL_Struct1=URL_Struct1+"?refer=gppc40"
+          if SearchChan.lower().find("bing")>-1:
+                  URL_Struct1=URL_Struct1+"?refer=msm20"
+          if MatchType.lower()="sbmm":
+                  URL_Struct1=URL_Struct1+"3"
+          if MatchType.lower()="sb":
+                  URL_Struct1=URL_Struct1+"2" 
+          if MatchType.lower()="sx":
+                  URL_Struct1=URL_Struct1+"1"    
+            
           Final_URL.append(URL_Struct1)
           
    else:
@@ -1204,8 +1230,13 @@ def KeywordGenII(NewDataFrame,SearchChan):
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
                .replace("Lots","");
          
-        
-      
+          if SearchChan.lower().find("google")>-1:
+                  URL_Struct1=URL_Struct1+"?refer=gppc403"
+          if SearchChan.lower().find("bing")>-1:
+                  URL_Struct1=URL_Struct1+"?refer=msm203"
+                  
+         
+              
    nadgrp=AdgroupNaming_conv.replace("nan","")
    if nadgrp[len(nadgrp)-1]==">":
           communityName=communityName.replace(" ","%20").replace(" s ","").replace("61s","").replace("64s","").replace("71s","").replace("74s","").replace("81s","")\
