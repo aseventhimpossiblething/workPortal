@@ -578,7 +578,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
      MatchType_Conv="Exact"
      set_bid=.52;
     if MatchType=="SBMM":
-     URL_Struct1=URL_Struct1+"202"
+     URL_Struct1=URL_Struct1+"203"
      Keyword_conv=Keyword_conv
      Keyword_conv=Keyword_conv.replace(" + ","")
      Keyword_conv=Keyword_conv.replace("++","+")
