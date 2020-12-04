@@ -691,11 +691,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                   URL_Struct1=URL_Struct1+"?refer=gppc40"
           if SearchChan.lower().find("bing")>-1:
                   URL_Struct1=URL_Struct1+"?refer=msm20"
-          if MatchType.lower()="sbmm":
+          if MatchType.lower()=="sbmm":
                   URL_Struct1=URL_Struct1+"3"
-          if MatchType.lower()="sb":
+          if MatchType.lower()=="sb":
                   URL_Struct1=URL_Struct1+"2" 
-          if MatchType.lower()="sx":
+          if MatchType.lower()=="sx":
                   URL_Struct1=URL_Struct1+"1"        
                    
                   
@@ -718,11 +718,11 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                   URL_Struct1=URL_Struct1+"?refer=gppc40"
           if SearchChan.lower().find("bing")>-1:
                   URL_Struct1=URL_Struct1+"?refer=msm20"
-          if MatchType.lower()="sbmm":
+          if MatchType.lower()=="sbmm":
                   URL_Struct1=URL_Struct1+"3"
-          if MatchType.lower()="sb":
+          if MatchType.lower()=="sb":
                   URL_Struct1=URL_Struct1+"2" 
-          if MatchType.lower()="sx":
+          if MatchType.lower()=="sx":
                   URL_Struct1=URL_Struct1+"1"    
             
           Final_URL.append(URL_Struct1)
