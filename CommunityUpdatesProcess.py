@@ -724,16 +724,16 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                   URL_Struct1=URL_Struct1+"2" 
           if MatchType.lower()=="sx":
                   URL_Struct1=URL_Struct1+"1"    
-          print("before replace URL_Struct1",URL_Struct1)
+          #print("before replace URL_Struct1",URL_Struct1)
           URL_Struct1=URL_Struct1.replace(" ","-")
           Final_URL.append(URL_Struct1)
-          print("after replace URL_Struct1 ",URL_Struct1)
+          #print("after replace URL_Struct1 ",URL_Struct1)
           
    else:
-          print("before replace URL_Struct1 ",URL_Struct1)
+          #print("before replace URL_Struct1 ",URL_Struct1)
           URL_Struct1=URL_Struct1.replace(" ","-")
           Final_URL.append(URL_Struct1)
-          print("after replace URL_Struct1 ",URL_Struct1)   
+          #print("after replace URL_Struct1 ",URL_Struct1)   
           
   
    Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+").replace(" + + +","+")\
@@ -1584,15 +1584,15 @@ def initialCommUpdatProcess():
  
   
  
- print( 'One KeywordgenII Running which is KeywordGenII(NewGoogle,"sb","google")' )
+ #print( 'One KeywordgenII Running which is KeywordGenII(NewGoogle,"sb","google")' )
  KeywordGenII(NewGoogle,"google")
  KeywordGenII(NewBing,"bing")
 
  os.chdir(fileHandler.currentBingLocation)
- print("past  os.chdir fileHandler.currentBingLocation")
+ #print("past  os.chdir fileHandler.currentBingLocation")
   
  os.chdir(fileHandler.SheetsFileLocation);
- print("past  os.chdir(fileHandler.SheetsFileLocation)");
+ #print("past  os.chdir(fileHandler.SheetsFileLocation)");
  storeRequest=open('RequestsVsResponses.txt','a+')
  storeRequest.write("Response , ")
  storeRequest.close() 
