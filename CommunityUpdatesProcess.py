@@ -724,10 +724,12 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                   URL_Struct1=URL_Struct1+"2" 
           if MatchType.lower()=="sx":
                   URL_Struct1=URL_Struct1+"1"    
-            
+          
+          URL_Struct1.replace(" ","-")
           Final_URL.append(URL_Struct1)
           
    else:
+          URL_Struct1.replace(" ","-")
           Final_URL.append(URL_Struct1)
           
   
@@ -760,7 +762,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Label.append(label1);
    label2=label+"; Ad Copy B";  
    LabelB.append(label2);
-   #print("label ",label);
+ 
   except:
    NewDataFrame=NewDataFrame.drop([count])
    print("except KW Gen count ",count)
@@ -1248,6 +1250,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
                .replace("Lots","");
           #print("URL_Struct1 ",URL_Struct1)
+          URL_Struct1.replace(" ","-")  
           Final_URL.append(URL_Struct1)
           URL_Struct1=URL_Struct1.replace("403","402")
           Final_URL.append(URL_Struct1)
@@ -1256,6 +1259,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
           #print("URL_Struct1 ",URL_Struct1)
           
    else:
+          URL_Struct1.replace(" ","-")
           #print("URL_Struct1 ",URL_Struct1)
           Final_URL.append(URL_Struct1)
           URL_Struct1=URL_Struct1.replace("403","402").replace("msm203","msm202")  
