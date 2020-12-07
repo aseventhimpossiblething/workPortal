@@ -724,13 +724,16 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
                   URL_Struct1=URL_Struct1+"2" 
           if MatchType.lower()=="sx":
                   URL_Struct1=URL_Struct1+"1"    
-          
+          print("before replace URL_Struct1",URL_Struct1)
           URL_Struct1=URL_Struct1.replace(" ","-")
           Final_URL.append(URL_Struct1)
+          print("after replace URL_Struct1 ",URL_Struct1)
           
    else:
+          print("before replace URL_Struct1 ",URL_Struct1)
           URL_Struct1=URL_Struct1.replace(" ","-")
           Final_URL.append(URL_Struct1)
+          print("after replace URL_Struct1 ",URL_Struct1)   
           
   
    Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+").replace(" + + +","+")\
