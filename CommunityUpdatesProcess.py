@@ -430,7 +430,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("KeywordGen Initiated-----------------------------------------------------------------------------------------------")
  print("KeywordGen Initiated-----------------------------------------------------------------------------------------------")
  NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame); 
- print("Dataframe set to proceed through KW Gn----===========================",NewDataFrame)
+ #print("Dataframe set to proceed through KW Gn----===========================",NewDataFrame)
  MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
  Failed_Rows=[];
