@@ -1084,12 +1084,22 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if SearchChan=="bing":
     URL_Struct1=URL_Struct1+"msm203"
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
+    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_MSM203","")
+    Campaign_Name.append(Campaign_Nameing_Conv);
+    Campaign_Name.append(Campaign_Nameing_Conv);
+    Campaign_Name.append(Campaign_Nameing_Conv);
+    
+
+    """
     Campaign_Name.append(Campaign_Nameing_Conv);
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","SB").replace("_MSM203","_MSM202")  
 
     Campaign_Name.append(Campaign_Nameing_Conv); 
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SB","SX").replace("_MSM202","_MSM201")  
     Campaign_Name.append(Campaign_Nameing_Conv); 
+    """
+      
+      
     Bid.append(.45)
     Bid.append(.40)
     Bid.append(.52)   
@@ -1118,7 +1128,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    
 
    if SearchChan=="google":
-             AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
+      AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
             
    """
@@ -1132,9 +1142,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    """ 
       
    if SearchChan=="bing":
-       AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
-                      +str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
-   
+      AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
+                      +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
+            
+      
       
       
    if str(NewDataFrame['Community ID'][count]).find("nan")>-1:
