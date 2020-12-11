@@ -1036,12 +1036,17 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count+1]];
+      
+    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_GPPC403","") 
+      
+    """
     Campaign_Name.append(Campaign_Nameing_Conv);  
- 
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","SB").replace("403","402")
     Campaign_Name.append(Campaign_Nameing_Conv);
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SB","SX").replace("402","401") 
     Campaign_Name.append(Campaign_Nameing_Conv);
+    """
+
     Bid.append(.45)
     Bid.append(.30)
     Bid.append(.65)    
@@ -1110,10 +1115,15 @@ def KeywordGenII(NewDataFrame,SearchChan):
  
    
    
+   AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
+                      +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
       
+      
+   """   
    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
-   
+                      
+   """
 
    if str(NewDataFrame['Community ID'][count]).find("nan")>-1:
             AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
