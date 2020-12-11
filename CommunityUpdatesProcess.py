@@ -606,7 +606,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    Campaign_Name.append(Campaign_Nameing_Conv);
       
    AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
-                      +str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
+                      +str(">")+MatchType+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
    
    #print("str(NewDataFrame['Community ID'][count]) ",str(NewDataFrame['Community ID'][count]));
    if str(NewDataFrame['Community ID'][count]).find("nan")>-1:
