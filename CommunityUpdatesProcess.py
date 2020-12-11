@@ -253,6 +253,10 @@ def MergeURLs(chan,chan2):
  
 def communityCheck(checkby,checkin,Name):
  print("Start Community Check for ",Name)
+ print("checkby=checkby.drop([count]); in  def communityCheck(checkby,checkin,Name)line 268 commented out ")
+ print("checkby=checkby.drop([count]); in  def communityCheck(checkby,checkin,Name) line 268 commented out ")
+ print("checkby=checkby.drop([count]); in  def communityCheck(checkby,checkin,Name)line 268 commented out ")
+ print("checkby=checkby.drop([count]); in  def communityCheck(checkby,checkin,Name) line 268 commented out ")
  checkby=checkby.reset_index()
  count=0;
  DropRows=[];
@@ -262,7 +266,8 @@ def communityCheck(checkby,checkin,Name):
  while count < hilecount:
   if checkin.find(str(checkby['Community ID'][count]))>-1:
    DropRows.append(count);
-   checkby=checkby.drop([count]);
+   #This Row is a defining row, Commented out to create AVA version Does not filter URLS Uncomment to reverse 
+   #checkby=checkby.drop([count]);
    if count % 4000==0:
     print("count ",count)
     
@@ -1594,7 +1599,7 @@ def initialCommUpdatProcess():
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
- WorkingCommunities=filterNonParticipators(WorkingCommunities);
+ #WorkingCommunities=filterNonParticipators(WorkingCommunities);
 
  #print(" WorkingCommunities ",WorkingCommunities)     
  
