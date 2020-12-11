@@ -1038,7 +1038,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count+1]];
       
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_GPPC403","") 
-      
+    Campaign_Name.append(Campaign_Nameing_Conv);
+    Campaign_Name.append(Campaign_Nameing_Conv);  
+    Campaign_Name.append(Campaign_Nameing_Conv);  
     """
     Campaign_Name.append(Campaign_Nameing_Conv);  
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","SB").replace("403","402")
