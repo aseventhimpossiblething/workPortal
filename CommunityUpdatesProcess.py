@@ -525,7 +525,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
-    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
+    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_GPPC403","")
     if MatchType=="SBMM":
      URL_Struct1=URL_Struct1+"403"
      Keyword_conv=Keyword_conv
@@ -564,7 +564,7 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    if SearchChan=="bing":
     URL_Struct1=URL_Struct1+"msm"
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
-    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM",MatchType)
+    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_MSM203","")
     if MatchType=="SB":
      URL_Struct1=URL_Struct1+"202"
      Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("_MSM203","_MSM202")
