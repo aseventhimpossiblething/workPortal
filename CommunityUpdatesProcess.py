@@ -1382,16 +1382,16 @@ def KeywordGenII(NewDataFrame,SearchChan):
                 "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
  GoogleAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
                 "Description":TextB,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":LabelB}
- GoogleAdFrameA=pandas.DataFrame(GoogleAdFrameA)
- GoogleAdFrameB=pandas.DataFrame(GoogleAdFrameB)
+ GoogleAdFrameA=pandas.DataFrame(GoogleAdFrameA).drop_duplicates()
+ GoogleAdFrameB=pandas.DataFrame(GoogleAdFrameB).drop_duplicates()
  BingKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Bid":Bid,"Labels":KWLabel} 
  BingAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
                 "Text":TextA,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
  BingAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
                 "Text":TextB,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":LabelB}
  BingKWFrame=pandas.DataFrame(BingKWFrame)
- BingAdFrameA=pandas.DataFrame(BingAdFrameA)
- BingAdFrameB=pandas.DataFrame(BingAdFrameB)
+ BingAdFrameA=pandas.DataFrame(BingAdFrameA).drop_duplicates()
+ BingAdFrameB=pandas.DataFrame(BingAdFrameB).drop_duplicates()
  
  
 
