@@ -1061,7 +1061,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Bid.append(.65)    
       
     
-    URL_Struct1=URL_Struct1+"403"
+    URL_Struct1=URL_Struct1+"405"
     Keyword_conv=Keyword_conv
     Keyword_conv=Keyword_conv.replace(" + ","")
     Keyword_conv=Keyword_conv.replace("++","+")
@@ -1089,7 +1089,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   
       
    if SearchChan=="bing":
-    URL_Struct1=URL_Struct1+"msm203"
+    URL_Struct1=URL_Struct1+"msm205"
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_MSM203","")
     Campaign_Nameing_Conv="Consolidated_"+Campaign_Nameing_Conv
@@ -1277,9 +1277,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
                .replace("Lots","");
          
           if SearchChan.lower().find("google")>-1:
-                  URL_Struct1=URL_Struct1+"?refer=gppc403"
+                  URL_Struct1=URL_Struct1+"?refer=gppc405"
           if SearchChan.lower().find("bing")>-1:
-                  URL_Struct1=URL_Struct1+"?refer=msm203"
+                  URL_Struct1=URL_Struct1+"?refer=msm205"
                   
          
               
@@ -1296,9 +1296,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
           #print("URL_Struct1 ",URL_Struct1)
           URL_Struct1=URL_Struct1.replace(" ","-")  
           Final_URL.append(URL_Struct1)
-          URL_Struct1=URL_Struct1.replace("403","402")
+          #URL_Struct1=URL_Struct1.replace("403","402")
           Final_URL.append(URL_Struct1)
-          URL_Struct1=URL_Struct1.replace("402","401")
+          #URL_Struct1=URL_Struct1.replace("402","401")
           Final_URL.append(URL_Struct1)
           #print("URL_Struct1 ",URL_Struct1)
           
@@ -1306,9 +1306,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
           URL_Struct1=URL_Struct1.replace(" ","-")
           #print("URL_Struct1 ",URL_Struct1)
           Final_URL.append(URL_Struct1)
-          URL_Struct1=URL_Struct1.replace("403","402").replace("msm203","msm202")  
+          #URL_Struct1=URL_Struct1.replace("403","402").replace("msm203","msm202")  
           Final_URL.append(URL_Struct1)
-          URL_Struct1=URL_Struct1.replace("402","401").replace("msm202","msm201") 
+          #URL_Struct1=URL_Struct1.replace("402","401").replace("msm202","msm201") 
           Final_URL.append(URL_Struct1)
           #print("URL_Struct1 ",URL_Struct1)  
           
