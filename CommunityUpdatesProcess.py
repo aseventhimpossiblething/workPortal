@@ -1614,14 +1614,14 @@ def initialCommUpdatProcess():
  #print(" NewBing ",NewBing)
 
       
- 
+ """
  KeywordGen(NewGoogle,"sbmm","google")
  KeywordGen(NewGoogle,"sb","google")
  KeywordGen(NewGoogle,"sx","google")
  KeywordGen(NewBing,"sbmm","bing")
  KeywordGen(NewBing,"sb","bing")
  KeywordGen(NewBing,"sx","bing")
- 
+ """
  
   
  
