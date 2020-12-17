@@ -267,7 +267,7 @@ def communityCheck(checkby,checkin,Name):
   if checkin.find(str(checkby['Community ID'][count]))>-1:
    DropRows.append(count);
    #This Row is a defining row, Commented out to create AVA version Does not filter URLS Uncomment to reverse 
-   #checkby=checkby.drop([count]);
+   checkby=checkby.drop([count]);
    if count % 4000==0:
     print("count ",count)
     
