@@ -68,7 +68,7 @@ def CTRUploadFilehandler():
     #print('BidOpSeed.xlsx')
     request.files['sheet'].save("Temp.xlsx")
     Temp=pandas.read_excel('Temp.xlsx')
-    print("Temp 1")
+    #print("Temp 1")
     print(Temp)
     print(" - 2 - Define File Space and configure regressor")    
         
