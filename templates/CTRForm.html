@@ -1,0 +1,51 @@
+<html>
+{%extends 'DefaultTemplate.html'%}
+{% block content %}  
+ 
+
+
+<div style="height:50px"></div>
+<form  method=POST enctype="multipart/form-data" action="/BidOPUpload">
+<input type="file" name="sheet" id="sheet" size="60" width="170">
+<input type="submit" name="submit" >  
+<div style="width:100%; text-align:center;">The Following Columns Must be Included In Bid Ops</div> 
+</form> 
+<div>
+ <b>THIS TEMPLATE WILL BECOME THE CTR IMPUT DOC ALTER</b> 
+ <!---The Following Columns Must be Included In CTR input Sheet--->   
+<p>1.  Top Impression Share</p> 
+<p>2.  Abs. Top Impression Share</p>  
+<p>3.  Some other metric</p>
+<p>4.  Yet another metric</p>
+<p>5.  Last Metric</p> 
+  
+<!---The Following Columns Must be Included In Bid Ops--->  
+<div style="width:45%; float:left; background-color:white;">
+<p>1.  Campaign</p> 
+<p>2.  Ad group</p>
+<p>3.  Match type
+<p>4.  Keyword</p>
+<p>5.  [Bid]:[Max.CPC]</p>
+<p>6.  Clicks </p>
+<p>7.	 CTR </p>
+<p>8.  Avg. CPC</p>	
+<p>9.  [Spend]:[Cost]</p>
+<p>10. [Conv.]:[Conversions]</p>  
+
+</div>
+<div style="float:right; width:45%; background-color:white;"> 
+
+<p>11. [CPA]:[Cost / conv.]	</p>
+<p>12. Conv. rate</p>	
+<p>13. [Top Impr. Share]:[Search top IS]</p>
+<p>14. [Absolute Top Impression Share]:[Search abs. top IS]	</p>
+<p>15. [Impr. share (IS)]:[Search impr. share]	</p>
+<p>16. [Qual. Score]:[Quality Score]</p>
+<p>17. IS lost to budget	</p>
+<p>18. [IS lost to rank]:[Search lost IS (rank)]</p>
+</div> 
+</div> 
+ 
+
+{% endblock %}
+</html>
