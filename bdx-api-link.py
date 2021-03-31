@@ -416,6 +416,14 @@ def BidOPUpload():
     return fileHandler.BidOpFileHandler()
 
 
+@app.route('/CTRForm')
+def CTRform():
+    if chckbdxcred().find("NULL")==-1:
+        print(str(chckbdxcred()));
+        return str(chckbdxcred());
+    return render_template('CTRForm.html')
+
+
 
 
 
