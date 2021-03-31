@@ -429,7 +429,7 @@ def CTRupload():
     if chckbdxcred().find("NULL")==-1:
         print(str(chckbdxcred()));
         return str(chckbdxcred());
-    return fileHandler.BidOpFileHandler()
+    return fileHandler.CTRUploadFilehandler()
 
 
 
