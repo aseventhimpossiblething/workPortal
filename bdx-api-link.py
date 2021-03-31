@@ -424,6 +424,15 @@ def CTRform():
     return render_template('CTRForm.html')
 
 
+@app.route('/CTRUpload', methods=['POST','GET'])
+def CTRupload():
+    if chckbdxcred().find("NULL")==-1:
+        print(str(chckbdxcred()));
+        return str(chckbdxcred());
+    return fileHandler.BidOpFileHandler()
+
+
+
 
 
 
