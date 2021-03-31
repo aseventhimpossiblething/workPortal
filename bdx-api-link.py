@@ -426,6 +426,9 @@ def CTRform():
 
 @app.route('/CTRUpload', methods=['POST','GET'])
 def CTRupload():
+    print("CTRUpload Button clicked")
+    print("CTRUpload Button clicked")
+    print("CTRUpload Button clicked")    
     if chckbdxcred().find("NULL")==-1:
         print(str(chckbdxcred()));
         return str(chckbdxcred());
