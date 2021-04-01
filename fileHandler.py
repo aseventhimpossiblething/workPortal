@@ -71,6 +71,61 @@ def CTRUploadFilehandler():
     #print("Temp 1")
     print(Temp)
     print(" - 2 - Define File Space and configure regressor")    
+    
+    record_async_start=open("ForestLoadingQueue.txt","w")
+    record_async_start.write("This should take no more than 5 min.. else resubmit form")
+    record_async_start.close()
+      
+    target_Variable='CTR' 
+           
+    designated_Columns=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']         
+    core_cols=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
+    
+    print('target_Variable',target_Variable);
+        
+    isTrainingSheet=str(Temp.columns).find(target_Variable); 
+    if isTrainingSheet!=-1:
+      
+       def TrainingSheetBehavior(x,x2,Temp):
+           print('async started')
+           #print(x)
+           designated_Columns=x
+           core_cols=x2   
+           Temp=Temp     
+           os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
+                
+           rowCheck=rowcheck(Temp,designated_Columns)     
+           if len(rowCheck)>0:
+                os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
+                rowCheck=str(rowCheck)
+                record_async_start=open("ForestLoadingQueue.txt","w+")
+                record_async_start.write(rowCheck)
+                record_async_start.close()
+                rowCheck=" The following Columns are missing "+rowCheck+" please resubmit sheet "
+                return rowCheck
+           Temp=pandas.DataFrame(Temp,columns=designated_Columns)
+           Temp.fillna(0)
+           record_async_start=open("ForestLoadingQueue.txt","w+")
+           record_async_start.write("15%")
+           record_async_start.close() 
+           Temp['Match Number']=BidOpAssist.Match_num(Temp);
+                   
+           Temp['Market Number']=BidOpAssist.MarketNumberGen(Temp)
+           core=pandas.read_excel('BidOpSeed.xlsx')
+           core=core.append(Temp, sort='False')
+           core=pandas.DataFrame(core,columns=core_cols)     
+           core.to_excel("BidOpSeed.xlsx")
+                       
+           record_async_start=open("ForestLoadingQueue.txt","w")
+           record_async_start.write("100%")
+           record_async_start.close();  
+           
+           print("Temp 2")
+           print(Temp)
+                     
+           return "<html><a href='/BasisOfCTR'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet(nonfunctioning link update!)</a></html>"
+       TrainLoad=threading.Thread(target=TrainingSheetBehavior, args=[designated_Columns, core_cols,Temp]);
+       TrainLoad.start();     
         
 def BidOpFileHandler():
         
