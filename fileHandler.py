@@ -77,8 +77,8 @@ def CTRUploadFilehandler():
       
     target_Variable='CTR' 
            
-    designated_Columns=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','search top IS','Search abs','Impr. share (IS)','Qual. score','IS lost to rank']         
-    core_cols=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','search top IS','Absolute Top Impression Share','Impr. share (IS)']     
+    designated_Columns=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Search top IS','Search abs','Impr. share (IS)','Qual. score','IS lost to rank']         
+    core_cols=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Search top IS','Absolute Top Impression Share','Impr. share (IS)']     
     
     print('target_Variable',target_Variable);
         
