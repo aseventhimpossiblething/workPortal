@@ -131,8 +131,12 @@ def CTRUploadFilehandler():
                      
            return "<html><a href='/BasisOfCTR'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet(nonfunctioning link update!)</a></html>"
        TrainLoad=threading.Thread(target=TrainingSheetBehavior, args=[designated_Columns, core_cols,Temp]);
-       TrainLoad.start();     
-        
+       TrainLoad.start();   
+       
+       
+       return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOpPending'><html>did not forward</html>"
+       
+
 def BidOpFileHandler():
         
     os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
