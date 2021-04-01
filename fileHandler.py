@@ -125,7 +125,7 @@ def CTRUploadFilehandler():
            print("Training async Running 3");     
            
            record_async_start=open("ForestLoadingQueue.txt","w")
-        1   record_async_start.write("100%")
+           record_async_start.write("100%")
            record_async_start.close();  
            
            print("Temp 2")
