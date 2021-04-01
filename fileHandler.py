@@ -98,14 +98,16 @@ def CTRUploadFilehandler():
            print("Training async Running 1");
                 
            rowCheck=rowcheck(Temp,designated_Columns) 
-           print("rowCheck : ",rowCheck) 
+           print("rowCheck 1 : ",rowCheck); 
            if len(rowCheck)>0:
+                print("rowCheck 2 : ",rowCheck); 
                 os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
                 rowCheck=str(rowCheck)
                 record_async_start=open("ForestLoadingQueue.txt","w+")
                 record_async_start.write(rowCheck)
                 record_async_start.close()
-                rowCheck=" The following Columns are missing "+rowCheck+" please resubmit sheet "
+                rowCheck=" The following Columns are missing "+rowCheck+" please resubmit sheet ";
+                print("rowCheck 3 : ",rowCheck); 
                 return rowCheck
            Temp=pandas.DataFrame(Temp,columns=designated_Columns)
            Temp.fillna(0)
@@ -131,7 +133,7 @@ def CTRUploadFilehandler():
            print("Temp 2")
            print(Temp)
                      
-           return "<html><a href='/BasisOfCTR'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet(nonfunctioning link update!)</a></html>"
+           return "<html><a href='/BasisOfCTR'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet - nonfunctioning link. update!</a></html>"
        TrainLoad=threading.Thread(target=TrainingSheetBehavior, args=[designated_Columns, core_cols,Temp]);
        TrainLoad.start();   
        
