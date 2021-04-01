@@ -33,8 +33,6 @@ def ValidatXLSXtime(arr):
             print(Valid)
         
 def rowcheck(Sheet,cols):
-    #print("ROWCHECK RUNNING")    
-     
     Temp=Sheet  
     designated_Columns=cols
     rowCheck=[];
@@ -79,8 +77,8 @@ def CTRUploadFilehandler():
       
     target_Variable='CTR' 
            
-    designated_Columns=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']         
-    core_cols=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)','Qual. score','IS lost to rank']     
+    designated_Columns=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Top Impr share','Search abs','Impr. share (IS)','Qual. score','IS lost to rank']         
+    core_cols=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)']     
     
     print('target_Variable',target_Variable);
         
@@ -101,7 +99,6 @@ def CTRUploadFilehandler():
            print("rowCheck 1 : ",rowCheck); 
            if len(rowCheck)>0:
                 print("rowCheck 2 : ",rowCheck); 
-                #os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
                 os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
                 rowCheck=str(rowCheck)
                 record_async_start=open("ForestLoadingQueue.txt","w+")
