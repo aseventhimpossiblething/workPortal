@@ -485,6 +485,25 @@ def acd():
     return BPD
 
 
+@app.route('/CTRPending')
+def acdc():
+    os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
+    readiness=open("ForestLoadingQueue.txt","r")
+    ready=readiness.read()
+    print(ready)
+    BPD='<meta http-equiv="refresh" content="45"><html>This Training Sheet will be added to the body of training Data  - '+ready+"</html>"
+    if ready=="100%":
+       BPD="render_template('BidOpPending.html')";
+    if ready.find("]")>-1:
+       BPD='<html>The following columns are missing from the Data set - '+ready+"</html>"           
+    #BPD=str(BPD2) 
+    print(BPD)
+    readiness.close()     
+    if ready=="100%":
+       return render_template('BidOpPending.html',CacheBreakStamp=datetime.now());
+    return BPD
+
+
 
 @app.route('/BidOptimisation')
 def BdOptmstn():
