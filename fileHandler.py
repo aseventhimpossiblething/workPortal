@@ -33,7 +33,7 @@ def ValidatXLSXtime(arr):
             print(Valid)
         
 def rowcheck(Sheet,cols):
-    print("ROWCHECK RUNNING")    
+    #print("ROWCHECK RUNNING")    
      
     Temp=Sheet  
     designated_Columns=cols
@@ -102,7 +102,7 @@ def CTRUploadFilehandler():
            if len(rowCheck)>0:
                 print("rowCheck 2 : ",rowCheck); 
                 #os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
-                os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+                os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
                 rowCheck=str(rowCheck)
                 record_async_start=open("ForestLoadingQueue.txt","w+")
                 record_async_start.write(rowCheck)
@@ -139,7 +139,7 @@ def CTRUploadFilehandler():
        TrainLoad.start();   
        
        
-       return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOpPending'><html>did not forward</html>"
+       return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/CTRPending'><html>did not forward</html>"
        
 
 def BidOpFileHandler():
