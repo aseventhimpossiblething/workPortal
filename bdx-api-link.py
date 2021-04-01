@@ -355,6 +355,10 @@ def BasisH():
 def BasisM():
  return send_file('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/BidOpSeed.xlsx', attachment_filename='BidOpSeed.xlsx')
 
+@app.route('/BasisOfCTRMachine')
+def BasisM():
+ return send_file('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/CTRSeed.xlsx', attachment_filename='CTRSeed.xlsx')
+
          
 @app.route('/OutPutOfBiOp1')
 def BasisN1():
