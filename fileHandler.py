@@ -140,7 +140,7 @@ def CTRUploadFilehandler():
        TrainLoad.start();   
        
        
-       return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/CTRPending'><html>did not forward</html>"
+       return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOpPending'><html>did not forward</html>"
        
 
 def BidOpFileHandler():
