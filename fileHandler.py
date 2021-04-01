@@ -69,7 +69,7 @@ def CTRUploadFilehandler():
     Temp=pandas.read_excel('Temp.xlsx')
     #print("Temp 1")
     print(Temp)
-    print(" - 2 - Define File Space and configure regressor")    
+    print(" Columns Name List ",list(Temp))    
     
     record_async_start=open("ForestLoadingQueue.txt","w")
     record_async_start.write("This should take no more than 5 min.. else resubmit form")
@@ -77,8 +77,8 @@ def CTRUploadFilehandler():
       
     target_Variable='CTR' 
            
-    designated_Columns=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Top Impr share','Search abs','Impr. share (IS)','Qual. score','IS lost to rank']         
-    core_cols=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Top Impr. share','Absolute Top Impression Share','Impr. share (IS)']     
+    designated_Columns=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','search top IS','Search abs','Impr. share (IS)','Qual. score','IS lost to rank']         
+    core_cols=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','search top IS','Absolute Top Impression Share','Impr. share (IS)']     
     
     print('target_Variable',target_Variable);
         
@@ -125,7 +125,7 @@ def CTRUploadFilehandler():
            print("Training async Running 3");     
            
            record_async_start=open("ForestLoadingQueue.txt","w")
-           record_async_start.write("100%")
+        1   record_async_start.write("100%")
            record_async_start.close();  
            
            print("Temp 2")
