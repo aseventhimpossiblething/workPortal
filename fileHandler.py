@@ -97,7 +97,8 @@ def CTRUploadFilehandler():
            
            print("Training async Running 1");
                 
-           rowCheck=rowcheck(Temp,designated_Columns)     
+           rowCheck=rowcheck(Temp,designated_Columns) 
+           print("rowCheck : ",rowCheck) 
            if len(rowCheck)>0:
                 os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
                 rowCheck=str(rowCheck)
