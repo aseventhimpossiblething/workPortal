@@ -93,6 +93,8 @@ def CTRUploadFilehandler():
            core_cols=x2   
            Temp=Temp     
            os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
+           
+           print("Training async Running 1");
                 
            rowCheck=rowcheck(Temp,designated_Columns)     
            if len(rowCheck)>0:
@@ -110,12 +112,16 @@ def CTRUploadFilehandler():
            record_async_start.close() 
            Temp['Match Number']=BidOpAssist.Match_num(Temp);
                    
+           print("Training async Running 2");
+           
            Temp['Market Number']=BidOpAssist.MarketNumberGen(Temp)
            core=pandas.read_excel('BidOpSeed.xlsx')
            core=core.append(Temp, sort='False')
            core=pandas.DataFrame(core,columns=core_cols)     
            core.to_excel("BidOpSeed.xlsx")
-                       
+           
+           print("Training async Running 3");     
+           
            record_async_start=open("ForestLoadingQueue.txt","w")
            record_async_start.write("100%")
            record_async_start.close();  
