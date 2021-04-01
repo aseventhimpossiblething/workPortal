@@ -80,7 +80,7 @@ def CTRUploadFilehandler():
     #designated_Columns=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Search top IS','Search abs','Search impr. share']         
     #core_cols=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Search top IS','Absolute Top Impression Share','Impr. share (IS)']  
     core_cols=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Search top IS','Search abs','Search impr. share']  
-    designated_Columns=['Campaign','Ad group']
+    designated_Columns=['Search top IS','Search abs','Search impr. share']
     
     print('target_Variable',target_Variable);
         
@@ -110,18 +110,18 @@ def CTRUploadFilehandler():
                 print("rowCheck 3 : ",rowCheck); 
                 return rowCheck
            Temp=pandas.DataFrame(Temp,columns=designated_Columns)
-           print("CHECK COLUMNS ARE MATCHED TO TILES") 
+           print("CHECK COLUMNS ARE MATCHED TO TITLES") 
            print(Temp)
            Temp.fillna(0)
            record_async_start=open("ForestLoadingQueue.txt","w+")
            record_async_start.write("15%")
            record_async_start.close() 
-           Temp['Match Number']=BidOpAssist.Match_num(Temp);
+           #Temp['Match Number']=BidOpAssist.Match_num(Temp);
                    
            print("Training async Running 2");
            
-           Temp['Market Number']=BidOpAssist.MarketNumberGen(Temp)
-           core=pandas.read_excel('BidOpSeed.xlsx')
+           #Temp['Market Number']=BidOpAssist.MarketNumberGen(Temp)
+           core=pandas.read_excel('CTRSeed.xlsx')
            core=core.append(Temp, sort='False')
            core=pandas.DataFrame(core,columns=core_cols)     
            core.to_excel("BidOpSeed.xlsx")
