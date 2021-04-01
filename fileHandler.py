@@ -101,7 +101,8 @@ def CTRUploadFilehandler():
            print("rowCheck 1 : ",rowCheck); 
            if len(rowCheck)>0:
                 print("rowCheck 2 : ",rowCheck); 
-                os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
+                #os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
+                os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
                 rowCheck=str(rowCheck)
                 record_async_start=open("ForestLoadingQueue.txt","w+")
                 record_async_start.write(rowCheck)
