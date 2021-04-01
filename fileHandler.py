@@ -33,6 +33,7 @@ def ValidatXLSXtime(arr):
             print(Valid)
         
 def rowcheck(Sheet,cols):
+    print("ROWCHECK RUNNING")    
      
     Temp=Sheet  
     designated_Columns=cols
