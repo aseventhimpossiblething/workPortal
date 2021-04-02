@@ -224,7 +224,7 @@ def CTROverview(desiCols,corecols,change,Temp):
         Temp=googConverterReverse(Temp)
     """
     print(Temp)
-    print(Temp.drop(['Campaign','Ad group'])
+    print(Temp.drop(['Campaign','Ad group']))
      
 
    
