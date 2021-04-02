@@ -124,7 +124,7 @@ def CTRUploadFilehandler():
            core=pandas.read_excel('CTRSeed.xlsx')
            core=core.append(Temp, sort='False')
            core=pandas.DataFrame(core,columns=core_cols)     
-           core.to_excel("BidOpSeed.xlsx")
+           core.to_excel("CTRSeed.xlsx")
            
            print("Training async Running 3");     
            
@@ -135,12 +135,12 @@ def CTRUploadFilehandler():
            print("Temp 2")
            print(Temp)
                      
-           return "<html><a href='/BasisOfCTR'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet - nonfunctioning link. update!</a></html>"
+           return "<html><a href='/CTRPending'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet - nonfunctioning link. update!</a></html>"
        TrainLoad=threading.Thread(target=TrainingSheetBehavior, args=[designated_Columns, core_cols,Temp]);
        TrainLoad.start();   
        
        
-       return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOpPending'><html>did not forward</html>"
+       return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/CTRPending'><html>did not forward</html>"
        
 
 def BidOpFileHandler():
