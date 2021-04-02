@@ -137,8 +137,12 @@ def CTRUploadFilehandler():
                      
            return "<html><a href='/CTRPending'>This Training Sheet will be added to the body of training Data Click to view Basis Sheet - nonfunctioning link. update!</a></html>"
        TrainLoad=threading.Thread(target=TrainingSheetBehavior, args=[designated_Columns, core_cols,Temp]);
-       TrainLoad.start();   
-       
+       TrainLoad.start(); 
+     
+    return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOptimisation'><html>did not forward</html>"         
+        
+    
+    """   
     else:   
        print("else path")
        Temp=pandas.DataFrame(Temp,columns=designated_Columns);
@@ -164,7 +168,7 @@ def CTRUploadFilehandler():
        BidOpAssistAsync.start(); 
        print("Just After threading.thread")  
        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOptimisation'><html>did not forward</html>"         
-        
+    """    
     
 
 def BidOpFileHandler():
