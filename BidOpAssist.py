@@ -165,6 +165,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     .fillna(0).replace(" --",0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
     XofSeed=Seed.drop(['Campaign','Ad group'],axis=1);
     YofSeed=Seed[PredVar];
+    print(XofSeed)
     
     #ImpressionMetricXofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
     #ImpressionMetricYofSeed=Seed[PredVar];
