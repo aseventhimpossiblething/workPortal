@@ -181,9 +181,10 @@ def CTROverview(desiCols,corecols,change,Temp):
     Temp=Temp.replace('>','').replace('<','').replace('%','').replace('-',0).fillna(0).replace('--',0).fillna(0)\
     .replace(' --',0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
      
-        
+    """   
     Temp['Match Number']=Match_num(Temp);
     Temp['Market Number']=MarketNumberGen(Temp)
+    """
     
     
    
@@ -198,7 +199,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols);
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1);
-    TempForOutPutImpression=TempForOutPut.drop(['Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate'],axis=1);
+    TempForOutPutImpression=TempForOutPut.drop([],axis=1);
     
     
     #print(TempForOutPut)
