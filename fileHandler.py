@@ -142,7 +142,7 @@ def CTRUploadFilehandler():
        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/CTRPending'><html>did not forward</html>"         
         
     
-    """ 
+    
     else:   
        print("else path")
        Temp=pandas.DataFrame(Temp,columns=designated_Columns);
@@ -154,6 +154,7 @@ def CTRUploadFilehandler():
        print(newDesignatedColP) 
        rowCheck=rowcheck(Temp,newDesignatedColP)     
        print(len(rowCheck)," ",rowCheck); 
+       print("rowcheck of else path conducted") 
        if len(rowCheck)>0:
                 os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
                 rowCheck=str(rowCheck)
@@ -167,9 +168,9 @@ def CTRUploadFilehandler():
        BidOpAssistAsync=threading.Thread(target=BidOpAssist.BidOpOverview,args=[designated_Columns,core_cols,target_Variable,Temp]);
        BidOpAssistAsync.start(); 
        print("Just After threading.thread")  
-       return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOptimisation'><html>did not forward</html>"         
+    return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOptimisation'><html>did not forward</html>"         
         
-    """
+    
 
 def BidOpFileHandler():
         
