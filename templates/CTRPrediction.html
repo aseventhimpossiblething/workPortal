@@ -1,0 +1,30 @@
+<html>
+
+{%extends 'DefaultTemplate.html'%}
+
+{% block content %}
+
+
+
+<p>Predicted CTR Output</p>
+<p>{{CacheBreakStamp}}</p> 
+
+ 
+
+
+
+<a href="/OutPutOfCTRPred?ref={{CacheBreakStamp}}"><p>CTR Prediction Output - Click to View as Excel Sheet</p></a>
+<!---<a href="/OutPutOfBiOp2?{{CacheBreakStamp}}"><p>Bid Op Format 2(depricating) - Click to View as Excel Sheet</p></a>-->
+<!---<a href="/OutPutOfBiOp3?{{CacheBreakStamp}}"><p>Bid Op Format 3(depricating) - Click to View as Excel Sheet</p></a>--->
+
+ 
+
+
+
+
+
+ 
+
+{% endblock %}
+
+</html>
