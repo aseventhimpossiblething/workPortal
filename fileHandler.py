@@ -139,9 +139,33 @@ def CTRUploadFilehandler():
        TrainLoad=threading.Thread(target=TrainingSheetBehavior, args=[designated_Columns, core_cols,Temp]);
        TrainLoad.start();   
        
-       
-       return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/CTRPending'><html>did not forward</html>"
-       
+    else:   
+       print("else path")
+       Temp=pandas.DataFrame(Temp,columns=designated_Columns);
+       locOfTarg=designated_Columns.index(target_Variable)
+       newDesignatedColP1=designated_Columns[:locOfTarg] 
+       newDesignatedColP2=designated_Columns[locOfTarg+1:]
+       newDesignatedColP=newDesignatedColP1+newDesignatedColP2
+       print(designated_Columns)
+       print(newDesignatedColP) 
+       rowCheck=rowcheck(Temp,newDesignatedColP)     
+       print(len(rowCheck)," ",rowCheck); 
+       if len(rowCheck)>0:
+                os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
+                rowCheck=str(rowCheck)
+                record_async_start=open("ForestLoadingQueue.txt","w+")
+                record_async_start.write(rowCheck)
+                record_async_start.close()
+                rowCheck=" The following Columns are missing "+rowCheck+" please resubmit sheet "
+                return rowCheck
+              
+       print("Just Before threading.thread")
+       BidOpAssistAsync=threading.Thread(target=BidOpAssist.BidOpOverview,args=[designated_Columns,core_cols,target_Variable,Temp]);
+       BidOpAssistAsync.start(); 
+       print("Just After threading.thread")  
+       return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOptimisation'><html>did not forward</html>"         
+        
+    
 
 def BidOpFileHandler():
         
