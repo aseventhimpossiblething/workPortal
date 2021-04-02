@@ -175,7 +175,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     
     Model=RandomForestRegressor();
     Model.fit(XofSeed,YofSeed);
-    FeatureReportCore1=Model.feature_importances_;
+    #FeatureReportCore1=Model.feature_importances_;
     
     #ImpressionModel=RandomForestRegressor();
     #ImpressionModel.fit(ImpressionMetricXofSeed,ImpressionMetricYofSeed);
