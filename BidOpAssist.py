@@ -229,7 +229,8 @@ def CTROverview(desiCols,corecols,change,Temp):
     """
     print(TempOut)
     print(TempOut.drop(['Campaign','Ad group'],axis=1))
-     
+    print(FeatureReportCore1)
+    print(predict_cols) 
 
    
     print("------------------WAITING TO WRITE TO EXCEL------------------------")
