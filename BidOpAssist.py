@@ -141,7 +141,7 @@ def impressionPercentChangeColumn(frame):
 def CTROverview(desiCols,corecols,change,Temp):
     print("in CTROverview ");
     Temp=Temp;
-    print(Temp)
+    #print(Temp)
         
     PredVar=change    
     designated_Columns=desiCols;
@@ -155,7 +155,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     predict_colsP1=corecols[:loc]
     predict_colsP2=corecols[loc+1:]
     predict_cols=predict_colsP1+predict_colsP2
-        
+    print("Predicted Columns - ",predict_cols)    
     
     
     os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/');
@@ -169,15 +169,15 @@ def CTROverview(desiCols,corecols,change,Temp):
     #ImpressionMetricXofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
     #ImpressionMetricYofSeed=Seed[PredVar];
     
-    ImpressionMetricXofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
-    ImpressionMetricYofSeed=Seed[PredVar];
+    #ImpressionMetricXofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
+    #ImpressionMetricYofSeed=Seed[PredVar];
           
     
     Model=RandomForestRegressor();
     Model.fit(XofSeed,YofSeed);
     
-    ImpressionModel=RandomForestRegressor();
-    ImpressionModel.fit(ImpressionMetricXofSeed,ImpressionMetricYofSeed);
+    #ImpressionModel=RandomForestRegressor();
+    #ImpressionModel.fit(ImpressionMetricXofSeed,ImpressionMetricYofSeed);
     
     Temp=Temp.replace('>','').replace('<','').replace('%','').replace('-',0).fillna(0).replace('--',0).fillna(0)\
     .replace(' --',0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
@@ -200,7 +200,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols);
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1);
-    TempForOutPutImpression=TempForOutPut.drop([],axis=1);
+    #TempForOutPutImpression=TempForOutPut.drop([],axis=1);
     
     print("T--------------tempForOutPut----------------------------------")
     print(TempForOutPut)
@@ -211,10 +211,11 @@ def CTROverview(desiCols,corecols,change,Temp):
     
     
     OutputBid=Model.predict(TempForOutPut); 
-    ImpressionOutputBid=ImpressionModel.predict(TempForOutPutImpression)
+    #ImpressionOutputBid=ImpressionModel.predict(TempForOutPutImpression)
+    TempOut=Temp.drop([PreVar])
    
     PredVar="Predicted "+PredVar 
-    Temp[PredVar]=OutputBid;
+    TempOut[PredVar]=OutputBid;
     #Temp['Impression Metrics Based Bid']=ImpressionOutputBid
     """
     Temp['Change']=percentChangeColumn(Temp,'New Bid');
@@ -223,17 +224,17 @@ def CTROverview(desiCols,corecols,change,Temp):
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(Temp)
     """
-    print(Temp)
-    print(Temp.drop(['Campaign','Ad group'],axis=1))
+    print(TempOut)
+    print(TempOut.drop(['Campaign','Ad group'],axis=1))
      
 
    
-    print("-------------------WAITING TO WRITE TO EXCEL------------------------")
+    print("------------------WAITING TO WRITE TO EXCEL------------------------")
     
        
   
     
-    Temp.to_excel("outputsheet.xlsx");
+    TempOut.to_excel("outputsheet.xlsx");
     
 
     print('end of overview');
@@ -243,7 +244,7 @@ def CTROverview(desiCols,corecols,change,Temp):
 
     record_async_start.close(); 
    
-    return Temp  
+    return TempOut  
     
     
     
