@@ -206,7 +206,8 @@ def CTROverview(desiCols,corecols,change,Temp):
     print(TempForOutPut)
     #print(TempForOutPut[[TempForOutPut.columns.values[0],TempForOutPut.columns.values[1],\
                          #TempForOutPut.columns.values[2],TempForOutPut.columns.values[3]]])
-    
+        
+    print(list(TempForOutPut))
     
     
     OutputBid=Model.predict(TempForOutPut); 
