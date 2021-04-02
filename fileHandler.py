@@ -62,7 +62,7 @@ def googConverter(X):
         
 
 def CTRUploadFilehandler():
-    print(" - 1 - Define File Space and configure regressor")    
+    #print(" - 1 - Define File Space and configure regressor")    
     os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
     #print('BidOpSeed.xlsx')
     request.files['sheet'].save("Temp.xlsx")
@@ -142,7 +142,7 @@ def CTRUploadFilehandler():
        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/CTRPending'><html>did not forward</html>"         
         
     
-     
+    """ 
     else:   
        print("else path")
        Temp=pandas.DataFrame(Temp,columns=designated_Columns);
@@ -169,7 +169,7 @@ def CTRUploadFilehandler():
        print("Just After threading.thread")  
        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOptimisation'><html>did not forward</html>"         
         
-    
+    """
 
 def BidOpFileHandler():
         
