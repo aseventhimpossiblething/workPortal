@@ -168,7 +168,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     #ImpressionMetricXofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
     #ImpressionMetricYofSeed=Seed[PredVar];
     
-    ImpressionMetricXofSeed=Seed.drop(['Campaign','Ad group','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate',PredVar],axis=1);
+    ImpressionMetricXofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
     ImpressionMetricYofSeed=Seed[PredVar];
           
     
