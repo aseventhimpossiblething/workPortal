@@ -168,7 +168,7 @@ def CTRUploadFilehandler():
        BidOpAssistAsync=threading.Thread(target=BidOpAssist.CTROverview,args=[designated_Columns,core_cols,target_Variable,Temp]);
        BidOpAssistAsync.start(); 
        print("Just After threading.thread")  
-    return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOptimisation'><html>did not forward</html>"         
+    return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/CTRPrediction'><html>did not forward</html>"         
         
     
 
