@@ -142,7 +142,7 @@ def CTRUploadFilehandler():
     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/CTRPending'><html>did not forward</html>"         
         
     
-    """   
+     
     else:   
        print("else path")
        Temp=pandas.DataFrame(Temp,columns=designated_Columns);
@@ -168,7 +168,7 @@ def CTRUploadFilehandler():
        BidOpAssistAsync.start(); 
        print("Just After threading.thread")  
        return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/BidOptimisation'><html>did not forward</html>"         
-    """    
+        
     
 
 def BidOpFileHandler():
