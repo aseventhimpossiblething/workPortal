@@ -212,7 +212,8 @@ def CTROverview(desiCols,corecols,change,Temp):
     
     OutputBid=Model.predict(TempForOutPut); 
     #ImpressionOutputBid=ImpressionModel.predict(TempForOutPutImpression)
-    TempOut=Temp.drop([PredVar])
+    #TempOut=Temp.drop([PredVar])
+    TempOut=Temp
    
     newVar="Predicted "+PredVar 
     TempOut[newVar]=OutputBid;
