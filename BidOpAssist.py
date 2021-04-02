@@ -163,11 +163,13 @@ def CTROverview(desiCols,corecols,change,Temp):
     Seed=pandas.DataFrame(Seed,columns=core_cols);
     Seed=Seed.replace('>','').replace('<','').replace('%','').replace("-",0).fillna(0).replace("--",0)\
     .fillna(0).replace(" --",0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
-    XofSeed=Seed.drop(['Campaign','Ad group'],axis=1);
+    XofSeed=Seed.drop(['Campaign','Ad group','CTR'],axis=1);
     YofSeed=Seed[PredVar];
     print(" XofSeed - ")
     print(XofSeed)
     print(XofSeed[PredVar])
+    print("YofSeed")
+    print(YofSeed)
     
     #ImpressionMetricXofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
     #ImpressionMetricYofSeed=Seed[PredVar];
