@@ -202,7 +202,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1);
     TempForOutPutImpression=TempForOutPut.drop([],axis=1);
     
-    
+    print("T--------------tempForOutPut----------------------------------")
     print(TempForOutPut)
     #print(TempForOutPut[[TempForOutPut.columns.values[0],TempForOutPut.columns.values[1],\
                          #TempForOutPut.columns.values[2],TempForOutPut.columns.values[3]]])
