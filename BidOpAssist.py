@@ -231,7 +231,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(Temp)
     """
-    FeatureReportCore2=TempOut.drop(['Campaign','Ad group',newVar],axis=1)
+    FeatureReportCore2=list(TempOut.drop(['Campaign','Ad group',newVar],axis=1))
     print(TempOut)
     print(TempOut.drop(['Campaign','Ad group'],axis=1))
     print(FeatureReportCore1)
