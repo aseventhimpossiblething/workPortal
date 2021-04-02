@@ -223,10 +223,12 @@ def CTROverview(desiCols,corecols,change,Temp):
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(Temp)
     """
+    print(Temp)
      
 
    
     print("-------------------WAITING TO WRITE TO EXCEL------------------------")
+    
        
   
     
