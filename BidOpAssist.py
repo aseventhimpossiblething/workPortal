@@ -163,7 +163,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     Seed=pandas.DataFrame(Seed,columns=core_cols);
     Seed=Seed.replace('>','').replace('<','').replace('%','').replace("-",0).fillna(0).replace("--",0)\
     .fillna(0).replace(" --",0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
-    XofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
+    XofSeed=Seed.drop(['Campaign','Ad group'],axis=1);
     YofSeed=Seed[PredVar];
     
     #ImpressionMetricXofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
@@ -188,8 +188,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     Temp['Market Number']=MarketNumberGen(Temp)
     """
     
-    
-   
+       
     #print("Temp columns -- ",Temp.columns.values)
     
     #ImpressionMetricXofSeed=Seed.drop(['Campaign','Ad group','Clicks','CTR','Avg. CPC','Spend','Conv.','CPA','Conv. rate',PredVar],axis=1);
