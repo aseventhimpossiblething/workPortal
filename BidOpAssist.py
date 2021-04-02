@@ -181,6 +181,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     Model=RandomForestRegressor();
     Model.fit(XofSeed,YofSeed);
     FeatureReportCore1=Model.feature_importances_;
+    print(FeatureReportCore1)
     
     #ImpressionModel=RandomForestRegressor();
     #ImpressionModel.fit(ImpressionMetricXofSeed,ImpressionMetricYofSeed);
@@ -208,11 +209,11 @@ def CTROverview(desiCols,corecols,change,Temp):
     #TempForOutPutImpression=TempForOutPut.drop([],axis=1);
     
     print("T--------------tempForOutPut----------------------------------")
-    print(TempForOutPut)
+    #print(TempForOutPut)
     #print(TempForOutPut[[TempForOutPut.columns.values[0],TempForOutPut.columns.values[1],\
                          #TempForOutPut.columns.values[2],TempForOutPut.columns.values[3]]])
         
-    print(list(TempForOutPut))
+    #print(list(TempForOutPut))
     
     
     OutputBid=Model.predict(TempForOutPut); 
@@ -232,8 +233,8 @@ def CTROverview(desiCols,corecols,change,Temp):
         Temp=googConverterReverse(Temp)
     """
     FeatureReportCore2=list(TempOut.drop(['Campaign','Ad group',newVar],axis=1))
-    print(TempOut)
-    print(TempOut.drop(['Campaign','Ad group'],axis=1))
+    #print(TempOut)
+    #print(TempOut.drop(['Campaign','Ad group'],axis=1))
     print(FeatureReportCore1)
     print(FeatureReportCore2) 
 
