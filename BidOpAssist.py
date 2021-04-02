@@ -213,15 +213,16 @@ def CTROverview(desiCols,corecols,change,Temp):
     OutputBid=Model.predict(TempForOutPut); 
     ImpressionOutputBid=ImpressionModel.predict(TempForOutPutImpression)
    
+    
     Temp[PredVar]=OutputBid;
-    Temp['Impression Metrics Based Bid']=ImpressionOutputBid
-   
+    #Temp['Impression Metrics Based Bid']=ImpressionOutputBid
+    """
     Temp['Change']=percentChangeColumn(Temp,'New Bid');
     Temp['Impression Metrics Based Change']=percentChangeColumn(Temp,'Impression Metrics Based Bid')
     
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(Temp)
-    
+    """
      
 
    
