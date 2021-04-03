@@ -1,0 +1,31 @@
+<html>
+
+{%extends 'DefaultTemplate.html'%}
+
+{% block content %}
+
+
+
+<p>Bid Op Output</p>
+<p>{{CacheBreakStamp}}</p> 
+
+ 
+
+
+
+<a href="/OutPutOfBiOp1?ref={{CacheBreakStamp}}"><p>Bid Op Output - Click to View as Excel Sheet</p></a>
+
+<a href="/OutPutOfCTRfeatureReport'?{{CacheBreakStamp}}"><p>CTR Feature Weights - Click to View as Excel Sheet</p></a>
+<!---<a href="/OutPutOfBiOp3?{{CacheBreakStamp}}"><p>Bid Op Format 3(depricating) - Click to View as Excel Sheet</p></a>--->
+
+ 
+
+
+
+
+
+ 
+
+{% endblock %}
+
+</html>
