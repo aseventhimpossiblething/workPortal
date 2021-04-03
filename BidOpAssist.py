@@ -237,8 +237,11 @@ def CTROverview(desiCols,corecols,change,Temp):
     #print(TempOut.drop(['Campaign','Ad group'],axis=1))
     FeatureReportCore1=pandas.DataFrame(FeatureReportCore1,columns=['Weights'])
     FeatureReportCore2=pandas.DataFrame(FeatureReportCore2,columns=['Variables'])
+    FeatureReport=pandas.DataFrame(FeatureReportCore1)
+    FeatureReport['Variables']=FeatureReportCore2
     print(FeatureReportCore1)
-    print(FeatureReportCore2) 
+    print(FeatureReportCore2)
+    print(FeatureReport)
 
    
     print("------------------WAITING TO WRITE TO EXCEL------------------------")
