@@ -77,14 +77,14 @@ def CTRUploadFilehandler():
       
     target_Variable='CTR' 
            
-    designated_Columns=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Search top IS','Search abs. top IS','Search impr. share']  
-    core_cols=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Search top IS','Search abs. top IS','Search impr. share']  
+    #designated_Columns=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Search top IS','Search abs. top IS','Search impr. share']  
+    @core_cols=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Search top IS','Search abs. top IS','Search impr. share']  
     #core_cols=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Search top IS','Absolute Top Impression Share','Impr. share (IS)']  
     #core_cols=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Search top IS','Search abs. top IS','Search impr. share']  
     #designated_Columns=['Search top IS','Search abs. top IS','Search impr. share']
     
-    #designated_Columns=['Campaign','Ad group',target_Variable,'Search top IS','Search abs. top IS','Search impr. share']  
-    #core_cols=['Campaign','Ad group',target_Variable,'Search top IS','Search abs. top IS','Search impr. share']      
+    designated_Columns=['Campaign','Ad group',target_Variable,'Search top IS','Search abs. top IS','Search impr. share']  
+    core_cols=['Campaign','Ad group',target_Variable,'Search top IS','Search abs. top IS','Search impr. share']      
         
         
     print('target_Variable',target_Variable);
