@@ -163,7 +163,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     Seed=pandas.DataFrame(Seed,columns=core_cols);
     Seed=Seed.replace('>','').replace('<','').replace('%','').replace("-",0).fillna(0).replace("--",0)\
     .fillna(0).replace(" --",0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
-    XofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
+    XofSeed=Seed.drop([PredVar],axis=1);
     YofSeed=Seed[PredVar];
     print(" XofSeed - ")
     print(XofSeed)
@@ -205,7 +205,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     
     
     TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols);
-    TempForOutPut=TempForOutPut.drop(['Campaign','Ad group'],axis=1);
+    #TempForOutPut=TempForOutPut.drop([],axis=1);
     #TempForOutPutImpression=TempForOutPut.drop([],axis=1);
     
     print("T--------------tempForOutPut----------------------------------")
@@ -232,7 +232,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(Temp)
     """
-    FeatureReportCore2=list(TempOut.drop(['Campaign','Ad group',newVar],axis=1))
+    FeatureReportCore2=list(TempOut.drop([newVar],axis=1))
     #print(TempOut)
     #print(TempOut.drop(['Campaign','Ad group'],axis=1))
     FeatureReportCore1=pandas.DataFrame(FeatureReportCore1,columns=['Weights'])
