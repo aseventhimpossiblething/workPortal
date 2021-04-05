@@ -37,7 +37,7 @@ def rowcheck(Sheet,cols):
     designated_Columns=cols
     rowCheck=[];
     for cols in designated_Columns:
-        colPresent=str(Temp.columns).find(cols);
+        colPresent=str(Temp.columns).find(str(cols));
         if colPresent==-1: 
            rowCheck.append(cols);
     return rowCheck; 
