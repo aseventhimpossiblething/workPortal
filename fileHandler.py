@@ -41,8 +41,8 @@ def rowcheck(Sheet,cols):
     print("Length of List ",lc)
     
     for cols in designated_Columns:
-        cols=str(cols)
-        colPresent=str(Temp.columns).find(cols);
+        #cols=cols
+        colPresent=Temp.columns.find(cols);
         print(cols," ",colPresent);
         print(cols[colPresent:])
         if colPresent==-1: 
