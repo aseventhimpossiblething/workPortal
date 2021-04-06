@@ -18,7 +18,6 @@ from openpyxl import load_workbook
 import xlsxwriter
 
 
-
 SheetsFileLocation="/var/www/workPortal/Sheets"
 currentCommunitiesLocation="/var/www/workPortal/Sheets/CommunityUpdates/currentCommunities"
 currentGoogleLocation="/var/www/workPortal/Sheets/CommunityUpdates/Google/currentGoogle"
@@ -73,9 +72,8 @@ def googConverter(X):
     #print(Temp.columns)    
     print("GoogConverter end")    
     return Temp
-      
+    
         
-
 def CTRUploadFilehandler():
     #print(" - 1 - Define File Space and configure regressor")    
     os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
@@ -166,15 +164,16 @@ def CTRUploadFilehandler():
     else:   
        print("else path")
        print(Temp);
-       designated_Columns=designated_Columns+['Display URL domain'] 
+       ElseCols=['Abs. Top of page rate','Top of page rate','Display URL domain']  
+       designated_Columns=designated_Columns+['Display URL domain']+ElseCols 
        #Temp=pandas.DataFrame(Temp,columns=designated_Columns);
        locOfTarg=designated_Columns.index(target_Variable)
        newDesignatedColP1=designated_Columns[:locOfTarg] 
        newDesignatedColP2=designated_Columns[locOfTarg+1:]
        newDesignatedColP=newDesignatedColP1+newDesignatedColP2
-       print(designated_Columns)
-       print(newDesignatedColP) 
-       rowcheck(Temp,designated_Columns); 
+       #print(designated_Columns)
+       #print(newDesignatedColP) 
+       #rowcheck(Temp,designated_Columns); 
        rowCheck2=rowcheck(Temp,newDesignatedColP)     
        print(len(rowCheck2)," Before official rowCheck ",rowCheck2); 
        #print("rowcheck 2 of else path conducted") 
@@ -195,7 +194,6 @@ def CTRUploadFilehandler():
        print("Just After threading.thread")  
     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/CTRPrediction'><html>did not forward</html>"         
         
-    
 
 def BidOpFileHandler():
         
