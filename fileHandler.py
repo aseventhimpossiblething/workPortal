@@ -47,6 +47,8 @@ def rowcheck(Sheet,cols):
         print(cols[colPresent:])
         if colPresent==-1: 
            rowCheck.append(cols);
+        elif colPresent > lc:
+           rowCheck.append(cols);     
         
     return rowCheck; 
 
