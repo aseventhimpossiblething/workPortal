@@ -151,7 +151,7 @@ def CTRUploadFilehandler():
     else:   
        print("else path")
        print(Temp);
-       designated_Columns=designated_Columns+'Display URL domain' 
+       designated_Columns=designated_Columns+['Display URL domain'] 
        Temp=pandas.DataFrame(Temp,columns=designated_Columns);
        locOfTarg=designated_Columns.index(target_Variable)
        newDesignatedColP1=designated_Columns[:locOfTarg] 
