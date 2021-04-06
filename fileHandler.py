@@ -34,7 +34,9 @@ def ValidatXLSXtime(arr):
         
 def rowcheck(Sheet,cols):
     print("rowCheck run")    
-    Temp=Sheet  
+    Temp=Sheet
+    print("Temp form inside rowCheck")    
+    print(Temp)    
     designated_Columns=cols
     rowCheck=[];
     TC=str(Temp.columns)    
@@ -165,7 +167,7 @@ def CTRUploadFilehandler():
        print("else path")
        print(Temp);
        designated_Columns=designated_Columns+['Display URL domain'] 
-       Temp=pandas.DataFrame(Temp,columns=designated_Columns);
+       #Temp=pandas.DataFrame(Temp,columns=designated_Columns);
        locOfTarg=designated_Columns.index(target_Variable)
        newDesignatedColP1=designated_Columns[:locOfTarg] 
        newDesignatedColP2=designated_Columns[locOfTarg+1:]
