@@ -32,7 +32,7 @@ def ValidatXLSXtime(arr):
             print(Valid)
         
 def rowcheck(Sheet,cols):
-    print("rowCheck run")    
+    print("rowCheck run") 
     Temp=Sheet
     print("Temp form inside rowCheck")    
     print(Temp)    
@@ -43,6 +43,7 @@ def rowcheck(Sheet,cols):
     print("Temp.columns")    
     print(TC)    
     print("Length of List ",lc)
+    
     
     for cols in designated_Columns:
         #cols=cols
@@ -164,8 +165,11 @@ def CTRUploadFilehandler():
     else:   
        print("else path")
        print(Temp);
-       ElseCols=['Abs. Top of page rate','Top of page rate','Display URL domain']  
-       designated_Columns=designated_Columns+['Display URL domain']+ElseCols 
+       ElseCols=['Abs. Top of page rate','Top of page rate','Display URL domain'];
+       if str(Temp.columns).find(ElseCols[0]):
+          print(ElseCols[0]," Not Found----------------------");      
+                
+       designated_Columns=designated_Columns+['Display URL domain'] 
        #Temp=pandas.DataFrame(Temp,columns=designated_Columns);
        locOfTarg=designated_Columns.index(target_Variable)
        newDesignatedColP1=designated_Columns[:locOfTarg] 
