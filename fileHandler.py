@@ -37,14 +37,14 @@ def rowcheck(Sheet,cols):
     Temp=Sheet  
     designated_Columns=cols
     rowCheck=[];
-    lc=len(cols);
+    lc=len(Temp.columns);
     print("Length of List ",lc)
     
     for cols in designated_Columns:
         #cols=cols
-        colPresent=Temp.columns.find(cols);
+        colPresent=str(Temp.columns).find(cols);
         print(cols," ",colPresent);
-        print(cols[colPresent:])
+        print(lc[colPresent:])
         if colPresent==-1: 
            rowCheck.append(cols);
         elif colPresent > lc:
