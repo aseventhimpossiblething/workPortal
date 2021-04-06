@@ -87,7 +87,7 @@ def CTRUploadFilehandler():
     core_cols=[target_Variable,'Search impr. share','Impr. (Top) %','Impr. (Abs. Top) %']      
         
         
-    print('target_Variable',target_Variable);
+    #print('target_Variable',target_Variable);
         
     isTrainingSheet=str(Temp.columns).find(target_Variable); 
     if isTrainingSheet!=-1:
@@ -150,6 +150,8 @@ def CTRUploadFilehandler():
     
     else:   
        print("else path")
+       print(Temp);
+       designated_Columns=designated_Columns+'Display URL domain' 
        Temp=pandas.DataFrame(Temp,columns=designated_Columns);
        locOfTarg=designated_Columns.index(target_Variable)
        newDesignatedColP1=designated_Columns[:locOfTarg] 
@@ -158,8 +160,8 @@ def CTRUploadFilehandler():
        print(designated_Columns)
        print(newDesignatedColP) 
        rowCheck=rowcheck(Temp,newDesignatedColP)     
-       print(len(rowCheck)," ",rowCheck); 
-       print("rowcheck of else path conducted") 
+       #print(len(rowCheck)," ",rowCheck); 
+       #print("rowcheck of else path conducted") 
        if len(rowCheck)>0:
                 os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
                 rowCheck=str(rowCheck)
