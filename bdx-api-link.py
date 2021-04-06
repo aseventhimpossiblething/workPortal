@@ -366,7 +366,7 @@ def BasisN1():
 
 @app.route('/OutPutOfCTRPred')
 def BasisN2():
- return send_file('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/outputsheet.xlsx', attachment_filename='Bid0p5heet1.xlsx')
+ return send_file('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/ctroutputsheet.xlsx', attachment_filename='Bid0p5heet1.xlsx')
 
 @app.route('/OutPutOfCTRfeatureReport')
 def BasisN3():
