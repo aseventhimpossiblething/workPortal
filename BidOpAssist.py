@@ -141,7 +141,8 @@ def impressionPercentChangeColumn(frame):
 def CTROverview(desiCols,corecols,change,Temp):
     print("in CTROverview ");
     Temp=Temp;
-    #print(Temp)
+    print(" First iteration Temp")
+    print(Temp)
         
     PredVar=change    
     designated_Columns=desiCols;
