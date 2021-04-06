@@ -37,6 +37,9 @@ def rowcheck(Sheet,cols):
     Temp=Sheet  
     designated_Columns=cols
     rowCheck=[];
+    lc=len(cols);
+    print("Length of List ",lc)
+    
     for cols in designated_Columns:
         cols=str(cols)
         colPresent=str(Temp.columns).find(cols);
@@ -44,6 +47,7 @@ def rowcheck(Sheet,cols):
         print(cols[colPresent:])
         if colPresent==-1: 
            rowCheck.append(cols);
+        
     return rowCheck; 
 
 def googConverter(X):
