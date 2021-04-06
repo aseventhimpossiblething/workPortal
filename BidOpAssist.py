@@ -233,7 +233,8 @@ def CTROverview(desiCols,corecols,change,Temp):
         Temp=googConverterReverse(Temp)
     """
     FeatureReportCore2=list(TempOut.drop([newVar],axis=1))
-    #print(TempOut)
+    print("TempOut")
+    print(TempOut)
     #print(TempOut.drop(['Campaign','Ad group'],axis=1))
     FeatureReportCore1=pandas.DataFrame(FeatureReportCore1,columns=['Weights'])
     FeatureReportCore2=pandas.DataFrame(FeatureReportCore2,columns=['Variables'])
@@ -250,8 +251,8 @@ def CTROverview(desiCols,corecols,change,Temp):
     
        
   
-    
-    TempOut.to_excel("ctroutsheet.xlsx");
+    OutputBid.to_excel("ctroutputsheet.xlsx");
+    #TempOut.to_excel("ctroutputsheet.xlsx");
     FeatureReport.to_excel("featuresheet.xlsx");
 
     print('end of overview');
