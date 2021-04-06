@@ -39,6 +39,8 @@ def rowcheck(Sheet,cols):
     rowCheck=[];
     TC=str(Temp.columns)    
     lc=len(TC);
+    print("Temp.columns")    
+    print(TC)    
     print("Length of List ",lc)
     
     for cols in designated_Columns:
