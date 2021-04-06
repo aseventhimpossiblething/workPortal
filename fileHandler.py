@@ -161,7 +161,7 @@ def CTRUploadFilehandler():
        newDesignatedColP=newDesignatedColP1+newDesignatedColP2
        print(designated_Columns)
        print(newDesignatedColP) 
-       rowcheck(); 
+       rowcheck(Temp,designated_Columns); 
        rowCheck2=rowcheck(Temp,newDesignatedColP)     
        print(len(rowCheck2)," Before official rowCheck ",rowCheck2); 
        #print("rowcheck 2 of else path conducted") 
