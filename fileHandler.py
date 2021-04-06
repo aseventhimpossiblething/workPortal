@@ -162,10 +162,10 @@ def CTRUploadFilehandler():
        print(designated_Columns)
        print(newDesignatedColP) 
        rowCheck2=rowcheck(Temp,newDesignatedColP)     
-       print(len(rowCheck)," Before official rowCheck ",rowCheck); 
-       #print("rowcheck of else path conducted") 
-       if len(rowCheck)>0:
-                print("rowCheck > 0");
+       print(len(rowCheck2)," Before official rowCheck ",rowCheck2); 
+       #print("rowcheck 2 of else path conducted") 
+       if len(rowCheck2)>0:
+                print("rowCheck2 > 0");
                 print(len(rowCheck2));
                 os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
                 rowCheck2=str(rowCheck2)
