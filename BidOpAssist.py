@@ -141,8 +141,8 @@ def impressionPercentChangeColumn(frame):
 def CTROverview(desiCols,corecols,change,Temp):
     print("in CTROverview ");
     Temp=Temp;
-    print(" First iteration Temp")
-    print(Temp)
+    #print(" First iteration Temp")
+    #print(Temp)
         
     PredVar=change    
     designated_Columns=desiCols;
@@ -156,7 +156,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     predict_colsP1=corecols[:loc]
     predict_colsP2=corecols[loc+1:]
     predict_cols=predict_colsP1+predict_colsP2
-    print("Predicted Columns - ",predict_cols)    
+    #print("Predicted Columns - ",predict_cols)    
     
     
     os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/');
@@ -166,11 +166,11 @@ def CTROverview(desiCols,corecols,change,Temp):
     .fillna(0).replace(" --",0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
     XofSeed=Seed.drop([PredVar],axis=1);
     YofSeed=Seed[PredVar];
-    print(" XofSeed - ")
-    print(XofSeed)
+    #print(" XofSeed - ")
+    #print(XofSeed)
     #print(XofSeed[PredVar])
-    print("YofSeed - ")
-    print(YofSeed)
+    #print("YofSeed - ")
+    #print(YofSeed)
     
     #ImpressionMetricXofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
     #ImpressionMetricYofSeed=Seed[PredVar];
@@ -182,7 +182,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     Model=RandomForestRegressor();
     Model.fit(XofSeed,YofSeed);
     FeatureReportCore1=Model.feature_importances_;
-    print(FeatureReportCore1)
+    #print(FeatureReportCore1)
     
     #ImpressionModel=RandomForestRegressor();
     #ImpressionModel.fit(ImpressionMetricXofSeed,ImpressionMetricYofSeed);
@@ -247,14 +247,14 @@ def CTROverview(desiCols,corecols,change,Temp):
     #print(FeatureReport)
     
     
-    
+    """
     print("Temp")
     print(Temp)
     print(" TempForOutPut")
     print(TempForOutPut)
     print("TempOut")
     print(TempOut)
-   
+    """
     print("------------------WAITING TO WRITE TO EXCEL------------------------")
     #print(os.getcwd())
     #print(os.listdir())
