@@ -160,9 +160,11 @@ def CTRUploadFilehandler():
        print(designated_Columns)
        print(newDesignatedColP) 
        rowCheck=rowcheck(Temp,newDesignatedColP)     
-       #print(len(rowCheck)," ",rowCheck); 
+       print(len(rowCheck)," Before official rowCheck ",rowCheck); 
        #print("rowcheck of else path conducted") 
        if len(rowCheck)>0:
+                print("rowCheck > 0");
+                print(len(rowCheck));
                 os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
                 rowCheck=str(rowCheck)
                 record_async_start=open("ForestLoadingQueue.txt","w+")
