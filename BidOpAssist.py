@@ -245,6 +245,8 @@ def CTROverview(desiCols,corecols,change,Temp):
 
    
     print("------------------WAITING TO WRITE TO EXCEL------------------------")
+    print(os.cwd())
+    print(os.listdir())
     
        
   
