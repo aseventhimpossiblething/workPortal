@@ -38,9 +38,10 @@ def rowcheck(Sheet,cols):
     designated_Columns=cols
     rowCheck=[];
     for cols in designated_Columns:
-        colPresent=str(Temp.columns).find(str(cols));
-        print(str(cols)," ",colPresent);
-        print(Temp.columns[colPresent:])
+        cols=str(cols)
+        colPresent=str(Temp.columns).find(cols);
+        print(cols," ",colPresent);
+        print(cols[colPresent:])
         if colPresent==-1: 
            rowCheck.append(cols);
     return rowCheck; 
