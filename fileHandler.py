@@ -161,19 +161,19 @@ def CTRUploadFilehandler():
        newDesignatedColP=newDesignatedColP1+newDesignatedColP2
        print(designated_Columns)
        print(newDesignatedColP) 
-       rowCheck=rowcheck(Temp,newDesignatedColP)     
+       rowCheck2=rowcheck(Temp,newDesignatedColP)     
        print(len(rowCheck)," Before official rowCheck ",rowCheck); 
        #print("rowcheck of else path conducted") 
        if len(rowCheck)>0:
                 print("rowCheck > 0");
-                print(len(rowCheck));
+                print(len(rowCheck2));
                 os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/')
-                rowCheck=str(rowCheck)
+                rowCheck2=str(rowCheck2)
                 record_async_start=open("ForestLoadingQueue.txt","w+")
-                record_async_start.write(rowCheck)
+                record_async_start.write(rowCheck2)
                 record_async_start.close()
-                rowCheck=" The following Columns are missing "+rowCheck+" please resubmit sheet "
-                return rowCheck
+                rowCheck2=" The following Columns are missing "+rowCheck2+" please resubmit sheet "
+                return rowCheck2
               
        print("Just Before threading.thread")
        BidOpAssistAsync=threading.Thread(target=BidOpAssist.CTROverview,args=[designated_Columns,core_cols,target_Variable,Temp]);
