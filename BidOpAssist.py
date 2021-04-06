@@ -208,6 +208,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     #TempForOutPut=TempForOutPut.drop([],axis=1);
     #TempForOutPutImpression=TempForOutPut.drop([],axis=1);
     
+    
     print("T--------------tempForOutPut----------------------------------")
     #print(TempForOutPut)
     #print(TempForOutPut[[TempForOutPut.columns.values[0],TempForOutPut.columns.values[1],\
@@ -233,21 +234,29 @@ def CTROverview(desiCols,corecols,change,Temp):
         Temp=googConverterReverse(Temp)
     """
     FeatureReportCore2=list(TempOut.drop([newVar],axis=1))
-    print("TempOut")
-    print(TempOut)
+    #print("TempOut")
+    #print(TempOut)
     #print(TempOut.drop(['Campaign','Ad group'],axis=1))
     FeatureReportCore1=pandas.DataFrame(FeatureReportCore1,columns=['Weights'])
     FeatureReportCore2=pandas.DataFrame(FeatureReportCore2,columns=['Variables'])
     FeatureReport=pandas.DataFrame(FeatureReportCore1)
     FeatureReport['Variables']=FeatureReportCore2
-    print(FeatureReportCore1)
-    print(FeatureReportCore2)
-    print(FeatureReport)
-
+    #print(FeatureReportCore1)
+    #print(FeatureReportCore2)
+    #print(FeatureReport)
+    
+    
+    
+    print("Temp")
+    print(Temp)
+    print(" TempForOutPut")
+    print(TempForOutPut)
+    print("TempOut")
+    print(TempOut)
    
     print("------------------WAITING TO WRITE TO EXCEL------------------------")
-    print(os.getcwd())
-    print(os.listdir())
+    #print(os.getcwd())
+    #print(os.listdir())
     
        
   
