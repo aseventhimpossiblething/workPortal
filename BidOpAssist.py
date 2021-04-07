@@ -156,7 +156,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     predict_colsP1=corecols[:loc]
     predict_colsP2=corecols[loc+1:]
     predict_cols=predict_colsP1+predict_colsP2
-    #print("Predicted Columns - ",predict_cols)    
+    print("Predicted Columns - ",predict_cols)    
     
     
     os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/');
