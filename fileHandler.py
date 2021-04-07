@@ -97,8 +97,8 @@ def CTRUploadFilehandler():
     #core_cols=['Campaign','Ad group','Impr.',target_Variable,'Clicks','Cost','Search top IS','Search abs. top IS','Search impr. share']  
     #designated_Columns=['Search top IS','Search abs. top IS','Search impr. share']
     
-    designated_Columns=[target_Variable,'Search impr. share','Impr. (Top) %','Impr. (Abs. Top) %']  
-    core_cols=[target_Variable,'Search impr. share','Impr. (Top) %','Impr. (Abs. Top) %']      
+    designated_Columns=[target_Variable,'Impr. (Top) %','Impr. (Abs. Top) %']  
+    core_cols=[target_Variable,'Impr. (Top) %','Impr. (Abs. Top) %']      
         
         
     #print('target_Variable',target_Variable);
@@ -168,7 +168,10 @@ def CTRUploadFilehandler():
        ElseCols=['Abs. Top of page rate','Top of page rate','Display URL domain'];
        if str(Temp.columns).find(ElseCols[0])>-1:
           Temp['Impr. (Abs. Top) %']=ElseCols[0];     
-          print(ElseCols[0]," Not Found----------------------");      
+          print(ElseCols[0],"  Found----------------------");
+       if str(Temp.columns).find(ElseCols[1])>-1:
+          Temp['Impr. (Top) %']=ElseCols[1];     
+          print(ElseCols[1]," Not Found----------------------");         
                 
        designated_Columns=designated_Columns+['Display URL domain'] 
        #Temp=pandas.DataFrame(Temp,columns=designated_Columns);
