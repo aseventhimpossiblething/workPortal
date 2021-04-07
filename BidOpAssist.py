@@ -156,7 +156,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     predict_colsP1=corecols[:loc]
     predict_colsP2=corecols[loc+1:]
     predict_cols=predict_colsP1+predict_colsP2
-    print("Predicted Columns - ",predict_cols)    
+    #print("Predicted Columns - ",predict_cols)    
     
     
     os.chdir('/var/www/workPortal/Sheets/CTRData/MachinePatternSheets/');
@@ -234,7 +234,9 @@ def CTROverview(desiCols,corecols,change,Temp):
     if str(Temp['Campaign']).lower().find('gppc')>-1:
         Temp=googConverterReverse(Temp)
     """
-    FeatureReportCore2=list(TempForOutPut.drop([newVar],axis=1))
+    #FeatureReportCore2=list(TempForOutPut.drop([newVar],axis=1))
+    print(TempForOutPut)
+    FeatureReportCore2=list(TempForOutPut)
     #print("TempOut")
     #print(TempOut)
     #print(TempOut.drop(['Campaign','Ad group'],axis=1))
@@ -243,8 +245,8 @@ def CTROverview(desiCols,corecols,change,Temp):
     FeatureReport=pandas.DataFrame(FeatureReportCore1)
     FeatureReport['Variables']=FeatureReportCore2
     #print(FeatureReportCore1)
-    #print(FeatureReportCore2)
-    #print(FeatureReport)
+    print(FeatureReportCore2)
+    print(FeatureReport)
     
     
     """
