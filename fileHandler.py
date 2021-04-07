@@ -167,11 +167,13 @@ def CTRUploadFilehandler():
        print(Temp);
        ElseCols=['Abs. Top of page rate','Top of page rate','Display URL domain'];
        if str(Temp.columns).find(ElseCols[0])>-1:
-          Temp['Impr. (Abs. Top) %']=ElseCols[0];     
+          Temp['Impr. (Abs. Top) %']=ElseCols[0];  
+          Temp.drop([ElseCols[0]],=axis1) 
           print(ElseCols[0],"  Found----------------------");
        if str(Temp.columns).find(ElseCols[1])>-1:
-          Temp['Impr. (Top) %']=ElseCols[1];     
-          print(ElseCols[1]," Not Found----------------------");         
+          Temp['Impr. (Top) %']=ElseCols[1];  
+          Temp.drop([ElseCols[1]],=axis1)      
+          print(ElseCols[1]," Found----------------------");         
                 
        designated_Columns=designated_Columns+['Display URL domain'] 
        #Temp=pandas.DataFrame(Temp,columns=designated_Columns);
