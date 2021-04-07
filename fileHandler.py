@@ -167,11 +167,11 @@ def CTRUploadFilehandler():
        print(Temp);
        ElseCols=['Abs. Top of page rate','Top of page rate','Display URL domain'];
        if str(Temp.columns).find(ElseCols[0])>-1:
-          Temp['Impr. (Abs. Top) %']=ElseCols[0];  
+          Temp['Impr. (Abs. Top) %']=Temp[ElseCols[0]];  
           Temp.drop([ElseCols[0]],axis=1) 
           print(ElseCols[0],"  Found----------------------");
        if str(Temp.columns).find(ElseCols[1])>-1:
-          Temp['Impr. (Top) %']=ElseCols[1];  
+          Temp['Impr. (Top) %']=Temp[ElseCols[1]];  
           Temp.drop([ElseCols[1]],axis=1)      
           print(ElseCols[1]," Found----------------------");         
                 
@@ -185,7 +185,7 @@ def CTRUploadFilehandler():
        #print(newDesignatedColP) 
        #rowcheck(Temp,designated_Columns); 
        rowCheck2=rowcheck(Temp,newDesignatedColP)     
-       print(len(rowCheck2)," Before official rowCheck ",rowCheck2); 
+       #print(len(rowCheck2)," Before official rowCheck ",rowCheck2); 
        #print("rowcheck 2 of else path conducted") 
        if len(rowCheck2)>0:
                 print("rowCheck2 > 0");
