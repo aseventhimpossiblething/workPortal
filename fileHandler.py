@@ -166,7 +166,8 @@ def CTRUploadFilehandler():
        print("else path")
        print(Temp);
        ElseCols=['Abs. Top of page rate','Top of page rate','Display URL domain'];
-       if str(Temp.columns).find(ElseCols[0]):
+       if str(Temp.columns).find(ElseCols[0])>-1:
+          Temp[ElseCols[0]]=ElseCols[0];     
           print(ElseCols[0]," Not Found----------------------");      
                 
        designated_Columns=designated_Columns+['Display URL domain'] 
