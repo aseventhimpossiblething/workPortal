@@ -163,7 +163,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     Seed=pandas.read_excel('CTRSeed.xlsx');
     Seed=pandas.DataFrame(Seed,columns=core_cols);
     Seed=Seed.replace('>','').replace('<','').replace('%','').replace("-",0).fillna(0).replace("--",0)\
-    .fillna(0).replace(" --",0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
+    .fillna(0).replace(" --",0).fillna(0).replace("< 10%",0.10).fillna(0).replace("> 90%",0.90).fillna(0);
     XofSeed=Seed.drop([PredVar],axis=1);
     YofSeed=Seed[PredVar];
     #print(" XofSeed - ")
@@ -188,7 +188,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     #ImpressionModel.fit(ImpressionMetricXofSeed,ImpressionMetricYofSeed);
     
     Temp=Temp.replace('>','').replace('<','').replace('%','').replace('-',0).fillna(0).replace('--',0).fillna(0)\
-    .replace(' --',0).fillna(0).replace("< 10%",10).fillna(0).replace("> 90%",90).fillna(0);
+    .replace(' --',0).fillna(0).replace("< 10%",0.10).fillna(0).replace("> 90%",0.90).fillna(0);
      
     """   
     Temp['Match Number']=Match_num(Temp);
