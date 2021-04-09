@@ -191,9 +191,9 @@ def CTROverview(desiCols,corecols,change,Temp):
     print("fitting Model 2")
     Model2=linear_model.LinearRegression();
     Model2.fit(XofSeed,YofSeed);
-    FeatureReportCoreLR=Model2.feature_importances_;
-    print('FeatureReportCoreLR');
-    print(FeatureReportCoreLR);
+    #FeatureReportCoreLR=Model2.feature_importances_;
+    #print('FeatureReportCoreLR');
+    #print(FeatureReportCoreLR);
     #ImpressionModel=RandomForestRegressor();
     #ImpressionModel.fit(ImpressionMetricXofSeed,ImpressionMetricYofSeed);
     
@@ -227,8 +227,11 @@ def CTROverview(desiCols,corecols,change,Temp):
         
     #print(list(TempForOutPut))
     
-    
+    print("Both Models Predicting")
     OutputBid=Model.predict(TempForOutPut); 
+    SecondOut=Model2.predict(TempForOutPut);
+    print("predictions done");
+    print(Model2.coef_)
     #ImpressionOutputBid=ImpressionModel.predict(TempForOutPutImpression)
     #TempOut=Temp.drop([PredVar],axis=1)
     TempOut=Temp
