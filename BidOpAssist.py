@@ -232,6 +232,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     SecondOut=Model2.predict(TempForOutPut);
     print("predictions done");
     print(Model2.coef_)
+    print("end Coefs")
     #ImpressionOutputBid=ImpressionModel.predict(TempForOutPutImpression)
     #TempOut=Temp.drop([PredVar],axis=1)
     TempOut=Temp
