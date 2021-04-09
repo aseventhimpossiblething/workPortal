@@ -182,16 +182,16 @@ def CTROverview(desiCols,corecols,change,Temp):
     #ImpressionMetricXofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
     #ImpressionMetricYofSeed=Seed[PredVar];
           
-    
+    print("fitting Model 1")
     Model=RandomForestRegressor();
     Model.fit(XofSeed,YofSeed);
     FeatureReportCore1=Model.feature_importances_;
     #print(FeatureReportCore1)
     
-    
+    print("fitting Model 2")
     Model2=linear_model.linearRegression();
     Model2.fit(XofSeed,YofSeed);
-    FeatureReportCoreLR=Mode2.feature_importances_;
+    FeatureReportCoreLR=Model2.feature_importances_;
     print('FeatureReportCoreLR');
     print(FeatureReportCoreLR);
     #ImpressionModel=RandomForestRegressor();
