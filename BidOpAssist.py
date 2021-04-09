@@ -10,6 +10,7 @@ import scipy
 import pandas
 import re
 from sklearn.ensemble import RandomForestRegressor
+from sklearn import linear_model
 
 
 def googConverterReverse(X):
@@ -172,6 +173,9 @@ def CTROverview(desiCols,corecols,change,Temp):
     #print("YofSeed - ")
     #print(YofSeed)
     
+    
+    
+    
     #ImpressionMetricXofSeed=Seed.drop(['Campaign','Ad group',PredVar],axis=1);
     #ImpressionMetricYofSeed=Seed[PredVar];
     
@@ -184,6 +188,12 @@ def CTROverview(desiCols,corecols,change,Temp):
     FeatureReportCore1=Model.feature_importances_;
     #print(FeatureReportCore1)
     
+    
+    Model2=linear_model.linearRegression();
+    Model2.fit(XofSeed,YofSeed);
+    FeatureReportCoreLR=Mode2.feature_importances_;
+    print('FeatureReportCoreLR');
+    print(FeatureReportCoreLR);
     #ImpressionModel=RandomForestRegressor();
     #ImpressionModel.fit(ImpressionMetricXofSeed,ImpressionMetricYofSeed);
     
