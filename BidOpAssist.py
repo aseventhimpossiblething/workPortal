@@ -238,8 +238,10 @@ def CTROverview(desiCols,corecols,change,Temp):
     TempOut=Temp
     #TempOut=Temp.drop(['CTR'])
    
-    newVar="Predicted "+PredVar 
+    newVar="Predicted Model 1"+PredVar
+    newVar2="Predicted Model 2"+PredVar
     TempOut[newVar]=OutputBid;
+    TempOut[newVar2]=SecondOut;
     #Temp['Impression Metrics Based Bid']=ImpressionOutputBid
     """
     Temp['Change']=percentChangeColumn(Temp,'New Bid');
