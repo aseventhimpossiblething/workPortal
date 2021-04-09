@@ -189,7 +189,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     #print(FeatureReportCore1)
     
     print("fitting Model 2")
-    Model2=linear_model.linearRegression();
+    Model2=linear_model.LinearRegression();
     Model2.fit(XofSeed,YofSeed);
     FeatureReportCoreLR=Model2.feature_importances_;
     print('FeatureReportCoreLR');
