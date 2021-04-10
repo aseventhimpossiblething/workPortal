@@ -249,8 +249,10 @@ def CTROverview(desiCols,corecols,change,Temp):
     print('Standard Deviations ',stdev1,'-',stdev2)
     if stdev1<stdev2:
         preferedModel=TempOut[newVar];
+        AltModel=TempOut[newVar2]
     else:
         preferedModel=TempOut[newVar2]
+        AltModel=TempOut[newVar]
     #preferedModel=TempOut[newVar2]
     maxi=max(preferedModel)
     mini=min(preferedModel)
@@ -258,11 +260,14 @@ def CTROverview(desiCols,corecols,change,Temp):
     TopOfNewRange=[];
     BottomOfNewRange=[];
     avrgerCount=0;
-    for row in TempOut[newVar]:
-        row2=TempOut[newVar2][avrgerCount]
+    for row in preferedModel:
+        row2=AltModel[avrgerCount]
         
         print('rows ',row," ",row2);
-        row3=(maxi+(theStandardDev*2))-mini;
+        #row3=(row-(theStandardDev*2))-mini;
+        topOfRow=(row+(theStandardDev*2));
+        bottomOfRow=(mini);
+        row3=topOfRow-bottomOfRow;
         print('rows ',row," ",row2,' ',row3);
         avrgerCount=avrgerCount+1;
         
