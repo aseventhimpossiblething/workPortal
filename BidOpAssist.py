@@ -275,7 +275,8 @@ def CTROverview(desiCols,corecols,change,Temp):
         BottomOfNewRange.append(bottomOfRow);
         TopOfNewRange.append(topOfRow);
         LineInterval.append(individualInterval);
-        #print('rows ',row," ",row2,' ',row3);
+        row3=bottomOfRow;
+        print('rows ',row," ",row2,' ',row3);
         avrgerCount=avrgerCount+1;
         
         
@@ -284,6 +285,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     TempOut['predicted interval at bottom']=BottomOfNewRange;
     TempOut['predicted interval at top']=TopOfNewRange;
     TempOut['predicted interval size']=LineInterval;
+    
     #Temp['Impression Metrics Based Bid']=ImpressionOutputBid
     """
     Temp['Change']=percentChangeColumn(Temp,'New Bid');
