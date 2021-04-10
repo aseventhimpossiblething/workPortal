@@ -215,7 +215,7 @@ def CTROverview(desiCols,corecols,change,Temp):
         
     
     
-    #TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols);
+    TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols);
     #TempForOutPut=TempForOutPut.drop([],axis=1);
     #TempForOutPutImpression=TempForOutPut.drop([],axis=1);
     
