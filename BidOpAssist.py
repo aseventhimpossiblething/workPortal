@@ -215,7 +215,7 @@ def CTROverview(desiCols,corecols,change,Temp):
         
     
     
-    TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols);
+    #TempForOutPut=pandas.DataFrame(Temp,columns=predict_cols);
     #TempForOutPut=TempForOutPut.drop([],axis=1);
     #TempForOutPutImpression=TempForOutPut.drop([],axis=1);
     
@@ -235,7 +235,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     print("end Coefs")
     #ImpressionOutputBid=ImpressionModel.predict(TempForOutPutImpression)
     #TempOut=Temp.drop([PredVar],axis=1)
-    TempOut=Temp
+    
     #TempOut=Temp.drop(['Abs. Top of page rate','Top of page rate'])
    
     newVar="Predicted Model 1 "+PredVar
@@ -259,6 +259,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     theStandardDev=numpy.std(preferedModel)
     TopOfNewRange=[];
     BottomOfNewRange=[];
+    LineInterval=[]
     avrgerCount=0;
     for row in preferedModel:
         row2=AltModel[avrgerCount]
@@ -267,11 +268,20 @@ def CTROverview(desiCols,corecols,change,Temp):
         #row3=(row-(theStandardDev*2))-mini;
         topOfRow=(row+(theStandardDev*2));
         bottomOfRow=(mini);
-        row3=topOfRow-bottomOfRow;
-        print('rows ',row," ",row2,' ',row3);
+        
+        individualInterval=topOfRow-bottomOfRow;
+        BottomOfNewRange.append(bottomOfRow);
+        TopOfNewRange.append(topOfRow);
+        LineInterval.append(individualInterval);
+        #print('rows ',row," ",row2,' ',row3);
         avrgerCount=avrgerCount+1;
         
+        
     
+    TempOut=Temp;
+    TempOut['predicted interval at bottom']=BottomOfNewRange;
+    TempOut['predicted interval at top']=TopOfNewRange;
+    TempOut['predicted interval size']=LineInterval;
     #Temp['Impression Metrics Based Bid']=ImpressionOutputBid
     """
     Temp['Change']=percentChangeColumn(Temp,'New Bid');
@@ -281,7 +291,7 @@ def CTROverview(desiCols,corecols,change,Temp):
         Temp=googConverterReverse(Temp)
     """
     #FeatureReportCore2=list(TempForOutPut.drop([newVar],axis=1))
-    print(TempForOutPut)
+    #print(TempForOutPut)
     FeatureReportCore2=list(TempForOutPut)
     #print("TempOut")
     #print(TempOut)
