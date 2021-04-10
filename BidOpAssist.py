@@ -264,7 +264,7 @@ def CTROverview(desiCols,corecols,change,Temp):
         print('rows ',row," ",row2);
         row3=(maxi+(theStandardDev*2))-mini;
         print('rows ',row," ",row2,' ',row3);
-        avrgerCount++
+        avrgerCount=avrgerCount++;
         
     
     #Temp['Impression Metrics Based Bid']=ImpressionOutputBid
