@@ -236,12 +236,37 @@ def CTROverview(desiCols,corecols,change,Temp):
     #ImpressionOutputBid=ImpressionModel.predict(TempForOutPutImpression)
     #TempOut=Temp.drop([PredVar],axis=1)
     TempOut=Temp
-    #TempOut=Temp.drop(['CTR'])
+    TempOut=Temp.drop(['Abs. Top of page rate','Top of page rate'])
    
-    newVar="Predicted Model 1"+PredVar
-    newVar2="Predicted Model 2"+PredVar
+    newVar="Predicted Model 1 "+PredVar
+    newVar2="Predicted Model 2 "+PredVar
     TempOut[newVar]=OutputBid;
     TempOut[newVar2]=SecondOut;
+    
+    
+    stdev1=numpy.std(TempOut[newVar]);
+    stdev2=numpy.std(TempOut[newVar2]);
+    print('Standard Deviations ',stdev1,'-',stdev2)
+    if stdev1<stdev2:
+        preferedModel=TempOut[newVar];
+    else:
+        preferedModel=TempOut[newVar2]
+    #preferedModel=TempOut[newVar2]
+    maxi=max(preferedModel)
+    mini=min(preferedModel)
+    theStandardDev=numpy.std(preferedModel)
+    TopOfNewRange=[];
+    BottomOfNewRange=[];
+    avrgerCount=0;
+    for row in TempOut[newVar]:
+        row2=TempOut[newVar2][avrgerCount]
+        
+        print('rows ',row," ",row2);
+        row3=(maxi+(theStandardDev*2))-mini;
+        print('rows ',row," ",row2,' ',row3);
+        avrgerCount++;
+        
+    
     #Temp['Impression Metrics Based Bid']=ImpressionOutputBid
     """
     Temp['Change']=percentChangeColumn(Temp,'New Bid');
@@ -283,7 +308,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     #TempOut.to_excel("ctroutputsheet.xlsx");
     FeatureReport.to_excel("featuresheet.xlsx");
 
-    print('end of overview');
+    print('end of CTR overview');
     
     record_async_start=open("ForestLoadingQueue.txt","w");
     record_async_start.write("100%");
