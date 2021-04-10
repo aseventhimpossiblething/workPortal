@@ -236,7 +236,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     #ImpressionOutputBid=ImpressionModel.predict(TempForOutPutImpression)
     #TempOut=Temp.drop([PredVar],axis=1)
     TempOut=Temp
-    TempOut=Temp.drop(['Abs. Top of page rate','Top of page rate'])
+    #TempOut=Temp.drop(['Abs. Top of page rate','Top of page rate'])
    
     newVar="Predicted Model 1 "+PredVar
     newVar2="Predicted Model 2 "+PredVar
