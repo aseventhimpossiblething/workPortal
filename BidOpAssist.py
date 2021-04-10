@@ -237,6 +237,7 @@ def CTROverview(desiCols,corecols,change,Temp):
     #TempOut=Temp.drop([PredVar],axis=1)
     
     #TempOut=Temp.drop(['Abs. Top of page rate','Top of page rate'])
+    TempOut=Temp;
    
     newVar="Predicted Model 1 "+PredVar
     newVar2="Predicted Model 2 "+PredVar
@@ -278,7 +279,7 @@ def CTROverview(desiCols,corecols,change,Temp):
         
         
     
-    TempOut=Temp;
+    
     TempOut['predicted interval at bottom']=BottomOfNewRange;
     TempOut['predicted interval at top']=TopOfNewRange;
     TempOut['predicted interval size']=LineInterval;
