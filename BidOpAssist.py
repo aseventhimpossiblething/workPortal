@@ -269,7 +269,12 @@ def CTROverview(desiCols,corecols,change,Temp):
         #row3=(row-(theStandardDev*2))-mini;
         topOfRow=(row+(theStandardDev*2));
         #bottomOfRow=(mini);
+        
+        
         bottomOfRow=(row-(theStandardDev));
+        if bottomOfRow < mini:
+            bottomOfRow=mini
+            
         
         individualInterval=topOfRow-bottomOfRow;
         BottomOfNewRange.append(bottomOfRow);
