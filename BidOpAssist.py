@@ -268,7 +268,8 @@ def CTROverview(desiCols,corecols,change,Temp):
         print('rows ',row," ",row2);
         #row3=(row-(theStandardDev*2))-mini;
         topOfRow=(row+(theStandardDev*2));
-        bottomOfRow=(mini);
+        #bottomOfRow=(mini);
+        bottomOfRow=(row-(theStandardDev));
         
         individualInterval=topOfRow-bottomOfRow;
         BottomOfNewRange.append(bottomOfRow);
