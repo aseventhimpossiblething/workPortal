@@ -151,7 +151,7 @@ print("7")
 
 @app.route('/DisplayCommUpdate')
 def CommUpdateDisplay():
-    os.chdir('/var/www/workPortal/Sheets/')     
+    os.chdir('/GMDelight/workPortal/Sheets/')     
     storeRequest=open('RequestsVsResponses.txt','r+')
     read_storeRequest=storeRequest.read()
     storeRequest.close()
