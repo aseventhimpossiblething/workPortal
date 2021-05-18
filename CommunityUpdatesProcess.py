@@ -1164,11 +1164,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
             AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>");
    
-   AdgroupNaming_conv.replace("Mixed","Phrase")
+   AdgroupNaming_conv=AdgroupNaming_conv.replace("Mixed","Phrase")
    Adgroup.append(AdgroupNaming_conv);
-   AdgroupNaming_conv.replace("Phrase","Broad")
+   AdgroupNaming_conv=AdgroupNaming_conv.replace("Phrase","Broad")
    Adgroup.append(AdgroupNaming_conv);
-   AdgroupNaming_conv.replace("Broad","Exact")
+   AdgroupNaming_conv=AdgroupNaming_conv.replace("Broad","Exact")
    Adgroup.append(AdgroupNaming_conv);
 
    Match_Type.append("Phrase")
