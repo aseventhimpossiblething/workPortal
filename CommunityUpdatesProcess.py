@@ -1372,7 +1372,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    print("except KW Gen count ",count)
   count+=1;
    
-  
+ """ 
  print("len(Campaign_Name) ",len(Campaign_Name));
  print("len(Adgroup) ",len(Adgroup));
  print("len(Keyword) ",len(Keyword));
@@ -1381,7 +1381,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
  print("len(Bid) ",len(Bid));
  print("len(Label) ",len(Label));
  print("len(LabelB) ",len(LabelB));   
-
+"""
+print("(Adgroup) ",Adgroup);
 
 
    
@@ -1426,48 +1427,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    GoogleAdFrameB.to_excel(writer)
    writer.save()
    
- """ 
-  if MatchType=='SB':
-   print("In KeywordGen google SB ")
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW'
-   os.chdir(SaveLocation)
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   GoogleKWFrame.to_excel(writer)
-   writer.save()
-   
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionABroad'
-   os.chdir(SaveLocation)
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   GoogleAdFrameA.to_excel(writer)
-   writer.save()
-     
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBBroad'
-   os.chdir(SaveLocation)
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   GoogleAdFrameB.to_excel(writer)
-   writer.save()
-   
-     
-  if MatchType=='SX':
-   print("In KeywordGen google SX ")
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW'
-   os.chdir(SaveLocation)
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   GoogleKWFrame.to_excel(writer)
-   writer.save() 
-   
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA/GoogleAdsVersionAExact' 
-   os.chdir(SaveLocation)
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   GoogleAdFrameA.to_excel(writer)
-   writer.save()
-   
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBExact'   
-   os.chdir(SaveLocation)
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   GoogleAdFrameB.to_excel(writer)
-   writer.save()
- """ 
+ 
      
  if SearchChan=="bing":
    #if MatchType=='SBMM':
@@ -1491,49 +1451,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    writer.save()
    
    
- """    
-  if MatchType=='SB':
-   print("In KeywordGen bing SB ")
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBroad'
-   os.chdir(SaveLocation)
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   BingKWFrame.to_excel(writer)
-   writer.save()
-   
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeBroad'
-   os.chdir(SaveLocation) 
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   BingAdFrameA.to_excel(writer)
-   writer.save()
-     
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeBroad'
-   os.chdir(SaveLocation)
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   BingAdFrameB.to_excel(writer)
-   writer.save()
-   
-    
-  if MatchType=='SX':
-   print("In KeywordGen bing SX ")
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWExact' 
-   os.chdir(SaveLocation) 
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   BingKWFrame.to_excel(writer)
-   writer.save()
-   
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsAtype/BingAdsAtypeExact'   
-   os.chdir(SaveLocation) 
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   BingAdFrameA.to_excel(writer)
-   writer.save()
-   
-   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/BingAdsBtype/BingAdsBtypeExact'
-   os.chdir(SaveLocation) 
-   writer=pandas.ExcelWriter('DefaultSheet.xlsx')
-   BingAdFrameB.to_excel(writer)
-   writer.save()
-   
- """ 
+
  
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
