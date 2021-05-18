@@ -1064,10 +1064,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
     URL_Struct1=URL_Struct1+"405"
     Keyword_conv=Keyword_conv
     Keyword_conv=Keyword_conv.replace(" + ","")
-    Keyword_conv=Keyword_conv.replace("++","+")
+    #Keyword_conv=Keyword_conv.replace("++","+")
     Keyword_conv=Keyword_conv.replace(" ++ ","")
     Keyword_conv=Keyword_conv.replace("&"," ")
-    Keyword_conv=Keyword_conv.replace(" "," +")
+    #Keyword_conv=Keyword_conv.replace(" "," +")
     Keyword_conv=Keyword_conv.replace("+55+","55+")
     Keyword_conv=Keyword_conv.replace("+-","-")
     Keyword_conv=Keyword_conv.replace("-"," ")
@@ -1119,10 +1119,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    
     Keyword_conv=Keyword_conv
     Keyword_conv=Keyword_conv.replace(" + ","")
-    Keyword_conv=Keyword_conv.replace("++","+")
+    #Keyword_conv=Keyword_conv.replace("++","+")
     Keyword_conv=Keyword_conv.replace(" ++ ","")
     Keyword_conv=Keyword_conv.replace("&"," ")
-    Keyword_conv=Keyword_conv.replace(" "," +")
+    #Keyword_conv=Keyword_conv.replace(" "," +")
     Keyword_conv=Keyword_conv.replace("+55+","55+")
     Keyword_conv=Keyword_conv.replace("+-"," ")
     Keyword_conv=Keyword_conv.replace("-"," ")
@@ -1337,7 +1337,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
           Keyword_conv=Keyword_conv[:len(Keyword_conv)-1]
    #print("Keyword_conv 3 ",Keyword_conv)    
    Keyword.append(Keyword_conv);
-   Keyword_conv=Keyword_conv.replace("+"," ");   
+   Keyword_conv=Keyword_conv.replace("+"," "); 
+   Keyword_conv=Keyword_conv.replace("[","");
+   Keyword_conv=Keyword_conv.replace("]"," ");     
    Keyword.append(Keyword_conv); 
    Keyword.append(Keyword_conv);    
    label="Created by WebApp"
