@@ -1381,8 +1381,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
  print("len(Bid) ",len(Bid));
  print("len(Label) ",len(Label));
  print("len(LabelB) ",len(LabelB));   
-"""
-print("(Adgroup) ",Adgroup);
+ """
+ print("(Adgroup) ",Adgroup);
 
 
    
