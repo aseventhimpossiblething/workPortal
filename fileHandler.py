@@ -19,10 +19,10 @@ import xlsxwriter
 
 
 
-SheetsFileLocation="/var/www/workPortal/Sheets"
-currentCommunitiesLocation="/var/www/workPortal/Sheets/CommunityUpdates/currentCommunities"
-currentGoogleLocation="/var/www/workPortal/Sheets/CommunityUpdates/Google/currentGoogle"
-currentBingLocation="/var/www/workPortal/Sheets/CommunityUpdates/Bing/currentBing"
+SheetsFileLocation="/GMDelight/workPortal/Sheets"
+currentCommunitiesLocation="/GMDelight/workPortal/Sheets/CommunityUpdates/currentCommunities"
+currentGoogleLocation="/GMDelight/workPortal/Sheets/CommunityUpdates/Google/currentGoogle"
+currentBingLocation="/GMDelight/workPortal/Sheets/CommunityUpdates/Bing/currentBing"
 
 def ValidatXLSXtime(arr):
         Error=arr+" Generated an error check that filetype is xlsx"
@@ -65,7 +65,7 @@ def googConverter(X):
 
 def BidOpFileHandler():
         
-    os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+    os.chdir('/GMDelight/workPortal/Sheets/BidOpData/MachinePatternSheets/')
     #print('BidOpSeed.xlsx')
     request.files['sheet'].save("Temp.xlsx")
     Temp=pandas.read_excel('Temp.xlsx')
@@ -95,11 +95,11 @@ def BidOpFileHandler():
            designated_Columns=x
            core_cols=x2   
            Temp=Temp     
-           os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+           os.chdir('/GMDelight/workPortal/Sheets/BidOpData/MachinePatternSheets/')
                 
            rowCheck=rowcheck(Temp,designated_Columns)     
            if len(rowCheck)>0:
-                os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+                os.chdir('/GMDelight/workPortal/Sheets/BidOpData/MachinePatternSheets/')
                 rowCheck=str(rowCheck)
                 record_async_start=open("ForestLoadingQueue.txt","w+")
                 record_async_start.write(rowCheck)
@@ -144,7 +144,7 @@ def BidOpFileHandler():
        rowCheck=rowcheck(Temp,newDesignatedColP)     
        print(len(rowCheck)," ",rowCheck); 
        if len(rowCheck)>0:
-                os.chdir('/var/www/workPortal/Sheets/BidOpData/MachinePatternSheets/')
+                os.chdir('/GMDelight/workPortal/Sheets/BidOpData/MachinePatternSheets/')
                 rowCheck=str(rowCheck)
                 record_async_start=open("ForestLoadingQueue.txt","w+")
                 record_async_start.write(rowCheck)
