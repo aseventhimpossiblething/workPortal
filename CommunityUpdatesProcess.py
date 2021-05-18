@@ -1077,11 +1077,14 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Keyword_conv=Keyword_conv.replace(" s ","")
     Keyword_conv=Keyword_conv.replace("+s ","")
     Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
-    Keyword_conv="+"+Keyword_conv
+    Keyword_conv="["+Keyword_conv+"]"
    
      
     if len(Keyword_conv)<12:
-     Keyword_conv=Keyword_conv+" Community"
+     #Keyword_conv=Keyword_conv+" Community"
+     Keyword_conv=Keyword_conv.replace("]","")       
+     Keyword_conv=Keyword_conv+" Community"+"]"
+ 
 
     
       
@@ -1128,10 +1131,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Keyword_conv=Keyword_conv.replace("+G +& +I","G&I ")
     Keyword_conv=Keyword_conv.replace(" s ","")
     Keyword_conv=Keyword_conv.replace("+s ","")
-    Keyword_conv="+"+Keyword_conv
+    Keyword_conv="["+Keyword_conv+"]"
   
     if len(Keyword_conv)<12:
-     Keyword_conv=Keyword_conv+" Community"
+     Keyword_conv=Keyword_conv.replace("]","")       
+     Keyword_conv=Keyword_conv+" Community"+"]"
  
    
 
@@ -1164,7 +1168,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Adgroup.append(AdgroupNaming_conv)
    Adgroup.append(AdgroupNaming_conv)
 
-   Match_Type.append("Broad")
+   Match_Type.append("Phrase")
    Match_Type.append("Broad")
    Match_Type.append("Exact")
       
