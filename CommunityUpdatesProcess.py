@@ -1163,10 +1163,13 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if str(NewDataFrame['Community ID'][count]).find("nan")>-1:
             AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>");
-        
-   Adgroup.append(AdgroupNaming_conv)
-   Adgroup.append(AdgroupNaming_conv)
-   Adgroup.append(AdgroupNaming_conv)
+   
+   AdgroupNaming_conv.replace("Mixed","Phrase")
+   Adgroup.append(AdgroupNaming_conv);
+   AdgroupNaming_conv.replace("Phrase","Broad")
+   Adgroup.append(AdgroupNaming_conv);
+   AdgroupNaming_conv.replace("Broad","Exact")
+   Adgroup.append(AdgroupNaming_conv);
 
    Match_Type.append("Phrase")
    Match_Type.append("Broad")
