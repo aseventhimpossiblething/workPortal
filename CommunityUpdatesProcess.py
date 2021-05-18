@@ -18,11 +18,17 @@ from openpyxl import Workbook
 from openpyxl import load_workbook
 import xlsxwriter
 
-
+"""
 SheetsFileLocation="/var/www/workPortal/Sheets"
 currentCommunitiesLocation="/var/www/workPortal/Sheets/CommunityUpdates/currentCommunities"
 currentGoogleLocation="/var/www/workPortal/Sheets/CommunityUpdates/Google/currentGoogle"
 currentBingLocation="/var/www/workPortal/Sheets/CommunityUpdates/Bing/currentBing"
+"""
+SheetsFileLocation="/GMDelight/workPortal/Sheets"
+currentCommunitiesLocation="/GMDelight/workPortal/Sheets/CommunityUpdates/currentCommunities"
+currentGoogleLocation="/GMDelight/workPortal/Sheets/CommunityUpdates/Google/currentGoogle"
+currentBingLocation="/GMDelight/workPortal/Sheets/CommunityUpdates/Bing/currentBing"
+
 
 
 
