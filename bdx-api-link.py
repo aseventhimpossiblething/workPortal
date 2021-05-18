@@ -177,22 +177,22 @@ def CommUpdateExcel():
 
 @app.route('/GKW')
 def GoogleKWG():
- return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GKW.xlsx",\
+ return send_file("/GMDelight/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GKW.xlsx",\
                   attachment_filename="GKW.xlsx")
 
 @app.route('/GoogleKWSBMM')
 def GoogleKWSBMMKW():
- return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/DefaultSheet.xlsx",\
+ return send_file("/GMDelight/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/DefaultSheet.xlsx",\
                   attachment_filename="GoogleBMMKW.xlsx")
          
 @app.route('/GoogleKWSB')
 def GoogleKWSBKW():
- return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW/DefaultSheet.xlsx",\
+ return send_file("/GMDelight/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBroadKW/DefaultSheet.xlsx",\
                   attachment_filename="GoogleKWSB.xlsx")
 
 @app.route('/GoogleKWSX')
 def GoogleKWSX():
- return send_file("/var/www/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW/DefaultSheet.xlsx",\
+ return send_file("/GMDelight/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleExactKW/DefaultSheet.xlsx",\
                   attachment_filename="GoogleKWSX.xlsx")
 
 
