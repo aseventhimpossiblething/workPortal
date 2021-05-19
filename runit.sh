@@ -1,3 +1,4 @@
 #!/bin/bash
-sleep 5
+sleep 2
+cd /GMDelight/GMDelight/
 gunicorn -c appconfig.py bdx-api-link:app
