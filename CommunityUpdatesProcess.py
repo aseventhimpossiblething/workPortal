@@ -430,7 +430,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
             
     return UnitedFrame;  
 
-
+"""
 def KeywordGen(NewDataFrame,MatchType,SearchChan):
  print("KeywordGen Initiated-----------------------------------------------------------------------------------------------")
  print("KeywordGen Initiated-----------------------------------------------------------------------------------------------")
@@ -937,7 +937,8 @@ def KeywordGen(NewDataFrame,MatchType,SearchChan):
    writer=pandas.ExcelWriter('DefaultSheet.xlsx')
    BingAdFrameB.to_excel(writer)
    writer.save()
-   
+"""   
+
 #----------------------------------------Start KeygenII()----------------------------------------------------------------------------
 
 def KeywordGenII(NewDataFrame,SearchChan):
@@ -1048,13 +1049,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Campaign_Name.append(Campaign_Nameing_Conv);
     Campaign_Name.append(Campaign_Nameing_Conv);  
     Campaign_Name.append(Campaign_Nameing_Conv);  
-    """
-    Campaign_Name.append(Campaign_Nameing_Conv);  
-    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","SB").replace("403","402")
-    Campaign_Name.append(Campaign_Nameing_Conv);
-    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SB","SX").replace("402","401") 
-    Campaign_Name.append(Campaign_Nameing_Conv);
-    """
+
 
     Bid.append(.45)
     Bid.append(.30)
@@ -1101,15 +1096,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Campaign_Name.append(Campaign_Nameing_Conv);
     
 
-    """
-    Campaign_Name.append(Campaign_Nameing_Conv);
-    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","SB").replace("_MSM203","_MSM202")  
-
-    Campaign_Name.append(Campaign_Nameing_Conv); 
-    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SB","SX").replace("_MSM202","_MSM201")  
-    Campaign_Name.append(Campaign_Nameing_Conv); 
-    """
-      
+        
       
     Bid.append(.45)
     Bid.append(.40)
@@ -1119,10 +1106,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    
     Keyword_conv=Keyword_conv
     Keyword_conv=Keyword_conv.replace(" + ","")
-    #Keyword_conv=Keyword_conv.replace("++","+")
     Keyword_conv=Keyword_conv.replace(" ++ ","")
     Keyword_conv=Keyword_conv.replace("&"," ")
-    #Keyword_conv=Keyword_conv.replace(" "," +")
     Keyword_conv=Keyword_conv.replace("+55+","55+")
     Keyword_conv=Keyword_conv.replace("+-"," ")
     Keyword_conv=Keyword_conv.replace("-"," ")
@@ -1143,16 +1128,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
       AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
             
-   """
-   AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
-                      +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
-   """   
-      
-   """   
-   AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
-                      +str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
-   """ 
-      
+
    if SearchChan=="bing":
       AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
@@ -1164,11 +1140,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
             AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>");
    
-   AdgroupNaming_conv=AdgroupNaming_conv.replace("Mixed","Phrase")
+   #AdgroupNaming_conv=AdgroupNaming_conv.replace("Mixed","Phrase")
    Adgroup.append(AdgroupNaming_conv);
-   AdgroupNaming_conv=AdgroupNaming_conv.replace("Phrase","Broad")
+   #AdgroupNaming_conv=AdgroupNaming_conv.replace("Phrase","Broad")
    Adgroup.append(AdgroupNaming_conv);
-   AdgroupNaming_conv=AdgroupNaming_conv.replace("Broad","Exact")
+   #AdgroupNaming_conv=AdgroupNaming_conv.replace("Broad","Exact")
    Adgroup.append(AdgroupNaming_conv);
 
    Match_Type.append("Phrase")
@@ -1179,9 +1155,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Status.append("Active")
    Status.append("Active")
    
-
-    
-
 
    Title1A_Name_Conv=communityName
    if len(Title1A_Name_Conv)>29:
@@ -1235,8 +1208,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    
-
-
 
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
    if len(Path1A_conv)>15:
@@ -1300,24 +1271,19 @@ def KeywordGenII(NewDataFrame,SearchChan):
           URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
                .replace("Lots","");
-          #print("URL_Struct1 ",URL_Struct1)
+          
           URL_Struct1=URL_Struct1.replace(" ","-")  
           Final_URL.append(URL_Struct1)
-          #URL_Struct1=URL_Struct1.replace("403","402")
           Final_URL.append(URL_Struct1)
-          #URL_Struct1=URL_Struct1.replace("402","401")
           Final_URL.append(URL_Struct1)
-          #print("URL_Struct1 ",URL_Struct1)
+          
           
    else:
           URL_Struct1=URL_Struct1.replace(" ","-")
-          #print("URL_Struct1 ",URL_Struct1)
           Final_URL.append(URL_Struct1)
-          #URL_Struct1=URL_Struct1.replace("403","402").replace("msm203","msm202")  
           Final_URL.append(URL_Struct1)
-          #URL_Struct1=URL_Struct1.replace("402","401").replace("msm202","msm201") 
           Final_URL.append(URL_Struct1)
-          #print("URL_Struct1 ",URL_Struct1)  
+           
           
           
   
@@ -1338,7 +1304,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
  
    if str(Keyword_conv[len(Keyword_conv)-1])=="+":
           Keyword_conv=Keyword_conv[:len(Keyword_conv)-1]
-   #print("Keyword_conv 3 ",Keyword_conv)    
    Keyword.append(Keyword_conv);
    Keyword_conv=Keyword_conv.replace("+"," "); 
    Keyword_conv=Keyword_conv.replace("[","");
@@ -1366,22 +1331,12 @@ def KeywordGenII(NewDataFrame,SearchChan):
    LabelB.append(label2);
    LabelB.append(label2);
       
-   #print("label ",label);
   except:
    NewDataFrame=NewDataFrame.drop([count])
-   print("except KW Gen count ",count)
+   #print("except KW Gen count ",count)
   count+=1;
    
- """ 
- print("len(Campaign_Name) ",len(Campaign_Name));
- print("len(Adgroup) ",len(Adgroup));
- print("len(Keyword) ",len(Keyword));
- print("len(Match_Type) ",len(Match_Type)); 
- print("len(Status) ",len(Status));
- print("len(Bid) ",len(Bid));
- print("len(Label) ",len(Label));
- print("len(LabelB) ",len(LabelB));   
- """
+
  print("(Adgroup) ",Adgroup);
 
 
