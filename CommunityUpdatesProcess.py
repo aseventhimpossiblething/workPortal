@@ -649,6 +649,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #sh=Campaign_Nameing_Conv[locnum:locnum2]; 
       
    print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---")
+   print(NewDataFrame)
    """
    Campaign_Name.append(Campaign_Nameing_Conv);
    Campaign_Name.append(Campaign_Nameing_Conv);  
