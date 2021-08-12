@@ -628,19 +628,20 @@ def KeywordGenII(NewDataFrame,SearchChan):
    
    
    #re.match(,)
-   def quasit(Campaign_Nameing_Conv):
+   def quasit(Campaign_Nameing_Conv,x):
+       x=x;     
        locnum=Campaign_Nameing_Conv.find(">");
        s1=Campaign_Nameing_Conv[locnum+1:];
        locnum2=s1.find(">");
        s2=s1[:locnum2];
-       print("locnum ",locnum) 
-       print("locnum2 ",locnum2)
-       print("s1 ",s1);
-       print("s2 ",s2);
+       #print("locnum ",locnum) 
+       #print("locnum2 ",locnum2)
+       #print("s1 ",s1);
+       #print("s2 ",s2);
        return s2;
        #print("sh ",sh)  
-   quasit(Campaign_Nameing_Conv);
-   quasit(AdgroupNaming_conv);
+   quasit(Campaign_Nameing_Conv,);
+   quasit(AdgroupNaming_conv,);
    #sh=Campaign_Nameing_Conv[locnum:locnum2]; 
       
    print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---")
