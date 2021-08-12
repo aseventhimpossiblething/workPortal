@@ -628,7 +628,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    
    
    #re.match(,)
-   def quasit(Campaign_Nameing_Conv);
+   def quasit(Campaign_Nameing_Conv):
        locnum=Campaign_Nameing_Conv.find(">");
        s1=Campaign_Nameing_Conv[locnum+1:];
        locnum2=s1.find(">");
