@@ -638,10 +638,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
        #print("locnum2 ",locnum2)
        #print("s1 ",s1);
        #print("s2 ",s2);
+       print(x,"-",s2); 
        return s2;
-       #print("sh ",sh)  
-   quasit(Campaign_Nameing_Conv,);
-   quasit(AdgroupNaming_conv,);
+       #print(x,s2)  
+   quasit(Campaign_Nameing_Conv,"camp");
+   quasit(AdgroupNaming_conv,"adgroup");
    #sh=Campaign_Nameing_Conv[locnum:locnum2]; 
       
    print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---")
