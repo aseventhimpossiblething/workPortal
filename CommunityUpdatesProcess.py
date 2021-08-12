@@ -643,13 +643,17 @@ def KeywordGenII(NewDataFrame,SearchChan):
        #print(x,s2)  
    campo=quasit(Campaign_Nameing_Conv,"camp");
    adgroupo=quasit(AdgroupNaming_conv,"adgroup");
-   if campo!=adgroupo:
+   if campo==adgroupo:
       print("campo==adgroupo ",campo,"-",adgroupo)
-      print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---")
+      #print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---")
    #sh=Campaign_Nameing_Conv[locnum:locnum2]; 
       
-   #print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---")
-      
+   print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---")
+   """
+   Campaign_Name.append(Campaign_Nameing_Conv);
+   Campaign_Name.append(Campaign_Nameing_Conv);  
+   Campaign_Name.append(Campaign_Nameing_Conv);     
+   """
    #AdgroupNaming_conv=AdgroupNaming_conv.replace("Mixed","Phrase")
    Adgroup.append(AdgroupNaming_conv);
    #AdgroupNaming_conv=AdgroupNaming_conv.replace("Phrase","Broad")
