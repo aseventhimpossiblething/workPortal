@@ -629,8 +629,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    
    #re.match(,)
    locnum=Campaign_Nameing_Conv.find(">");
-   s1=Campaign_Nameing_Conv[locnum:];
-   locnum2=s1.find(">")+1;
+   s1=Campaign_Nameing_Conv[locnum+1:];
+   locnum2=s1.find(">");
    s2=s1[:locnum2];
    print("locnum ",locnum) 
    print("locnum2 ",locnum2)
