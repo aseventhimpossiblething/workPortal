@@ -628,6 +628,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    
    
    #re.match(,)
+   """
    def quasit(Campaign_Nameing_Conv,x):
        x=x;     
        locnum=Campaign_Nameing_Conv.find(">");
@@ -650,6 +651,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
       
    print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---")
    print(NewDataFrame)
+   """
    """
    Campaign_Name.append(Campaign_Nameing_Conv);
    Campaign_Name.append(Campaign_Nameing_Conv);  
@@ -873,7 +875,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
  BingKWFrame=pandas.DataFrame(BingKWFrame)
  BingAdFrameA=pandas.DataFrame(BingAdFrameA).drop_duplicates()
  BingAdFrameB=pandas.DataFrame(BingAdFrameB).drop_duplicates()
- 
+      
+      
+ print(GoogleKWFrame)
  
 
  if SearchChan=="google":
