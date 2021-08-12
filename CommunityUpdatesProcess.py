@@ -627,8 +627,12 @@ def KeywordGenII(NewDataFrame,SearchChan):
                       +str(">")+communityName+str("_>");
    
    
-   
-
+   #re.match(,)
+   locnum=Campaign_Nameing_Conv.find(">");
+   s1=Campaign_Nameing_Conv[locnum:]; 
+   s2=s1.find(">") ;
+   sh=[s1:s2]; 
+      
    print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv )
       
    #AdgroupNaming_conv=AdgroupNaming_conv.replace("Mixed","Phrase")
