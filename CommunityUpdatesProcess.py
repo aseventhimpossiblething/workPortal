@@ -626,6 +626,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
             AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>");
    
+   
+   
+
+   print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv )
+      
    #AdgroupNaming_conv=AdgroupNaming_conv.replace("Mixed","Phrase")
    Adgroup.append(AdgroupNaming_conv);
    #AdgroupNaming_conv=AdgroupNaming_conv.replace("Phrase","Broad")
