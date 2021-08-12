@@ -31,7 +31,7 @@ SheetsAreLoaded=None;
 IsCommValid=None;
 IsGoogleValid=None;
 IsBingValid=None;
-print("loaded com up page")
+#print("loaded com up page")
 
 
 
@@ -153,14 +153,7 @@ def filterNonParticipators(theFrame):
    theFrame=theFrame.dropna();
    
       
-   #theFrame[0];
-   #theFrame[1];
-   #theFrame[2];  
-   #theFrame[3];
-   #theFrame[4];
-   #theFrame[5];
-   #print("theFrame.columns ",theFrame.columns);       
-      
+    
    try:
       #print("Start Try")
       theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount])]
@@ -205,7 +198,7 @@ def filterNonParticipators(theFrame):
       
   except:
    Community="  !!!  "
-   print("first loop try failed ",icount);
+   #print("first loop try failed ",icount);
    failcounter+=1;
   DeDupArray.append(Community)
   icount+=1;
@@ -222,7 +215,7 @@ def filterNonParticipators(theFrame):
    if DeDupArray.count(Community)>1:
     theFrame=theFrame.drop([icount0])
   except:
-   print("Second Loop failed Count ",icount0)
+   #print("Second Loop failed Count ",icount0)
    icount0+0;
   icount0+=1; 
   
@@ -1309,7 +1302,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Keyword_conv=Keyword_conv.replace("[","");
    Keyword_conv=Keyword_conv.replace("]"," ");     
    Keyword.append(Keyword_conv); 
-   Keyword.append(Keyword_conv);    
+   Keyword.append(Keyword_conv);
+   #Keyword.append("["+Keyword_conv+"]");   
    label="Created by WebApp"
          
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
