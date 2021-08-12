@@ -633,7 +633,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    print("s1 ",s1);
    s2=s1.find(">");
    print("s2 ",s2);
-   sh=[s1:s2]; 
+   #print("sh ",sh)   
+   #sh=[s1:s2]; 
       
    print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---",sh)
       
