@@ -629,8 +629,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    
    #re.match(,)
    locnum=Campaign_Nameing_Conv.find(">");
-   s1=Campaign_Nameing_Conv[locnum:]; 
-   s2=s1.find(">") ;
+   s1=Campaign_Nameing_Conv[locnum:];
+   print("s1 ",s1);
+   s2=s1.find(">");
+   print("s2 ",s2);
    sh=[s1:s2]; 
       
    print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---",sh)
