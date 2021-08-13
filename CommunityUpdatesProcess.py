@@ -887,8 +887,12 @@ def KeywordGenII(NewDataFrame,SearchChan):
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords'
    os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('GKW.xlsx')
-   GoogleKWFrame.to_excel(writer)
+   #GoogleKWFrame.to_excel(writer)
+   GoogleKWFrame.to_excel(SaveLocation)   
    writer.save()
+
+   df="/GMDelight/workPortal/Sheets"
+      
    
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA'
    os.chdir(SaveLocation)
@@ -896,11 +900,13 @@ def KeywordGenII(NewDataFrame,SearchChan):
    GoogleAdFrameA.to_excel(writer)
    writer.save()
    
-   
+  
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB'
    os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('GADB.xlsx')
+   #writer=SaveLocation   
    GoogleAdFrameB.to_excel(writer)
+   #GoogleAdFrameB.to_excel(writer)
    writer.save()
    
  
