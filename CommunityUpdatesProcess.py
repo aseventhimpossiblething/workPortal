@@ -879,7 +879,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
       
  GoogleKWFrame=GoogleKWFrame.iloc[:1]      
  
-      
+ print("GoogleKWFrame----------")     
  print(GoogleKWFrame) 
  """
  print(GoogleKWFrame[["Campaign Name","Ad Group"]])
