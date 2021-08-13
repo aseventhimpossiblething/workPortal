@@ -878,7 +878,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
       
  print(GoogleKWFrame)     
  print(GoogleKWFrame[["Campaign Name","Ad Group"]])
- GoogleKWFrame=GoogleKWFrame[["Campaign Name","Ad Group"]]  
+ GoogleKWFrame=GoogleKWFrame[["Index","Campaign Name","Ad Group"]]  
+ print("rows - ",GoogleKWFrame.count);
  print(GoogleKWFrame.iloc[0]);
  print(GoogleKWFrame.iloc[1]);
  print(GoogleKWFrame.iloc[2]);
@@ -895,7 +896,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('GKW.xlsx')
    GoogleKWFrame.to_excel(writer)
-   GoogleKWFrame.to_csv('GKW.csv')   
+   GoogleKWFrame.to_csv(r'GKW.csv')   
    #GoogleKWFrame.to_excel(r'/GMDelight/workPortal/Sheets')   
    writer.save()
 
