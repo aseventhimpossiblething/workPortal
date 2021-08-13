@@ -878,6 +878,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
       
  print(GoogleKWFrame)     
  print(GoogleKWFrame[["Campaign Name","Ad Group"]])
+ GoogleKWFrame=GoogleKWFrame[["Campaign Name","Ad Group"]]     
  
 
  if SearchChan=="google":
