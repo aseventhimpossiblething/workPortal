@@ -529,7 +529,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
-    Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count+1]];
+    Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
     Campaign_Nameing_Conv="Consolidated_"+Campaign_Nameing_Conv;  
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_GPPC403","") 
     Campaign_Name.append(Campaign_Nameing_Conv);
@@ -879,7 +879,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
       
  
  GoogleKWFrame=GoogleKWFrame[["Campaign Name","Ad Group"]]
- GoogleKWFrame=GoogleKWFrame.iloc[:20]      
+ GoogleKWFrame=GoogleKWFrame.iloc[:100]      
  
  print("GoogleKWFrame----------")     
  print(GoogleKWFrame) 
@@ -919,8 +919,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #print("In KeywordGenII google SBMM ")
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords'
    os.chdir(SaveLocation)
-   os.remove('GKW.xlsx') 
-   os.remove('GKW.csv')   
+   #os.remove('GKW.xlsx') 
+   #os.remove('GKW.csv')   
    writer=pandas.ExcelWriter('GKW.xlsx')
    GoogleKWFrame.to_excel(writer)
    GoogleKWFrame.to_csv(r'GKW.csv')   
