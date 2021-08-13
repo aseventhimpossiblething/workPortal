@@ -877,7 +877,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
  BingAdFrameA=pandas.DataFrame(BingAdFrameA).drop_duplicates()
  BingAdFrameB=pandas.DataFrame(BingAdFrameB).drop_duplicates()
       
- print(GoogleKWFrame)     
+ GoogleKWFrame=GoogleKWFrame.iloc[:10]      
+ 
+      
+ print(GoogleKWFrame) 
+ """
  print(GoogleKWFrame[["Campaign Name","Ad Group"]])
  GoogleKWFrame=GoogleKWFrame[["Campaign Name","Ad Group"]]  
  print("rows - ",len(GoogleKWFrame.index));
@@ -888,15 +892,16 @@ def KeywordGenII(NewDataFrame,SearchChan):
        #cftpiawon1=cftpiawon1+1;
        campo=quasit(GoogleKWFrame["Campaign Name"][cftpiawon1],"camp");
        adgroupo=quasit(GoogleKWFrame["Ad Group"][cftpiawon1],"adgroup");
-       print("campo==adgroupo ",campo,"-",adgroupo)
-       print(count," Camp=",campo," Adgroup=",adgroupo,"---") 
-       if campo!=adgroupo:
+       #print("campo==adgroupo ",campo,"-",adgroupo)
+       #print(count," Camp=",campo," Adgroup=",adgroupo,"---") 
+       if campo==adgroupo:
           print("campo==adgroupo ",campo,"-",adgroupo)
           print(count," Camp=",campo," Adgroup=",adgroupo,"---")
        else:
           print("Mstch")  
        cftpiawon1=cftpiawon1+1;     
-      
+ 
+ """
  """
  print(GoogleKWFrame.iloc[0]);
  print(GoogleKWFrame.iloc[1]);
@@ -918,7 +923,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #GoogleKWFrame.to_excel(r'/GMDelight/workPortal/Sheets')   
    writer.save()
 
-   df="/GMDelight/workPortal/Sheets"
+   #df="/GMDelight/workPortal/Sheets"
       
    
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA'
