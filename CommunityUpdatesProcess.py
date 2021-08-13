@@ -888,7 +888,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('GKW.xlsx')
    #GoogleKWFrame.to_excel(writer)
-   GoogleKWFrame.to_excel(SaveLocation)   
+   GoogleKWFrame.to_excel(r'/GMDelight/workPortal/Sheets')   
    writer.save()
 
    df="/GMDelight/workPortal/Sheets"
