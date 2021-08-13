@@ -878,7 +878,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
       
  print(GoogleKWFrame)     
  print(GoogleKWFrame[["Campaign Name","Ad Group"]])
- GoogleKWFrame=GoogleKWFrame[["Index","Campaign Name","Ad Group"]]  
+ GoogleKWFrame=GoogleKWFrame[["index","Campaign Name","Ad Group"]]  
  print("rows - ",GoogleKWFrame.count);
  print(GoogleKWFrame.iloc[0]);
  print(GoogleKWFrame.iloc[1]);
