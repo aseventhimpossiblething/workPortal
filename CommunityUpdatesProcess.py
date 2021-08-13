@@ -877,7 +877,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  BingAdFrameB=pandas.DataFrame(BingAdFrameB).drop_duplicates()
       
       
- print(GoogleKWFrame)
+ print(GoogleKWFrame["Campaign Name","Ad Group"])
  
 
  if SearchChan=="google":
