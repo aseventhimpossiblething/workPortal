@@ -180,6 +180,11 @@ def GoogleKWG():
  return send_file("/GMDelight/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GKW.xlsx",\
                   attachment_filename="GKW.xlsx")
 
+@app.route('/GKW1')
+def GoogleKWG1():
+ return send_file("/GMDelight/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GKW.csv",\
+                  attachment_filename="GKW.csv")
+
 @app.route('/GoogleKWSBMM')
 def GoogleKWSBMMKW():
  return send_file("/GMDelight/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords/GoogleBMMKW/DefaultSheet.xlsx",\
