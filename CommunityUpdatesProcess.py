@@ -878,8 +878,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
  BingAdFrameB=pandas.DataFrame(BingAdFrameB).drop_duplicates()
       
  
- GoogleKWFrame=GoogleKWFrame[["Campaign Name","Ad Group"]]
- GoogleKWFrame=GoogleKWFrame.iloc[:100]      
+ #GoogleKWFrame=GoogleKWFrame[["Campaign Name","Ad Group"]]
+ #GoogleKWFrame=GoogleKWFrame.iloc[:100]      
  
  print("GoogleKWFrame----------")     
  print(GoogleKWFrame) 
