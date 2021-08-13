@@ -883,10 +883,13 @@ def KeywordGenII(NewDataFrame,SearchChan):
  print("rows - ",len(GoogleKWFrame.index));
  cftpiawon1=0;
  while cftpiawon1<len(GoogleKWFrame.index):
-       print(GoogleKWFrame.iloc[cftpiawon1]);
+          
+       #print(GoogleKWFrame.iloc[cftpiawon1]);
        #cftpiawon1=cftpiawon1+1;
        campo=quasit(GoogleKWFrame["Campaign Name"][cftpiawon1],"camp");
        adgroupo=quasit(GoogleKWFrame["Ad Group"][cftpiawon1],"adgroup");
+       print("campo==adgroupo ",campo,"-",adgroupo)
+       print(count," Camp=",campo," Adgroup=",adgroupo,"---") 
        if campo!=adgroupo:
           print("campo==adgroupo ",campo,"-",adgroupo)
           print(count," Camp=",campo," Adgroup=",adgroupo,"---")
