@@ -877,7 +877,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  BingAdFrameA=pandas.DataFrame(BingAdFrameA).drop_duplicates()
  BingAdFrameB=pandas.DataFrame(BingAdFrameB).drop_duplicates()
       
- GoogleKWFrame=GoogleKWFrame.iloc[:10]      
+ GoogleKWFrame=GoogleKWFrame.iloc[:1]      
  
       
  print(GoogleKWFrame) 
@@ -917,6 +917,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #print("In KeywordGenII google SBMM ")
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords'
    os.chdir(SaveLocation)
+   os.remove('GKW.xlsx') 
+   os.remove('GKW.csv')   
    writer=pandas.ExcelWriter('GKW.xlsx')
    GoogleKWFrame.to_excel(writer)
    GoogleKWFrame.to_csv(r'GKW.csv')   
