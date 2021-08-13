@@ -879,14 +879,20 @@ def KeywordGenII(NewDataFrame,SearchChan):
  print(GoogleKWFrame)     
  print(GoogleKWFrame[["Campaign Name","Ad Group"]])
  GoogleKWFrame=GoogleKWFrame[["Campaign Name","Ad Group"]]  
- print("rows - ",GoogleKWFrame.count);
+ print("rows - ",len(GoogleKWFrame.index));
+ cftpiawon1=0;
+ while cftpiawon1<len(GoogleKWFrame.index):
+       print(GoogleKWFrame.iloc[cftpiawon1]);
+       cftpiawon1=cftpiawon1+1;
+      
+ """
  print(GoogleKWFrame.iloc[0]);
  print(GoogleKWFrame.iloc[1]);
  print(GoogleKWFrame.iloc[2]);
  print(GoogleKWFrame.iloc[3]);
  print(GoogleKWFrame.iloc[4]);
  print(GoogleKWFrame.iloc[5]);     
-
+ """
  
 
  if SearchChan=="google":
