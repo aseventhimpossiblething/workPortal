@@ -628,7 +628,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    
    
    #re.match(,)
-   """
+   
    def quasit(Campaign_Nameing_Conv,x):
        x=x;     
        locnum=Campaign_Nameing_Conv.find(">");
@@ -642,8 +642,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
        #print(x,"-",s2); 
        return s2;
        #print(x,s2)  
-   campo=quasit(Campaign_Nameing_Conv,"camp");
-   adgroupo=quasit(AdgroupNaming_conv,"adgroup");
+   #campo=quasit(Campaign_Nameing_Conv,"camp");
+   #adgroupo=quasit(AdgroupNaming_conv,"adgroup");
+   """   
    if campo==adgroupo:
       print("campo==adgroupo ",campo,"-",adgroupo)
       #print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---")
@@ -883,7 +884,15 @@ def KeywordGenII(NewDataFrame,SearchChan):
  cftpiawon1=0;
  while cftpiawon1<len(GoogleKWFrame.index):
        print(GoogleKWFrame.iloc[cftpiawon1]);
-       cftpiawon1=cftpiawon1+1;
+       #cftpiawon1=cftpiawon1+1;
+       campo=quasit(GoogleKWFrame["Campaign Name"][cftpiawon1],"camp");
+       adgroupo=quasit(GoogleKWFrame["Ad Group"][cftpiawon1],"adgroup");
+       if campo!=adgroupo:
+          print("campo==adgroupo ",campo,"-",adgroupo)
+          print(count," Camp=",campo," Adgroup=",adgroupo,"---")
+       else:
+          print("Mstch")  
+       cftpiawon1=cftpiawon1+1;     
       
  """
  print(GoogleKWFrame.iloc[0]);
