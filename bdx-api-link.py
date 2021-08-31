@@ -51,6 +51,14 @@ print("3")
 import psycopg2
 app = Flask(__name__,"/static/")
 
+print("/AlteredCom present at bdx-api-link at line 54")
+@app.route("/AlteredCom")
+def AlteredCom():
+    if chckbdxcred().find("NULL")==-1:
+        print(str(chckbdxcred()));
+        return str(chckbdxcred());
+    return "Make Altered Com page AVA2";
+
 
 login_page="/login"
 def setCnam():
