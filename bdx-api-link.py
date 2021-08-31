@@ -57,7 +57,8 @@ def AlteredCom():
     if chckbdxcred().find("NULL")==-1:
         print(str(chckbdxcred()));
         return str(chckbdxcred());
-    return "Make Altered Com page AVA2";
+    #return "Make Altered Com page AVA2";
+    return render_template('NovelComUpdate.html')
 
 
 login_page="/login"
