@@ -448,6 +448,10 @@ def CommunitiesUploads():
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
     return fileHandler.CommListFileHandler()
+
+@app.route('/NovelCommunityFileHander', methods=['POST','GET'])
+def NCommunityFileHandling():
+    return fileHandler.CommListFileHandler()
     
 
 @app.route('/account')
