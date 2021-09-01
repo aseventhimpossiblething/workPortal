@@ -436,7 +436,7 @@ def CommunityFileHandling():
     return fileHandler.CommListFileHandler()
 
 @app.route('/NovelCommunityFileHander', methods=['POST','GET'])
-def CommunityFileHandling():
+def NCommunityFileHandling():
     return fileHandler.CommListFileHandler()
     
     
