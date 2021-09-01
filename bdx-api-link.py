@@ -175,6 +175,32 @@ def CommUpdateDisplay():
     if read_storeRequest1!=read_storeRequest2:
      return '<meta http-equiv="refresh" content="120"><html>LOADING..... This can Take up to 20 minuites</html>'
 
+@app.route('/DisplayCommUpdate2')
+def CommUpdateDisplay():
+    os.chdir('/GMDelight/workPortal/Sheets/')     
+    storeRequest=open('RequestsVsResponses.txt','r+')
+    read_storeRequest=storeRequest.read()
+    storeRequest.close()
+    print("read_storeRequest ",read_storeRequest)
+    read_storeRequest1=read_storeRequest.count('Request')
+    read_storeRequest2=read_storeRequest.count('Response')
+    print(read_storeRequest1," <> ",read_storeRequest)     
+    print("read_storeRequest ",read_storeRequest)     
+    print("________________________________________________________________exp ",read_storeRequest1," : ",read_storeRequest2)
+    if read_storeRequest1==read_storeRequest2:
+     return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/CommUpdateExcel?'><html>This Message indicates an error in URL Forward</html>"
+    if read_storeRequest1!=read_storeRequest2:
+     return '<meta http-equiv="refresh" content="120"><html>LOADING..... This can Take up to 20 minuites</html>'
+
+
+
+
+
+
+
+
+
+
 
 
 @app.route('/CommUpdateExcel')
