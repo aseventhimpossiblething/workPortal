@@ -452,7 +452,7 @@ def CommunityFileHandling():
 @app.route('/NovelCommunityFileHander', methods=['POST','GET'])
 def NCommunityFileHandling():
     print("NCommunityFileHandling()")
-    return fileHandler.CommListFileHandler()
+    return fileHandler.NCommListFileHandler()
     
 
 @app.route('/account')
