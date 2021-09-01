@@ -209,6 +209,13 @@ def CommUpdateExcel():
  domain=domain
  return render_template('/CommUpdateExcel.html',CacheBreakStamp=datetime.now(),domain=domain)
 
+@app.route('/CommUpdateExcel2')
+def CommUpdateExcel2():
+ global domain
+ domain=domain
+ return render_template('/CommUpdateExcel2.html',CacheBreakStamp=datetime.now(),domain=domain)
+
+
 
 @app.route('/GKW')
 def GoogleKWG():
