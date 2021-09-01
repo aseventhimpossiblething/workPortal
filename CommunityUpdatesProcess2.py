@@ -514,8 +514,12 @@ def KeywordGenII(NewDataFrame,SearchChan):
   communityName.replace("91's","").replace("94's","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace(" s ","").replace("61s","").replace(" 64s ","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace("74's","").replace("61's","").replace(" 64's ","").replace("71's","").replace("74's","").replace("81's","").replace(" 84's ","").replace(" s ","").replace(" ' ","")
 
             
-  URL_Struct1=str("https://www.newhomesource.com/community/"+NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]+"/"+communityName\
-            +"-by-"+str(NewDataFrame['Brand Name'][count])+"/"+str(NewDataFrame['Community ID'][count])+"?refer=").lower().replace("m/i","m-i");
+  #URL_Struct1=str("https://www.newhomesource.com/basiccommunity/community-"+str(NewDataFrame['Community ID'][count])+"/"+NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]+"/"+communityName\
+  #          +"-by-"+str(NewDataFrame['Brand Name'][count])+"/"+str(NewDataFrame['Community ID'][count])+"?refer=").lower().replace("m/i","m-i");
+
+  URL_Struct1=str("https://www.newhomesource.com/basiccommunity/community-"+str(NewDataFrame['Community ID'][count])+"/"+communityName+NewDataFrame['State'][count]\
+            +"-"+"/"+str(NewDataFrame['Community ID'][count])+"?refer=").lower().replace("m/i","m-i");
+        
         
              
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
@@ -856,7 +860,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
   count+=1;
    
 
- #print("(Adgroup) ",Adgroup);
 
 
    
@@ -878,40 +881,12 @@ def KeywordGenII(NewDataFrame,SearchChan):
  BingAdFrameB=pandas.DataFrame(BingAdFrameB).drop_duplicates()
       
  
- #GoogleKWFrame=GoogleKWFrame[["Campaign Name","Ad Group"]]
- #GoogleKWFrame=GoogleKWFrame.iloc[:100]      
+      
  
  print("GoogleKWFrame----------")     
  print(GoogleKWFrame) 
- """
- print(GoogleKWFrame[["Campaign Name","Ad Group"]])
- GoogleKWFrame=GoogleKWFrame[["Campaign Name","Ad Group"]]  
- print("rows - ",len(GoogleKWFrame.index));
- cftpiawon1=0;
- while cftpiawon1<len(GoogleKWFrame.index):
-          
-       #print(GoogleKWFrame.iloc[cftpiawon1]);
-       #cftpiawon1=cftpiawon1+1;
-       campo=quasit(GoogleKWFrame["Campaign Name"][cftpiawon1],"camp");
-       adgroupo=quasit(GoogleKWFrame["Ad Group"][cftpiawon1],"adgroup");
-       #print("campo==adgroupo ",campo,"-",adgroupo)
-       #print(count," Camp=",campo," Adgroup=",adgroupo,"---") 
-       if campo==adgroupo:
-          print("campo==adgroupo ",campo,"-",adgroupo)
-          print(count," Camp=",campo," Adgroup=",adgroupo,"---")
-       else:
-          print("Mstch")  
-       cftpiawon1=cftpiawon1+1;     
- 
- """
- """
- print(GoogleKWFrame.iloc[0]);
- print(GoogleKWFrame.iloc[1]);
- print(GoogleKWFrame.iloc[2]);
- print(GoogleKWFrame.iloc[3]);
- print(GoogleKWFrame.iloc[4]);
- print(GoogleKWFrame.iloc[5]);     
- """
+
+
  
 
  if SearchChan=="google":
@@ -927,8 +902,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #GoogleKWFrame.to_excel(r'/GMDelight/workPortal/Sheets')   
    writer.save()
 
-   #df="/GMDelight/workPortal/Sheets"
-      
+       
    
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA'
    os.chdir(SaveLocation)
