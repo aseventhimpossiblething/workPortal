@@ -257,7 +257,7 @@ def NCommListFileHandler():
      storeRequest=open('RequestsVsResponses.txt','w')    
      storeRequest.write("Request, ")
      storeRequest.close()           
-     CommunityUpdatesProcess.initialCommUpdatProcess()
+     CommunityUpdatesProcess2.initialCommUpdatProcess()
     print("Pre thread fire---")  
     LoadAllCommunityFiles=threading.Thread(target=async_fileloader)
     LoadAllCommunityFiles.start()    
