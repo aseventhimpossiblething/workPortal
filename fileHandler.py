@@ -234,8 +234,8 @@ def NCommListFileHandler():
                 return "The Community Sheet is not XLSX file type";
     if request.files['currentGoogle'].filename.find("xlsx")<1:
                 return "The Google Sheet is not XLSX file type";
-    if request.files['currentBing'].filename.find("xlsx")<1:
-                return "The Bing Sheet is not XLSX file type"; 
+    #if request.files['currentBing'].filename.find("xlsx")<1:
+    #            return "The Bing Sheet is not XLSX file type"; 
         
     print("Past requests---")  
 
