@@ -227,7 +227,8 @@ def NCommListFileHandler():
         return "Google slot is empty"
     if emptyObj==str(request.files['Communities']):
         return "Active Community slot is empty"
-    
+
+    print("Past empty objs---") 
     
     if request.files['Communities'].filename.find("xlsx")<1:
                 return "The Community Sheet is not XLSX file type";
@@ -235,7 +236,9 @@ def NCommListFileHandler():
                 return "The Google Sheet is not XLSX file type";
     if request.files['currentBing'].filename.find("xlsx")<1:
                 return "The Bing Sheet is not XLSX file type"; 
-     
+        
+    print("Past requests---")  
+
     os.chdir(currentCommunitiesLocation)
     SHcommand="sudo chmod -R 777 "+currentCommunitiesLocation
     os.system(SHcommand+"/WorkingCommunities")
@@ -255,6 +258,7 @@ def NCommListFileHandler():
      storeRequest.write("Request, ")
      storeRequest.close()           
      CommunityUpdatesProcess.initialCommUpdatProcess()
+    print("Pre thread fire---")  
     LoadAllCommunityFiles=threading.Thread(target=async_fileloader)
     LoadAllCommunityFiles.start()    
 
