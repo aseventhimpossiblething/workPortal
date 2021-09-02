@@ -1006,28 +1006,28 @@ def initialCommUpdatProcess():
  if IsCommValid!="Valid":
   return IsCommValid
  WorkingGoogleEOF=WorkingGoogle()    
- WorkingBingEOF=WorkingBing()
+ #WorkingBingEOF=WorkingBing()
 
 
 
 
  WorkingCommunities['Community ID']
  WorkingGoogleEOF['Final URL']  
- WorkingBingEOF['Final Url']
+ #WorkingBingEOF['Final Url']
       
   
    
  
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
- bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
+ #bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
 
  #print(" WorkingCommunities ",WorkingCommunities)     
  
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
- NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
+ #NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
  
 
 
@@ -1038,7 +1038,7 @@ def initialCommUpdatProcess():
  
  #print( 'One KeywordgenII Running which is KeywordGenII(NewGoogle,"sb","google")' )
  KeywordGenII(NewGoogle,"google")
- KeywordGenII(NewBing,"bing")
+ #KeywordGenII(NewBing,"bing")
 
  os.chdir(fileHandler.currentBingLocation)
  #print("past  os.chdir fileHandler.currentBingLocation")
