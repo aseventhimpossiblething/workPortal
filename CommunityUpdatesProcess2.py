@@ -972,12 +972,14 @@ def initialCommUpdatProcess():
  
 
  
- WorkingCommunities.columns=WorkingCommunities.iloc[0]
+ WorkingCommunities.columns=WorkingCommunities.iloc[0];
 
- IDcap=WorkingCommunities.columns.find('Community ID');
- Idlow=WorkingCommunities.columns.find('Community Id');
- print("ID cap",IDcap)
- print("Id low",Idlow)     
+ wcols=str(WorkingCommunities.columns)
+ print("wcols ",wcols)     
+ IDcap=wcols.find('Community ID');
+ Idlow=wcols.find('Community Id');
+ print("ID cap ",IDcap)
+ print("Id low ",Idlow)     
 
  WorkingCommunities=WorkingCommunities.drop([4])
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community ID','Community Name','City')
