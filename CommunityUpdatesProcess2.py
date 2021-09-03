@@ -125,7 +125,7 @@ def WorkingBing():
 
 def filterNonParticipators(theFrame):
  print(" FILTER 1 -- FILTER 1 -- FILTER 1 -- FILTER 1 -- FILTER 1 -- 1 FILTER 1 -- FILTER 1 -- FILTER 1 --")
- print(theFrame)
+ print("1 ",theFrame)
  def firstDropLoop(theFrame):
   DropRowsContaining=['Oak Creek','Custom','Oak Creek','Clayton','Oakwood','Craftmark','Freedom','Crossland','del Webb','Webb','webb',\
                       'G & I','Build on Your Lot','BYOL','Build','build','Manufactured Housing Consultants','Homesites','lots',':ft',\
@@ -146,7 +146,7 @@ def filterNonParticipators(theFrame):
       return upperWords;
  
   DropRowsContaining=DropRowsContaining+LowDropRowsContaining(DropRowsContaining)+UpperDropRowsContaining(DropRowsContaining);      
-      
+  print("2 ",theFrame)    
   
   DropLoopCount=0;
   while DropLoopCount<len(DropRowsContaining):
@@ -183,7 +183,7 @@ def filterNonParticipators(theFrame):
    theFrame=theFrame.drop_duplicates(subset=['Community name']);
    
    DropLoopCount+=1;
-  
+  print("3 ",theFrame) 
   print("FILTER 2 -- FILTER 2 -- FILTER 2 -- FILTER 2 -- FILTER 2 -- FILTER 2 -- FILTER 2 -- FILTER 2--")    
   return theFrame
  theFrame=firstDropLoop(theFrame)  
