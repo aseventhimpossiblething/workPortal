@@ -375,13 +375,15 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
     newcomid=[];
     while cctv<len(wackyNewTable['Community Name']):
           nam=wackyNewTable['Community Name'][cctv]; 
-       
+      
+          """       
           if AlteredColNamesWithMultiples.count(nam)>1:
       
               newcomid.append("MPC Community");
           else:
-              newcomid.append(wackyNewTable['Community ID'][cctv]); 
-              #newcomid.append("nan");       
+          """
+          newcomid.append(wackyNewTable['Community ID'][cctv]); 
+          #newcomid.append("nan");       
           cctv+=1;
     wackyNewTable['Community ID']=newcomid;
     wackyNewTable=wackyNewTable.drop_duplicates(subset='Community Name') 
