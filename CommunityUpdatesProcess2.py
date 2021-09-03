@@ -103,8 +103,10 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
   return IsCommValid  
 
 def WorkingGoogle():  
+ print("inside WorkingGoogle")     
  os.chdir(currentGoogleLocation)
  WorkingGoogle=pandas.read_excel('WorkingGoogle')
+ print(WorkingGoogle) 
  global IsGoogleValid 
  IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
  if IsGoogleValid!="Valid":
