@@ -88,14 +88,14 @@ def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
   Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
   return Invalid
     
-def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkword4):
+def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
  WorkingCommunitiesname="WorkingCommunities" 
  global IsCommValid
  IsCommValid=CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3,checkword4)
  if CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3,checkword4)=="Valid":
-  WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Brand Name','Division ID','Division Name',\
-                                                                   'Community ID','Community Name','City','State','ZIP',\
-                                                                   'Market ID','Market Name'])
+  WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder name','Division Id','Division Name',\
+                                                                   CommunityID,'Community Name','City','State','ZIP',\
+                                                                   'Market ID'])
    
   return WorkingCommunities
  else:
