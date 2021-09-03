@@ -636,21 +636,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    
    
   
-   """
-   def quasit(Campaign_Nameing_Conv,x):
-       x=x;     
-       locnum=Campaign_Nameing_Conv.find(">");
-       s1=Campaign_Nameing_Conv[locnum+1:];
-       locnum2=s1.find(">");
-       s2=s1[:locnum2];
-       #print("locnum ",locnum) 
-       #print("locnum2 ",locnum2)
-       #print("s1 ",s1);
-       #print("s2 ",s2);
-       #print(x,"-",s2); 
-       return s2;
-       #print(x,s2)  
-   """
+   
 
  
    Adgroup.append(AdgroupNaming_conv);
@@ -782,14 +768,14 @@ def KeywordGenII(NewDataFrame,SearchChan):
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
                .replace("Lots","");
           
-          URL_Struct1=URL_Struct1.replace(" ","-")  
+          URL_Struct1=URL_Struct1.replace(" ","-").replace("--","-")   
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
           
           
    else:
-          URL_Struct1=URL_Struct1.replace(" ","-")
+          URL_Struct1=URL_Struct1.replace(" ","-").replace("--","-") 
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
