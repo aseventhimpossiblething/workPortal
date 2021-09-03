@@ -106,7 +106,7 @@ def WorkingGoogle():
  os.chdir(currentGoogleLocation)
  WorkingGoogle=pandas.read_excel('WorkingGoogle')
  global IsGoogleValid 
- IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Headline 1','Final URL')
+ IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
  if IsGoogleValid!="Valid":
   return IsGoogleValid
  else:
