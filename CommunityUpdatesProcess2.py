@@ -241,7 +241,7 @@ def filterNonParticipators(theFrame):
  
  print("theFrame")     
  print(theFrame)     
- theFrame=theFrame.drop_duplicates(subset=['Market Id','Community Name'])
+ theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name'])
   
  print("End of Filter ")
  print(" Frame size ",len(theFrame))
