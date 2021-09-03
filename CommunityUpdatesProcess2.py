@@ -125,7 +125,7 @@ def WorkingBing():
 
 def filterNonParticipators(theFrame):
  print(" FILTER 1 -- FILTER 1 -- FILTER 1 -- FILTER 1 -- FILTER 1 -- 1 FILTER 1 -- FILTER 1 -- FILTER 1 --")
- print("1 ",theFrame)
+ #print("1 ",theFrame)
  def firstDropLoop(theFrame):
   DropRowsContaining=['Oak Creek','Custom','Oak Creek','Clayton','Oakwood','Craftmark','Freedom','Crossland','del Webb','Webb','webb',\
                       'G & I','Build on Your Lot','BYOL','Build','build','Manufactured Housing Consultants','Homesites','lots',':ft',\
@@ -145,16 +145,25 @@ def filterNonParticipators(theFrame):
           upperWords.append(word.upper());
       return upperWords;
  
-  DropRowsContaining=DropRowsContaining+LowDropRowsContaining(DropRowsContaining)+UpperDropRowsContaining(DropRowsContaining);      
-  print("2 ",theFrame)    
+  DropRowsContaining=DropRowsContaining+LowDropRowsContaining(DropRowsContaining)+UpperDropRowsContaining(DropRowsContaining);
+  print("1") 
+  print(theFrame)    
   
   DropLoopCount=0;
   while DropLoopCount<len(DropRowsContaining):
+   print("Loop count 1 ",DropLoopCount)
+   print(theFrame)
       
    theFrame=theFrame.drop_duplicates();
    #print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
+      
+   print("Loop count 2 ",DropLoopCount)
+   print(theFrame)
+      
    theFrame=theFrame.dropna();
-   
+
+   print("Loop count 3 ",DropLoopCount)
+   print(theFrame)   
       
       
    """ 
@@ -181,9 +190,13 @@ def filterNonParticipators(theFrame):
    theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
    """      
    theFrame=theFrame.drop_duplicates(subset=['Community name']);
-   
+
+   print("Loop count 4 ",DropLoopCount)
+   print(theFrame)   
+      
+      
    DropLoopCount+=1;
-  print("3 ",theFrame) 
+  #print("3 ",theFrame) 
   print("FILTER 2 -- FILTER 2 -- FILTER 2 -- FILTER 2 -- FILTER 2 -- FILTER 2 -- FILTER 2 -- FILTER 2--")    
   return theFrame
  theFrame=firstDropLoop(theFrame)  
