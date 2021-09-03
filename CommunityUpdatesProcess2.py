@@ -190,7 +190,7 @@ def filterNonParticipators(theFrame):
    theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
    theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
    """      
-   theFrame=theFrame.drop_duplicates(subset=['Community name']);
+   theFrame=theFrame.drop_duplicates(subset=['Community Name']);
 
    print("Loop count 4 ",DropLoopCount)
    print(theFrame)   
