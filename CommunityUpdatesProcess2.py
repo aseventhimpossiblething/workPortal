@@ -222,7 +222,7 @@ def filterNonParticipators(theFrame):
    icount0+0;
   icount0+=1; 
   
- theFrame=theFrame.drop_duplicates(subset=['Market ID','Community Name'])
+ theFrame=theFrame.drop_duplicates(subset=['Market Id','Community Name'])
   
  print("End of Filter ")
  print(" Frame size ",len(theFrame))
@@ -471,7 +471,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  KWLabel=[];     
  
  count=0;
- hilecount=len(NewDataFrame['Market ID']);
+ hilecount=len(NewDataFrame['Market Id']);
  Keyword_conv="none"; 
  MatchType_Conv=0;
  set_bid=.45;
@@ -538,7 +538,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   try:
    if SearchChan=="google":
     #URL_Struct1=URL_Struct1+"gppc";
-    Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
+    Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market Id'][count]];
     Campaign_Nameing_Conv="Consolidated_"+Campaign_Nameing_Conv;  
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_GPPC403","").replace(">Mixed>Community",">Mixed>Basic Listings")  
     Campaign_Name.append(Campaign_Nameing_Conv);
@@ -583,7 +583,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
       
    if SearchChan=="bing":
     URL_Struct1=URL_Struct1+"msm205"
-    Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
+    Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market Id'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_MSM203","")
     Campaign_Nameing_Conv="Consolidated_"+Campaign_Nameing_Conv
     Campaign_Name.append(Campaign_Nameing_Conv);
@@ -620,19 +620,19 @@ def KeywordGenII(NewDataFrame,SearchChan):
    
 
    if SearchChan=="google":
-      AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
+      AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market Id'][count])\
                       +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
             
    
    if SearchChan=="bing":
-      AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
+      AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market Id'][count])\
                       +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
             
       
       
       
    if str(NewDataFrame['Community Id'][count]).find("nan")>-1:
-            AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
+            AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market Id'][count])\
                       +str(">")+communityName+str("_>");
    
    
