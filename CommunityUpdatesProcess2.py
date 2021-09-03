@@ -109,6 +109,8 @@ def WorkingGoogle():
  print(WorkingGoogle) 
  global IsGoogleValid 
  IsGoogleValid=CheckSheetData("WorkingGoogle",WorkingGoogle,'Campaign','Ad Group','Final URL')
+ print("IsGoogleValid")
+ print(IsGoogleValid)
  if IsGoogleValid!="Valid":
   return IsGoogleValid
  else:
