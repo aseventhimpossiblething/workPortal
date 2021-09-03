@@ -945,10 +945,10 @@ def initialCommUpdatProcess():
 
       
  
-      
- AVersion=str(WorkingCommunities.iloc[[2]].values).find('Community ID');
- BVersion=str(WorkingCommunities.iloc[[4]].values).find('Community ID');
- CVersion=str(WorkingCommunities.iloc[[0]].values).find('Community ID');
+ sheetidcol='Community Name'      
+ AVersion=str(WorkingCommunities.iloc[[2]].values).find(sheetidcol);
+ BVersion=str(WorkingCommunities.iloc[[4]].values).find(sheetidcol);
+ CVersion=str(WorkingCommunities.iloc[[0]].values).find(sheetidcol);
 
  print("=======================Watch for Version Print============= Begin")
  print("AVersion ",AVersion);
