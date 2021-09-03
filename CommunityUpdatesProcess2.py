@@ -166,17 +166,17 @@ def filterNonParticipators(theFrame):
       print("Brand Name Not Present");
    """
 
-   """
-   theFrame=theFrame[~theFrame['Builder name'].str.contains(DropRowsContaining[DropLoopCount])]
-   theFrame=theFrame[~theFrame['Builder name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
-   theFrame=theFrame[~theFrame['Builder name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
+   
+   theFrame=theFrame[~theFrame['Builder Name'].str.contains(DropRowsContaining[DropLoopCount])]
+   theFrame=theFrame[~theFrame['Builder Name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
+   theFrame=theFrame[~theFrame['Builder Name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
    #print("theFrame[~theFrame['Builder Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
-   """
+   
    #print("Drop while")
    
-   theFrame=theFrame[~theFrame['Community name'].str.contains(DropRowsContaining[DropLoopCount])]
-   theFrame=theFrame[~theFrame['Community name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
-   theFrame=theFrame[~theFrame['Community name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
+   theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount])]
+   theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
+   theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
          
    theFrame=theFrame.drop_duplicates(subset=['Community name']);
    
