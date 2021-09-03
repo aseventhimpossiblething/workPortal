@@ -127,7 +127,9 @@ def filterNonParticipators(theFrame):
  
  def firstDropLoop(theFrame):
   DropRowsContaining=['Oak Creek','Custom','Oak Creek','Clayton','Oakwood','Craftmark','Freedom','Crossland','del Webb','Webb','webb',\
-                      'G & I','Build on Your Lot','BYOL','Build','build','Manufactured Housing Consultants','Homesites','lots',':ft','Built','Built on Your Land','ft'];
+                      'G & I','Build on Your Lot','BYOL','Build','build','Manufactured Housing Consultants','Homesites','lots',':ft',\
+                      'Custom','Builders','Homes','LLc','Inc','Contr','Building','Build','Corp','Group','&','Bldg','Improvement',\
+                      'Architect','Properties','BOY','Built','Built on Your Land','ft'];
   def LowDropRowsContaining(words):
       lowerWords=[]; 
       words=words;
@@ -618,7 +620,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
       AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
             
-
+   
    if SearchChan=="bing":
       AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
@@ -632,7 +634,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    
    
   
-   
+   """
    def quasit(Campaign_Nameing_Conv,x):
        x=x;     
        locnum=Campaign_Nameing_Conv.find(">");
@@ -646,14 +648,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
        #print(x,"-",s2); 
        return s2;
        #print(x,s2)  
- 
+   """
 
  
-   #AdgroupNaming_conv=AdgroupNaming_conv.replace("Mixed","Phrase")
    Adgroup.append(AdgroupNaming_conv);
-   #AdgroupNaming_conv=AdgroupNaming_conv.replace("Phrase","Broad")
    Adgroup.append(AdgroupNaming_conv);
-   #AdgroupNaming_conv=AdgroupNaming_conv.replace("Broad","Exact")
    Adgroup.append(AdgroupNaming_conv);
 
    Match_Type.append("Phrase")
@@ -752,7 +751,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Path2A.append("New Homes") 
 
 
-
+   """ 
    if URL_Struct1.find("mpc community")>-1:
           communityName=communityName.replace(" ","%20").replace(" s ","").replace("61s","").replace("64s","").replace("71s","").replace("74s","").replace("81s","")\
           .replace("61s","").replace("94s","").replace(" s ","").replace("74's ","");  
@@ -768,7 +767,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
           if SearchChan.lower().find("bing")>-1:
                   URL_Struct1=URL_Struct1+"?refer=msm205"
                   
-         
+   """      
               
    nadgrp=AdgroupNaming_conv.replace("nan","")
    if nadgrp[len(nadgrp)-1]==">":
