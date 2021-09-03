@@ -521,7 +521,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   #URL_Struct1=str("https://www.newhomesource.com/basiccommunity/community-"+str(NewDataFrame['Community ID'][count])+"/"+NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]+"/"+communityName\
   #          +"-by-"+str(NewDataFrame['Brand Name'][count])+"/"+str(NewDataFrame['Community ID'][count])+"?refer=").lower().replace("m/i","m-i");
 
-  URL_Struct1=str("https://www.newhomesource.com/basiccommunity/community-"+str(NewDataFrame['Community ID'][count])+"/"+communityName+"-"+NewDataFrame['City'][count]+"-"+str(NewDataFrame['State'][count]).upper()+"-"+NewDataFrame['ZIP'][count]\
+  URL_Struct1=str("https://www.newhomesource.com/basiccommunity/community-"+str(NewDataFrame['Community ID'][count])+"/"+communityName+"-"+NewDataFrame['City'][count]+"-"+str(NewDataFrame['State'][count])+"-"+NewDataFrame['ZIP'][count]\
             +"?refer=gppc705").lower().replace("m/i","m-i");
         
         
