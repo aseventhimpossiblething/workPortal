@@ -147,24 +147,24 @@ def filterNonParticipators(theFrame):
       return upperWords;
  
   DropRowsContaining=DropRowsContaining+LowDropRowsContaining(DropRowsContaining)+UpperDropRowsContaining(DropRowsContaining);
-  print("1") 
-  print(theFrame)    
+  #print("1") 
+  #print(theFrame)    
   
   DropLoopCount=0;
   while DropLoopCount<len(DropRowsContaining):
-   print("Loop count 1 ",DropLoopCount)
-   print(theFrame)
+   #print("Loop count 1 ",DropLoopCount)
+   #print(theFrame)
       
    theFrame=theFrame.drop_duplicates();
    #print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
       
-   print("Loop count 2 ",DropLoopCount)
-   print(theFrame)
+   #print("Loop count 2 ",DropLoopCount)
+   #print(theFrame)
       
    theFrame=theFrame.dropna();
 
-   print("Loop count 3 ",DropLoopCount)
-   print(theFrame)   
+   #print("Loop count 3 ",DropLoopCount)
+   #print(theFrame)   
       
       
    """ 
@@ -192,8 +192,8 @@ def filterNonParticipators(theFrame):
        
    theFrame=theFrame.drop_duplicates(subset=['Community Name']);
 
-   print("Loop count 4 ",DropLoopCount)
-   print(theFrame)   
+   #print("Loop count 4 ",DropLoopCount)
+   #print(theFrame)   
       
       
    DropLoopCount+=1;
@@ -238,7 +238,9 @@ def filterNonParticipators(theFrame):
    #print("Second Loop failed Count ",icount0)
    icount0+0;
   icount0+=1; 
-  
+ 
+ print("theFrame")     
+ print(theFrame)     
  theFrame=theFrame.drop_duplicates(subset=['Market Id','Community Name'])
   
  print("End of Filter ")
