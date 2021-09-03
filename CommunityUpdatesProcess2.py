@@ -256,11 +256,11 @@ def communityCheck(checkby,checkin,Name):
  checkby=checkby.reset_index()
  count=0;
  DropRows=[];
- hilecount=checkby['Community ID'].count();
+ hilecount=checkby['Community Id'].count();
  if type(MaintatanceVar)=="<class 'int'>":
   hilecount=MaintatanceVar;
  while count < hilecount:
-  if checkin.find(str(checkby['Community ID'][count]))>-1:
+  if checkin.find(str(checkby['Community Id'][count]))>-1:
    DropRows.append(count);
    #This Row is a defining row, Commented out to create AVA version Does not filter URLS Uncomment to reverse 
    checkby=checkby.drop([count]);
@@ -366,7 +366,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
       
            if AlteredColNamesWithMultiples.count(AlteredComName)>1:
               MultiplesCommunityNames.append(AlteredComName);
-              MultiplesCommunityIds.append(cleanupFrame['Community ID'][thisLoopCount])
+              MultiplesCommunityIds.append(cleanupFrame['Community Id'][thisLoopCount])
               repeatedRows.append(thisLoopCount);
            thisLoopCount+=1;
      
@@ -383,10 +383,10 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
               newcomid.append("MPC Community");
           else:
           """
-          newcomid.append(wackyNewTable['Community ID'][cctv]); 
+          newcomid.append(wackyNewTable['Community Id'][cctv]); 
           #newcomid.append("nan");       
           cctv+=1;
-    wackyNewTable['Community ID']=newcomid;
+    wackyNewTable['Community Id']=newcomid;
     wackyNewTable=wackyNewTable.drop_duplicates(subset='Community Name') 
     wackyNewTable=wackyNewTable.reset_index(); 
 
@@ -519,10 +519,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
   communityName.replace("91's","").replace("94's","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace(" s ","").replace("61s","").replace(" 64s ","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace("74's","").replace("61's","").replace(" 64's ","").replace("71's","").replace("74's","").replace("81's","").replace(" 84's ","").replace(" s ","").replace(" ' ","")
 
             
-  #URL_Struct1=str("https://www.newhomesource.com/basiccommunity/community-"+str(NewDataFrame['Community ID'][count])+"/"+NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]+"/"+communityName\
-  #          +"-by-"+str(NewDataFrame['Brand Name'][count])+"/"+str(NewDataFrame['Community ID'][count])+"?refer=").lower().replace("m/i","m-i");
+  #URL_Struct1=str("https://www.newhomesource.com/basiccommunity/community-"+str(NewDataFrame['Community Id'][count])+"/"+NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]+"/"+communityName\
+  #          +"-by-"+str(NewDataFrame['Brand Name'][count])+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower().replace("m/i","m-i");
 
-  URL_Struct1=str("https://www.newhomesource.com/basiccommunity/community-"+str(NewDataFrame['Community ID'][count])+"/"+communityName+"-"+NewDataFrame['City'][count]+"-"+str(NewDataFrame['State'][count])+"-"+NewDataFrame['ZIP'][count]\
+  URL_Struct1=str("https://www.newhomesource.com/basiccommunity/community-"+str(NewDataFrame['Community Id'][count])+"/"+communityName+"-"+NewDataFrame['City'][count]+"-"+str(NewDataFrame['State'][count])+"-"+NewDataFrame['ZIP'][count]\
             +"?refer=gppc705").lower().replace("m/i","m-i");
         
         
@@ -621,17 +621,17 @@ def KeywordGenII(NewDataFrame,SearchChan):
 
    if SearchChan=="google":
       AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
-                      +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
+                      +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
             
    
    if SearchChan=="bing":
       AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
-                      +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
+                      +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
             
       
       
       
-   if str(NewDataFrame['Community ID'][count]).find("nan")>-1:
+   if str(NewDataFrame['Community Id'][count]).find("nan")>-1:
             AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>");
    
