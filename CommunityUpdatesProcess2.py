@@ -80,7 +80,11 @@ def CommunityNameCleaner(x):
 
  
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3):
- titlestring=str(sheet.iloc[1])
+ titlestring=str(sheet.iloc[1]).lower()
+ checkword1=str(checkword1).lower()
+ checkword2=str(checkword2).lower()
+ checkword3=str(checkword3).lower()
+
  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
   titlestring.find(checkword3)!=-1:
   return "Valid"
