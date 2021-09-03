@@ -79,7 +79,7 @@ def CommunityNameCleaner(x):
       return out;   
 
  
-def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
+def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3):
  titlestring=str(sheet.iloc[1])
  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
   titlestring.find(checkword3)!=-1:
