@@ -978,11 +978,15 @@ def initialCommUpdatProcess():
  print("wcols ",wcols)     
  IDcap=wcols.find('Community ID');
  Idlow=wcols.find('Community Id');
+ if IDcap>0:
+    CommunityID='Community ID'
+ if Idlow>0:
+    CommunityID='Community Id'
  print("ID cap ",IDcap)
  print("Id low ",Idlow)     
 
  WorkingCommunities=WorkingCommunities.drop([4])
- WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community ID','Community Name','City')
+ WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name',CommunityID,'Community Name','City')
 
  
  if IsCommValid!="Valid":
