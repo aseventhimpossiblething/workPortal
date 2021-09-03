@@ -517,8 +517,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
   #URL_Struct1=str("https://www.newhomesource.com/basiccommunity/community-"+str(NewDataFrame['Community ID'][count])+"/"+NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]+"/"+communityName\
   #          +"-by-"+str(NewDataFrame['Brand Name'][count])+"/"+str(NewDataFrame['Community ID'][count])+"?refer=").lower().replace("m/i","m-i");
 
-  URL_Struct1=str("https://www.newhomesource.com/basiccommunity/community-"+str(NewDataFrame['Community ID'][count])+"/"+communityName+"-"+NewDataFrame['City'][count]+"-"+NewDataFrame['State'][count]+NewDataFrame['ZIP'][count]\
-            +"-"+"?refer=gppc705").lower().replace("m/i","m-i");
+  URL_Struct1=str("https://www.newhomesource.com/basiccommunity/community-"+str(NewDataFrame['Community ID'][count])+"/"+communityName+"-"+NewDataFrame['City'][count]+"-"+NewDataFrame['State'][count]+"-"+NewDataFrame['ZIP'][count]\
+            +"?refer=gppc705").lower().replace("m/i","m-i");
         
         
              
@@ -532,10 +532,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    
   try:
    if SearchChan=="google":
-    URL_Struct1=URL_Struct1+"gppc";
+    #URL_Struct1=URL_Struct1+"gppc";
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
     Campaign_Nameing_Conv="Consolidated_"+Campaign_Nameing_Conv;  
-    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_GPPC403","") 
+    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_GPPC403","").replace(">Mixed>Community",">Mixed>Basic Listings")  
     Campaign_Name.append(Campaign_Nameing_Conv);
     Campaign_Name.append(Campaign_Nameing_Conv);  
     Campaign_Name.append(Campaign_Nameing_Conv);  
@@ -546,7 +546,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Bid.append(.65)    
       
     
-    URL_Struct1=URL_Struct1+"405"
+    #URL_Struct1=URL_Struct1+"405"
     Keyword_conv=Keyword_conv
     Keyword_conv=Keyword_conv.replace(" + ","")
     #Keyword_conv=Keyword_conv.replace("++","+")
@@ -631,7 +631,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
                       +str(">")+communityName+str("_>");
    
    
-   #re.match(,)
+  
    
    def quasit(Campaign_Nameing_Conv,x):
        x=x;     
@@ -646,22 +646,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
        #print(x,"-",s2); 
        return s2;
        #print(x,s2)  
-   #campo=quasit(Campaign_Nameing_Conv,"camp");
-   #adgroupo=quasit(AdgroupNaming_conv,"adgroup");
-   """   
-   if campo==adgroupo:
-      print("campo==adgroupo ",campo,"-",adgroupo)
-      #print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---")
-   #sh=Campaign_Nameing_Conv[locnum:locnum2]; 
-      
-   print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---")
-   print(NewDataFrame)
-   """
-   """
-   Campaign_Name.append(Campaign_Nameing_Conv);
-   Campaign_Name.append(Campaign_Nameing_Conv);  
-   Campaign_Name.append(Campaign_Nameing_Conv);     
-   """
+ 
+
+ 
    #AdgroupNaming_conv=AdgroupNaming_conv.replace("Mixed","Phrase")
    Adgroup.append(AdgroupNaming_conv);
    #AdgroupNaming_conv=AdgroupNaming_conv.replace("Phrase","Broad")
