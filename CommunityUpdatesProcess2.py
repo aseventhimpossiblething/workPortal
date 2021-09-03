@@ -1018,6 +1018,8 @@ def initialCommUpdatProcess():
 
 
  WorkingCommunities['Community Id']
+ print("WorkingGoogleEOF")      
+ print(WorkingGoogleEOF)     
  WorkingGoogleEOF['Final URL']  
  #WorkingBingEOF['Final Url']
       
