@@ -956,7 +956,7 @@ def initialCommUpdatProcess():
  print("CVersion ",CVersion); 
  
  print("=======================Watch for Version Print============= End")
-
+ 
  
  if AVersion!=-1:
     print("AVersion-------------------------------------------------------------------");        
@@ -973,6 +973,12 @@ def initialCommUpdatProcess():
 
  
  WorkingCommunities.columns=WorkingCommunities.iloc[0]
+
+ IDcap=WorkingCommunities.columns.find('Community ID');
+ Idlow=WorkingCommunities.columns.find('Community Id');
+ print("ID cap",IDcap)
+ print("Id low",Idlow)     
+
  WorkingCommunities=WorkingCommunities.drop([4])
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community ID','Community Name','City')
 
