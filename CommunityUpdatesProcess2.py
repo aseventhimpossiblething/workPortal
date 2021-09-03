@@ -82,7 +82,7 @@ def CommunityNameCleaner(x):
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
  titlestring=str(sheet.iloc[1])
  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
-  titlestring.find(checkword3)!=-1 and titlestring.find(checkword4)!=-1:
+  titlestring.find(checkword3)!=-1:
   return "Valid"
  else:
   Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
@@ -91,8 +91,8 @@ def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
  WorkingCommunitiesname="WorkingCommunities" 
  global IsCommValid
- IsCommValid=CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3,checkword4)
- if CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3,checkword4)=="Valid":
+ IsCommValid=CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3)
+ if CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3)=="Valid":
   WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder name','Division Id','Division Name',\
                                                                    CommunityID,'Community Name','City','State','ZIP',\
                                                                    'Market ID'])
