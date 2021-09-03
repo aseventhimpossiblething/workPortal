@@ -987,7 +987,7 @@ def initialCommUpdatProcess():
  print("Id low ",Idlow)     
 
  WorkingCommunities=WorkingCommunities.drop([4])
- WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name',CommunityID,'Community Name','City')
+ WorkingCommunities=LoadCommunities(WorkingCommunities,CommunityID,'Community Name','City')
 
  
  if IsCommValid!="Valid":
