@@ -1010,7 +1010,7 @@ def initialCommUpdatProcess():
  #bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
 
- #print(" WorkingCommunities ",WorkingCommunities)     
+ print(" - WorkingCommunities - ",WorkingCommunities)     
  
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
