@@ -931,9 +931,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
  
       
  
- print("GoogleKWFrame----------")     
- print(GoogleKWFrame) 
+ #print("GoogleKWFrame----------")     
+ #print(GoogleKWFrame) 
 
+ print("GoogleAdFrameA----------")     
+ print(GoogleAdFrameA) 
 
  
 
