@@ -724,6 +724,23 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title3A.append("Schedule a new home tour today")
    Title3A.append("Schedule a new home tour today")
    Title3A.append("Schedule a new home tour today")
+   
+   Title4A.append("-");
+   Title4A.append("-");
+   Title4A.append("-");
+
+   Title5A.append("-"); 
+   Title6A.append("-");
+   Title7A.append("-");
+   Title8A.append("-");
+   Title9A.append("-");
+   Title10A.append("-");
+   Title11A.append("-");
+   Title12A.append("-");
+   Title13A.append("-");
+   Title14A.append("-");
+   Title15A.append("-");
+   
 
    PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])
@@ -743,15 +760,25 @@ def KeywordGenII(NewDataFrame,SearchChan):
    TextA.append(PreTextA);
    TextA.append(PreTextA);
  
-   TextB.append(PreTextB);
-   TextB.append(PreTextB);
-   TextB.append(PreTextB); 
+  
       
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    
+   Text3A.append("-");
+   Text3A.append("-");
+   Text3A.append("-");   
+   
+   Text4A.append("-");
+   Text4A.append("-");
+   Text4A.append("-");  
 
+   
+   TextB.append(PreTextB);
+   TextB.append(PreTextB);
+   TextB.append(PreTextB); 
+   
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
    if len(Path1A_conv)>15:
     Path1A_conv=Path1A_conv.replace("-","")
@@ -887,7 +914,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Labels":KWLabel} 
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
  GoogleAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
-                "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
+                "Headline 4":Title3A,"Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
  GoogleAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
                 "Description":TextB,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":LabelB}
  GoogleAdFrameA=pandas.DataFrame(GoogleAdFrameA).drop_duplicates()
