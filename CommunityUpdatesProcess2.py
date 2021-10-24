@@ -914,7 +914,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Labels":KWLabel} 
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
  GoogleAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
-                "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
+                "Headline 4":Title4A,"Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
  GoogleAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
                 "Description":TextB,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":LabelB}
  GoogleAdFrameA=pandas.DataFrame(GoogleAdFrameA).drop_duplicates()
@@ -980,7 +980,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    writer=pandas.ExcelWriter('BADB.xlsx')
    BingAdFrameB.to_excel(writer)
    writer.save()
- print(' -- end of KWGEN END SEEK NEW DF -- ')
+ #print(' -- end of KWGEN END SEEK NEW DF -- ')
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
 
