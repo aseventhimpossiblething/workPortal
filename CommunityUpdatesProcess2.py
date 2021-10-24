@@ -1,4 +1,4 @@
-print("load Com Updates----2  update")
+print("load Com Updates----2  update 2")
 MaintatanceVar="Off";
 import glob
 import numpy
@@ -910,7 +910,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
 
 
 
-   
+ print("Making DataSheets-----------------------------------------------------------------------------------------")  
  GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Labels":KWLabel} 
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
  GoogleAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3--":Title3A,\
@@ -931,8 +931,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  
       
  
- #print("GoogleKWFrame----------")     
- #print(GoogleKWFrame) 
+
 
  print("GoogleAdFrameA----------")     
  print(GoogleAdFrameA) 
