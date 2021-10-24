@@ -1,4 +1,4 @@
-print("load Com Updates----2")
+print("load Com Updates----2  update")
 MaintatanceVar="Off";
 import glob
 import numpy
