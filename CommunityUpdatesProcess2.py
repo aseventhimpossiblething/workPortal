@@ -927,16 +927,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
  BingKWFrame=pandas.DataFrame(BingKWFrame)
  BingAdFrameA=pandas.DataFrame(BingAdFrameA).drop_duplicates()
  BingAdFrameB=pandas.DataFrame(BingAdFrameB).drop_duplicates()
-      
  
-      
- 
-
-
  print("GoogleAdFrameA----------")     
  print(GoogleAdFrameA) 
-
- 
 
  if SearchChan=="google":
    #if MatchType=='SBMM':
@@ -950,15 +943,12 @@ def KeywordGenII(NewDataFrame,SearchChan):
    GoogleKWFrame.to_csv(r'GKW.csv')   
    #GoogleKWFrame.to_excel(r'/GMDelight/workPortal/Sheets')   
    writer.save()
-
-       
    
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA'
    os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('GADA.xlsx')
    GoogleAdFrameA.to_excel(writer)
    writer.save()
-   
   
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB'
    os.chdir(SaveLocation)
@@ -990,10 +980,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    writer=pandas.ExcelWriter('BADB.xlsx')
    BingAdFrameB.to_excel(writer)
    writer.save()
-   
-   
-
- 
+ print(' -- end of KWGEN END SEEK NEW DF -- ')
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
 
@@ -1091,14 +1078,7 @@ def initialCommUpdatProcess():
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  #NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
- 
-
-
-      
-
- 
   
- 
  #print( 'One KeywordgenII Running which is KeywordGenII(NewGoogle,"sb","google")' )
  KeywordGenII(NewGoogle,"google")
  #KeywordGenII(NewBing,"bing")
@@ -1114,7 +1094,6 @@ def initialCommUpdatProcess():
  storeRequest=open('RequestsVsResponses.txt','r+')
  storeRequest.close()
  
-
  #CommunityNameDuplicateSpecialLoop(WorkingCommunities);
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
