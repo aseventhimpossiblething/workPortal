@@ -1018,15 +1018,25 @@ def initialCommUpdatProcess():
 
       
  
- sheetidcol='Community Name'      
+ sheetidcol='Community Name' 
+      
+ AVersion=str(WorkingCommunities.iloc[[0]].values).find(sheetidcol);
+ BVersion=str(WorkingCommunities.iloc[[1]].values).find(sheetidcol);
+ CVersion=str(WorkingCommunities.iloc[[2]].values).find(sheetidcol);
+ DVersion=str(WorkingCommunities.iloc[[3]].values).find(sheetidcol);
+ EVersion=str(WorkingCommunities.iloc[[4]].values).find(sheetidcol);     
+ 
+ """
  AVersion=str(WorkingCommunities.iloc[[2]].values).find(sheetidcol);
  BVersion=str(WorkingCommunities.iloc[[4]].values).find(sheetidcol);
  CVersion=str(WorkingCommunities.iloc[[0]].values).find(sheetidcol);
-
+ """
  print("=======================Watch for Version Print============= Begin")
  print("AVersion ",AVersion);
  print("BVersion ",BVersion);  
- print("CVersion ",CVersion); 
+ print("CVersion ",CVersion);
+ print("AVersion ",DVersion);
+ print("AVersion ",EVersion);     
  
  print("=======================Watch for Version Print============= End")
  
