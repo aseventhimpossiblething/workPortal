@@ -1005,12 +1005,18 @@ def initialCommUpdatProcess():
       
 
  WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,]);
+ AVersion=str(WorkingCommunities.iloc[[0]].values);
+ BVersion=str(WorkingCommunities.iloc[[1]].values);
+ CVersion=str(WorkingCommunities.iloc[[2]].values);
+ DVersion=str(WorkingCommunities.iloc[[3]].values);
+ EVersion=str(WorkingCommunities.iloc[[4]].values);
+ #CVersion=str(WorkingCommunities.iloc[[0]].values);     
 
- 
+ """
  AVersion=str(WorkingCommunities.iloc[[2]].values);
  BVersion=str(WorkingCommunities.iloc[[4]].values);
  CVersion=str(WorkingCommunities.iloc[[0]].values);
-      
+ """     
       
  print("AVersion ",AVersion);
  print("BVersion ",BVersion);     
@@ -1035,8 +1041,8 @@ def initialCommUpdatProcess():
  print("AVersion ",AVersion);
  print("BVersion ",BVersion);  
  print("CVersion ",CVersion);
- print("AVersion ",DVersion);
- print("AVersion ",EVersion);     
+ print("DVersion ",DVersion);
+ print("EVersion ",EVersion);     
  
  print("=======================Watch for Version Print============= End")
  
