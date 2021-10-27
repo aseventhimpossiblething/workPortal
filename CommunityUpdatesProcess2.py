@@ -1004,8 +1004,9 @@ def initialCommUpdatProcess():
  
       
 
- WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,]);
- print(" WorkingCommunitie ")
+ #WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,]);
+ WorkingCommunities=pandas.read_excel('WorkingCommunities');
+ print(" WorkingCommunities ")
  print(WorkingCommunities)     
  AVersion=str(WorkingCommunities.iloc[[0]].values);
  BVersion=str(WorkingCommunities.iloc[[1]].values);
