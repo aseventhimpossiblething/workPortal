@@ -1021,6 +1021,9 @@ def initialCommUpdatProcess():
  print("AVersion ",AVersion);
  print("BVersion ",BVersion);     
  print("CVersion ",CVersion);
+ print("DVersion ",DVersion);
+ print("EVersion ",EVersion);     
+ #print("CVersion ",CVersion);
 
       
  
