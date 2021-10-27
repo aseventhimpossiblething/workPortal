@@ -494,9 +494,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
  Title13A=[];
  Title14A=[];
  Title15A=[];
- #Title2A=[];
- #Title3A=[];
- #Title4A=[];     
  TextA=[];
  Text2A=[];
  Text3A=[];
@@ -507,8 +504,22 @@ def KeywordGenII(NewDataFrame,SearchChan):
  Title1B=[];
  Title2B=[];
  Title3B=[];
+ Title4B=[];
+ Title5B=[]; 
+ Title6B=[];
+ Title7B=[];
+ Title8B=[];
+ Title9B=[];
+ Title10B=[]; 
+ Title11B=[];
+ Title12B=[];
+ Title13B=[];
+ Title14B=[];
+ Title15B=[];
  TextB=[];
  Text2B=[];
+ Text3B=[];
+ Text4B=[];
  Path1B=[];
  Path2B=[];
  
