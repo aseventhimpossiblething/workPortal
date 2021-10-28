@@ -1133,7 +1133,7 @@ def initialCommUpdatProcess():
  try:
     WorkingGoogleEOF=WorkingGoogle()
  except:
-    errorFrame=[0,0]        
+    errorframe=[0,0]        
     WorkingGoogleEOF=pandas.DataFrame(errorframe)       
     WorkingGoogleEOF['Final URL']=errorFrame        
  #WorkingBingEOF=WorkingBing()
