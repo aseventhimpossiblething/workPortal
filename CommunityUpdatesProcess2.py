@@ -268,7 +268,7 @@ def filterNonParticipators(theFrame):
 
 def MergeURLs(chan,chan2):
  print("MergeURLs() start for ",chan2)
- print(WorkingGoogleEOF['Final URL']) 
+ print(chan) 
  URLS="A";
  count=0;
  if chan2=="Bing":
