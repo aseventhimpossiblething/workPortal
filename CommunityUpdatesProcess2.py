@@ -285,7 +285,8 @@ def MergeURLs(chan,chan2):
    print(chan2," _ ",count)
    
   count+=1
- return URLS
+ #return URLS
+ return stringifiedchan;
  
 def communityCheck(checkby,checkin,Name):
  print("Start Community Check for ",Name)
