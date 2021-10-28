@@ -1191,35 +1191,41 @@ def initialCommUpdatProcess():
     WorkingGoogleEOF=pandas.DataFrame(errorframe)       
     WorkingGoogleEOF['Final URL']=errorframe        
  #WorkingBingEOF=WorkingBing()
+ try:
+    WorkingBingEOF=WorkingBing()
+ except:
+    errorframe=["error","Error"]        
+    WorkingBingEOF=pandas.DataFrame(errorframe)       
+    WorkingBingEOF['Final URL']=errorframe     
 
- print("WorkingCommunities 1123 ")
- print(WorkingCommunities)
- print("WorkingCommunities.columns - ",WorkingCommunities.columns)
+ #print("WorkingCommunities 1123 ")
+ #print(WorkingCommunities)
+ #print("WorkingCommunities.columns - ",WorkingCommunities.columns)
 
  WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
  WorkingCommunities['Division Id']=WorkingCommunities[DivID];     
- print("WorkingGoogleEOF")      
- print(WorkingGoogleEOF)     
- WorkingGoogleEOF['Final URL']  
+ #print("WorkingGoogleEOF")      
+ #print(WorkingGoogleEOF)     
+ #WorkingGoogleEOF['Final URL']  
  #WorkingBingEOF['Final Url']
       
   
    
  
- print(WorkingGoogleEOF['Final URL']) 
+ #print(WorkingGoogleEOF['Final URL']) 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
- #bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
+ bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
 
  #print(" - WorkingCommunities - ",WorkingCommunities)     
- print("googleURLS",googleURLS)
+ #print("googleURLS",googleURLS)
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
- #NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
+ NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
   
- #print( 'One KeywordgenII Running which is KeywordGenII(NewGoogle,"sb","google")' )
+
  KeywordGenII(NewGoogle,"google")
- #KeywordGenII(NewBing,"bing")
+ KeywordGenII(NewBing,"bing")
 
  os.chdir(fileHandler.currentBingLocation)
  #print("past  os.chdir fileHandler.currentBingLocation")
