@@ -267,6 +267,9 @@ def filterNonParticipators(theFrame):
 
 
 def MergeURLs(chan,chan2):
+ stringifiedchan=str(chan) 
+ print("String chan type",type(stringifiedchan))
+ print("String chan",stringifiedchan)     
  print("MergeURLs() start for ",chan2)
  print(chan) 
  URLS="A";
