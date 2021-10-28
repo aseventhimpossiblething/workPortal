@@ -93,6 +93,7 @@ def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3):
   return Invalid
     
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkword4):
+ print("What is checkword1,checkword2 ",checkword1,checkword2)     
  WorkingCommunitiesname="WorkingCommunities" 
  global IsCommValid
  IsCommValid=CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3)
