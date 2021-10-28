@@ -120,8 +120,12 @@ def WorkingGoogle():
  else:
   print("Line 121 inside WorkingGoogle",WorkingGoogle.columns.values)
   print("type ",type(WorkingGoogle.columns.values))
-  print("type ",type(str(WorkingGoogle.columns.values)))    
-  WorkingGoogle=pandas.DataFrame(WorkingGoogle,columns=['Campaign','Ad Group', 'Final URL'])
+  print("type ",type(str(WorkingGoogle.columns.values)))
+  if str(WorkingGoogle.columns.values).find("Ad group")!=-1:
+     WorkingGoogle=pandas.DataFrame(WorkingGoogle,columns=['Campaign','Ad group', 'Final URL'])
+     WorkingGoogle['Ad Group']=WorkingGoogle["Ad group"]
+  else:
+     WorkingGoogle=pandas.DataFrame(WorkingGoogle,columns=['Campaign','Ad Group', 'Final URL'])       
   return  WorkingGoogle
   
 def WorkingBing():
