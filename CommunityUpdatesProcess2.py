@@ -1133,8 +1133,9 @@ def initialCommUpdatProcess():
  try:
     WorkingGoogleEOF=WorkingGoogle()
  except:
-    WorkingGoogleEOF="error-x-nodata"        
-            
+    errorFrame=[0,0]        
+    WorkingGoogleEOF=pandas.DataFrame(errorframe)       
+    WorkingGoogleEOF['Final URL']=errorFrame        
  #WorkingBingEOF=WorkingBing()
 
  print("WorkingCommunities 1123 ")
