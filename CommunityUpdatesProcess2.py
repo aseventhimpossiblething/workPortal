@@ -1127,7 +1127,7 @@ def initialCommUpdatProcess():
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
 
  #print(" - WorkingCommunities - ",WorkingCommunities)     
- 
+ print("googleURLS",googleURLS)
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  #NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
