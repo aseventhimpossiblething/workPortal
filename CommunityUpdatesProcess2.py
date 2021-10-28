@@ -532,7 +532,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  TextB=[];
  Text2B=[];
  Text3B=[];
- Text4B=[];
+ Text4B=[];ok
  Path1B=[];
  Path2B=[];
  
@@ -999,11 +999,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
  GoogleAdFrameB=pandas.DataFrame(GoogleAdFrameB).drop_duplicates()
  BingKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Bid":Bid,"Labels":KWLabel} 
  BingAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
-                "Title Part 4":Title4A,"Title Part 5":Title5A,"Title Part 6":Title6A,\
+                "Title Part 4":Title4A,"Title Part 5":Title5A,"Title Part 6":Title6A,"Title Part 7":Title7A,"Title Part 8":Title8A,"Title Part 9":Title9A,\
                 "Text":TextA,"Text Part 2":Text2A,"Text Part 3":Text3A,"Text Part 4":Text4A,"Path 1":Path1A,"Path 2":Path2A,\
                "Final URL":Final_URL,"Status":Status,"Labels":Label}
  BingAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
-                "Title Part 4":Title4A,"Title Part 5":Title5A,"Title Part 6":Title6A,\
+                "Title Part 4":Title4A,"Title Part 5":Title5A,"Title Part 6":Title6A,"Title Part 7":Title7A,"Title Part 8":Title8A,"Title Part 9":Title9A,\
                 "Text":TextB,"Text Part 3":Text3A,"Text Part 4":Text4A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,\
                "Status":Status,"Labels":LabelB}
  BingKWFrame=pandas.DataFrame(BingKWFrame)
