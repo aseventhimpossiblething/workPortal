@@ -1093,14 +1093,24 @@ def initialCommUpdatProcess():
  print("wcols ",wcols)     
  IDcap=wcols.find('Community ID');
  Idlow=wcols.find('Community Id');
- if IDcap>0:
+ if IDcap>-1:
     CommunityID='Community ID'
- if Idlow>0:
+ if Idlow>-1:
     CommunityID='Community Id'
  print("ID cap ",IDcap)
- print("Id low ",Idlow)     
+ print("Id low ",Idlow)  
 
- WorkingCommunities=WorkingCommunities.drop([4])
+ IDDiv=wcols.find('Division ID');
+ Iddiv=wcols.find('Division Id');
+ if IDDiv>-1:
+    DivID='Division ID'
+ if Idlow>-1:
+    DivID='Division Id'
+ 
+ print("IDDiv ",IDDiv)
+ print(" Iddiv ", Iddiv) 
+
+ #WorkingCommunities=WorkingCommunities.drop([4])
  WorkingCommunities=LoadCommunities(WorkingCommunities,CommunityID,'Community Name','City')
 
  
@@ -1112,7 +1122,8 @@ def initialCommUpdatProcess():
 
 
 
- WorkingCommunities['Community Id']
+ WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
+  WorkingCommunities['Division Id']=WorkingCommunities[DivisionID];     
  print("WorkingGoogleEOF")      
  print(WorkingGoogleEOF)     
  WorkingGoogleEOF['Final URL']  
