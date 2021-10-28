@@ -1120,7 +1120,7 @@ def initialCommUpdatProcess():
  WorkingGoogleEOF=WorkingGoogle()    
  #WorkingBingEOF=WorkingBing()
 
-print("WorkingCommunities 1123 ",WorkingCommunities)
+ print("WorkingCommunities 1123 ",WorkingCommunities)
 
 
  WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
