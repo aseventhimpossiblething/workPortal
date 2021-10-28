@@ -99,7 +99,7 @@ def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkwor
  IsCommValid=CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3)
  if CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3)=="Valid":
   WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name',checkword4,'Division Name',\
-                                                                   checkword1,'Community Name','City','State','checkword5,\
+                                                                   checkword1,'Community Name','City','State',checkword5,\
                                                                    'Market ID'])
    
   return WorkingCommunities
