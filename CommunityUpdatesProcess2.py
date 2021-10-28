@@ -1135,7 +1135,7 @@ def initialCommUpdatProcess():
  except:
     errorframe=[0,0]        
     WorkingGoogleEOF=pandas.DataFrame(errorframe)       
-    WorkingGoogleEOF['Final URL']=errorFrame        
+    WorkingGoogleEOF['Final URL']=errorframe        
  #WorkingBingEOF=WorkingBing()
 
  print("WorkingCommunities 1123 ")
