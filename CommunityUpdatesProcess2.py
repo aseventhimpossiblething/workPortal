@@ -1124,6 +1124,7 @@ def initialCommUpdatProcess():
 
  #WorkingCommunities=WorkingCommunities.drop([4])
  WorkingCommunities=LoadCommunities(WorkingCommunities,CommunityID,'Community Name','City',DivID,zcode)
+ WorkingCommunities['Zip']=WorkingCommunities[zcode]
       
 
  
