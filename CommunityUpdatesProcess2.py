@@ -532,7 +532,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  TextB=[];
  Text2B=[];
  Text3B=[];
- Text4B=[];ok
+ Text4B=[];
  Path1B=[];
  Path2B=[];
  
