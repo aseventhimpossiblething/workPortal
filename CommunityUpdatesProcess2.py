@@ -118,6 +118,7 @@ def WorkingGoogle():
  if IsGoogleValid!="Valid":
   return IsGoogleValid
  else:
+  print("Line 121 inside WorkingGoogle",WorkingGoogle.columns.values)          
   WorkingGoogle=pandas.DataFrame(WorkingGoogle,columns=['Campaign','Ad Group', 'Final URL'])
   return  WorkingGoogle
   
