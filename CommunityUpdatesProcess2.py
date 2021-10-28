@@ -1196,7 +1196,7 @@ def initialCommUpdatProcess():
  except:
     errorframe=["error","Error"]        
     WorkingBingEOF=pandas.DataFrame(errorframe)       
-    WorkingBingEOF['Final URL']=errorframe     
+    WorkingBingEOF['Final Url']=errorframe     
 
  #print("WorkingCommunities 1123 ")
  #print(WorkingCommunities)
