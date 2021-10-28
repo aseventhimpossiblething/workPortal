@@ -92,13 +92,13 @@ def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3):
   Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
   return Invalid
     
-def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3):
+def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkword4):
  WorkingCommunitiesname="WorkingCommunities" 
  global IsCommValid
  IsCommValid=CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3)
  if CheckSheetData(WorkingCommunitiesname,WorkingCommunities,checkword1,checkword2,checkword3)=="Valid":
-  WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name','Division Id','Division Name',\
-                                                                   'Community Id','Community Name','City','State','Zip',\
+  WorkingCommunities=pandas.DataFrame(WorkingCommunities, columns=['Builder Name',checkword4,'Division Name',\
+                                                                   checkword2,'Community Name','City','State','Zip',\
                                                                    'Market ID'])
    
   return WorkingCommunities
@@ -1111,7 +1111,7 @@ def initialCommUpdatProcess():
  print(" Iddiv ", Iddiv) 
 
  #WorkingCommunities=WorkingCommunities.drop([4])
- WorkingCommunities=LoadCommunities(WorkingCommunities,CommunityID,'Community Name','City')
+ WorkingCommunities=LoadCommunities(WorkingCommunities,CommunityID,'Community Name','City',DivID)
       
 
  
