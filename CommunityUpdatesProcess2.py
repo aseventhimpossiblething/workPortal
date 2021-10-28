@@ -1123,7 +1123,7 @@ def initialCommUpdatProcess():
 
 
  WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
-  WorkingCommunities['Division Id']=WorkingCommunities[DivisionID];     
+ WorkingCommunities['Division Id']=WorkingCommunities[DivisionID];     
  print("WorkingGoogleEOF")      
  print(WorkingGoogleEOF)     
  WorkingGoogleEOF['Final URL']  
