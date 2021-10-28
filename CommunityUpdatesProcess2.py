@@ -1117,6 +1117,7 @@ def initialCommUpdatProcess():
     zcode='Zip'
  if ZIPcode>-1:
     zcode='ZIP'
+    WorkingCommunities['Zip']=WorkingCommunities[zcode]
  
  print("Zipcode ",Zipcode)
  print(" ZIPcode ",ZIPcode)     
