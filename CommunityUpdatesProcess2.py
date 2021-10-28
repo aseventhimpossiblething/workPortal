@@ -1130,7 +1130,11 @@ def initialCommUpdatProcess():
  
  if IsCommValid!="Valid":
   return IsCommValid
- WorkingGoogleEOF=WorkingGoogle()    
+ try:
+    WorkingGoogleEOF=WorkingGoogle()
+ except:
+    WorkingGoogleEOF="error-x-nodata"        
+            
  #WorkingBingEOF=WorkingBing()
 
  print("WorkingCommunities 1123 ")
