@@ -1075,6 +1075,12 @@ BingAdFrameRSA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":
    writer=pandas.ExcelWriter('BADB.xlsx')
    BingAdFrameB.to_excel(writer)
    writer.save()
+
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/BingRSA'
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('BRSA.xlsx')
+   BingAdFrameB.to_excel(writer)
+   writer.save()
  #print(' -- end of KWGEN END SEEK NEW DF -- ')
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
