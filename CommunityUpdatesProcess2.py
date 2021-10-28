@@ -1006,8 +1006,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
  BingAdFrameA=pandas.DataFrame(BingAdFrameA).drop_duplicates()
  BingAdFrameB=pandas.DataFrame(BingAdFrameB).drop_duplicates()
  
- print("GoogleAdFrameA----------")     
- print(GoogleAdFrameA) 
+ #print("GoogleAdFrameA----------")     
+ #print(GoogleAdFrameA) 
 
  if SearchChan=="google":
    #if MatchType=='SBMM':
@@ -1039,6 +1039,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
  
      
  if SearchChan=="bing":
+   print("BingAdFrameA")
+   print(BingAdFrameA)
    #if MatchType=='SBMM':
    print("In KeywordGen bing SBMM ")
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingKW'
