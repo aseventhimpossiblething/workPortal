@@ -700,11 +700,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Status.append("Active")
    
    hl1pos.append("1");  
-   hl2pos.append("1");
+   hl2pos.append("2");
    hl1pos.append("1");  
-   hl2pos.append("1"); 
+   hl2pos.append("2"); 
    hl1pos.append("1");  
-   hl2pos.append("1");
+   hl2pos.append("2");
    RSALabel.append("RSA Ads");
    RSALabel.append("RSA Ads");  
    RSALabel.append("RSA Ads");      
