@@ -615,20 +615,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Campaign_Name.append(Campaign_Nameing_Conv);  
     Campaign_Name.append(Campaign_Nameing_Conv);
     
-    hl1pos.append("1");  
-    hl2pos.append("1");
-    hl1pos.append("1");  
-    hl2pos.append("1"); 
-    hl1pos.append("1");  
-    hl2pos.append("1");
-    RSALabel.append("RSA Ads");
-    RSALabel.append("RSA Ads");  
-    RSALabel.append("RSA Ads");      
-    Adtype.append("Responsive search ad");  
-    Adtype.append("Responsive search ad");
-    Adtype.append("Responsive search ad");   
-
-
     Bid.append(.45)
     Bid.append(.30)
     Bid.append(.65)    
@@ -713,7 +699,19 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Status.append("Active")
    Status.append("Active")
    
-
+   hl1pos.append("1");  
+   hl2pos.append("1");
+   hl1pos.append("1");  
+   hl2pos.append("1"); 
+   hl1pos.append("1");  
+   hl2pos.append("1");
+   RSALabel.append("RSA Ads");
+   RSALabel.append("RSA Ads");  
+   RSALabel.append("RSA Ads");      
+   Adtype.append("Responsive search ad");  
+   Adtype.append("Responsive search ad");
+   Adtype.append("Responsive search ad");
+   
    Title1A_Name_Conv=communityName
    if len(Title1A_Name_Conv)>29:
     Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find("at")-1]
