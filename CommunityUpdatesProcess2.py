@@ -1068,15 +1068,15 @@ def KeywordGenII(NewDataFrame,SearchChan):
 #----------------------------------------End KeygenII()------------------------------------------------------------------------------
 def initialCommUpdatProcess():
  global IsCommUpdateRunning
- print("fileHandler.currentCommunitiesLocation - ",fileHandler.currentCommunitiesLocation)
+ #print("fileHandler.currentCommunitiesLocation - ",fileHandler.currentCommunitiesLocation)
  os.chdir(fileHandler.currentCommunitiesLocation);
- print(os.listdir(os.getcwd()));
+ #print(os.listdir(os.getcwd()));
  
  WorkingCommunities=pandas.read_excel('WorkingCommunities');
       
  def SeekColHead(x,y):
      #y is used to find col head 
-     print(" Seeking Head of the below Frame  ")
+     print(" --- Seeking Head of the below Frame ----  ")
      print(x)     
      AVersion=str(x.iloc[[0]].values);
      BVersion=str(x.iloc[[1]].values);
@@ -1163,8 +1163,7 @@ def initialCommUpdatProcess():
      print("SeekColHead end")
      print(x) 
      return x;
- #SeekColHead(WorkingCommunities,'Community Name')
- #print("----end first SeekColHead")     
+   
  """     
  #-------------------------------------------------------------------------------------------------------------------------------------
  #-------------------------------------------------------------------------------------------------------------------------------------  
@@ -1225,6 +1224,7 @@ def initialCommUpdatProcess():
  
  WorkingCommunities.columns=WorkingCommunities.iloc[0];
  """
+ print("Define working communities")
  WorkingCommunities=SeekColHead(WorkingCommunities,'Community Name')
  wcols=str(WorkingCommunities.columns)
  print("wcols ",wcols)     
@@ -1260,24 +1260,16 @@ def initialCommUpdatProcess():
  #WorkingCommunities=WorkingCommunities.drop([4])
  WorkingCommunities=LoadCommunities(WorkingCommunities,CommunityID,'Community Name','City',DivID,zcode)
  WorkingCommunities['Zip']=WorkingCommunities[zcode]
-      
- #print("---After Post Seek Comment block----") 
- #print("before iscom ",IsCommValid)      
+     
  if IsCommValid!="Valid":
     return IsCommValid
-
- 
- #print("---After IsCommValid check ----") 
-
  WorkingGoogleEOF=WorkingGoogle()
  WorkingBingEOF=WorkingBing()
- #print("---Google,Bing EOF check ----") 
- 
- 
+
  WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
  WorkingCommunities['Division Id']=WorkingCommunities[DivID];     
- print("WorkingGoogleEOF")      
- print(WorkingGoogleEOF)     
+ #print("WorkingGoogleEOF")      
+ #print(WorkingGoogleEOF)     
  WorkingGoogleEOF['Final URL']  
  WorkingBingEOF['Final Url']
  
@@ -1292,9 +1284,10 @@ def initialCommUpdatProcess():
  #print(os.listdir(os.getcwd()));     
  #print(os.getcwd())
  #print(os.listdir()) 
+ print("---Define working attributes ----")     
  WorkingAttributes=pandas.read_excel('WorkingAttributes');   
  WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID')   
- print("WorkingAttributes")
+ print("--------------WorkingAttributes-----------------------")
  print(WorkingAttributes)
  KeywordGenII(NewGoogle,"google")
  KeywordGenII(NewBing,"bing")
