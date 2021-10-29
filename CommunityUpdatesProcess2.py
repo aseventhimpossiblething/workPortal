@@ -1115,7 +1115,7 @@ def initialCommUpdatProcess():
         x=x.drop([0,1,2,3]);
      x.columns=x.iloc[0];
      
-     """ 
+      
      #cuttable below-------------------------------------------------------------------------------
      wcols=str(x.columns)
      print("wcols ",wcols)     
@@ -1147,7 +1147,7 @@ def initialCommUpdatProcess():
      x['Zip']=x[zcode]
      print("Zipcode ",Zipcode)
      print(" ZIPcode ",ZIPcode
-     """
+     
 
 
 
