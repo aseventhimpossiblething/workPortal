@@ -133,8 +133,11 @@ def WorkingBing():
  os.chdir(currentBingLocation)
  print("Where is working Bing")
  print(os.getcwd())      
- print(os.listdir())     
- WorkingBing=pandas.read_excel('WorkingBing')
+ print(os.listdir())
+ try:
+    WorkingBing=pandas.read_excel('WorkingBing'
+ except:     
+    WorkingBing=pandas.read_excel('WorkingGoogle')
  IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final Url')
  if IsBingValid!='Valid':
   return IsBingValid
@@ -1221,6 +1224,7 @@ def initialCommUpdatProcess():
  #print(WorkingCommunities)
  #print("WorkingCommunities.columns - ",WorkingCommunities.columns)
 
+ 
  WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
  WorkingCommunities['Division Id']=WorkingCommunities[DivID];     
  #print("WorkingGoogleEOF")      
