@@ -18,21 +18,15 @@ from openpyxl import Workbook
 from openpyxl import load_workbook
 import xlsxwriter
 
-
 SheetsFileLocation="/GMDelight/workPortal/Sheets"
 currentCommunitiesLocation="/GMDelight/workPortal/Sheets/CommunityUpdates/currentCommunities"
 currentGoogleLocation="/GMDelight/workPortal/Sheets/CommunityUpdates/Google/currentGoogle"
 currentBingLocation="/GMDelight/workPortal/Sheets/CommunityUpdates/Bing/currentBing"
 
-
-
-
 SheetsAreLoaded=None; 
 IsCommValid=None;
 IsGoogleValid=None;
 IsBingValid=None;
-#print("loaded com up page")
-
 
 
 def CommunityNameCleaner(x):
@@ -1215,32 +1209,22 @@ def initialCommUpdatProcess():
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
-  
-
+ 
  KeywordGenII(NewGoogle,"google")
  KeywordGenII(NewBing,"bing")
-
- #os.chdir(fileHandler.currentBingLocation)
- #print("past  os.chdir fileHandler.currentBingLocation")
   
  os.chdir(fileHandler.SheetsFileLocation);
- #print("past  os.chdir(fileHandler.SheetsFileLocation)");
  storeRequest=open('RequestsVsResponses.txt','a+')
  storeRequest.write("Response , ")
  storeRequest.close() 
- #storeRequest=open('RequestsVsResponses.txt','r+')
- #storeRequest.close()
 
- """
+ """     
  os.chdir(fileHandler.SheetsFileLocation);
- #print("past  os.chdir(fileHandler.SheetsFileLocation)");
  storeRequest=open('BingAlert.txt','a+')
  storeRequest.write("Response , ")
  storeRequest.close() 
- storeRequest=open('RequestsVsResponses.txt','r+')
- storeRequest.close()
  """
- #CommunityNameDuplicateSpecialLoop(WorkingCommunities);
+ print("IsBingValid = ",IsBingValid)
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
  return "finished"
