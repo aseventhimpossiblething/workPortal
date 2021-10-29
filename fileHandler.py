@@ -228,8 +228,8 @@ def NCommListFileHandler():
         return "Google slot is empty"
     if emptyObj==str(request.files['Communities']):
         return "Active Community slot is empty"
-    #if emptyObj==str(request.files['Attributes']):
-    #     return "Attributes slot is empty"
+    if emptyObj==str(request.files['Attributes']):
+        return "Attributes slot is empty"
 
     print("Past empty objs---") 
     
