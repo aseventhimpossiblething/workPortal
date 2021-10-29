@@ -1146,7 +1146,7 @@ def initialCommUpdatProcess():
          zcode='ZIP'
      x['Zip']=x[zcode]
      print("Zipcode ",Zipcode)
-     print(" ZIPcode ",ZIPcode
+     print(" ZIPcode ",ZIPcode)
      
 
 
