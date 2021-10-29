@@ -22,8 +22,10 @@ import xlsxwriter
 
 SheetsFileLocation="/GMDelight/workPortal/Sheets"
 currentCommunitiesLocation="/GMDelight/workPortal/Sheets/CommunityUpdates/currentCommunities"
+currentAttributesLocation="/GMDelight/workPortal/Sheets/CommunityUpdates/currentAttributes"
 currentGoogleLocation="/GMDelight/workPortal/Sheets/CommunityUpdates/Google/currentGoogle"
 currentBingLocation="/GMDelight/workPortal/Sheets/CommunityUpdates/Bing/currentBing"
+
 
 def ValidatXLSXtime(arr):
         Error=arr+" Generated an error check that filetype is xlsx"
@@ -239,6 +241,8 @@ def NCommListFileHandler():
                 return "The Google Sheet is not XLSX file type";
     #if request.files['currentBing'].filename.find("xlsx")<1:
     #            return "The Bing Sheet is not XLSX file type"; 
+    if request.files['Attributes'].filename.find("xlsx")<1:
+               return "The Attributes Sheet is not XLSX file type";    
         
     print("Past requests---")  
 
@@ -252,6 +256,9 @@ def NCommListFileHandler():
     
     os.chdir(currentBingLocation)
     request.files['currentBing'].save('WorkingBing')
+    
+    os.chdir(currentAttributesLocation)
+    request.files['Attributes'].save('WorkingAttributes')    
      
  
        
