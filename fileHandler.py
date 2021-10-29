@@ -219,7 +219,7 @@ def NCommListFileHandler():
     print("Ncom Starting to Handle Files") 
 
     print("Prep for reqs--") 
-    reqs=request.files,request.files['Communities'],request.files['currentGoogle']#,request.files['currentBing']
+    reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']
     print("Past reqs--") 
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
     #if emptyObj==str(request.files['currentBing']):
