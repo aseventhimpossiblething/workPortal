@@ -1155,9 +1155,9 @@ def initialCommUpdatProcess():
 
      print("SeekColHead end")
      print(x) 
-     return x
- SeekColHead(WorkingCommunities,'Community Name')
- print("----end first SeekColHead")     
+     return x;
+ #SeekColHead(WorkingCommunities,'Community Name')
+ #print("----end first SeekColHead")     
  """     
  #-------------------------------------------------------------------------------------------------------------------------------------
  #-------------------------------------------------------------------------------------------------------------------------------------  
@@ -1219,6 +1219,7 @@ def initialCommUpdatProcess():
  WorkingCommunities.columns=WorkingCommunities.iloc[0];
  """
  WorkingCommunities=SeekColHead(WorkingCommunities,'Community Name')
+ print("----end WorkingCommunities SeekColHead") 
       
       
       
