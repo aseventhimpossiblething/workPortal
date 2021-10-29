@@ -138,6 +138,7 @@ def WorkingBing():
     WorkingBing=pandas.read_excel('WorkingBing')
     IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final Url')
  except:
+    print("BING SHEET REPLACED WITH GOOGLE SHEET!!====BING SHEET REPLACED WITH GOOGLE SHEET!!==BING SHEET REPLACED WITH GOOGLE SHEET!!====BING SHEET REPLACED WITH GOOGLE SHEET!!") 
     os.chdir(currentGoogleLocation)        
     WorkingBing=pandas.read_excel('WorkingGoogle')
     IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final URL')
@@ -173,57 +174,22 @@ def filterNonParticipators(theFrame):
       return upperWords;
  
   DropRowsContaining=DropRowsContaining+LowDropRowsContaining(DropRowsContaining)+UpperDropRowsContaining(DropRowsContaining);
-  #print("1") 
-  #print(theFrame)    
-  
+
   DropLoopCount=0;
   while DropLoopCount<len(DropRowsContaining):
-   #print("Loop count 1 ",DropLoopCount)
-   #print(theFrame)
-      
    theFrame=theFrame.drop_duplicates();
-   #print("Length theFrame=theFrame.drop_duplicates() ",len(theFrame))
-      
-   #print("Loop count 2 ",DropLoopCount)
-   #print(theFrame)
-      
    theFrame=theFrame.dropna();
-
-   #print("Loop count 3 ",DropLoopCount)
-   #print(theFrame)   
-      
-      
-   """ 
-   try:
-      #print("Start Try")
-      theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount])]
-      theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
-      theFrame=theFrame[~theFrame['Brand Name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
-   except:
-      print("Sstart except");
-      print("Brand Name Not Present");
-   """
-
-   
+     
    theFrame=theFrame[~theFrame['Builder Name'].str.contains(DropRowsContaining[DropLoopCount])]
    theFrame=theFrame[~theFrame['Builder Name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
    theFrame=theFrame[~theFrame['Builder Name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
-   #print("theFrame[~theFrame['Builder Name'].str.contains ",DropRowsContaining[DropLoopCount]," ",len(theFrame))
-   
-   #print("Drop while")
-   
+      
    theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount])]
    theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount].lower())]
    theFrame=theFrame[~theFrame['Community Name'].str.contains(DropRowsContaining[DropLoopCount].upper())]
-       
    theFrame=theFrame.drop_duplicates(subset=['Community Name']);
 
-   #print("Loop count 4 ",DropLoopCount)
-   #print(theFrame)   
-      
-      
    DropLoopCount+=1;
-  #print("3 ",theFrame) 
   print("FILTER 2 -- FILTER 2 -- FILTER 2 -- FILTER 2 -- FILTER 2 -- FILTER 2 -- FILTER 2 -- FILTER 2--")    
   return theFrame
  theFrame=firstDropLoop(theFrame)  
@@ -290,8 +256,8 @@ def MergeURLs(chan,chan2):
    hilecount=MaintatanceVar;
  while count < hilecount :
   URLS=URLS+chan[count]
-  print(chan2," _ ",count)
-  if count % 50000 == 0:
+  #print(chan2," _ ",count)
+  if count % 1000 == 0:
    print(chan2," _ ",count)
    
   count+=1
