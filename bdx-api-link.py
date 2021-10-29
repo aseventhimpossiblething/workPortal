@@ -212,7 +212,7 @@ def CommUpdateExcel2():
  domain=domain
  os.chdir(fileHandler.SheetsFileLocation);
  BingAlert=open('BingAlert.txt');
- BingState=BingAlert.read('BingAlert.txt');
+ BingState=BingAlert.read();
  BingAlert.close()     
  #BingState= 
  print("BingState = ",BingState)
