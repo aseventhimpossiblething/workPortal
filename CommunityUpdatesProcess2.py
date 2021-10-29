@@ -1293,8 +1293,9 @@ def initialCommUpdatProcess():
      print("colnames ",colnames) 
      count=0;
      while count<len(x[CommunityID]):
-           comNum=x[CommunityID][count]; 
-           print("comNum=",comNum," count=",count)
+           comNumInMain=x[CommunityID][count];
+           comNumInAttributes=y['CommunityID'] 
+           print("comNumInMain=",comNumInMain," count=",count," comNumInAttributes=",comNumInAttributes)
            count=count+1;
  AttributeAssignCols(NewGoogle,WorkingAttributes);     
  print("--------------WorkingAttributes-----------------------")
