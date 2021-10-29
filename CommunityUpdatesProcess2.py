@@ -1291,11 +1291,12 @@ def initialCommUpdatProcess():
  def AttributeAssignCols(x,y):
      colnames=y.columns
      print("colnames ",colnames) 
+     print("y['CommunityID'] ",y['CommunityID']) 
      count=0;
      while count<len(x[CommunityID]):
            comNumInMain=x[CommunityID][count];
-           comNumInAttributes=y['CommunityID'] 
-           print("comNumInMain=",comNumInMain," count=",count," comNumInAttributes=",comNumInAttributes)
+           comNumInAttributesrow=y['CommunityID'][count] 
+           print("comNumInMain=",comNumInMain," count=",count," comNumInAttributesrow=",comNumInAttributesrow)
            count=count+1;
  AttributeAssignCols(NewGoogle,WorkingAttributes);     
  print("--------------WorkingAttributes-----------------------")
