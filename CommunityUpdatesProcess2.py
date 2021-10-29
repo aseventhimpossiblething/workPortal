@@ -1286,7 +1286,7 @@ def initialCommUpdatProcess():
  #print(os.listdir()) 
  print("---Define working attributes ----")     
  WorkingAttributes=pandas.read_excel('WorkingAttributes');   
- WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID')   
+ WorkingAttributes=SeekColHead(WorkingAttributes,'CommunityID')   
  print("--------------WorkingAttributes-----------------------")
  print(WorkingAttributes)
  KeywordGenII(NewGoogle,"google")
