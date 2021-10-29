@@ -131,6 +131,8 @@ def WorkingGoogle():
   
 def WorkingBing():
  os.chdir(currentBingLocation)
+ print("Where is working Bing")
+ print(get.cwd())     
  WorkingBing=pandas.read_excel('WorkingBing')
  IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1','Final Url')
  if IsBingValid!='Valid':
