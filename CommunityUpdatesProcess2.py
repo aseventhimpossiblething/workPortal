@@ -1067,6 +1067,61 @@ def initialCommUpdatProcess():
  print(os.listdir(os.getcwd()));
  
  WorkingCommunities=pandas.read_excel('WorkingCommunities');
+      
+ def SeekColHead(x,y):
+     #y is used to find col head 
+     print(" Seeking Head of the below Frame  ")
+     print(x)     
+     AVersion=str(x.iloc[[0]].values);
+     BVersion=str(x.iloc[[1]].values);
+     CVersion=str(x.iloc[[2]].values);
+     DVersion=str(x.iloc[[3]].values);
+     EVersion=str(x.iloc[[4]].values);
+      
+     print("AVersion ",AVersion);
+     print("BVersion ",BVersion);     
+     print("CVersion ",CVersion);
+     print("DVersion ",DVersion);
+     print("EVersion ",EVersion);     
+
+     sheetidcol=y 
+     AVersion=str(x.iloc[[0]].values).find(sheetidcol);
+     BVersion=str(x.iloc[[1]].values).find(sheetidcol);
+     CVersion=str(x.iloc[[2]].values).find(sheetidcol);
+     DVersion=str(x.iloc[[3]].values).find(sheetidcol);
+     EVersion=str(x.iloc[[4]].values).find(sheetidcol);     
+
+     print("=======================Watch for Version Print============= Begin")
+     print("AVersion ",AVersion);
+     print("BVersion ",BVersion);  
+     print("CVersion ",CVersion);
+     print("DVersion ",DVersion);
+     print("EVersion ",EVersion);     
+ 
+     print("=======================Watch for Version Print============= End")
+     if AVersion!=-1:
+        print("AVersion-------------------------------------------------------------------");        
+     if BVersion!=-1:
+        print("BVersion--------------------------------------------------------------------");  
+        x=x.drop([0]);
+     if CVersion!=-1:
+        print("CVersion--------------------------------------------------------------------");  
+        x=x.drop([0,1]);
+     if DVersion!=-1:
+        print("CVersion--------------------------------------------------------------------");  
+        x=x.drop([0,1,2]);
+     if EVersion!=-1:
+        print("CVersion--------------------------------------------------------------------");  
+        x=x.drop([0,1,2,3]);
+     x.columns=x.iloc[0];
+     print("SeekColHead end")
+     print(x) 
+     return x
+ SeekColHead(WorkingCommunities,'Community Name')
+ #-------------------------------------------------------------------------------------------------------------------------------------
+ #-------------------------------------------------------------------------------------------------------------------------------------  
+ #-------------------------------------------------------------------------------------------------------------------------------------
+ #-------------------------------------------------------------------------------------------------------------------------------------     
  print(" WorkingCommunities ")
  print(WorkingCommunities)     
  AVersion=str(WorkingCommunities.iloc[[0]].values);
