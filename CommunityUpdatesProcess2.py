@@ -1186,6 +1186,8 @@ def initialCommUpdatProcess():
  print(os.listdir(os.getcwd()));     
  print(os.getcwd())
  print(os.listdir()) 
+ WorkingAttributes=pandas.read_excel('WorkingAttributes'); 
+ print(WorkingAttributes)
       
  KeywordGenII(NewGoogle,"google")
  KeywordGenII(NewBing,"bing")
