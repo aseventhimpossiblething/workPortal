@@ -458,10 +458,13 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
 #----------------------------------------Start KeygenII()----------------------------------------------------------------------------
 
 def KeywordGenII(NewDataFrame,SearchChan):
- #MatchType="SBMM"     
+     
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
- print("Dataframe incomming to KeywordGen ",NewDataFrame)     
+ print(os.getcwd())
+ print(os.lstdir())     
+      
+ #print("Dataframe incomming to KeywordGen ",NewDataFrame)     
  NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame); 
  #MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
@@ -1063,9 +1066,6 @@ def initialCommUpdatProcess():
  os.chdir(fileHandler.currentCommunitiesLocation);
  print(os.listdir(os.getcwd()));
  
-      
-
- #WorkingCommunities=pandas.read_excel('WorkingCommunities').drop([0,1,]);
  WorkingCommunities=pandas.read_excel('WorkingCommunities');
  print(" WorkingCommunities ")
  print(WorkingCommunities)     
@@ -1074,36 +1074,20 @@ def initialCommUpdatProcess():
  CVersion=str(WorkingCommunities.iloc[[2]].values);
  DVersion=str(WorkingCommunities.iloc[[3]].values);
  EVersion=str(WorkingCommunities.iloc[[4]].values);
- #CVersion=str(WorkingCommunities.iloc[[0]].values);     
-
- """
- AVersion=str(WorkingCommunities.iloc[[2]].values);
- BVersion=str(WorkingCommunities.iloc[[4]].values);
- CVersion=str(WorkingCommunities.iloc[[0]].values);
- """     
       
  print("AVersion ",AVersion);
  print("BVersion ",BVersion);     
  print("CVersion ",CVersion);
  print("DVersion ",DVersion);
  print("EVersion ",EVersion);     
- #print("CVersion ",CVersion);
 
-      
- 
  sheetidcol='Community Name' 
-      
  AVersion=str(WorkingCommunities.iloc[[0]].values).find(sheetidcol);
  BVersion=str(WorkingCommunities.iloc[[1]].values).find(sheetidcol);
  CVersion=str(WorkingCommunities.iloc[[2]].values).find(sheetidcol);
  DVersion=str(WorkingCommunities.iloc[[3]].values).find(sheetidcol);
  EVersion=str(WorkingCommunities.iloc[[4]].values).find(sheetidcol);     
- 
- """
- AVersion=str(WorkingCommunities.iloc[[2]].values).find(sheetidcol);
- BVersion=str(WorkingCommunities.iloc[[4]].values).find(sheetidcol);
- CVersion=str(WorkingCommunities.iloc[[0]].values).find(sheetidcol);
- """
+
  print("=======================Watch for Version Print============= Begin")
  print("AVersion ",AVersion);
  print("BVersion ",BVersion);  
@@ -1181,25 +1165,7 @@ def initialCommUpdatProcess():
 
  WorkingGoogleEOF=WorkingGoogle()
  WorkingBingEOF=WorkingBing()     
- """
- try:
-    WorkingGoogleEOF=WorkingGoogle()
- except:
-    errorframe=["error","Error"]        
-    WorkingGoogleEOF=pandas.DataFrame(errorframe)       
-    WorkingGoogleEOF['Final URL']=errorframe        
- #WorkingBingEOF=WorkingBing()
- try:
-    WorkingBingEOF=WorkingBing()
- except:
-    errorframe=["error","Error"]        
-    WorkingBingEOF=pandas.DataFrame(errorframe)       
-    WorkingBingEOF['Final Url']=errorframe     
- """
- #print("WorkingCommunities 1123 ")
- #print(WorkingCommunities)
- #print("WorkingCommunities.columns - ",WorkingCommunities.columns)
-
+ 
  
  WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
  WorkingCommunities['Division Id']=WorkingCommunities[DivID];     
@@ -1207,17 +1173,10 @@ def initialCommUpdatProcess():
  #print(WorkingGoogleEOF)     
  WorkingGoogleEOF['Final URL']  
  WorkingBingEOF['Final Url']
-      
-  
-   
  
- #print(WorkingGoogleEOF['Final URL']) 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
-
- #print(" - WorkingCommunities - ",WorkingCommunities)     
- #print("googleURLS",googleURLS)
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
@@ -1230,13 +1189,6 @@ def initialCommUpdatProcess():
  storeRequest.write("Response , ")
  storeRequest.close() 
 
- """     
- os.chdir(fileHandler.SheetsFileLocation);
- storeRequest=open('BingAlert.txt','a+')
- storeRequest.write("Response , ")
- storeRequest.close() 
- """
- print("IsBingValid = ",IsBingValid)
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
  return "finished"
