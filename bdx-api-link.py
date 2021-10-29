@@ -170,7 +170,7 @@ def CommUpdateDisplay():
     if read_storeRequest1==read_storeRequest2:
      return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/CommUpdateExcel?'><html>This Message indicates an error in URL Forward</html>"
     if read_storeRequest1!=read_storeRequest2:
-     return '<meta http-equiv="refresh" content="120"><html>LOADING..... This can Take up to 20 minuites</html>'
+     return '<meta http-equiv="refresh" content="120"><html>LOADING..... This can Take up to 20 minuites (Note: If Bing Sheet is Absent or incorrectly formatted Google active communities will be used such that Bing Ads will reflect Communities not found in Google inventory )</html>'
 
 @app.route('/DisplayCommUpdate2')
 def CommUpdateDisplay2():
