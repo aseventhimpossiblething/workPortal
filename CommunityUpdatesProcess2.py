@@ -1212,6 +1212,10 @@ def initialCommUpdatProcess():
  
  if IsCommValid!="Valid":
   return IsCommValid
+
+ WorkingGoogleEOF=WorkingGoogle()
+ WorkingBingEOF=WorkingBing()     
+ """
  try:
     WorkingGoogleEOF=WorkingGoogle()
  except:
@@ -1225,7 +1229,7 @@ def initialCommUpdatProcess():
     errorframe=["error","Error"]        
     WorkingBingEOF=pandas.DataFrame(errorframe)       
     WorkingBingEOF['Final Url']=errorframe     
-
+ """
  #print("WorkingCommunities 1123 ")
  #print(WorkingCommunities)
  #print("WorkingCommunities.columns - ",WorkingCommunities.columns)
@@ -1234,8 +1238,8 @@ def initialCommUpdatProcess():
  WorkingCommunities['Division Id']=WorkingCommunities[DivID];     
  #print("WorkingGoogleEOF")      
  #print(WorkingGoogleEOF)     
- #WorkingGoogleEOF['Final URL']  
- #WorkingBingEOF['Final Url']
+ WorkingGoogleEOF['Final URL']  
+ WorkingBingEOF['Final Url']
       
   
    
