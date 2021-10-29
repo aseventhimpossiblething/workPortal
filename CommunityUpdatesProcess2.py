@@ -1244,9 +1244,9 @@ def initialCommUpdatProcess():
  print(os.getcwd())
  print(os.listdir()) 
  WorkingAttributes=pandas.read_excel('WorkingAttributes'); 
- print(WorkingAttributes)
+ #print(WorkingAttributes)
  
- WorkingAttributes=SeekColHead(WorkingAttributes,'Community Name')     
+ WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID')     
       
  KeywordGenII(NewGoogle,"google")
  KeywordGenII(NewBing,"bing")
