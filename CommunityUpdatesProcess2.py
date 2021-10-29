@@ -958,6 +958,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
                  "Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}
  GoogleAdFrameA=pandas.DataFrame(GoogleAdFrameA).drop_duplicates()
  GoogleAdFrameB=pandas.DataFrame(GoogleAdFrameB).drop_duplicates()
+ print(GoogleAdFrameRSA)     
  GoogleAdFrameRSA=pandas.DataFrame(GoogleAdFrameRSA).drop_duplicates()     
  BingKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Bid":Bid,"Labels":KWLabel} 
  BingAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
