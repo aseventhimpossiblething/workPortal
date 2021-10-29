@@ -211,9 +211,9 @@ def CommUpdateExcel2():
  global domain
  domain=domain
  os.chdir(fileHandler.SheetsFileLocation);
- open('BingAlert.txt');
- BingState=open('BingAlert.txt').read('BingAlert.txt');
- close('BingAlert.txt')      
+ BingAlert=open('BingAlert.txt');
+ BingState=BingAlert.read('BingAlert.txt');
+ BingAlert.close()     
  #BingState= 
  print("BingState = ",BingState)
  return render_template('/CommUpdateExcel2.html',CacheBreakStamp=datetime.now(),domain=domain,BingReadout=BingState)
