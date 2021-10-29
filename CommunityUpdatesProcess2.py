@@ -1226,8 +1226,6 @@ def initialCommUpdatProcess():
  WorkingCommunities.columns=WorkingCommunities.iloc[0];
  """
  WorkingCommunities=SeekColHead(WorkingCommunities,'Community Name')
- #print("----end WorkingCommunities SeekColHead") 
-     
  wcols=str(WorkingCommunities.columns)
  print("wcols ",wcols)     
  IDcap=wcols.find('Community ID');
@@ -1291,18 +1289,11 @@ def initialCommUpdatProcess():
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
        
  os.chdir(fileHandler.currentAttributesLocation);
- print(os.listdir(os.getcwd()));     
- print(os.getcwd())
- print(os.listdir()) 
- WorkingAttributes=pandas.read_excel('WorkingAttributes'); 
- #print(WorkingAttributes)
- 
- #print(" start WorkingAttributes--------------------- WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID') ")
- #print(" start WorkingAttributes--------------------- WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID') ")     
+ #print(os.listdir(os.getcwd()));     
+ #print(os.getcwd())
+ #print(os.listdir()) 
+ WorkingAttributes=pandas.read_excel('WorkingAttributes');   
  WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID')   
- #print(" end WorkingAttributes--------------------- WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID') ")
- #print(" end WorkingAttributes--------------------- WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID') ")      
- 
  print("WorkingAttributes")
  print(WorkingAttributes)
  KeywordGenII(NewGoogle,"google")
