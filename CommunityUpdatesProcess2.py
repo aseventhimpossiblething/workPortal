@@ -135,7 +135,7 @@ def WorkingBing():
  print(os.getcwd())      
  print(os.listdir())
  try:
-    WorkingBing=pandas.read_excel('WorkingBing'
+    WorkingBing=pandas.read_excel('WorkingBing')
  except:     
     WorkingBing=pandas.read_excel('WorkingGoogle')
  IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final Url')
