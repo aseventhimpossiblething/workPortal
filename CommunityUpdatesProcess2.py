@@ -1118,6 +1118,7 @@ def initialCommUpdatProcess():
      print(x) 
      return x
  SeekColHead(WorkingCommunities,'Community Name')
+ """     
  #-------------------------------------------------------------------------------------------------------------------------------------
  #-------------------------------------------------------------------------------------------------------------------------------------  
  #-------------------------------------------------------------------------------------------------------------------------------------
@@ -1176,7 +1177,8 @@ def initialCommUpdatProcess():
 
  
  WorkingCommunities.columns=WorkingCommunities.iloc[0];
-
+ """
+ WorkingCommunities=SeekColHead(WorkingCommunities,'Community Name')
  wcols=str(WorkingCommunities.columns)
  print("wcols ",wcols)     
  IDcap=wcols.find('Community ID');
