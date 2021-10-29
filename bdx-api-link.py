@@ -210,7 +210,13 @@ def CommUpdateExcel():
 def CommUpdateExcel2():
  global domain
  domain=domain
- return render_template('/CommUpdateExcel2.html',CacheBreakStamp=datetime.now(),domain=domain)
+ os.chdir(fileHandler.SheetsFileLocation);
+ #storeRequest=open('BingAlert.txt')
+ BingState=storeRequest.read('BingAlert.txt');
+ #storeRequest.close()      
+ #BingState= 
+ print("BingState = ",BingState)
+ return render_template('/CommUpdateExcel2.html',CacheBreakStamp=datetime.now(),domain=domain,BingReadout=BingState)
 
 
 @app.route('/GRSA')
