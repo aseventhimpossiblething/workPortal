@@ -1290,7 +1290,7 @@ def initialCommUpdatProcess():
  #WorkingAttributes=WorkingAttributes["CondoORTownHome?"];
  def AttributeAssignCols(x,y):
      count=0;
-     while len(x[CommunityID])<count:
+     while count<len(x[CommunityID]):
            CommNum=x[CommunityID][count]; 
            print("comNum=",comNum," count=",count)
            count=count+1;
