@@ -130,7 +130,7 @@ def WorkingBing():
  print(os.listdir())
  try:
     WorkingBing=pandas.read_excel('WorkingBing')
-    global IsBingValid
+    #global IsBingValid
     IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final Url')
  except:
     print("BING SHEET REPLACED WITH GOOGLE SHEET!!====BING SHEET REPLACED WITH GOOGLE SHEET!!==BING SHEET REPLACED WITH GOOGLE SHEET!!====BING SHEET REPLACED WITH GOOGLE SHEET!!") 
@@ -254,7 +254,7 @@ def MergeURLs(chan,chan2):
  while count < hilecount :
   URLS=URLS+chan[count]
   #print(chan2," _ ",count)
-  if count % 1000 == 0:
+  if count % 5000 == 0:
    print(chan2," _ ",count)
    
   count+=1
@@ -263,10 +263,12 @@ def MergeURLs(chan,chan2):
  
 def communityCheck(checkby,checkin,Name):
  print("Start Community Check for ",Name)
+ """
  print("checkby=checkby.drop([count]); in  def communityCheck(checkby,checkin,Name)line 268 commented out ")
  print("checkby=checkby.drop([count]); in  def communityCheck(checkby,checkin,Name) line 268 commented out ")
  print("checkby=checkby.drop([count]); in  def communityCheck(checkby,checkin,Name)line 268 commented out ")
  print("checkby=checkby.drop([count]); in  def communityCheck(checkby,checkin,Name) line 268 commented out ")
+ """
  checkby=checkby.reset_index()
  count=0;
  DropRows=[];
