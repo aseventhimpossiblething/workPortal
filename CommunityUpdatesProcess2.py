@@ -1062,7 +1062,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
    BingAdFrameRSA.to_excel(writer)
    writer.save()
  
-#print(' -- end of KWGEN END SEEK NEW DF -- ')
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
 
@@ -1227,14 +1226,7 @@ def initialCommUpdatProcess():
  WorkingCommunities.columns=WorkingCommunities.iloc[0];
  """
  WorkingCommunities=SeekColHead(WorkingCommunities,'Community Name')
- print("----end WorkingCommunities SeekColHead") 
-      
-      
-      
-      
-      
-      
-      
+ #print("----end WorkingCommunities SeekColHead") 
      
  wcols=str(WorkingCommunities.columns)
  print("wcols ",wcols)     
@@ -1264,7 +1256,6 @@ def initialCommUpdatProcess():
  if ZIPcode>-1:
     zcode='ZIP'
     WorkingCommunities['Zip']=WorkingCommunities[zcode]
- 
  print("Zipcode ",Zipcode)
  print(" ZIPcode ",ZIPcode)     
  
@@ -1272,17 +1263,17 @@ def initialCommUpdatProcess():
  WorkingCommunities=LoadCommunities(WorkingCommunities,CommunityID,'Community Name','City',DivID,zcode)
  WorkingCommunities['Zip']=WorkingCommunities[zcode]
       
- print("---After Post Seek Comment block----") 
- print("before iscom ",IsCommValid)      
+ #print("---After Post Seek Comment block----") 
+ #print("before iscom ",IsCommValid)      
  if IsCommValid!="Valid":
     return IsCommValid
 
  
- print("---After IsCommValid check ----") 
+ #print("---After IsCommValid check ----") 
 
  WorkingGoogleEOF=WorkingGoogle()
  WorkingBingEOF=WorkingBing()
- print("---Google,Bing EOF check ----") 
+ #print("---Google,Bing EOF check ----") 
  
  
  WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
@@ -1298,8 +1289,7 @@ def initialCommUpdatProcess():
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
-      
-      
+       
  os.chdir(fileHandler.currentAttributesLocation);
  print(os.listdir(os.getcwd()));     
  print(os.getcwd())
@@ -1307,12 +1297,14 @@ def initialCommUpdatProcess():
  WorkingAttributes=pandas.read_excel('WorkingAttributes'); 
  #print(WorkingAttributes)
  
- print(" start WorkingAttributes--------------------- WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID') ")
- print(" start WorkingAttributes--------------------- WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID') ")     
+ #print(" start WorkingAttributes--------------------- WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID') ")
+ #print(" start WorkingAttributes--------------------- WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID') ")     
  WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID')   
- print(" end WorkingAttributes--------------------- WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID') ")
- print(" end WorkingAttributes--------------------- WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID') ")      
-      
+ #print(" end WorkingAttributes--------------------- WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID') ")
+ #print(" end WorkingAttributes--------------------- WorkingAttributes=SeekColHead(WorkingAttributes,'Community ID') ")      
+ 
+ print("WorkingAttributes")
+ print(WorkingAttributes)
  KeywordGenII(NewGoogle,"google")
  KeywordGenII(NewBing,"bing")
   
