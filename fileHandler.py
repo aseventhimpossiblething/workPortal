@@ -249,7 +249,7 @@ def NCommListFileHandler():
     request.files['currentGoogle'].save('WorkingGoogle')
     
     #os.chdir(currentBingLocation)
-    #request.files['currentBing'].save('WorkingBing')
+    request.files['currentBing'].save('WorkingBing')
      
  
        
