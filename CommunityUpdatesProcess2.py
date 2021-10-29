@@ -1289,9 +1289,11 @@ def initialCommUpdatProcess():
  WorkingAttributes=SeekColHead(WorkingAttributes,'CommunityID'); 
  #WorkingAttributes=WorkingAttributes["CondoORTownHome?"];
  def AttributeAssignCols(x,y):
+     colnames=y.columns
+     print("colnames ",colnames) 
      count=0;
      while count<len(x[CommunityID]):
-           ComNum=x[CommunityID][count]; 
+           comNum=x[CommunityID][count]; 
            print("comNum=",comNum," count=",count)
            count=count+1;
  AttributeAssignCols(NewGoogle,WorkingAttributes);     
