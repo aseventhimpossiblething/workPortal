@@ -1181,6 +1181,9 @@ def initialCommUpdatProcess():
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
       
+      
+ os.chdir(fileHandler.currentAttributesLocation);
+ print(os.listdir(os.getcwd()));     
  print(os.getcwd())
  print(os.listdir()) 
       
