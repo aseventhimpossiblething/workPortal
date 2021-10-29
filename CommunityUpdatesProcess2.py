@@ -1220,7 +1220,7 @@ def initialCommUpdatProcess():
  KeywordGenII(NewGoogle,"google")
  KeywordGenII(NewBing,"bing")
 
- os.chdir(fileHandler.currentBingLocation)
+ #os.chdir(fileHandler.currentBingLocation)
  #print("past  os.chdir fileHandler.currentBingLocation")
   
  os.chdir(fileHandler.SheetsFileLocation);
@@ -1228,9 +1228,18 @@ def initialCommUpdatProcess():
  storeRequest=open('RequestsVsResponses.txt','a+')
  storeRequest.write("Response , ")
  storeRequest.close() 
+ #storeRequest=open('RequestsVsResponses.txt','r+')
+ #storeRequest.close()
+
+ """
+ os.chdir(fileHandler.SheetsFileLocation);
+ #print("past  os.chdir(fileHandler.SheetsFileLocation)");
+ storeRequest=open('BingAlert.txt','a+')
+ storeRequest.write("Response , ")
+ storeRequest.close() 
  storeRequest=open('RequestsVsResponses.txt','r+')
  storeRequest.close()
- 
+ """
  #CommunityNameDuplicateSpecialLoop(WorkingCommunities);
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
