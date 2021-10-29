@@ -462,7 +462,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
  print(os.getcwd())
- print(os.lstdir())     
+ print(os.listdir())     
       
  #print("Dataframe incomming to KeywordGen ",NewDataFrame)     
  NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame); 
