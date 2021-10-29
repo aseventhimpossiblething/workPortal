@@ -272,8 +272,8 @@ def filterNonParticipators(theFrame):
 
 def MergeURLs(chan,chan2):
  stringifiedchan=str(chan) 
- print("String chan type",type(stringifiedchan))
- print("String chan",stringifiedchan)     
+ #print("String chan type",type(stringifiedchan))
+ #print("String chan",stringifiedchan)     
  print("MergeURLs() start for ",chan2)
  print(chan) 
  URLS="A";
@@ -285,6 +285,7 @@ def MergeURLs(chan,chan2):
    hilecount=MaintatanceVar;
  while count < hilecount :
   URLS=URLS+chan[count]
+  print(chan2," _ ",count)
   if count % 50000 == 0:
    print(chan2," _ ",count)
    
