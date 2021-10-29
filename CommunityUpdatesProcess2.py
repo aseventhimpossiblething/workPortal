@@ -130,17 +130,19 @@ def WorkingBing():
  print(os.listdir())
  try:
     WorkingBing=pandas.read_excel('WorkingBing')
-    #global IsBingValid
+    global IsBingValid
     IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final Url')
  except:
     print("BING SHEET REPLACED WITH GOOGLE SHEET!!====BING SHEET REPLACED WITH GOOGLE SHEET!!==BING SHEET REPLACED WITH GOOGLE SHEET!!====BING SHEET REPLACED WITH GOOGLE SHEET!!") 
     os.chdir(currentGoogleLocation)        
     WorkingBing=pandas.read_excel('WorkingGoogle')
     WorkingBing['Final Url']=WorkingBing['Final URL']
+    global IsBingValid  
+    IsBingValid='Bing Sheet is invalid, Google communities inventory was referenced to generate Bing Ad Set'  
     #IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final URL')
  #IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final Url')
- if IsBingValid!='Valid':
-  return IsBingValid
+ #if IsBingValid!='Valid':
+ # return IsBingValid
  WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
  return WorkingBing
 
