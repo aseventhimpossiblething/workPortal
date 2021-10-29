@@ -1264,8 +1264,7 @@ def initialCommUpdatProcess():
  WorkingCommunities=LoadCommunities(WorkingCommunities,CommunityID,'Community Name','City',DivID,zcode)
  WorkingCommunities['Zip']=WorkingCommunities[zcode]
  """     
-
- 
+ print("---After Post Seek Comment block----") 
  if IsCommValid!="Valid":
   return IsCommValid
 
