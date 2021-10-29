@@ -5,9 +5,6 @@ pwd="#!!9ooRanch"
 
 
 
-
-
-
 print("1.1")
 import glob
 print("1.2")
