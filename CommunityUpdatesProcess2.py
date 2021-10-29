@@ -1265,8 +1265,10 @@ def initialCommUpdatProcess():
  WorkingCommunities['Zip']=WorkingCommunities[zcode]
  """     
  print("---After Post Seek Comment block----") 
+ print("before iscom ",IsCommValid)      
  if IsCommValid!="Valid":
-  return IsCommValid
+    return IsCommValid
+
  
  print("---After IsCommValid check ----") 
 
@@ -1311,7 +1313,7 @@ def initialCommUpdatProcess():
  storeRequest.write("Response , ")
  storeRequest.close() 
 
- print("END OF ASYNC FILE LOAD.....................................................................")
+0 print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
  return "finished"
 
