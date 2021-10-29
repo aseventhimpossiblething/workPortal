@@ -1180,7 +1180,10 @@ def initialCommUpdatProcess():
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
- 
+      
+ print(os.getcwd())
+ print(os.listdir()) 
+      
  KeywordGenII(NewGoogle,"google")
  KeywordGenII(NewBing,"bing")
   
