@@ -1267,9 +1267,12 @@ def initialCommUpdatProcess():
  print("---After Post Seek Comment block----") 
  if IsCommValid!="Valid":
   return IsCommValid
+ 
+ print("---After IsCommValid check ----") 
 
  WorkingGoogleEOF=WorkingGoogle()
- WorkingBingEOF=WorkingBing()     
+ WorkingBingEOF=WorkingBing()
+ print("---Google,Bing EOF check ----") 
  
  
  #WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
