@@ -138,7 +138,7 @@ def WorkingBing():
     WorkingBing=pandas.read_excel('WorkingGoogle')
     WorkingBing['Final Url']=WorkingBing['Final URL']
     #global IsBingValid  
-    IsBingValid='Bing Sheet is invalid, Google communities inventory was referenced to generate Bing Ad Set'
+    IsBingValid='Bing Sheet is invalid, Google communities inventory was referenced to generate Bing Ad Set';
     
     #IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final URL')
  #IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final Url')
@@ -146,7 +146,7 @@ def WorkingBing():
  # return IsBingValid
  print("IsBingValid = ",IsBingValid) 
  os.chdir(fileHandler.SheetsFileLocation);
- storeRequest=open('BingAlert.txt','a+')
+ storeRequest=open('BingAlert.txt')
  storeRequest.write(IsBingValid)
  storeRequest.close()        
  
