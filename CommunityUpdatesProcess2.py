@@ -473,11 +473,15 @@ def KeywordGenII(NewDataFrame,SearchChan):
  Campaign_Name=[];
  Adgroup=[];
  Keyword=[];
+ Adtype=[];
  Match_Type=[];
  Status=[];
  Bid=[];
  Final_URL=[];
 
+ hl1pos=[];
+ hl2pos=[];     
+      
  Title1A=[];
  Title2A=[];
  Title3A=[];
@@ -521,7 +525,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
  Text4B=[];
  Path1B=[];
  Path2B=[];
- 
+
+ RSALabel=[];
  Label=[];
  LabelB=[];
  KWLabel=[];     
@@ -536,6 +541,18 @@ def KeywordGenII(NewDataFrame,SearchChan):
  
  
  while count < hilecount:
+  hl1pos.append("1");  
+  hl2pos.append("1");
+  hl1pos.append("1");  
+  hl2pos.append("1"); 
+  hl1pos.append("1");  
+  hl2pos.append("1");
+  RSALabel.append("RSA Ads");
+  RSALabel.append("RSA Ads");  
+  RSALabel.append("RSA Ads");      
+  Adtype.append("Responsive search ad");  
+  Adtype.append("Responsive search ad");
+  Adtype.append("Responsive search ad");    
   communityName=str(NewDataFrame['Community Name'][count]);
   communityName=communityName.replace(" s ","").replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","")\
                .replace(" 45s ","").replace(" 45' ","").replace("Series","").replace("series","")\
@@ -573,11 +590,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
   
   
   communityName.replace("91's","").replace("94's","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace(" s ","").replace("61s","").replace(" 64s ","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace("74's","").replace("61's","").replace(" 64's ","").replace("71's","").replace("74's","").replace("81's","").replace(" 84's ","").replace(" s ","").replace(" ' ","")
-
-            
-  #URL_Struct1=str("https://www.newhomesource.com/basiccommunity/community-"+str(NewDataFrame['Community Id'][count])+"/"+NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]+"/"+communityName\
-  #          +"-by-"+str(NewDataFrame['Brand Name'][count])+"/"+str(NewDataFrame['Community Id'][count])+"?refer=").lower().replace("m/i","m-i");
-
   URL_Struct1=str("https://www.newhomesource.com/basiccommunity/community-"+str(NewDataFrame['Community Id'][count])+"/"+communityName+"-"+NewDataFrame['City'][count]+"-"+str(NewDataFrame['State'][count])+"-"+NewDataFrame['Zip'][count]\
             +"?refer=gppc705").lower().replace("m/i","m-i");
         
@@ -630,13 +642,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
      #Keyword_conv=Keyword_conv+" Community"
      Keyword_conv=Keyword_conv.replace("]","")       
      Keyword_conv=Keyword_conv+" Community"+"]"
- 
-
-    
-      
-
-  
-      
+   
    if SearchChan=="bing":
     URL_Struct1=URL_Struct1+"msm205"
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
@@ -645,16 +651,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Campaign_Name.append(Campaign_Nameing_Conv);
     Campaign_Name.append(Campaign_Nameing_Conv);
     Campaign_Name.append(Campaign_Nameing_Conv);
-    
-
-        
-      
+          
     Bid.append(.45)
     Bid.append(.40)
     Bid.append(.52)   
       
-           
-   
     Keyword_conv=Keyword_conv
     Keyword_conv=Keyword_conv.replace(" + ","")
     Keyword_conv=Keyword_conv.replace(" ++ ","")
@@ -678,24 +679,13 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if SearchChan=="google":
       AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
-            
-   
    if SearchChan=="bing":
       AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
-            
-      
-      
-      
    if str(NewDataFrame['Community Id'][count]).find("nan")>-1:
             AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>");
-   
-   
-  
-   
-
- 
+    
    Adgroup.append(AdgroupNaming_conv);
    Adgroup.append(AdgroupNaming_conv);
    Adgroup.append(AdgroupNaming_conv);
@@ -962,10 +952,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
  GoogleAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
                  "Description":TextB,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,\
                  "Final URL":Final_URL,"Status":Status,"Labels":LabelB}
- GoogleAdFrameRSA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
+ GoogleAdFrameRSA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Ad type":Adtype,"Labels":RSALabel,"Headline 1":Title1A,"Headline 1 position":hl1pos,"Headline 2":Title2A,"Headline 2 position":hl2pos,"Headline 3":Title3A,\
                  "Headline 4":Title4A,"Headline 5":Title5A,"Headline 6":Title6A,"Headline 7":Title7A,"Headline 8":Title8A,"Headline 9":Title9A,\
                  "Description":TextA,"Description 2":Text2A,"Description 3":Text3A,"Description 4":Text4A,\
-                 "Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
+                 "Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}
  GoogleAdFrameA=pandas.DataFrame(GoogleAdFrameA).drop_duplicates()
  GoogleAdFrameB=pandas.DataFrame(GoogleAdFrameB).drop_duplicates()
  GoogleAdFrameRSA=pandas.DataFrame(GoogleAdFrameRSA).drop_duplicates()     
