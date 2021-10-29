@@ -1147,6 +1147,7 @@ def initialCommUpdatProcess():
      x['Zip']=x[zcode]
      print("Zipcode ",Zipcode)
      print(" ZIPcode ",ZIPcode)
+     WorkingCommunities['Zip']=WorkingCommunities[zcode]
      #WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
      #WorkingCommunities['Division Id']=WorkingCommunities[DivID]; 
      
@@ -1259,11 +1260,11 @@ def initialCommUpdatProcess():
  
  print("Zipcode ",Zipcode)
  print(" ZIPcode ",ZIPcode)     
-
+ """
  #WorkingCommunities=WorkingCommunities.drop([4])
  WorkingCommunities=LoadCommunities(WorkingCommunities,CommunityID,'Community Name','City',DivID,zcode)
  WorkingCommunities['Zip']=WorkingCommunities[zcode]
- """     
+      
  print("---After Post Seek Comment block----") 
  print("before iscom ",IsCommValid)      
  if IsCommValid!="Valid":
