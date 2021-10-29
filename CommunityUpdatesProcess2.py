@@ -1313,7 +1313,7 @@ def initialCommUpdatProcess():
  storeRequest.write("Response , ")
  storeRequest.close() 
 
-0 print("END OF ASYNC FILE LOAD.....................................................................")
+ print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
  return "finished"
 
