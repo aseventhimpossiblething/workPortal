@@ -541,6 +541,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  
  
  while count < hilecount:
+  """          
   hl1pos.append("1");  
   hl2pos.append("1");
   hl1pos.append("1");  
@@ -553,6 +554,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   Adtype.append("Responsive search ad");  
   Adtype.append("Responsive search ad");
   Adtype.append("Responsive search ad");    
+  """
   communityName=str(NewDataFrame['Community Name'][count]);
   communityName=communityName.replace(" s ","").replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","")\
                .replace(" 45s ","").replace(" 45' ","").replace("Series","").replace("series","")\
@@ -611,7 +613,20 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_GPPC403","").replace(">Mixed>Community",">Mixed>Basic Listings")  
     Campaign_Name.append(Campaign_Nameing_Conv);
     Campaign_Name.append(Campaign_Nameing_Conv);  
-    Campaign_Name.append(Campaign_Nameing_Conv);  
+    Campaign_Name.append(Campaign_Nameing_Conv);
+    
+    hl1pos.append("1");  
+    hl2pos.append("1");
+    hl1pos.append("1");  
+    hl2pos.append("1"); 
+    hl1pos.append("1");  
+    hl2pos.append("1");
+    RSALabel.append("RSA Ads");
+    RSALabel.append("RSA Ads");  
+    RSALabel.append("RSA Ads");      
+    Adtype.append("Responsive search ad");  
+    Adtype.append("Responsive search ad");
+    Adtype.append("Responsive search ad");   
 
 
     Bid.append(.45)
