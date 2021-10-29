@@ -1047,6 +1047,14 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #GoogleAdFrameB.to_excel(writer)
    writer.save()
    
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleRSA'
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('GRSA.xlsx')
+   #writer=SaveLocation   
+   GoogleAdFrameRSA.to_excel(writer)
+   writer.save()   
+      
+      
  
      
  if SearchChan=="bing":
@@ -1075,9 +1083,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/BingRSA'
    os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('BRSA.xlsx')
-   BingAdFrameB.to_excel(writer)
+   BingAdFrameRSA.to_excel(writer)
    writer.save()
- #print(' -- end of KWGEN END SEEK NEW DF -- ')
+ 
+#print(' -- end of KWGEN END SEEK NEW DF -- ')
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
 
