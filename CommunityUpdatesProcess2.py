@@ -1147,8 +1147,8 @@ def initialCommUpdatProcess():
      x['Zip']=x[zcode]
      print("Zipcode ",Zipcode)
      print(" ZIPcode ",ZIPcode)
-     WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
-     WorkingCommunities['Division Id']=WorkingCommunities[DivID]; 
+     #WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
+     #WorkingCommunities['Division Id']=WorkingCommunities[DivID]; 
      
 
 
@@ -1157,6 +1157,7 @@ def initialCommUpdatProcess():
      print(x) 
      return x
  SeekColHead(WorkingCommunities,'Community Name')
+ print("----end first SeekColHead")     
  """     
  #-------------------------------------------------------------------------------------------------------------------------------------
  #-------------------------------------------------------------------------------------------------------------------------------------  
@@ -1271,8 +1272,8 @@ def initialCommUpdatProcess():
  WorkingBingEOF=WorkingBing()     
  
  
- #WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
- #WorkingCommunities['Division Id']=WorkingCommunities[DivID];     
+ WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
+ WorkingCommunities['Division Id']=WorkingCommunities[DivID];     
  print("WorkingGoogleEOF")      
  print(WorkingGoogleEOF)     
  WorkingGoogleEOF['Final URL']  
