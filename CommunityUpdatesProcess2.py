@@ -1216,6 +1216,14 @@ def initialCommUpdatProcess():
  WorkingCommunities.columns=WorkingCommunities.iloc[0];
  """
  WorkingCommunities=SeekColHead(WorkingCommunities,'Community Name')
+      
+      
+      
+      
+      
+      
+      
+ """     
  wcols=str(WorkingCommunities.columns)
  print("wcols ",wcols)     
  IDcap=wcols.find('Community ID');
@@ -1251,7 +1259,7 @@ def initialCommUpdatProcess():
  #WorkingCommunities=WorkingCommunities.drop([4])
  WorkingCommunities=LoadCommunities(WorkingCommunities,CommunityID,'Community Name','City',DivID,zcode)
  WorkingCommunities['Zip']=WorkingCommunities[zcode]
-      
+ """     
 
  
  if IsCommValid!="Valid":
