@@ -136,9 +136,11 @@ def WorkingBing():
  print(os.listdir())
  try:
     WorkingBing=pandas.read_excel('WorkingBing')
- except:     
+    IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final Url')
+ except:
+    os.chdir(currentGoogleLocation)        
     WorkingBing=pandas.read_excel('WorkingGoogle')
- IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final Url')
+    IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final URL')
  if IsBingValid!='Valid':
   return IsBingValid
  WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
