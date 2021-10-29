@@ -216,6 +216,11 @@ def CommUpdateExcel2():
  return render_template('/CommUpdateExcel2.html',CacheBreakStamp=datetime.now(),domain=domain)
 
 
+@app.route('/GRSA')
+def GoogleGRSA():
+ return send_file("/GMDelight/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GRSA.xlsx",\
+                  attachment_filename="GRSA.xlsx")
+
 
 @app.route('/GKW')
 def GoogleKWG():
@@ -310,7 +315,12 @@ def BKWB():
                   attachment_filename="BKW.xlsx")
    
         
+@app.route('/BRSA')
+def GoogleBRSA():
+ return send_file("/GMDelight/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAds/BRSA.xlsx",\
+                  attachment_filename="BRSA.xlsx")
 
+        
 @app.route('/BingKWSBMM')
 def BingSBMMKW():
  return send_file("/GMDelight/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingKW/BingKWBMM/DefaultSheet.xlsx",\
