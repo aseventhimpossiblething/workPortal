@@ -1291,7 +1291,7 @@ def initialCommUpdatProcess():
  def AttributeAssignCols(x,y):
      count=0;
      while count<len(x[CommunityID]):
-           CommNum=x[CommunityID][count]; 
+           ComNum=x[CommunityID][count]; 
            print("comNum=",comNum," count=",count)
            count=count+1;
  AttributeAssignCols(NewGoogle,WorkingAttributes);     
