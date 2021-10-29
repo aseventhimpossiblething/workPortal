@@ -1115,7 +1115,7 @@ def initialCommUpdatProcess():
         x=x.drop([0,1,2,3]);
      x.columns=x.iloc[0];
      
-      
+     """ 
      #cuttable below-------------------------------------------------------------------------------
      wcols=str(x.columns)
      print("wcols ",wcols)     
@@ -1150,7 +1150,7 @@ def initialCommUpdatProcess():
      #WorkingCommunities['Zip']=WorkingCommunities[zcode]
      #WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
      #WorkingCommunities['Division Id']=WorkingCommunities[DivID]; 
-     
+     """
 
 
 
@@ -1228,7 +1228,7 @@ def initialCommUpdatProcess():
       
       
       
- """     
+     
  wcols=str(WorkingCommunities.columns)
  print("wcols ",wcols)     
  IDcap=wcols.find('Community ID');
@@ -1260,7 +1260,7 @@ def initialCommUpdatProcess():
  
  print("Zipcode ",Zipcode)
  print(" ZIPcode ",ZIPcode)     
- """
+ 
  #WorkingCommunities=WorkingCommunities.drop([4])
  WorkingCommunities=LoadCommunities(WorkingCommunities,CommunityID,'Community Name','City',DivID,zcode)
  WorkingCommunities['Zip']=WorkingCommunities[zcode]
@@ -1278,8 +1278,8 @@ def initialCommUpdatProcess():
  print("---Google,Bing EOF check ----") 
  
  
- #WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
- #WorkingCommunities['Division Id']=WorkingCommunities[DivID];     
+ WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
+ WorkingCommunities['Division Id']=WorkingCommunities[DivID];     
  print("WorkingGoogleEOF")      
  print(WorkingGoogleEOF)     
  WorkingGoogleEOF['Final URL']  
