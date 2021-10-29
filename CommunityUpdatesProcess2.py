@@ -135,7 +135,7 @@ def WorkingBing():
  print(os.getcwd())      
  print(os.listdir())     
  WorkingBing=pandas.read_excel('WorkingBing')
- IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Title Part 1','Final Url')
+ IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final Url')
  if IsBingValid!='Valid':
   return IsBingValid
  WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
