@@ -1147,7 +1147,7 @@ def initialCommUpdatProcess():
      x['Zip']=x[zcode]
      print("Zipcode ",Zipcode)
      print(" ZIPcode ",ZIPcode)
-     WorkingCommunities['Zip']=WorkingCommunities[zcode]
+     #WorkingCommunities['Zip']=WorkingCommunities[zcode]
      #WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
      #WorkingCommunities['Division Id']=WorkingCommunities[DivID]; 
      
