@@ -146,8 +146,8 @@ def WorkingBing():
  # return IsBingValid
  print("IsBingValid = ",IsBingValid) 
  os.chdir(fileHandler.SheetsFileLocation);
- storeRequest=open('BingAlert.txt')
- storeRequest.write(IsBingValid,'w')
+ storeRequest=open('BingAlert.txt','w')
+ storeRequest.write(IsBingValid)
  storeRequest.close()        
  
  WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
