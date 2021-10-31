@@ -154,7 +154,7 @@ def favicon():
 
 print("7")
 
-
+"""
 @app.route('/DisplayCommUpdate')
 def CommUpdateDisplay():
     os.chdir('/GMDelight/workPortal/Sheets/')     
@@ -171,6 +171,7 @@ def CommUpdateDisplay():
      return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/CommUpdateExcel?'><html>This Message indicates an error in URL Forward</html>"
     if read_storeRequest1!=read_storeRequest2:
      return '<meta http-equiv="refresh" content="120"><html>LOADING..... )</html>'
+"""
 
 @app.route('/DisplayCommUpdate2')
 def CommUpdateDisplay2():
@@ -199,13 +200,13 @@ def CommUpdateDisplay2():
 
 
 
-
+"""
 @app.route('/CommUpdateExcel')
 def CommUpdateExcel():
  global domain
  domain=domain
  return render_template('/CommUpdateExcel.html',CacheBreakStamp=datetime.now(),domain=domain)
-
+"""
 @app.route('/CommUpdateExcel2')
 def CommUpdateExcel2():
  global domain
@@ -491,9 +492,11 @@ def CommunitiesUploads():
         return str(chckbdxcred());
     return render_template('CommunitiesForm.html')
 
+"""
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
     return fileHandler.CommListFileHandler()
+"""
 
 @app.route('/NovelCommunityFileHander', methods=['POST','GET'])
 def NCommunityFileHandling():
