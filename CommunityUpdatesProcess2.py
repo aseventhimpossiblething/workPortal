@@ -1192,12 +1192,12 @@ def initialCommUpdatProcess():
  print("---Define working attributes ----")     
  WorkingAttributes=pandas.read_excel('WorkingAttributes');   
  WorkingAttributes=SeekColHead(WorkingAttributes,'CommunityID');
- WorkingAttributesCheck1=CheckSheetData('WorkingAttributes',WorkingAttributes,"CommunityID","CondoORTownHome","WithAtLeastOneMultifamilyPlan")
- WorkingAttributesCheck2=CheckSheetData('WorkingAttributes',WorkingAttributes,"ActiveAdult","HasALuxuryHome","GatedCommunity")
- WorkingAttributesCheck3=CheckSheetData('WorkingAttributes',WorkingAttributes,"Pool","Green","ParkNature")  
- WorkingAttributesCheck4=CheckSheetData('WorkingAttributes',WorkingAttributes,"GolfCourse","Tennis","Volleyball") 
- WorkingAttributesCheck5=CheckSheetData('WorkingAttributes',WorkingAttributes,"Basketball","Soccer"," Baseball")
- WorkingAttributesCheck6=CheckSheetData('WorkingAttributes',WorkingAttributes,"Waterfront","HasPlanWith2StoriesAndMasterDownstairs","Baseball")     
+ WorkingAttributesCheck1=CheckSheetData('Attributes',WorkingAttributes,"CommunityID","CondoORTownHome","WithAtLeastOneMultifamilyPlan")
+ WorkingAttributesCheck2=CheckSheetData('Attributes',WorkingAttributes,"ActiveAdult","HasALuxuryHome","GatedCommunity")
+ WorkingAttributesCheck3=CheckSheetData('Attributes',WorkingAttributes,"Pool","Green","ParkNature")  
+ WorkingAttributesCheck4=CheckSheetData('Attributes',WorkingAttributes,"GolfCourse","Tennis","Volleyball") 
+ WorkingAttributesCheck5=CheckSheetData('Attributes',WorkingAttributes,"Basketball","Soccer"," Baseball")
+ WorkingAttributesCheck6=CheckSheetData('Attributes',WorkingAttributes,"Waterfront","HasPlanWith2StoriesAndMasterDownstairs","Baseball")     
  print(WorkingAttributesCheck1,"-",WorkingAttributesCheck2,"-",WorkingAttributesCheck3,"-",WorkingAttributesCheck4,"-",WorkingAttributesCheck5,"-",WorkingAttributesCheck6)     
  AttributeFormatChecknumber=str(WorkingAttributes.columns).find('CommunityID')
  print("AttributeFormatChecknumber======",AttributeFormatChecknumber);     
