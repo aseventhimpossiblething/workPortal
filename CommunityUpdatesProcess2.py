@@ -1239,7 +1239,7 @@ def initialCommUpdatProcess():
      GatedCommunity=[];
      Pool=[];
      Green=[];
-     Park/Nature=[];
+     ParkNature=[];
      GolfCourse=[];
      Tennis=[];
      Volleyball=[];
@@ -1267,7 +1267,7 @@ def initialCommUpdatProcess():
            GatedCommunity.append("-");
            Pool.append("-");
            Green.append("-");
-           Park/Nature.append("-");
+           ParkNature.append("-");
            GolfCourse.append("-");
            Tennis.append("-");
            Volleyball.append("-");
