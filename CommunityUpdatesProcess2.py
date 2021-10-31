@@ -1123,6 +1123,9 @@ def initialCommUpdatProcess():
         x=x.drop([0,1,2,3]);
      MissingParam=sum([AVersion,BVersion,CVersion,DVersion,EVersion]);
      print("--------------Missing Param---------------------",MissingParam)
+     if MissingParam==-5:
+        return "format Error in attributes sheet";
+         
      x.columns=x.iloc[0];
      
      print("SeekColHead end")
