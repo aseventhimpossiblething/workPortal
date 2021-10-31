@@ -1237,7 +1237,7 @@ def initialCommUpdatProcess():
               locationOfComNumInAttributes=AttributeCommIDstr.index(comNumInMain);     
               
            #locationOfComNumInAttributes=commIDstr.count(comNumInMain+"1236547896523214587965214587412");
-           comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes+4]; 
+           comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes+4]); 
            print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
            CorrespondingRowInAttributes.append([count+4]);
            CondoORTownHome.append("-");
