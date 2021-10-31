@@ -1205,7 +1205,7 @@ def initialCommUpdatProcess():
  def AttributeAssignCols(x,y):
      CorrespondingRowInAttributes=[];
      CondoORTownHome=[];
-     WithAtLeastOneMultifamilyPlan=[];
+     WithAtLeastOneMultiFamilyPlan=[];
      #CondoORTownHome? / WithAtLeastOneMultiFamilyPlan
      ActiveAdult=[];
      HasALuxuryHome=[];
