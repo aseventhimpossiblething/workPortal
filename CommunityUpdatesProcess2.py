@@ -1240,7 +1240,7 @@ def initialCommUpdatProcess():
            comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes]); 
            print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
            CorrespondingRowInAttributes.append([locationOfComNumInAttributes]);
-           CondoORTownHome.append(y['CondoORTownHome'].iloc[]);
+           CondoORTownHome.append(y['CondoORTownHome'].iloc[locationOfComNumInAttributes]);
            WithAtLeastOneMultifamilyPlan.append(y['WithAtLeastOneMultifamilyPlan'].iloc[locationOfComNumInAttributes]);
            ActiveAdult.append(y['ActiveAdult'].iloc[locationOfComNumInAttributes]);
            HasALuxuryHome.append(y['HasALuxuryHome'].iloc[locationOfComNumInAttributes]);
