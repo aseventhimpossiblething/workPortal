@@ -267,8 +267,8 @@ def MergeURLs(chan,chan2):
    print(chan2," _ ",count)
    
   count+=1
- return URLS
- #return stringifiedchan;
+ #return URLS
+ return stringifiedchan;
  
 def communityCheck(checkby,checkin,Name):
  print("Start Community Check for ",Name)
@@ -1296,8 +1296,8 @@ def initialCommUpdatProcess():
      count=0;
      while count<len(x[CommunityID]):
            comNumInMain=str(x[CommunityID][count]);
-           comNumInAttributesrow=str(y['CommunityID'][count+4]); 
-           print("comNumInMain=",comNumInMain," count=",count," comNumInAttributesrow=",comNumInAttributesrow)
+           comNumInAttributes=str(y['CommunityID'][count+4]); 
+           print("comNumInMain=",comNumInMain," count=",count,"| comNumInAttributes=",comNumInAttributes," Row in Attrubutes Table=",[count+4])
            comIDpositionInAttributes=commIDstr.find(comNumInMain)
            print("comIDpositionInAttributes ",comIDpositionInAttributes)
            count=count+1;
