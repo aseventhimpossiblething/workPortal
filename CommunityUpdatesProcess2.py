@@ -1198,7 +1198,7 @@ def initialCommUpdatProcess():
  WorkingAttributesCheck4=CheckSheetData('WorkingAttributes',WorkingAttributes,"GolfCourse","Tennis","Volleyball") 
  WorkingAttributesCheck5=CheckSheetData('WorkingAttributes',WorkingAttributes,"Basketball","Soccer"," Baseball")
  WorkingAttributesCheck6=CheckSheetData('WorkingAttributes',WorkingAttributes,"Waterfront","HasPlanWith2StoriesAndMasterDownstairs","Baseball")     
- print(WorkingAttributesCheck1,"-",WorkingAttributesCheck2,"-",WorkingAttributesCheck3,"-"WorkingAttributesCheck4,"-",WorkingAttributesCheck5,"-",WorkingAttributesCheck6)     
+ print(WorkingAttributesCheck1,"-",WorkingAttributesCheck2,"-",WorkingAttributesCheck3,"-",WorkingAttributesCheck4,"-",WorkingAttributesCheck5,"-",WorkingAttributesCheck6)     
  AttributeFormatChecknumber=WorkingAttributes.columns.find('CommunityID')
  print("AttributeFormatChecknumber======",AttributeFormatChecknumber);     
  #WorkingAttributes=WorkingAttributes["CondoORTownHome?"];
