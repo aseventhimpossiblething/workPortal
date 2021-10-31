@@ -248,7 +248,7 @@ def filterNonParticipators(theFrame):
 
 
 def MergeURLs(chan,chan2):
- stringifiedchan=str(chan) 
+ #stringifiedchan=str(chan) 
  #print("String chan type",type(stringifiedchan))
  #print("String chan",stringifiedchan)     
  print("MergeURLs() start for ",chan2)
@@ -267,8 +267,8 @@ def MergeURLs(chan,chan2):
    print(chan2," _ ",count)
    
   count+=1
- #return URLS
- return stringifiedchan;
+ return URLS
+ #return stringifiedchan;
  
 def communityCheck(checkby,checkin,Name):
  print("Start Community Check for ",Name)
@@ -1225,7 +1225,10 @@ def initialCommUpdatProcess():
      colnames=y.columns
      print("colnames ",colnames) 
      print("y['CommunityID'] ",y['CommunityID']) 
-     commIDstr=str(y['CommunityID']);
+     commIDstr=['CommunityID'];
+     for commIDnumstrs in y['CommunityID']:
+         commIDstr.append(str(commIDnumstrs));
+         
      count=0;
      while count<len(x[CommunityID]):
            comNumInMain=str(x[CommunityID][count]);
