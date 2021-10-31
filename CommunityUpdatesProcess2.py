@@ -1259,6 +1259,24 @@ def initialCommUpdatProcess():
            locationOfComNumInAttributes=commIDstr.find(comNumInMain);
            comNumInAttributes=str(y['CommunityID'][count+4]); 
            print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
+           CorrespondingRowInAttributes.append([count+4]);
+           CondoORTownHome.append("-");
+           WithAtLeastOneMultifamilyPlan.append("-");
+           ActiveAdult.append("-");
+           HasALuxuryHome.append("-");
+           GatedCommunity.append("-");
+           Pool.append("-");
+           Green.append("-");
+           Park/Nature.append("-");
+           GolfCourse.append("-");
+           Tennis.append("-");
+           Volleyball.append("-");
+           Basketball.append("-");
+           Soccer.append("-");
+           Baseball.append("-");
+           Waterfront.append("-");
+           HasPlanWith2StoriesAndMasterDownstairs.append("-");
+
            #comIDpositionInAttributes=commIDstr.find(comNumInMain)
            #print("comIDpositionInAttributes ",comIDpositionInAttributes)
            count=count+1;
