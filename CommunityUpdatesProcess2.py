@@ -1164,66 +1164,7 @@ def initialCommUpdatProcess():
      print(x) 
      return x;
    
- """     
- #-------------------------------------------------------------------------------------------------------------------------------------
- #-------------------------------------------------------------------------------------------------------------------------------------  
- #-------------------------------------------------------------------------------------------------------------------------------------
- #-------------------------------------------------------------------------------------------------------------------------------------     
- print(" WorkingCommunities ")
- print(WorkingCommunities)     
- AVersion=str(WorkingCommunities.iloc[[0]].values);
- BVersion=str(WorkingCommunities.iloc[[1]].values);
- CVersion=str(WorkingCommunities.iloc[[2]].values);
- DVersion=str(WorkingCommunities.iloc[[3]].values);
- EVersion=str(WorkingCommunities.iloc[[4]].values);
-      
- print("AVersion ",AVersion);
- print("BVersion ",BVersion);     
- print("CVersion ",CVersion);
- print("DVersion ",DVersion);
- print("EVersion ",EVersion);     
 
- sheetidcol='Community Name' 
- AVersion=str(WorkingCommunities.iloc[[0]].values).find(sheetidcol);
- BVersion=str(WorkingCommunities.iloc[[1]].values).find(sheetidcol);
- CVersion=str(WorkingCommunities.iloc[[2]].values).find(sheetidcol);
- DVersion=str(WorkingCommunities.iloc[[3]].values).find(sheetidcol);
- EVersion=str(WorkingCommunities.iloc[[4]].values).find(sheetidcol);     
-
- print("=======================Watch for Version Print============= Begin")
- print("AVersion ",AVersion);
- print("BVersion ",BVersion);  
- print("CVersion ",CVersion);
- print("DVersion ",DVersion);
- print("EVersion ",EVersion);     
- 
- print("=======================Watch for Version Print============= End")
- 
- 
- if AVersion!=-1:
-    print("AVersion-------------------------------------------------------------------");        
-    #WorkingCommunities=WorkingCommunities.drop([2,3]);
-    
- if BVersion!=-1:
-    print("BVersion--------------------------------------------------------------------");  
-    WorkingCommunities=WorkingCommunities.drop([0]);
-     
- if CVersion!=-1:
-    print("CVersion--------------------------------------------------------------------");  
-    WorkingCommunities=WorkingCommunities.drop([0,1]);
-      
- if DVersion!=-1:
-    print("CVersion--------------------------------------------------------------------");  
-    WorkingCommunities=WorkingCommunities.drop([0,1,2]);
- 
- if EVersion!=-1:
-    print("CVersion--------------------------------------------------------------------");  
-    WorkingCommunities=WorkingCommunities.drop([0,1,2,3]);
- 
-
- 
- WorkingCommunities.columns=WorkingCommunities.iloc[0];
- """
  print("Define working communities")
  WorkingCommunities=SeekColHead(WorkingCommunities,'Community Name')
  wcols=str(WorkingCommunities.columns)
@@ -1315,10 +1256,11 @@ def initialCommUpdatProcess():
      count=0;
      while count<len(x[CommunityID]):
            comNumInMain=str(x[CommunityID][count]);
+           locationOfComNumInAttributes=commIDstr.find(comNumInMain);
            comNumInAttributes=str(y['CommunityID'][count+4]); 
-           print("comNumInMain=",comNumInMain," count=",count,"| comNumInAttributes=",comNumInAttributes," Row in Attrubutes Table=",[count+4])
-           comIDpositionInAttributes=commIDstr.find(comNumInMain)
-           print("comIDpositionInAttributes ",comIDpositionInAttributes)
+           print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
+           #comIDpositionInAttributes=commIDstr.find(comNumInMain)
+           #print("comIDpositionInAttributes ",comIDpositionInAttributes)
            count=count+1;
  AttributeAssignCols(NewGoogle,WorkingAttributes);     
  print("--------------WorkingAttributes-----------------------")
