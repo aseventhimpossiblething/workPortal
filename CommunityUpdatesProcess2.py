@@ -1289,6 +1289,25 @@ def initialCommUpdatProcess():
  WorkingAttributes=SeekColHead(WorkingAttributes,'CommunityID'); 
  #WorkingAttributes=WorkingAttributes["CondoORTownHome?"];
  def AttributeAssignCols(x,y):
+     CorrespondingRowInAttributes=[];
+     CondoORTownHome=[];
+     WithAtLeastOneMultifamilyPlan=[];
+     #CondoORTownHome? / WithAtLeastOneMultiFamilyPlan
+     ActiveAdult=[];
+     HasALuxuryHome=[];
+     GatedCommunity=[];
+     Pool=[];
+     Green=[];
+     Park/Nature=[];
+     GolfCourse=[];
+     Tennis=[];
+     Volleyball=[];
+     Basketball=[];
+     Soccer=[];
+     Baseball=[];
+     Waterfront=[];
+     HasPlanWith2StoriesAndMasterDownstairs=[];
+
      colnames=y.columns
      print("colnames ",colnames) 
      print("y['CommunityID'] ",y['CommunityID']) 
