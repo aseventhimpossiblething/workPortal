@@ -1121,11 +1121,12 @@ def initialCommUpdatProcess():
      if EVersion!=-1:
         print("CVersion--------------------------------------------------------------------");  
         x=x.drop([0,1,2,3]);
+     """ 
      MissingParam=sum([AVersion,BVersion,CVersion,DVersion,EVersion]);
      print("--------------Missing Param---------------------",MissingParam)
      if MissingParam==-5:
         return "format Error in attributes sheet";
-         
+     """    
      x.columns=x.iloc[0];
      
      print("SeekColHead end")
@@ -1195,7 +1196,9 @@ def initialCommUpdatProcess():
  #print(os.listdir()) 
  print("---Define working attributes ----")     
  WorkingAttributes=pandas.read_excel('WorkingAttributes');   
- WorkingAttributes=SeekColHead(WorkingAttributes,'CommunityID'); 
+ WorkingAttributes=SeekColHead(WorkingAttributes,'CommunityID');
+ AttributeFormatChecknumber=WorkingAttributes.columns.find('CommunityID')
+ print("AttributeFormatChecknumber======",AttributeFormatChecknumber);     
  #WorkingAttributes=WorkingAttributes["CondoORTownHome?"];
  def AttributeAssignCols(x,y):
      CorrespondingRowInAttributes=[];
