@@ -1225,15 +1225,19 @@ def initialCommUpdatProcess():
      colnames=y.columns
      print("colnames ",colnames) 
      print("y['CommunityID'] ",y['CommunityID']) 
-     commIDstr=['CommunityID'];
+     AttributeCommIDstr=[];
      for commIDnumstrs in y['CommunityID']:
-         commIDstr.append(str(commIDnumstrs));
+         AttributeCommIDstr.append(str(commIDnumstrs));
          
      count=0;
      while count<len(x[CommunityID]):
            comNumInMain=str(x[CommunityID][count]);
-           locationOfComNumInAttributes=commIDstr.count(comNumInMain+"1236547896523214587965214587412");
-           comNumInAttributes=str(y['CommunityID'][count+4]); 
+           locationOfComNumInAttributes="Community Number Not Found in Attribute Report" 
+           if AttributeCommIDstr.count(comNumInMain)>0:
+              locationOfComNumInAttributes=AttributeCommIDstr.index(comNumInMain);     
+              
+           #locationOfComNumInAttributes=commIDstr.count(comNumInMain+"1236547896523214587965214587412");
+           comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes+4]; 
            print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
            CorrespondingRowInAttributes.append([count+4]);
            CondoORTownHome.append("-");
