@@ -1096,7 +1096,7 @@ def initialCommUpdatProcess():
      CVersion=str(x.iloc[[2]].values).find(sheetidcol);
      DVersion=str(x.iloc[[3]].values).find(sheetidcol);
      EVersion=str(x.iloc[[4]].values).find(sheetidcol);     
-
+     
      print("=======================Watch for Version Print============= Begin")
      print("AVersion ",AVersion);
      print("BVersion ",BVersion);  
@@ -1105,6 +1105,8 @@ def initialCommUpdatProcess():
      print("EVersion ",EVersion);     
  
      print("=======================Watch for Version Print============= End")
+     
+      
      if AVersion!=-1:
         print("AVersion-------------------------------------------------------------------");        
      if BVersion!=-1:
@@ -1119,47 +1121,9 @@ def initialCommUpdatProcess():
      if EVersion!=-1:
         print("CVersion--------------------------------------------------------------------");  
         x=x.drop([0,1,2,3]);
+     if sum(AVersion,BVersion,CVersion,DVersion,EVersion
      x.columns=x.iloc[0];
      
-     """ 
-     #cuttable below-------------------------------------------------------------------------------
-     wcols=str(x.columns)
-     print("wcols ",wcols)     
-     IDcap=wcols.find('Community ID');
-     Idlow=wcols.find('Community Id');
-     if IDcap>-1:
-         CommunityID='Community ID'
-     if Idlow>-1:
-         CommunityID='Community Id'
-     print("ID cap ",IDcap)
-     print("Id low ",Idlow)  
-
-     IDDiv=wcols.find('Division ID');
-     Iddiv=wcols.find('Division Id');
-     if IDDiv>-1:
-         DivID='Division ID'
-     if Idlow>-1:
-         DivID='Division Id'
- 
-     print("IDDiv ",IDDiv)
-     print(" Iddiv ", Iddiv)
-      
-     Zipcode=wcols.find('Zip');
-     ZIPcode=wcols.find('ZIP');
-     if Zipcode>-1:
-         zcode='Zip'
-     if ZIPcode>-1:
-         zcode='ZIP'
-     x['Zip']=x[zcode]
-     print("Zipcode ",Zipcode)
-     print(" ZIPcode ",ZIPcode)
-     #WorkingCommunities['Zip']=WorkingCommunities[zcode]
-     #WorkingCommunities['Community Id']=WorkingCommunities[CommunityID];
-     #WorkingCommunities['Division Id']=WorkingCommunities[DivID]; 
-     """
-
-
-
      print("SeekColHead end")
      print(x) 
      return x;
