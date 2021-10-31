@@ -1296,7 +1296,7 @@ def initialCommUpdatProcess():
      count=0;
      while count<len(x[CommunityID]):
            comNumInMain=x[CommunityID][count];
-           comNumInAttributesrow=y['CommunityID'][count+4] 
+           comNumInAttributesrow=str(y['CommunityID'][count+4]); 
            print("comNumInMain=",comNumInMain," count=",count," comNumInAttributesrow=",comNumInAttributesrow)
            comIDpositionInAttributes=commIDstr.find(comNumInMain)
            print("comIDpositionInAttributes ",comIDpositionInAttributes)
