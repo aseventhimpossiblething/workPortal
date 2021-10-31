@@ -272,12 +272,6 @@ def MergeURLs(chan,chan2):
  
 def communityCheck(checkby,checkin,Name):
  print("Start Community Check for ",Name)
- """
- print("checkby=checkby.drop([count]); in  def communityCheck(checkby,checkin,Name)line 268 commented out ")
- print("checkby=checkby.drop([count]); in  def communityCheck(checkby,checkin,Name) line 268 commented out ")
- print("checkby=checkby.drop([count]); in  def communityCheck(checkby,checkin,Name)line 268 commented out ")
- print("checkby=checkby.drop([count]); in  def communityCheck(checkby,checkin,Name) line 268 commented out ")
- """
  checkby=checkby.reset_index()
  count=0;
  DropRows=[];
@@ -1189,6 +1183,7 @@ def initialCommUpdatProcess():
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
+      
        
  os.chdir(fileHandler.currentAttributesLocation);
  #print(os.listdir(os.getcwd()));     
@@ -1197,6 +1192,13 @@ def initialCommUpdatProcess():
  print("---Define working attributes ----")     
  WorkingAttributes=pandas.read_excel('WorkingAttributes');   
  WorkingAttributes=SeekColHead(WorkingAttributes,'CommunityID');
+ WorkingAttributesCheck1=CheckSheetData('WorkingAttributes',WorkingAttributes,"CommunityID","CondoORTownHome","WithAtLeastOneMultifamilyPlan")
+ WorkingAttributesCheck2=CheckSheetData('WorkingAttributes',WorkingAttributes,"ActiveAdult","HasALuxuryHome","GatedCommunity")
+ WorkingAttributesCheck3=CheckSheetData('WorkingAttributes',WorkingAttributes,"Pool","Green","ParkNature")  
+ WorkingAttributesCheck4=CheckSheetData('WorkingAttributes',WorkingAttributes,"GolfCourse","Tennis","Volleyball") 
+ WorkingAttributesCheck5=CheckSheetData('WorkingAttributes',WorkingAttributes,"Basketball","Soccer"," Baseball")
+ WorkingAttributesCheck6=CheckSheetData('WorkingAttributes',WorkingAttributes,"Waterfront","HasPlanWith2StoriesAndMasterDownstairs","Baseball")     
+ print(WorkingAttributesCheck1,"-",WorkingAttributesCheck2,"-",WorkingAttributesCheck3,"-"WorkingAttributesCheck4,"-",WorkingAttributesCheck5,"-",WorkingAttributesCheck6)     
  AttributeFormatChecknumber=WorkingAttributes.columns.find('CommunityID')
  print("AttributeFormatChecknumber======",AttributeFormatChecknumber);     
  #WorkingAttributes=WorkingAttributes["CondoORTownHome?"];
