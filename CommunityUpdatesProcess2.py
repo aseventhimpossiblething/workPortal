@@ -1232,7 +1232,7 @@ def initialCommUpdatProcess():
      count=0;
      while count<len(x[CommunityID]):
            comNumInMain=str(x[CommunityID][count]);
-           locationOfComNumInAttributes=commIDstr.count(comNumInMain);
+           locationOfComNumInAttributes=commIDstr.count(comNumInMain+"1236547896523214587965214587412");
            comNumInAttributes=str(y['CommunityID'][count+4]); 
            print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
            CorrespondingRowInAttributes.append([count+4]);
