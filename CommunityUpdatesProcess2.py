@@ -1239,23 +1239,23 @@ def initialCommUpdatProcess():
            #locationOfComNumInAttributes=commIDstr.count(comNumInMain+"1236547896523214587965214587412");
            comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes]); 
            print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
-           CorrespondingRowInAttributes.append([count+4]);
-           CondoORTownHome.append("-");
-           WithAtLeastOneMultifamilyPlan.append("-");
-           ActiveAdult.append("-");
-           HasALuxuryHome.append("-");
-           GatedCommunity.append("-");
-           Pool.append("-");
-           Green.append("-");
-           ParkNature.append("-");
-           GolfCourse.append("-");
-           Tennis.append("-");
-           Volleyball.append("-");
-           Basketball.append("-");
-           Soccer.append("-");
-           Baseball.append("-");
-           Waterfront.append("-");
-           HasPlanWith2StoriesAndMasterDownstairs.append("-");
+           CorrespondingRowInAttributes.append([locationOfComNumInAttributes]);
+           CondoORTownHome.append(y['CondoORTownHome'].iloc[]);
+           WithAtLeastOneMultifamilyPlan.append(y['WithAtLeastOneMultifamilyPlan'].iloc[locationOfComNumInAttributes]);
+           ActiveAdult.append(y['ActiveAdult'].iloc[locationOfComNumInAttributes]);
+           HasALuxuryHome.append(y['HasALuxuryHome'].iloc[locationOfComNumInAttributes]);
+           GatedCommunity.append(y['GatedCommunity'].iloc[locationOfComNumInAttributes]);
+           Pool.append(y['Pool'].iloc[locationOfComNumInAttributes]);
+           Green.append(y['Green'].iloc[locationOfComNumInAttributes]);
+           ParkNature.append(y['ParkNature'].iloc[locationOfComNumInAttributes]);
+           GolfCourse.append(y['GolfCourse'].iloc[locationOfComNumInAttributes]);
+           Tennis.append(y['Tennis'].iloc[locationOfComNumInAttributes]);
+           Volleyball.append(y['Volleyball'].iloc[locationOfComNumInAttributes]);
+           Basketball.append(y['Basketball'].iloc[locationOfComNumInAttributes]);
+           Soccer.append(y['Soccer'].iloc[locationOfComNumInAttributes]);
+           Baseball.append(y['Baseball'].iloc[locationOfComNumInAttributes]);
+           Waterfront.append(y['Waterfront'].iloc[locationOfComNumInAttributes]);
+           HasPlanWith2StoriesAndMasterDownstairs.append(y['HasPlanWith2StoriesAndMasterDownstairs'].iloc[locationOfComNumInAttributes]);
 
            #comIDpositionInAttributes=commIDstr.find(comNumInMain)
            #print("comIDpositionInAttributes ",comIDpositionInAttributes)
