@@ -1262,6 +1262,7 @@ def initialCommUpdatProcess():
            #comIDpositionInAttributes=commIDstr.find(comNumInMain)
            #print("comIDpositionInAttributes ",comIDpositionInAttributes)
            count=count+1;
+      
  AttributeAssignCols(NewGoogle,WorkingAttributes);     
  print("--------------WorkingAttributes-----------------------")
  print(WorkingAttributes)
