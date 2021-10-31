@@ -1292,7 +1292,7 @@ def initialCommUpdatProcess():
      colnames=y.columns
      print("colnames ",colnames) 
      print("y['CommunityID'] ",y['CommunityID']) 
-     commIDstr=y['CommunityID'];
+     commIDstr=str(y['CommunityID']);
      count=0;
      while count<len(x[CommunityID]):
            comNumInMain=x[CommunityID][count];
