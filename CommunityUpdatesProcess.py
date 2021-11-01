@@ -731,6 +731,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title3A.append("Schedule a new home tour today")
    Title3A.append("Schedule a new home tour today")
    """
+   """ 
    Title3ACopy="Schedule a new home tour today"
    #if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['With At Least One MultiFamily Plan'][count]==1:
    #   Title3ACopy="Multi-Family Floor Plans"
@@ -810,13 +811,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title15A.append(Title15ACopy);
    Title15A.append(Title15ACopy);
    Title15A.append(Title15ACopy);   
-    
-
-
-
-
-
-
+   """ 
 
    PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])
@@ -843,7 +838,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
-
+   """
    Text3A.append("Get connected with trusted builders to see more floor plans & offers of your future home.");
    Text3A.append("Get connected with trusted builders to see more floor plans & offers of your future home.");
    Text3A.append("Get connected with trusted builders to see more floor plans & offers of your future home.");   
@@ -851,7 +846,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Text4A.append("Save more money by buying a newly constructed home and enjoy a lower cost of ownership!");
    Text4A.append("Save more money by buying a newly constructed home and enjoy a lower cost of ownership!");
    Text4A.append("Save more money by buying a newly constructed home and enjoy a lower cost of ownership!");   
-   
+   """
 
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
    if len(Path1A_conv)>15:
@@ -885,9 +880,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Path2A.append("New Homes")
    Path2A.append("New Homes")
    Path2A.append("New Homes") 
-
-
-
+     
+   
    if URL_Struct1.find("mpc community")>-1:
           communityName=communityName.replace(" ","%20").replace(" s ","").replace("61s","").replace("64s","").replace("71s","").replace("74s","").replace("81s","")\
           .replace("61s","").replace("94s","").replace(" s ","").replace("74's ","");  
