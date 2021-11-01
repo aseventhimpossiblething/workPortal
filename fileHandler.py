@@ -257,7 +257,7 @@ def NCommListFileHandler():
     os.chdir(currentGoogleLocation)
     request.files['currentGoogle'].save('WorkingGoogle')
     print("Past workingGoogle .save") 
-    
+    """
     os.chdir(currentBingLocation)
     request.files['currentBing'].save('WorkingBing')
     print("Past workingBing.save")
@@ -265,7 +265,7 @@ def NCommListFileHandler():
     os.chdir(currentAttributesLocation)
     request.files['Attributes'].save('WorkingAttributes')    
     print("Past workingAtributes.save") 
- 
+    """
        
     def async_fileloader():
      os.chdir(SheetsFileLocation) 
