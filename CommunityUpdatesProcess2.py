@@ -1262,24 +1262,23 @@ def initialCommUpdatProcess():
            count=count+1;
      x['']=CorrespondingRowInAttributes;
      x['']=CondoORTownHome;
-     
-     WithAtLeastOneMultiFamilyPlan;
-     ActiveAdult;
-     HasALuxuryHome;
-     Gated;
-     Pool;
-     Green;
-     Parks;
-     Nature;
-     GolfCourse;
-     Tennis;
-     Volleyball;
-     Basketball;
-     Soccer;
-     Baseball;
-     Waterfront;
-     HasPlanWith2StoriesAndMasterDownstairs;
-     print("Ne atribute Frame") 
+     x['']=WithAtLeastOneMultiFamilyPlan;
+     x['']=ActiveAdult;
+     x['']=HasALuxuryHome;
+     x['']=Gated;
+     x['']=Pool;
+     x['']=Green;
+     x['']=Parks;
+     x['']=Nature;
+     x['']=GolfCourse;
+     x['']=Tennis;
+     x['']=Volleyball;
+     x['']=Basketball;
+     x['']=Soccer;
+     x['']=Baseball;
+     x['']=Waterfront;
+     x['']=HasPlanWith2StoriesAndMasterDownstairs;
+     print("New atribute Frame") 
      print(x)
      return x 
             
