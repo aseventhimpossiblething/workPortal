@@ -1193,27 +1193,50 @@ def initialCommUpdatProcess():
            locationOfComNumInAttributes="Community Number Not Found in Attribute Report" 
            if AttributeCommIDstr.count(comNumInMain)>0:
               locationOfComNumInAttributes=AttributeCommIDstr.index(comNumInMain);     
-           print("locationOfComNumInAttributes=",locationOfComNumInAttributes,"--",type(locationOfComNumInAttributes) )
-           comNumInAttributes=str(y['CommunityID'].iloc[10]); 
-           print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
-           CorrespondingRowInAttributes.append([locationOfComNumInAttributes]);
-           CondoORTownHome.append(y['CondoORTownHome?'].iloc[locationOfComNumInAttributes]);
-           WithAtLeastOneMultiFamilyPlan.append(y['WithAtLeastOneMultiFamilyPlan'].iloc[locationOfComNumInAttributes]);
-           ActiveAdult.append(y['ActiveAdult'].iloc[locationOfComNumInAttributes]);
-           HasALuxuryHome.append(y['HasALuxuryHome'].iloc[locationOfComNumInAttributes]);
-           Gated.append(y['Gated'].iloc[locationOfComNumInAttributes]);
-           Pool.append(y['Pool'].iloc[locationOfComNumInAttributes]);
-           Green.append(y['Green'].iloc[locationOfComNumInAttributes]);
-           Parks.append(y['Parks'].iloc[locationOfComNumInAttributes]);
-           Nature.append(y['Nature'].iloc[locationOfComNumInAttributes]);
-           GolfCourse.append(y['GolfCourse'].iloc[locationOfComNumInAttributes]);
-           Tennis.append(y['Tennis'].iloc[locationOfComNumInAttributes]);
-           Volleyball.append(y['Volleyball'].iloc[locationOfComNumInAttributes]);
-           Basketball.append(y['Basketball'].iloc[locationOfComNumInAttributes]);
-           Soccer.append(y['Soccer'].iloc[locationOfComNumInAttributes]);
-           Baseball.append(y['Baseball'].iloc[locationOfComNumInAttributes]);
-           Waterfront.append(y['Waterfront'].iloc[locationOfComNumInAttributes]);
-           HasPlanWith2StoriesAndMasterDownstairs.append(y['HasPlanWith2StoriesAndMasterDownstairs'].iloc[locationOfComNumInAttributes]);       
+              print("locationOfComNumInAttributes=",locationOfComNumInAttributes,"--",type(locationOfComNumInAttributes) )
+              comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes]); 
+              print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
+              CorrespondingRowInAttributes.append([locationOfComNumInAttributes]);
+              CondoORTownHome.append(y['CondoORTownHome?'].iloc[locationOfComNumInAttributes]);
+              WithAtLeastOneMultiFamilyPlan.append(y['WithAtLeastOneMultiFamilyPlan'].iloc[locationOfComNumInAttributes]);
+              ActiveAdult.append(y['ActiveAdult'].iloc[locationOfComNumInAttributes]);
+              HasALuxuryHome.append(y['HasALuxuryHome'].iloc[locationOfComNumInAttributes]);
+              Gated.append(y['Gated'].iloc[locationOfComNumInAttributes]);
+              Pool.append(y['Pool'].iloc[locationOfComNumInAttributes]);
+              Green.append(y['Green'].iloc[locationOfComNumInAttributes]);
+              Parks.append(y['Parks'].iloc[locationOfComNumInAttributes]);
+              Nature.append(y['Nature'].iloc[locationOfComNumInAttributes]);
+              GolfCourse.append(y['GolfCourse'].iloc[locationOfComNumInAttributes]);
+              Tennis.append(y['Tennis'].iloc[locationOfComNumInAttributes]);
+              Volleyball.append(y['Volleyball'].iloc[locationOfComNumInAttributes]);
+              Basketball.append(y['Basketball'].iloc[locationOfComNumInAttributes]);
+              Soccer.append(y['Soccer'].iloc[locationOfComNumInAttributes]);
+              Baseball.append(y['Baseball'].iloc[locationOfComNumInAttributes]);
+              Waterfront.append(y['Waterfront'].iloc[locationOfComNumInAttributes]);
+              HasPlanWith2StoriesAndMasterDownstairs.append(y['HasPlanWith2StoriesAndMasterDownstairs'].iloc[locationOfComNumInAttributes]);       
+           else:
+              comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes]); 
+              print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
+              CorrespondingRowInAttributes.append([locationOfComNumInAttributes]);
+              CondoORTownHome.append(locationOfComNumInAttributes);
+              WithAtLeastOneMultiFamilyPlan.append(locationOfComNumInAttributes);
+              ActiveAdult.append(locationOfComNumInAttributes);
+              HasALuxuryHome.append(locationOfComNumInAttributes);
+              Gated.append(locationOfComNumInAttributes);
+              Pool.append(locationOfComNumInAttributes);
+              Green.append(locationOfComNumInAttributes);
+              Parks.append(locationOfComNumInAttributes);
+              Nature.append(locationOfComNumInAttributes);
+              GolfCourse.append(locationOfComNumInAttributes);
+              Tennis.append(locationOfComNumInAttributes);
+              Volleyball.append(locationOfComNumInAttributes);
+              Basketball.append(locationOfComNumInAttributes);
+              Soccer.append(locationOfComNumInAttributes);
+              Baseball.append(locationOfComNumInAttributes);
+              Waterfront.append(locationOfComNumInAttributes);
+              HasPlanWith2StoriesAndMasterDownstairs.append(locationOfComNumInAttributes);       
+                  
+            
            count=count+1;
      x['Corresponding Row In Attributes']=CorrespondingRowInAttributes;
      x['Condo OR TownHome']=CondoORTownHome;
