@@ -1257,11 +1257,33 @@ def initialCommUpdatProcess():
            Baseball.append(y['Baseball'].iloc[locationOfComNumInAttributes]);
            Waterfront.append(y['Waterfront'].iloc[locationOfComNumInAttributes]);
            HasPlanWith2StoriesAndMasterDownstairs.append(y['HasPlanWith2StoriesAndMasterDownstairs'].iloc[locationOfComNumInAttributes]);
-
            #comIDpositionInAttributes=commIDstr.find(comNumInMain)
            #print("comIDpositionInAttributes ",comIDpositionInAttributes)
            count=count+1;
-      
+     x['']=CorrespondingRowInAttributes;
+     x['']=CondoORTownHome;
+     
+     WithAtLeastOneMultiFamilyPlan;
+     ActiveAdult;
+     HasALuxuryHome;
+     Gated;
+     Pool;
+     Green;
+     Parks;
+     Nature;
+     GolfCourse;
+     Tennis;
+     Volleyball;
+     Basketball;
+     Soccer;
+     Baseball;
+     Waterfront;
+     HasPlanWith2StoriesAndMasterDownstairs;
+     print("Ne atribute Frame") 
+     print(x)
+     return x 
+            
+     
  AttributeAssignCols(NewGoogle,WorkingAttributes);     
  print("--------------WorkingAttributes-----------------------")
  print(WorkingAttributes)
