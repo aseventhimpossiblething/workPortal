@@ -1055,7 +1055,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
       
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/'
    os.chdir(SaveLocation)
-   writer=pandas.ExcelWriter('GoogleAttributes.xlsx')
+   writer=pandas.ExcelWriter('BingAttributes.xlsx')
    NewDataFrame.to_excel(writer)
    writer.save()    
  
