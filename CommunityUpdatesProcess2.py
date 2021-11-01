@@ -392,20 +392,11 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
     newcomid=[];
     while cctv<len(wackyNewTable['Community Name']):
           nam=wackyNewTable['Community Name'][cctv]; 
-      
-          """       
-          if AlteredColNamesWithMultiples.count(nam)>1:
-      
-              newcomid.append("MPC Community");
-          else:
-          """
           newcomid.append(wackyNewTable['Community Id'][cctv]); 
-          #newcomid.append("nan");       
           cctv+=1;
     wackyNewTable['Community Id']=newcomid;
     wackyNewTable=wackyNewTable.drop_duplicates(subset='Community Name') 
     wackyNewTable=wackyNewTable.reset_index(); 
-
 
     anotherdrop=[];
     anotherdropsqueeze=[]  
@@ -417,9 +408,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
           yetanotherarray.append(rwo);
           yetanotherarray.append(rwosqueeze); 
           mcrzylp+=1;  
-  
-      
-      
+        
     mcrzylp=0;
     while mcrzylp<len(wackyNewTable['Community Name']):
           rwo=wackyNewTable['Community Name'][mcrzylp];
@@ -433,15 +422,14 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
           mcrzylp+=1;
       
     sorted=wackyNewTable.sort_values(by='Community Name') 
-    print(" sorted['Community Name'] ",sorted['Community Name'])  
-    print(" 1 len(wackyNewTable['Community Name']) ",len(wackyNewTable['Community Name'])) 
+    #print(" sorted['Community Name'] ",sorted['Community Name'])  
+    #print(" 1 len(wackyNewTable['Community Name']) ",len(wackyNewTable['Community Name'])) 
     wackyNewTable.drop(anotherdrop)
       
-    print( " 2 len(wackyNewTable['Community Name']) ",len(wackyNewTable['Community Name']))   
+    #print( " 2 len(wackyNewTable['Community Name']) ",len(wackyNewTable['Community Name']))   
     UnitedFrame=wackyNewTable
     #UnitedFrame=UnitedFrame.reset_index() 
-      
-            
+               
     return UnitedFrame;  
 
    
@@ -580,12 +568,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
    
-  print("NewDataFrame.columns ",NewDataFrame.columns) 
-  print("NewDataFrame['Condo OR TownHome'][count] ",NewDataFrame['Condo OR TownHome'][count])
+  #print("NewDataFrame.columns ",NewDataFrame.columns) 
+  #print("NewDataFrame['Condo OR TownHome'][count] ",NewDataFrame['Condo OR TownHome'][count])
   
   try:
    if SearchChan=="google":
-    #URL_Struct1=URL_Struct1+"gppc";
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
     Campaign_Nameing_Conv="Consolidated_"+Campaign_Nameing_Conv;  
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_GPPC403","").replace(">Mixed>Community",">Mixed>Basic Listings")  
@@ -614,7 +601,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
    
      
     if len(Keyword_conv)<12:
-     #Keyword_conv=Keyword_conv+" Community"
      Keyword_conv=Keyword_conv.replace("]","")       
      Keyword_conv=Keyword_conv+" Community"+"]"
    
@@ -816,16 +802,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Text3A.append("Get connected with trusted builders to see more floor plans & offers of your future home.");
    Text3A.append("Get connected with trusted builders to see more floor plans & offers of your future home.");
    Text3A.append("Get connected with trusted builders to see more floor plans & offers of your future home.");   
-   #Text3A.append("-");
-   #Text3A.append("-");   
-   
+    
    Text4A.append("Save more money by buying a newly constructed home and enjoy a lower cost of ownership!");
    Text4A.append("Save more money by buying a newly constructed home and enjoy a lower cost of ownership!");
    Text4A.append("Save more money by buying a newly constructed home and enjoy a lower cost of ownership!");   
-   #Text4A.append("-");
-   #Text4A.append("-");  
-
-   
+  
    TextB.append(PreTextB);
    TextB.append(PreTextB);
    TextB.append(PreTextB); 
@@ -887,10 +868,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
-           
-          
-          
-  
+    
    Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+").replace(" + + +","+")\
                   .replace("+ + + ","+").replace("++","+").replace("+ +","+").replace(" ++","+").replace("++ ","+")\
                   .replace(" + +","+").replace("+ + ","+").replace("+–","+").replace("+– ","+").replace(" +–","+")\
@@ -914,7 +892,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Keyword_conv=Keyword_conv.replace("]"," ");     
    Keyword.append(Keyword_conv); 
    Keyword.append(Keyword_conv);
-   #Keyword.append("["+Keyword_conv+"]");   
    label="Created by WebApp"
          
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
@@ -938,7 +915,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
       
   except:
    NewDataFrame=NewDataFrame.drop([count])
-   #print("except KW Gen count ",count)
+  
   count+=1;
    
 
@@ -1156,7 +1133,6 @@ def initialCommUpdatProcess():
  print("Zipcode ",Zipcode)
  print(" ZIPcode ",ZIPcode)     
  
- #WorkingCommunities=WorkingCommunities.drop([4])
  WorkingCommunities=LoadCommunities(WorkingCommunities,CommunityID,'Community Name','City',DivID,zcode)
  WorkingCommunities['Zip']=WorkingCommunities[zcode]
      
