@@ -1057,9 +1057,9 @@ def initialCommUpdatProcess():
 
  print("INSERT NEW FUNCTION--------------------------------------------")
  os.chdir(fileHandler.currentAttributesLocation);
- #print(os.listdir(os.getcwd()));     
- #print(os.getcwd())
- #print(os.listdir()) 
+ print(os.listdir(os.getcwd()));     
+ print(os.getcwd())
+ print(os.listdir()) 
  print("---Define working attributes ----")
  
  WorkingAttributes=pandas.read_excel('WorkingAttributes');   
