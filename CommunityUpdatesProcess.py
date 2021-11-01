@@ -563,8 +563,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
    
-  try:
-   if SearchChan=="google":
+  #try:
+  if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
     Campaign_Nameing_Conv="Consolidated_"+Campaign_Nameing_Conv;  
@@ -600,7 +600,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
      Keyword_conv=Keyword_conv.replace("]","")       
      Keyword_conv=Keyword_conv+" Community"+"]"
        
-   if SearchChan=="bing":
+  if SearchChan=="bing":
     URL_Struct1=URL_Struct1+"msm205"
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_MSM203","")
@@ -630,9 +630,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
     if len(Keyword_conv)<12:
      Keyword_conv=Keyword_conv.replace("]","")       
      Keyword_conv=Keyword_conv+" Community"+"]"
- 
+  
    
-
+ 
    if SearchChan=="google":
       AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
@@ -974,7 +974,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    LabelB.append(label2);
    LabelB.append(label2);
       
-  except:
+  #except:
    NewDataFrame=NewDataFrame.drop([count])
    #print("except KW Gen count ",count)
   count+=1;
