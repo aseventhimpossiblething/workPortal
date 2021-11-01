@@ -168,22 +168,30 @@ def BidOpFileHandler():
 def CommListFileHandler():
     print("Starting to Handle Files") 
     
-    reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing']   
-    emptyObj="<FileStorage: '' ('application/octet-stream')>" 
+    reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing'],request.files['Attributes']   
+    emptyObj="<FileStorage: '' ('application/octet-stream')>"
+    """    
     if emptyObj==str(request.files['currentBing']):
          return "Bing slot is empty"
+    """
     if emptyObj==str(request.files['currentGoogle']):
         return "Google slot is empty"
     if emptyObj==str(request.files['Communities']):
         return "Active Community slot is empty"
+    if emptyObj==str(request.files['Attributes']):
+        return "Attributes slot is empty"
+       
     
     
     if request.files['Communities'].filename.find("xlsx")<1:
                 return "The Community Sheet is not XLSX file type";
     if request.files['currentGoogle'].filename.find("xlsx")<1:
                 return "The Google Sheet is not XLSX file type";
-    if request.files['currentBing'].filename.find("xlsx")<1:
-                return "The Bing Sheet is not XLSX file type"; 
+    if request.files['Attributes'].filename.find("xlsx")<1:
+                return "The Attributes Sheet is not XLSX file type";
+        
+    #if request.files['currentBing'].filename.find("xlsx")<1:
+    #            return "The Bing Sheet is not XLSX file type"; 
      
     os.chdir(currentCommunitiesLocation)
     SHcommand="sudo chmod -R 777 "+currentCommunitiesLocation
