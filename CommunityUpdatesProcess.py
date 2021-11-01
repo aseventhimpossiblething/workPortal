@@ -726,6 +726,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title2A.append(Title2A_conv)
    Title2A.append(Title2A_conv)
    Title2A.append(Title2A_conv)
+   print("AFTER TITLE 2A----==============================================")  
+   print("AFTER TITLE 2A----==============================================") 
+   print("AFTER TITLE 2A----==============================================")  
+   print("AFTER TITLE 2A----==============================================")    
    """     
    Title3A.append("Schedule a new home tour today")
    Title3A.append("Schedule a new home tour today")
@@ -1021,8 +1025,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
  #GoogleKWFrame=GoogleKWFrame[["Campaign Name","Ad Group"]]
  #GoogleKWFrame=GoogleKWFrame.iloc[:100]      
  
- print("GoogleKWFrame----------")     
- print(GoogleKWFrame) 
+ #print("GoogleKWFrame----------")     
+ #print(GoogleKWFrame) 
  """
  print(GoogleKWFrame[["Campaign Name","Ad Group"]])
  GoogleKWFrame=GoogleKWFrame[["Campaign Name","Ad Group"]]  
