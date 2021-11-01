@@ -1054,6 +1054,107 @@ def initialCommUpdatProcess():
  
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
+
+ print("INSERT NEW FUNCTION--------------------------------------------")
+ os.chdir(fileHandler.currentAttributesLocation);
+ #print(os.listdir(os.getcwd()));     
+ #print(os.getcwd())
+ #print(os.listdir()) 
+ print("---Define working attributes ----")
+ 
+ WorkingAttributes=pandas.read_excel('WorkingAttributes');   
+ WorkingAttributes=SeekColHead(WorkingAttributes,'CommunityID');
+ WorkingAttributesCheck1=CheckSheetData('Attributes',WorkingAttributes,"CommunityID","CondoORTownHome","WithAtLeastOneMultifamilyPlan")
+ WorkingAttributesCheck2=CheckSheetData('Attributes',WorkingAttributes,"ActiveAdult","HasALuxuryHome","GatedCommunity")
+ WorkingAttributesCheck3=CheckSheetData('Attributes',WorkingAttributes,"Pool","Green","ParkNature")  
+ WorkingAttributesCheck4=CheckSheetData('Attributes',WorkingAttributes,"GolfCourse","Tennis","Volleyball") 
+ WorkingAttributesCheck5=CheckSheetData('Attributes',WorkingAttributes,"Basketball","Soccer"," Baseball")
+ WorkingAttributesCheck6=CheckSheetData('Attributes',WorkingAttributes,"Waterfront","HasPlanWith2StoriesAndMasterDownstairs","Baseball")     
+ print(" WorkingAttributesCheck1:",WorkingAttributesCheck1," WorkingAttributesCheck2:",WorkingAttributesCheck2," WorkingAttributesCheck3:",WorkingAttributesCheck3," WorkingAttributesCheck4:",WorkingAttributesCheck4," WorkingAttributesCheck5:",WorkingAttributesCheck5," WorkingAttributesCheck6:",WorkingAttributesCheck6)     
+ AttributeFormatChecknumber=str(WorkingAttributes.columns).find('CommunityID')
+ print("AttributeFormatChecknumber======",AttributeFormatChecknumber);     
+ def AttributeAssignCols(x,y):
+     CorrespondingRowInAttributes=[];
+     CondoORTownHome=[];
+     WithAtLeastOneMultiFamilyPlan=[];
+     ActiveAdult=[];
+     HasALuxuryHome=[];
+     Gated=[];
+     Pool=[];
+     Green=[];
+     Parks=[];
+     Nature=[];
+     GolfCourse=[];
+     Tennis=[];
+     Volleyball=[];
+     Basketball=[];
+     Soccer=[];
+     Baseball=[];
+     Waterfront=[];
+     HasPlanWith2StoriesAndMasterDownstairs=[];
+     #colnames=y.columns
+     AttributeCommIDstr=[];
+     for commIDnumstrs in y['CommunityID']:
+         AttributeCommIDstr.append(str(commIDnumstrs));
+         
+     count=0;
+     while count<len(x[CommunityID]):
+           comNumInMain=str(x[CommunityID][count]);
+           locationOfComNumInAttributes="Community Number Not Found in Attribute Report" 
+           if AttributeCommIDstr.count(comNumInMain)>0:
+              locationOfComNumInAttributes=AttributeCommIDstr.index(comNumInMain);     
+              
+           comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes]); 
+           #print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
+           CorrespondingRowInAttributes.append([locationOfComNumInAttributes]);
+           CondoORTownHome.append(y['CondoORTownHome?'].iloc[locationOfComNumInAttributes]);
+           WithAtLeastOneMultiFamilyPlan.append(y['WithAtLeastOneMultiFamilyPlan'].iloc[locationOfComNumInAttributes]);
+           ActiveAdult.append(y['ActiveAdult'].iloc[locationOfComNumInAttributes]);
+           HasALuxuryHome.append(y['HasALuxuryHome'].iloc[locationOfComNumInAttributes]);
+           Gated.append(y['Gated'].iloc[locationOfComNumInAttributes]);
+           Pool.append(y['Pool'].iloc[locationOfComNumInAttributes]);
+           Green.append(y['Green'].iloc[locationOfComNumInAttributes]);
+           Parks.append(y['Parks'].iloc[locationOfComNumInAttributes]);
+           Nature.append(y['Nature'].iloc[locationOfComNumInAttributes]);
+           GolfCourse.append(y['GolfCourse'].iloc[locationOfComNumInAttributes]);
+           Tennis.append(y['Tennis'].iloc[locationOfComNumInAttributes]);
+           Volleyball.append(y['Volleyball'].iloc[locationOfComNumInAttributes]);
+           Basketball.append(y['Basketball'].iloc[locationOfComNumInAttributes]);
+           Soccer.append(y['Soccer'].iloc[locationOfComNumInAttributes]);
+           Baseball.append(y['Baseball'].iloc[locationOfComNumInAttributes]);
+           Waterfront.append(y['Waterfront'].iloc[locationOfComNumInAttributes]);
+           HasPlanWith2StoriesAndMasterDownstairs.append(y['HasPlanWith2StoriesAndMasterDownstairs'].iloc[locationOfComNumInAttributes]);       
+           count=count+1;
+     x['Corresponding Row In Attributes']=CorrespondingRowInAttributes;
+     x['Condo OR TownHome']=CondoORTownHome;
+     x['With At Least One MultiFamily Plan']=WithAtLeastOneMultiFamilyPlan;
+     x['Active Adult']=ActiveAdult;
+     x['Has A Luxury Home']=HasALuxuryHome;
+     x['Gated']=Gated;
+     x['Pool']=Pool;
+     x['Green']=Green;
+     x['Parks']=Parks;
+     x['Nature']=Nature;
+     x['Golf Course']=GolfCourse;
+     x['Tennis']=Tennis;
+     x['Volleyball']=Volleyball;
+     x['Basketball']=Basketball;
+     x['Soccer']=Soccer;
+     x['Baseball']=Baseball;
+     x['Waterfront']=Waterfront;
+     x['HasPlanWith2StoriesAndMasterDownstairs']=HasPlanWith2StoriesAndMasterDownstairs;
+     print("New atribute Frame") 
+     print(x.columns)
+     print(x)
+     return x 
+            
+     
+ NewGoogle=AttributeAssignCols(NewGoogle,WorkingAttributes); 
+ NewBing=AttributeAssignCols(NewBing,WorkingAttributes);      
+ print("--------------WorkingAttributes-----------------------")
+ print(WorkingAttributes)
+      
+ print("INSERT NEW FUNCTION--------------------------------------------")     
  
 
 
