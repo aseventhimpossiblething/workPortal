@@ -249,7 +249,7 @@ def NCommListFileHandler():
 
     os.chdir(currentCommunitiesLocation)
     SHcommand="sudo chmod -R 777 "+currentCommunitiesLocation
-    os.system(SHcommand+"/WorkingCommunities")
+    #os.system(SHcommand+"/WorkingCommunities")
     request.files['Communities'].save('WorkingCommunities')
         
     os.chdir(currentGoogleLocation)
