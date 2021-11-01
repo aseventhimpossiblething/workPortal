@@ -632,23 +632,23 @@ def KeywordGenII(NewDataFrame,SearchChan):
      Keyword_conv=Keyword_conv+" Community"+"]"
   
    
- 
-   if SearchChan=="google":
+  #WAS SAME AS ABOVE 
+  if SearchChan=="google":
       AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
    
-   if SearchChan=="bing":
+  if SearchChan=="bing":
       AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
             
-   if str(NewDataFrame['Community ID'][count]).find("nan")>-1:
+  if str(NewDataFrame['Community ID'][count]).find("nan")>-1:
             AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>");
    
    
-   #re.match(,)
+  #re.match(,)
    
-   def quasit(Campaign_Nameing_Conv,x):
+  def quasit(Campaign_Nameing_Conv,x):
        x=x;     
        locnum=Campaign_Nameing_Conv.find(">");
        s1=Campaign_Nameing_Conv[locnum+1:];
