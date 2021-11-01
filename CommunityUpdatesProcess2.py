@@ -580,7 +580,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
    
-  print("DataFrame['CondoORTownHome?'][count] ",NewDataFrame['CondoORTownHome?'][count])
+  print("DataFrame.columns ",DataFrame.columns) 
+  print("NewDataFrame['CondoORTownHome?'][count] ",NewDataFrame['CondoORTownHome?'][count])
   
   try:
    if SearchChan=="google":
