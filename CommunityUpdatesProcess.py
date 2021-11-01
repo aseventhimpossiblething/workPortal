@@ -892,8 +892,13 @@ def KeywordGenII(NewDataFrame,SearchChan):
 
  #print("(Adgroup) ",Adgroup);
 
-
+ print("len(Campaign_Name) = ",len(Campaign_Name)) 
+ print("len(Adgroup) = ",len(Adgroup))
+ print("len(Keyword) = ",len(Keyword))  
+ print("len(Match_Type) = ",len(Match_Type)) 
    
+      
+      
  GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Labels":KWLabel} 
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
  GoogleAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
