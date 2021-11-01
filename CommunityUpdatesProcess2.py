@@ -581,7 +581,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
       Keyword_conv=Keyword_conv+" Community"
    
   print("NewDataFrame.columns ",NewDataFrame.columns) 
-  print("NewDataFrame['CondoORTownHome?'][count] ",NewDataFrame['CondoORTownHome?'][count])
+  print("NewDataFrame['Condo OR TownHome'][count] ",NewDataFrame['Condo OR TownHome'][count])
   
   try:
    if SearchChan=="google":
@@ -714,7 +714,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if DataFrame['CondoORTownHome?'][count]==1:
        Title3ACopy="Multi-Family Floor Plans"   
    """  
-   if NewDataFrame['CondoORTownHome?'][count]==1 or NewDataFrame['WithAtLeastOneMultiFamilyPlan'][count]==1:
+   if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['WithAtLeastOneMultiFamilyPlan'][count]==1:
       Title3ACopy="Multi-Family Floor Plans"
    
    Title3A.append(Title3ACopy)
