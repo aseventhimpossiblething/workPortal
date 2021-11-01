@@ -598,7 +598,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
   Keyword_conv=communityName.replace("  "," ")
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
-   
+  
+ 
+  print("DataFrame['CondoORTownHome?'][count] ",DataFrame['CondoORTownHome?'][count])
+  
   try:
    if SearchChan=="google":
     #URL_Struct1=URL_Struct1+"gppc";
@@ -1128,12 +1131,7 @@ def initialCommUpdatProcess():
      if EVersion!=-1:
         print("CVersion--------------------------------------------------------------------");  
         x=x.drop([0,1,2,3]);
-     """ 
-     MissingParam=sum([AVersion,BVersion,CVersion,DVersion,EVersion]);
-     print("--------------Missing Param---------------------",MissingParam)
-     if MissingParam==-5:
-        return "format Error in attributes sheet";
-     """    
+  
      x.columns=x.iloc[0];
      
      print("SeekColHead end")
