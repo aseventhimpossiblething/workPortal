@@ -1179,7 +1179,7 @@ def initialCommUpdatProcess():
               print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
            else:
               #comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes]); 
-              print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
+              #print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
               CorrespondingRowInAttributes.append([locationOfComNumInAttributes]);
               CondoORTownHome.append(locationOfComNumInAttributes);
               WithAtLeastOneMultiFamilyPlan.append(locationOfComNumInAttributes);
