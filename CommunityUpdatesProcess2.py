@@ -1206,13 +1206,13 @@ def initialCommUpdatProcess():
      CorrespondingRowInAttributes=[];
      CondoORTownHome=[];
      WithAtLeastOneMultiFamilyPlan=[];
-     #CondoORTownHome? / WithAtLeastOneMultiFamilyPlan
      ActiveAdult=[];
      HasALuxuryHome=[];
      Gated=[];
      Pool=[];
      Green=[];
-     ParkNature=[];
+     Parks=[];
+     Nature=[];
      GolfCourse=[];
      Tennis=[];
      Volleyball=[];
@@ -1247,7 +1247,8 @@ def initialCommUpdatProcess():
            Gated.append(y['Gated'].iloc[locationOfComNumInAttributes]);
            Pool.append(y['Pool'].iloc[locationOfComNumInAttributes]);
            Green.append(y['Green'].iloc[locationOfComNumInAttributes]);
-           ParkNature.append(y['ParkNature'].iloc[locationOfComNumInAttributes]);
+           Parks.append(y['Parks'].iloc[locationOfComNumInAttributes]);
+           Nature.append(y['Nature'].iloc[locationOfComNumInAttributes]);
            GolfCourse.append(y['GolfCourse'].iloc[locationOfComNumInAttributes]);
            Tennis.append(y['Tennis'].iloc[locationOfComNumInAttributes]);
            Volleyball.append(y['Volleyball'].iloc[locationOfComNumInAttributes]);
