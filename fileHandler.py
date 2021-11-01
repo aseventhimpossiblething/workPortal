@@ -221,7 +221,7 @@ def NCommListFileHandler():
     print("Ncom Starting to Handle Files") 
 
     print("Prep for reqs--") 
-    reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing'],request.files['Attributes']
+    reqs=request.files,request.files['Communities'],request.files['currentGoogle']#,request.files['currentBing'],request.files['Attributes']
     print("Past reqs--") 
     emptyObj="<FileStorage: '' ('application/octet-stream')>" 
     #if emptyObj==str(request.files['currentBing']):
@@ -230,9 +230,10 @@ def NCommListFileHandler():
         return "Google slot is empty"
     if emptyObj==str(request.files['Communities']):
         return "Active Community slot is empty"
+    """ 
     if emptyObj==str(request.files['Attributes']):
         return "Attributes slot is empty"
-
+    """
     print("Past empty objs---") 
     
     if request.files['Communities'].filename.find("xlsx")<1:
@@ -241,8 +242,8 @@ def NCommListFileHandler():
                 return "The Google Sheet is not XLSX file type";
     #if request.files['currentBing'].filename.find("xlsx")<1:
     #            return "The Bing Sheet is not XLSX file type"; 
-    if request.files['Attributes'].filename.find("xlsx")<1:
-               return "The Attributes Sheet is not XLSX file type";    
+    #if request.files['Attributes'].filename.find("xlsx")<1:
+    #           return "The Attributes Sheet is not XLSX file type";    
         
     print("Past requests---")  
 
