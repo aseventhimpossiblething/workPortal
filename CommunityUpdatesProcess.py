@@ -1082,6 +1082,37 @@ def initialCommUpdatProcess():
     #WorkingCommunities=WorkingCommunities.drop([2]);
  """
  WorkingCommunities=SeekColHead(WorkingCommunities,'Community ID');
+ wcols=str(WorkingCommunities.columns)
+ print("wcols ",wcols)     
+ IDcap=wcols.find('Community ID');
+ Idlow=wcols.find('Community Id');
+ if IDcap>-1:
+    CommunityID='Community ID'
+ if Idlow>-1:
+    CommunityID='Community Id'
+ print("ID cap ",IDcap)
+ print("Id low ",Idlow)  
+
+ IDDiv=wcols.find('Division ID');
+ Iddiv=wcols.find('Division Id');
+ if IDDiv>-1:
+    DivID='Division ID'
+ if Idlow>-1:
+    DivID='Division Id'
+ 
+ print("IDDiv ",IDDiv)
+ print(" Iddiv ", Iddiv)
+      
+ Zipcode=wcols.find('Zip');
+ ZIPcode=wcols.find('ZIP');
+ if Zipcode>-1:
+    zcode='Zip'
+ if ZIPcode>-1:
+    zcode='ZIP'
+    WorkingCommunities['Zip']=WorkingCommunities[zcode]
+ print("Zipcode ",Zipcode)
+ print(" ZIPcode ",ZIPcode)     
+ 
  #WorkingCommunities.columns=WorkingCommunities.iloc[0]
  #WorkingCommunities.columns=WorkingCommunities.iloc[0]
  #WorkingCommunities=WorkingCommunities.drop([4])
