@@ -729,6 +729,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title2A.append(Title2A_conv)
    
    Title3ACopy="Schedule a new home tour today"
+   if DataFrame['CondoORTownHome?'][count]==1:
+       Title3ACopy="Multi-Family Floor Plans"   
    """   
    if DataFrame['CondoORTownHome?'][count]==1 or DataFrame['WithAtLeastOneMultiFamilyPlan'][count]==1:
       Title3ACopy="Multi-Family Floor Plans"
