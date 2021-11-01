@@ -990,10 +990,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
  print("len(Keyword) = ",len(Keyword))  
  print("len(Match_Type) = ",len(Match_Type))
       
- print("len(:Title1A) = ",len(:Title1A)) 
- print("len(:Title2A) = ",len(:Title2A))
- print("len(:Title3A) = ",len(:Title3A))  
- print("len(:Title4A) = ",len(:Title4A))      
+ print("len(:Title1A) = ",len(Title1A)) 
+ print("len(:Title2A) = ",len(Title2A))
+ print("len(:Title3A) = ",len(Title3A))  
+ print("len(:Title4A) = ",len(Title4A))      
  
    
  GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Labels":KWLabel} 
