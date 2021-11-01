@@ -248,9 +248,6 @@ def filterNonParticipators(theFrame):
 
 
 def MergeURLs(chan,chan2):
- #stringifiedchan=str(chan) 
- #print("String chan type",type(stringifiedchan))
- #print("String chan",stringifiedchan)     
  print("MergeURLs() start for ",chan2)
  print(chan) 
  URLS="A";
@@ -535,20 +532,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
  
  
  while count < hilecount:
-  """          
-  hl1pos.append("1");  
-  hl2pos.append("1");
-  hl1pos.append("1");  
-  hl2pos.append("1"); 
-  hl1pos.append("1");  
-  hl2pos.append("1");
-  RSALabel.append("RSA Ads");
-  RSALabel.append("RSA Ads");  
-  RSALabel.append("RSA Ads");      
-  Adtype.append("Responsive search ad");  
-  Adtype.append("Responsive search ad");
-  Adtype.append("Responsive search ad");    
-  """
   communityName=str(NewDataFrame['Community Name'][count]);
   communityName=communityName.replace(" s ","").replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","")\
                .replace(" 45s ","").replace(" 45' ","").replace("Series","").replace("series","")\
@@ -589,8 +572,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
   URL_Struct1=str("https://www.newhomesource.com/basiccommunity/community-"+str(NewDataFrame['Community Id'][count])+"/"+communityName+"-"+NewDataFrame['City'][count]+"-"+str(NewDataFrame['State'][count])+"-"+NewDataFrame['Zip'][count]\
             +"?refer=gppc705").lower().replace("m/i","m-i");
         
-        
-             
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
             .replace("Lots","");
@@ -598,9 +579,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
   Keyword_conv=communityName.replace("  "," ")
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
-  
- 
-  print("DataFrame['CondoORTownHome?'][count] ",DataFrame['CondoORTownHome?'][count])
+   
+  print("DataFrame['CondoORTownHome?'][count] ",NewDataFrame['CondoORTownHome?'][count])
   
   try:
    if SearchChan=="google":
@@ -615,15 +595,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Bid.append(.45)
     Bid.append(.30)
     Bid.append(.65)    
-      
-    
-    #URL_Struct1=URL_Struct1+"405"
+       
     Keyword_conv=Keyword_conv
     Keyword_conv=Keyword_conv.replace(" + ","")
-    #Keyword_conv=Keyword_conv.replace("++","+")
     Keyword_conv=Keyword_conv.replace(" ++ ","")
     Keyword_conv=Keyword_conv.replace("&"," ")
-    #Keyword_conv=Keyword_conv.replace(" "," +")
     Keyword_conv=Keyword_conv.replace("+55+","55+")
     Keyword_conv=Keyword_conv.replace("+-","-")
     Keyword_conv=Keyword_conv.replace("-"," ")
@@ -732,13 +708,14 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title2A.append(Title2A_conv)
    
    Title3ACopy="Schedule a new home tour today"
+   """   
    print("DataFrame['CondoORTownHome?'][count] ",DataFrame['CondoORTownHome?'][count])   
    if DataFrame['CondoORTownHome?'][count]==1:
        Title3ACopy="Multi-Family Floor Plans"   
-   """   
-   if DataFrame['CondoORTownHome?'][count]==1 or DataFrame['WithAtLeastOneMultiFamilyPlan'][count]==1:
+   """  
+   if NewDataFrame['CondoORTownHome?'][count]==1 or NewDataFrame['WithAtLeastOneMultiFamilyPlan'][count]==1:
       Title3ACopy="Multi-Family Floor Plans"
-   """
+   
    Title3A.append(Title3ACopy)
    Title3A.append(Title3ACopy)
    Title3A.append(Title3ACopy)
