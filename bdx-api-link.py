@@ -311,6 +311,12 @@ def GoogleASX():
 def GoogleBSX():
  return send_file("/GMDelight/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB/GoogleAdsVersionBExact/DefaultSheet.xlsx",\
                  attachment_filename="GoogleAdBSX.xlsx")
+
+@app.route('/GATTRIB')
+def GoogleATTRIB():
+ return send_file("/GMDelight/workPortal/Sheets/CommunityUpdates/Google/GoogleOutputs/GoogleAttributes.xlsx",\
+                 attachment_filename="GoogleATTRIB.xlsx")
+  
   
  
 @app.route('/BKW')
@@ -405,6 +411,13 @@ def BingBSX():
                  attachment_filename="BingAdSXB.xlsx")
 
 
+@app.route('/BATTRIB')
+def BingATTRIB():
+ return send_file("/GMDelight/workPortal/Sheets/CommunityUpdates/Bing/BingOutputs/BingAttributes.xlsx",\
+                 attachment_filename="BingATTRIB.xlsx")
+
+
+
 
 @app.route('/BasisOfBidsHuman')
 def BasisH():
@@ -420,7 +433,6 @@ def BasisM():
 @app.route('/OutPutOfBiOp1')
 def BasisN1():
  return send_file('/GMDelight/workPortal/Sheets/BidOpData/MachinePatternSheets/outputsheet.xlsx', attachment_filename='Bid0p5heet1.xlsx')
-
 
 
 
