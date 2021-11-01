@@ -154,7 +154,7 @@ def favicon():
 
 print("7")
 
-"""
+
 @app.route('/DisplayCommUpdate')
 def CommUpdateDisplay():
     os.chdir('/GMDelight/workPortal/Sheets/')     
@@ -171,7 +171,7 @@ def CommUpdateDisplay():
      return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/CommUpdateExcel?'><html>This Message indicates an error in URL Forward</html>"
     if read_storeRequest1!=read_storeRequest2:
      return '<meta http-equiv="refresh" content="120"><html>LOADING..... )</html>'
-"""
+
 
 @app.route('/DisplayCommUpdate2')
 def CommUpdateDisplay2():
@@ -188,7 +188,7 @@ def CommUpdateDisplay2():
     if read_storeRequest1==read_storeRequest2:
      return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/CommUpdateExcel2?'><html>This Message indicates an error in URL Forward</html>"
     if read_storeRequest1!=read_storeRequest2:
-     return '<meta http-equiv="refresh" content="30"><html><p>LOADING.....  This can Take up to 20 minuites</p> <p>(Note: If Bing Sheet is Absent or incorrectly formatted Google active communities will be used such that Bing Ads will reflect Communities not found in Google inventory )</p></html>'
+     return '<meta http-equiv="refresh" content="30"><html><p>LOADING.....  This can Take up to 10 minuites</p> </html>'
 
 
 
@@ -200,13 +200,13 @@ def CommUpdateDisplay2():
 
 
 
-"""
+
 @app.route('/CommUpdateExcel')
 def CommUpdateExcel():
  global domain
  domain=domain
  return render_template('/CommUpdateExcel.html',CacheBreakStamp=datetime.now(),domain=domain)
-"""
+
 @app.route('/CommUpdateExcel2')
 def CommUpdateExcel2():
  global domain
@@ -504,11 +504,11 @@ def CommunitiesUploads():
         return str(chckbdxcred());
     return render_template('CommunitiesForm.html')
 
-"""
+
 @app.route('/CommunityFileHander', methods=['POST','GET'])
 def CommunityFileHandling():
     return fileHandler.CommListFileHandler()
-"""
+
 
 @app.route('/NovelCommunityFileHander', methods=['POST','GET'])
 def NCommunityFileHandling():
