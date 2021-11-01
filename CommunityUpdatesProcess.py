@@ -572,13 +572,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Campaign_Name.append(Campaign_Nameing_Conv);
     Campaign_Name.append(Campaign_Nameing_Conv);  
     Campaign_Name.append(Campaign_Nameing_Conv);  
-
-
+    
     Bid.append(.45)
     Bid.append(.30)
     Bid.append(.65)    
-      
-    
+        
     URL_Struct1=URL_Struct1+"405"
     Keyword_conv=Keyword_conv
     Keyword_conv=Keyword_conv.replace(" + ","")
@@ -596,19 +594,12 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Keyword_conv=Keyword_conv.replace("+s ","")
     Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
     Keyword_conv="["+Keyword_conv+"]"
-   
-     
+         
     if len(Keyword_conv)<12:
      #Keyword_conv=Keyword_conv+" Community"
      Keyword_conv=Keyword_conv.replace("]","")       
      Keyword_conv=Keyword_conv+" Community"+"]"
- 
-
-    
-      
-
-  
-      
+       
    if SearchChan=="bing":
     URL_Struct1=URL_Struct1+"msm205"
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
@@ -617,16 +608,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Campaign_Name.append(Campaign_Nameing_Conv);
     Campaign_Name.append(Campaign_Nameing_Conv);
     Campaign_Name.append(Campaign_Nameing_Conv);
-    
-
-        
-      
+         
     Bid.append(.45)
     Bid.append(.40)
     Bid.append(.52)   
       
-           
-   
     Keyword_conv=Keyword_conv
     Keyword_conv=Keyword_conv.replace(" + ","")
     Keyword_conv=Keyword_conv.replace(" ++ ","")
@@ -650,15 +636,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if SearchChan=="google":
       AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
-            
-
+   
    if SearchChan=="bing":
       AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
             
-      
-      
-      
    if str(NewDataFrame['Community ID'][count]).find("nan")>-1:
             AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>");
@@ -723,8 +705,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Adtype.append("Responsive search ad");
    Adtype.append("Responsive search ad");
    
-   
-
    Title1A_Name_Conv=communityName
    if len(Title1A_Name_Conv)>29:
     Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find("at")-1]
@@ -1001,8 +981,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #print("except KW Gen count ",count)
   count+=1;
    
-
- #print("(Adgroup) ",Adgroup);
+ #hl1pos.append(1);  
+ #hl2pos.append(2);
+ print("(hl1pos) ",hl1pos);
+ print("(hl2pos) ",hl2pos);
  print("len(Campaign_Name) = ",len(Campaign_Name)) 
  print("len(Adgroup) = ",len(Adgroup))
  print("len(Keyword) = ",len(Keyword))  
