@@ -728,7 +728,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title2A.append(Title2A_conv)
    Title2A.append(Title2A_conv)
    
-   Title3ACopy="Schedule a new home tour today" 
+   Title3ACopy="Schedule a new home tour today"
+   if DataFrame['CondoORTownHome?'][count]==1 OR if DataFrame['WithAtLeastOneMultiFamilyPlan'][count]==1:
+      Title3ACopy="Multi-Family Floor Plans"
    Title3A.append(Title3ACopy)
    Title3A.append(Title3ACopy)
    Title3A.append(Title3ACopy)
@@ -1238,7 +1240,7 @@ def initialCommUpdatProcess():
               locationOfComNumInAttributes=AttributeCommIDstr.index(comNumInMain);     
               
            comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes]); 
-           print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
+           #print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
            CorrespondingRowInAttributes.append([locationOfComNumInAttributes]);
            CondoORTownHome.append(y['CondoORTownHome?'].iloc[locationOfComNumInAttributes]);
            WithAtLeastOneMultiFamilyPlan.append(y['WithAtLeastOneMultiFamilyPlan'].iloc[locationOfComNumInAttributes]);
