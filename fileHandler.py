@@ -204,6 +204,10 @@ def CommListFileHandler():
     os.chdir(currentBingLocation)
     request.files['currentBing'].save('WorkingBing')
      
+    os.chdir(currentAttributesLocation)
+    request.files['Attributes'].save('WorkingAttributes')    
+        
+     
  
        
     def async_fileloader():
