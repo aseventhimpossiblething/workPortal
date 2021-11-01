@@ -983,12 +983,17 @@ def KeywordGenII(NewDataFrame,SearchChan):
    
  #hl1pos.append(1);  
  #hl2pos.append(2);
- print("(hl1pos) ",hl1pos);
- print("(hl2pos) ",hl2pos);
+ print("(hl1pos) ",len(hl1pos));
+ print("(hl2pos) ",len(hl2pos));
  print("len(Campaign_Name) = ",len(Campaign_Name)) 
  print("len(Adgroup) = ",len(Adgroup))
  print("len(Keyword) = ",len(Keyword))  
- print("len(Match_Type) = ",len(Match_Type)) 
+ print("len(Match_Type) = ",len(Match_Type))
+      
+ print("len(:Title1A) = ",len(:Title1A)) 
+ print("len(:Title2A) = ",len(:Title2A))
+ print("len(:Title3A) = ",len(:Title3A))  
+ print("len(:Title4A) = ",len(:Title4A))      
  
    
  GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Labels":KWLabel} 
