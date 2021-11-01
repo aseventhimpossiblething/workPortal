@@ -1214,7 +1214,7 @@ def initialCommUpdatProcess():
               Baseball.append(y['Baseball'].iloc[locationOfComNumInAttributes]);
               Waterfront.append(y['Waterfront'].iloc[locationOfComNumInAttributes]);
               HasPlanWith2StoriesAndMasterDownstairs.append(y['HasPlanWith2StoriesAndMasterDownstairs'].iloc[locationOfComNumInAttributes]); 
-              print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
+              #print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
            else:
               #comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes]); 
               print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
