@@ -737,7 +737,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title8A.append(Title8ACopy);   
 
 
-   Title9ACopy="- 9 no default "
+   Title9ACopy="Homes with Scenic views"
    if NewDataFrame['Parks'][count]==1 or NewDataFrame['Nature'][count]==1:
       Title7ACopy="Access to Parks and Green Spaces"      
    Title9A.append(Title9ACopy);
