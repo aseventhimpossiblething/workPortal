@@ -695,51 +695,51 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title2A.append(Title2A_conv)
    
    Title3ACopy="Schedule a new home tour today"
-   if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['With At Least One MultiFamily Plan'][count]==1:
-      Title3ACopy="Multi-Family Floor Plans"
+   #if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['With At Least One MultiFamily Plan'][count]==1:
+   #   Title3ACopy="Multi-Family Floor Plans"
    Title3A.append(Title3ACopy)
    Title3A.append(Title3ACopy)
    Title3A.append(Title3ACopy)
    
    Title4ACopy="View Move-in Ready Homes"
-   if NewDataFrame['Active Adult'][count]==1:
-      Title4ACopy="55+ Active Adult Living"
+   #if NewDataFrame['Active Adult'][count]==1:
+   #   Title4ACopy="55+ Active Adult Living"
    Title4A.append(Title4ACopy);
    Title4A.append(Title4ACopy);
    Title4A.append(Title4ACopy);
 
    Title5ACopy="Your Dream Home Awaits"
-   if NewDataFrame['Has A Luxury Home'][count]==1:
-      Title5ACopy="Luxurious Features Available"   
+   #if NewDataFrame['Has A Luxury Home'][count]==1:
+   #   Title5ACopy="Luxurious Features Available"   
    Title5A.append(Title5ACopy); 
    Title5A.append(Title5ACopy);
    Title5A.append(Title5ACopy);
       
    Title6ACopy="Your New Home is Waiting"
-   if NewDataFrame['Gated'][count]==1:
-      Title6ACopy="Enjoy Safe Gated Communities"  
+   #if NewDataFrame['Gated'][count]==1:
+   #   Title6ACopy="Enjoy Safe Gated Communities"  
    Title6A.append(Title6ACopy);
    Title6A.append(Title6ACopy);
    Title6A.append(Title6ACopy);
    
    Title7ACopy="Finest Location & Amenities"
-   if NewDataFrame['Pool'][count]==1:
-      Title7ACopy="Beautiful Resort-Style Pools"
+   #if NewDataFrame['Pool'][count]==1:
+   #   Title7ACopy="Beautiful Resort-Style Pools"
    Title7A.append(Title7ACopy);
    Title7A.append(Title7ACopy);
    Title7A.append(Title7ACopy);
 
    Title8ACopy="Move in Ready Homes Available! "
-   if NewDataFrame['Green'][count]==1:
-      Title7ACopy="Energy-Efficient & Eco-Smart"   
+   #if NewDataFrame['Green'][count]==1:
+   #   Title7ACopy="Energy-Efficient & Eco-Smart"   
    Title8A.append(Title8ACopy);
    Title8A.append(Title8ACopy);
    Title8A.append(Title8ACopy);   
 
 
    Title9ACopy="------------"
-   if NewDataFrame['Parks'][count]==1 or NewDataFrame['Nature'][count]==1:
-      Title7ACopy="Access to Parks and Green Spaces"      
+   #if NewDataFrame['Parks'][count]==1 or NewDataFrame['Nature'][count]==1:
+   #   Title7ACopy="Access to Parks and Green Spaces"      
    Title9A.append(Title9ACopy);
    Title9A.append(Title9ACopy);
    Title9A.append(Title9ACopy);
