@@ -644,62 +644,26 @@ def KeywordGenII(NewDataFrame,SearchChan):
     if str(NewDataFrame['Community ID'][count]).find("nan")>-1:
             AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>");
-   
-   
-    #re.match(,)
-   
-    def quasit(Campaign_Nameing_Conv,x):
-       x=x;     
-       locnum=Campaign_Nameing_Conv.find(">");
-       s1=Campaign_Nameing_Conv[locnum+1:];
-       locnum2=s1.find(">");
-       s2=s1[:locnum2];
-       #print("locnum ",locnum) 
-       #print("locnum2 ",locnum2)
-       #print("s1 ",s1);
-       #print("s2 ",s2);
-       #print(x,"-",s2); 
-       return s2;
-       #print(x,s2)  
- 
-       """   
-       if campo==adgroupo:
-       print("campo==adgroupo ",campo,"-",adgroupo)
-       #print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---")
-       #sh=Campaign_Nameing_Conv[locnum:locnum2]; 
       
-       print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---")
-       print(NewDataFrame)
-       """
-       """
-       Campaign_Name.append(Campaign_Nameing_Conv);
-       Campaign_Name.append(Campaign_Nameing_Conv);  
-       Campaign_Name.append(Campaign_Nameing_Conv);     
-       """
-       #AdgroupNaming_conv=AdgroupNaming_conv.replace("Mixed","Phrase")
-       Adgroup.append(AdgroupNaming_conv);
-       #AdgroupNaming_conv=AdgroupNaming_conv.replace("Phrase","Broad")
-       Adgroup.append(AdgroupNaming_conv);
-       #AdgroupNaming_conv=AdgroupNaming_conv.replace("Broad","Exact")
-       Adgroup.append(AdgroupNaming_conv);
-
-       Match_Type.append("Phrase")
-       Match_Type.append("Broad")
-       Match_Type.append("Exact")
+    Adgroup.append(AdgroupNaming_conv);
+    Adgroup.append(AdgroupNaming_conv);
+    Adgroup.append(AdgroupNaming_conv);
+    
+    Match_Type.append("Phrase")
+    Match_Type.append("Broad")
+    Match_Type.append("Exact")
       
-       Status.append("Active")
-       Status.append("Active")
-       Status.append("Active")
-
- 
-   
-   Title1A_Name_Conv=communityName
-   if len(Title1A_Name_Conv)>29:
-    Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find("at")-1]
-   if len(Title1A_Name_Conv)>29:
-    Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find(" ",2)]
-   if len(Title1A_Name_Conv)< 20:
-    Title1A_Name_Conv=Title1A_Name_Conv+" New Homes" 
+    Status.append("Active")
+    Status.append("Active")
+    Status.append("Active")
+      
+    Title1A_Name_Conv=communityName
+    if len(Title1A_Name_Conv)>29:
+       Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find("at")-1]
+    if len(Title1A_Name_Conv)>29:
+       Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find(" ",2)]
+    if len(Title1A_Name_Conv)< 20:
+       Title1A_Name_Conv=Title1A_Name_Conv+" New Homes" 
    Title1A.append(Title1A_Name_Conv);
    Title1A.append(Title1A_Name_Conv);
    Title1A.append(Title1A_Name_Conv);
