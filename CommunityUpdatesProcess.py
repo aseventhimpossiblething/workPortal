@@ -1193,7 +1193,7 @@ def initialCommUpdatProcess():
            locationOfComNumInAttributes="Community Number Not Found in Attribute Report" 
            if AttributeCommIDstr.count(comNumInMain)>0:
               locationOfComNumInAttributes=AttributeCommIDstr.index(comNumInMain);     
-              
+              print("locationOfComNumInAttributes=",locationOfComNumInAttributes)
            comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes]); 
            #print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
            CorrespondingRowInAttributes.append([locationOfComNumInAttributes]);
