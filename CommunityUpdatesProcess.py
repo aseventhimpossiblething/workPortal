@@ -565,7 +565,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    
   try:
    if SearchChan=="google":
-     URL_Struct1=URL_Struct1+"gppc";
+    URL_Struct1=URL_Struct1+"gppc";
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
     Campaign_Nameing_Conv="Consolidated_"+Campaign_Nameing_Conv;  
     Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_GPPC403","") 
