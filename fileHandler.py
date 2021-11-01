@@ -251,7 +251,9 @@ def NCommListFileHandler():
     SHcommand="sudo chmod -R 777 "+currentCommunitiesLocation
     #os.system(SHcommand+"/WorkingCommunities")
     request.files['Communities'].save('WorkingCommunities')
-        
+      
+    print("Past workingcoms.save") 
+
     os.chdir(currentGoogleLocation)
     request.files['currentGoogle'].save('WorkingGoogle')
     
