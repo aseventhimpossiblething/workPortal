@@ -455,12 +455,12 @@ def KeywordGenII(NewDataFrame,SearchChan):
      
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
- print(os.getcwd())
- print(os.listdir())     
+ #print(os.getcwd())
+ #print(os.listdir())     
       
- #print("Dataframe incomming to KeywordGen ",NewDataFrame)     
+ print("Dataframe incomming to KeywordGen ")
+ print(NewDataFrame)     
  NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame); 
- #MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
  
  Failed_Rows=[];
@@ -987,20 +987,13 @@ def KeywordGenII(NewDataFrame,SearchChan):
  BingAdFrameB=pandas.DataFrame(BingAdFrameB).drop_duplicates()
  BingAdFrameRSA=pandas.DataFrame(BingAdFrameRSA).drop_duplicates()     
  
- #print("GoogleAdFrameA----------")     
- #print(GoogleAdFrameA) 
 
  if SearchChan=="google":
-   #if MatchType=='SBMM':
-   #print("In KeywordGenII google SBMM ")
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords'
    os.chdir(SaveLocation)
-   #os.remove('GKW.xlsx') 
-   #os.remove('GKW.csv')   
    writer=pandas.ExcelWriter('GKW.xlsx')
    GoogleKWFrame.to_excel(writer)
    GoogleKWFrame.to_csv(r'GKW.csv')   
-   #GoogleKWFrame.to_excel(r'/GMDelight/workPortal/Sheets')   
    writer.save()
    
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA'
@@ -1012,17 +1005,21 @@ def KeywordGenII(NewDataFrame,SearchChan):
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB'
    os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('GADB.xlsx')
-   #writer=SaveLocation   
    GoogleAdFrameB.to_excel(writer)
-   #GoogleAdFrameB.to_excel(writer)
    writer.save()
    
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/'
    os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('GRSA.xlsx')
-   #writer=SaveLocation   
    GoogleAdFrameRSA.to_excel(writer)
-   writer.save()   
+   writer.save()  
+
+   
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/'
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('GoogleAttributes.xlsx')
+   NewDataFrame.to_excel(writer)
+   writer.save() 
       
       
  
@@ -1055,6 +1052,12 @@ def KeywordGenII(NewDataFrame,SearchChan):
    writer=pandas.ExcelWriter('BRSA.xlsx')
    BingAdFrameRSA.to_excel(writer)
    writer.save()
+      
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/'
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('GoogleAttributes.xlsx')
+   NewDataFrame.to_excel(writer)
+   writer.save()    
  
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 End-----------------------------------------------------------------------------------------------")
@@ -1201,7 +1204,7 @@ def initialCommUpdatProcess():
  print(" WorkingAttributesCheck1:",WorkingAttributesCheck1," WorkingAttributesCheck2:",WorkingAttributesCheck2," WorkingAttributesCheck3:",WorkingAttributesCheck3," WorkingAttributesCheck4:",WorkingAttributesCheck4," WorkingAttributesCheck5:",WorkingAttributesCheck5," WorkingAttributesCheck6:",WorkingAttributesCheck6)     
  AttributeFormatChecknumber=str(WorkingAttributes.columns).find('CommunityID')
  print("AttributeFormatChecknumber======",AttributeFormatChecknumber);     
- #WorkingAttributes=WorkingAttributes["CondoORTownHome?"];
+
  def AttributeAssignCols(x,y):
      CorrespondingRowInAttributes=[];
      CondoORTownHome=[];
@@ -1222,9 +1225,7 @@ def initialCommUpdatProcess():
      Waterfront=[];
      HasPlanWith2StoriesAndMasterDownstairs=[];
 
-     colnames=y.columns
-     print("colnames ",colnames) 
-     print("y['CommunityID'] ",y['CommunityID']) 
+     #colnames=y.columns
      AttributeCommIDstr=[];
      for commIDnumstrs in y['CommunityID']:
          AttributeCommIDstr.append(str(commIDnumstrs));
@@ -1236,7 +1237,6 @@ def initialCommUpdatProcess():
            if AttributeCommIDstr.count(comNumInMain)>0:
               locationOfComNumInAttributes=AttributeCommIDstr.index(comNumInMain);     
               
-           #locationOfComNumInAttributes=commIDstr.count(comNumInMain+"1236547896523214587965214587412");
            comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes]); 
            print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
            CorrespondingRowInAttributes.append([locationOfComNumInAttributes]);
@@ -1256,9 +1256,7 @@ def initialCommUpdatProcess():
            Soccer.append(y['Soccer'].iloc[locationOfComNumInAttributes]);
            Baseball.append(y['Baseball'].iloc[locationOfComNumInAttributes]);
            Waterfront.append(y['Waterfront'].iloc[locationOfComNumInAttributes]);
-           HasPlanWith2StoriesAndMasterDownstairs.append(y['HasPlanWith2StoriesAndMasterDownstairs'].iloc[locationOfComNumInAttributes]);
-           #comIDpositionInAttributes=commIDstr.find(comNumInMain)
-           #print("comIDpositionInAttributes ",comIDpositionInAttributes)
+           HasPlanWith2StoriesAndMasterDownstairs.append(y['HasPlanWith2StoriesAndMasterDownstairs'].iloc[locationOfComNumInAttributes]);       
            count=count+1;
      x['Corresponding Row In Attributes']=CorrespondingRowInAttributes;
      x['Condo OR TownHome']=CondoORTownHome;
@@ -1284,7 +1282,8 @@ def initialCommUpdatProcess():
      return x 
             
      
- AttributeAssignCols(NewGoogle,WorkingAttributes);     
+ NewGoogle=AttributeAssignCols(NewGoogle,WorkingAttributes); 
+ NewBing=AttributeAssignCols(NewBing,WorkingAttributes);      
  print("--------------WorkingAttributes-----------------------")
  print(WorkingAttributes)
  KeywordGenII(NewGoogle,"google")
