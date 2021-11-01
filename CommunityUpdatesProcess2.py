@@ -710,7 +710,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
 
    Title5ACopy="Your Dream Home Awaits"
    if NewDataFrame['Has A Luxury Home'][count]==1:
-      Title5ACopy="Luxurious Homes Available"   
+      Title5ACopy="Luxurious Features Available"   
    Title5A.append(Title5ACopy); 
    Title5A.append(Title5ACopy);
    Title5A.append(Title5ACopy);
@@ -737,7 +737,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title8A.append(Title8ACopy);   
 
 
-   Title9ACopy="Homes with Scenic views"
+   Title9ACopy="------------"
    if NewDataFrame['Parks'][count]==1 or NewDataFrame['Nature'][count]==1:
       Title7ACopy="Access to Parks and Green Spaces"      
    Title9A.append(Title9ACopy);
