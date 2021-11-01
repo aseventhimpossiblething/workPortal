@@ -1260,24 +1260,24 @@ def initialCommUpdatProcess():
            #comIDpositionInAttributes=commIDstr.find(comNumInMain)
            #print("comIDpositionInAttributes ",comIDpositionInAttributes)
            count=count+1;
-     x['']=CorrespondingRowInAttributes;
-     x['']=CondoORTownHome;
-     x['']=WithAtLeastOneMultiFamilyPlan;
-     x['']=ActiveAdult;
-     x['']=HasALuxuryHome;
-     x['']=Gated;
-     x['']=Pool;
-     x['']=Green;
-     x['']=Parks;
-     x['']=Nature;
-     x['']=GolfCourse;
-     x['']=Tennis;
-     x['']=Volleyball;
-     x['']=Basketball;
-     x['']=Soccer;
-     x['']=Baseball;
-     x['']=Waterfront;
-     x['']=HasPlanWith2StoriesAndMasterDownstairs;
+     x['Corresponding Row In Attributes']=CorrespondingRowInAttributes;
+     x['Condo OR TownHome']=CondoORTownHome;
+     x['With At Least One MultiFamily Plan']=WithAtLeastOneMultiFamilyPlan;
+     x['Active Adult']=ActiveAdult;
+     x['Has A Luxury Home']=HasALuxuryHome;
+     x['Gated']=Gated;
+     x['Pool']=Pool;
+     x['Green']=Green;
+     x['Parks']=Parks;
+     x['Nature']=Nature;
+     x['Golf Course']=GolfCourse;
+     x['Tennis']=Tennis;
+     x['Volleyball']=Volleyball;
+     x['Basketball']=Basketball;
+     x['Soccer']=Soccer;
+     x['Baseball']=Baseball;
+     x['Waterfront']=Waterfront;
+     x['HasPlanWith2StoriesAndMasterDownstairs']=HasPlanWith2StoriesAndMasterDownstairs;
      print("New atribute Frame") 
      print(x.columns)
      print(x)
