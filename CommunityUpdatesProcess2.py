@@ -1279,6 +1279,7 @@ def initialCommUpdatProcess():
      x['']=Waterfront;
      x['']=HasPlanWith2StoriesAndMasterDownstairs;
      print("New atribute Frame") 
+     print(x.columns)
      print(x)
      return x 
             
