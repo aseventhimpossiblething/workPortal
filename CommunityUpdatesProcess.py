@@ -440,30 +440,64 @@ def KeywordGenII(NewDataFrame,SearchChan):
  Campaign_Name=[];
  Adgroup=[];
  Keyword=[];
+ Adtype=[];
  Match_Type=[];
  Status=[];
  Bid=[];
  Final_URL=[];
 
+ hl1pos=[];
+ hl2pos=[];     
+      
  Title1A=[];
  Title2A=[];
  Title3A=[];
+ Title4A=[];
+ Title5A=[]; 
+ Title6A=[];
+ Title7A=[];
+ Title8A=[];
+ Title9A=[];
+ Title10A=[]; 
+ Title11A=[];
+ Title12A=[];
+ Title13A=[];
+ Title14A=[];
+ Title15A=[];
  TextA=[];
  Text2A=[];
+ Text3A=[];
+ Text4A=[];     
  Path1A=[];
  Path2A=[];
  
  Title1B=[];
  Title2B=[];
  Title3B=[];
+ Title4B=[];
+ Title5B=[]; 
+ Title6B=[];
+ Title7B=[];
+ Title8B=[];
+ Title9B=[];
+ Title10B=[]; 
+ Title11B=[];
+ Title12B=[];
+ Title13B=[];
+ Title14B=[];
+ Title15B=[];
  TextB=[];
  Text2B=[];
+ Text3B=[];
+ Text4B=[];
  Path1B=[];
  Path2B=[];
- 
+
+ RSALabel=[];
  Label=[];
  LabelB=[];
  KWLabel=[];     
+      
  
  count=0;
  hilecount=len(NewDataFrame['Market ID']);
