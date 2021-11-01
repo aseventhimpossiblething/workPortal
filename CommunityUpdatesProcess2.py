@@ -1160,7 +1160,8 @@ def initialCommUpdatProcess():
  #print(os.listdir(os.getcwd()));     
  #print(os.getcwd())
  #print(os.listdir()) 
- print("---Define working attributes ----")     
+ print("---Define working attributes ----")
+ """
  WorkingAttributes=pandas.read_excel('WorkingAttributes');   
  WorkingAttributes=SeekColHead(WorkingAttributes,'CommunityID');
  WorkingAttributesCheck1=CheckSheetData('Attributes',WorkingAttributes,"CommunityID","CondoORTownHome","WithAtLeastOneMultifamilyPlan")
@@ -1254,6 +1255,7 @@ def initialCommUpdatProcess():
  NewBing=AttributeAssignCols(NewBing,WorkingAttributes);      
  print("--------------WorkingAttributes-----------------------")
  print(WorkingAttributes)
+ """
  KeywordGenII(NewGoogle,"google")
  KeywordGenII(NewBing,"bing")
   
