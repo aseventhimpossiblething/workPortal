@@ -706,6 +706,19 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Status.append("Active")
    Status.append("Active")
    Status.append("Active")
+
+   hl1pos.append(1);  
+   hl2pos.append(2);
+   hl1pos.append(1);  
+   hl2pos.append(2); 
+   hl1pos.append(1);  
+   hl2pos.append(2);
+   RSALabel.append("RSA Ads");
+   RSALabel.append("RSA Ads");  
+   RSALabel.append("RSA Ads");      
+   Adtype.append("Responsive search ad");  
+   Adtype.append("Responsive search ad");
+   Adtype.append("Responsive search ad");
    
 
    Title1A_Name_Conv=communityName
@@ -896,8 +909,13 @@ def KeywordGenII(NewDataFrame,SearchChan):
  print("len(Adgroup) = ",len(Adgroup))
  print("len(Keyword) = ",len(Keyword))  
  print("len(Match_Type) = ",len(Match_Type)) 
-   
-      
+
+ print("len(hl1pos) = ",len(hl1pos)) 
+ print("len(hl2pos) = ",len(hl2pos))
+ print("len(RSALabel) = ",len(RSALabel))  
+ print("len(Adtype) = ",len(Adtype)) 
+
+     
       
  GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Labels":KWLabel} 
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
