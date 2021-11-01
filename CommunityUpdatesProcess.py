@@ -1123,12 +1123,12 @@ def initialCommUpdatProcess():
  
  WorkingAttributes=pandas.read_excel('WorkingAttributes');   
  WorkingAttributes=SeekColHead(WorkingAttributes,'CommunityID');
- WorkingAttributesCheck1=CheckSheetData('Attributes',WorkingAttributes,"CommunityID","CondoORTownHome","WithAtLeastOneMultifamilyPlan")
- WorkingAttributesCheck2=CheckSheetData('Attributes',WorkingAttributes,"ActiveAdult","HasALuxuryHome","GatedCommunity")
- WorkingAttributesCheck3=CheckSheetData('Attributes',WorkingAttributes,"Pool","Green","ParkNature")  
- WorkingAttributesCheck4=CheckSheetData('Attributes',WorkingAttributes,"GolfCourse","Tennis","Volleyball") 
- WorkingAttributesCheck5=CheckSheetData('Attributes',WorkingAttributes,"Basketball","Soccer"," Baseball")
- WorkingAttributesCheck6=CheckSheetData('Attributes',WorkingAttributes,"Waterfront","HasPlanWith2StoriesAndMasterDownstairs","Baseball")     
+ WorkingAttributesCheck1=CheckSheetData('Attributes',WorkingAttributes,"CommunityID","CondoORTownHome","WithAtLeastOneMultifamilyPlan","Baseball")
+ WorkingAttributesCheck2=CheckSheetData('Attributes',WorkingAttributes,"ActiveAdult","HasALuxuryHome","GatedCommunity","HasPlanWith2StoriesAndMasterDownstairs")
+ WorkingAttributesCheck3=CheckSheetData('Attributes',WorkingAttributes,"Pool","Green","ParkNature","Waterfront")  
+ WorkingAttributesCheck4=CheckSheetData('Attributes',WorkingAttributes,"GolfCourse","Tennis","Volleyball","Basketball") 
+ WorkingAttributesCheck5=CheckSheetData('Attributes',WorkingAttributes,"Basketball","Soccer"," Baseball","Waterfront")
+ #WorkingAttributesCheck6=CheckSheetData('Attributes',WorkingAttributes,"Waterfront","HasPlanWith2StoriesAndMasterDownstairs","Baseball")     
  print(" WorkingAttributesCheck1:",WorkingAttributesCheck1," WorkingAttributesCheck2:",WorkingAttributesCheck2," WorkingAttributesCheck3:",WorkingAttributesCheck3," WorkingAttributesCheck4:",WorkingAttributesCheck4," WorkingAttributesCheck5:",WorkingAttributesCheck5," WorkingAttributesCheck6:",WorkingAttributesCheck6)     
  AttributeFormatChecknumber=str(WorkingAttributes.columns).find('CommunityID')
  print("AttributeFormatChecknumber======",AttributeFormatChecknumber);     
