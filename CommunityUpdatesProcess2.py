@@ -716,7 +716,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title3A.append(Title3ACopy)
    
    Title4ACopy="View Move-in Ready Homes"
-   if NewDataFrame['Active Adult'][count]1:
+   if NewDataFrame['Active Adult'][count]==1:
       Title4ACopy="55+ Active Adult Living"
    Title4A.append(Title4ACopy);
    Title4A.append(Title4ACopy);
