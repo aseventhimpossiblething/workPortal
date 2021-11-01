@@ -428,28 +428,29 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
 #----------------------------------------Start KeygenII()----------------------------------------------------------------------------
 
 def KeywordGenII(NewDataFrame,SearchChan):
- #MatchType="SBMM"     
+     
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
- print("Dataframe incomming to KeywordGen ",NewDataFrame)     
+ #print(os.getcwd())
+ #print(os.listdir())     
+      
+ print("Dataframe incomming to KeywordGen ")
+ print(NewDataFrame)     
  NewDataFrame=CommunityNameDuplicateSpecialLoop(NewDataFrame); 
- #MatchType=MatchType.upper();
  SearchChan=SearchChan.lower();
  
  Failed_Rows=[];
  Campaign_Name=[];
  Adgroup=[];
  Keyword=[];
- Adtype=[];     
+ Adtype=[];
  Match_Type=[];
  Status=[];
  Bid=[];
  Final_URL=[];
-      
-      
 
  hl1pos=[];
- hl2pos=[]; 
+ hl2pos=[];     
       
  Title1A=[];
  Title2A=[];
@@ -466,12 +467,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
  Title13A=[];
  Title14A=[];
  Title15A=[];
-
  TextA=[];
  Text2A=[];
  Text3A=[];
- Text4A=[];
- 
+ Text4A=[];     
  Path1A=[];
  Path2A=[];
  
@@ -490,14 +489,14 @@ def KeywordGenII(NewDataFrame,SearchChan):
  Title13B=[];
  Title14B=[];
  Title15B=[];
-      
  TextB=[];
  Text2B=[];
  Text3B=[];
- Text4B=[];     
+ Text4B=[];
  Path1B=[];
  Path2B=[];
- 
+
+ RSALabel=[];
  Label=[];
  LabelB=[];
  KWLabel=[];     
@@ -549,8 +548,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
   
   
   communityName.replace("91's","").replace("94's","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace(" s ","").replace("61s","").replace(" 64s ","").replace("71s","").replace(" 74s ","").replace("81s","").replace(" 84s ","").replace("74's","").replace("61's","").replace(" 64's ","").replace("71's","").replace("74's","").replace("81's","").replace(" 84's ","").replace(" s ","").replace(" ' ","")
-
-            
   URL_Struct1=str("https://www.newhomesource.com/community/"+NewDataFrame['State'][count]+"/"+NewDataFrame['City'][count]+"/"+communityName\
             +"-by-"+str(NewDataFrame['Brand Name'][count])+"/"+str(NewDataFrame['Community ID'][count])+"?refer=").lower().replace("m/i","m-i");
         
@@ -558,32 +555,39 @@ def KeywordGenII(NewDataFrame,SearchChan):
   URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
             .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
             .replace("Lots","");
-   
+
+  """ 
+  URL_Struct1=str("https://www.newhomesource.com/basiccommunity/community-"+str(NewDataFrame['Community Id'][count])+"/"+communityName+"-"+NewDataFrame['City'][count]+"-"+str(NewDataFrame['State'][count])+"-"+NewDataFrame['Zip'][count]\
+            +"?refer=gppc705").lower().replace("m/i","m-i");
+        
+  URL_Struct1=URL_Struct1.replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
+            .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","")\
+            .replace("Lots","");
+  """ 
   Keyword_conv=communityName.replace("  "," ")
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
    
+  #print("NewDataFrame.columns ",NewDataFrame.columns) 
+  #print("NewDataFrame['Condo OR TownHome'][count] ",NewDataFrame['Condo OR TownHome'][count])
+  
   try:
    if SearchChan=="google":
-    URL_Struct1=URL_Struct1+"gppc";
     Campaign_Nameing_Conv=Market_LookUp.google[NewDataFrame['Market ID'][count]];
     Campaign_Nameing_Conv="Consolidated_"+Campaign_Nameing_Conv;  
-    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_GPPC403","") 
+    Campaign_Nameing_Conv=Campaign_Nameing_Conv.replace("SBMM","Mixed").replace("_GPPC403","").replace(">Mixed>Community",">Mixed>Basic Listings")  
     Campaign_Name.append(Campaign_Nameing_Conv);
     Campaign_Name.append(Campaign_Nameing_Conv);  
-    Campaign_Name.append(Campaign_Nameing_Conv);  
+    Campaign_Name.append(Campaign_Nameing_Conv);
     
     Bid.append(.45)
     Bid.append(.30)
     Bid.append(.65)    
-        
-    URL_Struct1=URL_Struct1+"405"
+       
     Keyword_conv=Keyword_conv
     Keyword_conv=Keyword_conv.replace(" + ","")
-    #Keyword_conv=Keyword_conv.replace("++","+")
     Keyword_conv=Keyword_conv.replace(" ++ ","")
     Keyword_conv=Keyword_conv.replace("&"," ")
-    #Keyword_conv=Keyword_conv.replace(" "," +")
     Keyword_conv=Keyword_conv.replace("+55+","55+")
     Keyword_conv=Keyword_conv.replace("+-","-")
     Keyword_conv=Keyword_conv.replace("-"," ")
@@ -594,12 +598,12 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Keyword_conv=Keyword_conv.replace("+s ","")
     Keyword_conv=Keyword_conv.replace("+G +& +I ","G&I ")
     Keyword_conv="["+Keyword_conv+"]"
-         
+   
+     
     if len(Keyword_conv)<12:
-     #Keyword_conv=Keyword_conv+" Community"
      Keyword_conv=Keyword_conv.replace("]","")       
      Keyword_conv=Keyword_conv+" Community"+"]"
-       
+   
    if SearchChan=="bing":
     URL_Struct1=URL_Struct1+"msm205"
     Campaign_Nameing_Conv=Market_LookUp.bing[NewDataFrame['Market ID'][count]]
@@ -608,7 +612,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
     Campaign_Name.append(Campaign_Nameing_Conv);
     Campaign_Name.append(Campaign_Nameing_Conv);
     Campaign_Name.append(Campaign_Nameing_Conv);
-         
+          
     Bid.append(.45)
     Bid.append(.40)
     Bid.append(.52)   
@@ -630,40 +634,51 @@ def KeywordGenII(NewDataFrame,SearchChan):
     if len(Keyword_conv)<12:
      Keyword_conv=Keyword_conv.replace("]","")       
      Keyword_conv=Keyword_conv+" Community"+"]"
-  
+ 
    
-    #WAS SAME AS ABOVE 
-    if SearchChan=="google":
+
+   if SearchChan=="google":
       AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
-                      +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
-   
-    if SearchChan=="bing":
+                      +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
+   if SearchChan=="bing":
       AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
-                      +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community ID'][count]);
-            
-    if str(NewDataFrame['Community ID'][count]).find("nan")>-1:
+                      +str(">")+"Mixed"+str(">")+communityName+str("_>")+str(NewDataFrame['Community Id'][count]);
+   if str(NewDataFrame['Community Id'][count]).find("nan")>-1:
             AdgroupNaming_conv=str(NewDataFrame['City'][count])+str("_")+str(NewDataFrame['State'][count])+str(">")+str(NewDataFrame['Market ID'][count])\
                       +str(">")+communityName+str("_>");
-      
-    Adgroup.append(AdgroupNaming_conv);
-    Adgroup.append(AdgroupNaming_conv);
-    Adgroup.append(AdgroupNaming_conv);
     
-    Match_Type.append("Phrase")
-    Match_Type.append("Broad")
-    Match_Type.append("Exact")
+   Adgroup.append(AdgroupNaming_conv);
+   Adgroup.append(AdgroupNaming_conv);
+   Adgroup.append(AdgroupNaming_conv);
+
+   Match_Type.append("Phrase")
+   Match_Type.append("Broad")
+   Match_Type.append("Exact")
       
-    Status.append("Active")
-    Status.append("Active")
-    Status.append("Active")
-      
-    Title1A_Name_Conv=communityName
-    if len(Title1A_Name_Conv)>29:
-       Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find("at")-1]
-    if len(Title1A_Name_Conv)>29:
-       Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find(" ",2)]
-    if len(Title1A_Name_Conv)< 20:
-       Title1A_Name_Conv=Title1A_Name_Conv+" New Homes" 
+   Status.append("Active")
+   Status.append("Active")
+   Status.append("Active")
+   
+   hl1pos.append(1);  
+   hl2pos.append(2);
+   hl1pos.append(1);  
+   hl2pos.append(2); 
+   hl1pos.append(1);  
+   hl2pos.append(2);
+   RSALabel.append("RSA Ads");
+   RSALabel.append("RSA Ads");  
+   RSALabel.append("RSA Ads");      
+   Adtype.append("Responsive search ad");  
+   Adtype.append("Responsive search ad");
+   Adtype.append("Responsive search ad");
+   
+   Title1A_Name_Conv=communityName
+   if len(Title1A_Name_Conv)>29:
+    Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find("at")-1]
+   if len(Title1A_Name_Conv)>29:
+    Title1A_Name_Conv=Title1A_Name_Conv[:Title1A_Name_Conv.find(" ",2)]
+   if len(Title1A_Name_Conv)< 20:
+    Title1A_Name_Conv=Title1A_Name_Conv+" New Homes" 
    Title1A.append(Title1A_Name_Conv);
    Title1A.append(Title1A_Name_Conv);
    Title1A.append(Title1A_Name_Conv);
@@ -678,16 +693,87 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title2A.append(Title2A_conv)
    Title2A.append(Title2A_conv)
    Title2A.append(Title2A_conv)
-   print("AFTER TITLE 2A----==============================================")  
-   print("AFTER TITLE 2A----==============================================") 
-   print("AFTER TITLE 2A----==============================================")  
-   print("AFTER TITLE 2A----==============================================")    
+   
+   Title3ACopy="Schedule a new home tour today"
+   #if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['With At Least One MultiFamily Plan'][count]==1:
+   #   Title3ACopy="Multi-Family Floor Plans"
+   Title3A.append(Title3ACopy)
+   Title3A.append(Title3ACopy)
+   Title3A.append(Title3ACopy)
+   
+   Title4ACopy="View Move-in Ready Homes"
+   #if NewDataFrame['Active Adult'][count]==1:
+   #   Title4ACopy="55+ Active Adult Living"
+   Title4A.append(Title4ACopy);
+   Title4A.append(Title4ACopy);
+   Title4A.append(Title4ACopy);
+
+   Title5ACopy="Your Dream Home Awaits"
+   #if NewDataFrame['Has A Luxury Home'][count]==1:
+   #   Title5ACopy="Luxurious Features Available"   
+   Title5A.append(Title5ACopy); 
+   Title5A.append(Title5ACopy);
+   Title5A.append(Title5ACopy);
       
-   Title3A.append("Schedule a new home tour today")
-   Title3A.append("Schedule a new home tour today")
-   Title3A.append("Schedule a new home tour today")
-  
- 
+   Title6ACopy="Your New Home is Waiting"
+   #if NewDataFrame['Gated'][count]==1:
+   #   Title6ACopy="Enjoy Safe Gated Communities"  
+   Title6A.append(Title6ACopy);
+   Title6A.append(Title6ACopy);
+   Title6A.append(Title6ACopy);
+   
+   Title7ACopy="Finest Location & Amenities"
+   #if NewDataFrame['Pool'][count]==1:
+   #   Title7ACopy="Beautiful Resort-Style Pools"
+   Title7A.append(Title7ACopy);
+   Title7A.append(Title7ACopy);
+   Title7A.append(Title7ACopy);
+
+   Title8ACopy="Move in Ready Homes Available! "
+   #if NewDataFrame['Green'][count]==1:
+   #   Title7ACopy="Energy-Efficient & Eco-Smart"   
+   Title8A.append(Title8ACopy);
+   Title8A.append(Title8ACopy);
+   Title8A.append(Title8ACopy);   
+
+
+   Title9ACopy="------------"
+   #if NewDataFrame['Parks'][count]==1 or NewDataFrame['Nature'][count]==1:
+   #   Title7ACopy="Access to Parks and Green Spaces"      
+   Title9A.append(Title9ACopy);
+   Title9A.append(Title9ACopy);
+   Title9A.append(Title9ACopy);
+
+   Title10ACopy="- 10 no default " 
+   Title10A.append(Title10ACopy);
+   Title10A.append(Title10ACopy);
+   Title10A.append(Title10ACopy);   
+
+   Title11ACopy="- 11 no default "  
+   Title11A.append(Title11ACopy);
+   Title11A.append(Title11ACopy);
+   Title11A.append(Title11ACopy);
+
+   Title12ACopy="- 12 no default " 
+   Title12A.append(Title12ACopy);
+   Title12A.append(Title12ACopy);
+   Title12A.append(Title12ACopy);   
+
+   Title13ACopy="- 13 no default " 
+   Title13A.append(Title13ACopy);
+   Title13A.append(Title13ACopy);
+   Title13A.append(Title13ACopy);   
+
+   Title14ACopy="- 14 no default "
+   Title14A.append(Title14ACopy);
+   Title14A.append(Title14ACopy);
+   Title14A.append(Title14ACopy);   
+
+   Title15ACopy="- 15 no default "
+   Title15A.append(Title15ACopy);
+   Title15A.append(Title15ACopy);
+   Title15A.append(Title15ACopy);   
+   
 
    PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])
@@ -707,15 +793,24 @@ def KeywordGenII(NewDataFrame,SearchChan):
    TextA.append(PreTextA);
    TextA.append(PreTextA);
  
-   TextB.append(PreTextB);
-   TextB.append(PreTextB);
-   TextB.append(PreTextB); 
+  
       
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
-
-
+   
+   Text3A.append("Get connected with trusted builders to see more floor plans & offers of your future home.");
+   Text3A.append("Get connected with trusted builders to see more floor plans & offers of your future home.");
+   Text3A.append("Get connected with trusted builders to see more floor plans & offers of your future home.");   
+    
+   Text4A.append("Save more money by buying a newly constructed home and enjoy a lower cost of ownership!");
+   Text4A.append("Save more money by buying a newly constructed home and enjoy a lower cost of ownership!");
+   Text4A.append("Save more money by buying a newly constructed home and enjoy a lower cost of ownership!");   
+  
+   TextB.append(PreTextB);
+   TextB.append(PreTextB);
+   TextB.append(PreTextB); 
+   
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
    if len(Path1A_conv)>15:
     Path1A_conv=Path1A_conv.replace("-","")
@@ -748,24 +843,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Path2A.append("New Homes")
    Path2A.append("New Homes")
    Path2A.append("New Homes") 
-     
-   
-   if URL_Struct1.find("mpc community")>-1:
-          communityName=communityName.replace(" ","%20").replace(" s ","").replace("61s","").replace("64s","").replace("71s","").replace("74s","").replace("81s","")\
-          .replace("61s","").replace("94s","").replace(" s ","").replace("74's ","");  
-          URL_Struct1=str("https://www.newhomesource.com/communities/"+NewDataFrame['State']\
-                     [count]+"/"+NewDataFrame['Market Name'][count]+"-area?communityname="+communityName).lower()     
-                  
-          URL_Struct1=URL_Struct1.replace(" ","-").replace("'","").replace("m/s","m-s").replace("---","-").replace("--","-")\
-               .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
-               .replace("Lots","");
-         
-          if SearchChan.lower().find("google")>-1:
-                  URL_Struct1=URL_Struct1+"?refer=gppc405"
-          if SearchChan.lower().find("bing")>-1:
-                  URL_Struct1=URL_Struct1+"?refer=msm205"
-                  
-         
+
+    
               
    nadgrp=AdgroupNaming_conv.replace("nan","")
    if nadgrp[len(nadgrp)-1]==">":
@@ -778,21 +857,18 @@ def KeywordGenII(NewDataFrame,SearchChan):
                .replace(" - Coming Soon!","").replace(" coming soon!","").replace(" Homesites ","").replace("m/e","m-e")\
                .replace("Lots","");
           
-          URL_Struct1=URL_Struct1.replace(" ","-")  
+          URL_Struct1=URL_Struct1.replace(" ","-").replace("--","-")   
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
           
           
    else:
-          URL_Struct1=URL_Struct1.replace(" ","-")
+          URL_Struct1=URL_Struct1.replace(" ","-").replace("--","-") 
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
           Final_URL.append(URL_Struct1)
-           
-          
-          
-  
+    
    Keyword_conv=Keyword_conv.replace("+++","+").replace("+ + +","+").replace(" + + + ","+").replace(" + + +","+")\
                   .replace("+ + + ","+").replace("++","+").replace("+ +","+").replace(" ++","+").replace("++ ","+")\
                   .replace(" + +","+").replace("+ + ","+").replace("+–","+").replace("+– ","+").replace(" +–","+")\
@@ -816,7 +892,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Keyword_conv=Keyword_conv.replace("]"," ");     
    Keyword.append(Keyword_conv); 
    Keyword.append(Keyword_conv);
-   #Keyword.append("["+Keyword_conv+"]");   
    label="Created by WebApp"
          
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
@@ -840,122 +915,92 @@ def KeywordGenII(NewDataFrame,SearchChan):
       
   except:
    NewDataFrame=NewDataFrame.drop([count])
-   #print("except KW Gen count ",count)
+  
   count+=1;
    
- #hl1pos.append(1);  
- #hl2pos.append(2);
- print("(hl1pos) ",len(hl1pos));
- print("(hl2pos) ",len(hl2pos));
+
+
  print("len(Campaign_Name) = ",len(Campaign_Name)) 
  print("len(Adgroup) = ",len(Adgroup))
  print("len(Keyword) = ",len(Keyword))  
- print("len(Match_Type) = ",len(Match_Type))
-      
- print("len(:Title1A) = ",len(Title1A)) 
- print("len(:Title2A) = ",len(Title2A))
- print("len(:Title3A) = ",len(Title3A))  
- print("len(:Title4A) = ",len(Title4A))      
- 
-   
+ print("len(Match_Type) = ",len(Match_Type)) 
+ print("Making DataSheets-----------------------------------------------------------------------------------------")  
  GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Labels":KWLabel} 
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
  GoogleAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
-                "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
+                 "Description":TextA,"Description 2":Text2A,\
+                 "Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
  GoogleAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
-                "Description":TextB,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":LabelB}
+                 "Description":TextB,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,\
+                 "Final URL":Final_URL,"Status":Status,"Labels":LabelB}
  GoogleAdFrameRSA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Ad type":Adtype,"Labels":RSALabel,"Headline 1":Title1A,"Headline 1 position":hl1pos,"Headline 2":Title2A,"Headline 2 position":hl2pos,"Headline 3":Title3A,\
                  "Headline 4":Title4A,"Headline 5":Title5A,"Headline 6":Title6A,"Headline 7":Title7A,"Headline 8":Title8A,"Headline 9":Title9A,\
                  "Description":TextA,"Description 2":Text2A,"Description 3":Text3A,"Description 4":Text4A,\
-                 "Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}     
+                 "Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}
  GoogleAdFrameA=pandas.DataFrame(GoogleAdFrameA).drop_duplicates()
  GoogleAdFrameB=pandas.DataFrame(GoogleAdFrameB).drop_duplicates()
- GoogleAdFrameRSA=pandas.DataFrame(GoogleAdFrameRSA).drop_duplicates()  
+ print("len(Campaign_Name) = ",len(Campaign_Name)) 
+ print("len(Adtype) = ",len(Adtype))
+ print("len(RSALabel) = ",len(RSALabel))  
+ print("len(hl1pos) = ",len(hl1pos)) 
+ GoogleAdFrameRSA=pandas.DataFrame(GoogleAdFrameRSA).drop_duplicates()     
  BingKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Bid":Bid,"Labels":KWLabel} 
  BingAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
-                "Text":TextA,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
+               "Text":TextA,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,\
+               "Final URL":Final_URL,"Status":Status,"Labels":Label}
  BingAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
-                "Text":TextB,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":LabelB}
+               "Text":TextB,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,\
+               "Status":Status,"Labels":LabelB}
  BingAdFrameRSA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
                 "Title Part 4":Title4A,"Title Part 5":Title5A,"Title Part 6":Title6A,"Title Part 7":Title7A,"Title Part 8":Title8A,"Title Part 9":Title9A,\
                 "Text":TextA,"Text Part 2":Text2A,"Text Part 3":Text3A,"Text Part 4":Text4A,"Path 1":Path1A,"Path 2":Path2A,\
                 "Final URL":Final_URL,"Status":Status,"Labels":Label}
+
  BingKWFrame=pandas.DataFrame(BingKWFrame)
  BingAdFrameA=pandas.DataFrame(BingAdFrameA).drop_duplicates()
  BingAdFrameB=pandas.DataFrame(BingAdFrameB).drop_duplicates()
- BingAdFrameRSA=pandas.DataFrame(BingAdFrameRSA).drop_duplicates() 
-      
- 
- #GoogleKWFrame=GoogleKWFrame[["Campaign Name","Ad Group"]]
- #GoogleKWFrame=GoogleKWFrame.iloc[:100]      
- 
- #print("GoogleKWFrame----------")     
- #print(GoogleKWFrame) 
- """
- print(GoogleKWFrame[["Campaign Name","Ad Group"]])
- GoogleKWFrame=GoogleKWFrame[["Campaign Name","Ad Group"]]  
- print("rows - ",len(GoogleKWFrame.index));
- cftpiawon1=0;
- while cftpiawon1<len(GoogleKWFrame.index):
-          
-       #print(GoogleKWFrame.iloc[cftpiawon1]);
-       #cftpiawon1=cftpiawon1+1;
-       campo=quasit(GoogleKWFrame["Campaign Name"][cftpiawon1],"camp");
-       adgroupo=quasit(GoogleKWFrame["Ad Group"][cftpiawon1],"adgroup");
-       #print("campo==adgroupo ",campo,"-",adgroupo)
-       #print(count," Camp=",campo," Adgroup=",adgroupo,"---") 
-       if campo==adgroupo:
-          print("campo==adgroupo ",campo,"-",adgroupo)
-          print(count," Camp=",campo," Adgroup=",adgroupo,"---")
-       else:
-          print("Mstch")  
-       cftpiawon1=cftpiawon1+1;     
- 
- """
- """
- print(GoogleKWFrame.iloc[0]);
- print(GoogleKWFrame.iloc[1]);
- print(GoogleKWFrame.iloc[2]);
- print(GoogleKWFrame.iloc[3]);
- print(GoogleKWFrame.iloc[4]);
- print(GoogleKWFrame.iloc[5]);     
- """
+ BingAdFrameRSA=pandas.DataFrame(BingAdFrameRSA).drop_duplicates()     
  
 
  if SearchChan=="google":
-   #if MatchType=='SBMM':
-   #print("In KeywordGenII google SBMM ")
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords'
    os.chdir(SaveLocation)
-   #os.remove('GKW.xlsx') 
-   #os.remove('GKW.csv')   
    writer=pandas.ExcelWriter('GKW.xlsx')
    GoogleKWFrame.to_excel(writer)
    GoogleKWFrame.to_csv(r'GKW.csv')   
-   #GoogleKWFrame.to_excel(r'/GMDelight/workPortal/Sheets')   
    writer.save()
-
-   #df="/GMDelight/workPortal/Sheets"
-      
    
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionA'
    os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('GADA.xlsx')
    GoogleAdFrameA.to_excel(writer)
    writer.save()
-   
   
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/GoogleAdsVersionB'
    os.chdir(SaveLocation)
    writer=pandas.ExcelWriter('GADB.xlsx')
-   #writer=SaveLocation   
    GoogleAdFrameB.to_excel(writer)
-   #GoogleAdFrameB.to_excel(writer)
    writer.save()
    
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleAds/'
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('GRSA.xlsx')
+   GoogleAdFrameRSA.to_excel(writer)
+   writer.save()  
+
+   
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/'
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('GoogleAttributes.xlsx')
+   NewDataFrame.to_excel(writer)
+   writer.save() 
+      
+      
  
      
  if SearchChan=="bing":
+   print("BingAdFrameA")
+   print(BingAdFrameA)
    #if MatchType=='SBMM':
    print("In KeywordGen bing SBMM ")
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingKW'
@@ -975,6 +1020,20 @@ def KeywordGenII(NewDataFrame,SearchChan):
    writer=pandas.ExcelWriter('BADB.xlsx')
    BingAdFrameB.to_excel(writer)
    writer.save()
+
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/BingAds/'
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('BRSA.xlsx')
+   BingAdFrameRSA.to_excel(writer)
+   writer.save()
+      
+   SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Bing/BingOutputs/'
+   os.chdir(SaveLocation)
+   writer=pandas.ExcelWriter('BingAttributes.xlsx')
+   NewDataFrame.to_excel(writer)
+   writer.save()    
+ 
+
    
    
 
@@ -1052,43 +1111,7 @@ def initialCommUpdatProcess():
       
  print("======  INSTALL sEEKcOLhEAD()  BOTTOM====================")     
 
- """
- AVersion=str(WorkingCommunities.iloc[[2]].values);
- BVersion=str(WorkingCommunities.iloc[[4]].values);
- CVersion=str(WorkingCommunities.iloc[[0]].values);
-      
-      
- print("AVersion ",AVersion);
- print("BVersion ",BVersion);     
- print("CVersion ",CVersion);
 
-      
- 
-      
- AVersion=str(WorkingCommunities.iloc[[2]].values).find('Community ID');
- BVersion=str(WorkingCommunities.iloc[[4]].values).find('Community ID');
- CVersion=str(WorkingCommunities.iloc[[0]].values).find('Community ID');
-
- print("=======================Watch for Version Print============= Begin")
- print("AVersion ",AVersion);
- print("BVersion ",BVersion);  
- print("CVersion ",CVersion); 
- 
- print("=======================Watch for Version Print============= End")
-
- 
- if AVersion!=-1:
-    print("AVersion-------------------------------------------------------------------");        
-    WorkingCommunities=WorkingCommunities.drop([2,3]);
-    
- if BVersion!=-1:
-    print("BVersion--------------------------------------------------------------------");  
-    WorkingCommunities=WorkingCommunities.drop([2]);
-     
- if CVersion!=-1:
-    print("CVersion--------------------------------------------------------------------");  
-    #WorkingCommunities=WorkingCommunities.drop([2]);
- """
  WorkingCommunities=SeekColHead(WorkingCommunities,'Community ID');
  wcols=str(WorkingCommunities.columns)
  print("wcols ",wcols)     
@@ -1222,7 +1245,7 @@ def initialCommUpdatProcess():
               Baseball.append(y['Baseball'].iloc[locationOfComNumInAttributes]);
               Waterfront.append(y['Waterfront'].iloc[locationOfComNumInAttributes]);
               HasPlanWith2StoriesAndMasterDownstairs.append(y['HasPlanWith2StoriesAndMasterDownstairs'].iloc[locationOfComNumInAttributes]); 
-              #print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
+              print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
            else:
               #comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes]); 
               print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
