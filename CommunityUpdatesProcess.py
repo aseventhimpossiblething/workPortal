@@ -922,9 +922,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
  print("len(RSALabel) = ",len(RSALabel))  
  print("len(Adtype) = ",len(Adtype)) 
  print("len(Title3ACopy) = ",len(Title3ACopy)) 
- print("len(Title4ACopy) = ",len(Title4ACopy)) 
-
-
+ #print("len(Title4ACopy) = ",len(Title4ACopy)) 
+ #print("len(Title4ACopy) = ",len(Title4ACopy)) 
+ #print("len(Title4ACopy) = ",len(Title4ACopy))      
+ #print("len(Title4ACopy) = ",len(Title4ACopy)) 
       
  GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Labels":KWLabel} 
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
