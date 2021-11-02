@@ -854,6 +854,14 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
    Text2A.append("New Homes offer security, energy efficiency, and peace of mind. Skip the remodel, Buy New!")
+
+   Text3A.append("Get connected with trusted builders to see more floor plans & offers of your future home.");
+   Text3A.append("Get connected with trusted builders to see more floor plans & offers of your future home.");
+   Text3A.append("Get connected with trusted builders to see more floor plans & offers of your future home.");   
+    
+   Text4A.append("Save more money by buying a newly constructed home and enjoy a lower cost of ownership!");
+   Text4A.append("Save more money by buying a newly constructed home and enjoy a lower cost of ownership!");
+   Text4A.append("Save more money by buying a newly constructed home and enjoy a lower cost of ownership!");   
    
 
    Path1A_conv=NewDataFrame['City'][count].replace(" ","-")
