@@ -800,7 +800,33 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title10ACopy="- 10 no default " 
    Title10A.append(Title10ACopy);
    Title10A.append(Title10ACopy);
-   Title10A.append(Title10ACopy);    
+   Title10A.append(Title10ACopy);  
+      
+   Title11ACopy="- 11 no default "  
+   Title11A.append(Title11ACopy);
+   Title11A.append(Title11ACopy);
+   Title11A.append(Title11ACopy);
+
+   Title12ACopy="- 12 no default " 
+   Title12A.append(Title12ACopy);
+   Title12A.append(Title12ACopy);
+   Title12A.append(Title12ACopy);   
+
+   Title13ACopy="- 13 no default " 
+   Title13A.append(Title13ACopy);
+   Title13A.append(Title13ACopy);
+   Title13A.append(Title13ACopy);   
+
+   Title14ACopy="- 14 no default "
+   Title14A.append(Title14ACopy);
+   Title14A.append(Title14ACopy);
+   Title14A.append(Title14ACopy);   
+
+   Title15ACopy="- 15 no default "
+   Title15A.append(Title15ACopy);
+   Title15A.append(Title15ACopy);
+   Title15A.append(Title15ACopy);   
+      
       
    
    PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
@@ -979,13 +1005,13 @@ def KeywordGenII(NewDataFrame,SearchChan):
  print("len(Title9A) = ",len(Title9A)) 
  print("len(Title10A) = ",len(Title10A)) 
  print("len(Title11A) = ",len(Title11A))      
- print("len(Title12Ay) = ",len(Title12A))  
+ print("len(Title12A) = ",len(Title12A))  
  print("len(Title13A) = ",len(Title13A)) 
  print("len(Title14A) = ",len(Title14A)) 
  print("len(Title15A) = ",len(Title15A)) 
       
- #print("len(Title16Ay) = ",len(Title16A)) 
- #print("len(Title17A) = ",len(Title17A)) 
+ #print("len(Text3A) = ",len(Text3A) 
+ #print("len(Text4A) = ",len(Text4A) 
  #print("len(Title18A) = ",len(Title18A)) 
  #print("len(Title19A) = ",len(Title19A)) 
  #print("len(Title20A) = ",len(Title20A))      
