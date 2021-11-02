@@ -742,19 +742,26 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title2A.append(Title2A_conv)
    Title2A.append(Title2A_conv)
    Title2A.append(Title2A_conv)
-      
+   """   
    Title3A.append("Schedule a new home tour today")
    Title3A.append("Schedule a new home tour today")
    Title3A.append("Schedule a new home tour today")
-   
-   """ 
+   """
+    
    Title3ACopy="Schedule a new home tour today"
    #if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['With At Least One MultiFamily Plan'][count]==1:
    #   Title3ACopy="Multi-Family Floor Plans"
    Title3A.append(Title3ACopy)
    Title3A.append(Title3ACopy)
-   Title3A.append(Title3ACopy)   
-   """
+   Title3A.append(Title3ACopy) 
+      
+   Title4ACopy="View Move-in Ready Homes"
+   #if NewDataFrame['Active Adult'][count]==1:
+   #   Title4ACopy="55+ Active Adult Living"
+   Title4A.append(Title4ACopy);
+   Title4A.append(Title4ACopy);
+   Title4A.append(Title4ACopy);   
+   
    PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])
       
@@ -923,8 +930,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
  print("len(RSALabel) = ",len(RSALabel))  
  print("len(Adtype) = ",len(Adtype)) 
  print("len(Title3A) = ",len(Title3A)) 
- #print("len(Title4A) = ",len(Title4A)) 
- #print("len(Title5A) = ",len(Title5A)) 
+ print("len(Title4A) = ",len(Title4A)) 
+ print("len(Title5A) = ",len(Title5A)) 
  #print("len(Title6A) = ",len(Title6A))      
  #print("len(Title7Ay) = ",len(Title7A)) 
  #print("len(Title8A) = ",len(Title8A)) 
@@ -934,7 +941,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
  #print("len(Title12Ay) = ",len(Title12A))  
  #print("len(Title13A) = ",len(Title13A)) 
  #print("len(Title14A) = ",len(Title14A)) 
- #print("len(Title15A) = ",len(Title15A))      
+ #print("len(Title15A) = ",len(Title15A)) 
+      
  #print("len(Title16Ay) = ",len(Title16A)) 
  #print("len(Title17A) = ",len(Title17A)) 
  #print("len(Title18A) = ",len(Title18A)) 
