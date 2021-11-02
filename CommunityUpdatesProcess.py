@@ -113,6 +113,7 @@ def WorkingGoogle():
   WorkingGoogle=pandas.DataFrame(WorkingGoogle,columns=['Campaign','Ad Group', 'Final URL'])
   return  WorkingGoogle
   
+"""
 def WorkingBing():
  os.chdir(currentBingLocation)
  WorkingBing=pandas.read_excel('WorkingBing')
@@ -121,6 +122,38 @@ def WorkingBing():
   return IsBingValid
  WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
  return WorkingBing
+"""
+
+def WorkingBing():
+ os.chdir(currentBingLocation)
+ print("Where is working Bing")
+ print(os.getcwd())      
+ print(os.listdir())
+ try:
+    WorkingBing=pandas.read_excel('WorkingBing')
+    #global IsBingValid
+    IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final Url')
+ except:
+    print("BING SHEET REPLACED WITH GOOGLE SHEET!!====BING SHEET REPLACED WITH GOOGLE SHEET!!==BING SHEET REPLACED WITH GOOGLE SHEET!!====BING SHEET REPLACED WITH GOOGLE SHEET!!") 
+    os.chdir(currentGoogleLocation)        
+    WorkingBing=pandas.read_excel('WorkingGoogle')
+    WorkingBing['Final Url']=WorkingBing['Final URL']
+    #global IsBingValid  
+    IsBingValid='Bing Sheet is invalid, Google communities inventory was referenced to generate Bing Ad Set';
+    
+    #IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final URL')
+ #IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final Url')
+ #if IsBingValid!='Valid':
+ # return IsBingValid
+ print("IsBingValid = ",IsBingValid) 
+ os.chdir(fileHandler.SheetsFileLocation);
+ storeRequest=open('BingAlert.txt','w')
+ storeRequest.write(IsBingValid)
+ storeRequest.close()        
+ 
+ WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
+ return WorkingBing
+
 
 
 def filterNonParticipators(theFrame):
