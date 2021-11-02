@@ -1018,8 +1018,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
  print("len(Title14A) = ",len(Title14A)) 
  print("len(Title15A) = ",len(Title15A)) 
       
- #print("len(Text3A) = ",len(Text3A) 
- #print("len(Text4A) = ",len(Text4A) 
+ print("len(Text3A) = ",len(Text3A) 
+ print("len(Text4A) = ",len(Text4A) 
  #print("len(Title18A) = ",len(Title18A)) 
  #print("len(Title19A) = ",len(Title19A)) 
  #print("len(Title20A) = ",len(Title20A))      
