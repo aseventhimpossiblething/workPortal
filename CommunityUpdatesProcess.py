@@ -1221,9 +1221,9 @@ def initialCommUpdatProcess():
            locationOfComNumInAttributes="Community Number Not Found in Attribute Report" 
            if AttributeCommIDstr.count(comNumInMain)>0:
               locationOfComNumInAttributes=AttributeCommIDstr.index(comNumInMain);     
-              print("locationOfComNumInAttributes=",locationOfComNumInAttributes,"--",type(locationOfComNumInAttributes) )
+              #print("locationOfComNumInAttributes=",locationOfComNumInAttributes,"--",type(locationOfComNumInAttributes) )
               comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes]); 
-              print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
+              #print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
               CorrespondingRowInAttributes.append([locationOfComNumInAttributes]);
               CondoORTownHome.append(y['CondoORTownHome?'].iloc[locationOfComNumInAttributes]);
               WithAtLeastOneMultiFamilyPlan.append(y['WithAtLeastOneMultiFamilyPlan'].iloc[locationOfComNumInAttributes]);
@@ -1245,7 +1245,7 @@ def initialCommUpdatProcess():
               #print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
            else:
               #comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes]); 
-              print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
+              #print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
               CorrespondingRowInAttributes.append([locationOfComNumInAttributes]);
               CondoORTownHome.append(locationOfComNumInAttributes);
               WithAtLeastOneMultiFamilyPlan.append(locationOfComNumInAttributes);
