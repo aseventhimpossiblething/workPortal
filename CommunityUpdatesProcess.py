@@ -130,9 +130,8 @@ def WorkingBing():
  print(os.getcwd())      
  print(os.listdir())
  #try:
-    WorkingBing=pandas.read_excel('WorkingBing')
-    #global IsBingValid
-    IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final Url')
+ WorkingBing=pandas.read_excel('WorkingBing')
+ IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final Url')
  """
  except:
     print("BING SHEET REPLACED WITH GOOGLE SHEET!!====BING SHEET REPLACED WITH GOOGLE SHEET!!==BING SHEET REPLACED WITH GOOGLE SHEET!!====BING SHEET REPLACED WITH GOOGLE SHEET!!") 
