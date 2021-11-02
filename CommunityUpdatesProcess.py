@@ -828,13 +828,17 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title14ACopy="Move in Ready Homes Available!"
    if NewDataFrame['Soccer'][count]==1:
       Title14ACopy="In-Community Soccer Field"   
+   if NewDataFrame['Waterfront'][count]==1:
+      Title14ACopy="Waterfront or Preserve Views"    
    Title14A.append(Title14ACopy);
    Title14A.append(Title14ACopy);
    Title14A.append(Title14ACopy);   
 
    Title15ACopy="Schedule a new home tour today"
    if NewDataFrame['Baseball'][count]==1:
-      Title15ACopy="In-Community Baseball Field"   
+      Title15ACopy="In-Community Baseball Field"
+   if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1:
+      Title14ACopy="Main Level Owner's Suite"    
    Title15A.append(Title15ACopy);
    Title15A.append(Title15ACopy);
    Title15A.append(Title15ACopy);   
