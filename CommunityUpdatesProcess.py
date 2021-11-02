@@ -767,7 +767,15 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #   Title5ACopy="Luxurious Features Available"   
    Title5A.append(Title5ACopy); 
    Title5A.append(Title5ACopy);
-   Title5A.append(Title5ACopy);   
+   Title5A.append(Title5ACopy); 
+      
+   Title6ACopy="Your New Home is Waiting"
+   #if NewDataFrame['Gated'][count]==1:
+   #   Title6ACopy="Enjoy Safe Gated Communities"  
+   Title6A.append(Title6ACopy);
+   Title6A.append(Title6ACopy);
+   Title6A.append(Title6ACopy);
+      
    
    PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])
