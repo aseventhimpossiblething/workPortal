@@ -271,7 +271,7 @@ def MergeURLs(chan,chan2):
  if type(MaintatanceVar)=="<class 'int'>":
    hilecount=MaintatanceVar;
  while count < hilecount :
-  URLS=URLS+chan[count]
+  URLS=URLS+str(chan[count])
   if count % 50000 == 0:
    print(chan2," _ ",count)
    
