@@ -781,7 +781,14 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #   Title7ACopy="Beautiful Resort-Style Pools"
    Title7A.append(Title7ACopy);
    Title7A.append(Title7ACopy);
-   Title7A.append(Title7ACopy);   
+   Title7A.append(Title7ACopy);  
+      
+   Title8ACopy="Move in Ready Homes Available! "
+   #if NewDataFrame['Green'][count]==1:
+   #   Title7ACopy="Energy-Efficient & Eco-Smart"   
+   Title8A.append(Title8ACopy);
+   Title8A.append(Title8ACopy);
+   Title8A.append(Title8ACopy);      
       
    
    PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
