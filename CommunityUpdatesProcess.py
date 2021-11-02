@@ -788,7 +788,19 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #   Title7ACopy="Energy-Efficient & Eco-Smart"   
    Title8A.append(Title8ACopy);
    Title8A.append(Title8ACopy);
-   Title8A.append(Title8ACopy);      
+   Title8A.append(Title8ACopy); 
+      
+   Title9ACopy="------------"
+   #if NewDataFrame['Parks'][count]==1 or NewDataFrame['Nature'][count]==1:
+   #   Title7ACopy="Access to Parks and Green Spaces"      
+   Title9A.append(Title9ACopy);
+   Title9A.append(Title9ACopy);
+   Title9A.append(Title9ACopy);
+
+   Title10ACopy="- 10 no default " 
+   Title10A.append(Title10ACopy);
+   Title10A.append(Title10ACopy);
+   Title10A.append(Title10ACopy);    
       
    
    PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
