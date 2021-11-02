@@ -749,80 +749,92 @@ def KeywordGenII(NewDataFrame,SearchChan):
    """
     
    Title3ACopy="Schedule a new home tour today"
-   #if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['With At Least One MultiFamily Plan'][count]==1:
-   #   Title3ACopy="Multi-Family Floor Plans"
+   if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['With At Least One MultiFamily Plan'][count]==1:
+      Title3ACopy="Multi-Family Floor Plans"
    Title3A.append(Title3ACopy)
    Title3A.append(Title3ACopy)
    Title3A.append(Title3ACopy) 
       
    Title4ACopy="View Move-in Ready Homes"
-   #if NewDataFrame['Active Adult'][count]==1:
-   #   Title4ACopy="55+ Active Adult Living"
+   if NewDataFrame['Active Adult'][count]==1:
+      Title4ACopy="55+ Active Adult Living"
    Title4A.append(Title4ACopy);
    Title4A.append(Title4ACopy);
    Title4A.append(Title4ACopy);
       
    Title5ACopy="Your Dream Home Awaits"
-   #if NewDataFrame['Has A Luxury Home'][count]==1:
-   #   Title5ACopy="Luxurious Features Available"   
+   if NewDataFrame['Has A Luxury Home'][count]==1:
+      Title5ACopy="Luxurious Features Available"   
    Title5A.append(Title5ACopy); 
    Title5A.append(Title5ACopy);
    Title5A.append(Title5ACopy); 
       
-   Title6ACopy="Your New Home is Waiting"
-   #if NewDataFrame['Gated'][count]==1:
-   #   Title6ACopy="Enjoy Safe Gated Communities"  
+   Title6ACopy="Act Now, Homes Selling Fast"
+   if NewDataFrame['Gated'][count]==1:
+      Title6ACopy="Safely Gated & Less Traffic"  
    Title6A.append(Title6ACopy);
    Title6A.append(Title6ACopy);
    Title6A.append(Title6ACopy);
       
    Title7ACopy="Finest Location & Amenities"
-   #if NewDataFrame['Pool'][count]==1:
-   #   Title7ACopy="Beautiful Resort-Style Pools"
+   if NewDataFrame['Pool'][count]==1:
+      Title7ACopy="Beautiful Resort-Style Pools"
    Title7A.append(Title7ACopy);
    Title7A.append(Title7ACopy);
    Title7A.append(Title7ACopy);  
       
-   Title8ACopy="Move in Ready Homes Available! "
-   #if NewDataFrame['Green'][count]==1:
-   #   Title7ACopy="Energy-Efficient & Eco-Smart"   
+   Title8ACopy="Move in Ready Homes Available!"
+   if NewDataFrame['Green'][count]==1:
+      Title8ACopy="Energy-Efficient & Eco-Smart"   
    Title8A.append(Title8ACopy);
    Title8A.append(Title8ACopy);
    Title8A.append(Title8ACopy); 
       
-   Title9ACopy="------------"
-   #if NewDataFrame['Parks'][count]==1 or NewDataFrame['Nature'][count]==1:
-   #   Title7ACopy="Access to Parks and Green Spaces"      
+   Title9ACopy="Schedule a new home tour today"
+   if NewDataFrame['Parks'][count]==1 or NewDataFrame['Nature'][count]==1:
+      Title9ACopy="Access to Parks and Green Spaces"      
    Title9A.append(Title9ACopy);
    Title9A.append(Title9ACopy);
    Title9A.append(Title9ACopy);
 
-   Title10ACopy="- 10 no default " 
+   Title10ACopy="View Move-in Ready Homes"
+   if NewDataFrame['Golf Course'][count]==1:
+      Title10ACopy="Short Drive to Golf Course"   
    Title10A.append(Title10ACopy);
    Title10A.append(Title10ACopy);
    Title10A.append(Title10ACopy);  
       
-   Title11ACopy="- 11 no default "  
+   Title11ACopy="Your Dream Home Awaits" 
+   if NewDataFrame['Tennis'][count]==1:
+      Title11ACopy="In-Community Tennis Court"   
    Title11A.append(Title11ACopy);
    Title11A.append(Title11ACopy);
    Title11A.append(Title11ACopy);
 
-   Title12ACopy="- 12 no default " 
+   Title12ACopy="Finest Location & Amenities"
+   if NewDataFrame['Volleyball'][count]==1:
+      Title12ACopy="In-Community Volleyball Court"   
    Title12A.append(Title12ACopy);
    Title12A.append(Title12ACopy);
    Title12A.append(Title12ACopy);   
 
-   Title13ACopy="- 13 no default " 
+   Title13ACopy="Act Now, Homes Selling Fast"
+   if NewDataFrame['Basketball'][count]==1:
+      Title13ACopy="In-Community Basketball Court"    
    Title13A.append(Title13ACopy);
    Title13A.append(Title13ACopy);
    Title13A.append(Title13ACopy);   
 
-   Title14ACopy="- 14 no default "
+   Title14ACopy="Move in Ready Homes Available!"
+   if NewDataFrame['Soccer'][count]==1:
+      Title14ACopy="In-Community Soccer Field"   
    Title14A.append(Title14ACopy);
    Title14A.append(Title14ACopy);
    Title14A.append(Title14ACopy);   
 
-   Title15ACopy="- 15 no default "
+   Title15ACopy="Schedule a new home tour today"
+   if NewDataFrame['Baseball'][count]==1:
+      Title15ACopy="In-Community Baseball Field"   
    Title15A.append(Title15ACopy);
    Title15A.append(Title15ACopy);
    Title15A.append(Title15ACopy);   
