@@ -1031,20 +1031,28 @@ def KeywordGenII(NewDataFrame,SearchChan):
                 "Description":TextA,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
  GoogleAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Headline 1":Title1A,"Headline 2":Title2A,"Headline 3":Title3A,\
                 "Description":TextB,"Description 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":LabelB}
- GoogleAdFrameA=pandas.DataFrame(GoogleAdFrameA).drop_duplicates()
- GoogleAdFrameB=pandas.DataFrame(GoogleAdFrameB).drop_duplicates()
  GoogleAdFrameRSA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Ad type":Adtype,"Labels":RSALabel,"Headline 1":Title1A,"Headline 1 position":hl1pos,"Headline 2":Title2A,"Headline 2 position":hl2pos,"Headline 3":Title3A,\
                  "Headline 4":Title4A,"Headline 5":Title5A,"Headline 6":Title6A,"Headline 7":Title7A,"Headline 8":Title8A,"Headline 9":Title9A,\
                  "Description":TextA,"Description 2":Text2A,"Description 3":Text3A,"Description 4":Text4A,\
-                 "Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}     
+                 "Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}          
+ GoogleAdFrameA=pandas.DataFrame(GoogleAdFrameA).drop_duplicates()
+ GoogleAdFrameB=pandas.DataFrame(GoogleAdFrameB).drop_duplicates()
+ GoogleAdFrameRSA=pandas.DataFrame(GoogleAdFrameRSA).drop_duplicates()       
+ 
  BingKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Bid":Bid,"Labels":KWLabel} 
  BingAdFrameA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
                 "Text":TextA,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":Label}
  BingAdFrameB={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
                 "Text":TextB,"Text Part 2":Text2A,"Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status,"Labels":LabelB}
+ BingAdFrameRSA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Title Part 1":Title1A,"Title Part 2":Title2A,"Title Part 3":Title3A,\
+                "Title Part 4":Title4A,"Title Part 5":Title5A,"Title Part 6":Title6A,"Title Part 7":Title7A,"Title Part 8":Title8A,"Title Part 9":Title9A,\
+                "Text":TextA,"Text Part 2":Text2A,"Text Part 3":Text3A,"Text Part 4":Text4A,"Path 1":Path1A,"Path 2":Path2A,\
+                "Final URL":Final_URL,"Status":Status,"Labels":Label}
+     
  BingKWFrame=pandas.DataFrame(BingKWFrame)
  BingAdFrameA=pandas.DataFrame(BingAdFrameA).drop_duplicates()
  BingAdFrameB=pandas.DataFrame(BingAdFrameB).drop_duplicates()
+ BingAdFrameRSA=pandas.DataFrame(BingAdFrameRSA).drop_duplicates()     
       
  
  #GoogleKWFrame=GoogleKWFrame[["Campaign Name","Ad Group"]]
