@@ -742,10 +742,17 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title2A.append(Title2A_conv)
    Title2A.append(Title2A_conv)
    Title2A.append(Title2A_conv)
-        
+   """     
    Title3A.append("Schedule a new home tour today")
    Title3A.append("Schedule a new home tour today")
    Title3A.append("Schedule a new home tour today")
+   """
+   Title3ACopy="Schedule a new home tour today"
+   #if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['With At Least One MultiFamily Plan'][count]==1:
+   #   Title3ACopy="Multi-Family Floor Plans"
+   Title3A.append(Title3ACopy)
+   Title3A.append(Title3ACopy)
+   Title3A.append(Title3ACopy)   
 
    PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])
@@ -914,8 +921,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
  print("len(hl2pos) = ",len(hl2pos))
  print("len(RSALabel) = ",len(RSALabel))  
  print("len(Adtype) = ",len(Adtype)) 
+ print("len(Title3ACopy) = ",len(Title3ACopy)) 
+ print("len(Title4ACopy) = ",len(Title4ACopy)) 
 
-     
+
       
  GoogleKWFrame={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Keyword":Keyword,"Match type":Match_Type,"Status":Status,"Max CPC":Bid,"Labels":KWLabel} 
  GoogleKWFrame=pandas.DataFrame(GoogleKWFrame)
