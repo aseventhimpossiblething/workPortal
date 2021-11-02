@@ -760,7 +760,14 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #   Title4ACopy="55+ Active Adult Living"
    Title4A.append(Title4ACopy);
    Title4A.append(Title4ACopy);
-   Title4A.append(Title4ACopy);   
+   Title4A.append(Title4ACopy);
+      
+   Title5ACopy="Your Dream Home Awaits"
+   #if NewDataFrame['Has A Luxury Home'][count]==1:
+   #   Title5ACopy="Luxurious Features Available"   
+   Title5A.append(Title5ACopy); 
+   Title5A.append(Title5ACopy);
+   Title5A.append(Title5ACopy);   
    
    PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])
@@ -932,16 +939,16 @@ def KeywordGenII(NewDataFrame,SearchChan):
  print("len(Title3A) = ",len(Title3A)) 
  print("len(Title4A) = ",len(Title4A)) 
  print("len(Title5A) = ",len(Title5A)) 
- #print("len(Title6A) = ",len(Title6A))      
- #print("len(Title7Ay) = ",len(Title7A)) 
- #print("len(Title8A) = ",len(Title8A)) 
- #print("len(Title9A) = ",len(Title9A)) 
- #print("len(Title10A) = ",len(Title10A)) 
- #print("len(Title11A) = ",len(Title11A))      
- #print("len(Title12Ay) = ",len(Title12A))  
- #print("len(Title13A) = ",len(Title13A)) 
- #print("len(Title14A) = ",len(Title14A)) 
- #print("len(Title15A) = ",len(Title15A)) 
+ print("len(Title6A) = ",len(Title6A))      
+ print("len(Title7Ay) = ",len(Title7A)) 
+ print("len(Title8A) = ",len(Title8A)) 
+ print("len(Title9A) = ",len(Title9A)) 
+ print("len(Title10A) = ",len(Title10A)) 
+ print("len(Title11A) = ",len(Title11A))      
+ print("len(Title12Ay) = ",len(Title12A))  
+ print("len(Title13A) = ",len(Title13A)) 
+ print("len(Title14A) = ",len(Title14A)) 
+ print("len(Title15A) = ",len(Title15A)) 
       
  #print("len(Title16Ay) = ",len(Title16A)) 
  #print("len(Title17A) = ",len(Title17A)) 
