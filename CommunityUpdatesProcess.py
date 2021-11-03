@@ -1221,26 +1221,34 @@ def initialCommUpdatProcess():
      CVersion=str(x.iloc[[2]].values);
      DVersion=str(x.iloc[[3]].values);
      EVersion=str(x.iloc[[4]].values);
+     FVersion=str(x.iloc[[4]].values);
+     GVersion=str(x.iloc[[4]].values);
       
      print("AVersion ",AVersion);
      print("BVersion ",BVersion);     
      print("CVersion ",CVersion);
      print("DVersion ",DVersion);
-     print("EVersion ",EVersion);     
+     print("EVersion ",EVersion);
+     print("EVersion ",FVersion);
+     print("EVersion ",GVersion); 
 
      sheetidcol=y 
      AVersion=str(x.iloc[[0]].values).find(sheetidcol);
      BVersion=str(x.iloc[[1]].values).find(sheetidcol);
      CVersion=str(x.iloc[[2]].values).find(sheetidcol);
      DVersion=str(x.iloc[[3]].values).find(sheetidcol);
-     EVersion=str(x.iloc[[4]].values).find(sheetidcol);     
+     EVersion=str(x.iloc[[4]].values).find(sheetidcol);  
+     FVersion=str(x.iloc[[3]].values).find(sheetidcol);
+     GVersion=str(x.iloc[[4]].values).find(sheetidcol);
      
      print("=======================Watch for Version Print============= Begin")
      print("AVersion ",AVersion);
      print("BVersion ",BVersion);  
      print("CVersion ",CVersion);
      print("DVersion ",DVersion);
-     print("EVersion ",EVersion);     
+     print("EVersion ",EVersion); 
+     print("DVersion ",FVersion);
+     print("EVersion ",GVersion); 
  
      print("=======================Watch for Version Print============= End")
      
@@ -1257,7 +1265,12 @@ def initialCommUpdatProcess():
         print("CVersion--------------------------------------------------------------------");  
         x=x.drop([0,1,2]);
      if EVersion!=-1:
+        print("CVersion--------------------------------------------------------------------"); 
+     if FVersion!=-1:
         print("CVersion--------------------------------------------------------------------");  
+        x=x.drop([0,1,2]);
+     if GVersion!=-1:
+        print("CVersion--------------------------------------------------------------------");        
         x=x.drop([0,1,2,3]);
   
      x.columns=x.iloc[0];
