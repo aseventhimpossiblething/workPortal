@@ -883,7 +883,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title15A.append(Title15ACopy);
    Title15A.append(Title15ACopy);   
       
-      
+   print("NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==",NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count])   
    
    PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])
@@ -1021,7 +1021,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Keyword_conv=Keyword_conv.replace("]"," ");     
    Keyword.append(Keyword_conv); 
    Keyword.append(Keyword_conv);
-   #Keyword.append("["+Keyword_conv+"]");   
    label="Created by WebApp"
          
    city=str(NewDataFrame['City'][count]).lower().replace("-"," ").replace("_"," ").replace(","," ");
@@ -1111,42 +1110,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
  BingAdFrameA=pandas.DataFrame(BingAdFrameA).drop_duplicates()
  BingAdFrameB=pandas.DataFrame(BingAdFrameB).drop_duplicates()
  BingAdFrameRSA=pandas.DataFrame(BingAdFrameRSA).drop_duplicates()     
-      
  
- #GoogleKWFrame=GoogleKWFrame[["Campaign Name","Ad Group"]]
- #GoogleKWFrame=GoogleKWFrame.iloc[:100]      
- 
- print("GoogleKWFrame----------")     
- print(GoogleKWFrame) 
- """
- print(GoogleKWFrame[["Campaign Name","Ad Group"]])
- GoogleKWFrame=GoogleKWFrame[["Campaign Name","Ad Group"]]  
- print("rows - ",len(GoogleKWFrame.index));
- cftpiawon1=0;
- while cftpiawon1<len(GoogleKWFrame.index):
-          
-       #print(GoogleKWFrame.iloc[cftpiawon1]);
-       #cftpiawon1=cftpiawon1+1;
-       campo=quasit(GoogleKWFrame["Campaign Name"][cftpiawon1],"camp");
-       adgroupo=quasit(GoogleKWFrame["Ad Group"][cftpiawon1],"adgroup");
-       #print("campo==adgroupo ",campo,"-",adgroupo)
-       #print(count," Camp=",campo," Adgroup=",adgroupo,"---") 
-       if campo==adgroupo:
-          print("campo==adgroupo ",campo,"-",adgroupo)
-          print(count," Camp=",campo," Adgroup=",adgroupo,"---")
-       else:
-          print("Mstch")  
-       cftpiawon1=cftpiawon1+1;     
- 
- """
- """
- print(GoogleKWFrame.iloc[0]);
- print(GoogleKWFrame.iloc[1]);
- print(GoogleKWFrame.iloc[2]);
- print(GoogleKWFrame.iloc[3]);
- print(GoogleKWFrame.iloc[4]);
- print(GoogleKWFrame.iloc[5]);     
- """
+
  
 
  if SearchChan=="google":
