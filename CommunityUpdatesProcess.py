@@ -883,7 +883,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title15A.append(Title15ACopy);
    Title15A.append(Title15ACopy);   
       
-   print("NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==",NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]," type(NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count])",)   
+   #print("NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==",NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]," type(NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count])",)   
    
    PreTextA="Find your family a perfect new home at "+str(communityName)+" in "+str(NewDataFrame['City'][count])\
       +", "+str(NewDataFrame['State'][count])
