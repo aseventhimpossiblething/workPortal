@@ -841,8 +841,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title9A.append(Title9ACopy);
    Title9A.append(Title9ACopy);
 
-   Title10ACopy="View Move
-      -in Ready Homes"
+   Title10ACopy="View Move-in Ready Homes"
    if NewDataFrame['Golf Course'][count]==1:
       Title10ACopy="Short Drive to Golf Course"   
    Title10A.append(Title10ACopy);
