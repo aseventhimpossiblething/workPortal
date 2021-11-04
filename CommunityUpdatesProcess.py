@@ -798,6 +798,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title4ACopy="View Move-in Ready Homes"
    if NewDataFrame['Active Adult'][count]==1:
       Title4ACopy="55+ Active Adult Living"
+   if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and if NewDataFrame['Active Adult'][count]==0:
+      Title4ACopy="Main Level Owner's Suite"       
    Title4A.append(Title4ACopy);
    Title4A.append(Title4ACopy);
    Title4A.append(Title4ACopy);
@@ -825,7 +827,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
       
    Title8ACopy="Move in Ready Homes Available!"
    if NewDataFrame['Green'][count]==1:
-      Title8ACopy="Energy-Efficient & Eco-Smart"   
+      Title8ACopy="Energy-Efficient & Eco-Smart"
+   if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and if NewDataFrame['Green'][count]==0:
+      Title8ACopy="Main Level Owner's Suite"     
    Title8A.append(Title8ACopy);
    Title8A.append(Title8ACopy);
    Title8A.append(Title8ACopy); 
@@ -837,7 +841,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title9A.append(Title9ACopy);
    Title9A.append(Title9ACopy);
 
-   Title10ACopy="View Move-in Ready Homes"
+   Title10ACopy="View Move
+      -in Ready Homes"
    if NewDataFrame['Golf Course'][count]==1:
       Title10ACopy="Short Drive to Golf Course"   
    Title10A.append(Title10ACopy);
@@ -860,7 +865,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
 
    Title13ACopy="Act Now, Homes Selling Fast"
    if NewDataFrame['Basketball'][count]==1:
-      Title13ACopy="In-Community Basketball Court"    
+      Title13ACopy="In-Community Basketball Court" 
+   if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and if NewDataFrame['Basketball'][count]==0:
+      Title15ACopy="Main Level Owner's Suite"     
    Title13A.append(Title13ACopy);
    Title13A.append(Title13ACopy);
    Title13A.append(Title13ACopy);   
@@ -877,7 +884,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title15ACopy="Schedule a new home tour today"
    if NewDataFrame['Baseball'][count]==1:
       Title15ACopy="In-Community Baseball Field"
-   if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==0:
+   if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and if NewDataFrame['Baseball'][count]==0:
       Title15ACopy="Main Level Owner's Suite"    
    Title15A.append(Title15ACopy);
    Title15A.append(Title15ACopy);
