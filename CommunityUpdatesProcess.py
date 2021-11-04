@@ -806,14 +806,18 @@ def KeywordGenII(NewDataFrame,SearchChan):
       
    Title5ACopy="Your Dream Home Awaits"
    if NewDataFrame['Has A Luxury Home'][count]==1:
-      Title5ACopy="Luxurious Features Available"   
+      Title5ACopy="Luxurious Features Available"
+   if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Has A Luxury Home'][count]==0:
+      Title5ACopy="Waterfront or Preserve Views"   
    Title5A.append(Title5ACopy); 
    Title5A.append(Title5ACopy);
    Title5A.append(Title5ACopy); 
       
    Title6ACopy="Act Now, Homes Selling Fast"
    if NewDataFrame['Gated'][count]==1:
-      Title6ACopy="Enjoy Safe, Gated Communities"  
+      Title6ACopy="Enjoy Safe, Gated Communities" 
+   if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Has A Luxury Home'][count]==0:
+      Title6ACopy="Waterfront or Preserve Views"      
    Title6A.append(Title6ACopy);
    Title6A.append(Title6ACopy);
    Title6A.append(Title6ACopy);
@@ -843,7 +847,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
 
    Title10ACopy="View Move-in Ready Homes"
    if NewDataFrame['Golf Course'][count]==1:
-      Title10ACopy="Short Drive to Golf Course"   
+      Title10ACopy="Short Drive to Golf Course"  
+   if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Golf Course'][count]==0:
+      Title10ACopy="Waterfront or Preserve Views"      
    Title10A.append(Title10ACopy);
    Title10A.append(Title10ACopy);
    Title10A.append(Title10ACopy);  
