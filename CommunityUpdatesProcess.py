@@ -867,7 +867,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if NewDataFrame['Basketball'][count]==1:
       Title13ACopy="In-Community Basketball Court" 
    if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and if NewDataFrame['Basketball'][count]==0:
-      Title15ACopy="Main Level Owner's Suite"     
+      Title13ACopy="Main Level Owner's Suite"     
    Title13A.append(Title13ACopy);
    Title13A.append(Title13ACopy);
    Title13A.append(Title13ACopy);   
