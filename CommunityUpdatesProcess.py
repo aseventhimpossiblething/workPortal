@@ -1252,7 +1252,7 @@ def initialCommUpdatProcess():
      print("GVersion ",GVersion);
      print("HVersion ",HVersion);
      print("IVersion ",IVersion);     
-     print("Jersion ",Jersion);
+     print("Jversion ",JVersion);
      print("KVersion ",KVersion);
      print("LVersion ",LVersion);
      print("MVersion ",MVersion);
