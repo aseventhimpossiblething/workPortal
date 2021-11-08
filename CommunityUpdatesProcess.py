@@ -610,7 +610,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
       if DefaultCopyNum<len(DefaultCopy)+1:   
          Title3ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy+1):
+      if DefaultCopyNum>len(DefaultCopy)+1:
          Title3ACopy=" "; 
   #print()    
   print("Title3A:",Title3A)    
