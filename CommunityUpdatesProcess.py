@@ -599,7 +599,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   Keyword_conv=communityName.replace("  "," ")
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
-      
+  """    
   #-------------------------------------------------------------------
   #-------------------------------------------------------------------
   DefaultCopy=["Schedule a new home tour today","Move in Ready Homes Available!","Your Dream Home Awaits","Act Now, Homes Selling Fast","Finest Location & Amenities","View Move in Ready Homes","Your New Home, on Your Budget","Tour Homes From Your Couch","Explore Floorplans & Designs"];
@@ -620,7 +620,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
           
   #-------------------------------------------------------------------
   #-------------------------------------------------------------------
-      
+  """    
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
@@ -722,7 +722,6 @@ def KeywordGenII(NewDataFrame,SearchChan):
                       +str(">")+communityName+str("_>");
    
    
-   #re.match(,)
    
    def quasit(Campaign_Nameing_Conv,x):
        x=x;     
@@ -730,29 +729,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
        s1=Campaign_Nameing_Conv[locnum+1:];
        locnum2=s1.find(">");
        s2=s1[:locnum2];
-       #print("locnum ",locnum) 
-       #print("locnum2 ",locnum2)
-       #print("s1 ",s1);
-       #print("s2 ",s2);
-       #print(x,"-",s2); 
+    
        return s2;
-       #print(x,s2)  
-   #campo=quasit(Campaign_Nameing_Conv,"camp");
-   #adgroupo=quasit(AdgroupNaming_conv,"adgroup");
-   """   
-   if campo==adgroupo:
-      print("campo==adgroupo ",campo,"-",adgroupo)
-      #print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---")
-   #sh=Campaign_Nameing_Conv[locnum:locnum2]; 
-      
-   print(count," Camp=",Campaign_Nameing_Conv," Adgroup=",AdgroupNaming_conv,"---")
-   print(NewDataFrame)
-   """
-   """
-   Campaign_Name.append(Campaign_Nameing_Conv);
-   Campaign_Name.append(Campaign_Nameing_Conv);  
-   Campaign_Name.append(Campaign_Nameing_Conv);     
-   """
+ 
+
    #AdgroupNaming_conv=AdgroupNaming_conv.replace("Mixed","Phrase")
    Adgroup.append(AdgroupNaming_conv);
    #AdgroupNaming_conv=AdgroupNaming_conv.replace("Phrase","Broad")
@@ -950,7 +930,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
          Title12ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy)+1:
-         Title12ACopy=" ";   
+         Title12ACopy=" "; 
+   print("Title12A-",Title12ACopy)   
    Title12A.append(Title12ACopy);
    Title12A.append(Title12ACopy);
    Title12A.append(Title12ACopy);   
