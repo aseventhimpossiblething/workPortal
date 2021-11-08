@@ -609,10 +609,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
   if NewDataFrame['Volleyball'][count]==1:
       Title12ACopy="In-Community Volleyball Court" 
   else:
-      if DefaultCopyNum<len(DefaultCopy)+1:   
+      if DefaultCopyNum<len(DefaultCopy):   
          Title12ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy)+1:
+      if DefaultCopyNum>len(DefaultCopy):
          Title12ACopy=" "; 
   print("len(DefaultCopy)=",len(DefaultCopy));    
   print("DefaultCopyNum=",DefaultCopyNum); 
