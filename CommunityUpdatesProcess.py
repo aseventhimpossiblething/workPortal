@@ -1233,16 +1233,30 @@ def initialCommUpdatProcess():
      CVersion=str(x.iloc[[2]].values);
      DVersion=str(x.iloc[[3]].values);
      EVersion=str(x.iloc[[4]].values);
-     FVersion=str(x.iloc[[4]].values);
-     GVersion=str(x.iloc[[4]].values);
+     FVersion=str(x.iloc[[5]].values);
+     GVersion=str(x.iloc[[6]].values);
+     HVersion=str(x.iloc[[7]].values);
+     IVersion=str(x.iloc[[8]].values);
+     JVersion=str(x.iloc[[9]].values);
+     KVersion=str(x.iloc[[10]].values);
+     LVersion=str(x.iloc[[11]].values);
+     MVersion=str(x.iloc[[12]].values);
+     NVersion=str(x.iloc[[13]].values); 
       
      print("AVersion ",AVersion);
      print("BVersion ",BVersion);     
      print("CVersion ",CVersion);
      print("DVersion ",DVersion);
      print("EVersion ",EVersion);
-     print("EVersion ",FVersion);
-     print("EVersion ",GVersion); 
+     print("FVersion ",FVersion);
+     print("GVersion ",GVersion);
+     print("HVersion ",HVersion);
+     print("IVersion ",IVersion);     
+     print("Jersion ",Jersion);
+     print("KVersion ",KVersion);
+     print("LVersion ",LVersion);
+     print("MVersion ",MVersion);
+     print("NVersion ",NVersion); 
 
      sheetidcol=y 
      AVersion=str(x.iloc[[0]].values).find(sheetidcol);
@@ -1250,8 +1264,15 @@ def initialCommUpdatProcess():
      CVersion=str(x.iloc[[2]].values).find(sheetidcol);
      DVersion=str(x.iloc[[3]].values).find(sheetidcol);
      EVersion=str(x.iloc[[4]].values).find(sheetidcol);  
-     FVersion=str(x.iloc[[3]].values).find(sheetidcol);
-     GVersion=str(x.iloc[[4]].values).find(sheetidcol);
+     FVersion=str(x.iloc[[5]].values).find(sheetidcol);
+     GVersion=str(x.iloc[[6]].values).find(sheetidcol);
+     HVersion=str(x.iloc[[7]].values).find(sheetidcol);
+     IVersion=str(x.iloc[[8]].values).find(sheetidcol);
+     JVersion=str(x.iloc[[9]].values).find(sheetidcol);
+     KVersion=str(x.iloc[[10]].values).find(sheetidcol);
+     LVersion=str(x.iloc[[11]].values).find(sheetidcol);  
+     MVersion=str(x.iloc[[12]].values).find(sheetidcol);
+     NVersion=str(x.iloc[[13]].values).find(sheetidcol); 
      
      print("=======================Watch for Version Print============= Begin")
      print("AVersion ",AVersion);
@@ -1259,8 +1280,15 @@ def initialCommUpdatProcess():
      print("CVersion ",CVersion);
      print("DVersion ",DVersion);
      print("EVersion ",EVersion); 
-     print("DVersion ",FVersion);
-     print("EVersion ",GVersion); 
+     print("FVersion ",FVersion);
+     print("GVersion ",GVersion); 
+     print("HVersion ",HVersion);
+     print("IVersion ",IVersion);  
+     print("JVersion ",JVersion);
+     print("KVersion ",KVersion);
+     print("LVersion ",LVersion); 
+     print("MVersion ",MVersion);
+     print("NVersion ",NVersion);  
  
      print("=======================Watch for Version Print============= End")
      
@@ -1277,13 +1305,35 @@ def initialCommUpdatProcess():
         print("CVersion--------------------------------------------------------------------");  
         x=x.drop([0,1,2]);
      if EVersion!=-1:
-        print("CVersion--------------------------------------------------------------------"); 
+        print("CVersion--------------------------------------------------------------------");
+        x=x.drop([0,1,2,3]);    
      if FVersion!=-1:
         print("CVersion--------------------------------------------------------------------");  
-        x=x.drop([0,1,2]);
+        x=x.drop([0,1,2,3,4]);
      if GVersion!=-1:
         print("CVersion--------------------------------------------------------------------");        
-        x=x.drop([0,1,2,3]);
+        x=x.drop([0,1,2,3,4,5]);
+     if HVersion!=-1:
+        print("AVersion-------------------------------------------------------------------"); 
+        x=x.drop([0,1,2,3,4,5,6]);    
+     if IVersion!=-1:
+        print("BVersion--------------------------------------------------------------------");  
+        x=x.drop([0,1,2,3,4,5,6,7]);
+     if JVersion!=-1:
+        print("CVersion--------------------------------------------------------------------");  
+        x=x.drop([0,1,2,3,4,5,6,7,8]);
+     if KVersion!=-1:
+        print("CVersion--------------------------------------------------------------------");  
+        x=x.drop([0,1,2,3,4,5,6,7,8,9]);
+     if LVersion!=-1:
+        print("CVersion--------------------------------------------------------------------"); 
+        x=x.drop([0,1,2,3,4,5,6,7,8,9,10]);    
+     if MVersion!=-1:
+        print("CVersion--------------------------------------------------------------------");  
+        x=x.drop([0,1,2,3,4,5,6,7,8,9,10,11]);
+     if NVersion!=-1:
+        print("CVersion--------------------------------------------------------------------");        
+        x=x.drop([0,1,2,3,4,5,6,7,8,9,10,11,12]); 
   
      x.columns=x.iloc[0];
      
