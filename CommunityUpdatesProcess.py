@@ -816,7 +816,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    else:
       if DefaultCopyNum<len(DefaultCopy):   
          Title3ACopy=DefaultCopy[DefaultCopyNum];
-         DefaultCopyNum=DefaultCopyNum;
+         DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy):
          Title3ACopy=" ";   
    Title3A.append(Title3ACopy)
@@ -831,7 +831,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    else:
       if DefaultCopyNum<len(DefaultCopy):   
          Title4ACopy=DefaultCopy[DefaultCopyNum];
-         DefaultCopyNum=DefaultCopyNum;
+         DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy):
          Title4ACopy=" ";  
    Title4A.append(Title4ACopy);
@@ -846,7 +846,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    else:
       if DefaultCopyNum<len(DefaultCopy):   
          Title5ACopy=DefaultCopy[DefaultCopyNum];
-         DefaultCopyNum=DefaultCopyNum;
+         DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy):
          Title5ACopy=" ";    
    Title5A.append(Title5ACopy); 
@@ -861,7 +861,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    else:
       if DefaultCopyNum<len(DefaultCopy):   
          Title6ACopy=DefaultCopy[DefaultCopyNum];
-         DefaultCopyNum=DefaultCopyNum;
+         DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy):
          Title6ACopy=" ";   
    Title6A.append(Title6ACopy);
@@ -874,7 +874,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    else:
       if DefaultCopyNum<len(DefaultCopy):   
          Title7ACopy=DefaultCopy[DefaultCopyNum];
-         DefaultCopyNum=DefaultCopyNum;
+         DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy):
          Title7ACopy=" ";   
    Title7A.append(Title7ACopy);
@@ -889,7 +889,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    else:
       if DefaultCopyNum<len(DefaultCopy):   
          Title8ACopy=DefaultCopy[DefaultCopyNum];
-         DefaultCopyNum=DefaultCopyNum;
+         DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy):
          Title8ACopy=" ";   
    Title8A.append(Title8ACopy);
@@ -902,7 +902,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    else:
       if DefaultCopyNum<len(DefaultCopy):   
          Title9ACopy=DefaultCopy[DefaultCopyNum];
-         DefaultCopyNum=DefaultCopyNum;
+         DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy):
          Title9ACopy=" ";   
    Title9A.append(Title9ACopy);
@@ -917,7 +917,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    else:
       if DefaultCopyNum<len(DefaultCopy):   
          Title10ACopy=DefaultCopy[DefaultCopyNum];
-         DefaultCopyNum=DefaultCopyNum;
+         DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy):
          Title10ACopy=" ";   
    Title10A.append(Title10ACopy);
@@ -930,7 +930,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    else:
       if DefaultCopyNum<len(DefaultCopy):   
          Title11ACopy=DefaultCopy[DefaultCopyNum];
-         DefaultCopyNum=DefaultCopyNum;
+         DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy):
          Title11ACopy=" ";   
    Title11A.append(Title11ACopy);
@@ -943,7 +943,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    else:
       if DefaultCopyNum<len(DefaultCopy):   
          Title12ACopy=DefaultCopy[DefaultCopyNum];
-         DefaultCopyNum=DefaultCopyNum;
+         DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy):
          Title12ACopy=" "; 
    #print("Title12A-",Title12ACopy)   
@@ -959,7 +959,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    else:
       if DefaultCopyNum<len(DefaultCopy):   
          Title13ACopy=DefaultCopy[DefaultCopyNum];
-         DefaultCopyNum=DefaultCopyNum;
+         DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy):
          Title13ACopy=" ";   
    Title13A.append(Title13ACopy);
@@ -974,7 +974,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    else:
       if DefaultCopyNum<len(DefaultCopy):   
          Title14ACopy=DefaultCopy[DefaultCopyNum];
-         DefaultCopyNum=DefaultCopyNum;
+         DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy):
          Title14ACopy=" ";   
    Title14A.append(Title14ACopy);
@@ -989,7 +989,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    else:
       if DefaultCopyNum<len(DefaultCopy):   
          Title15ACopy=DefaultCopy[DefaultCopyNum];
-         DefaultCopyNum=DefaultCopyNum;
+         DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy):
          Title15ACopy=" ";   
    Title15A.append(Title15ACopy);
