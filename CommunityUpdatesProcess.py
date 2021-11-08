@@ -1402,8 +1402,8 @@ def initialCommUpdatProcess():
      HasPlanWith2StoriesAndMasterDownstairs=[];
      #colnames=y.columns
      AttributeCommIDstr=[];
-     CommunityID='CommunityID' 
-     for commIDnumstrs in y[CommunityID]:
+     yCommunityID='CommunityID' 
+     for commIDnumstrs in y[yCommunityID]:
          AttributeCommIDstr.append(str(commIDnumstrs));
          
      count=0;
