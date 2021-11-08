@@ -1101,7 +1101,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  GoogleAdFrameRSA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Ad type":Adtype,"Labels":RSALabel,"Headline 1":Title1A,"Headline 1 position":hl1pos,"Headline 2":Title2A,"Headline 3":Title3A,\
                  "Headline 4":Title4A,"Headline 5":Title5A,"Headline 6":Title6A,"Headline 7":Title7A,"Headline 8":Title8A,"Headline 9":Title9A,\
                  "Headline 10":Title10A,"Headline 11":Title11A,"Headline 12":Title12A,"Headline 13":Title13A,"Headline 14":Title14A,"Headline 15":Title15A,\
-                 "Description":TextA,"Description 2":Text2A,"Description 3":Text3A,"Description 4":Text4A,\
+                 "Description 1":TextA,"Description 2":Text2A,"Description 3":Text3A,"Description 4":Text4A,\
                  "Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}          
  GoogleAdFrameA=pandas.DataFrame(GoogleAdFrameA).drop_duplicates()
  GoogleAdFrameB=pandas.DataFrame(GoogleAdFrameB).drop_duplicates()
@@ -1122,7 +1122,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  BingAdFrameRSA={"Campaign Name":Campaign_Name,"Ad Group":Adgroup,"Ad type":Adtype,"Labels":RSALabel,"Headline 1":Title1A,"Headline 1 position":hl1pos,"Headline 2":Title2A,"Headline 3":Title3A,\
                  "Headline 4":Title4A,"Headline 5":Title5A,"Headline 6":Title6A,"Headline 7":Title7A,"Headline 8":Title8A,"Headline 9":Title9A,\
                  "Headline 10":Title10A,"Headline 11":Title11A,"Headline 12":Title12A,"Headline 13":Title13A,"Headline 14":Title14A,"Headline 15":Title15A,\
-                 "Description":TextA,"Description 2":Text2A,"Description 3":Text3A,"Description 4":Text4A,\
+                 "Description 1":TextA,"Description 2":Text2A,"Description 3":Text3A,"Description 4":Text4A,\
                  "Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status} 
      
  BingKWFrame=pandas.DataFrame(BingKWFrame)
