@@ -547,7 +547,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
  if type(MaintatanceVar)=="<class 'int'>":
   hilecount=MaintatanceVar;
  
- 
+ DefaultCopyNum=0;
  while count < hilecount:
   communityName=str(NewDataFrame['Community Name'][count]);
   communityName=communityName.replace(" s ","").replace("40s","").replace("40's","").replace(" 40s ","").replace("45s","")\
@@ -603,7 +603,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   #-------------------------------------------------------------------
   #-------------------------------------------------------------------
   DefaultCopy=["Schedule a new home tour today","Move in Ready Homes Available!","Your Dream Home Awaits","Act Now, Homes Selling Fast","Finest Location & Amenities","View Move in Ready Homes","Your New Home, on Your Budget","Tour Homes From Your Couch","Explore Floorplans & Designs"];
-  DefaultCopyNum=0;
+  #DefaultCopyNum=0;
  
   Title12ACopy="Finest Location & Amenities"
   if NewDataFrame['Volleyball'][count]==1:
