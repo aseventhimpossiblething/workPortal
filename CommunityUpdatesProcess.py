@@ -599,13 +599,14 @@ def KeywordGenII(NewDataFrame,SearchChan):
   Keyword_conv=communityName.replace("  "," ")
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
-     
+  
+  """
   #-------------------------------------------------------------------
   #-------------------------------------------------------------------
   DefaultCopy=["Schedule a new home tour today","Move in Ready Homes Available!","Your Dream Home Awaits","Act Now, Homes Selling Fast","Finest Location & Amenities","View Move in Ready Homes","Your New Home, on Your Budget","Tour Homes From Your Couch","Explore Floorplans & Designs"];
   #DefaultCopyNum=0;
  
-  Title12ACopy="Finest Location & Amenities"
+  Title12ACopy=DefaultCopy[DefaultCopyNum];
   if NewDataFrame['Volleyball'][count]==1:
       Title12ACopy="In-Community Volleyball Court" 
   else:
@@ -624,7 +625,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
           
   #-------------------------------------------------------------------
   #-------------------------------------------------------------------
-    
+  """
+      
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
@@ -787,11 +789,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title2A.append(Title2A_conv)
    Title2A.append(Title2A_conv)
    Title2A.append(Title2A_conv)
-   """   
-   Title3A.append("Schedule a new home tour today")
-   Title3A.append("Schedule a new home tour today")
-   Title3A.append("Schedule a new home tour today")
-   """
+  
 
    DefaultCopy=["Schedule a new home tour today","Move in Ready Homes Available!","Your Dream Home Awaits","Act Now, Homes Selling Fast","Finest Location & Amenities","View Move in Ready Homes","Your New Home, on Your Budget","Tour Homes From Your Couch","Explore Floorplans & Designs"];
    DefaultCopyNum=0;
@@ -800,6 +798,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if DefaultCopyNum>1:   
       Title3ACopy=DefaultCopy[DefaultCopyNum];
    """   
+   Title3ACopy=DefaultCopy[DefaultCopyNum];   
    if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['With At Least One MultiFamily Plan'][count]==1:
       Title3ACopy="Multi-Family Floor Plans"
    else:
@@ -812,7 +811,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title3A.append(Title3ACopy)
    Title3A.append(Title3ACopy) 
       
-   #Title4ACopy="Move in Ready Homes Available!"
+   Title4ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Active Adult'][count]==1:
       Title4ACopy="55+ Active Adult Living"
    if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Active Adult'][count]==0:
@@ -827,7 +826,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title4A.append(Title4ACopy);
    Title4A.append(Title4ACopy);
       
-   #Title5ACopy="Your Dream Home Awaits"
+   Title5ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Has A Luxury Home'][count]==1:
       Title5ACopy="Luxurious Features Available"
    if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Has A Luxury Home'][count]==0:
@@ -842,7 +841,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title5A.append(Title5ACopy);
    Title5A.append(Title5ACopy); 
       
-   #Title6ACopy="Act Now, Homes Selling Fast"
+   Title6ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Gated'][count]==1:
       Title6ACopy="Enjoy Safe, Gated Communities" 
    if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Has A Luxury Home'][count]==0:
@@ -857,7 +856,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title6A.append(Title6ACopy);
    Title6A.append(Title6ACopy);
       
-   #Title7ACopy="Finest Location & Amenities"
+   Title7ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Pool'][count]==1:
       Title7ACopy="Beautiful Resort-Style Pools"
    else:
@@ -870,7 +869,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title7A.append(Title7ACopy);
    Title7A.append(Title7ACopy);  
       
-   #Title8ACopy="Move in Ready Homes Available!"
+   Title8ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Green'][count]==1:
       Title8ACopy="Energy-Efficient & Eco-Smart"
    if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Green'][count]==0:
@@ -885,7 +884,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title8A.append(Title8ACopy);
    Title8A.append(Title8ACopy); 
       
-   Title9ACopy="Schedule a new home tour today"
+   Title9ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Parks'][count]==1 or NewDataFrame['Nature'][count]==1:
       Title9ACopy="Access to Parks and Green Spaces" 
    else:
@@ -898,7 +897,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title9A.append(Title9ACopy);
    Title9A.append(Title9ACopy);
 
-   Title10ACopy="Move in Ready Homes Available!"
+   Title10ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Golf Course'][count]==1:
       Title10ACopy="Short Drive to Golf Course"  
    if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Golf Course'][count]==0:
@@ -913,7 +912,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title10A.append(Title10ACopy);
    Title10A.append(Title10ACopy);  
       
-   Title11ACopy="Your Dream Home Awaits" 
+   Title11ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Tennis'][count]==1:
       Title11ACopy="In-Community Tennis Court" 
    else:
@@ -926,7 +925,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title11A.append(Title11ACopy);
    Title11A.append(Title11ACopy);
 
-   Title12ACopy="Finest Location & Amenities"
+   Title12ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Volleyball'][count]==1:
       Title12ACopy="In-Community Volleyball Court" 
    else:
@@ -940,7 +939,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title12A.append(Title12ACopy);
    Title12A.append(Title12ACopy);   
 
-   Title13ACopy="Act Now, Homes Selling Fast"
+   Title13ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Basketball'][count]==1:
       Title13ACopy="In-Community Basketball Court" 
    if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Basketball'][count]==0:
@@ -955,7 +954,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title13A.append(Title13ACopy);
    Title13A.append(Title13ACopy);   
 
-   Title14ACopy="Move in Ready Homes Available!"
+   Title14ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Soccer'][count]==1:
       Title14ACopy="In-Community Soccer Field"   
    if NewDataFrame['Waterfront'][count]==1:
@@ -970,7 +969,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title14A.append(Title14ACopy);
    Title14A.append(Title14ACopy);   
 
-   Title15ACopy="Schedule a new home tour today"
+   Title15ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Baseball'][count]==1:
       Title15ACopy="In-Community Baseball Field"
    if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Baseball'][count]==0:
