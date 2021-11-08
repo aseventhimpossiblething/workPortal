@@ -599,28 +599,29 @@ def KeywordGenII(NewDataFrame,SearchChan):
   Keyword_conv=communityName.replace("  "," ")
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
-  """    
+     
   #-------------------------------------------------------------------
   #-------------------------------------------------------------------
   DefaultCopy=["Schedule a new home tour today","Move in Ready Homes Available!","Your Dream Home Awaits","Act Now, Homes Selling Fast","Finest Location & Amenities","View Move in Ready Homes","Your New Home, on Your Budget","Tour Homes From Your Couch","Explore Floorplans & Designs"];
   DefaultCopyNum=0;
-  if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['With At Least One MultiFamily Plan'][count]==1:
-      Title3ACopy="Multi-Family Floor Plans"
+ 
+  Title12ACopy="Finest Location & Amenities"
+  if NewDataFrame['Volleyball'][count]==1:
+      Title12ACopy="In-Community Volleyball Court" 
   else:
       if DefaultCopyNum<len(DefaultCopy)+1:   
-         Title3ACopy=DefaultCopy[DefaultCopyNum];
+         Title12ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy)+1:
-         Title3ACopy=" "; 
-  #print()    
-  print("Title3A:",Title3A)    
-  Title3A.append(Title3ACopy)
-  Title3A.append(Title3ACopy)
-  Title3A.append(Title3ACopy) 
+         Title12ACopy=" "; 
+  print("Title12A-",Title12ACopy)   
+  Title12A.append(Title12ACopy);
+  Title12A.append(Title12ACopy);
+  Title12A.append(Title12ACopy); 
           
   #-------------------------------------------------------------------
   #-------------------------------------------------------------------
-  """    
+    
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
@@ -931,7 +932,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
          DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy)+1:
          Title12ACopy=" "; 
-   print("Title12A-",Title12ACopy)   
+   #print("Title12A-",Title12ACopy)   
    Title12A.append(Title12ACopy);
    Title12A.append(Title12ACopy);
    Title12A.append(Title12ACopy);   
