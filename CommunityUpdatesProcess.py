@@ -1379,6 +1379,9 @@ def initialCommUpdatProcess():
  AttributeFormatChecknumber=str(WorkingAttributes.columns).find('CommunityID')
  print("AttributeFormatChecknumber======",AttributeFormatChecknumber);     
  def AttributeAssignCols(x,y):
+     print(y)       
+     print(y)
+     print(y.columns)
      CorrespondingRowInAttributes=[];
      CondoORTownHome=[];
      WithAtLeastOneMultiFamilyPlan=[];
