@@ -611,7 +611,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
          Title3ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy+1):
-         Title3ACopy=" ";   
+         Title3ACopy=" "; 
+  #print()    
+  print("Title3A:",Title3A)    
   Title3A.append(Title3ACopy)
   Title3A.append(Title3ACopy)
   Title3A.append(Title3ACopy) 
