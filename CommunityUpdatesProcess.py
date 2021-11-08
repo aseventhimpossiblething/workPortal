@@ -599,7 +599,26 @@ def KeywordGenII(NewDataFrame,SearchChan):
   Keyword_conv=communityName.replace("  "," ")
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
-   
+      
+  #-------------------------------------------------------------------
+  #-------------------------------------------------------------------
+  DefaultCopy=["Schedule a new home tour today","Move in Ready Homes Available!","Your Dream Home Awaits","Act Now, Homes Selling Fast","Finest Location & Amenities","View Move in Ready Homes","Your New Home, on Your Budget","Tour Homes From Your Couch","Explore Floorplans & Designs"];
+  DefaultCopyNum=0;
+  if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['With At Least One MultiFamily Plan'][count]==1:
+      Title3ACopy="Multi-Family Floor Plans"
+  else:
+      if DefaultCopyNum<len(DefaultCopy+1):   
+         Title3ACopy=DefaultCopy[DefaultCopyNum];
+         DefaultCopyNum=DefaultCopyNum+1;
+      if DefaultCopyNum>len(DefaultCopy+1):
+         Title3ACopy=" ";   
+  Title3A.append(Title3ACopy)
+  Title3A.append(Title3ACopy)
+  Title3A.append(Title3ACopy) 
+          
+  #-------------------------------------------------------------------
+  #-------------------------------------------------------------------
+      
   try:
    if SearchChan=="google":
     URL_Struct1=URL_Struct1+"gppc";
