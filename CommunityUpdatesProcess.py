@@ -795,7 +795,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title3A.append(Title3ACopy)
    Title3A.append(Title3ACopy) 
       
-   Title4ACopy="View Move-in Ready Homes"
+   Title4ACopy="Move in Ready Homes Available!"
    if NewDataFrame['Active Adult'][count]==1:
       Title4ACopy="55+ Active Adult Living"
    if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Active Adult'][count]==0:
@@ -845,7 +845,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title9A.append(Title9ACopy);
    Title9A.append(Title9ACopy);
 
-   Title10ACopy="View Move-in Ready Homes"
+   Title10ACopy="Move in Ready Homes Available!"
    if NewDataFrame['Golf Course'][count]==1:
       Title10ACopy="Short Drive to Golf Course"  
    if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Golf Course'][count]==0:
