@@ -607,7 +607,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['With At Least One MultiFamily Plan'][count]==1:
       Title3ACopy="Multi-Family Floor Plans"
   else:
-      if DefaultCopyNum<len(DefaultCopy1)+1:   
+      if DefaultCopyNum<len(DefaultCopy)+1:   
          Title3ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
       if DefaultCopyNum>len(DefaultCopy+1):
