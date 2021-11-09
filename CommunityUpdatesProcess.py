@@ -612,7 +612,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   print("DefaultCopy[8]",DefaultCopy[8])
   #print("DefaultCopy[9]",DefaultCopy[9])
       
-  Title12ACopy=DefaultCopy[DefaultCopyNum];
+  #Title12ACopy=DefaultCopy[DefaultCopyNum];
   if NewDataFrame['Volleyball'][count]==1:
       Title12ACopy="In-Community Volleyball Court" 
   else:
@@ -626,7 +626,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   #print("DefaultCopy[]=",DefaultCopy);        
   print("Title12A-",Title12ACopy);   
   
-  Title13ACopy=DefaultCopy[DefaultCopyNum];
+  #Title13ACopy=DefaultCopy[DefaultCopyNum];
   if NewDataFrame['Volleyball'][count]==1:
       Title13ACopy="In-Community Volleyball Court" 
   else:
@@ -801,12 +801,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
 
    DefaultCopy=["Schedule a new home tour today","Move in Ready Homes Available!","Your Dream Home Awaits","Act Now, Homes Selling Fast","Finest Location & Amenities","View Move in Ready Homes","Your New Home, on Your Budget","Tour Homes From Your Couch","Explore Floorplans & Designs"];
    DefaultCopyNum=0;
-   """
-   Title3ACopy=" "
-   if DefaultCopyNum>1:   
-      Title3ACopy=DefaultCopy[DefaultCopyNum];
-   """   
-   Title3ACopy=DefaultCopy[DefaultCopyNum];   
+   
+   #Title3ACopy=DefaultCopy[DefaultCopyNum];   
    if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['With At Least One MultiFamily Plan'][count]==1:
       Title3ACopy="Multi-Family Floor Plans"
    else:
@@ -819,7 +815,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title3A.append(Title3ACopy)
    Title3A.append(Title3ACopy) 
       
-   Title4ACopy=DefaultCopy[DefaultCopyNum];
+   #Title4ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Active Adult'][count]==1:
       Title4ACopy="55+ Active Adult Living"
    #if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Active Adult'][count]==0:
@@ -834,7 +830,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title4A.append(Title4ACopy);
    Title4A.append(Title4ACopy);
       
-   Title5ACopy=DefaultCopy[DefaultCopyNum];
+   #Title5ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Has A Luxury Home'][count]==1:
       Title5ACopy="Luxurious Features Available"
    if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Has A Luxury Home'][count]==0:
@@ -849,7 +845,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title5A.append(Title5ACopy);
    Title5A.append(Title5ACopy); 
       
-   Title6ACopy=DefaultCopy[DefaultCopyNum];
+   #Title6ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Gated'][count]==1:
       Title6ACopy="Enjoy Safe, Gated Communities" 
    if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Has A Luxury Home'][count]==0:
@@ -864,7 +860,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title6A.append(Title6ACopy);
    Title6A.append(Title6ACopy);
       
-   Title7ACopy=DefaultCopy[DefaultCopyNum];
+   #Title7ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Pool'][count]==1:
       Title7ACopy="Beautiful Resort-Style Pools"
    else:
@@ -877,7 +873,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title7A.append(Title7ACopy);
    Title7A.append(Title7ACopy);  
       
-   Title8ACopy=DefaultCopy[DefaultCopyNum];
+   #Title8ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Green'][count]==1:
       Title8ACopy="Energy-Efficient & Eco-Smart"
    if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Green'][count]==0:
@@ -892,7 +888,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title8A.append(Title8ACopy);
    Title8A.append(Title8ACopy); 
       
-   Title9ACopy=DefaultCopy[DefaultCopyNum];
+   #Title9ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Parks'][count]==1 or NewDataFrame['Nature'][count]==1:
       Title9ACopy="Access to Parks and Green Spaces" 
    else:
@@ -905,7 +901,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title9A.append(Title9ACopy);
    Title9A.append(Title9ACopy);
 
-   Title10ACopy=DefaultCopy[DefaultCopyNum];
+   #Title10ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Golf Course'][count]==1:
       Title10ACopy="Short Drive to Golf Course"  
    if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Golf Course'][count]==0:
@@ -920,7 +916,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title10A.append(Title10ACopy);
    Title10A.append(Title10ACopy);  
       
-   Title11ACopy=DefaultCopy[DefaultCopyNum];
+   #Title11ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Tennis'][count]==1:
       Title11ACopy="In-Community Tennis Court" 
    else:
@@ -933,7 +929,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title11A.append(Title11ACopy);
    Title11A.append(Title11ACopy);
 
-   Title12ACopy=DefaultCopy[DefaultCopyNum];
+   #Title12ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Volleyball'][count]==1:
       Title12ACopy="In-Community Volleyball Court" 
    else:
@@ -947,7 +943,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title12A.append(Title12ACopy);
    Title12A.append(Title12ACopy);   
 
-   Title13ACopy=DefaultCopy[DefaultCopyNum];
+   #Title13ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Basketball'][count]==1:
       Title13ACopy="In-Community Basketball Court" 
    #if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Basketball'][count]==0:
@@ -962,7 +958,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title13A.append(Title13ACopy);
    Title13A.append(Title13ACopy);   
 
-   Title14ACopy=DefaultCopy[DefaultCopyNum];
+   #Title14ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Soccer'][count]==1:
       Title14ACopy="In-Community Soccer Field"   
    if NewDataFrame['Waterfront'][count]==1:
@@ -977,7 +973,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title14A.append(Title14ACopy);
    Title14A.append(Title14ACopy);   
 
-   Title15ACopy=DefaultCopy[DefaultCopyNum];
+   #Title15ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Baseball'][count]==1:
       Title15ACopy="In-Community Baseball Field"
    #if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Baseball'][count]==0:
