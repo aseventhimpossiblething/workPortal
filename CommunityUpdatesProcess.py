@@ -609,6 +609,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
   print("DefaultCopy[1]",DefaultCopy[1])
   print("DefaultCopy[2]",DefaultCopy[2]) 
   print("DefaultCopy[3]",DefaultCopy[3])
+  print("DefaultCopy[8]",DefaultCopy[8])
+  print("DefaultCopy[9]",DefaultCopy[9])
       
   Title12ACopy=DefaultCopy[DefaultCopyNum];
   if NewDataFrame['Volleyball'][count]==1:
