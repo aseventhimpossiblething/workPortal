@@ -159,11 +159,12 @@ def filterNonParticipators(theFrame):
  print("1.0.0 ")
  print(theFrame)
  def firstDropLoop(theFrame):
-  DropRowsContaining=['Oak Creek','Custom','Oak Creek','Clayton','Oakwood','Craftmark','Freedom','Crossland','del Webb','Webb','webb',\
-                      'G & I','Build on Your Lot','BYOL','Build','build','Manufactured Housing Consultants','Homesites','lots',':ft',\
-                      'Custom','Builders','Homes','LLc','Inc','Contr','Building','Build','Corp','Group','&','Bldg','Improvement',\
-                      'Architect','Properties','BOY','Built','Built on Your Land','ft','Remodeling','development','developer',\
-                      'construction','Llc','design','ltd','housing','constr','consulting','home','restoration'];
+  DropRowsContaining=['Home Designs','Construction co','Construction co.','Construction','Company','Oak Creek','Custom','Oak Creek','Clayton',\
+                      'Home Design','Consulting','Designers','Deseigners','Oakwood','Craftmark','Freedom','Crossland','del Webb','Webb','webb',\
+                      'Development','G & I','Build on Your Lot','BYOL','Build','build','Manufactured Housing Consultants','Homesites','lots',':ft',\
+                      'Home Repair','Custom','Builders','Homes','LLc','Inc','Contr','Building','Build','Corp','Group','&','Bldg','Improvement',\
+                      'Designs','Design','Architect','Properties','BOY','Built','Built on Your Land','ft','Remodeling','development','developer',\
+                      'Management','L.L.C.','Service','construction','Llc','design','ltd','housing','constr','consulting','home','restoration'];
   
   def LowDropRowsContaining(words):
       lowerWords=[]; 
