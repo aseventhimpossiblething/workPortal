@@ -820,10 +820,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['With At Least One MultiFamily Plan'][count]==1:
       Title3ACopy="Multi-Family Floor Plans"
    else:
-      if DefaultCopyNum<len(DefaultCopy)-1:   
+      if DefaultCopyNum<len(DefaultCopy)-2:   
          Title3ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy)-1:
+      if DefaultCopyNum>len(DefaultCopy)-2:
          Title3ACopy=" ";   
    Title3A.append(Title3ACopy)
    Title3A.append(Title3ACopy)
@@ -832,13 +832,13 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title4ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Active Adult'][count]==1:
       Title4ACopy="55+ Active Adult Living"
-   if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Active Adult'][count]==0:
-      Title4ACopy="Main Level Owner's Suite" 
+   #if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Active Adult'][count]==0:
+   #   Title4ACopy="Main Level Owner's Suite" 
    else:
-      if DefaultCopyNum<len(DefaultCopy)-1:   
+      if DefaultCopyNum<len(DefaultCopy)-2:   
          Title4ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy)-1:
+      if DefaultCopyNum>len(DefaultCopy)-2:
          Title4ACopy=" ";  
    Title4A.append(Title4ACopy);
    Title4A.append(Title4ACopy);
@@ -850,10 +850,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Has A Luxury Home'][count]==0:
       Title5ACopy="Waterfront or Preserve Views" 
    else:
-      if DefaultCopyNum<len(DefaultCopy)-1:   
+      if DefaultCopyNum<len(DefaultCopy)-2:   
          Title5ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy)-1:
+      if DefaultCopyNum>len(DefaultCopy)-2:
          Title5ACopy=" ";    
    Title5A.append(Title5ACopy); 
    Title5A.append(Title5ACopy);
@@ -865,10 +865,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Has A Luxury Home'][count]==0:
       Title6ACopy="Waterfront or Preserve Views"
    else:
-      if DefaultCopyNum<len(DefaultCopy)-1:   
+      if DefaultCopyNum<len(DefaultCopy)-2:   
          Title6ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy)-1:
+      if DefaultCopyNum>len(DefaultCopy)-2:
          Title6ACopy=" ";   
    Title6A.append(Title6ACopy);
    Title6A.append(Title6ACopy);
@@ -878,10 +878,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if NewDataFrame['Pool'][count]==1:
       Title7ACopy="Beautiful Resort-Style Pools"
    else:
-      if DefaultCopyNum<len(DefaultCopy)-1:   
+      if DefaultCopyNum<len(DefaultCopy)-2:   
          Title7ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy)-1:
+      if DefaultCopyNum>len(DefaultCopy)-2:
          Title7ACopy=" ";   
    Title7A.append(Title7ACopy);
    Title7A.append(Title7ACopy);
@@ -893,10 +893,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Green'][count]==0:
       Title8ACopy="Main Level Owner's Suite" 
    else:
-      if DefaultCopyNum<len(DefaultCopy)-1:   
+      if DefaultCopyNum<len(DefaultCopy)-2:   
          Title8ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy)-1:
+      if DefaultCopyNum>len(DefaultCopy)-2:
          Title8ACopy=" ";   
    Title8A.append(Title8ACopy);
    Title8A.append(Title8ACopy);
@@ -906,10 +906,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if NewDataFrame['Parks'][count]==1 or NewDataFrame['Nature'][count]==1:
       Title9ACopy="Access to Parks and Green Spaces" 
    else:
-      if DefaultCopyNum<len(DefaultCopy)-1:   
+      if DefaultCopyNum<len(DefaultCopy)-2:   
          Title9ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy)-1:
+      if DefaultCopyNum>len(DefaultCopy)-2:
          Title9ACopy=" ";   
    Title9A.append(Title9ACopy);
    Title9A.append(Title9ACopy);
@@ -921,10 +921,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Golf Course'][count]==0:
       Title10ACopy="Waterfront or Preserve Views"  
    else:
-      if DefaultCopyNum<len(DefaultCopy)-1:   
+      if DefaultCopyNum<len(DefaultCopy)-2:   
          Title10ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy)-1:
+      if DefaultCopyNum>len(DefaultCopy)-2:
          Title10ACopy=" ";   
    Title10A.append(Title10ACopy);
    Title10A.append(Title10ACopy);
@@ -934,10 +934,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if NewDataFrame['Tennis'][count]==1:
       Title11ACopy="In-Community Tennis Court" 
    else:
-      if DefaultCopyNum<len(DefaultCopy)-1:   
+      if DefaultCopyNum<len(DefaultCopy)-2:   
          Title11ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy)-1:
+      if DefaultCopyNum>len(DefaultCopy)-2:
          Title11ACopy=" ";   
    Title11A.append(Title11ACopy);
    Title11A.append(Title11ACopy);
@@ -947,10 +947,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if NewDataFrame['Volleyball'][count]==1:
       Title12ACopy="In-Community Volleyball Court" 
    else:
-      if DefaultCopyNum<len(DefaultCopy)-1:   
+      if DefaultCopyNum<len(DefaultCopy)-2:   
          Title12ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy)-1:
+      if DefaultCopyNum>len(DefaultCopy)-2:
          Title12ACopy=" "; 
    #print("Title12A-",Title12ACopy)   
    Title12A.append(Title12ACopy);
@@ -960,13 +960,13 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title13ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Basketball'][count]==1:
       Title13ACopy="In-Community Basketball Court" 
-   if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Basketball'][count]==0:
-      Title13ACopy="Main Level Owner's Suite" 
+   #if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Basketball'][count]==0:
+   #   Title13ACopy="Main Level Owner's Suite" 
    else:
-      if DefaultCopyNum<len(DefaultCopy)-1:   
+      if DefaultCopyNum<len(DefaultCopy)-2:   
          Title13ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy)-1:
+      if DefaultCopyNum>len(DefaultCopy)-2:
          Title13ACopy=" ";   
    Title13A.append(Title13ACopy);
    Title13A.append(Title13ACopy);
@@ -978,10 +978,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
    if NewDataFrame['Waterfront'][count]==1:
       Title14ACopy="Waterfront or Preserve Views"
    else:
-      if DefaultCopyNum<len(DefaultCopy)-1:   
+      if DefaultCopyNum<len(DefaultCopy)-2:   
          Title14ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy)-1:
+      if DefaultCopyNum>len(DefaultCopy)-2:
          Title14ACopy=" ";   
    Title14A.append(Title14ACopy);
    Title14A.append(Title14ACopy);
@@ -990,13 +990,13 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Title15ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Baseball'][count]==1:
       Title15ACopy="In-Community Baseball Field"
-   if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Baseball'][count]==0:
-      Title15ACopy="Main Level Owner's Suite"  
+   #if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Baseball'][count]==0:
+   #   Title15ACopy="Main Level Owner's Suite"  
    else:
-      if DefaultCopyNum<len(DefaultCopy)-1:   
+      if DefaultCopyNum<len(DefaultCopy)-2:   
          Title15ACopy=DefaultCopy[DefaultCopyNum];
          DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy)-1:
+      if DefaultCopyNum>len(DefaultCopy)-2:
          Title15ACopy=" ";   
    Title15A.append(Title15ACopy);
    Title15A.append(Title15ACopy);
