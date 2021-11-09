@@ -1167,7 +1167,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   count+=1;
    
 
- print("DefaultCopyNum ",DefaultCopyNum>);
+ print("DefaultCopyNum ",DefaultCopyNum);
 
  print("len(Campaign_Name) = ",len(Campaign_Name)) 
  print("len(Adgroup) = ",len(Adgroup))
