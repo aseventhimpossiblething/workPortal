@@ -605,7 +605,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
   #-------------------------------------------------------------------
   DefaultCopy=["Schedule a new home tour today","Move in Ready Homes Available!","Your Dream Home Awaits","Act Now, Homes Selling Fast","Finest Location & Amenities","View Move in Ready Homes","Your New Home, on Your Budget","Tour Homes From Your Couch","Explore Floorplans & Designs"];
   #DefaultCopyNum=0;
- 
+  print("DefaultCopy[0]",DefaultCopy[0])
+  print("DefaultCopy[1]",DefaultCopy[1])
+  print("DefaultCopy[2]",DefaultCopy[2]) 
+  print("DefaultCopy[3]",DefaultCopy[3])
+      
   Title12ACopy=DefaultCopy[DefaultCopyNum];
   if NewDataFrame['Volleyball'][count]==1:
       Title12ACopy="In-Community Volleyball Court" 
