@@ -800,6 +800,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   
 
    DefaultCopy=["Schedule a new home tour today","Move in Ready Homes Available!","Your Dream Home Awaits","Act Now, Homes Selling Fast","Finest Location & Amenities","View Move in Ready Homes","Your New Home, on Your Budget","Tour Homes From Your Couch","Explore Floorplans & Designs"," "];
+   DefaultCopy=["Schedule a new home tour today","Your Dream Home Awaits","Act Now, Homes Selling Fast","Finest Location & Amenities","View Move in Ready Homes","Your New Home, on Your Budget","Tour Homes From Your Couch","Explore Floorplans & Designs"," "];
    DefaultCopyNum=0;
    
    #Title3ACopy=DefaultCopy[DefaultCopyNum];   
@@ -833,8 +834,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #Title5ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Has A Luxury Home'][count]==1:
       Title5ACopy="Luxurious Features Available"
-   if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Has A Luxury Home'][count]==0:
-      Title5ACopy="Waterfront or Preserve Views" 
+   #if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Has A Luxury Home'][count]==0:
+   #   Title5ACopy="Waterfront or Preserve Views" 
    else:
       if DefaultCopyNum<len(DefaultCopy)-1:   
          Title5ACopy=DefaultCopy[DefaultCopyNum];
@@ -848,8 +849,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #Title6ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Gated'][count]==1:
       Title6ACopy="Enjoy Safe, Gated Communities" 
-   if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Has A Luxury Home'][count]==0:
-      Title6ACopy="Waterfront or Preserve Views"
+   #if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Has A Luxury Home'][count]==0:
+   #   Title6ACopy="Waterfront or Preserve Views"
    else:
       if DefaultCopyNum<len(DefaultCopy)-1:   
          Title6ACopy=DefaultCopy[DefaultCopyNum];
@@ -876,8 +877,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #Title8ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Green'][count]==1:
       Title8ACopy="Energy-Efficient & Eco-Smart"
-   if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Green'][count]==0:
-      Title8ACopy="Main Level Owner's Suite" 
+   #if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Green'][count]==0:
+   #   Title8ACopy="Main Level Owner's Suite" 
    else:
       if DefaultCopyNum<len(DefaultCopy)-1:   
          Title8ACopy=DefaultCopy[DefaultCopyNum];
@@ -904,8 +905,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #Title10ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Golf Course'][count]==1:
       Title10ACopy="Short Drive to Golf Course"  
-   if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Golf Course'][count]==0:
-      Title10ACopy="Waterfront or Preserve Views"  
+   #if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Golf Course'][count]==0:
+   #   Title10ACopy="Waterfront or Preserve Views"  
    else:
       if DefaultCopyNum<len(DefaultCopy)-1:   
          Title10ACopy=DefaultCopy[DefaultCopyNum];
@@ -932,6 +933,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #Title12ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Volleyball'][count]==1:
       Title12ACopy="In-Community Volleyball Court" 
+   if NewDataFrame['Waterfront'][count]==1 and NewDataFrame['Volleyball'][count]==0:
+      Title12ACopy="Waterfront or Preserve Views"    
    else:
       if DefaultCopyNum<len(DefaultCopy)-1:   
          Title12ACopy=DefaultCopy[DefaultCopyNum];
@@ -946,8 +949,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    #Title13ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Basketball'][count]==1:
       Title13ACopy="In-Community Basketball Court" 
-   #if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Basketball'][count]==0:
-   #   Title13ACopy="Main Level Owner's Suite" 
+   if NewDataFrame['HasPlanWith2StoriesAndMasterDownstairs'][count]==1 and NewDataFrame['Basketball'][count]==0:
+      Title13ACopy="Main Level Owner's Suite" 
    else:
       if DefaultCopyNum<len(DefaultCopy)-1:   
          Title13ACopy=DefaultCopy[DefaultCopyNum];
