@@ -891,7 +891,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
       
    #Title9ACopy=DefaultCopy[DefaultCopyNum];
    if NewDataFrame['Parks'][count]==1 or NewDataFrame['Nature'][count]==1:
-      Title9ACopy="Access to Parks and Green Spaces" 
+      Title9ACopy="Access to Parks & Green Spaces" 
    else:
       if DefaultCopyNum<len(DefaultCopy)-1:   
          Title9ACopy=DefaultCopy[DefaultCopyNum];
