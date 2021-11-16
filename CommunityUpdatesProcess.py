@@ -764,6 +764,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
    DefaultCopyNum=0;
    #Title3ACopyETAOnly="Schedule a new home tour today"
    Title3ACopyETAOnly.append("Schedule a new home tour today")
+   Title3ACopyETAOnly.append("Schedule a new home tour today")
+   Title3ACopyETAOnly.append("Schedule a new home tour today")
    Title3ACopy="Schedule a new home tour today"
    #Title3ACopy=DefaultCopy[DefaultCopyNum];   
    if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['With At Least One MultiFamily Plan'][count]==1:
