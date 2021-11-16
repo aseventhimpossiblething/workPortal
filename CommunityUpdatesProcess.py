@@ -733,6 +733,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
    Adtype.append("Responsive search ad");  
    Adtype.append("Responsive search ad");
    Adtype.append("Responsive search ad");
+
    
 
    Title1A_Name_Conv=communityName
@@ -1144,7 +1145,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
       
  print("len(Text3A)) = ",len(Text3A)) 
  print("len(Text4A))= ",len(Text4A))
- #print("len(Title18A) = ",len(Title18A)) 
+ print("len(Title3ACopyETAOnly) = ",len(Title3ACopyETAOnly)) 
  #print("len(Title19A) = ",len(Title19A)) 
  #print("len(Title20A) = ",len(Title20A))      
  #print("len(Title21Ay) = ",len(Title21A))
