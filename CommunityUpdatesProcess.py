@@ -532,6 +532,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
  Text4B=[];
  Path1B=[];
  Path2B=[];
+ 
+ Title3ACopyETAOnly=[];     
 
  RSALabel=[];
  Label=[];
@@ -600,50 +602,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
   if len(Keyword_conv)<12:
       Keyword_conv=Keyword_conv+" Community"
   
-  """
-  #-------------------------------------------------------------------
-  #-------------------------------------------------------------------
-  DefaultCopy=["Schedule a new home tour today","Move in Ready Homes Available!","Your Dream Home Awaits","Act Now, Homes Selling Fast","Finest Location & Amenities","View Move in Ready Homes","Your New Home, on Your Budget","Tour Homes From Your Couch","Explore Floorplans & Designs"];
-  #DefaultCopyNum=0;
-  print("DefaultCopy[0]",DefaultCopy[0])
-  print("DefaultCopy[1]",DefaultCopy[1])
-  print("DefaultCopy[2]",DefaultCopy[2]) 
-  print("DefaultCopy[3]",DefaultCopy[3])
-  print("DefaultCopy[8]",DefaultCopy[8])
-  #print("DefaultCopy[9]",DefaultCopy[9])
-      
-  #Title12ACopy=DefaultCopy[DefaultCopyNum];
-  if NewDataFrame['Volleyball'][count]==1:
-      Title12ACopy="In-Community Volleyball Court" 
-  else:
-      if DefaultCopyNum<len(DefaultCopy)-1:   
-         Title12ACopy=DefaultCopy[DefaultCopyNum];
-      DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy)-1:
-         Title12ACopy=" "; 
-  print("len(DefaultCopy)=",len(DefaultCopy));    
-  print("DefaultCopyNum=",DefaultCopyNum); 
-  #print("DefaultCopy[]=",DefaultCopy);        
-  print("Title12A-",Title12ACopy);   
-  
-  #Title13ACopy=DefaultCopy[DefaultCopyNum];
-  if NewDataFrame['Volleyball'][count]==1:
-      Title13ACopy="In-Community Volleyball Court" 
-  else:
-      if DefaultCopyNum<len(DefaultCopy)-1:   
-         Title13ACopy=DefaultCopy[DefaultCopyNum];
-      DefaultCopyNum=DefaultCopyNum+1;
-      if DefaultCopyNum>len(DefaultCopy)-1:
-         Title13ACopy=" "; 
-  print("len(DefaultCopy)=",len(DefaultCopy));    
-  print("DefaultCopyNum=",DefaultCopyNum); 
-  #print("DefaultCopy[]=",DefaultCopy);        
-  print("Title13A-",Title13ACopy); 
-  
-          
-  #-------------------------------------------------------------------
-  #-------------------------------------------------------------------
-  """
+
       
   try:
    if SearchChan=="google":
@@ -802,7 +761,9 @@ def KeywordGenII(NewDataFrame,SearchChan):
    DefaultCopy=["Schedule a new home tour today","Move in Ready Homes Available!","Your Dream Home Awaits","Act Now, Homes Selling Fast","Finest Location & Amenities","View Move in Ready Homes","Your New Home, on Your Budget","Tour Homes From Your Couch","Explore Floorplans & Designs"," "];
    DefaultCopy=["Schedule a new home tour today","Your Dream Home Awaits","Act Now, Homes Selling Fast","Finest Location & Amenities","View Move in Ready Homes","Your New Home, on Your Budget","Tour Homes From Your Couch","Explore Floorplans & Designs"," "];
    DefaultCopyNum=0;
-   
+   #Title3ACopyETAOnly="Schedule a new home tour today"
+   Title3ACopyETAOnly.append("Schedule a new home tour today")
+   Title3ACopy="Schedule a new home tour today"
    #Title3ACopy=DefaultCopy[DefaultCopyNum];   
    if NewDataFrame['Condo OR TownHome'][count]==1 or NewDataFrame['With At Least One MultiFamily Plan'][count]==1:
       Title3ACopy="Multi-Family Floor Plans"
