@@ -1506,7 +1506,7 @@ def initialCommUpdatProcess():
      print(y)
      print(y.columns)
      yCommunityID='CommunityID' 
-     ColNamCandidateCount=0:
+     ColNamCandidateCount=0;
      while ColNamCandidateCount<len(y.columns):
             ColNamCandidate=str(colnams).replace(" ","").lower();
             if ColNamCandidate==yCommunityID.lower();
