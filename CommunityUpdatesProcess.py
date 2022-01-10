@@ -1599,7 +1599,8 @@ def initialCommUpdatProcess():
      print(x)
      return x 
             
-     
+ print(" CommunityID is ",CommunityID); 
+ print(" CommunityID is ",CommunityID);
  NewGoogle=AttributeAssignCols(NewGoogle,WorkingAttributes); 
  NewBing=AttributeAssignCols(NewBing,WorkingAttributes);      
  print("--------------WorkingAttributes-----------------------")
