@@ -1297,6 +1297,7 @@ def initialCommUpdatProcess():
      print(" --- Seeking Head of the below Frame ----  ")
      print("FIND WITH ",y)
      print("FIND WITH ",y)
+     print("ALtered Find With ",y) 
      print("FIND WITH ",y)
      print("FIND WITH ",y)  
      print(x)     
@@ -1330,21 +1331,21 @@ def initialCommUpdatProcess():
      print("MVersion ",MVersion);
      print("NVersion ",NVersion); 
 
-     sheetidcol=y 
-     AVersion=str(x.iloc[[0]].values).find(sheetidcol);
-     BVersion=str(x.iloc[[1]].values).find(sheetidcol);
-     CVersion=str(x.iloc[[2]].values).find(sheetidcol);
-     DVersion=str(x.iloc[[3]].values).find(sheetidcol);
-     EVersion=str(x.iloc[[4]].values).find(sheetidcol);  
-     FVersion=str(x.iloc[[5]].values).find(sheetidcol);
-     GVersion=str(x.iloc[[6]].values).find(sheetidcol);
-     HVersion=str(x.iloc[[7]].values).find(sheetidcol);
-     IVersion=str(x.iloc[[8]].values).find(sheetidcol);
-     JVersion=str(x.iloc[[9]].values).find(sheetidcol);
-     KVersion=str(x.iloc[[10]].values).find(sheetidcol);
-     LVersion=str(x.iloc[[11]].values).find(sheetidcol);  
-     MVersion=str(x.iloc[[12]].values).find(sheetidcol);
-     NVersion=str(x.iloc[[13]].values).find(sheetidcol); 
+     sheetidcol=y.replace(" ","") 
+     AVersion=str(x.iloc[[0]].values).replace(" ","").find(sheetidcol);
+     BVersion=str(x.iloc[[1]].values).replace(" ","").find(sheetidcol);
+     CVersion=str(x.iloc[[2]].values).replace(" ","").find(sheetidcol);
+     DVersion=str(x.iloc[[3]].values).replace(" ","").find(sheetidcol);
+     EVersion=str(x.iloc[[4]].values).replace(" ","").find(sheetidcol);  
+     FVersion=str(x.iloc[[5]].values).replace(" ","").find(sheetidcol);
+     GVersion=str(x.iloc[[6]].values).replace(" ","").find(sheetidcol);
+     HVersion=str(x.iloc[[7]].values).replace(" ","").find(sheetidcol);
+     IVersion=str(x.iloc[[8]].values).replace(" ","").find(sheetidcol);
+     JVersion=str(x.iloc[[9]].values).replace(" ","").find(sheetidcol);
+     KVersion=str(x.iloc[[10]].values).replace(" ","").find(sheetidcol);
+     LVersion=str(x.iloc[[11]].values).replace(" ","").find(sheetidcol);  
+     MVersion=str(x.iloc[[12]].values).replace(" ","").find(sheetidcol);
+     NVersion=str(x.iloc[[13]].values).replace(" ","").find(sheetidcol); 
      
      print("=======================Watch for Version Print============= Begin")
      print("AVersion ",AVersion);
