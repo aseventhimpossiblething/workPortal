@@ -1505,6 +1505,15 @@ def initialCommUpdatProcess():
      print(y)       
      print(y)
      print(y.columns)
+     yCommunityID='CommunityID' 
+     ColNamCandidateCount=0:
+     while ColNamCandidateCount<len(y.columns):
+            ColNamCandidate=str(colnams).replace(" ","").lower();
+            if ColNamCandidate==yCommunityID.lower();
+               yCommunityID=ColNamCandidate;
+               print("FOUND ColNamCandidate ",ColNamCandidate,yCommunityID)   
+            ColNamCandidateCount=ColNamCandidateCount+1;
+            
      CorrespondingRowInAttributes=[];
      CondoORTownHome=[];
      WithAtLeastOneMultiFamilyPlan=[];
@@ -1525,7 +1534,7 @@ def initialCommUpdatProcess():
      HasPlanWith2StoriesAndMasterDownstairs=[];
      #colnames=y.columns
      AttributeCommIDstr=[];
-     yCommunityID='CommunityID' 
+     #yCommunityID='CommunityID' 
      for commIDnumstrs in y[yCommunityID]:
          AttributeCommIDstr.append(str(commIDnumstrs));
          
