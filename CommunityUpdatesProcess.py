@@ -1547,7 +1547,7 @@ def initialCommUpdatProcess():
            if AttributeCommIDstr.count(comNumInMain)>0:
               locationOfComNumInAttributes=AttributeCommIDstr.index(comNumInMain);     
               #print("locationOfComNumInAttributes=",locationOfComNumInAttributes,"--",type(locationOfComNumInAttributes) )
-              comNumInAttributes=str(y['CommunityID'].iloc[locationOfComNumInAttributes]); 
+              comNumInAttributes=str(y[CommunityID].iloc[locationOfComNumInAttributes]); 
               #print("comNumInMain=",comNumInMain," locationOfComNumInAttributes=",locationOfComNumInAttributes," comNumInAttributes=",comNumInAttributes);
               CorrespondingRowInAttributes.append([locationOfComNumInAttributes]);
               CondoORTownHome.append(y['CondoORTownHome?'].iloc[locationOfComNumInAttributes]);
