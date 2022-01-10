@@ -170,7 +170,7 @@ def CommUpdateDisplay():
     if read_storeRequest1==read_storeRequest2:
      return "<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'><meta http-equiv='refresh' content='0;URL=/CommUpdateExcel?'><html>This Message indicates an error in URL Forward</html>"
     if read_storeRequest1!=read_storeRequest2:
-     return '<meta http-equiv="refresh" content="120"><html><p>LOADING.....  This can Take up to 20 minuites</p></html>'
+     return '<meta http-equiv="refresh" content="30"><html><p>LOADING.....  This can Take up to 20 minuites</p></html>'
 
 
 @app.route('/DisplayCommUpdate2')
