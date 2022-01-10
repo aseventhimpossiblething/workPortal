@@ -1281,10 +1281,11 @@ def KeywordGenII(NewDataFrame,SearchChan):
 
 #----------------------------------------End KeygenII()------------------------------------------------------------------------------
 def initialCommUpdatProcess():
+ print("initialCommUpdatProcess():----CommunityUpdatesProcess----Prime--(not 2 ).....................................................................")        
  global IsCommUpdateRunning
- print("fileHandler.currentCommunitiesLocation - ",fileHandler.currentCommunitiesLocation)
+ #print("fileHandler.currentCommunitiesLocation - ",fileHandler.currentCommunitiesLocation)
  os.chdir(fileHandler.currentCommunitiesLocation);
- print(os.listdir(os.getcwd()));
+ #print(os.listdir(os.getcwd()));
  
       
 
@@ -1412,7 +1413,7 @@ def initialCommUpdatProcess():
       
  print("======  INSTALL sEEKcOLhEAD()  BOTTOM====================")     
 
-
+ print(" --WorkingCommunities=SeekColHead(WorkingCommunities,'Community ID'); -- ")
  WorkingCommunities=SeekColHead(WorkingCommunities,'Community ID');
  wcols=str(WorkingCommunities.columns)
  print("wcols ",wcols)     
@@ -1630,6 +1631,7 @@ def initialCommUpdatProcess():
  
 
  #CommunityNameDuplicateSpecialLoop(WorkingCommunities);
+ print("CommunityUpdatesProcess----Prime--(not 2 ).....................................................................")     
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
  return "finished"
