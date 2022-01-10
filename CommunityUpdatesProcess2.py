@@ -1039,6 +1039,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
 
 #----------------------------------------End KeygenII()------------------------------------------------------------------------------
 def initialCommUpdatProcess():
+ print(" initialCommUpdatProcess(): CommunityUpdatesProcess2 ")     
  global IsCommUpdateRunning
  #print("fileHandler.currentCommunitiesLocation - ",fileHandler.currentCommunitiesLocation)
  os.chdir(fileHandler.currentCommunitiesLocation);
@@ -1264,7 +1265,7 @@ def initialCommUpdatProcess():
  storeRequest=open('RequestsVsResponses.txt','a+')
  storeRequest.write("Response , ")
  storeRequest.close() 
-
+ print(" initialCommUpdatProcess(): CommunityUpdatesProcess2 ")  
  print("END OF ASYNC FILE LOAD.....................................................................")
  sys.exit()
  return "finished"
