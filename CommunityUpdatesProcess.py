@@ -1598,7 +1598,8 @@ def initialCommUpdatProcess():
      print(x.columns)
      print(x)
      return x 
-            
+ print("WorkingAttributes")  
+ print(WorkingAttributes)       
  print(" CommunityID is ",CommunityID); 
  print(" CommunityID is ",CommunityID);
  NewGoogle=AttributeAssignCols(NewGoogle,WorkingAttributes); 
