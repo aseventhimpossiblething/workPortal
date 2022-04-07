@@ -80,12 +80,15 @@ def CommunityNameCleaner(x):
 
  
 def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
+ print("Checksheet for ",sheetname);     
  titlestring=str(sheet.iloc[1])
  if titlestring.find(checkword1)!=-1 and titlestring.find(checkword2)!=-1 and\
   titlestring.find(checkword3)!=-1 and titlestring.find(checkword4)!=-1:
+  print(sheetname," - Valid")    
   return "Valid"
  else:
   Invalid=sheetname+" sheet contains format or content error check sheet and resubmit " 
+  print(sheetname," - ",Invalid) 
   return Invalid
     
 def LoadCommunities(WorkingCommunities,checkword1,checkword2,checkword3,checkword4):
