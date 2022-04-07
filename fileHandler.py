@@ -185,10 +185,10 @@ def CommListFileHandler():
     #currentBingETA='Empty'     
     if emptyObj==str(request.files['currentGoogleETA']):
         currentGoogleETA='empty'        
-        return "Google slot is empty"
+        return "Google ETA slot contains a non-xlsx file.. use xlsx or leave ETA slot empty"
     if emptyObj==str(request.files['currentBingETA']):
         currentBingETA='empty' 
-        return "Active Community slot is empty"
+        return "Bing ETA slot contains a non-xlsx file.. use xlsx or leave ETA slot empty"
        
     
     
