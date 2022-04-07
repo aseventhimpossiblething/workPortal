@@ -168,7 +168,7 @@ def BidOpFileHandler():
 def CommListFileHandler():
     print("Starting to Handle Files") 
     
-    reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing'],request.files['Attributes',],request.files['currentGoogleETA'],request.files['currentBingETA'];   
+    reqs=request.files,request.files['Communities'],request.files['currentGoogle'],request.files['currentBing'],request.files['Attributes'],request.files['currentGoogleETA'],request.files['currentBingETA'];   
     emptyObj="<FileStorage: '' ('application/octet-stream')>"
     """    
     if emptyObj==str(request.files['currentBing']):
