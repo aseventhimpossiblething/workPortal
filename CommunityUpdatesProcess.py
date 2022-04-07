@@ -130,8 +130,9 @@ def WorkingGoogle():
 def WorkingGoogleETA(): 
  print("WorkingBingETA() currentBingLocation ",currentBingLocation)      
  os.chdir(currentGoogleLocation)
+ print("os listdir() ",os.listdir())     
  currentGoogleETA=pandas.read_excel('currentGoogleETA')
- global IsGoogleValid 
+ IsGoogleValid=0; 
  IsGoogleValid=CheckSheetData("currentGoogleETA",currentGoogleETA,'Campaign','Ad Group','Headline 1','Final URL')
  if IsGoogleValid!="Valid":
   return IsGoogleValid
@@ -143,8 +144,9 @@ def WorkingGoogleETA():
 def WorkingBingETA(): 
  print("WorkingBingETA() currentBingLocation ",currentBingLocation)     
  os.chdir(currentBingLocation)
+ print("os listdir() ",os.listdir())     
  currentBingETA=pandas.read_excel('currentBingETA')
- global IsBingValid 
+ IsBingValid=0;
  IsBingValid=CheckSheetData("currentBingETA",currentBingETA,'Campaign','Ad Group','Headline 1','Final URL')
  if IsBingValid!="Valid":
   return IsBingValid
