@@ -130,34 +130,36 @@ def WorkingGoogle():
 def WorkingGoogleETA(): 
  print("WorkingBingETA() currentBingLocation ",currentBingLocation)      
  os.chdir(currentGoogleLocation)
- searchdir=str(os.listdir()).find('currentGoogleETA')     
- print("os listdir() ",os.listdir())   
- print(" searchdir ", searchdir)      
- print("os listdir() ",os.listdir())     
- currentGoogleETA=pandas.read_excel('currentGoogleETA')
- IsGoogleValid=0; 
- IsGoogleValid=CheckSheetData("currentGoogleETA",currentGoogleETA,'Campaign','Ad Group','Headline 1','Final URL')
- if IsGoogleValid!="Valid":
-  return IsGoogleValid
- else:
-  currentGoogleETA=pandas.DataFrame(currentGoogleETA,columns=['Campaign','Ad Group', 'Final URL'])
-  return currentGoogleETA;
+ searchdir=str(os.listdir()).find('currentGoogleETA');
+ if searchdir>-1:
+    print("os listdir() ",os.listdir())   
+    print(" searchdir ", searchdir)      
+    print("os listdir() ",os.listdir())     
+    currentGoogleETA=pandas.read_excel('currentGoogleETA')
+    IsGoogleValid=0; 
+    IsGoogleValid=CheckSheetData("currentGoogleETA",currentGoogleETA,'Campaign','Ad Group','Headline 1','Final URL')
+    if IsGoogleValid!="Valid":
+       return IsGoogleValid
+    else:
+       currentGoogleETA=pandas.DataFrame(currentGoogleETA,columns=['Campaign','Ad Group', 'Final URL'])
+       return currentGoogleETA;
 
 
 def WorkingBingETA(): 
  print("WorkingBingETA() currentBingLocation ",currentBingLocation)     
  os.chdir(currentBingLocation)
  searchdir=str(os.listdir()).find('currentBingETA')     
- print("os listdir() ",os.listdir())   
- print(" searchdir ", searchdir)       
- currentBingETA=pandas.read_excel('currentBingETA')
- IsBingValid=0;
- IsBingValid=CheckSheetData("currentBingETA",currentBingETA,'Campaign','Ad Group','Headline 1','Final URL')
- if IsBingValid!="Valid":
-  return IsBingValid
- else:
-  currentBingETA=pandas.DataFrame(currentBingETA,columns=['Campaign','Ad Group', 'Final URL'])
-  return currentBingETA;
+ if searchdir>-1:
+    print("os listdir() ",os.listdir())   
+    print(" searchdir ", searchdir)       
+    currentBingETA=pandas.read_excel('currentBingETA')
+    IsBingValid=0;
+    IsBingValid=CheckSheetData("currentBingETA",currentBingETA,'Campaign','Ad Group','Headline 1','Final URL')
+    if IsBingValid!="Valid":
+       return IsBingValid
+    else:
+       currentBingETA=pandas.DataFrame(currentBingETA,columns=['Campaign','Ad Group', 'Final URL'])
+       return currentBingETA;
 
 """
 def WorkingBing():
