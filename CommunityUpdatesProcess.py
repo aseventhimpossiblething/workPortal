@@ -1489,7 +1489,17 @@ def initialCommUpdatProcess():
  print(os.getcwd())
  print(os.listdir()) 
  print("---Define working attributes ----")
- 
+ print("WorkingAttributes Monitor--------WorkingAttributes Monitor-------------WorkingAttributes Monitor-----------------------")
+ print("WorkingAttributes Monitor--------WorkingAttributes Monitor-------------WorkingAttributes Monitor-----------------------")     
+ print("---Define working attributes ----")
+ print("WorkingAttributes Monitor--------WorkingAttributes Monitor-------------WorkingAttributes Monitor-----------------------")
+ print("WorkingAttributes Monitor--------WorkingAttributes Monitor-------------WorkingAttributes Monitor-----------------------") 
+ print("---Define working attributes ----")
+ print("WorkingAttributes Monitor--------WorkingAttributes Monitor-------------WorkingAttributes Monitor-----------------------")
+ print("WorkingAttributes Monitor--------WorkingAttributes Monitor-------------WorkingAttributes Monitor-----------------------")     
+ print("---Define working attributes ----")
+ print("WorkingAttributes Monitor--------WorkingAttributes Monitor-------------WorkingAttributes Monitor-----------------------")
+ print("WorkingAttributes Monitor--------WorkingAttributes Monitor-------------WorkingAttributes Monitor-----------------------")     
  WorkingAttributes=pandas.read_excel('WorkingAttributes');   
  WorkingAttributes=SeekColHead(WorkingAttributes,'CommunityID');
  WorkingAttributesCheck1=CheckSheetData('Attributes',WorkingAttributes,"CommunityID","CondoORTownHome","WithAtLeastOneMultifamilyPlan","Baseball")
