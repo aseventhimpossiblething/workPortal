@@ -181,13 +181,17 @@ def CommListFileHandler():
     if emptyObj==str(request.files['Attributes']):
         return "Attributes slot is empty"
 
-         
+    print(currentGoogleLocation);
+    print(currentBingLocation);    
+    
+
     if emptyObj!=str(request.files['currentGoogleETA']):
         currentGoogleETA=0;
         if request.files['currentGoogleETA'].filename.find("xlsx")<1:
            return "Google ETA slot contains a non-xlsx file.. use xlsx or leave ETA slot empty"
     else:
         currentGoogleETA=1;
+        os.chdir(currentGoogleLocation)
         request.files['currentGoogleETA'].save('currentGoogleETA')
     if emptyObj!=str(request.files['currentBingETA']):
         currentBingETA=0;
@@ -195,6 +199,7 @@ def CommListFileHandler():
            return "Bing ETA slot contains a non-xlsx file.. use xlsx or leave ETA slot empty"
     else:
         currentBingETA=1;
+        os.chdir(currentBingLocation)
         request.files['currentBingETA'].save('currentBingETA')   
     
     
@@ -205,6 +210,10 @@ def CommListFileHandler():
     if request.files['Attributes'].filename.find("xlsx")<1:
                 return "The Attributes Sheet is not XLSX file type";
         
+        
+    print(currentGoogleLocation);
+    print(currentBingLocation);     
+    
     #if request.files['currentBing'].filename.find("xlsx")<1:
     #            return "The Bing Sheet is not XLSX file type"; 
      
