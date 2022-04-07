@@ -1486,7 +1486,7 @@ def initialCommUpdatProcess():
  print("FInal URL caps? 1=y ",WorkingBingEOFCaps);     
  print(WorkingBingEOF.iloc[0]);
  if WorkingBingEOFCaps==1:
-    WorkingBingEOF['Final Url']=WorkingBingEOF['Final URL'];;  
+    WorkingBingEOF['Final Url']=WorkingBingEOF['Final URL']; 
  WorkingBingEOF['Final Url'];
       
   
