@@ -1507,9 +1507,15 @@ def initialCommUpdatProcess():
  WorkingGoogleEOF=WorkingGoogle()    
  WorkingBingEOF=WorkingBing()
 
+ WorkingGoogleETA_EOF=WorkingGoogleETA();
+ WorkingBingETA_EOF=WorkingBingETA();
+
  WorkingCommunities['Community ID'];
  WorkingGoogleEOF['Final URL']; 
  WorkingBingEOF['Final Url'];
+ 
+ WorkingGoogleETA_EOF['Final URL'];
+ WorkingBingETA_EOF['Final Url'];
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
@@ -1524,6 +1530,7 @@ def initialCommUpdatProcess():
  print(os.listdir(os.getcwd()));     
  print(os.getcwd())
  print(os.listdir()) 
+
  print("---Define working attributes ----")
  print("WorkingAttributes Monitor--------WorkingAttributes Monitor-------------WorkingAttributes Monitor-----------------------")
  print("WorkingAttributes Monitor--------WorkingAttributes Monitor-------------WorkingAttributes Monitor-----------------------")     
