@@ -128,7 +128,7 @@ def WorkingGoogle():
   return  WorkingGoogle
 
 def WorkingGoogleETA(): 
- print("WorkingBingETA() currentBingLocation ",currentBingLocation)      
+ print("WorkingGoogleETA() currentGoogleLocation ",currentGoogleLocation)      
  os.chdir(currentGoogleLocation)
  searchdir=str(os.listdir()).find('currentGoogleETA');
  if searchdir>-1:
