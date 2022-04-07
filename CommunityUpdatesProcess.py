@@ -131,6 +131,7 @@ def WorkingGoogleETA():
  print("WorkingGoogleETA() currentGoogleLocation ",currentGoogleLocation)      
  os.chdir(currentGoogleLocation)
  searchdir=str(os.listdir()).find('currentGoogleETA');
+ print("os listdir() ",os.listdir()) 
  if searchdir>-1:
     print("os listdir() ",os.listdir())   
     print(" searchdir ", searchdir)      
@@ -148,7 +149,8 @@ def WorkingGoogleETA():
 def WorkingBingETA(): 
  print("WorkingBingETA() currentBingLocation ",currentBingLocation)     
  os.chdir(currentBingLocation)
- searchdir=str(os.listdir()).find('currentBingETA')     
+ searchdir=str(os.listdir()).find('currentBingETA') 
+ print("os listdir() ",os.listdir()) 
  if searchdir>-1:
     print("os listdir() ",os.listdir())   
     print(" searchdir ", searchdir)       
