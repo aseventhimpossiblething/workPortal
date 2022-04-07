@@ -1479,9 +1479,14 @@ def initialCommUpdatProcess():
 
 
 
- WorkingCommunities['Community ID']
- WorkingGoogleEOF['Final URL']  
- WorkingBingEOF['Final Url']
+ WorkingCommunities['Community ID'];
+ WorkingGoogleEOF['Final URL']; 
+
+ WorkingBingEOFCols=WorkingBingEOF.iloc[0];
+ print(WorkingBingEOFCols);     
+ print(WorkingBingEOF.iloc[0]);
+
+ WorkingBingEOF['Final Url'];
       
   
    
