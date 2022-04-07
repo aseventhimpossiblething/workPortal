@@ -87,7 +87,7 @@ def CheckSheetData(sheetname,sheet,checkword1,checkword2,checkword3,checkword4):
  checkword4=checkword4.lower();     
  """
  print("Checksheet for ",sheetname);     
- titlestring=str(sheet.iloc[1]).lower();
+ titlestring=str(sheet.iloc[1]);
  print("titlestring.find(checkword1) ",titlestring.find(checkword1));  
  print("titlestring.find(checkword2) ",titlestring.find(checkword2)); 
  print("titlestring.find(checkword3) ",titlestring.find(checkword3));  
