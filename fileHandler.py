@@ -185,12 +185,16 @@ def CommListFileHandler():
     os.chdir(currentGoogleLocation)    
     print(os.listdir());
         
+       
     print(currentBingLocation); 
     os.chdir(currentBingLocation) 
     print(os.listdir());
-
+    
+    print("emptyObj ",emptyObj)
+    """
     os.chdir(currentGoogleLocation)   
     request.files['currentGoogleETA'].save('currentGoogleETA')
+    """
 
     if emptyObj!=str(request.files['currentGoogleETA']):
         currentGoogleETA=0;
