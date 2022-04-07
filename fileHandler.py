@@ -189,6 +189,9 @@ def CommListFileHandler():
     os.chdir(currentBingLocation) 
     print(os.listdir());
 
+    os.chdir(currentGoogleLocation)   
+    request.files['currentGoogleETA'].save('currentGoogleETA')
+
     if emptyObj!=str(request.files['currentGoogleETA']):
         currentGoogleETA=0;
         if request.files['currentGoogleETA'].filename.find("xlsx")<1:
