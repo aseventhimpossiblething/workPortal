@@ -180,6 +180,15 @@ def CommListFileHandler():
         return "Active Community slot is empty"
     if emptyObj==str(request.files['Attributes']):
         return "Attributes slot is empty"
+
+    #currentGoogleETA='Empty'
+    #currentBingETA='Empty'     
+    if emptyObj==str(request.files['currentGoogleETA']):
+        currentGoogleETA='empty'        
+        return "Google slot is empty"
+    if emptyObj==str(request.files['currentBingETA']):
+        currentBingETA='empty' 
+        return "Active Community slot is empty"
        
     
     
