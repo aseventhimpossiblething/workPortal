@@ -184,10 +184,12 @@ def CommListFileHandler():
     #currentGoogleETA='Empty'
     #currentBingETA='Empty'     
     if emptyObj==str(request.files['currentGoogleETA']):
-        currentGoogleETA='empty'        
-        return "Google ETA slot contains a non-xlsx file.. use xlsx or leave ETA slot empty"
+        currentGoogleETA='empty';
+        if request.files['currentGoogleETA'].filename.find("xlsx")<1:
+               return "Google ETA slot contains a non-xlsx file.. use xlsx or leave ETA slot empty"
     if emptyObj==str(request.files['currentBingETA']):
-        currentBingETA='empty' 
+        currentBingETA='empty';
+        if request.files['currentBingETA'].filename.find("xlsx")<1:
         return "Bing ETA slot contains a non-xlsx file.. use xlsx or leave ETA slot empty"
        
     
