@@ -194,6 +194,7 @@ def CommListFileHandler():
         if request.files['currentGoogleETA'].filename.find("xlsx")<1:
            return "Google ETA slot contains a non-xlsx file.. use xlsx or leave ETA slot empty"
     else:
+        print("Attempt to save")        
         currentGoogleETA=1;
         os.chdir(currentGoogleLocation)
         request.files['currentGoogleETA'].save('currentGoogleETA')
@@ -202,6 +203,7 @@ def CommListFileHandler():
         if request.files['currentBingETA'].filename.find("xlsx")<1:
            return "Bing ETA slot contains a non-xlsx file.. use xlsx or leave ETA slot empty"
     else:
+        print("Attempt to save")        
         currentBingETA=1;
         os.chdir(currentBingLocation)
         request.files['currentBingETA'].save('currentBingETA')   
