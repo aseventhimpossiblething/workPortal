@@ -131,7 +131,7 @@ def WorkingBing():
  print(os.listdir())
  try:
     WorkingBing=pandas.read_excel('WorkingBing')
-    IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final Url','Title Part 1')
+    IsBingValid=CheckSheetData("WorkingBing",WorkingBing,'Campaign','Ad Group','Final Url')
  
  except:
     print("BING SHEET REPLACED WITH GOOGLE SHEET!!====BING SHEET REPLACED WITH GOOGLE SHEET!!==BING SHEET REPLACED WITH GOOGLE SHEET!!====BING SHEET REPLACED WITH GOOGLE SHEET!!") 
@@ -1507,7 +1507,13 @@ def initialCommUpdatProcess():
  WorkingAttributesCheck3=CheckSheetData('Attributes',WorkingAttributes,"Pool","Green","ParkNature","Waterfront")  
  WorkingAttributesCheck4=CheckSheetData('Attributes',WorkingAttributes,"GolfCourse","Tennis","Volleyball","Basketball") 
  WorkingAttributesCheck5=CheckSheetData('Attributes',WorkingAttributes,"Basketball","Soccer"," Baseball","Waterfront")
- #WorkingAttributesCheck6=CheckSheetData('Attributes',WorkingAttributes,"Waterfront","HasPlanWith2StoriesAndMasterDownstairs","Baseball")     
+ #WorkingAttributesCheck6=CheckSheetData('Attributes',WorkingAttributes,"Waterfront","HasPlanWith2StoriesAndMasterDownstairs","Baseball")
+      
+      
+      
+      
+      
+      
  print(" WorkingAttributesCheck1:",WorkingAttributesCheck1," WorkingAttributesCheck2:",WorkingAttributesCheck2," WorkingAttributesCheck3:",WorkingAttributesCheck3," WorkingAttributesCheck4:",WorkingAttributesCheck4," WorkingAttributesCheck5:",WorkingAttributesCheck5)     
  AttributeFormatChecknumber=str(WorkingAttributes.columns).find('CommunityID')
  print("AttributeFormatChecknumber======",AttributeFormatChecknumber);     
