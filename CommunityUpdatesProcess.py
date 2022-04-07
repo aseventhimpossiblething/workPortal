@@ -126,7 +126,32 @@ def WorkingGoogle():
  else:
   WorkingGoogle=pandas.DataFrame(WorkingGoogle,columns=['Campaign','Ad Group', 'Final URL'])
   return  WorkingGoogle
-  
+
+def WorkingGoogleETA(): 
+ print("WorkingBingETA() currentBingLocation ",currentBingLocation)      
+ os.chdir(currentGoogleLocation)
+ currentGoogleETA=pandas.read_excel('currentGoogleETA')
+ global IsGoogleValid 
+ IsGoogleValid=CheckSheetData("currentGoogleETA",currentGoogleETA,'Campaign','Ad Group','Headline 1','Final URL')
+ if IsGoogleValid!="Valid":
+  return IsGoogleValid
+ else:
+  currentGoogleETA=pandas.DataFrame(currentGoogleETA,columns=['Campaign','Ad Group', 'Final URL'])
+  return currentGoogleETA;
+
+
+def WorkingBingETA(): 
+ print("WorkingBingETA() currentBingLocation ",currentBingLocation)     
+ os.chdir(currentBingLocation)
+ currentBingETA=pandas.read_excel('currentBingETA')
+ global IsBingValid 
+ IsBingValid=CheckSheetData("currentBingETA",currentBingETA,'Campaign','Ad Group','Headline 1','Final URL')
+ if IsBingValid!="Valid":
+  return IsBingValid
+ else:
+  currentBingETA=pandas.DataFrame(currentBingETA,columns=['Campaign','Ad Group', 'Final URL'])
+  return currentBingETA;
+
 """
 def WorkingBing():
  os.chdir(currentBingLocation)
@@ -1464,54 +1489,26 @@ def initialCommUpdatProcess():
     WorkingCommunities['Zip']=WorkingCommunities[zcode]
  print("Zipcode ",Zipcode)
  print(" ZIPcode ",ZIPcode)     
- 
- #WorkingCommunities.columns=WorkingCommunities.iloc[0]
- #WorkingCommunities.columns=WorkingCommunities.iloc[0]
- #WorkingCommunities=WorkingCommunities.drop([4])
  WorkingCommunities=LoadCommunities(WorkingCommunities,'Builder Name','Community ID','Community Name','City')
-
  
  if IsCommValid!="Valid":
   return IsCommValid
  WorkingGoogleEOF=WorkingGoogle()    
  WorkingBingEOF=WorkingBing()
 
-
-
-
  WorkingCommunities['Community ID'];
  WorkingGoogleEOF['Final URL']; 
- """
- WorkingBingEOFCaps=str(WorkingBingEOF.iloc[0]).find('Final URL');
- print("Fnal URL caps? 1=y ",WorkingBingEOFCaps);     
-
- print(WorkingBingEOF.iloc[0]);
- 
-      
- if WorkingBingEOFCaps==1:
-    WorkingBingEOF['Final Url']=WorkingBingEOF['Final URL']; 
- """
  WorkingBingEOF['Final Url'];
- """
- print("WorkingBingEOF['Final Url'];")     
- print(WorkingBingEOF['Final Url']) 
- 
- print("WorkingBingEOF['Final URL'];")     
- print(WorkingBingEOF['Final URL'])
- """  
- 
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
 
- #print(" WorkingCommunities ",WorkingCommunities)     
- 
- 
+
  NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
  NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
 
- print("INSERT NEW FUNCTION--------------------------------------------")
+ #print("INSERT NEW FUNCTION--------------------------------------------")
  os.chdir(fileHandler.currentAttributesLocation);
  print(os.listdir(os.getcwd()));     
  print(os.getcwd())
@@ -1691,6 +1688,8 @@ def initialCommUpdatProcess():
  storeRequest=open('RequestsVsResponses.txt','r+')
  storeRequest.close()
  
+ WorkingBingETA()
+ WorkingGoogleETA()
 
  #CommunityNameDuplicateSpecialLoop(WorkingCommunities);
  print("CommunityUpdatesProcess----Prime--(not 2 ).....................................................................")     
