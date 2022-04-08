@@ -943,6 +943,10 @@ def KeywordGenII(NewDataFrame,SearchChan):
                  "Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}
  GoogleAdFrameA=pandas.DataFrame(GoogleAdFrameA).drop_duplicates()
  GoogleAdFrameB=pandas.DataFrame(GoogleAdFrameB).drop_duplicates()
+ print("GoogleAdFrameRSA")     
+ print(GoogleAdFrameRSA);     
+      
+      
  print("len(Campaign_Name) = ",len(Campaign_Name)) 
  print("len(Adtype) = ",len(Adtype))
  print("len(RSALabel) = ",len(RSALabel))  
@@ -964,7 +968,8 @@ def KeywordGenII(NewDataFrame,SearchChan):
  BingAdFrameA=pandas.DataFrame(BingAdFrameA).drop_duplicates()
  BingAdFrameB=pandas.DataFrame(BingAdFrameB).drop_duplicates()
  BingAdFrameRSA=pandas.DataFrame(BingAdFrameRSA).drop_duplicates()     
- 
+ print("BingAdFrameRSA")     
+ print(BingAdFrameRSA);
 
  if SearchChan=="google":
    SaveLocation=fileHandler.SheetsFileLocation+'/CommunityUpdates/Google/GoogleOutputs/GoogleKeywords'
