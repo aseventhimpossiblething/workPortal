@@ -144,7 +144,7 @@ def WorkingGoogleETA():
     else:
        currentGoogleETA=pandas.DataFrame(currentGoogleETA,columns=['Campaign','Ad Group', 'Final URL'])
        return currentGoogleETA['Final URL'];
-
+ return "a"
 
 def WorkingBingETA(): 
  print("WorkingBingETA() currentBingLocation ",currentBingLocation)     
@@ -162,7 +162,8 @@ def WorkingBingETA():
     else:
        currentBingETA=pandas.DataFrame(currentBingETA,columns=['Campaign','Ad Group', 'Final Url'])
        return currentBingETA['Final Url'];
-
+ return "a"
+      
 """
 def WorkingBing():
  os.chdir(currentBingLocation)
@@ -1517,8 +1518,11 @@ def initialCommUpdatProcess():
  #WorkingGoogleETA_EOF['Final URL'];
  #WorkingBingETA_EOF['Final Url'];
 
- googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
- bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
+
+ googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google")+MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
+ bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing")+MergeURLs(WorkingBingEOF['Final Url'],"Bing");
+ #googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
+ #bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
 
 
