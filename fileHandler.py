@@ -215,10 +215,14 @@ def CommListFileHandler():
     
     if emptyObj==str(request.files['currentBingETA']):
         currentBingETA=0;
+        """
         if request.files['currentBingETA'].filename.find("xlsx")<1:
            return "Bing ETA slot contains a non-xlsx file.. use xlsx or leave ETA slot empty"
+        """
     #if emptyObj==str(request.files['currentBingETA']):
     else:
+        if request.files['currentBingETA'].filename.find("xlsx")<1:
+           return "Bing ETA slot contains a non-xlsx file.. use xlsx or leave ETA slot empty"
         print("Attempt to save")        
         currentBingETA=1;
         os.chdir(currentBingLocation)
