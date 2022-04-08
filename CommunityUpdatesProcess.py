@@ -143,7 +143,7 @@ def WorkingGoogleETA():
        return IsGoogleValid
     else:
        currentGoogleETA=pandas.DataFrame(currentGoogleETA,columns=['Campaign','Ad Group', 'Final URL'])
-       return currentGoogleETA;
+       return currentGoogleETA['Final URL'];
 
 
 def WorkingBingETA(): 
@@ -160,8 +160,8 @@ def WorkingBingETA():
     if IsBingValid!="Valid":
        return IsBingValid
     else:
-       currentBingETA=pandas.DataFrame(currentBingETA,columns=['Campaign','Ad Group', 'Final URL'])
-       return currentBingETA;
+       currentBingETA=pandas.DataFrame(currentBingETA,columns=['Campaign','Ad Group', 'Final Url'])
+       return currentBingETA['Final Url'];
 
 """
 def WorkingBing():
@@ -1514,8 +1514,8 @@ def initialCommUpdatProcess():
  WorkingGoogleEOF['Final URL']; 
  WorkingBingEOF['Final Url'];
  
- WorkingGoogleETA_EOF['Final URL'];
- WorkingBingETA_EOF['Final Url'];
+ #WorkingGoogleETA_EOF['Final URL'];
+ #WorkingBingETA_EOF['Final Url'];
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
