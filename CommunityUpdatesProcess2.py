@@ -943,6 +943,7 @@ def KeywordGenII(NewDataFrame,SearchChan):
                  "Path 1":Path1A,"Path 2":Path2A,"Final URL":Final_URL,"Status":Status}
  GoogleAdFrameA=pandas.DataFrame(GoogleAdFrameA).drop_duplicates()
  GoogleAdFrameB=pandas.DataFrame(GoogleAdFrameB).drop_duplicates()
+ GoogleAdFrameRSA=pandas.DataFrame(GoogleAdFrameRSA).drop_duplicates()     
  print("GoogleAdFrameRSA")     
  print(GoogleAdFrameRSA);     
       
