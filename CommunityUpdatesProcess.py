@@ -1519,8 +1519,8 @@ def initialCommUpdatProcess():
  #WorkingBingETA_EOF['Final Url'];
 
 
- googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google")+MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
- bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing")+MergeURLs(WorkingBingEOF['Final Url'],"Bing");
+ googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google")+MergeURLs(WorkingGoogleETA(),"Google");
+ bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing")+MergeURLs(WorkingBingETA(),"Bing");
  #googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  #bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
