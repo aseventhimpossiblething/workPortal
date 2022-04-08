@@ -198,11 +198,15 @@ def CommListFileHandler():
 
     if emptyObj==str(request.files['currentGoogleETA']):
         currentGoogleETA=0;
+        
+        """
         if request.files['currentGoogleETA'].filename.find("xlsx")<1:
            return "Google ETA slot contains a non-xlsx file.. use xlsx or leave ETA slot empty"
-    
+        """
     #if emptyObj==str(request.files['currentGoogleETA']):    
     else:
+        if request.files['currentGoogleETA'].filename.find("xlsx")<0:
+           return "Google ETA slot contains a non-xlsx file.. use xlsx or leave ETA slot empty"        
         print("Attempt to save")        
         currentGoogleETA=1;
         os.chdir(currentGoogleLocation)
