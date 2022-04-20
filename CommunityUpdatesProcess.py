@@ -1525,6 +1525,7 @@ def initialCommUpdatProcess():
  WorkingGoogleEOF['Final URL']; 
  WorkingBingEOF['Final Url'];
  
+ print("WorkingBingEOF['Final Url'] = ",WorkingBingEOF['Final Url'])
  #WorkingGoogleETA_EOF['Final URL'];
  #WorkingBingETA_EOF['Final Url'];
 
