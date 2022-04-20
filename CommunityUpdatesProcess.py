@@ -207,8 +207,14 @@ def WorkingBing():
  os.chdir(fileHandler.SheetsFileLocation);
  storeRequest=open('BingAlert.txt','w')
  storeRequest.write(IsBingValid)
- storeRequest.close()        
+ storeRequest.close()  
  
+ print("--------------------------------------------")
+ print(WorkingBing.iloc[0])
+ print(WorkingBing.iloc[1])
+ print(WorkingBing.iloc[2]) 
+ print("--------------------------------------------")
+
  WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
  return WorkingBing
 
