@@ -215,7 +215,7 @@ def WorkingBing():
  print(WorkingBing.iloc[2]) 
  len(WorkingBing.iloc[1]);
  toDictCnt=0; 
- dictStr="";
+ dictStr="0";
  while toDictCnt < len(WorkingBing.iloc[1]):
        dictStr=dictStr+len(WorkingBing.iloc[1][toDictCnt]);
        toDictCnt=toDictCnt+1; 
