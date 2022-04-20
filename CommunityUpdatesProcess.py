@@ -366,7 +366,7 @@ def MergeURLs(chan,chan2):
      print("chan = ",chan);
   #----    
   
-  URLS=URLS+chan[count]
+  URLS=URLS+chan.iloc[count]
   if count % 5000 == 0:
    print(chan2," _ ",count," Merge chan2")
    
