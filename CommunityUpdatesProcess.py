@@ -362,7 +362,7 @@ def MergeURLs(chan,chan2):
      print("chan2.find('Bing') = ",chan2.find("Bing"));       
      print("URLS = ",URLS); 
      print("count = ",count);
-     print("chan[count] = ",chan[count]);  
+     print("chan[[count]] = ",chan[[count]]);  
      print("chan = ",chan);
   #----    
   
