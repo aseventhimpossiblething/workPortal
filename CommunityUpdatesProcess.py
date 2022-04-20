@@ -330,7 +330,7 @@ def MergeURLs(chan,chan2):
  while count < hilecount:
   
   #----- 
-  print("chan2.find("Bing") = ",chan2.find("Bing")) 
+  print("chan2.find('Bing') = ",chan2.find("Bing")) 
   if chan2.find("Bing")>-1:
      print("URLS = ",URLS);  
      print("chan[count] = ",chan[count]);   
