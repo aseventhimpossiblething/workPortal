@@ -328,8 +328,11 @@ def MergeURLs(chan,chan2):
  if type(MaintatanceVar)=="<class 'int'>":
    hilecount=MaintatanceVar;
  while count < hilecount:
-  print("URLS = ",URLS);  
-  print("chan[count] = ",chan[count]);   
+     
+  if chan2="bing2"
+     print("URLS = ",URLS);  
+     print("chan[count] = ",chan[count]);   
+      
   URLS=URLS+chan[count]
   if count % 5000 == 0:
    print(chan2," _ ",count," Merge chan2")
@@ -1521,8 +1524,8 @@ def initialCommUpdatProcess():
  #WorkingBingETA_EOF['Final Url'];
 
 
- googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google")+MergeURLs(WorkingGoogleETA(),"Google");
- bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing")+MergeURLs(WorkingBingETA(),"Bing");
+ googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google")+"googleETAstart"+MergeURLs(WorkingGoogleETA(),"Google2");
+ bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing")+"bingETAstart"+MergeURLs(WorkingBingETA(),"Bing2");
  #googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  #bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
