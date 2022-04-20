@@ -213,9 +213,26 @@ def WorkingBing():
  print(WorkingBing.iloc[0])
  print(WorkingBing.iloc[1])
  print(WorkingBing.iloc[2]) 
+ len(WorkingBing.iloc[1]);
+ toDictCnt=0; 
+ dictStr="";
+ while toDictCnt < len(WorkingBing.iloc[1]):
+       dictStr=dictStr+len(WorkingBing.iloc[1][toDictCnt];
+       toDictCnt=toDictCnt+1; 
+ FUrl=dictStr.find('Final Url');  
+ FURL=dictStr.find('Final URL');      
+ print("FUrl = ",FUrl);
+ print("FURL = ",FURL);
+ WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final URL']).drop(0);                            
+ if FUrl>-1:
+    WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0);                       
+                    
+ if FURL>-1:
+    WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final URL']).drop(0);                       
+                           
  print("--------------------------------------------")
 
- WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
+ #WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
  return WorkingBing
 
 
