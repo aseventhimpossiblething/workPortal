@@ -329,7 +329,7 @@ def MergeURLs(chan,chan2):
    hilecount=MaintatanceVar;
  while count < hilecount:
      
-  if chan2="bing2"
+  if chan2=="bing2"
      print("URLS = ",URLS);  
      print("chan[count] = ",chan[count]);   
       
