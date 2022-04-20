@@ -223,16 +223,19 @@ def WorkingBing():
  FURL=dictStr.find('Final URL');      
  print("FUrl = ",FUrl);
  print("FURL = ",FURL);
- WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final URL']).drop(0);                            
+ WorkingBing=pandas.DataFrame(WorkingBing,columns=['Final URL']).drop(0);                            
  if FUrl>-1:
-    WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0);                       
+    #WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0);
+    WorkingBing=pandas.DataFrame(WorkingBing,columns=['Final Url']).drop(0);
                     
  if FURL>-1:
-    WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final URL']).drop(0);                       
+    #WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final URL']).drop(0);
+    WorkingBing=pandas.DataFrame(WorkingBing,columns=['Final URL']).drop(0);
                            
  print("--------------------------------------------")
 
  #WorkingBing=pandas.DataFrame(WorkingBing,columns=['Campaign','Ad Group','Final Url']).drop(0)
+ #WorkingBing     
  return WorkingBing
 
 
@@ -1547,16 +1550,17 @@ def initialCommUpdatProcess():
 
  WorkingCommunities['Community ID'];
  WorkingGoogleEOF['Final URL']; 
- WorkingBingEOF['Final Url'];
+ WorkingBingEOF#['Final Url'];
  
  print("WorkingBingEOF.iloc[0] = ",WorkingBingEOF.iloc[0])
- print("WorkingBingEOF['Final Url'] = ",WorkingBingEOF['Final Url'])
+ print("WorkingBingEOF = ",WorkingBingEOF)
  #WorkingGoogleETA_EOF['Final URL'];
  #WorkingBingETA_EOF['Final Url'];
 
 
  googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google")+"googleETAstart"+MergeURLs(WorkingGoogleETA(),"Google2");
- bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing")+"bingETAstart"+MergeURLs(WorkingBingETA(),"Bing2");
+ bingURLS=MergeURLs(WorkingBingEOF,"Bing")+"bingETAstart"+MergeURLs(WorkingBingETA(),"Bing2");     
+ #bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing")+"bingETAstart"+MergeURLs(WorkingBingETA(),"Bing2");
  #googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  #bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
