@@ -217,7 +217,7 @@ def WorkingBing():
  toDictCnt=0; 
  dictStr="";
  while toDictCnt < len(WorkingBing.iloc[1]):
-       dictStr=dictStr+len(WorkingBing.iloc[1][toDictCnt];
+       dictStr=dictStr+len(WorkingBing.iloc[1][toDictCnt]);
        toDictCnt=toDictCnt+1; 
  FUrl=dictStr.find('Final Url');  
  FURL=dictStr.find('Final URL');      
