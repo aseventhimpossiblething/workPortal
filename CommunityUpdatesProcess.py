@@ -368,7 +368,7 @@ def MergeURLs(chan,chan2):
      print("chan = ",chan);
   #----    
   
-  if str(type(chan)).find('str')>-1;:
+  if str(type(chan)).find('str')>-1:
      URLS=URLS+chan.iloc[count];
   else:
      URLS=URLS+chan[count];          
