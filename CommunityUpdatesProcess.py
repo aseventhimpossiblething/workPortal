@@ -359,13 +359,13 @@ def MergeURLs(chan,chan2):
   print(type(chan)); 
   print(type(chan)); 
   print("chan2.find('Bing') = ",chan2.find("Bing"))
-  #print("chan = ",chan);  
+  print("chan2 = ",chan2);  
   if chan2.lower().find("bing")>-1:
      print("chan2.lower().find('bing') = ",chan2.lower().find("bing"));       
-     print("URLS = ",URLS); 
-     print("count = ",count);
+     #print("URLS = ",URLS); 
+     #print("count = ",count);
      #print("chan.iloc[count] = ",chan.iloc[count]);  
-     print("chan = ",chan);
+     #print("chan = ",chan);
   #----    
   
   if str(type(chan)).find('str')==-1:
@@ -1569,7 +1569,7 @@ def initialCommUpdatProcess():
  #bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing")+"bingETAstart"+MergeURLs(WorkingBingETA(),"Bing2");
  #googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  #bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
- print("googleURLS = ",googleURLS);     
+ #print("googleURLS = ",googleURLS);     
  #print("bingURLS = ",bingURLS);     
       
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
