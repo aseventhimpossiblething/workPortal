@@ -364,7 +364,7 @@ def MergeURLs(chan,chan2):
      print("chan2.lower().find('bing') = ",chan2.lower().find("bing"));       
      print("URLS = ",URLS); 
      print("count = ",count);
-     print("chan.iloc[count] = ",chan.iloc[count]);  
+     #print("chan.iloc[count] = ",chan.iloc[count]);  
      print("chan = ",chan);
   #----    
   
