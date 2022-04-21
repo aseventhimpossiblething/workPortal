@@ -561,7 +561,7 @@ def CommunityNameDuplicateSpecialLoop(cleanupFrame):
 
 #----------------------------------------Start KeygenII()----------------------------------------------------------------------------
 
-def KeywordGenII(NewDataFrame,SearchChan):
+def KeywordGenII(NewDataFrame,SearchChan,chanURLs):
  #MatchType="SBMM"     
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
  print("KeywordGen2 Initiated-----------------------------------------------------------------------------------------------")
@@ -1743,11 +1743,14 @@ def initialCommUpdatProcess():
 
  
   
- 
- #print( 'One KeywordgenII Running which is KeywordGenII(NewGoogle,"sb","google")' )
- KeywordGenII(NewGoogle,"google")
- KeywordGenII(NewBing,"bing")
 
+ #print( 'One KeywordgenII Running which is KeywordGenII(NewGoogle,"sb","google")' )
+ #KeywordGenII(NewGoogle,"google")
+ #KeywordGenII(NewBing,"bing")
+ 
+ KeywordGenII(NewGoogle,"google",googleURLS)
+ KeywordGenII(NewBing,"bing",bingURLS)     
+ 
  os.chdir(fileHandler.currentBingLocation)
  #print("past  os.chdir fileHandler.currentBingLocation")
   
