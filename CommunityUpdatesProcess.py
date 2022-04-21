@@ -1570,7 +1570,7 @@ def initialCommUpdatProcess():
  #googleURLS=MergeURLs(WorkingGoogleEOF['Final URL'],"Google");
  #bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  print("googleURLS = ",googleURLS);     
- print("bingURLS = ",bingURLS);     
+ #print("bingURLS = ",bingURLS);     
       
  WorkingCommunities=filterNonParticipators(WorkingCommunities);
 
