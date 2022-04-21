@@ -356,6 +356,8 @@ def MergeURLs(chan,chan2):
  while count < hilecount:
   
   #----- 
+  print(type(chan)); 
+  print(type(chan)); 
   print("chan2.find('Bing') = ",chan2.find("Bing"))
   #print("chan = ",chan);  
   if chan2.lower().find("bing")>-1:
@@ -365,7 +367,7 @@ def MergeURLs(chan,chan2):
      print("chan.iloc[count] = ",chan.iloc[count]);  
      print("chan = ",chan);
   #----    
-  print(type(chan));
+  
   URLS=URLS+chan.iloc[count]
   if count % 5000 == 0:
    print(chan2," _ ",count," Merge chan2")
