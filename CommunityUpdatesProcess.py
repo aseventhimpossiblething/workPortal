@@ -1762,8 +1762,8 @@ def initialCommUpdatProcess():
  storeRequest=open('RequestsVsResponses.txt','r+')
  storeRequest.close()
  
- WorkingBingETA()
- WorkingGoogleETA()
+ #WorkingBingETA()
+ #WorkingGoogleETA()
 
  #CommunityNameDuplicateSpecialLoop(WorkingCommunities);
  print("CommunityUpdatesProcess----Prime--(not 2 ).....................................................................")     
