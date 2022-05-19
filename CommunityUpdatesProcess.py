@@ -1571,12 +1571,16 @@ def initialCommUpdatProcess():
  #bingURLS=MergeURLs(WorkingBingEOF['Final Url'],"Bing");
  #print("googleURLS = ",googleURLS);     
  #print("bingURLS = ",bingURLS);     
-      
- WorkingCommunities=filterNonParticipators(WorkingCommunities);
+ 
+ print("FILTERED COMMUNITIES---------------------");
+ #WorkingCommunities=filterNonParticipators(WorkingCommunities);
+ WorkingCommunitiesFILTERED=filterNonParticipators(WorkingCommunities);
+ print("FILTERED COMMUNITIES---------------------");
 
-
- NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
- NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
+ NewGoogle=communityCheck(WorkingCommunitiesFILTERED,googleURLS,"Google");
+ NewBing=communityCheck(WorkingCommunitiesFILTERED,bingURLS,"Bing");
+ #NewGoogle=communityCheck(WorkingCommunities,googleURLS,"Google");
+ #NewBing=communityCheck(WorkingCommunities,bingURLS,"Bing");
 
  #print("INSERT NEW FUNCTION--------------------------------------------")
  os.chdir(fileHandler.currentAttributesLocation);
