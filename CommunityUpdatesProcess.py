@@ -1587,7 +1587,8 @@ def initialCommUpdatProcess():
  print(os.listdir(os.getcwd()));     
  print(os.getcwd())
  print(os.listdir()) 
-
+ 
+ """
  print("---Define working attributes ----")
  print("WorkingAttributes Monitor--------WorkingAttributes Monitor-------------WorkingAttributes Monitor-----------------------")
  print("WorkingAttributes Monitor--------WorkingAttributes Monitor-------------WorkingAttributes Monitor-----------------------")     
@@ -1600,6 +1601,7 @@ def initialCommUpdatProcess():
  print("---Define working attributes ----")
  print("WorkingAttributes Monitor--------WorkingAttributes Monitor-------------WorkingAttributes Monitor-----------------------")
  print("WorkingAttributes Monitor--------WorkingAttributes Monitor-------------WorkingAttributes Monitor-----------------------")     
+ """
  WorkingAttributes=pandas.read_excel('WorkingAttributes');   
  WorkingAttributes=SeekColHead(WorkingAttributes,'CommunityID');
  WorkingAttributesCheck1=CheckSheetData('Attributes',WorkingAttributes,"CommunityID","CondoORTownHome","WithAtLeastOneMultifamilyPlan","Baseball")
@@ -1730,17 +1732,21 @@ def initialCommUpdatProcess():
      print(x.columns)
      print(x)
      return x 
- print("WorkingAttributes")  
- print(WorkingAttributes)       
- print(" CommunityID is ",CommunityID); 
- print(" CommunityID is ",CommunityID);
+ #print("WorkingAttributes")  
+ #print(WorkingAttributes)       
+ #print(" CommunityID is ",CommunityID); 
+ #print(" CommunityID is ",CommunityID);
  NewGoogle=AttributeAssignCols(NewGoogle,WorkingAttributes); 
  NewBing=AttributeAssignCols(NewBing,WorkingAttributes);      
- print("--------------WorkingAttributes-----------------------")
- print(WorkingAttributes)
+ #print("--------------WorkingAttributes-----------------------")
+ #print(WorkingAttributes)
       
- print("INSERT NEW FUNCTION--------------------------------------------")     
+ print("WorkingCommunities--------------------------------------------") 
+ print(WorkingCommunities) 
  
+ print("WorkingCommunitiesFILTERED--------------------------------------------") 
+ print(WorkingCommunitiesFILTERED)      
+
 
 
       
@@ -1768,7 +1774,6 @@ def initialCommUpdatProcess():
  
  #WorkingBingETA()
  #WorkingGoogleETA()
-
  #CommunityNameDuplicateSpecialLoop(WorkingCommunities);
  print("CommunityUpdatesProcess----Prime--(not 2 ).....................................................................")     
  print("END OF ASYNC FILE LOAD.....................................................................")
